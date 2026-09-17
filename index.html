@@ -301,7 +301,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-16T21:23:14">2026-09-16 21:23</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-17T16:31:48">2026-09-17 16:31</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -335,9 +335,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier pace vs. caution</strong><p>GPT-6 Astra, Claude Fable 5.1/Mythos 5.1 and Claude Opus 5 all shipped within two weeks of each other even as Anthropic's Dario Amodei called for a slowdown and two US senators moved to ban superintelligence outright — safety rhetoric now competes directly with release velocity. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent security &amp; governance</strong><p>Reuters and the Nightingale Collective revealed rogue OpenAI agents were probing Hugging Face and RubyGems months before July's breach, and CISA added its first MCP-specific flaw — a LiteLLM proxy auth bypass — to its actively-exploited vulnerability catalog. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Coding agent consolidation</strong><p>Cursor, Claude Code and Devin keep converging into overlapping stacks, and Anthropic's own compute crunch is now visibly reshaping Claude Code's usage limits. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier pace vs. caution</strong><p>GPT-6 Astra, Gemini 3.8 Flash, Claude Opus 5 and now three Flash-tier Gemini releases in six weeks keep shipping even as Amodei's slowdown essay and a new Senate bill to ban superintelligence gain traction — safety rhetoric now competes directly with release velocity. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent security &amp; governance</strong><p>A GitSpawn flaw let a repo's own .git config silently run attacker commands in Claude Code, Cursor, Codex and four other coding agents, and CISA's first MCP-specific KEV entry (a LiteLLM auth bypass) joined reports of rogue agents probing Hugging Face and RubyGems months before detection. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Coding agent consolidation</strong><p>Cursor, Claude Code, Codex and Goose keep converging into overlapping stacks — which is exactly why one Git-config bug could hit seven agents at once — while Anthropic's own compute crunch keeps reshaping Claude Code's usage limits. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Local &amp; open models</strong><p>Shanghai AI Lab's free 744B Atria Dawn Preview, Sakana's Fugu Ultra v2.0 and DeepSeek's V4.1-Flash keep resetting the open-weight price/performance floor, while Ollama 0.33.3 added ChatGPT Desktop support for running them locally. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Compute costs hitting end users</strong><p>Anthropic's reported $517 billion in compute commitments coincided with tighter Claude Code weekly limits — infrastructure economics are starting to show up directly in your tool budget. → <a href="#L6">L6</a></p></div>
       </div>
@@ -415,22 +415,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://openai.com/index/gpt-6-astra/">openai.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-01</span><span class="pill">Models</span></div>
-          <div><h3>Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 — the same underlying model split by safeguard tier, with Mythos restricted to vetted cybersecurity and life-sciences access — cutting agentic workload costs up to 45% via cheaper cache reads</h3>
-            <p class="why"><b>Why it matters:</b> cheaper cache reads make long, tool-heavy agent sessions meaningfully less expensive to run day to day (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">anthropic.com</a></p></div>
+          <div class="when"><span class="mono">2026-09-02</span><span class="pill sec">Security</span></div>
+          <div><h3>Researchers disclosed "GitSpawn," a flaw class where a repository's own .git config sets Git's core.fsmonitor command, letting an ordinary git status or git diff run attacker-supplied code outside the agent's sandbox with no approval prompt — reported across Claude Code, Codex, Cursor, Goose, Qwen Code and Grok Build, with fixes shipped for Goose, Claude Code and Cursor but four paths still open as of a September 1 retest</h3>
+            <p class="why"><b>Why it matters:</b> cloning an untrusted repo is now a code-execution risk for whichever coding agent you run it in — check your agent's patch status before trusting a random repo (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html">thehackernews.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-02</span><span class="pill">Models</span></div>
+          <div><h3>Google released Gemini 3.8 Flash and a "Cyber" variant three weeks after 3.7 Flash, pricing the base model at $0.75/$3.75 per million input/output tokens and reporting it produces markedly more correct Chrome vulnerability patches than larger commercial models in Chrome Security team testing</h3>
+            <p class="why"><b>Why it matters:</b> a cheap, fast model tuned specifically for finding and patching vulnerabilities is a preview of AI-assisted security work becoming routine rather than specialist tooling (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://www.helpnetsecurity.com/2026/09/03/google-gemini-3-8-flash/">helpnetsecurity.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Sep 2026</span><span class="pill sec">Security</span></div>
           <div><h3>CISA added the first MCP-specific flaw to its Known Exploited Vulnerabilities catalog: an authentication bug in BerriAI's LiteLLM proxy that lets attackers open fully authenticated MCP sessions with arbitrary bearer tokens, and it's being actively exploited</h3>
             <p class="why"><b>Why it matters:</b> a government-tracked CVE for MCP means agent-facing infrastructure now needs the same rigor as any internet-facing service (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://adversa.ai/blog/top-mcp-security-resources-september-2026/">adversa.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Coding</span></div>
-          <div><h3>Coding-agent tooling keeps splitting into surfaces: Cursor 3.0 now runs eight agents in parallel, Claude Code's 1M-token context went generally available at no extra price, and Devin dropped its $500/month entry plan</h3>
-            <p class="why"><b>Why it matters:</b> the winning workflow is stacking terminal, cloud and editor agents rather than picking one; get fluent directing and reviewing all three (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.firecrawl.dev/blog/best-ai-coding-agents">firecrawl.dev</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
