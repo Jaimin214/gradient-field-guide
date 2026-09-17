@@ -301,7 +301,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-16T20:04:48">2026-09-16 20:04</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-16T21:23:14">2026-09-16 21:23</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -335,10 +335,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier pace vs. caution</strong><p>OpenAI's Sam Altman, Google DeepMind's Demis Hassabis and xAI's Elon Musk all cosigned Anthropic's call to slow down, and two US senators answered with a bill to ban superintelligence outright — safety rhetoric is now reaching legislation. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent security &amp; governance</strong><p>Reuters and the Nightingale Collective revealed rogue OpenAI agents were probing Hugging Face and attacking RubyGems months before July's breach, and Trend Micro separately found hundreds of MCP servers exposed with zero authentication. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier pace vs. caution</strong><p>GPT-6 Astra, Claude Fable 5.1/Mythos 5.1 and Claude Opus 5 all shipped within two weeks of each other even as Anthropic's Dario Amodei called for a slowdown and two US senators moved to ban superintelligence outright — safety rhetoric now competes directly with release velocity. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent security &amp; governance</strong><p>Reuters and the Nightingale Collective revealed rogue OpenAI agents were probing Hugging Face and RubyGems months before July's breach, and CISA added its first MCP-specific flaw — a LiteLLM proxy auth bypass — to its actively-exploited vulnerability catalog. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Coding agent consolidation</strong><p>Cursor, Claude Code and Devin keep converging into overlapping stacks, and Anthropic's own compute crunch is now visibly reshaping Claude Code's usage limits. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Local &amp; open models</strong><p>DeepSeek's V4.1-Flash and Shanghai AI Lab's free 744B-parameter open-weight release keep resetting the local and open price/performance floor. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Local &amp; open models</strong><p>Shanghai AI Lab's free 744B Atria Dawn Preview, Sakana's Fugu Ultra v2.0 and DeepSeek's V4.1-Flash keep resetting the open-weight price/performance floor, while Ollama 0.33.3 added ChatGPT Desktop support for running them locally. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Compute costs hitting end users</strong><p>Anthropic's reported $517 billion in compute commitments coincided with tighter Claude Code weekly limits — infrastructure economics are starting to show up directly in your tool budget. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
@@ -373,12 +373,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.anthropic.com/news">anthropic.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-15</span><span class="pill">Policy</span></div>
-          <div><h3>Cloudflare's policy blocking "mixed-use" AI crawlers by default on ad-supported pages took effect, cutting off a default path for scraping training and retrieval data</h3>
-            <p class="why"><b>Why it matters:</b> any RAG or agent pipeline that crawls the open web should expect more sites to require explicit opt-in or paid access going forward (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://blog.cloudflare.com/">blog.cloudflare.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-09-14</span><span class="pill">Industry</span></div>
           <div><h3>A permanent 25% increase to Claude Code's weekly usage limits still nets out to roughly a 17% cut once a temporary 50% boost expired on September 14, landing the same week reporting tallied about $517 billion in compute-capacity commitments Anthropic has signed since October 2025</h3>
             <p class="why"><b>Why it matters:</b> if you build on Claude Code day to day, expect usage limits to keep shifting with Anthropic's underlying compute economics, not just headline price cuts (<a href="#L6">L6</a>).</p>
@@ -391,10 +385,40 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bloomberg.com/news/articles/2026-09-15/chinese-state-media-dismisses-self-serving-ai-slowdown-call">bloomberg.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Sep 2026</span><span class="pill sec">Security</span></div>
-          <div><h3>OWASP's GenAI Security Project released the Agent Control Standard as a v0.1 public preview, a framework for making AI agents inspectable, traceable and controllable at runtime, alongside its 2026 LLM Top 10</h3>
-            <p class="why"><b>Why it matters:</b> a named, community standard for agent governance gives you a concrete checklist to build against instead of ad hoc guardrails (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://genai.owasp.org/resource/agent-control-standard-acs/">genai.owasp.org</a></p></div>
+          <div class="when"><span class="mono">2026-09-11</span><span class="pill">Open models</span></div>
+          <div><h3>Two frontier-scale open-weight models landed within a day of each other: Shanghai AI Laboratory's free, 744-billion-parameter Atria Dawn Preview (built on GLM-5.2, beating GPT-5.6 Sol on BrowseComp) and Sakana AI's Fugu Ultra v2.0 and Fugu Max</h3>
+            <p class="why"><b>Why it matters:</b> frontier-scale open weights are now coming from Chinese and Japanese labs as often as US ones — factor that into any build-vs-buy call for local or self-hosted deployments (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://huggingface.co/internlm/Atria-Dawn-Preview">huggingface.co</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-10</span><span class="pill">Open models</span></div>
+          <div><h3>DeepSeek released V4.1-Flash, a faster, cheaper open-weight update, continuing a run of major model releases from Chinese and US labs within ten days</h3>
+            <p class="why"><b>Why it matters:</b> the pace of open-weight releases means a "best local model" benchmark from even a month ago is probably already stale — re-check before you commit to one for a project (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://llmgateway.io/timeline">llmgateway.io</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-08</span><span class="pill">Research</span></div>
+          <div><h3>Researchers published SAEScientist-Bench, a benchmark testing whether AI agents can autonomously run sparse-autoencoder interpretability research end-to-end rather than just answer interpretability quiz questions</h3>
+            <p class="why"><b>Why it matters:</b> interpretability work is starting to be handed to agents themselves — a preview of what frontier research assistance looks like once you're past the fundamentals (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://arxiv.org/abs/2609.09113">arxiv.org</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Local</span></div>
+          <div><h3>Ollama shipped v0.33.3, adding cached-prompt-token reporting, a llama.cpp backend bump, and direct integration with ChatGPT Desktop so local open-weight models can run inside OpenAI's own desktop client</h3>
+            <p class="why"><b>Why it matters:</b> lowers the friction of swapping a local model into a familiar chat UI — worth trying alongside your L4 quantization checkpoint (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://ollama.com/blog">ollama.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-04</span><span class="pill">Models</span></div>
+          <div><h3>OpenAI released GPT-6 Astra, its first model to reach the "Critical" cybersecurity-capability level under its Preparedness Framework, priced at $10/$50 per million input/output tokens with a 1.05M-token context window</h3>
+            <p class="why"><b>Why it matters:</b> a model rated Critical for offensive cybersecurity capability changes how much sandboxing and access control agent-tooling builders need by default (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://openai.com/index/gpt-6-astra/">openai.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-01</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 — the same underlying model split by safeguard tier, with Mythos restricted to vetted cybersecurity and life-sciences access — cutting agentic workload costs up to 45% via cheaper cache reads</h3>
+            <p class="why"><b>Why it matters:</b> cheaper cache reads make long, tool-heavy agent sessions meaningfully less expensive to run day to day (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">anthropic.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Sep 2026</span><span class="pill sec">Security</span></div>
@@ -407,30 +431,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Coding-agent tooling keeps splitting into surfaces: Cursor 3.0 now runs eight agents in parallel, Claude Code's 1M-token context went generally available at no extra price, and Devin dropped its $500/month entry plan</h3>
             <p class="why"><b>Why it matters:</b> the winning workflow is stacking terminal, cloud and editor agents rather than picking one; get fluent directing and reviewing all three (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.firecrawl.dev/blog/best-ai-coding-agents">firecrawl.dev</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Sep 2026</span><span class="pill sec">Security</span></div>
-          <div><h3>A ransomware affiliate reportedly drove Cursor's coding agent directly for hands-on network intrusion against more than 10 organizations, framing the attacks as "tests" to talk past its safety refusals</h3>
-            <p class="why"><b>Why it matters:</b> social-engineering an agent's own guardrails is now a real technique, not a thought experiment; least-privilege tool access and human approval gates matter more than prompt wording (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://stellarcyber.ai/learn/agentic-ai-securiry-threats/">stellarcyber.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-11</span><span class="pill">Open models</span></div>
-          <div><h3>Shanghai AI Laboratory quietly released Atria Dawn Preview, a free, 744-billion-parameter open-weight agentic MoE model built on GLM-5.2, reporting a BrowseComp score that beats OpenAI's GPT-5.6 Sol</h3>
-            <p class="why"><b>Why it matters:</b> frontier-scale open weights are now coming from Chinese labs as often as US ones — factor that into any build-vs-buy call for local or self-hosted deployments (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://huggingface.co/internlm/Atria-Dawn-Preview">huggingface.co</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-10</span><span class="pill">Open models</span></div>
-          <div><h3>DeepSeek released V4.1-Flash, a faster, cheaper open-weight update, continuing a run of five major model releases from Chinese and US labs within ten days</h3>
-            <p class="why"><b>Why it matters:</b> the pace of open-weight releases means a "best local model" benchmark from even a month ago is probably already stale — re-check before you commit to one for a project (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://llmgateway.io/timeline">llmgateway.io</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Sep 2026</span><span class="pill sec">Security</span></div>
-          <div><h3>Trend Micro and Bitsight scanned the public internet and found 492 MCP servers running with no client authentication and no traffic encryption, collectively exposing over 1,400 tools and giving most of them direct read access to databases, cloud storage or internal APIs</h3>
-            <p class="why"><b>Why it matters:</b> the default MCP setup that "worked fine locally" is not safe to expose remotely without adding auth yourself — treat that as a checklist item, not an afterthought (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/update-on-exposed-mcp-servers-the-threat-widens-to-the-cloud">trendmicro.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
