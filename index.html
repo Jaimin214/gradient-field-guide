@@ -1061,7 +1061,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
   var age = document.getElementById("age");
   if (!isNaN(hours) && hours >= 0) {
     age.textContent = "(" + (hours < 1 ? "under 1 h" : Math.floor(hours) + " h") + " ago)";
-    if (hours > 10) { age.classList.add("stale"); age.textContent += " · refresh overdue, is the Claude app open?"; }
+    if (hours > 10) { age.classList.add("stale"); age.textContent += " · refresh overdue"; }
   }
 
   /* ---------- Gradient descent playground ---------- */

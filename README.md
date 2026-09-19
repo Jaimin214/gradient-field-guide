@@ -6,7 +6,7 @@ A living syllabus for CS grads who want to go from AI basics to the current fron
 
 ## What's in here
 
-- **Latest in AI** — a rotating carousel of recent developments, refreshed automatically every 5 hours by a scheduled Claude Code task, with a full searchable timeline behind a "View full timeline" button.
+- **Latest in AI** — a rotating carousel of recent developments, refreshed automatically every 5 hours by a Claude Code cloud routine, with a full searchable timeline behind a "View full timeline" button.
 - **Learning path (L0–L7)** — math and Python through to the research frontier, each level with curated resources, a hands-on checkpoint, and a notes box.
 - **Playground** — a gradient descent visualizer and a real softmax self-attention demo (untrained embeddings, real math).
 - **Top 5 projects** — hybrid Claude + local-model builds, each with a status tracker (kanban board).
@@ -16,4 +16,4 @@ Everything is a single self-contained `index.html` — no build step, no depende
 
 ## Updating
 
-The "Latest in AI" section is rewritten automatically every 5 hours by a local scheduled task, which also commits and pushes the change here. Everything else is edited by hand.
+The "Latest in AI" section is rewritten automatically every 5 hours by a Claude Code cloud routine, which commits and pushes the change here directly (no local machine needed). Everything else is edited by hand.
