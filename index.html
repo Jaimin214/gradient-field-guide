@@ -301,7 +301,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-17T16:31:48">2026-09-17 16:31</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-19T00:26:27">2026-09-19 00:26</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -342,6 +342,24 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state new">Watch</span><strong>Compute costs hitting end users</strong><p>Anthropic's reported $517 billion in compute commitments coincided with tighter Claude Code weekly limits — infrastructure economics are starting to show up directly in your tool budget. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Coding</span></div>
+          <div><h3>Claude Code and Codex are reported to share the top spot on the Terminal-Bench 4.0 leaderboard, with GPT-6 Astra in Codex at 58.2% and Claude Fable 5.1 in Claude Code at 57.9%</h3>
+            <p class="why"><b>Why it matters:</b> the leading coding agents are separated by well under a point, so harness, cost and security posture matter more than the benchmark rank when choosing one (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://aiagentstore.ai/ai-agent-news/this-week">aiagentstore.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-10</span><span class="pill">Agents</span></div>
+          <div><h3>Cursor added a projects feature with a coordinator agent that plans the work and delegates implementation to other agents instead of writing code itself</h3>
+            <p class="why"><b>Why it matters:</b> planner-plus-workers orchestration is becoming a standard product pattern, and it is a good design to reproduce in your own agent project (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://aiagentstore.ai/ai-agent-news/this-week">aiagentstore.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Industry</span></div>
+          <div><h3>A McKinsey report is said to find that nearly a third of surveyed organizations skipped buying at least one software product because AI coding agents let them build it in-house</h3>
+            <p class="why"><b>Why it matters:</b> build-versus-buy is shifting toward building, which raises demand for engineers who can direct and review agent-written code (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://aiagentstore.ai/ai-agent-news/this-week">aiagentstore.ai</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-09-16</span><span class="pill sec">Security</span></div>
           <div><h3>Google's Mandiant AI Risk and Resilience Report detailed a case where an accounting AI agent entered a runaway loop, firing over 15,000 API calls in under an hour and running up roughly $50,000 in cloud costs — a pattern the report calls a "denial-of-wallet" risk</h3>
@@ -397,18 +415,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://llmgateway.io/timeline">llmgateway.io</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-08</span><span class="pill">Research</span></div>
-          <div><h3>Researchers published SAEScientist-Bench, a benchmark testing whether AI agents can autonomously run sparse-autoencoder interpretability research end-to-end rather than just answer interpretability quiz questions</h3>
-            <p class="why"><b>Why it matters:</b> interpretability work is starting to be handed to agents themselves — a preview of what frontier research assistance looks like once you're past the fundamentals (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://arxiv.org/abs/2609.09113">arxiv.org</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Local</span></div>
-          <div><h3>Ollama shipped v0.33.3, adding cached-prompt-token reporting, a llama.cpp backend bump, and direct integration with ChatGPT Desktop so local open-weight models can run inside OpenAI's own desktop client</h3>
-            <p class="why"><b>Why it matters:</b> lowers the friction of swapping a local model into a familiar chat UI — worth trying alongside your L4 quantization checkpoint (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://ollama.com/blog">ollama.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-09-04</span><span class="pill">Models</span></div>
           <div><h3>OpenAI released GPT-6 Astra, its first model to reach the "Critical" cybersecurity-capability level under its Preparedness Framework, priced at $10/$50 per million input/output tokens with a 1.05M-token context window</h3>
             <p class="why"><b>Why it matters:</b> a model rated Critical for offensive cybersecurity capability changes how much sandboxing and access control agent-tooling builders need by default (<a href="#L6">L6</a>).</p>
@@ -419,12 +425,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Researchers disclosed "GitSpawn," a flaw class where a repository's own .git config sets Git's core.fsmonitor command, letting an ordinary git status or git diff run attacker-supplied code outside the agent's sandbox with no approval prompt — reported across Claude Code, Codex, Cursor, Goose, Qwen Code and Grok Build, with fixes shipped for Goose, Claude Code and Cursor but four paths still open as of a September 1 retest</h3>
             <p class="why"><b>Why it matters:</b> cloning an untrusted repo is now a code-execution risk for whichever coding agent you run it in — check your agent's patch status before trusting a random repo (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html">thehackernews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-02</span><span class="pill">Models</span></div>
-          <div><h3>Google released Gemini 3.8 Flash and a "Cyber" variant three weeks after 3.7 Flash, pricing the base model at $0.75/$3.75 per million input/output tokens and reporting it produces markedly more correct Chrome vulnerability patches than larger commercial models in Chrome Security team testing</h3>
-            <p class="why"><b>Why it matters:</b> a cheap, fast model tuned specifically for finding and patching vulnerabilities is a preview of AI-assisted security work becoming routine rather than specialist tooling (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.helpnetsecurity.com/2026/09/03/google-gemini-3-8-flash/">helpnetsecurity.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Sep 2026</span><span class="pill sec">Security</span></div>
