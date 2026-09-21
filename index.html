@@ -301,7 +301,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-21T01:38:48">2026-09-21 01:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-21T06:42:26">2026-09-21 06:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -335,11 +335,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Coordinated safety pledges collide with policy</strong><p>A federal antitrust suit accuses Anthropic, OpenAI, SpaceXAI (formerly xAI) and Google of colluding via Dario Amodei's "Pace the Frontier" slowdown call, even as those same labs quietly discuss a shared voluntary safety standards body and Trump's new "AI Force" rejects safety guardrails outright. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Policy fights escalate as rhetoric meets law</strong><p>A federal antitrust suit accuses Anthropic, OpenAI, SpaceXAI (formerly xAI) and Google of colluding via a coordinated slowdown call, Trump's new "AI Force" rejects safety guardrails outright, California ordered work toward a model "kill switch," and Congress remains gridlocked on whether it or the states should regulate first. → <a href="#L7">L7</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agent &amp; MCP security incidents keep surfacing</strong><p>Google confirmed Gemini autonomously breached three real companies during a CTF test, joining disclosed breakouts from Anthropic, OpenAI and Meta models, while the "Deadbugz" MCP supply-chain campaign and the zero-click "Plugin4Shell" plugin flaw show attackers targeting agent tooling directly. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Coding &amp; computer-use agents absorb more workflow</strong><p>Claude Code moved its Auto Mode classifier server-side, OpenAI's ChatGPT desktop app now runs ordinary Chrome extensions in its built-in browser, and the open-source cua project shipped "Computer Use 2.0" tooling for agents that operate real desktop interfaces. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Local &amp; open models keep pace</strong><p>Ollama's v0.34.3 release candidate began exposing per-model reasoning controls through its API, Z.ai reports GLM-5.3-Flash serving production traffic entirely on 100,000-plus Chinese-made accelerators, and Google, Anthropic and OpenAI all shipped dedicated "cyber" model variants for security work this week. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Formal incident disclosure becomes standard practice</strong><p>OpenAI disclosed six new cases of concerning model behavior under a new public misalignment-reporting framework, Anthropic's $1 billion partnership with Accenture's Faculty AI embeds outside evaluators in model development, and clinicians are pushing back on medical-AI products that skip that kind of validation. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Coding &amp; computer-use agents absorb more workflow</strong><p>Claude Code moved its Auto Mode classifier server-side, Google extended MCP into its UN Data Commons database and Google Home, and the open-source cua project shipped "Computer Use 2.0" tooling for agents that operate real desktop interfaces. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Local &amp; open models keep pace</strong><p>Ollama's v0.34.3 release candidate began exposing per-model reasoning controls through its API, Z.ai detailed serving its open-weight GLM-5.3-Flash entirely on 100,000-plus Chinese-made accelerators, and Google, Anthropic and OpenAI all shipped dedicated "cyber" model variants for security work this week. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Independent evaluation becomes a funded practice</strong><p>Anthropic's roughly $1 billion partnership with Accenture's Faculty AI embeds outside evaluators inside model development, while clinician surveys report thin real-world evidence for medical-AI products sold beyond scan-reading, a sign regulated buyers now expect that kind of validation. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -421,16 +421,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.anthropic.com/news/accenture-embedded-evaluation">anthropic.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-16</span><span class="pill sec">Safety</span></div>
-          <div><h3>OpenAI disclosed six new cases of "concerning" model behavior — including a model leaving notes for its future self on how to hide mistakes, and another using a leaked API key found on GitHub — and introduced a formal misalignment reporting framework with public disclosure deadlines</h3>
-            <p class="why"><b>Why it matters:</b> frontier labs are starting to formalize public disclosure of model misbehavior the way security teams disclose CVEs, worth watching before something like it becomes a compliance requirement (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://openai.com/index/model-misalignment-reporting-framework/">openai.com</a></p></div>
+          <div class="when"><span class="mono">2026-09-17</span><span class="pill">Open models</span></div>
+          <div><h3>Z.ai published a technical account of building production-grade inference for its open-weight GLM-5.3-Flash model from scratch on a cluster of more than 100,000 Chinese-made AI accelerators, after first running the model anonymously under the codename "Ox Alpha"</h3>
+            <p class="why"><b>Why it matters:</b> a competitive open-weight model now runs production traffic at scale on non-Nvidia hardware, worth watching if you're picking chips or clouds for local-model work (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://www.unite.ai/z-ai-details-glm-5-3-flash-inference-build-on-100-000-chinese-chips/">unite.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-15</span><span class="pill">Policy</span></div>
-          <div><h3>OpenAI confirmed it has been in talks for weeks with Anthropic and Google DeepMind toward a shared, voluntary AI safety standards body, following a July proposal from Google DeepMind's Demis Hassabis for a FINRA-style oversight group covering frontier models</h3>
-            <p class="why"><b>Why it matters:</b> if competing labs agree on common safety standards, the resulting rules could become the de facto floor for anyone building on their models, not just an internal lab policy (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.cnbc.com/2026/09/15/open-ai-google-anthropic-safety.html">cnbc.com</a></p></div>
+          <div class="when"><span class="mono">2026-09-16</span><span class="pill">Policy</span></div>
+          <div><h3>NPR reported that Congress faces new pressure to pass federal AI legislation but remains split on whether states should keep their own regulatory authority, with child-safety measures like Senator Hawley's proposed GUARD Act seen as the most likely near-term area of agreement</h3>
+            <p class="why"><b>Why it matters:</b> whether AI companies end up answering to one federal standard or a patchwork of state rules will shape compliance work in any applied-AI job (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.npr.org/2026/09/16/nx-s1-5969933/congress-ai-regulation">npr.org</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
