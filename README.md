@@ -10,9 +10,11 @@ A living syllabus for CS grads who want to go from AI basics to the current fron
 - **Learning path (L0–L7)** — math and Python through to the research frontier, each level with curated resources, a hands-on checkpoint, and a notes box.
 - **Playground** — a gradient descent visualizer and a real softmax self-attention demo (untrained embeddings, real math).
 - **Top 5 projects** — hybrid Claude + local-model builds, each with a status tracker (kanban board).
+- **Start here** — pick your background and the path highlights where to begin and the estimated weeks.
+- **Glossary** — searchable plain-English definitions linked to the level that teaches each term.
 - **Journal** — a personal activity log with a streak heatmap; checking off a level or shipping a project logs itself. Export/import to back up your progress as JSON.
 
-Everything is a single self-contained `index.html` — no build step, no dependencies beyond two Google Fonts. All personal progress (checkboxes, notes, journal, project status) is stored only in your own browser's `localStorage`.
+The site is a self-contained `index.html` (no build step, no dependencies beyond Google Fonts) plus static extras GitHub Pages serves as-is: `manifest.webmanifest` + `sw.js` (installable, offline fallback; network-first so the feed is never stale), `404.html`, `robots.txt`, `sitemap.xml`, `icon.svg`. All personal progress (checkboxes, notes, journal, project status) is stored only in your own browser's `localStorage`.
 
 ## Updating
 

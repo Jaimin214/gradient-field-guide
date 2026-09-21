@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jaimin214.github.io/gradient-field-guide/sitemap.xml

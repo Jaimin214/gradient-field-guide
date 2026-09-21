@@ -1,0 +1,11 @@
+{
+  "name": "Gradient Field Guide",
+  "short_name": "Field Guide",
+  "description": "A living AI syllabus with a live trends feed.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F1F3F6",
+  "theme_color": "#2B47C9",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

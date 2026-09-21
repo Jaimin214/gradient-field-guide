@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gradient Field Guide</title>
+<title>Gradient Field Guide — a living AI syllabus</title>
+<meta name="description" content="A free, self-paced AI learning path from math to agents, with a live trends feed, playgrounds, projects, glossary and a private progress journal.">
+<meta name="theme-color" content="#2B47C9">
+<meta property="og:title" content="Gradient Field Guide">
+<meta property="og:description" content="A living syllabus for CS grads: eight levels, five projects, a live AI trends feed.">
+<meta property="og:type" content="website">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
@@ -44,16 +51,16 @@ p{margin:0}
 .mono{font-family:var(--mono);font-size:.85em}
 
 .shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:40px}
-@media (min-width:960px){.shell{grid-template-columns:200px minmax(0,1fr)}}
 nav.toc{display:none}
-@media (min-width:960px){
-  nav.toc{display:flex;flex-direction:column;gap:6px;position:sticky;top:24px;align-self:start;padding-top:40px}
+@media (min-width:1200px){
+  nav.toc{display:flex;flex-direction:column;gap:6px;position:sticky;top:80px;align-self:start;padding-top:24px}
   nav.toc a{font:500 .9rem/1.3 var(--display);color:var(--muted);text-decoration:none;padding:4px 0}
   nav.toc a:hover{color:var(--ink)}
   nav.toc .progress{margin-top:18px;font:400 .8rem/1.4 var(--mono);color:var(--muted)}
 }
 main{display:flex;flex-direction:column;gap:72px;min-width:0}
-section{display:flex;flex-direction:column;gap:24px;scroll-margin-top:16px}
+section{display:flex;flex-direction:column;gap:24px;scroll-margin-top:72px}
+.levels li{scroll-margin-top:72px}
 .lede{max-width:65ch;color:var(--muted)}
 
 /* Header */
@@ -206,8 +213,12 @@ ol.journal-feed li{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padd
 .export-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 
 /* App shell: mobile top bar + theme toggle */
-.appbar{display:flex;align-items:center;gap:10px;padding-block:10px;position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line);min-width:0}
-@media (min-width:960px){.appbar{display:none}}
+.appbar{display:flex;align-items:center;gap:12px;padding-block:10px;position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line);min-width:0}
+.brand{display:none;font:800 1rem var(--display);color:var(--ink);text-decoration:none;white-space:nowrap;letter-spacing:-.01em}
+.appprog{display:none;font:400 .76rem var(--mono);color:var(--muted);white-space:nowrap}
+@media (min-width:960px){.brand{display:block}.appprog{display:block}.appbar-scroll a{font-size:.84rem;padding:7px 12px}}
+.appbar{grid-column:1/-1}
+@media (min-width:1200px){.shell{grid-template-columns:200px minmax(0,1fr)}}
 .appbar-scroll{display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none}
 .appbar-scroll::-webkit-scrollbar{display:none}
 .appbar-scroll a{flex:none;font:500 .78rem var(--mono);color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:14px;border:1px solid var(--line);white-space:nowrap}
@@ -267,29 +278,69 @@ nav.toc a.active{color:var(--accent)}
 .habits h3{font-size:1.02rem}
 .habits p{font-size:.94rem;color:var(--muted)}
 footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+
+/* Start here, glossary, reading aids */
+.rp{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:60;transition:width .1s}
+.totop{position:fixed;right:18px;bottom:18px;z-index:40;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:700 1.1rem var(--display);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
+.totop.show{opacity:1;pointer-events:auto}
+.personas{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.persona{text-align:left;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;cursor:pointer;display:flex;flex-direction:column;gap:4px}
+.persona strong{font:700 1rem var(--display)}
+.persona span{font-size:.9rem;color:var(--muted)}
+.persona[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.persona:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.plan{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:14px 18px;font-size:.98rem}
+.plan b{font-family:var(--display)}
+.levels li.rec{outline:2px solid var(--accent);outline-offset:6px;border-radius:4px}
+.levels li.skip{opacity:.55}
+.badge{align-self:flex-start;font:600 .7rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+.nextlv{align-self:flex-start;font:500 .9rem var(--display)}
+.gsearch{width:100%;max-width:420px;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)}
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px 28px;margin:0}
+.gloss div{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-top:1px solid var(--line)}
+.gloss dt{font:700 1rem var(--display)}
+.gloss dt a{font:400 .72rem var(--mono);margin-left:6px}
+.gloss dd{margin:0;font-size:.94rem;color:var(--muted)}
+.gloss [hidden]{display:none}
+.gempty{color:var(--muted)}
+
+.pgtopic{grid-column:1/-1}
+.pgtopic .pt-row{display:grid;grid-template-columns:110px 1fr 52px;gap:10px;align-items:center;font:400 .85rem var(--mono);margin-block:4px}
+.pgtopic .pt-track{height:14px;background:var(--hm0);border-radius:3px;overflow:hidden}
+.pgtopic .pt-fill{height:100%;background:var(--accent);width:0;transition:width .15s}
+.pgtopic .pt-ctl{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-block:10px;font:400 .85rem var(--mono)}
+@media print{.appbar,nav.toc,.totop,.rp,.theme-toggle{display:none!important}.shell{display:block}}
 </style>
 <script>(function(){try{var t=localStorage.getItem("gradient-guide-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 </head>
 <body>
+<div class="rp" id="rp"></div>
+<span id="top"></span>
 <div class="shell">
   <div class="appbar">
+    <a class="brand" href="#top">Gradient Field Guide</a>
     <div class="appbar-scroll" id="appbar-links">
+      <a href="#start">Start</a>
       <a href="#trends">Trends</a>
       <a href="#path">Path</a>
       <a href="#playground">Play</a>
       <a href="#projects">Projects</a>
       <a href="#journal">Journal</a>
+      <a href="#glossary">Glossary</a>
       <a href="#habits">Habits</a>
     </div>
+    <span class="appprog" id="progress-app">0 / 8 levels done</span>
     <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">◐ Auto</button>
   </div>
   <nav class="toc" aria-label="Sections">
     <span class="label">Gradient Field Guide</span>
+    <a href="#start">Start here</a>
     <a href="#trends">Latest in AI</a>
     <a href="#path">Learning path</a>
     <a href="#playground">Playground</a>
     <a href="#projects">Top 5 projects</a>
     <a href="#journal">Journal</a>
+    <a href="#glossary">Glossary</a>
     <a href="#habits">Staying sharp</a>
     <span class="progress" id="progress-nav">0 / 8 levels done</span>
     <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">◐ Auto</button>
@@ -326,6 +377,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </svg>
       </figure>
     </header>
+
+    <section id="start" aria-labelledby="start-h">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span class="label">Two minutes, then go</span>
+        <h2 id="start-h">Start here</h2>
+        <p class="lede">You don't have to begin at L0. Pick the description closest to you and the path below highlights where to start and how long it should take at 8–10 hours a week. Your choice is remembered in this browser.</p>
+      </div>
+      <div class="personas" id="personas" role="group" aria-label="Pick your background"></div>
+      <div class="plan" id="plan" aria-live="polite">Pick a background above to get a suggested route.</div>
+    </section>
 
     <section id="trends" aria-labelledby="trends-h">
       <div style="display:flex;flex-direction:column;gap:8px">
@@ -577,7 +638,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div style="display:flex;flex-direction:column;gap:8px">
         <span class="label">Learn by poking at it</span>
         <h2 id="playground-h">Playground</h2>
-        <p class="lede">Two toy mechanisms you can drag around with your mouse. Neither is a trained model: the gradient descent demo optimizes a real function, and the attention demo runs the real Q·K softmax math on embeddings generated from a word hash rather than learned weights. Enough to build intuition for <a href="#L0">L0</a> and <a href="#L3">L3</a>.</p>
+        <p class="lede">Two fixed toy mechanisms plus a third demo that changes with every refresh, tied to whatever is in the news. None is a trained model: the gradient descent demo optimizes a real function, and the attention demo runs the real Q·K softmax math on embeddings generated from a word hash rather than learned weights. Enough to build intuition for <a href="#L0">L0</a> and <a href="#L3">L3</a>.</p>
       </div>
       <div class="playgrid">
         <div class="pgcard">
@@ -612,6 +673,21 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <div id="attn-out"></div>
           </div>
         </div>
+        <!-- PLAYGROUND:START -->
+        <!-- HISTORY: temperature-sampling -->
+        <div class="pgcard pgtopic" data-topic="temperature-sampling">
+          <span class="label">New this refresh · 2026-09-21 · connects to <a href="#L4">L4</a></span>
+          <h3>Temperature: how sampling turns scores into choices</h3>
+          <p class="lede">A model scores every possible next token, then samples. Below are made-up scores for the word after "The capital of France is". Low temperature makes the top choice dominate; high temperature flattens the odds. Real models do exactly this softmax step, just over ~100,000 tokens.</p>
+          <div class="pt-ctl"><label>Temperature: <b id="pt-val">1.0</b> <input type="range" id="pt-in" min="0.1" max="2" step="0.1" value="1" aria-label="Temperature"></label></div>
+          <div id="pt-bars"></div>
+          <script>(function(){var W=[["Paris",5],["the",2.5],["a",2],["located",1.5],["Lyon",1]],inp=document.getElementById("pt-in"),val=document.getElementById("pt-val"),box=document.getElementById("pt-bars");
+          W.forEach(function(w){var r=document.createElement("div");r.className="pt-row";r.innerHTML='<span></span><div class="pt-track"><div class="pt-fill"></div></div><span></span>';r.firstChild.textContent=w[0];box.appendChild(r);});
+          function draw(){var T=+inp.value,e=W.map(function(w){return Math.exp(w[1]/T)}),z=e.reduce(function(a,b){return a+b},0);val.textContent=T.toFixed(1);
+          Array.prototype.forEach.call(box.children,function(r,i){var p=e[i]/z*100;r.querySelector(".pt-fill").style.width=p+"%";r.lastChild.textContent=p.toFixed(0)+"%";});}
+          inp.addEventListener("input",draw);draw();})();</script>
+        </div>
+        <!-- PLAYGROUND:END -->
       </div>
     </section>
 
@@ -778,6 +854,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <button type="button" class="btn" id="export-btn">Export progress (.json)</button>
         <label class="btn" style="cursor:pointer">Import progress<input type="file" id="import-input" accept="application/json" style="display:none"></label>
       </div>
+    </section>
+
+    <section id="glossary" aria-labelledby="glossary-h">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span class="label">Plain-English definitions</span>
+        <h2 id="glossary-h">Glossary</h2>
+        <p class="lede">The vocabulary from the levels above. Each term links to the level that teaches it.</p>
+      </div>
+      <input type="search" class="gsearch" id="gsearch" placeholder="Search terms…" aria-label="Search glossary">
+      <dl class="gloss" id="gloss">
+        <div data-t="gradient descent repeatedly nudging parameters in the direction that lowers the loss."><dt>Gradient descent<a href="#L0">L0</a></dt><dd>Repeatedly nudging parameters in the direction that lowers the loss.</dd></div>
+        <div data-t="loss function a single number saying how wrong the model currently is; training tries to shrink it."><dt>Loss function<a href="#L1">L1</a></dt><dd>A single number saying how wrong the model currently is; training tries to shrink it.</dd></div>
+        <div data-t="overfitting memorising the training data so well that new data is handled badly."><dt>Overfitting<a href="#L1">L1</a></dt><dd>Memorising the training data so well that new data is handled badly.</dd></div>
+        <div data-t="cross-validation rotating which slice of data is held out, to estimate how a model will do on unseen data."><dt>Cross-validation<a href="#L1">L1</a></dt><dd>Rotating which slice of data is held out, to estimate how a model will do on unseen data.</dd></div>
+        <div data-t="backpropagation applying the chain rule backwards through a network to get every parameter's gradient."><dt>Backpropagation<a href="#L2">L2</a></dt><dd>Applying the chain rule backwards through a network to get every parameter's gradient.</dd></div>
+        <div data-t="epoch / batch one full pass over the data / the small chunk processed per update."><dt>Epoch / batch<a href="#L2">L2</a></dt><dd>One full pass over the data / the small chunk processed per update.</dd></div>
+        <div data-t="token a chunk of text (word piece) that a language model reads and writes."><dt>Token<a href="#L3">L3</a></dt><dd>A chunk of text (word piece) that a language model reads and writes.</dd></div>
+        <div data-t="embedding a vector of numbers representing a token or document so similar meanings sit close together."><dt>Embedding<a href="#L3">L3</a></dt><dd>A vector of numbers representing a token or document so similar meanings sit close together.</dd></div>
+        <div data-t="self-attention each token computes weights over other tokens to decide what to draw information from."><dt>Self-attention<a href="#L3">L3</a></dt><dd>Each token computes weights over other tokens to decide what to draw information from.</dd></div>
+        <div data-t="transformer the attention-based architecture behind nearly all modern llms."><dt>Transformer<a href="#L3">L3</a></dt><dd>The attention-based architecture behind nearly all modern LLMs.</dd></div>
+        <div data-t="context window the maximum number of tokens a model can consider at once."><dt>Context window<a href="#L4">L4</a></dt><dd>The maximum number of tokens a model can consider at once.</dd></div>
+        <div data-t="temperature a sampling knob: low is predictable, high is more varied."><dt>Temperature<a href="#L4">L4</a></dt><dd>A sampling knob: low is predictable, high is more varied.</dd></div>
+        <div data-t="fine-tuning (sft) further training a pretrained model on examples of the behaviour you want."><dt>Fine-tuning (SFT)<a href="#L4">L4</a></dt><dd>Further training a pretrained model on examples of the behaviour you want.</dd></div>
+        <div data-t="rlhf / dpo training a model to prefer answers humans rated higher."><dt>RLHF / DPO<a href="#L4">L4</a></dt><dd>Training a model to prefer answers humans rated higher.</dd></div>
+        <div data-t="lora fine-tuning a small set of added weights instead of the whole model."><dt>LoRA<a href="#L4">L4</a></dt><dd>Fine-tuning a small set of added weights instead of the whole model.</dd></div>
+        <div data-t="quantization storing weights in fewer bits (e.g. 4-bit) so a model fits in less memory."><dt>Quantization<a href="#L4">L4</a></dt><dd>Storing weights in fewer bits (e.g. 4-bit) so a model fits in less memory.</dd></div>
+        <div data-t="kv cache saved attention keys/values so each new token doesn't recompute the past."><dt>KV cache<a href="#L4">L4</a></dt><dd>Saved attention keys/values so each new token doesn't recompute the past.</dd></div>
+        <div data-t="rag retrieval-augmented generation: fetch relevant documents, then have the model answer from them."><dt>RAG<a href="#L5">L5</a></dt><dd>Retrieval-augmented generation: fetch relevant documents, then have the model answer from them.</dd></div>
+        <div data-t="vector search finding the stored embeddings nearest to a query embedding."><dt>Vector search<a href="#L5">L5</a></dt><dd>Finding the stored embeddings nearest to a query embedding.</dd></div>
+        <div data-t="eval set a fixed set of test questions with known good answers, used to check whether a change helped."><dt>Eval set<a href="#L5">L5</a></dt><dd>A fixed set of test questions with known good answers, used to check whether a change helped.</dd></div>
+        <div data-t="llm-as-judge using a model to grade another model's outputs against a rubric."><dt>LLM-as-judge<a href="#L5">L5</a></dt><dd>Using a model to grade another model's outputs against a rubric.</dd></div>
+        <div data-t="tool use the model emits a structured request (e.g. json) that your code runs, then returns the result."><dt>Tool use<a href="#L6">L6</a></dt><dd>The model emits a structured request (e.g. JSON) that your code runs, then returns the result.</dd></div>
+        <div data-t="agent a model in a loop that chooses tools and actions until a goal is met."><dt>Agent<a href="#L6">L6</a></dt><dd>A model in a loop that chooses tools and actions until a goal is met.</dd></div>
+        <div data-t="mcp model context protocol: an open standard for plugging tools and data into ai apps."><dt>MCP<a href="#L6">L6</a></dt><dd>Model Context Protocol: an open standard for plugging tools and data into AI apps.</dd></div>
+        <div data-t="prompt injection malicious text in the input or a tool result that tries to hijack the model's instructions."><dt>Prompt injection<a href="#L6">L6</a></dt><dd>Malicious text in the input or a tool result that tries to hijack the model's instructions.</dd></div>
+        <div data-t="distillation training a small model to imitate a larger one."><dt>Distillation<a href="#L7">L7</a></dt><dd>Training a small model to imitate a larger one.</dd></div>
+        <div data-t="mixture of experts a model where each token is routed to only a few specialist sub-networks."><dt>Mixture of experts<a href="#L7">L7</a></dt><dd>A model where each token is routed to only a few specialist sub-networks.</dd></div>
+        <div data-t="interpretability research into what is happening inside a model and why."><dt>Interpretability<a href="#L7">L7</a></dt><dd>Research into what is happening inside a model and why.</dd></div>
+      </dl>
+      <p class="gempty" id="gempty" hidden>No matching terms.</p>
     </section>
 
     <section id="habits" aria-labelledby="habits-h">
@@ -1417,5 +1533,71 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
   })();
 })();
 </script>
+<button type="button" class="totop" id="totop" aria-label="Back to top">↑</button>
+<script>
+(function(){
+  var LV=[["L0",3],["L1",4],["L2",5],["L3",4],["L4",4],["L5",4],["L6",4],["L7",0]];
+  var P=[
+    {id:"new",t:"New to ML",d:"Comfortable-ish with Python, little or no math or ML.",from:0,to:7,pr:"Projects #1 and #2 once you reach L5"},
+    {id:"grad",t:"CS grad, know basic ML",d:"You've done sklearn and want deep learning through LLMs.",from:2,to:7,pr:"Projects #1, #2 and #4"},
+    {id:"swe",t:"Software engineer building with LLMs",d:"You want to ship apps and agents; theory can come as needed.",from:4,to:6,pr:"Projects #1, #2 and #3"},
+    {id:"follow",t:"Just following the frontier",d:"You know the basics and want to keep up and reason about risk.",from:6,to:7,pr:"the feed above plus Project #3"}
+  ];
+  var KEY="gradient-guide-persona",box=document.getElementById("personas"),plan=document.getElementById("plan");
+  if(!box||!plan)return;
+  function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function set(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  function render(id){
+    var p=P.filter(function(x){return x.id===id})[0];
+    Array.prototype.forEach.call(box.children,function(b){b.setAttribute("aria-pressed",String(b.dataset.id===id))});
+    LV.forEach(function(l,i){
+      var li=document.getElementById(l[0]);if(!li)return;
+      var body=li.querySelector(".lvbody"),old=body&&body.querySelector(".badge");if(old)old.remove();
+      li.classList.remove("rec","skip");
+      if(!p)return;
+      if(i<p.from){li.classList.add("skip");}
+      else if(i<=p.to){li.classList.add("rec");}
+      if(i===p.from&&body){var b=document.createElement("span");b.className="badge";b.textContent="Start here";body.insertBefore(b,body.firstChild);}
+    });
+    if(!p){plan.textContent="Pick a background above to get a suggested route.";return;}
+    var wk=0;for(var i=p.from;i<=p.to;i++)wk+=LV[i][1];
+    plan.innerHTML="<b>Your route:</b> start at <a href=\"#L"+p.from+"\">L"+p.from+"</a>"+(p.to>p.from?" and work through <a href=\"#L"+p.to+"\">L"+p.to+"</a>":"")+(wk?", about <b>"+wk+" weeks</b> at 8–10 h/week":"")+". Build: "+p.pr+". Levels before your start are dimmed, not hidden — skim them if a checkpoint feels shaky.";
+  }
+  P.forEach(function(p){
+    var b=document.createElement("button");b.type="button";b.className="persona";b.dataset.id=p.id;
+    b.innerHTML="<strong></strong><span></span>";b.firstChild.textContent=p.t;b.lastChild.textContent=p.d;
+    b.addEventListener("click",function(){var on=b.getAttribute("aria-pressed")==="true";set(on?"":p.id);render(on?"":p.id);});
+    box.appendChild(b);
+  });
+  render(get()||"");
+
+  LV.forEach(function(l,i){
+    if(i===LV.length-1)return;
+    var body=document.querySelector("#"+l[0]+" .lvbody");if(!body)return;
+    var a=document.createElement("a");a.className="nextlv";a.href="#"+LV[i+1][0];a.textContent="Next: "+LV[i+1][0]+" →";body.appendChild(a);
+  });
+
+  var gs=document.getElementById("gsearch"),rows=document.querySelectorAll("#gloss > div"),ge=document.getElementById("gempty");
+  gs.addEventListener("input",function(){
+    var q=gs.value.trim().toLowerCase(),n=0;
+    rows.forEach(function(r){var m=!q||r.dataset.t.indexOf(q)>-1;r.hidden=!m;if(m)n++;});
+    ge.hidden=n>0;
+  });
+
+  var pn=document.getElementById("progress-nav"),pa=document.getElementById("progress-app");
+  if(pn&&pa){var sync=function(){pa.textContent=pn.textContent};sync();new MutationObserver(sync).observe(pn,{childList:true,characterData:true,subtree:true});}
+  var rp=document.getElementById("rp"),tt=document.getElementById("totop");
+  function onScroll(){
+    var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+    rp.style.width=(max>0?h.scrollTop/max*100:0)+"%";
+    tt.classList.toggle("show",h.scrollTop>800);
+  }
+  addEventListener("scroll",onScroll,{passive:true});onScroll();
+  tt.addEventListener("click",function(){scrollTo({top:0})});
+
+  if("serviceWorker" in navigator&&/^https?:$/.test(location.protocol))navigator.serviceWorker.register("sw.js").catch(function(){});
+})();
+</script>
+
 </body>
 </html>
