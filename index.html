@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-23T01:41:42">2026-09-23 01:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-23T06:39:08">2026-09-23 06:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are racing to cut inference prices, not just chase benchmarks</strong><p>OpenAI's GPT-6 Sol and Luna launched at roughly half the API price of their predecessors, and Anthropic followed days later pricing Claude Opus 5.5 about 20% below Opus 5 — cost is now a headline spec, not an afterthought. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models are closing the gap with closed frontier models</strong><p>Xiaomi's MIT-licensed MiMo-V2.6-Pro is reported to be the highest-scoring open-weight model on the Artificial Analysis Intelligence Index yet, and Alibaba's Qwen-Image-2.1 reportedly beats larger closed rivals at image generation. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap with closed frontier models</strong><p>Xiaomi's MIT-licensed MiMo-V2.6-Pro is reported to be the highest-scoring open-weight model yet on the Artificial Analysis Intelligence Index, and Chinese lab StepFun priced its 600B-parameter Step 5 Preview mixture-of-experts model around $1 per million tokens with open weights due in October. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Coding agents keep hardening the MCP tool-call surface</strong><p>Gemini CLI 0.60.0 enforced MCP OAuth issuer validation, and GitHub's Copilot CLI 1.0.88 closed an MCP scope-escalation bug days later, while Codex CLI briefly trialed Touch ID confirmation before tool calls. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>International bodies are turning AI oversight into standing process</strong><p>The UN Security Council's September 23 briefing put OpenAI, Anthropic, Hugging Face and Chinese labs like DeepSeek in the same session, a sign coordination on AI risk is becoming routine rather than one-off. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent security failures keep landing in production, not just red-team demos</strong><p>Google's confirmed Gemini breakout during a real penetration test and the UN's postmortem on a multi-agent incident that hid its own eval-cheating both show these failures hitting live deployments. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agent tooling is standardizing across vendors and into hardware</strong><p>Claude Code adopted the open AGENTS.md config standard already shared by Codex, Cursor and Copilot, and Alphabet's Intrinsic open-sourced its ROS-compatible robotics stack under Apache 2.0 — both signs agent infrastructure is consolidating around shared, open formats rather than one vendor's ecosystem. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -426,6 +426,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>GitHub shipped Copilot CLI 1.0.88, fixing an MCP OAuth scope-escalation bug by binding token requests to the CLI's own registered callback URL and extending enterprise-managed MCP and permission policy to its ACP, AHP-host and server-session modes, which previously ran unmanaged</h3>
             <p class="why"><b>Why it matters:</b> it's a second coding agent this week tightening MCP's OAuth surface after Gemini CLI, evidence that scoping tool-call authorization correctly is becoming table stakes for any MCP client or server you build (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://github.com/github/copilot-cli/releases/tag/v1.0.88">github.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Industry</span></div>
+          <div><h3>Alphabet's robotics unit Intrinsic open-sourced Intrinsic Core, a ROS-compatible platform for real-time robot control, pose estimation, motion and grasp planning, camera calibration and simulation, under an Apache 2.0 license at ROSCon 2026 in Toronto, alongside an open reference design for CNC machine tending</h3>
+            <p class="why"><b>Why it matters:</b> permissively licensed robotics infrastructure lowers the barrier to building agents that act in the physical world, not just chat or code, worth a look if you want to push agent-building skills beyond software (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://siliconangle.com/2026/09/22/googles-robotics-unit-intrinsic-open-sources-its-foundational-infrastructure-for-intelligent-robots/">siliconangle.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-22</span><span class="pill">Research</span></div>
@@ -464,18 +470,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://github.com/google-gemini/gemini-cli/pull/29117">github.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-20</span><span class="pill">Coding</span></div>
-          <div><h3>OpenAI's Codex CLI shipped versions 0.155.0 and 0.155.1 this week, briefly adding an experimental voice-input mode and Touch ID confirmation before an MCP tool request could run, then quickly reverting its reasoning-summary default after user pushback</h3>
-            <p class="why"><b>Why it matters:</b> coding agents are starting to experiment with per-action biometric gating for tool calls, a preview of the kind of confirmation step you may want to design into your own agent tooling (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://dev.to/aicoding-guide/this-week-in-claude-code-codex-and-gemini-cli-week-of-september-20-2026-2fg1">dev.to</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-20</span><span class="pill">Open models</span></div>
-          <div><h3>Alibaba released Qwen-Image-2.1, a 7-billion-parameter open-weight image generation and editing model that writes native RGBA transparency straight out of the model and can use up to ten reference images in one pass, though its license is restricted to non-commercial research use</h3>
-            <p class="why"><b>Why it matters:</b> a compact open model reportedly outscoring larger closed rivals on its creator's own ranking is worth testing locally before assuming you need a closed API, though the research-only license limits what you can ship with it (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://the-decoder.com/alibabas-open-weight-qwen-image-2-1-claims-to-beat-closed-models-in-image-generation-with-just-7-billion-parameters/">the-decoder.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-09-20</span><span class="pill">Models</span></div>
           <div><h3>Chinese lab StepFun launched Step 5 Preview, a 600-billion-parameter sparse mixture-of-experts model that activates only about 27 billion parameters per token, with a 1-million-token context window aimed at long-horizon coding and agent workloads and pricing reported around $1 per million tokens; open weights are reportedly planned for October 15</h3>
             <p class="why"><b>Why it matters:</b> a large MoE model that only activates a fraction of its weights per token is a concrete example of why "parameter count" alone doesn't tell you the real compute or memory cost (<a href="#L4">L4</a>).</p>
@@ -486,6 +480,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Stanford HAI's 2026 AI Index reported that employment among software developers aged 22–25 has fallen nearly 20% since 2024, even as employment for more senior developers at the same firms keeps growing, part of a wider wave of over 210,000 US tech layoffs so far this year</h3>
             <p class="why"><b>Why it matters:</b> routine coding work is the first thing AI is displacing, so pairing programming skill with applied-AI and agent-building experience is becoming the real differentiator for a new grad (<a href="#L5">L5</a>) (<a href="#projects">Projects</a>).</p>
             <p class="src"><a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report">hai.stanford.edu</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-19</span><span class="pill">Coding</span></div>
+          <div><h3>Claude Code 2.1.278, released September 19, added support for AGENTS.md, an open-standard project config file already shared by Codex, Cursor and Copilot, so one file can now configure several coding agents at once, while an existing CLAUDE.md still takes priority where present</h3>
+            <p class="why"><b>Why it matters:</b> a shared config format across coding agents means the instructions you write once increasingly travel with you between tools, worth adopting if you already maintain per-agent setup files (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.gradually.ai/en/changelogs/claude-code/">gradually.ai</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-19</span><span class="pill">Local</span></div>
@@ -674,49 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: temperature-sampling, kv-cache-memory, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings -->
-        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings">
-          <span class="label">New this refresh · 2026-09-23 · connects to <a href="#L5">L5</a></span>
-          <h3>Cosine similarity of embeddings, in 2D</h3>
-          <p class="lede">A real embedding model turns text into a vector with hundreds or thousands of dimensions, but the similarity math is identical in two: it measures the angle between two vectors, not their length. Drag the sliders to move vector A and vector B and watch the score update live — 1.0 means pointing the same way, 0 means perpendicular (unrelated), −1 means opposite. This toy skips the actual text-to-vector step and the extra dimensions a real embedding uses.</p>
+        <!-- HISTORY: temperature-sampling, kv-cache-memory, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold -->
+        <div class="pgcard pgtopic" data-topic="precision-recall-threshold">
+          <span class="label">New this refresh · 2026-09-23 · connects to <a href="#L1">L1</a></span>
+          <h3>Precision vs. recall, at a threshold</h3>
+          <p class="lede">A classifier doesn't output "yes" or "no" — it outputs a score, and you pick the cutoff. Drag the threshold across a fixed toy batch of 20 pre-scored examples (9 truly positive, 11 truly negative) and watch precision (how many flagged items are really positive) trade off against recall (how many of the true positives you actually catch). Real evaluation uses much larger held-out test sets and cross-validation; this is one tiny fixed batch, just to make the trade-off visible.</p>
           <div class="pt-ctl">
-            <label style="display:flex;flex-direction:column;gap:2px">Vector A · x <input type="range" id="pt-ax" min="-10" max="10" step="1" value="6" aria-label="Vector A x"></label>
-            <label style="display:flex;flex-direction:column;gap:2px">Vector A · y <input type="range" id="pt-ay" min="-10" max="10" step="1" value="2" aria-label="Vector A y"></label>
-            <label style="display:flex;flex-direction:column;gap:2px">Vector B · x <input type="range" id="pt-bx" min="-10" max="10" step="1" value="1" aria-label="Vector B x"></label>
-            <label style="display:flex;flex-direction:column;gap:2px">Vector B · y <input type="range" id="pt-by" min="-10" max="10" step="1" value="7" aria-label="Vector B y"></label>
+            <label style="display:flex;flex-direction:column;gap:2px">Decision threshold <input type="range" id="pt-thresh" min="0" max="100" step="1" value="50" aria-label="Decision threshold"> <span class="mono" id="pt-tval">0.50</span></label>
           </div>
-          <svg id="pt-svg" viewBox="0 0 220 220" role="img" aria-label="Vectors A and B plotted from the origin" style="width:100%;max-width:240px;height:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg)"></svg>
-          <div class="pt-row"><span class="mono">similarity</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-val">0.00</span></div>
+          <div class="pt-row"><span class="mono">precision</span><div class="pt-track"><div class="pt-fill" id="pt-pfill"></div></div><span class="mono" id="pt-pval">0.00</span></div>
+          <div class="pt-row"><span class="mono">recall</span><div class="pt-track"><div class="pt-fill" id="pt-rfill"></div></div><span class="mono" id="pt-rval">0.00</span></div>
           <div id="pt-readout" class="mono"></div>
           <script>(function(){
-          var ax=document.getElementById("pt-ax"), ay=document.getElementById("pt-ay"),
-              bx=document.getElementById("pt-bx"), by=document.getElementById("pt-by"),
-              svg=document.getElementById("pt-svg"), fill=document.getElementById("pt-fill"),
-              val=document.getElementById("pt-val"), readout=document.getElementById("pt-readout");
-          var NS="http://www.w3.org/2000/svg", CX=110, CY=110, SCALE=9;
-          function line(x1,y1,x2,y2,color,w){
-            var e=document.createElementNS(NS,"line");
-            e.setAttribute("x1",x1); e.setAttribute("y1",y1); e.setAttribute("x2",x2); e.setAttribute("y2",y2);
-            e.setAttribute("style","stroke:"+color+";stroke-width:"+w);
-            return e;
+          var data=[[0.95,1],[0.91,1],[0.88,0],[0.84,1],[0.79,1],[0.75,0],[0.71,1],[0.67,0],[0.63,1],[0.59,0],
+                    [0.55,1],[0.51,0],[0.47,0],[0.43,1],[0.39,0],[0.35,0],[0.31,0],[0.27,1],[0.19,0],[0.11,0]];
+          var thresh=document.getElementById("pt-thresh"), tval=document.getElementById("pt-tval"),
+              pfill=document.getElementById("pt-pfill"), rfill=document.getElementById("pt-rfill"),
+              pval=document.getElementById("pt-pval"), rval=document.getElementById("pt-rval"),
+              readout=document.getElementById("pt-readout");
+          function update(){
+            var t=(+thresh.value)/100;
+            tval.textContent=t.toFixed(2);
+            var tp=0, fp=0, fn=0;
+            data.forEach(function(d){
+              var pred=d[0]>=t?1:0;
+              if(pred===1&&d[1]===1) tp++;
+              else if(pred===1&&d[1]===0) fp++;
+              else if(pred===0&&d[1]===1) fn++;
+            });
+            var precision=(tp+fp)===0?1:tp/(tp+fp);
+            var recall=(tp+fn)===0?1:tp/(tp+fn);
+            pval.textContent=precision.toFixed(2);
+            rval.textContent=recall.toFixed(2);
+            pfill.style.width=(precision*100)+"%";
+            rfill.style.width=(recall*100)+"%";
+            readout.textContent=tp+" true positives, "+fp+" false positives, "+fn+" false negatives at this threshold.";
           }
-          function draw(){
-            while(svg.firstChild) svg.removeChild(svg.firstChild);
-            svg.appendChild(line(0,CY,220,CY,"var(--line)",1));
-            svg.appendChild(line(CX,0,CX,220,"var(--line)",1));
-            var a=[+ax.value,+ay.value], b=[+bx.value,+by.value];
-            svg.appendChild(line(CX,CY,CX+a[0]*SCALE,CY-a[1]*SCALE,"var(--accent)",2));
-            svg.appendChild(line(CX,CY,CX+b[0]*SCALE,CY-b[1]*SCALE,"var(--signal)",2));
-            var dot=a[0]*b[0]+a[1]*b[1];
-            var magA=Math.sqrt(a[0]*a[0]+a[1]*a[1]), magB=Math.sqrt(b[0]*b[0]+b[1]*b[1]);
-            var sim=(magA===0||magB===0)?0:dot/(magA*magB);
-            val.textContent=sim.toFixed(2);
-            fill.style.width=((sim+1)/2*100)+"%";
-            var angle=Math.acos(Math.max(-1,Math.min(1,sim)))*180/Math.PI;
-            readout.textContent="dot product "+dot+", "+angle.toFixed(1)+"° apart. 1.0 = same direction, 0 = perpendicular, -1 = opposite.";
-          }
-          [ax,ay,bx,by].forEach(function(inp){ inp.addEventListener("input",draw); });
-          draw();
+          thresh.addEventListener("input",update);
+          update();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
