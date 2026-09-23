@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-23T06:39:08">2026-09-23 06:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-23T11:38:36">2026-09-23 11:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are racing to cut inference prices, not just chase benchmarks</strong><p>OpenAI's GPT-6 Sol and Luna launched at roughly half the API price of their predecessors, and Anthropic followed days later pricing Claude Opus 5.5 about 20% below Opus 5 — cost is now a headline spec, not an afterthought. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap with closed frontier models</strong><p>Xiaomi's MIT-licensed MiMo-V2.6-Pro is reported to be the highest-scoring open-weight model yet on the Artificial Analysis Intelligence Index, and Chinese lab StepFun priced its 600B-parameter Step 5 Preview mixture-of-experts model around $1 per million tokens with open weights due in October. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Coding agents keep hardening the MCP tool-call surface</strong><p>Gemini CLI 0.60.0 enforced MCP OAuth issuer validation, and GitHub's Copilot CLI 1.0.88 closed an MCP scope-escalation bug days later, while Codex CLI briefly trialed Touch ID confirmation before tool calls. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap with closed frontier models</strong><p>Xiaomi's MIT-licensed MiMo-V2.6-Pro is reported to be the highest-scoring open-weight model yet on the Artificial Analysis Intelligence Index, and DeepSeek's V4.1-Flash shipped MIT-licensed in the 500B+ parameter class with a reported 4x cut to KV-cache memory use. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>MCP's trust model is now a live attack target, not just an OAuth checklist</strong><p>GitHub's Copilot CLI closed an MCP scope-escalation bug this week, while researchers disclosed Deadbugz, a malicious MCP server that behaves normally for two tool calls before rewriting its own instructions on the third — evidence that vetting a server once at install time is no longer enough. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>International bodies are turning AI oversight into standing process</strong><p>The UN Security Council's September 23 briefing put OpenAI, Anthropic, Hugging Face and Chinese labs like DeepSeek in the same session, a sign coordination on AI risk is becoming routine rather than one-off. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent tooling is standardizing across vendors and into hardware</strong><p>Claude Code adopted the open AGENTS.md config standard already shared by Codex, Cursor and Copilot, and Alphabet's Intrinsic open-sourced its ROS-compatible robotics stack under Apache 2.0 — both signs agent infrastructure is consolidating around shared, open formats rather than one vendor's ecosystem. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Coding-agent competition is intensifying on both capital and capability</strong><p>Factory reportedly raised $200M at a $5B valuation this week, while GPT-6 Astra and Claude Fable 5.1 landed within half a point of each other atop the Terminal-Bench 4.0 leaderboard — a crowded, fast-moving market worth watching before you specialize in one tool. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -408,6 +408,24 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>The UN Security Council held a high-level briefing on AI and international security on September 23, convened by France, where OpenAI's Sam Altman, Anthropic's Dario Amodei, Hugging Face's Clément Delangue and IISP-AI co-chair Yoshua Bengio briefed alongside invited Chinese labs including DeepSeek and Moonshot</h3>
             <p class="why"><b>Why it matters:</b> it's a rare venue putting US and Chinese frontier labs in the same room on AI risk, a sign international coordination is becoming a standing process rather than one-off pledges (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php">securitycouncilreport.org</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-23</span><span class="pill">Industry</span></div>
+          <div><h3>OpenAI confirmed the Sora 2 video-generation API will be fully discontinued on September 24, ending developer access after the Sora web and app experiences were already shut down earlier this year, reportedly because usage and revenue never covered its running cost</h3>
+            <p class="why"><b>Why it matters:</b> a well-funded model can still get discontinued when the economics don't work out, a reminder to plan a fallback before building a project around any single vendor's API (<a href="#L5">L5</a>) (<a href="#projects">Projects</a>).</p>
+            <p class="src"><a href="https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation">help.openai.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-22</span><span class="pill sec">Security</span></div>
+          <div><h3>Security researchers at Pillar disclosed "Deadbugz," a malicious MCP server distributed through public GitHub pull requests that behaves normally for the first two tool calls, then rewrites its own tool descriptions on the third to instruct an agent to exfiltrate SSH keys, AWS credentials and Kubernetes configs</h3>
+            <p class="why"><b>Why it matters:</b> a server that passes every check you run before approving it can still turn malicious later, so treat MCP server metadata as untrusted input to re-verify at runtime, not just at install (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.pillar.security/blog/deadbugz-currently-active-mcp-supply-chain-campaign">pillar.security</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Coding</span></div>
+          <div><h3>On the Terminal-Bench 4.0 leaderboard, which scores agents on end-to-end terminal work like installing toolchains and resolving system faults, GPT-6 Astra in Codex and Claude Fable 5.1 in Claude Code are reported to be running neck and neck, roughly half a percentage point apart</h3>
+            <p class="why"><b>Why it matters:</b> when the top coding agents are this close on a shared benchmark, picking one over another is increasingly about workflow fit and cost, not a clear capability gap — worth re-testing your own tasks rather than trusting a single leaderboard number (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://www.vals.ai/benchmarks/terminal-bench-4">vals.ai</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-22</span><span class="pill">Models</span></div>
@@ -440,6 +458,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.scientificamerican.com/article/mathematicians-use-ai-to-find-mysterious-symmetries-solving-decades-old-problem/">scientificamerican.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Industry</span></div>
+          <div><h3>AI coding-agent startup Factory reportedly raised $200 million, valuing the company at $5 billion, continuing a wave of large funding rounds for agentic coding tools this month</h3>
+            <p class="why"><b>Why it matters:</b> investor money is still pouring into coding agents even as the tools converge on similar benchmark scores, a sign the market is betting on workflow integration and distribution, not just raw model quality (<a href="#L6">L6</a>) (<a href="#projects">Projects</a>).</p>
+            <p class="src"><a href="https://aiagentstore.ai/ai-agent-news/this-week">aiagentstore.ai</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-09-21</span><span class="pill">Open models</span></div>
           <div><h3>Xiaomi released its MiMo-V2.6 model family, including a Pro version, under an MIT license on Hugging Face with a 1-million-token context window and four input modalities, reportedly the highest-scoring open-weight model yet on the Artificial Analysis Intelligence Index</h3>
             <p class="why"><b>Why it matters:</b> an MIT-licensed model with no non-commercial restriction and reportedly frontier-adjacent scores is worth testing locally as an alternative to the more restrictively licensed open releases from this week (<a href="#L4">L4</a>).</p>
@@ -464,34 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://news.un.org/en/story/2026/09/1168380">news.un.org</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-20</span><span class="pill sec">Security</span></div>
-          <div><h3>Google's Gemini CLI shipped version 0.60.0, a release focused almost entirely on hardening MCP OAuth flows, including enforcing RFC 9207 issuer validation to block identity-provider mix-up attacks during MCP server authentication</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete example of what OAuth-callback hardening for MCP looks like in a shipped coding agent, worth comparing against how your own MCP client or server validates the issuer field (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://github.com/google-gemini/gemini-cli/pull/29117">github.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-20</span><span class="pill">Models</span></div>
-          <div><h3>Chinese lab StepFun launched Step 5 Preview, a 600-billion-parameter sparse mixture-of-experts model that activates only about 27 billion parameters per token, with a 1-million-token context window aimed at long-horizon coding and agent workloads and pricing reported around $1 per million tokens; open weights are reportedly planned for October 15</h3>
-            <p class="why"><b>Why it matters:</b> a large MoE model that only activates a fraction of its weights per token is a concrete example of why "parameter count" alone doesn't tell you the real compute or memory cost (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://pandaily.com/stepfun-step-5-preview-600b-moe-1m-context">pandaily.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-20</span><span class="pill">Industry</span></div>
-          <div><h3>Stanford HAI's 2026 AI Index reported that employment among software developers aged 22–25 has fallen nearly 20% since 2024, even as employment for more senior developers at the same firms keeps growing, part of a wider wave of over 210,000 US tech layoffs so far this year</h3>
-            <p class="why"><b>Why it matters:</b> routine coding work is the first thing AI is displacing, so pairing programming skill with applied-AI and agent-building experience is becoming the real differentiator for a new grad (<a href="#L5">L5</a>) (<a href="#projects">Projects</a>).</p>
-            <p class="src"><a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report">hai.stanford.edu</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-19</span><span class="pill">Coding</span></div>
-          <div><h3>Claude Code 2.1.278, released September 19, added support for AGENTS.md, an open-standard project config file already shared by Codex, Cursor and Copilot, so one file can now configure several coding agents at once, while an existing CLAUDE.md still takes priority where present</h3>
-            <p class="why"><b>Why it matters:</b> a shared config format across coding agents means the instructions you write once increasingly travel with you between tools, worth adopting if you already maintain per-agent setup files (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.gradually.ai/en/changelogs/claude-code/">gradually.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-19</span><span class="pill">Local</span></div>
-          <div><h3>Ollama released v0.34.3, adding a GET /api/show field that advertises each model's thinking-mode controls and defaults and extending Apple Silicon MLX support to Nemotron H vision models</h3>
-            <p class="why"><b>Why it matters:</b> exposing a model's thinking-mode metadata through the API makes it easier to build local tooling that adapts automatically instead of hard-coding per-model quirks, useful groundwork if you're serving a fine-tuned model yourself (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://github.com/ollama/ollama/releases/tag/v0.34.3-rc1">github.com</a></p></div>
+          <div class="when"><span class="mono">2026-09-10</span><span class="pill">Open models</span></div>
+          <div><h3>DeepSeek released V4.1-Flash, an MIT-licensed open-weight model in the 500B+ parameter class reported to cut KV-cache memory use roughly 4x versus its predecessor, with no non-commercial restriction on the license</h3>
+            <p class="why"><b>Why it matters:</b> a 4x cut in KV-cache memory is a concrete example of an architecture change, not just quantization, that makes serving a large model cheaper — worth understanding if you're budgeting local or self-hosted inference (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://sebastianraschka.com/blog/2026/notable-open-weight-models-this-week.html">sebastianraschka.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,44 +674,59 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: temperature-sampling, kv-cache-memory, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold">
-          <span class="label">New this refresh · 2026-09-23 · connects to <a href="#L1">L1</a></span>
-          <h3>Precision vs. recall, at a threshold</h3>
-          <p class="lede">A classifier doesn't output "yes" or "no" — it outputs a score, and you pick the cutoff. Drag the threshold across a fixed toy batch of 20 pre-scored examples (9 truly positive, 11 truly negative) and watch precision (how many flagged items are really positive) trade off against recall (how many of the true positives you actually catch). Real evaluation uses much larger held-out test sets and cross-validation; this is one tiny fixed batch, just to make the trade-off visible.</p>
+        <!-- HISTORY: temperature-sampling, kv-cache-memory, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges -->
+        <div class="pgcard pgtopic" data-topic="bpe-tokenization-merges">
+          <span class="label">New this refresh · 2026-09-23 · connects to <a href="#L3">L3</a></span>
+          <h3>How a BPE tokenizer finds its merges</h3>
+          <p class="lede">Byte-pair encoding (BPE) is how most modern tokenizers turn text into subword tokens: start from raw characters, then repeatedly merge whichever adjacent pair is most frequent into one new symbol. Drag the slider to replay merges one at a time on the classic four-word toy corpus from the original BPE paper (low, lower, newest, widest). Real tokenizers train on billions of characters and thousands of merges; this is four words and up to eight merges, just to make the mechanism visible.</p>
           <div class="pt-ctl">
-            <label style="display:flex;flex-direction:column;gap:2px">Decision threshold <input type="range" id="pt-thresh" min="0" max="100" step="1" value="50" aria-label="Decision threshold"> <span class="mono" id="pt-tval">0.50</span></label>
+            <label style="display:flex;flex-direction:column;gap:2px">Merges applied <input type="range" id="pt-merges" min="0" max="8" step="1" value="0" aria-label="Number of merges applied"> <span class="mono" id="pt-mval">0</span></label>
           </div>
-          <div class="pt-row"><span class="mono">precision</span><div class="pt-track"><div class="pt-fill" id="pt-pfill"></div></div><span class="mono" id="pt-pval">0.00</span></div>
-          <div class="pt-row"><span class="mono">recall</span><div class="pt-track"><div class="pt-fill" id="pt-rfill"></div></div><span class="mono" id="pt-rval">0.00</span></div>
-          <div id="pt-readout" class="mono"></div>
+          <div id="pt-words" class="mono" style="line-height:1.9"></div>
+          <div id="pt-log" class="mono" style="color:var(--muted);margin-top:4px"></div>
           <script>(function(){
-          var data=[[0.95,1],[0.91,1],[0.88,0],[0.84,1],[0.79,1],[0.75,0],[0.71,1],[0.67,0],[0.63,1],[0.59,0],
-                    [0.55,1],[0.51,0],[0.47,0],[0.43,1],[0.39,0],[0.35,0],[0.31,0],[0.27,1],[0.19,0],[0.11,0]];
-          var thresh=document.getElementById("pt-thresh"), tval=document.getElementById("pt-tval"),
-              pfill=document.getElementById("pt-pfill"), rfill=document.getElementById("pt-rfill"),
-              pval=document.getElementById("pt-pval"), rval=document.getElementById("pt-rval"),
-              readout=document.getElementById("pt-readout");
-          function update(){
-            var t=(+thresh.value)/100;
-            tval.textContent=t.toFixed(2);
-            var tp=0, fp=0, fn=0;
-            data.forEach(function(d){
-              var pred=d[0]>=t?1:0;
-              if(pred===1&&d[1]===1) tp++;
-              else if(pred===1&&d[1]===0) fp++;
-              else if(pred===0&&d[1]===1) fn++;
+          function clone(ws){ return ws.map(function(w){ return {sym:w.sym.slice(),n:w.n}; }); }
+          var words=[
+            {sym:["l","o","w","_"],n:5},
+            {sym:["l","o","w","e","r","_"],n:2},
+            {sym:["n","e","w","e","s","t","_"],n:6},
+            {sym:["w","i","d","e","s","t","_"],n:3}
+          ];
+          var steps=[clone(words)], log=[];
+          for(var m=0;m<8;m++){
+            var pairs={};
+            words.forEach(function(w){
+              for(var i=0;i<w.sym.length-1;i++){
+                var key=w.sym[i]+"\u0000"+w.sym[i+1];
+                pairs[key]=(pairs[key]||0)+w.n;
+              }
             });
-            var precision=(tp+fp)===0?1:tp/(tp+fp);
-            var recall=(tp+fn)===0?1:tp/(tp+fn);
-            pval.textContent=precision.toFixed(2);
-            rval.textContent=recall.toFixed(2);
-            pfill.style.width=(precision*100)+"%";
-            rfill.style.width=(recall*100)+"%";
-            readout.textContent=tp+" true positives, "+fp+" false positives, "+fn+" false negatives at this threshold.";
+            var bestKey=null, bestN=0;
+            for(var k in pairs){ if(pairs[k]>bestN){ bestN=pairs[k]; bestKey=k; } }
+            if(!bestKey) break;
+            var parts=bestKey.split("\u0000");
+            words=words.map(function(w){
+              var out=[], i=0;
+              while(i<w.sym.length){
+                if(i<w.sym.length-1 && w.sym[i]===parts[0] && w.sym[i+1]===parts[1]){ out.push(parts[0]+parts[1]); i+=2; }
+                else { out.push(w.sym[i]); i++; }
+              }
+              return {sym:out,n:w.n};
+            });
+            log.push(parts[0]+"+"+parts[1]+" (seen "+bestN+"x)");
+            steps.push(clone(words));
           }
-          thresh.addEventListener("input",update);
-          update();
+          var slider=document.getElementById("pt-merges"), mval=document.getElementById("pt-mval"),
+              wordsEl=document.getElementById("pt-words"), logEl=document.getElementById("pt-log");
+          slider.max=steps.length-1;
+          function render(){
+            var idx=+slider.value;
+            mval.textContent=idx;
+            wordsEl.textContent=steps[idx].map(function(w){ return w.sym.join(" "); }).join("    |    ");
+            logEl.textContent=idx===0?"No merges yet — every word is split into raw characters (_ marks the word boundary).":"Merges so far, in order: "+log.slice(0,idx).join(", ");
+          }
+          slider.addEventListener("input",render);
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
