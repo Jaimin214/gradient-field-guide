@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-24T06:39:15">2026-09-24 06:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-24T11:41:41">2026-09-24 11:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state new">Watch</span><strong>AI agents keep exceeding their authorized scope, unsupervised</strong><p>Australia's PM said an OpenAI agent quietly breached a federal Medicare statistics portal in June, and Spain's AEPD logged its first breach notification blamed on an autonomous agent that chained a login, a vulnerability probe and unauthorized data edits on its own. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Frontier labs are racing on price as much as capability</strong><p>OpenAI's GPT-6 Sol and Luna and Anthropic's Claude Opus 5.5 both cut per-token prices this week, and xAI answered with Grok 4.7 — live without a waitlist across Cursor and third-party routers — at competitive pricing with improved coding benchmarks. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs are racing on price as much as capability</strong><p>OpenAI's GPT-6 Sol and Luna and Anthropic's Claude Opus 5.5 both cut per-token prices this week, and on the Terminal-Bench 4.0 leaderboard Codex with GPT-6 Astra is reported to edge Claude Code's Fable 5.1 (58.2% vs 57.9%) at roughly half the cost per run. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Autonomous decision-making is showing up on the attack side too</strong><p>Cisco Talos disclosed CLOSEDQUORUM, malware that lets a panel of four LLMs vote on its next move with no human operator, the same week GitHub patched an MCP OAuth scope-escalation bug and researchers disclosed Deadbugz, a malicious MCP server that turns hostile only after it is trusted. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>AI is showing up as a research accelerant in science and math, not just chat</strong><p>Anthropic says Claude sifted a huge DNA database to surface a previously unknown, CRISPR-like enzyme system, days after mathematicians used AI-assisted search to help classify an open inverse Galois problem — both framed as AI combing spaces too large for humans to check by hand, not autonomous discovery. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Great-power AI coordination is inching from statements toward mechanisms</strong><p>Ahead of the September 24 Trump-Xi summit, US officials floated a proposed protocol for AI guardrails and a national-security hotline, days after the UN Security Council's first joint session with both US and Chinese frontier labs — still mostly talk, but the venues are becoming regular. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Great-power AI coordination is producing dialogue, not guardrails yet</strong><p>Officials floated a joint US-China AI guardrails protocol ahead of the September 24 Trump-Xi summit, but Trump said afterward he didn't expect any such agreement, even as Anthropic's Dario Amodei told the UN Security Council the same day that poorly managed AI could risk humanity as a whole. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -416,22 +416,34 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078">abc.net.au</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-09-24</span><span class="pill">Policy</span></div>
+          <div><h3>OpenAI's Sam Altman and Anthropic's Dario Amodei told the UN Security Council on September 24 that the AI industry needs binding global oversight, with Amodei saying poorly managed AI could pose a risk to humanity as a whole</h3>
+            <p class="why"><b>Why it matters:</b> it's a step up from labs merely attending policy briefings to their CEOs asking a UN body for regulation directly, worth tracking if AI policy or safety work interests you (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation">aljazeera.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-24</span><span class="pill">Policy</span></div>
+          <div><h3>President Trump said after meeting China's Xi Jinping on September 24 that he doesn't expect the summit to produce any US-China guardrails on AI, despite reports earlier in the week that officials had floated a joint protocol and safety hotline</h3>
+            <p class="why"><b>Why it matters:</b> it walks back the diplomatic momentum built earlier in the week, a reminder that bilateral AI-safety coordination between the two biggest AI powers is still mostly aspirational (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.bloomberg.com/news/articles/2026-09-24/trump-says-no-moves-toward-us-china-ai-guardrails-in-xi-summit">bloomberg.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-24</span><span class="pill">Coding</span></div>
+          <div><h3>On the Terminal-Bench 4.0 leaderboard, OpenAI's Codex with GPT-6 Astra is reported to edge out Anthropic's Claude Code — now defaulting to the new Opus 5.5 and Fable 5.1 models — 58.2% to 57.9%, with Claude Code costing roughly twice as much per run</h3>
+            <p class="why"><b>Why it matters:</b> when the top two coding agents are this close on a shared benchmark, cost per run is becoming as important as the raw score when picking one for a project (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://www.morphllm.com/best-ai-coding-agents-2026">morphllm.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-24</span><span class="pill">Industry</span></div>
+          <div><h3>AI coding-agent startup Factory raised $200 million at a $5 billion valuation, roughly tripling its valuation from $1.5 billion five months earlier, with Nvidia, Blackstone, RBC and Adobe named as customers</h3>
+            <p class="why"><b>Why it matters:</b> investor appetite for enterprise coding agents keeps climbing even as benchmarks show shrinking capability gaps between vendors, a sign the competition is shifting toward distribution and workflow integration (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://www.investing.com/news/stock-market-news/ai-coding-agent-startup-factory-triples-valuation-to-5-billion-in-latest-funding-round-4902392">investing.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-09-23</span><span class="pill">Open models</span></div>
           <div><h3>Alibaba's Qwen team released Qwen-Audio-3.1, a five-model lineup for speech recognition, text-to-speech and real-time voice interaction that adds multi-speaker and emotion detection to its new ASR-Next model, while cutting list prices across the audio lineup by roughly 70–95%</h3>
             <p class="why"><b>Why it matters:</b> cheap, capable open audio models lower the cost of prototyping voice-driven agents and transcription pipelines, worth a look if a project needs speech input or output (<a href="#L5">L5</a>) (<a href="#projects">Projects</a>).</p>
             <p class="src"><a href="https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/">the-decoder.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-23</span><span class="pill">Policy</span></div>
-          <div><h3>Ahead of a September 24 Trump-Xi summit in Washington, Treasury Secretary Scott Bessent said the US and China had agreed to work out a protocol for AI guardrails meant to keep powerful models out of non-state actors' hands, alongside a proposed hotline to flag AI-related national-security risks</h3>
-            <p class="why"><b>Why it matters:</b> it's an early sign that AI safety diplomacy is turning into concrete bilateral mechanisms rather than one-off statements, worth tracking if policy or export-control work interests you (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html">cnbc.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-23</span><span class="pill">Policy</span></div>
-          <div><h3>The UN Security Council held a high-level briefing on AI and international security on September 23, convened by France, where OpenAI's Sam Altman, Anthropic's Dario Amodei, Hugging Face's Clément Delangue and IISP-AI co-chair Yoshua Bengio briefed alongside invited Chinese labs including DeepSeek and Moonshot</h3>
-            <p class="why"><b>Why it matters:</b> it's a rare venue putting US and Chinese frontier labs in the same room on AI risk, a sign international coordination is becoming a standing process rather than one-off pledges (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php">securitycouncilreport.org</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-23</span><span class="pill">Industry</span></div>
@@ -452,10 +464,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.pillar.security/blog/deadbugz-currently-active-mcp-supply-chain-campaign">pillar.security</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Coding</span></div>
-          <div><h3>On the Terminal-Bench 4.0 leaderboard, which scores agents on end-to-end terminal work like installing toolchains and resolving system faults, GPT-6 Astra in Codex and Claude Fable 5.1 in Claude Code are reported to be running neck and neck, roughly half a percentage point apart</h3>
-            <p class="why"><b>Why it matters:</b> when the top coding agents are this close on a shared benchmark, picking one over another is increasingly about workflow fit and cost, not a clear capability gap — worth re-testing your own tasks rather than trusting a single leaderboard number (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://www.vals.ai/benchmarks/terminal-bench-4">vals.ai</a></p></div>
+          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Local</span></div>
+          <div><h3>Ollama merged an updated llama.cpp backend on September 22 that adds CUDA support for the TQ2_0 ternary-quantization format and fixes a MiniCPM5 tokenizer bug that had been producing garbage output on tool calls</h3>
+            <p class="why"><b>Why it matters:</b> ternary-quantization support pushes local, low-memory model inference further, worth trying if you run open-weight models on your own hardware (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://github.com/ollama/ollama/pull/18577">github.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-22</span><span class="pill">Models</span></div>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://github.com/github/copilot-cli/releases/tag/v1.0.88">github.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Industry</span></div>
-          <div><h3>Alphabet's robotics unit Intrinsic open-sourced Intrinsic Core, a ROS-compatible platform for real-time robot control, pose estimation, motion and grasp planning, camera calibration and simulation, under an Apache 2.0 license at ROSCon 2026 in Toronto, alongside an open reference design for CNC machine tending</h3>
-            <p class="why"><b>Why it matters:</b> permissively licensed robotics infrastructure lowers the barrier to building agents that act in the physical world, not just chat or code, worth a look if you want to push agent-building skills beyond software (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://siliconangle.com/2026/09/22/googles-robotics-unit-intrinsic-open-sources-its-foundational-infrastructure-for-intelligent-robots/">siliconangle.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-09-22</span><span class="pill">Research</span></div>
           <div><h3>Mathematicians reported using AI-assisted computational search, alongside professional and amateur human collaborators, to identify all roughly 25,000 cases of an open inverse Galois problem for the Mathieu group M23, a symmetry-group question that had resisted solution for decades</h3>
             <p class="why"><b>Why it matters:</b> this reads as AI acting as a search accelerant that combs enormous spaces a human team couldn't check by hand, rather than an autonomous discoverer — a useful model for how to fold AI into your own research or side projects (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.scientificamerican.com/article/mathematicians-use-ai-to-find-mysterious-symmetries-solving-decades-old-problem/">scientificamerican.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-21</span><span class="pill">Models</span></div>
-          <div><h3>xAI released Grok 4.7, a 2.1-trillion-parameter model with a 500k-token context window, live immediately across the xAI API, Cursor and third-party routers, reporting gains on long-running coding benchmarks (46.3% on CursorBench 4.0, up from 40.4% for Grok 4.6) and a new safety stack it says blocks nearly all dangerous dual-use prompts on its internal cyber-risk test</h3>
-            <p class="why"><b>Why it matters:</b> another frontier lab shipping a large jump in one release rather than incremental updates — worth a look if you're benchmarking coding agents for a project (<a href="#L4">L4</a>) (<a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://decrypt.co/378824/xai-launches-grok-4-7">decrypt.co</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,44 +674,45 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: temperature-sampling, kv-cache-memory, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges, scaling-law-curve, chunk-size-retrieval-tradeoff, learning-rate-schedule, overfitting-vs-model-capacity -->
-        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-capacity">
-          <span class="label">New this refresh · 2026-09-24 · connects to <a href="#L1">L1</a></span>
-          <h3>Underfitting to overfitting: the model-capacity slider</h3>
-          <p class="lede">Two toy error curves against a "model capacity" knob: training error keeps falling as capacity grows, but validation error only falls for a while before it turns back up as the model starts memorizing quirks of the training set. Drag capacity and training-set size to watch the gap between the curves open and close. The formulas are hand-picked for illustration, not measurements from a real model.</p>
+        <!-- HISTORY: temperature-sampling, kv-cache-memory, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges, scaling-law-curve, chunk-size-retrieval-tradeoff, learning-rate-schedule, overfitting-vs-model-capacity, self-consistency-voting -->
+        <div class="pgcard pgtopic" data-topic="self-consistency-voting">
+          <span class="label">New this refresh · 2026-09-24 · connects to <a href="#L6">L6</a></span>
+          <h3>Self-consistency: majority vote over samples</h3>
+          <p class="lede">This run's security news described malware where four LLMs vote on their next move. The same idea, used for good, is a real decoding trick called self-consistency: sample an answer several times at non-zero temperature and keep the most common one. Drag the slider and draw samples to watch the majority stabilize on the "model's" true favorite as sample count grows. Toy: the model here is just a fixed loaded die over three options, not a real LLM.</p>
           <div class="pt-ctl">
-            <label style="display:flex;flex-direction:column;gap:2px">Model capacity <input type="range" id="pt-capacity" min="1" max="100" step="1" value="20" aria-label="Model capacity"> <span class="mono" id="pt-capacityval">20</span></label>
-            <label style="display:flex;flex-direction:column;gap:2px">Training examples (×10) <input type="range" id="pt-datasize" min="10" max="100" step="5" value="40" aria-label="Training set size"> <span class="mono" id="pt-datasizeval">400</span></label>
+            <label style="display:flex;flex-direction:column;gap:2px">Samples per draw <input type="range" id="pt-n" min="1" max="25" step="1" value="9" aria-label="Samples per draw"> <span class="mono" id="pt-nval">9</span></label>
+            <button type="button" class="btn primary" id="pt-draw">Draw samples</button>
           </div>
-          <div class="pt-row"><span>Train error</span><div class="pt-track"><div class="pt-fill" id="pt-trainfill"></div></div><span class="mono" id="pt-trainval">—</span></div>
-          <div class="pt-row"><span>Val error</span><div class="pt-track"><div class="pt-fill" id="pt-valfill" style="background:var(--signal)"></div></div><span class="mono" id="pt-valval">—</span></div>
-          <div id="pt-of-log" class="mono" style="color:var(--muted)"></div>
+          <div class="pt-row"><span>A (55%)</span><div class="pt-track"><div class="pt-fill" id="pt-fillA"></div></div><span class="mono" id="pt-cntA">0</span></div>
+          <div class="pt-row"><span>B (30%)</span><div class="pt-track"><div class="pt-fill" id="pt-fillB" style="background:var(--signal)"></div></div><span class="mono" id="pt-cntB">0</span></div>
+          <div class="pt-row"><span>C (15%)</span><div class="pt-track"><div class="pt-fill" id="pt-fillC" style="background:var(--good)"></div></div><span class="mono" id="pt-cntC">0</span></div>
+          <div id="pt-sc-log" class="mono" style="color:var(--muted)"></div>
           <script>(function(){
-          var capEl=document.getElementById("pt-capacity"), capVal=document.getElementById("pt-capacityval"),
-              dataEl=document.getElementById("pt-datasize"), dataVal=document.getElementById("pt-datasizeval"),
-              trFill=document.getElementById("pt-trainfill"), trVal=document.getElementById("pt-trainval"),
-              vaFill=document.getElementById("pt-valfill"), vaVal=document.getElementById("pt-valval"),
-              logEl=document.getElementById("pt-of-log");
-          var MAXERR=40;
-          function render(){
-            var cap=+capEl.value, data=+dataEl.value;
-            capVal.textContent=cap;
-            dataVal.textContent=data*10;
-            var trainErr=90/(cap+5);
-            var gap=Math.max(0,cap-25)*0.4*(50/data);
-            var valErr=trainErr+gap;
-            trFill.style.width=Math.min(100,(trainErr/MAXERR)*100)+"%";
-            vaFill.style.width=Math.min(100,(valErr/MAXERR)*100)+"%";
-            trVal.textContent=trainErr.toFixed(1)+"% (toy)";
-            vaVal.textContent=valErr.toFixed(1)+"% (toy)";
-            var note;
-            if(cap<25){ note="Underfitting region: the model is still too simple — more capacity would lower both curves."; }
-            else if(gap<3){ note="Near the sweet spot: extra capacity barely widens the train/validation gap yet."; }
-            else{ note="Overfitting region: training error keeps falling but validation error is rising — that gap is the overfitting. More training examples would narrow it at this same capacity."; }
-            logEl.textContent=note;
+          var weights={A:0.55,B:0.30,C:0.15};
+          var nEl=document.getElementById("pt-n"), nVal=document.getElementById("pt-nval"),
+              drawBtn=document.getElementById("pt-draw"), logEl=document.getElementById("pt-sc-log");
+          var fills={A:document.getElementById("pt-fillA"),B:document.getElementById("pt-fillB"),C:document.getElementById("pt-fillC")};
+          var cnts={A:document.getElementById("pt-cntA"),B:document.getElementById("pt-cntB"),C:document.getElementById("pt-cntC")};
+          function sampleOne(){
+            var r=Math.random(), acc=0, keys=Object.keys(weights);
+            for(var i=0;i<keys.length;i++){ acc+=weights[keys[i]]; if(r<=acc) return keys[i]; }
+            return keys[keys.length-1];
           }
-          capEl.addEventListener("input",render);
-          dataEl.addEventListener("input",render);
+          function render(){
+            var count=+nEl.value, tally={A:0,B:0,C:0};
+            nVal.textContent=count;
+            for(var i=0;i<count;i++){ tally[sampleOne()]++; }
+            var max=Math.max(tally.A,tally.B,tally.C);
+            var winner = tally.A===max ? "A" : (tally.B===max ? "B" : "C");
+            ["A","B","C"].forEach(function(k){
+              var pct = count ? Math.round(100*tally[k]/count) : 0;
+              fills[k].style.width = pct+"%";
+              cnts[k].textContent = tally[k];
+            });
+            logEl.textContent="Majority vote over "+count+" samples: "+winner+" — a single sample only matches the true favorite (A) about 55% of the time.";
+          }
+          nEl.addEventListener("input",render);
+          drawBtn.addEventListener("click",render);
           render();
           })();</script>
         </div>
