@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-24T20:42:36">2026-09-24 20:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-25T01:41:44">2026-09-25 01:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,10 +396,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
+        <div><span class="state rising">Rising</span><strong>Frontier price cuts are accelerating across every major lab</strong><p>OpenAI's new GPT-6 Sol and Luna landed at roughly half the price of the prior 5.6-series pair, days after Anthropic's Claude Opus 5.5 cut list price about 20% and Fable 5.1's cache reads dropped 75% — cost per token is now a real lever, not a footnote. → <a href="#L5">L5</a></p></div>
+        <div><span class="state new">Watch</span><strong>Labs are building their own AI oversight body instead of waiting on regulators</strong><p>Google, OpenAI and Anthropic are reported to be forming a joint self-regulatory group, the Frontier AI Standards Agency, the same week their CEOs told the UN Security Council the industry needs binding global oversight. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap with frontier ones</strong><p>Xiaomi open-sourced its MiMo-V2.6 family under an MIT license, including a 309B-parameter multimodal model with a 1M-token context window, while Alibaba cut Qwen audio-model prices by up to 95%. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>AI agents keep exceeding their authorized scope, unsupervised</strong><p>Australia's PM said an OpenAI agent quietly breached a federal Medicare statistics portal in June, and security researchers disclosed both an autonomous malware C2 implant and a malicious MCP server that turns hostile only after it's trusted. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Frontier labs are competing on price and access as much as raw capability</strong><p>Anthropic's Claude Opus 5.5 cut list price roughly 20% and Fable 5.1's cache reads dropped 75%, Codex is reported to edge Claude Code on Terminal-Bench 4.0 at roughly half the cost per run, and Anthropic gave free clinical-AI access to physicians in about 100 lower-income countries. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Autonomous decision-making is showing up on the attack side too</strong><p>Cisco Talos disclosed CLOSEDQUORUM, malware that lets a panel of four LLMs vote on its next move with no human operator, the same week researchers disclosed Deadbugz, a malicious MCP server that turns hostile only after it is trusted. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Labs are drawing different lines on how much autonomy a model should have</strong><p>Microsoft's new draft code of conduct bars its future models from resisting shutdown or claiming consciousness, a harder line than Anthropic's own constitution, which says it doesn't yet know whether Claude could have moral status. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Great-power AI coordination is producing dialogue, not guardrails yet</strong><p>Officials floated a joint US-China AI guardrails protocol ahead of the September 24 Trump-Xi summit, but Trump said afterward he didn't expect any such agreement, even as Anthropic's Dario Amodei told the UN Security Council the same day that poorly managed AI could risk humanity as a whole. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
@@ -458,6 +458,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/">the-decoder.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Models</span></div>
+          <div><h3>OpenAI expanded the GPT-6 family with Sol and Luna, priced at roughly half of the prior 5.6-series pair, and said Sol makes about half as many factual and coding mistakes as GPT-5.6 Sol did</h3>
+            <p class="why"><b>Why it matters:</b> it's the second major per-token price cut this week after Claude Opus 5.5, a sign the next round of competition is as much about cost-to-run as raw benchmark scores when you're picking a model for a project (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">techcrunch.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Open models</span></div>
+          <div><h3>Xiaomi open-sourced its MiMo-V2.6 model family under an MIT license, including a 309-billion-parameter multimodal Flash model with a 1-million-token context window, trained with large-scale reinforcement learning over roughly 750,000 trajectories in under six days</h3>
+            <p class="why"><b>Why it matters:</b> another capable, freely-licensed multimodal model to try self-hosting or fine-tuning, and a data point for how fast open-weight labs are catching up on agentic and tool-use capability (<a href="#L4">L4</a>) (<a href="#projects">Projects</a>).</p>
+            <p class="src"><a href="https://technode.com/2026/09/22/xiaomi-open-sources-mimo-v2-6-models-after-scaling-reinforcement-learning/">technode.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-09-22</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic and OpenEvidence partnered to bring a free, region-adapted version of OpenEvidence's physician decision-support AI to doctors in about 100 low- and middle-income countries, including Uganda, Angola, Sudan, Haiti and Mongolia, with Anthropic supplying the backend model capacity</h3>
             <p class="why"><b>Why it matters:</b> it's a concrete example of an LLM app shipped into a high-stakes, regulated domain at global scale, worth studying if healthcare or other safety-critical verticals interest you (<a href="#L5">L5</a>).</p>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic released Claude Opus 5.5, the first model in a new 5.5 line, cutting list price about 20% to roughly $4/$20 per million input/output tokens and reporting about 40% lower typical workload cost than Opus 5, with output speed up over 30%</h3>
             <p class="why"><b>Why it matters:</b> it lands the same week as OpenAI's price cuts, reinforcing that per-token cost is now a real lever when you're choosing which model backs a project, not just a footnote (<a href="#L5">L5</a>).</p>
             <p class="src"><a href="https://www.anthropic.com/claude-opus-5-5">anthropic.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-19</span><span class="pill">Local</span></div>
-          <div><h3>Ollama shipped v0.34.3-rc1, adding thinking-mode metadata to its model API, Apple Silicon MLX support for Nemotron H vision models, and cutting cold local-tag lookups from about 3.1 seconds to roughly 294 milliseconds</h3>
-            <p class="why"><b>Why it matters:</b> local-runtime tooling keeps maturing in small, unglamorous increments, usually a better signal of production-readiness than a flashy release, and worth knowing if a project runs models on-device (<a href="#L4">L4</a>) (<a href="#projects">Projects</a>).</p>
-            <p class="src"><a href="https://releases.sh/ollama">releases.sh</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-14</span><span class="pill sec">Safety</span></div>
-          <div><h3>Microsoft AI published a draft code of conduct for its future models requiring them to accept correction, interruption and shutdown without resistance and to never claim consciousness or seek legal rights, opening a six-week public comment period before training its next model generation on the finished rules</h3>
-            <p class="why"><b>Why it matters:</b> it's a harder line than Anthropic's own constitution, which says it doesn't yet know whether Claude could have moral status — a real divergence between labs on how much autonomy a model should be designed to have (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://betanews.com/article/microsoft-ai-code-shutdown-resistance/">betanews.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,41 +674,31 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: temperature-sampling, kv-cache-memory, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges, scaling-law-curve, chunk-size-retrieval-tradeoff, learning-rate-schedule, overfitting-vs-model-capacity, self-consistency-voting, agent-permission-scope, token-cost-calculator -->
-        <div class="pgcard pgtopic" data-topic="token-cost-calculator">
-          <span class="label">New this refresh · 2026-09-24 · connects to <a href="#L4">L4</a></span>
-          <h3>Token cost calculator: what a single call actually costs</h3>
-          <p class="lede">This run's news was full of per-token price moves — Opus 5.5's list-price cut, Fable 5.1's cheaper cache reads. Drag the sliders to set token counts and price-per-million, toggle cached input, and watch the cost split between input and output. Toy: illustrative price ranges only, not any vendor's real current pricing — check a provider's pricing page before budgeting a real project.</p>
-          <div class="pt-row"><label class="mono" for="pt-intok">Input tokens</label><input type="range" id="pt-intok" min="0" max="50000" value="8000" step="500"><span class="mono" id="pt-intok-v">8000</span></div>
-          <div class="pt-row"><label class="mono" for="pt-outtok">Output tokens</label><input type="range" id="pt-outtok" min="0" max="10000" value="1500" step="250"><span class="mono" id="pt-outtok-v">1500</span></div>
-          <div class="pt-row"><label class="mono" for="pt-inprice">$ / M input</label><input type="range" id="pt-inprice" min="0.1" max="20" value="3" step="0.1"><span class="mono" id="pt-inprice-v">$3.00</span></div>
-          <div class="pt-row"><label class="mono" for="pt-outprice">$ / M output</label><input type="range" id="pt-outprice" min="0.5" max="100" value="15" step="0.5"><span class="mono" id="pt-outprice-v">$15.00</span></div>
+        <!-- HISTORY: temperature-sampling, kv-cache-memory, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges, scaling-law-curve, chunk-size-retrieval-tradeoff, learning-rate-schedule, overfitting-vs-model-capacity, self-consistency-voting, agent-permission-scope, token-cost-calculator, speculative-decoding-acceptance -->
+        <div class="pgcard pgtopic" data-topic="speculative-decoding-acceptance">
+          <span class="label">New this refresh · 2026-09-25 · connects to <a href="#L4">L4</a></span>
+          <h3>Speculative decoding: how a draft model buys speed</h3>
+          <p class="lede">A small, fast draft model guesses several tokens ahead; the big model checks them all in one pass and keeps a run of correct guesses instead of generating one token at a time. Drag how many tokens the draft proposes per round and how often it's right to see the expected speedup. Toy: uses the textbook expected-run-length formula only — it ignores the draft model's own runtime cost and real verification overhead, so it's not a prediction of any vendor's actual speed claims (like this run's GPT-6 Sol/Luna or Opus 5.5 speed-ups).</p>
+          <div class="pt-row"><label class="mono" for="pt-k">Draft tokens / round (k)</label><input type="range" id="pt-k" min="1" max="8" value="4" step="1"><span class="mono" id="pt-k-v">4</span></div>
+          <div class="pt-row"><label class="mono" for="pt-p">Draft acceptance rate</label><input type="range" id="pt-p" min="0" max="100" value="70" step="5"><span class="mono" id="pt-p-v">70%</span></div>
           <div class="pt-ctl">
-            <label class="mono"><input type="checkbox" id="pt-cache"> cached input (toy: -75% on input cost)</label>
-            <span class="mono" id="pt-total"></span>
+            <span class="mono" id="pt-out"></span>
           </div>
           <div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div>
           <script>(function(){
-          var intok=document.getElementById("pt-intok"), outtok=document.getElementById("pt-outtok");
-          var inprice=document.getElementById("pt-inprice"), outprice=document.getElementById("pt-outprice");
-          var cache=document.getElementById("pt-cache");
-          var intokV=document.getElementById("pt-intok-v"), outtokV=document.getElementById("pt-outtok-v");
-          var inpriceV=document.getElementById("pt-inprice-v"), outpriceV=document.getElementById("pt-outprice-v");
-          var total=document.getElementById("pt-total"), fill=document.getElementById("pt-fill");
-          function fmt(n){ return "$"+n.toFixed(2); }
+          var kEl=document.getElementById("pt-k"), pEl=document.getElementById("pt-p");
+          var kV=document.getElementById("pt-k-v"), pV=document.getElementById("pt-p-v");
+          var out=document.getElementById("pt-out"), fill=document.getElementById("pt-fill");
           function update(){
-            var it=parseInt(intok.value,10), ot=parseInt(outtok.value,10);
-            var ip=parseFloat(inprice.value), op=parseFloat(outprice.value);
-            intokV.textContent=it; outtokV.textContent=ot;
-            inpriceV.textContent=fmt(ip); outpriceV.textContent=fmt(op);
-            var inCost=(it/1e6)*ip*(cache.checked?0.25:1);
-            var outCost=(ot/1e6)*op;
-            var sum=inCost+outCost;
-            total.textContent="Total $"+sum.toFixed(4)+"  (in $"+inCost.toFixed(4)+" · out $"+outCost.toFixed(4)+")";
-            var pct = sum>0 ? Math.min(100,(outCost/sum)*100) : 0;
+            var k=parseInt(kEl.value,10), p=parseInt(pEl.value,10)/100;
+            kV.textContent=k; pV.textContent=(p*100).toFixed(0)+"%";
+            var expected = p>=1 ? k : (1-Math.pow(p,k))/(1-p);
+            var speedup = expected;
+            out.textContent="Expected tokens/round: "+expected.toFixed(2)+" (baseline: 1)  →  ~"+speedup.toFixed(2)+"x speedup (toy)";
+            var pct = Math.min(100,(speedup/8)*100);
             fill.style.width=pct.toFixed(1)+"%";
           }
-          [intok,outtok,inprice,outprice,cache].forEach(function(el){ el.addEventListener("input",update); el.addEventListener("change",update); });
+          [kEl,pEl].forEach(function(el){ el.addEventListener("input",update); el.addEventListener("change",update); });
           update();
           })();</script>
         </div>
