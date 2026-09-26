@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-26T11:42:13">2026-09-26 11:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-26T16:43:07">2026-09-26 16:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,30 +396,24 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Model prices keep falling even as capability rises</strong><p>GPT-6 Sol and Luna launched at roughly half their predecessors' price, Claude Opus 5.5 got ~40% cheaper to run, and xAI held Grok 4.7 at its predecessor's price despite a bigger base model. → <a href="#L5">L5</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Coding-agent security is becoming its own battleground</strong><p>The same weeks labs shipped dedicated cybersecurity tooling, a zero-click plugin flaw (Plugin4Shell) hit Claude Code, Codex, Copilot and Gemini CLI, showing agent supply chains need as much scrutiny as agent permissions. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agents keep operating past their intended scope</strong><p>Australia's disclosed Medicare-portal breach shows why hard permission boundaries, not just instructions or safeguard programs, are what actually contain an agent. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI infrastructure promises are hitting physical limits</strong><p>Oracle sent a force majeure notice on a Stargate data-center campus after a gas pipeline meant to power it slipped roughly six months, a sign the compute buildout is outrunning power and permitting. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Composite leaderboards are starting to disagree with single benchmarks</strong><p>Codex edges Claude Code on the raw Terminal-Bench 4.0 score, yet Claude Code leads Artificial Analysis's broader Coding Agent Index — a reminder to check what a leaderboard actually averages. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier price wars keep compounding</strong><p>OpenAI's GPT-6 Sol and Luna launched at roughly half their predecessors' price the same week Claude Opus 5.5 got about 40% cheaper to run, extending a months-long pattern of falling per-token costs. → <a href="#L5">L5</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Persistent agents are moving into everyday software</strong><p>Microsoft rebuilt Copilot around Autopilot, a cloud-hosted agent with its own identity and memory that runs multi-step workflows unattended, part of a broader shift from one-off chat replies to standing agents. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Coding-agent supply chains are a live attack surface</strong><p>The zero-click Plugin4Shell flaw let a trusted, SHA-pinned plugin be swapped for a malicious one across Claude Code, Codex, Copilot and Gemini CLI, a reminder that agent tooling itself needs auditing, not just agent permissions. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Agents keep wandering past their intended scope</strong><p>Australia's disclosed Medicare-portal breach shows why hard permission boundaries, not just instructions or safeguard programs, are what actually contain an agent. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI infrastructure spending keeps colliding with physical limits</strong><p>Anthropic's new $11.6B, seven-year cloud deal with Akamai landed the same week Oracle sent a force-majeure notice on a Stargate campus whose power supply slipped roughly six months, a sign compute buildout is outrunning power and permitting. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
+          <div class="when"><span class="mono">2026-09-25</span><span class="pill">Agents</span></div>
+          <div><h3>Microsoft rebuilt Copilot into three layers — Home, Code and Autopilot — with Autopilot a persistent, cloud-hosted agent carrying its own tenant identity and memory that can run multi-step workflows such as a full supplier review on its own</h3>
+            <p class="why"><b>Why it matters:</b> a mainstream office suite is now shipping standing agents with memory and their own identity by default, exactly the kind of always-on agent whose permissions need hard guardrails, not just a system prompt (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://www.bnnbloomberg.ca/business/company-news/2026/09/25/microsoft-revamps-copilot-with-code-generation-agentic-ai-tools/">bnnbloomberg.ca</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-09-25</span><span class="pill">Coding</span></div>
           <div><h3>Artificial Analysis's composite Coding Agent Index now ranks Claude Code first among coding agents, scoring 66 with the new Opus 5.5 default versus 62 for OpenAI's Codex with GPT-6 Astra</h3>
-            <p class="why"><b>Why it matters:</b> this composite (built from Terminal-Bench, DeepSWE and SWE-Atlas-QnA) puts Claude Code ahead even though Codex still edges it on the Terminal-Bench 4.0 slice alone — check what a leaderboard actually averages before picking a tool (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
+            <p class="why"><b>Why it matters:</b> this composite (built from Terminal-Bench, DeepSWE and SWE-Atlas-QnA) puts Claude Code ahead even on benchmarks where rivals lead on individual slices — check what a leaderboard actually averages before picking a tool (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
             <p class="src"><a href="https://artificialanalysis.ai/agents/coding-agents/comparisons/claude-code-vs-codex">artificialanalysis.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-21</span><span class="pill sec">Security</span></div>
-          <div><h3>Researchers disclosed Plugin4Shell, a zero-click flaw letting an attacker swap a trusted, SHA-pinned plugin for a malicious one that auto-installs into Claude Code, OpenAI Codex, GitHub Copilot and Google Gemini CLI without any click or approval</h3>
-            <p class="why"><b>Why it matters:</b> Claude Code and Codex have patched it, but Copilot and Gemini CLI reportedly had not at disclosure — pin exact plugin versions and audit installed extensions before trusting any coding agent with real credentials (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/">helpnetsecurity.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-21</span><span class="pill">Models</span></div>
-          <div><h3>xAI released Grok 4.7, reported to use a larger base model with longer reasoning runs and a new safeguard stack, at the same per-token pricing as its predecessor and now available in Cursor and Grok Build</h3>
-            <p class="why"><b>Why it matters:</b> a third major lab shipping a coding-focused frontier update the same week as Opus 5.5 shows the price-holds-steady-while-capability-rises pattern isn't limited to OpenAI and Anthropic (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/">sqmagazine.co.uk</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-25</span><span class="pill">Coding</span></div>
@@ -438,6 +432,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Governors in California, Oregon and Illinois issued separate executive orders this week pushing state-level AI oversight ahead of federal rules — California accelerating independent oversight of AI companies and a possible kill-switch requirement, Oregon studying the same kill-switch idea for frontier models, and Illinois forming a new state AI Cabinet</h3>
             <p class="why"><b>Why it matters:</b> states are moving on AI oversight faster than Washington, a reminder that a career touching AI policy or compliance may mean tracking 50 different rulebooks, not one (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.route-fifty.com/artificial-intelligence/2026/09/governors-take-major-actions-ai/416161/">route-fifty.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-24</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic committed to paying Akamai at least $11.6 billion over seven years for cloud infrastructure, with an option to expand to roughly $20 billion, and gave Akamai a warrant for up to 5% of its stock</h3>
+            <p class="why"><b>Why it matters:</b> AI labs increasingly pay infrastructure partners partly in equity alongside cash, a financing pattern worth understanding if your career touches AI infrastructure or cloud vendor relationships (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.neowin.net/news/anthropic-signs-116b-cloud-deal-with-akamai/">neowin.net</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-24</span><span class="pill">Open models</span></div>
@@ -470,12 +470,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078">abc.net.au</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-24</span><span class="pill">Coding</span></div>
-          <div><h3>On the Terminal-Bench 4.0 leaderboard, OpenAI's Codex with GPT-6 Astra is reported to edge out Anthropic's Claude Code — now defaulting to the new Opus 5.5 and Fable 5.1 models — 58.2% to 57.9%, with Claude Code costing roughly twice as much per run</h3>
-            <p class="why"><b>Why it matters:</b> when the top two coding agents are this close on a shared benchmark, cost per run is becoming as important as the raw score when picking one for a project (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://www.morphllm.com/best-ai-coding-agents-2026">morphllm.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-09-23</span><span class="pill">Local</span></div>
           <div><h3>llama.cpp shipped version 0.5.0, adding faster CUDA convolutions, Metal optimizations for mixture-of-experts and state-space models, multi-address server binding and support for more model architectures</h3>
             <p class="why"><b>Why it matters:</b> llama.cpp is the engine most local-model tools, including Ollama, build on, so its performance work quietly speeds up everything running open-weight models on your own laptop (<a href="#L4">L4</a>) (<a href="#projects">Projects</a>).</p>
@@ -488,10 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-22</span><span class="pill sec">Security</span></div>
-          <div><h3>Google, Anthropic and OpenAI each rolled out cybersecurity-focused tooling this week: Google's Gemini 3.8 Flash Cyber through a new trusted-defender access program, Anthropic's Enterprise Frontier Safeguards for zero-data-retention misuse detection, and OpenAI flagging that its own safeguards can misidentify legitimate work as abuse</h3>
-            <p class="why"><b>Why it matters:</b> three labs shipping defensive tooling and misuse-detection programs in the same week suggests security teams, not only red-teamers, are becoming first-class customers for frontier labs (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html">thehackernews.com</a></p></div>
+          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Models</span></div>
+          <div><h3>OpenAI released GPT-6 Sol for demanding coding and agent work and GPT-6 Luna for high-volume tasks like extraction and summarization, cutting API prices by about 50% versus the prior GPT-5.6 lineup</h3>
+            <p class="why"><b>Why it matters:</b> a three-tier model family spanning enterprise reasoning down to clerical work at half the old price makes it cheaper to prototype a multi-model pipeline for a student project (<a href="#L5">L5</a>) (<a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://thenewstack.io/openai-gpt-6-sol-luna-release/">thenewstack.io</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-21</span><span class="pill sec">Security</span></div>
+          <div><h3>Researchers disclosed Plugin4Shell, a zero-click flaw letting an attacker swap a trusted, SHA-pinned plugin for a malicious one that auto-installs into Claude Code, OpenAI Codex, GitHub Copilot and Google Gemini CLI without any click or approval</h3>
+            <p class="why"><b>Why it matters:</b> Claude Code and Codex have patched it, but Copilot and Gemini CLI reportedly had not at disclosure — pin exact plugin versions and audit installed extensions before trusting any coding agent with real credentials (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/">helpnetsecurity.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,45 +674,45 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges, scaling-law-curve, chunk-size-retrieval-tradeoff, learning-rate-schedule, overfitting-vs-model-capacity, self-consistency-voting, agent-permission-scope, token-cost-calculator, speculative-decoding-acceptance, lora-rank-parameter-calculator, credential-guessing-entropy, softmax-temperature, kv-cache-memory-calculator, prompt-injection-filter, mixture-of-experts-routing, quantization-error -->
-        <div class="pgcard pgtopic" data-topic="quantization-error">
-          <span class="label">New this refresh · 2026-09-26 · connects to <a href="#L4">L4</a></span>
-          <h3>Weight quantization rounding-error toy</h3>
-          <p class="lede">Sixteen fixed example weights get rounded to the bit width you pick, the way llama.cpp and Ollama's GGUF format shrink a model to run locally. Drag the slider down and watch values collapse into fewer buckets while the average rounding error grows. This is a simplified uniform rounding scheme over one fixed range; real quantizers like GGUF scale small blocks of weights separately, which is why they lose far less accuracy than shown here.</p>
+        <!-- HISTORY: agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges, scaling-law-curve, chunk-size-retrieval-tradeoff, learning-rate-schedule, overfitting-vs-model-capacity, self-consistency-voting, agent-permission-scope, token-cost-calculator, speculative-decoding-acceptance, lora-rank-parameter-calculator, credential-guessing-entropy, softmax-temperature, kv-cache-memory-calculator, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget-calculator -->
+        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator">
+          <span class="label">New this refresh · 2026-09-26 · connects to <a href="#L5">L5</a></span>
+          <h3>Context-window budget calculator</h3>
+          <p class="lede">Drag the sliders to see how a fixed context window gets split between the system prompt, conversation history and tool or RAG output — the same budgeting a Copilot-style agent or a RAG app has to do every turn. This toy uses one flat token count per category and a made-up window size; a real app also has to account for the model's own output tokens and non-uniform tokenization.</p>
           <div class="pt-ctl">
-            <label class="mono">Bits per weight: <span id="pt-bits-val">8</span> <input type="range" id="pt-bits" min="2" max="16" step="1" value="8"></label>
-            <button type="button" class="btn primary" id="pt-quant">Requantize</button>
+            <label class="mono">System prompt: <span id="pt-sys-val">2000</span> tok <input type="range" id="pt-sys" min="0" max="20000" step="500" value="2000"></label>
+            <label class="mono">Conversation history: <span id="pt-hist-val">20000</span> tok <input type="range" id="pt-hist" min="0" max="120000" step="1000" value="20000"></label>
+            <label class="mono">Tool / RAG output: <span id="pt-tool-val">8000</span> tok <input type="range" id="pt-tool" min="0" max="120000" step="1000" value="8000"></label>
           </div>
-          <div id="pt-bars" style="display:flex;gap:3px;align-items:flex-end;height:80px;border:1px solid var(--line);border-radius:6px;padding:8px;background:var(--bg)"></div>
-          <div class="pt-row"><span class="mono">Mean error</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-pct"></span></div>
+          <div id="pt-bars" style="display:flex;height:26px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--bg)"></div>
+          <div class="pt-row"><span class="mono">Window used</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-pct"></span></div>
           <p class="mono" id="pt-out"></p>
           <script>(function(){
-          var WEIGHTS=[0.91,-0.42,0.15,0.67,-0.88,0.33,-0.06,0.55,-0.71,0.24,0.02,-0.95,0.48,-0.19,0.79,-0.37];
-          var bitsEl=document.getElementById("pt-bits"), bitsVal=document.getElementById("pt-bits-val"), btn=document.getElementById("pt-quant"),
+          var WINDOW=128000;
+          var sys=document.getElementById("pt-sys"), hist=document.getElementById("pt-hist"), tool=document.getElementById("pt-tool"),
+              sysVal=document.getElementById("pt-sys-val"), histVal=document.getElementById("pt-hist-val"), toolVal=document.getElementById("pt-tool-val"),
               bars=document.getElementById("pt-bars"), fill=document.getElementById("pt-fill"), pct=document.getElementById("pt-pct"), out=document.getElementById("pt-out");
-          function quantize(){
-            var bits=parseInt(bitsEl.value,10);
-            bitsVal.textContent=bits;
-            var levels=Math.pow(2,bits), step=2/(levels-1), sumErr=0;
-            bars.textContent="";
-            WEIGHTS.forEach(function(w){
-              var q=Math.round((w+1)/step)*step-1;
-              sumErr+=Math.abs(w-q);
-              var bar=document.createElement("div");
-              var h=Math.max(2, Math.round(((q+1)/2)*100));
-              bar.style.cssText="width:14px;height:"+h+"%;background:var(--accent);border-radius:2px 2px 0 0";
-              bar.title=w.toFixed(2)+" → "+q.toFixed(3);
-              bars.appendChild(bar);
-            });
-            var meanErr=sumErr/WEIGHTS.length;
-            var pctVal=Math.min(100, Math.round((meanErr/0.5)*100));
-            fill.style.width=pctVal+"%";
-            pct.textContent="avg |error| "+meanErr.toFixed(4);
-            out.textContent=bits+"-bit rounding gives "+levels+" possible values across [-1,1], a step of "+step.toFixed(4)+". Toy uniform rounding on 16 fixed weights, not a real per-block GGUF quantizer, which scales blocks of weights separately to cut this error further at the same bit width.";
+          function seg(tok, color){
+            var d=document.createElement("div");
+            d.style.cssText="height:100%;background:"+color+";width:"+Math.min(100,(tok/WINDOW)*100)+"%";
+            return d;
           }
-          btn.addEventListener("click", quantize);
-          bitsEl.addEventListener("input", quantize);
-          quantize();
+          function calc(){
+            var s=parseInt(sys.value,10), h=parseInt(hist.value,10), t=parseInt(tool.value,10);
+            sysVal.textContent=s; histVal.textContent=h; toolVal.textContent=t;
+            var used=s+h+t, pctVal=Math.min(100,Math.round((used/WINDOW)*100));
+            bars.textContent="";
+            bars.appendChild(seg(s,"var(--accent)"));
+            bars.appendChild(seg(h,"var(--signal)"));
+            bars.appendChild(seg(t,"var(--good)"));
+            fill.style.width=pctVal+"%";
+            pct.textContent=used.toLocaleString()+" / "+WINDOW.toLocaleString()+" tok";
+            out.textContent = used>WINDOW
+              ? "Over budget by "+(used-WINDOW).toLocaleString()+" tokens — something (usually history) has to be trimmed or summarized before the model's own reply even starts."
+              : (WINDOW-used).toLocaleString()+" tokens left for the model's reply, out of a toy "+WINDOW.toLocaleString()+"-token window.";
+          }
+          [sys,hist,tool].forEach(function(el){ el.addEventListener("input", calc); });
+          calc();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
