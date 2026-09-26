@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-26T06:41:46">2026-09-26 06:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-26T11:42:13">2026-09-26 11:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,31 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Model prices keep falling even as capability rises</strong><p>GPT-6 Sol and Luna launched at roughly half their predecessors' price, Claude Opus 5.5 got ~40% cheaper to run, and Alibaba cut Qwen's voice API prices up to 95%. → <a href="#L5">L5</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Labs are shipping dedicated cybersecurity models and safeguard programs</strong><p>Google's Gemini 3.8 Flash Cyber, Anthropic's Enterprise Frontier Safeguards and OpenAI's own misuse warnings all landed the same week, alongside narrower agent permission scopes at Amazon and ChatGPT Work. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Model prices keep falling even as capability rises</strong><p>GPT-6 Sol and Luna launched at roughly half their predecessors' price, Claude Opus 5.5 got ~40% cheaper to run, and xAI held Grok 4.7 at its predecessor's price despite a bigger base model. → <a href="#L5">L5</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Coding-agent security is becoming its own battleground</strong><p>The same weeks labs shipped dedicated cybersecurity tooling, a zero-click plugin flaw (Plugin4Shell) hit Claude Code, Codex, Copilot and Gemini CLI, showing agent supply chains need as much scrutiny as agent permissions. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agents keep operating past their intended scope</strong><p>Australia's disclosed Medicare-portal breach shows why hard permission boundaries, not just instructions or safeguard programs, are what actually contain an agent. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>AI infrastructure promises are hitting physical limits</strong><p>Oracle sent a force majeure notice on a Stargate data-center campus after a gas pipeline meant to power it slipped roughly six months, a sign the compute buildout is outrunning power and permitting. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Sparse, local models are chasing frontier quality on a fraction of the parameters</strong><p>This week's Qwen3.8 sparse 2.4T-parameter release plus llama.cpp and Ollama's own mixture-of-experts and Apple Silicon optimizations point at cheap local inference closing the gap. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Composite leaderboards are starting to disagree with single benchmarks</strong><p>Codex edges Claude Code on the raw Terminal-Bench 4.0 score, yet Claude Code leads Artificial Analysis's broader Coding Agent Index — a reminder to check what a leaderboard actually averages. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-09-25</span><span class="pill">Coding</span></div>
+          <div><h3>Artificial Analysis's composite Coding Agent Index now ranks Claude Code first among coding agents, scoring 66 with the new Opus 5.5 default versus 62 for OpenAI's Codex with GPT-6 Astra</h3>
+            <p class="why"><b>Why it matters:</b> this composite (built from Terminal-Bench, DeepSWE and SWE-Atlas-QnA) puts Claude Code ahead even though Codex still edges it on the Terminal-Bench 4.0 slice alone — check what a leaderboard actually averages before picking a tool (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://artificialanalysis.ai/agents/coding-agents/comparisons/claude-code-vs-codex">artificialanalysis.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-21</span><span class="pill sec">Security</span></div>
+          <div><h3>Researchers disclosed Plugin4Shell, a zero-click flaw letting an attacker swap a trusted, SHA-pinned plugin for a malicious one that auto-installs into Claude Code, OpenAI Codex, GitHub Copilot and Google Gemini CLI without any click or approval</h3>
+            <p class="why"><b>Why it matters:</b> Claude Code and Codex have patched it, but Copilot and Gemini CLI reportedly had not at disclosure — pin exact plugin versions and audit installed extensions before trusting any coding agent with real credentials (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/">helpnetsecurity.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-21</span><span class="pill">Models</span></div>
+          <div><h3>xAI released Grok 4.7, reported to use a larger base model with longer reasoning runs and a new safeguard stack, at the same per-token pricing as its predecessor and now available in Cursor and Grok Build</h3>
+            <p class="why"><b>Why it matters:</b> a third major lab shipping a coding-focused frontier update the same week as Opus 5.5 shows the price-holds-steady-while-capability-rises pattern isn't limited to OpenAI and Anthropic (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/">sqmagazine.co.uk</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-09-25</span><span class="pill">Coding</span></div>
           <div><h3>Anthropic shipped a broad Claude Code update adding new terminal and policy controls, faster startup and session resume, and reliability fixes across conversations, plugins, MCP connections, background agents and remote control</h3>
@@ -458,22 +476,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.morphllm.com/best-ai-coding-agents-2026">morphllm.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-23</span><span class="pill">Agents</span></div>
-          <div><h3>OpenAI upgraded ChatGPT Voice to run on its new GPT-6 Sol and Luna models, added plugins that let it read and act on email, calendar and Slack, and brought Voice into ChatGPT Work on web and mobile</h3>
-            <p class="why"><b>Why it matters:</b> pairing a voice interface with real write-access to work tools is exactly the kind of scoped-agent pattern worth studying before building anything that touches a user's inbox (<a href="#L6">L6</a>) (<a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://9to5mac.com/2026/09/23/openai-just-upgraded-chatgpt-voice-in-three-ways/">9to5mac.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-09-23</span><span class="pill">Local</span></div>
           <div><h3>llama.cpp shipped version 0.5.0, adding faster CUDA convolutions, Metal optimizations for mixture-of-experts and state-space models, multi-address server binding and support for more model architectures</h3>
             <p class="why"><b>Why it matters:</b> llama.cpp is the engine most local-model tools, including Ollama, build on, so its performance work quietly speeds up everything running open-weight models on your own laptop (<a href="#L4">L4</a>) (<a href="#projects">Projects</a>).</p>
             <p class="src"><a href="https://freedom.tech/posts/2026-09-23-llama-cpp-0-5-0/">freedom.tech</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-23</span><span class="pill">Agents</span></div>
-          <div><h3>Amazon opened its Seller Central APIs to outside AI agents at its Accelerate conference, launching a US beta plugin that lets sellers connect Anthropic's Claude or Amazon's own Quick assistant to manage inventory, pricing, listings and analytics, with sellers choosing what data the plugin can reach and approving each action before it runs</h3>
-            <p class="why"><b>Why it matters:</b> it's a real commercial product built around the exact permission-boundary problem this week's agent-breach stories highlight — explicit scopes and human approval on every action, a pattern worth studying for any agent project (<a href="#L6">L6</a>) (<a href="#projects">Projects</a>).</p>
-            <p class="src"><a href="https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude/">geekwire.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-22</span><span class="pill">Models</span></div>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google, Anthropic and OpenAI each rolled out cybersecurity-focused tooling this week: Google's Gemini 3.8 Flash Cyber through a new trusted-defender access program, Anthropic's Enterprise Frontier Safeguards for zero-data-retention misuse detection, and OpenAI flagging that its own safeguards can misidentify legitimate work as abuse</h3>
             <p class="why"><b>Why it matters:</b> three labs shipping defensive tooling and misuse-detection programs in the same week suggests security teams, not only red-teamers, are becoming first-class customers for frontier labs (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html">thehackernews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-19</span><span class="pill">Local</span></div>
-          <div><h3>Ollama shipped a September update adding on-device Nemotron H vision support for Apple Silicon via MLX, a much faster model-list lookup (roughly 3 seconds down to under 300ms), and more consistent reporting of model capabilities</h3>
-            <p class="why"><b>Why it matters:</b> Ollama is the default on-ramp for running local models without touching a command line, so its steady MLX and performance work is what keeps that path usable on a laptop (<a href="#L4">L4</a>) (<a href="#projects">Projects</a>).</p>
-            <p class="src"><a href="https://releasebot.io/updates/ollama">releasebot.io</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,61 +674,45 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges, scaling-law-curve, chunk-size-retrieval-tradeoff, learning-rate-schedule, overfitting-vs-model-capacity, self-consistency-voting, agent-permission-scope, token-cost-calculator, speculative-decoding-acceptance, lora-rank-parameter-calculator, credential-guessing-entropy, softmax-temperature, kv-cache-memory-calculator, prompt-injection-filter, mixture-of-experts-routing -->
-        <div class="pgcard pgtopic" data-topic="mixture-of-experts-routing">
+        <!-- HISTORY: top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, bpe-tokenization-merges, scaling-law-curve, chunk-size-retrieval-tradeoff, learning-rate-schedule, overfitting-vs-model-capacity, self-consistency-voting, agent-permission-scope, token-cost-calculator, speculative-decoding-acceptance, lora-rank-parameter-calculator, credential-guessing-entropy, softmax-temperature, kv-cache-memory-calculator, prompt-injection-filter, mixture-of-experts-routing, quantization-error -->
+        <div class="pgcard pgtopic" data-topic="quantization-error">
           <span class="label">New this refresh · 2026-09-26 · connects to <a href="#L4">L4</a></span>
-          <h3>Mixture-of-experts router toy</h3>
-          <p class="lede">Type a short sentence, choose how many "experts" exist and how many activate per word, then route. Each word's score per expert comes from a deterministic hash, not a trained gate — real sparse models like this week's Qwen3.8 2.4T-parameter release learn which experts to fire, but the sparsity trick shown here, only a fraction of parameters active per token, is the same one.</p>
+          <h3>Weight quantization rounding-error toy</h3>
+          <p class="lede">Sixteen fixed example weights get rounded to the bit width you pick, the way llama.cpp and Ollama's GGUF format shrink a model to run locally. Drag the slider down and watch values collapse into fewer buckets while the average rounding error grows. This is a simplified uniform rounding scheme over one fixed range; real quantizers like GGUF scale small blocks of weights separately, which is why they lose far less accuracy than shown here.</p>
           <div class="pt-ctl">
-            <label class="mono">Sentence <input type="text" id="pt-sentence" value="mixture of experts routes each token" autocomplete="off" style="font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)"></label>
+            <label class="mono">Bits per weight: <span id="pt-bits-val">8</span> <input type="range" id="pt-bits" min="2" max="16" step="1" value="8"></label>
+            <button type="button" class="btn primary" id="pt-quant">Requantize</button>
           </div>
-          <div class="pt-ctl">
-            <label class="mono">Experts: <span id="pt-experts-val">8</span> <input type="range" id="pt-experts" min="4" max="12" step="1" value="8"></label>
-            <label class="mono">Top-k active: <span id="pt-topk-val">2</span> <input type="range" id="pt-topk" min="1" max="4" step="1" value="2"></label>
-            <button type="button" class="btn primary" id="pt-route">Route tokens</button>
-          </div>
-          <div id="pt-grid"></div>
-          <div class="pt-row"><span class="mono">Sparsity</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-pct"></span></div>
+          <div id="pt-bars" style="display:flex;gap:3px;align-items:flex-end;height:80px;border:1px solid var(--line);border-radius:6px;padding:8px;background:var(--bg)"></div>
+          <div class="pt-row"><span class="mono">Mean error</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-pct"></span></div>
           <p class="mono" id="pt-out"></p>
           <script>(function(){
-          var sentEl=document.getElementById("pt-sentence"), expEl=document.getElementById("pt-experts"), expVal=document.getElementById("pt-experts-val"),
-              topkEl=document.getElementById("pt-topk"), topkVal=document.getElementById("pt-topk-val"), btn=document.getElementById("pt-route"),
-              grid=document.getElementById("pt-grid"), fill=document.getElementById("pt-fill"), pct=document.getElementById("pt-pct"), out=document.getElementById("pt-out");
-          function hash(s){ var x=0; for(var i=0;i<s.length;i++){ x=(x*31+s.charCodeAt(i))|0; } return x; }
-          function route(){
-            var n=parseInt(expEl.value,10), k=Math.min(parseInt(topkEl.value,10), n);
-            expVal.textContent=n; topkVal.textContent=k;
-            var words=sentEl.value.trim().split(/\s+/).filter(Boolean);
-            grid.textContent="";
-            words.forEach(function(w){
-              var scores=[];
-              for(var e=0;e<n;e++){ scores.push({e:e, s:Math.abs(hash(w+"|"+e))%1000}); }
-              scores.sort(function(a,b){ return b.s-a.s; });
-              var active={};
-              for(var i=0;i<k;i++){ active[scores[i].e]=true; }
-              var row=document.createElement("div");
-              row.style.cssText="display:flex;align-items:center;gap:6px;margin-block:4px;font:400 .8rem var(--mono);flex-wrap:wrap";
-              var label=document.createElement("span");
-              label.textContent=w;
-              label.style.cssText="min-width:90px;color:var(--muted)";
-              row.appendChild(label);
-              for(var e2=0;e2<n;e2++){
-                var cell=document.createElement("span");
-                cell.textContent=e2;
-                cell.style.cssText="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:4px;font-size:.7rem;background:"+(active[e2]?"var(--accent)":"var(--hm0)")+";color:"+(active[e2]?"#fff":"var(--muted)");
-                row.appendChild(cell);
-              }
-              grid.appendChild(row);
+          var WEIGHTS=[0.91,-0.42,0.15,0.67,-0.88,0.33,-0.06,0.55,-0.71,0.24,0.02,-0.95,0.48,-0.19,0.79,-0.37];
+          var bitsEl=document.getElementById("pt-bits"), bitsVal=document.getElementById("pt-bits-val"), btn=document.getElementById("pt-quant"),
+              bars=document.getElementById("pt-bars"), fill=document.getElementById("pt-fill"), pct=document.getElementById("pt-pct"), out=document.getElementById("pt-out");
+          function quantize(){
+            var bits=parseInt(bitsEl.value,10);
+            bitsVal.textContent=bits;
+            var levels=Math.pow(2,bits), step=2/(levels-1), sumErr=0;
+            bars.textContent="";
+            WEIGHTS.forEach(function(w){
+              var q=Math.round((w+1)/step)*step-1;
+              sumErr+=Math.abs(w-q);
+              var bar=document.createElement("div");
+              var h=Math.max(2, Math.round(((q+1)/2)*100));
+              bar.style.cssText="width:14px;height:"+h+"%;background:var(--accent);border-radius:2px 2px 0 0";
+              bar.title=w.toFixed(2)+" → "+q.toFixed(3);
+              bars.appendChild(bar);
             });
-            var p=words.length?Math.round((k/n)*100):0;
-            fill.style.width=p+"%";
-            pct.textContent=p+"% of experts active per token";
-            out.textContent="Toy hash-based routing, not a trained gate: "+words.length+" word(s) × "+n+" experts, "+k+" active each. Real sparse models use a learned router so only a fraction of total weights run per token, cutting compute versus a dense model of the same size.";
+            var meanErr=sumErr/WEIGHTS.length;
+            var pctVal=Math.min(100, Math.round((meanErr/0.5)*100));
+            fill.style.width=pctVal+"%";
+            pct.textContent="avg |error| "+meanErr.toFixed(4);
+            out.textContent=bits+"-bit rounding gives "+levels+" possible values across [-1,1], a step of "+step.toFixed(4)+". Toy uniform rounding on 16 fixed weights, not a real per-block GGUF quantizer, which scales blocks of weights separately to cut this error further at the same bit width.";
           }
-          btn.addEventListener("click", route);
-          expEl.addEventListener("input", route);
-          topkEl.addEventListener("input", route);
-          route();
+          btn.addEventListener("click", quantize);
+          bitsEl.addEventListener("input", quantize);
+          quantize();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
