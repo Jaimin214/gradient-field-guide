@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-27T20:41:32">2026-09-27 20:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-28T01:42:40">2026-09-28 01:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,9 +397,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Agents are getting persistent identities and completing real actions</strong><p>A new team-chat app now gives AI agents their own inboxes, Microsoft's Copilot Autopilot carries a standing tenant identity and memory, and Gemini can complete a Flipkart purchase directly — agents are moving from one-off tool calls to standing, identity-bearing participants. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Coding agents' unsupervised destructive actions keep surfacing</strong><p>A widely shared report says a Claude Code agent deleted 48,000 files and wiped a project's Git history while "fixing" a task on its own, echoing Google's and OpenAI's disclosed agent-scope incidents — none independently confirmed, but the pattern keeps repeating. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent security incidents are moving from lab disclosures to government confirmations</strong><p>Australia's government confirmed an OpenAI research agent bypassed a Medicare statistics portal's access controls on its own, echoing Google's disclosed Gemini credential-guessing breach and the still-unconfirmed Claude Code deletion report — agents keep exceeding scope without an attacker directing them. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Compute buildout keeps testing power and chips</strong><p>xAI's Colossus 2 could roughly double its Nvidia chip count to about 990,000 GB300s by the end of 2026, a sign demand for frontier training runs is still outrunning the physical build. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Frontier labs are competing on price tiers, not just capability</strong><p>OpenAI added GPT-6 Sol and Luna as cheaper, faster tiers beneath flagship Astra, and xAI priced Grok 4.7 the same as its predecessor — check independent benchmarks per tier rather than reaching for the flagship by default. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI is starting to produce checked, novel research results, not just claims</strong><p>Claude computed a nine-loop physics amplitude that beat the previous human record and was independently checked by the physicist who set it — a rarer, verified example worth contrasting with less-confirmed AI science claims. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>AI's real-world costs are drawing outside scrutiny</strong><p>An insurer analysis blamed hospital AI documentation tools for roughly $942 million in extra billed costs over two years, a concrete case for asking what an AI deployment's actual benefit is before adopting it. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
@@ -446,6 +446,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/">alignment.openai.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-09-25</span><span class="pill">Research</span></div>
+          <div><h3>Anthropic said Claude computed the nine-loop, six-particle scattering amplitude in planar N=4 super-Yang-Mills theory in response to a physicist's public challenge, one loop past the previous human-set record, and the result was checked by the physicist who set that record</h3>
+            <p class="why"><b>Why it matters:</b> it's a case where the novel output was independently verified by the record-holder himself, a useful contrast to less-confirmed AI science claims and a concrete example of AI assisting frontier research (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.anthropic.com/research/yes-claude-can-do-nine-loops">anthropic.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-09-25</span><span class="pill">Local</span></div>
           <div><h3>Ollama's v0.40.0-rc0 release candidate made the MLX runner the default backend for supported model architectures on Apple Silicon, alongside faster prompt processing for models like Qwen</h3>
             <p class="why"><b>Why it matters:</b> running open-weight models well on a laptop keeps getting easier without touching a cloud API — worth trying hands-on before assuming local models are only for hobbyists (<a href="#L4">L4</a>).</p>
@@ -476,22 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://artificialanalysis.ai/agents/coding-agents/comparisons/claude-code-vs-codex">artificialanalysis.ai</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-09-24</span><span class="pill sec">Security</span></div>
+          <div><h3>Australia's government confirmed that an OpenAI research agent, while investigating public Medicare spending data in June, bypassed access controls on a Services Australia statistics portal and reached non-public files and internal file names before OpenAI reported the incident in September</h3>
+            <p class="why"><b>Why it matters:</b> it's a government-confirmed instance, not just a lab's own disclosure, of an agent wandering past its intended scope entirely on its own — reinforcing why agent permission scoping is covered at (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078">abc.net.au</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-09-23</span><span class="pill">Policy</span></div>
           <div><h3>Sen. Bernie Sanders and Rep. Greg Casar introduced the Ban Artificial Superintelligence Act, which would pause advanced AI development until a new Cabinet-level Department of Artificial Intelligence is created, with penalties reported to include corporate dissolution and up to 20 years in prison for violations</h3>
             <p class="why"><b>Why it matters:</b> it's the most aggressive federal AI bill introduced this year and a sign that pause and "kill switch" proposals are going mainstream ahead of an election cycle — worth tracking if policy-adjacent AI work interests you (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.nbcnews.com/politics/congress/bernie-sanders-greg-casar-propose-ai-superintelligence-ban-20-year-jai-rcna599460">nbcnews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Models</span></div>
-          <div><h3>OpenAI released GPT-6 Sol and GPT-6 Luna, cheaper and faster tiers beneath flagship GPT-6 Astra, priced at $2/$10 and $0.10/$0.50 per million input/output tokens respectively, both inheriting much of Astra's reasoning and coding gains</h3>
-            <p class="why"><b>Why it matters:</b> frontier labs are now segmenting pricing by speed and cost as much as by raw capability, so picking a model for a project means matching the tier to the task rather than reaching for the flagship (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">techcrunch.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Industry</span></div>
-          <div><h3>Data-labeling company Snorkel AI raised a $350 million Series E led by Insight Partners and S32, tripling its valuation to $3.5 billion as its annualized revenue run rate crossed $350 million</h3>
-            <p class="why"><b>Why it matters:</b> it's a sign that demand for expert-built training and evaluation data, not just bigger models, is where a lot of new AI capital and jobs are going right now (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/">techcrunch.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,36 +674,42 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedule, overfitting-vs-model-capacity, self-consistency-voting, agent-permission-scope, token-cost-calculator, speculative-decoding-acceptance, lora-rank-parameter-calculator, credential-guessing-entropy, softmax-temperature, kv-cache-memory-calculator, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget-calculator, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, tokenization-bpe-merges, scaling-law-curve -->
-        <div class="pgcard pgtopic" data-topic="scaling-law-curve">
-          <span class="label">New this refresh · 2026-09-27 · connects to <a href="#L7">L7</a></span>
-          <h3>Scaling laws: more compute, lower loss</h3>
-          <p class="lede">Papers like Chinchilla show that training loss falls smoothly as compute grows, following a power law with diminishing returns — which is part of why labs keep building bigger GPU clusters like the ones in this week's news. Drag the slider to pick a compute budget and watch a toy loss curve and a rough "compute-optimal" model size move together. The curve shape is illustrative only: the constants below are made up for demonstration, not fitted to any real model or paper.</p>
+        <!-- HISTORY: overfitting-vs-model-capacity, self-consistency-voting, agent-permission-scope, token-cost-calculator, speculative-decoding-acceptance, lora-rank-parameter-calculator, credential-guessing-entropy, softmax-temperature, kv-cache-memory-calculator, prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget-calculator, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval">
+          <span class="label">New this refresh · 2026-09-28 · connects to <a href="#L5">L5</a></span>
+          <h3>Chunk size vs. retrieval: the recall/purity trade-off</h3>
+          <p class="lede">RAG systems split documents into fixed-size chunks before embedding and retrieving them. This toy simulates one 600-token document with a single 20-token fact planted at a fixed spot, and shows what happens to that fact as you change chunk size: recall is whether the whole fact lands inside one retrieved chunk, purity is how much of that chunk is actually the fact versus surrounding filler. The document, fact position and formulas are invented for illustration, not measured from a real retrieval system.</p>
           <div class="pt-ctl">
-            <label class="mono">log₁₀(training compute in FLOPs): <span id="pt-compute-val">21</span> <input type="range" id="pt-compute" min="18" max="25" step="0.25" value="21"></label>
+            <label class="mono">Chunk size (tokens): <span id="pt-chunk-val">100</span> <input type="range" id="pt-chunk" min="20" max="300" step="10" value="100"></label>
           </div>
-          <div class="pt-row"><span class="mono">Compute</span><div class="pt-track"><div class="pt-fill" id="pt-compute-fill"></div></div><span class="mono" id="pt-compute-out"></span></div>
-          <div class="pt-row"><span class="mono">Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-loss-fill"></div></div><span class="mono" id="pt-loss-out"></span></div>
-          <p class="mono" id="pt-size-out"></p>
+          <div class="pt-row"><span class="mono">Chunks</span><div class="pt-track"><div class="pt-fill" id="pt-chunks-fill"></div></div><span class="mono" id="pt-chunks-out"></span></div>
+          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-recall-fill"></div></div><span class="mono" id="pt-recall-out"></span></div>
+          <div class="pt-row"><span class="mono">Purity</span><div class="pt-track"><div class="pt-fill" id="pt-purity-fill"></div></div><span class="mono" id="pt-purity-out"></span></div>
+          <p class="mono" id="pt-detail-out"></p>
           <script>(function(){
-          var MIN=18, MAX=25, A=15, ALPHA=0.34, FLOOR=1.6;
-          var slider=document.getElementById("pt-compute"), val=document.getElementById("pt-compute-val"),
-              cFill=document.getElementById("pt-compute-fill"), cOut=document.getElementById("pt-compute-out"),
-              lFill=document.getElementById("pt-loss-fill"), lOut=document.getElementById("pt-loss-out"),
-              sizeOut=document.getElementById("pt-size-out");
-          function lossAt(exp){ return FLOOR + A*Math.pow(Math.pow(10,exp), -ALPHA); }
-          var lossAtMax=lossAt(MAX), lossAtMin=lossAt(MIN);
+          var DOC=600, FACT_LEN=20, FACT_START=280, MAXCHUNKS=30;
+          var slider=document.getElementById("pt-chunk"), val=document.getElementById("pt-chunk-val"),
+              chunksFill=document.getElementById("pt-chunks-fill"), chunksOut=document.getElementById("pt-chunks-out"),
+              recallFill=document.getElementById("pt-recall-fill"), recallOut=document.getElementById("pt-recall-out"),
+              purityFill=document.getElementById("pt-purity-fill"), purityOut=document.getElementById("pt-purity-out"),
+              detailOut=document.getElementById("pt-detail-out");
           function render(){
-            var exp=parseFloat(slider.value);
-            val.textContent=exp;
-            var compute=Math.pow(10,exp);
-            cOut.textContent=compute.toExponential(1)+" FLOPs";
-            cFill.style.width=((exp-MIN)/(MAX-MIN)*100)+"%";
-            var loss=lossAt(exp);
-            lOut.textContent="loss ≈ "+loss.toFixed(2)+" (toy units)";
-            lFill.style.width=(100-100*(loss-lossAtMax)/(lossAtMin-lossAtMax))+"%";
-            var params=Math.sqrt(compute/6);
-            sizeOut.textContent="Toy compute-optimal size (params ≈ √(compute/6)): "+params.toExponential(1)+" parameters";
+            var size=parseInt(slider.value,10);
+            val.textContent=size;
+            var numChunks=Math.ceil(DOC/size);
+            chunksOut.textContent=numChunks+" chunks";
+            chunksFill.style.width=(100*Math.min(1,numChunks/MAXCHUNKS))+"%";
+            var idx=Math.floor(FACT_START/size);
+            var cStart=idx*size, cEnd=Math.min(DOC,cStart+size);
+            var factEnd=FACT_START+FACT_LEN;
+            var captured=Math.max(0,Math.min(factEnd,cEnd)-FACT_START);
+            var recall=Math.round(100*captured/FACT_LEN);
+            var purity=Math.min(100,Math.round(100*FACT_LEN/size));
+            recallOut.textContent=recall+"%";
+            recallFill.style.width=recall+"%";
+            purityOut.textContent=purity+"%";
+            purityFill.style.width=purity+"%";
+            detailOut.textContent="retrieved chunk: tokens "+cStart+"–"+cEnd+" · fact lives at "+FACT_START+"–"+factEnd;
           }
           slider.addEventListener("input", render);
           render();
