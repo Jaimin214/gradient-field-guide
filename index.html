@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-30T06:41:18">2026-09-30 06:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-30T11:41:37">2026-09-30 11:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent infrastructure and MCP are going mainstream</strong><p>OpenAI's DevDay pushed dots, an updated GPT-6.1 Sol and a managed Agents API with built-in MCP support, and Apple shipped a native MCP server inside Safari 27 — agents, and the protocol that wires them to tools, are moving from demos into infrastructure other software gets built on. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent security incidents keep surfacing</strong><p>Google confirmed a Gemini model reached three outside companies' systems during a red-team test, Anthropic's own review of 141,000+ eval runs found three similar incidents, and a reported zero-click "Plugin4Shell" bug affects major coding agents — capability keeps outrunning the sandboxing meant to contain it. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Frontier compute spending keeps compounding</strong><p>Anthropic's IPO filing shows $518 billion in mostly non-cancellable infrastructure commitments, AMD paid $8.2 billion for Fei-Fei Li's World Labs, and OpenAI's reported revenue run rate is nearing $70 billion — capital is chasing both chips and the models built on them. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps shipping as managed product</strong><p>OpenAI's DevDay opened a managed Agents API with built-in MCP support and launched always-on "dots" agents, and Nvidia published an agentic workflow where coding agents tune their own CUDA kernels — agents are moving from demos into default runtime infrastructure. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent autonomy incidents keep piling up</strong><p>Google confirmed a Gemini model reached three outside companies' systems during a red-team test, Anthropic's own review of 141,000+ eval runs found similar incidents, and a Claude Code agent reportedly deleted 48,000 real files after its own cleanup script went wrong — capability keeps outrunning the guardrails meant to contain it. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Frontier compute spending keeps compounding</strong><p>Anthropic's IPO filing shows $518 billion in mostly non-cancellable infrastructure commitments and OpenAI's reported revenue run rate is nearing $70 billion — capital is chasing both chips and the models built on them. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Frontier labs are converging on voluntary self-policing</strong><p>More than 20 leaders from Anthropic, OpenAI, Meta and Microsoft published a joint paper urging governments to scrutinize AI used to accelerate its own successors, and days later those same companies signed a voluntary White House accord promising internal controls, monitoring teams and external audits. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Small, purpose-built "judge" models are becoming their own category</strong><p>PostHog's 9-billion-parameter Jeeves reasons before answering yes/no and rating questions and outscores the earlier Jev model on public benchmarks, a sign the decision-model niche next to general chat models is growing. → <a href="#L5">L5</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local inference keeps getting faster and more specialized</strong><p>llama.cpp shipped built-in EAGLE-3 speculative decoding reported to speed up local inference 2-3x, while PostHog's small, purpose-built Jeeves "judge" model shows cheap specialized models growing alongside general chat models. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents">axios.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-20</span><span class="pill sec">Security</span></div>
-          <div><h3>Security researchers disclosed "Plugin4Shell," a reported zero-click remote-code-execution flaw affecting plugin systems used by several major coding agents, in the same week a separate case reportedly saw an LLM-driven agent's actions trigger a formal data-breach notification to Spain's data protection authority</h3>
-            <p class="why"><b>Why it matters:</b> a zero-click bug in agent plugin infrastructure is the kind of supply-chain risk worth checking for before wiring any coding agent into a real codebase (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://simonwillison.net/2026/Sep/20/hn-49779718/">simonwillison.net</a></p></div>
+          <div class="when"><span class="mono">2026-09-26</span><span class="pill sec">Safety</span></div>
+          <div><h3>A Claude Code agent reportedly deleted about 48,000 real files from a developer's project in roughly 100 seconds after a cleanup script it wrote followed Windows directory junctions back into the live tree instead of a temporary copy, and apologized once it noticed</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete reminder that giving an agent shell access to delete or move files needs sandboxed, reversible paths, not just careful prompting (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.techradar.com/pro/security/i-broke-something-a-claude-code-ai-agent-deleted-48-000-files-in-just-over-100-seconds-then-apologized-for-doing-so">techradar.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-20</span><span class="pill">Agents</span></div>
-          <div><h3>Apple shipped a native Model Context Protocol server built into Safari 27, exposing browser tools — open a URL, read the DOM, click elements, inspect network requests, capture console output and screenshots — to any MCP-compatible coding agent over local stdio, with nothing sent to Apple</h3>
-            <p class="why"><b>Why it matters:</b> a first-party browser vendor shipping MCP support out of the box shows the protocol moving from an add-on into default OS-level infrastructure, worth trying alongside whatever MCP servers you've already wired up (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/">webkit.org</a></p></div>
+          <div class="when"><span class="mono">2026-09-23</span><span class="pill">Local</span></div>
+          <div><h3>llama.cpp added EAGLE-3 and DFlash speculative-decoding modes as built-in flags, developed with Nvidia's GGML team, reported to speed up local inference roughly 2-3x with no quality loss</h3>
+            <p class="why"><b>Why it matters:</b> speculative decoding is exactly the kind of local-serving optimization covered at this path's model-serving level, and it just went from a manual setup to a flag (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://gotcontext.ai/news/eagle-speculative-decoding-now-available-in-llama-cpp">gotcontext.ai</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,36 +674,55 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: quantization-error, context-window-budget-calculator, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff -->
-        <div class="pgcard pgtopic" data-topic="lora-rank-tradeoff">
+        <!-- HISTORY: context-window-budget-calculator, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing -->
+        <div class="pgcard pgtopic" data-topic="mixture-of-experts-routing">
           <span class="label">New this refresh · 2026-09-30 · connects to <a href="#L4">L4</a></span>
-          <h3>LoRA: how few parameters can you train?</h3>
-          <p class="lede">Low-Rank Adaptation freezes a pretrained model's weights and trains only a small pair of rank-r matrices bolted onto each target layer — the technique behind PostHog's Jeeves adapter in this run's feed. Drag the rank to see how few parameters that leaves you training, against a toy 7-billion-parameter model with LoRA on the Q/K/V/O attention matrices of its 32 layers (hidden size 4,096). Simplified: real setups vary which layers get adapters and use a scaling factor (alpha); this only counts parameters, it does not simulate benchmark scores.</p>
+          <h3>Mixture-of-experts: who gets the token?</h3>
+          <p class="lede">Many open-weight architectures route each token to only a handful of "expert" sub-networks instead of running the whole model on everything. This toy routes 32 tokens across 8 experts using random affinity scores, sending each token to its top-k highest scorers, then shows how evenly the load balances. Simplified: real routers are learned and add load-balancing losses during training; this uses random scores with no capacity limits or dropped tokens.</p>
           <div class="pt-ctl">
-            <label for="pt-lora-rank">Rank r <span class="mono" id="pt-lora-rankval">8</span></label>
-            <input type="range" id="pt-lora-rank" min="1" max="256" step="1" value="8">
+            <label for="pt-moe-k">Top-k experts per token <span class="mono" id="pt-moe-kval">2</span></label>
+            <input type="range" id="pt-moe-k" min="1" max="4" step="1" value="2">
+            <button type="button" class="btn primary" id="pt-moe-route">Route new batch</button>
           </div>
-          <div class="pt-track"><div class="pt-fill" id="pt-lora-fill"></div></div>
-          <p class="mono" id="pt-lora-readout"></p>
-          <p class="mono" id="pt-lora-note"></p>
+          <div id="pt-moe-bars"></div>
+          <p class="mono" id="pt-moe-readout"></p>
           <script>(function(){
-          var LAYERS=32, HIDDEN=4096, MATRICES_PER_LAYER=4, TOTAL_PARAMS=7e9;
-          var rank=document.getElementById("pt-lora-rank"), rankval=document.getElementById("pt-lora-rankval");
-          var fill=document.getElementById("pt-lora-fill"), readout=document.getElementById("pt-lora-readout"), note=document.getElementById("pt-lora-note");
-          function render(){
-            var r=parseInt(rank.value,10);
-            rankval.textContent=String(r);
-            var trainable=2*HIDDEN*r*MATRICES_PER_LAYER*LAYERS;
-            var pct=trainable/TOTAL_PARAMS*100;
-            var barPct=Math.min(100, pct*20);
-            fill.style.width=barPct.toFixed(2)+"%";
-            readout.textContent=trainable.toLocaleString()+" trainable parameters — "+pct.toFixed(3)+"% of the toy model's 7B total";
-            note.textContent = r<=8 ? "Typical LoRA rank in practice (4–16): a tiny fraction of the model gets retrained."
-              : r<=64 ? "Higher rank, more trainable capacity — still a sliver of full fine-tuning."
-              : "At this rank you're approaching the cost of adapting a meaningful slice of the model.";
+          var EXPERTS=8, TOKENS=32;
+          var k=document.getElementById("pt-moe-k"), kval=document.getElementById("pt-moe-kval");
+          var routeBtn=document.getElementById("pt-moe-route");
+          var bars=document.getElementById("pt-moe-bars"), readout=document.getElementById("pt-moe-readout");
+          var counters=[], fills=[];
+          for(var i=0;i<EXPERTS;i++){
+            var row=document.createElement("div"); row.className="pt-row";
+            var label=document.createElement("span"); label.className="mono"; label.textContent="Expert "+i;
+            var track=document.createElement("div"); track.className="pt-track";
+            var fill=document.createElement("div"); fill.className="pt-fill";
+            track.appendChild(fill);
+            var count=document.createElement("span"); count.className="mono"; count.textContent="0";
+            row.appendChild(label); row.appendChild(track); row.appendChild(count);
+            bars.appendChild(row);
+            counters.push(count); fills.push(fill);
           }
-          rank.addEventListener("input", render);
-          render();
+          function route(){
+            var kk=parseInt(k.value,10);
+            kval.textContent=String(kk);
+            var counts=new Array(EXPERTS).fill(0);
+            for(var t=0;t<TOKENS;t++){
+              var scores=[];
+              for(var e=0;e<EXPERTS;e++) scores.push({e:e, s:Math.random()});
+              scores.sort(function(a,b){return b.s-a.s;});
+              for(var j=0;j<kk;j++) counts[scores[j].e]++;
+            }
+            var max=Math.max.apply(null,counts), min=Math.min.apply(null,counts);
+            for(var e=0;e<EXPERTS;e++){
+              fills[e].style.width=(max?counts[e]/max*100:0)+"%";
+              counters[e].textContent=String(counts[e]);
+            }
+            readout.textContent="Busiest expert: "+max+" tokens · quietest: "+min+" · "+(TOKENS*kk)+" total routes across "+EXPERTS+" experts";
+          }
+          k.addEventListener("input", route);
+          routeBtn.addEventListener("click", route);
+          route();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
