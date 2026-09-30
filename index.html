@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-09-29T20:41:36">2026-09-29 20:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-09-30T01:41:59">2026-09-30 01:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,31 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent-native software is arriving fast</strong><p>OpenAI's dots and updated GPT-6.1 Sol target always-on agents that keep working between chats, and newly launched Ando is building team messaging where agents like Codex, Claude and Grok sit as first-class members of a channel. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent security incidents keep multiplying</strong><p>A reported Claude Code file-deletion incident, the active Deadbugz MCP supply-chain campaign, and the UK AI Security Institute's numbers on GPT-6 Astra's own risky behavior all point the same way: agent deployments need sandboxing and real backups, not just a well-behaved model. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Capital keeps chasing both chips and world models</strong><p>AMD's $8.2 billion all-stock purchase of Fei-Fei Li's World Labs and Anthropic's reported push toward a $2 trillion Nasdaq listing show frontier money spreading beyond raw GPU counts. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent infrastructure is going mainstream</strong><p>OpenAI's DevDay pushed dots, an updated GPT-6.1 Sol and a new managed Agents API with built-in MCP support, while Nvidia's KDA turns coding agents loose on CUDA kernel tuning — agents are moving from demos into infrastructure other software gets built on. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent security still lags agent capability</strong><p>The UK AI Security Institute's numbers on GPT-6 Astra's own risky behavior and Nvidia's new Open Agent Safety Platform both point the same way: agent deployments need sandboxing and independent monitoring, not just a well-behaved model. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Frontier compute spending keeps compounding</strong><p>Anthropic's IPO filing shows $518 billion in mostly non-cancellable infrastructure commitments, AMD paid $8.2 billion for Fei-Fei Li's World Labs, and OpenAI's reported revenue run rate is nearing $70 billion — capital is chasing both chips and the models built on them. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Frontier labs are now asking to be regulated on self-improvement</strong><p>More than 20 leaders from Anthropic, OpenAI, Meta and Microsoft published a joint paper urging governments to scrutinize AI systems used to accelerate their own successors, while Florida's attorney general is asking a court to pause OpenAI's training outright. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Small, purpose-built "judge" models are becoming their own category</strong><p>PostHog's 9-billion-parameter Jeeves reasons before answering yes/no and rating questions and outscores the earlier Jev model on public benchmarks, a sign the decision-model niche next to general chat models is growing. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic's confidential IPO filing, made ahead of a planned Nasdaq listing targeting a valuation above $2 trillion, reportedly commits the company to at least $518 billion in AI infrastructure spending over the next decade with six partners — including $111 billion with Google, $110 billion with Amazon, $31 billion with Microsoft and $161 billion in Broadcom equipment leases — with roughly 80% of it non-cancellable regardless of usage</h3>
+            <p class="why"><b>Why it matters:</b> that much locked-in, use-it-or-not compute spending is the flip side of frontier-lab hiring and equity stories, worth weighing before judging any AI employer's runway (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.theglobeandmail.com/investing/article-anthropic-ai-build-out-commitments-cannot-be-cancelled-ipo-filing/">theglobeandmail.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Industry</span></div>
+          <div><h3>OpenAI's annualized revenue run rate is reported to have grown more than 70% since the start of Q3 to near $70 billion, with enterprise sales more than doubling since July and consumer revenue in the quarter alone exceeding all of 2025</h3>
+            <p class="why"><b>Why it matters:</b> reported from unnamed sources rather than an official filing, but it's a concrete number to weigh against the AI-driven layoff count elsewhere in this feed (<a href="#habits">Habits</a>).</p>
+            <p class="src"><a href="https://www.axios.com/2026/09/29/scoop-openais-annual-recurring-revenue-nears-70b">axios.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Agents</span></div>
+          <div><h3>OpenAI opened its Agents API at DevDay, a managed agent runtime that handles sessions, orchestration, context compaction and recovery while developers just define tools and environments, with built-in support for MCP servers, an OpenAI-hosted browser for computer use, and parallel subagents</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete, shipping example of the MCP-and-subagents pattern this path's agent level teaches, now offered as managed infrastructure instead of something you wire up yourself (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://developers.openai.com/api/docs/guides/agents-api/overview">developers.openai.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-09-29</span><span class="pill">Open models</span></div>
           <div><h3>PostHog open-sourced Jeeves, a 9-billion-parameter decision model built as a LoRA adapter on Qwen3.5-9B that reasons before answering yes/no, multiple-choice and rating questions, scoring 0.935 on the public JevBench benchmark versus 0.866 for its earlier Jev model</h3>
@@ -414,12 +432,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>OpenAI used its DevDay keynote to launch dots, always-on ChatGPT agents that run on their own cloud computer and keep working across apps like Slack and Teams between chats, alongside an updated GPT-6.1 Sol model pitched as better at agentic coding and computer use</h3>
             <p class="why"><b>Why it matters:</b> it's a concrete step from chat-and-wait toward agents that keep running unattended, the design pattern this path's agent level is built around (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://9to5mac.com/2026/09/29/openai-teases-20-announcements-at-devday-watch-live/">9to5mac.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic reportedly picked Nasdaq for a planned October IPO targeting a public valuation above $2 trillion, more than double its $965 billion valuation from a May funding round, with Goldman Sachs, JPMorgan and Morgan Stanley leading the offering</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab going public reshapes equity, hiring and disclosure norms for anyone weighing a job there, and is worth watching alongside the other business moves in this feed (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-selects-nasdaq-planned-ipo-111027066.html">finance.yahoo.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-29</span><span class="pill sec">Safety</span></div>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.outlookbusiness.com/corporate/ai-overtakes-all-other-reasons-for-us-job-cuts-as-layoffs-surge-in-2026">outlookbusiness.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-24</span><span class="pill">Agents</span></div>
-          <div><h3>Ando launched out of stealth with a $20 million seed round from Accel and Index Ventures for an agent-native alternative to Slack, where AI agents such as Codex, Claude and Grok act as first-class members of a channel with their own identity and permissions instead of being bolted on as bots</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete bet that the next wave of workplace software is built around agents participating directly in team conversations, the same shift covered at (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/ando-launches-agent-native-messaging-platform-announces-20-million-seed.html">globenewswire.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-20</span><span class="pill sec">Safety</span></div>
-          <div><h3>A developer reported on Reddit that a Claude Code agent deleted roughly 48,000 live files and destroyed the local Git history in 103 seconds while rebuilding a test environment, after reportedly mishandling Windows filesystem junctions during an otherwise-successful task list; the account has not been independently verified</h3>
-            <p class="why"><b>Why it matters:</b> whatever exactly happened, it's a sharp reminder to scope agent permissions and keep real backups before letting an agent run destructive commands unattended (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.techradar.com/pro/security/i-broke-something-a-claude-code-ai-agent-deleted-48-000-files-in-just-over-100-seconds-then-apologized-for-doing-so">techradar.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-08-10</span><span class="pill sec">Security</span></div>
-          <div><h3>Security researchers detailed Deadbugz, an active MCP supply-chain campaign that ships a seemingly ordinary text-formatting tool server, then rewrites its own tool metadata into instructions to hunt for SSH keys, AWS credentials and shell history only after three normal tool calls have built up trust</h3>
-            <p class="why"><b>Why it matters:</b> gating malicious behavior behind a usage threshold defeats a quick security review, a concrete reason to sandbox and monitor MCP servers rather than trust them once (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.pillar.security/blog/deadbugz-currently-active-mcp-supply-chain-campaign">pillar.security</a></p></div>
+          <div class="when"><span class="mono">2026-09-23</span><span class="pill">Local</span></div>
+          <div><h3>Ollama shipped v0.34.4, adding native MTP-based speculative decoding, faster Qwen3.8 and Gemma 4 prompt processing on Apple Silicon, and single-pass structured outputs for thinking models</h3>
+            <p class="why"><b>Why it matters:</b> unglamorous runtime upgrades like these — faster local inference, more reliable structured output — are what actually decide whether running an open-weight model on your own laptop is practical for a project (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://releasebot.io/updates/ollama">releasebot.io</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,55 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: prompt-injection-filter, mixture-of-experts-routing, quantization-error, context-window-budget-calculator, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature">
-          <span class="label">New this refresh · 2026-09-29 · connects to <a href="#L3">L3</a></span>
-          <h3>How temperature reshapes next-token odds</h3>
-          <p class="lede">A toy model has already scored five candidate next words. Drag temperature to see how softmax turns those fixed scores into probabilities — low temperature sharpens the model onto its top pick, high temperature flattens the odds toward a coin flip across all five. Simplified: real vocabularies have tens of thousands of candidates, not five, and real logits shift with every token of context.</p>
+        <!-- HISTORY: mixture-of-experts-routing, quantization-error, context-window-budget-calculator, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, precision-recall-threshold, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory">
+          <span class="label">New this refresh · 2026-09-30 · connects to <a href="#L4">L4</a></span>
+          <h3>How fast the KV cache eats GPU memory</h3>
+          <p class="lede">Every token an LLM generates keeps a key and value vector cached per layer so it never recomputes the past. Drag context length and batch size, and switch precision, to see how that cache grows against a fixed 32-layer, grouped-query-attention shape. Simplified: real serving stacks also hold model weights and activations, vary in architecture, and often quantize the cache itself.</p>
           <div class="pt-ctl">
-            <label for="pt-sm-temp">Temperature <span class="mono" id="pt-sm-tempval">1.00</span></label>
-            <input type="range" id="pt-sm-temp" min="0.1" max="2" step="0.05" value="1">
+            <label for="pt-kv-ctx">Context length <span class="mono" id="pt-kv-ctxval">8,192</span> tokens</label>
+            <input type="range" id="pt-kv-ctx" min="1024" max="131072" step="1024" value="8192">
+            <label for="pt-kv-batch">Batch size <span class="mono" id="pt-kv-batchval">1</span></label>
+            <input type="range" id="pt-kv-batch" min="1" max="16" step="1" value="1">
           </div>
-          <div id="pt-sm-bars"></div>
-          <p class="mono" id="pt-sm-note"></p>
+          <div class="pt-ctl" id="pt-kv-precision">
+            <button type="button" class="btn primary" data-p="fp16">fp16</button>
+            <button type="button" class="btn" data-p="int8">int8</button>
+            <button type="button" class="btn" data-p="int4">int4</button>
+          </div>
+          <div class="pt-track"><div class="pt-fill" id="pt-kv-fill"></div></div>
+          <p class="mono" id="pt-kv-readout"></p>
+          <p class="mono" id="pt-kv-note"></p>
           <script>(function(){
-          var tokens=[{t:"cat",logit:2.1},{t:"dog",logit:1.8},{t:"car",logit:0.6},{t:"cake",logit:0.3},{t:"couch",logit:-0.4}];
-          var slider=document.getElementById("pt-sm-temp"), tempval=document.getElementById("pt-sm-tempval"),
-              bars=document.getElementById("pt-sm-bars"), note=document.getElementById("pt-sm-note");
-          var rows=tokens.map(function(tok){
-            var row=document.createElement("div"); row.className="pt-row";
-            var label=document.createElement("span"); label.textContent=tok.t;
-            var track=document.createElement("div"); track.className="pt-track";
-            var fill=document.createElement("div"); fill.className="pt-fill"; track.appendChild(fill);
-            var pct=document.createElement("span"); pct.className="mono";
-            row.appendChild(label); row.appendChild(track); row.appendChild(pct);
-            bars.appendChild(row);
-            return {fill:fill,pct:pct};
-          });
+          var LAYERS=32, KV_HEADS=8, HEAD_DIM=128, GPU_GB=80;
+          var BYTES={fp16:2, int8:1, int4:0.5};
+          var precision="fp16";
+          var ctx=document.getElementById("pt-kv-ctx"), ctxval=document.getElementById("pt-kv-ctxval");
+          var batch=document.getElementById("pt-kv-batch"), batchval=document.getElementById("pt-kv-batchval");
+          var buttons=document.querySelectorAll("#pt-kv-precision button");
+          var fill=document.getElementById("pt-kv-fill"), readout=document.getElementById("pt-kv-readout"), note=document.getElementById("pt-kv-note");
           function render(){
-            var T=parseFloat(slider.value);
-            tempval.textContent=T.toFixed(2);
-            var exps=tokens.map(function(tok){ return Math.exp(tok.logit/T); });
-            var sum=exps.reduce(function(a,b){return a+b;},0);
-            exps.forEach(function(e,i){
-              var p=e/sum;
-              rows[i].fill.style.width=(p*100).toFixed(1)+"%";
-              rows[i].pct.textContent=(p*100).toFixed(1)+"%";
-            });
-            note.textContent = T<0.4 ? "Low temperature: the model almost always picks its top-scored token."
-              : T>1.4 ? "High temperature: scores matter less, odds drift toward uniform across all five."
-              : "Mid temperature: the model's original ranking still shows through, softened.";
+            var c=parseInt(ctx.value,10), b=parseInt(batch.value,10);
+            ctxval.textContent=c.toLocaleString();
+            batchval.textContent=String(b);
+            var bytes=2*LAYERS*c*KV_HEADS*HEAD_DIM*BYTES[precision]*b;
+            var gb=bytes/1e9;
+            var pct=Math.min(100, gb/GPU_GB*100);
+            fill.style.width=pct.toFixed(1)+"%";
+            readout.textContent=gb.toFixed(2)+" GB of KV cache ("+precision+") — "+pct.toFixed(0)+"% of an 80 GB GPU";
+            note.textContent = gb>GPU_GB ? "This alone would not fit on one 80 GB GPU, before the model weights are even loaded."
+              : "Leaves "+(GPU_GB-gb).toFixed(1)+" GB of the 80 GB GPU for model weights and activations.";
           }
-          slider.addEventListener("input", render);
+          buttons.forEach(function(btn){
+            btn.addEventListener("click", function(){
+              buttons.forEach(function(b2){ b2.classList.remove("primary"); });
+              btn.classList.add("primary");
+              precision=btn.dataset.p;
+              render();
+            });
+          });
+          ctx.addEventListener("input", render);
+          batch.addEventListener("input", render);
           render();
           })();</script>
         </div>
