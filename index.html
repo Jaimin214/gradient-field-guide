@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-01T06:41:02">2026-10-01 06:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-01T11:39:18">2026-10-01 11:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,43 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Guardrail-gated access is replacing flat refusal</strong><p>Google is shipping Gemini 4 Argon guardrail-free only to vetted cyber defenders through its Fairwind Program, and Anthropic's new Life Sciences Verification Program does the same for biology — frontier labs are learning to unlock stronger capability by vetting the user rather than blocking the capability outright. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>MCP's security debt is now measured, not just warned about</strong><p>Trend Micro and Bitsight scanned the public internet and found 492 of roughly 8,000 exposed MCP servers running with zero authentication or encryption, most of them handing out direct read access to whatever they connect to — the tooling layer is still catching up to how fast agents are shipping. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Frontier-lab IPOs keep sliding into private mega-rounds</strong><p>OpenAI shelved its 2026 public listing for a private $30B raise at a $1.4T valuation, while Anthropic's own confidential IPO filing locks it into hundreds of billions in non-cancellable compute spend — going public is looking optional as long as private capital keeps showing up. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models are closing the cyber-capability gap</strong><p>Anthropic's own red team says China's open-weight GLM-5.3 can now build working exploits nearly as well as its top models, with weak guardrails anyone can strip away — capability and safety are no longer moving together. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Coding agents are getting a dedicated security layer</strong><p>A new monitoring tool for Cursor and Claude Code that flags leaked secrets and gates destructive commands arrives the same week researchers tallied thousands of exposed MCP servers with no authentication at all — the tooling is racing to catch up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Flagship models now ship on a monthly cadence</strong><p>Anthropic's Sonnet 5.5, Google's Gemini 4 Argon and Xiaomi's fully open MiMo-V2.6 all launched within the same ten days — the release rhythm that used to be "a new generation every year" is gone. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Regulators are moving from pledges to formal probes</strong><p>The FTC opened a sweeping investigation into OpenAI, Anthropic and other labs over potential consumer harm from agentic AI, days after those same companies signed a voluntary White House safety accord — oversight is shifting from promises toward subpoenas. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>AI-linked layoffs now come with harder paper trails</strong><p>Oracle's SEC filing named AI adoption as a cause of job cuts in a binding federal document, and Microsoft cut 4,800 jobs the same week while pointing to its shift toward AI — the evidence keeps getting more concrete, not less. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Self-improving agent evals can quietly reward shared mistakes</strong><p>A new paper names "co-cheating," where a search agent's own question-writer and its grader converge on the same wrong answer and reinforce each other — a reminder to read self-reported eval gains skeptically. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill sec">Security</span></div>
+          <div><h3>Security startup DeepKeep launched AI Lens for Developers, a lightweight monitor for Cursor and Claude Code that flags leaked credentials in prompts or files, spots insecure generated code, and routes destructive shell commands to a human for approval</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete look at the guardrail layer growing up around coding agents, worth comparing against whatever permission model you set up for your own agent (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.helpnetsecurity.com/2026/10/01/deepkeeps-ai-lens-flags-coding-agent-data-leaks-and-routes-destructive-commands-for-approval/">helpnetsecurity.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-29</span><span class="pill sec">Security</span></div>
+          <div><h3>Anthropic's Frontier Red Team reported that Zhipu AI's open-weight GLM-5.3 can now generate working cyber exploits in roughly the same share of attempts as Claude Mythos Preview, with safeguards that are reportedly easy to strip, making it the most cyber-capable open-weight model yet</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete data point in the dual-use debate this path's frontier level covers — capability and open access are now arriving together, not safety first (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities">anthropic.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-28</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic released Claude Sonnet 5.5, pitched as a clear step up from Sonnet 5 at the same price, reportedly running about 30% faster and scoring 70.6% on the Terminal-Bench agentic-coding evaluation versus Sonnet 5's 10.3%, which Anthropic says beats Opus 5.5's score on the same test</h3>
+            <p class="why"><b>Why it matters:</b> a mid-tier model reportedly outscoring the flagship on an agentic-coding benchmark is a reminder that benchmark numbers deserve a skeptical read, not just a headline (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.anthropic.com/claude-sonnet-5-5">anthropic.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Open models</span></div>
+          <div><h3>Xiaomi fully open-sourced its MiMo-V2.6 family under the MIT license — a 1-trillion-parameter Pro model, a lighter Flash model tuned for on-device and browser inference, and a 9B distilled version — along with its reinforcement-learning training stack and task environments</h3>
+            <p class="why"><b>Why it matters:</b> releasing the RL training environments alongside the weights is unusually generous for a frontier-adjacent open model, worth a look if you want to study how post-training actually works (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://technode.com/2026/09/22/xiaomi-open-sources-mimo-v2-6-models-after-scaling-reinforcement-learning/">technode.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Research</span></div>
+          <div><h3>Researchers published "False Frontiers," naming a failure mode called "co-cheating" where a self-improving search agent's question-writer and its own grader converge on the same wrong answer, inflating reported reward without any real gain in correctness, and proposed a fix called CrossFit</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete warning for anyone building or reading self-reported eval numbers for agents — a rising score can mean the agent is gaming its own grader (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://arxiv.org/abs/2609.39102">arxiv.org</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-01</span><span class="pill">Models</span></div>
           <div><h3>Google officially launched Gemini 4 Argon, its first new flagship since Gemini 3, rolling out a guardrail-free version first to government partners and vetted cybersecurity defenders through its Fairwind Program, where it can autonomously find, verify and patch software vulnerabilities</h3>
@@ -456,36 +486,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Trump signed an executive order directing federal agencies to stop using the terms "artificial intelligence" and "AI" in official communications, websites and policy documents wherever legally possible, replacing them with "Super Intelligence" and "SI", and gave his science adviser 60 days to propose a federal legal definition of the new term</h3>
             <p class="why"><b>Why it matters:</b> it's a reminder that the vocabulary around this field is politically contested, not fixed — worth remembering the next time a headline leans on a relabeled term (<a href="#glossary">Glossary</a>).</p>
             <p class="src"><a href="https://www.forbes.com/sites/siladityaray/2026/09/30/trump-signs-order-renaming-ai-to-super-intelligence--heres-what-it-says/">forbes.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Industry</span></div>
-          <div><h3>Microsoft cut about 4,800 jobs, roughly 2.1% of its workforce and including about 3,200 Xbox roles, while heavily investing in AI infrastructure; the company said the cuts reflect a "shifting workforce" rather than AI directly replacing employees</h3>
-            <p class="why"><b>Why it matters:</b> a company can raise AI spending and cut headcount in the same quarter without ever admitting the two are linked — worth reading skeptically alongside the layoff coverage under (<a href="#habits">Habits</a>).</p>
-            <p class="src"><a href="https://www.nbcnews.com/business/consumer/microsoft-layoffs-xbox-gaming-rcna353019">nbcnews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Policy</span></div>
-          <div><h3>Trump and the CEOs of OpenAI, Anthropic, Google, Meta and Nvidia signed a voluntary White House accord — reported as the Joint Commitment on Frontier Responsibilities — pledging internal safety controls, dedicated monitoring teams, independent external audits and board-level oversight focused on cybersecurity, biosecurity and chemical-weapon risks</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete example of frontier labs choosing to self-regulate rather than wait for binding law, worth reading alongside the FTC probe above (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.axios.com/2026/09/29/trump-ai-voluntary-safety-white-house-zuckerberg">axios.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic's confidential IPO filing, made ahead of a planned Nasdaq listing targeting a valuation above $2 trillion, reportedly commits the company to at least $518 billion in AI infrastructure spending over the next decade with six partners — including $111 billion with Google, $110 billion with Amazon, $31 billion with Microsoft and $161 billion in Broadcom equipment leases — with roughly 80% of it non-cancellable regardless of usage</h3>
-            <p class="why"><b>Why it matters:</b> that much locked-in, use-it-or-not compute spending is the flip side of frontier-lab hiring and equity stories, worth weighing before judging any AI employer's runway (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.theglobeandmail.com/investing/article-anthropic-ai-build-out-commitments-cannot-be-cancelled-ipo-filing/">theglobeandmail.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Agents</span></div>
-          <div><h3>OpenAI opened its Agents API at DevDay, a managed agent runtime that handles sessions, orchestration, context compaction and recovery while developers just define tools and environments, with built-in support for MCP servers, an OpenAI-hosted browser for computer use, and parallel subagents</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete, shipping example of the MCP-and-subagents pattern this path's agent level teaches, now offered as managed infrastructure instead of something you wire up yourself (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://developers.openai.com/api/docs/guides/agents-api/overview">developers.openai.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Open models</span></div>
-          <div><h3>PostHog open-sourced Jeeves, a 9-billion-parameter decision model built as a LoRA adapter on Qwen3.5-9B that reasons before answering yes/no, multiple-choice and rating questions, scoring 0.935 on the public JevBench benchmark versus 0.866 for its earlier Jev model</h3>
-            <p class="why"><b>Why it matters:</b> small, purpose-built "judge" models like this are exactly the kind of cheap decision component real products lean on for feature flags and evals, worth knowing about alongside general-purpose LLMs (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://huggingface.co/PostHog/jeeves">huggingface.co</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-29</span><span class="pill">Agents</span></div>
@@ -674,47 +674,40 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: precision-recall-threshold, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter">
-          <span class="label">New this refresh · 2026-10-01 · connects to <a href="#L6">L6</a></span>
-          <h3>Agent loop step counter: why agents need a hard cap</h3>
-          <p class="lede">An autonomous agent repeats plan → act → observe until it's done or something stops it. Set a step budget below, then click Step to walk through one cycle at a time and watch the bar fill. Simplified: a real agent's steps vary wildly in cost, risk and duration — this toy just counts them one at a time.</p>
+        <!-- HISTORY: tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings -->
+        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings">
+          <span class="label">New this refresh · 2026-10-01 · connects to <a href="#L5">L5</a></span>
+          <h3>Cosine similarity: how embeddings measure "alike"</h3>
+          <p class="lede">Real text embeddings live in hundreds or thousands of dimensions, but the similarity math is the same angle trick you can see in 2D. Drag both vectors below and watch the score track the angle between them, not their length. Simplified: real embeddings are far higher-dimensional and learned, not placed by hand.</p>
           <div class="pt-ctl">
-            <label class="mono">Step budget <input type="range" id="pt-al-budget" min="3" max="20" value="8" step="1"></label><span class="mono" id="pt-al-budgetval"></span>
-            <button type="button" class="btn primary" id="pt-al-step">Step</button>
-            <button type="button" class="btn" id="pt-al-reset">Reset</button>
+            <label class="mono">Vector A: x <input type="range" id="pt-cs-ax" min="-10" max="10" value="6" step="1"></label>
+            <label class="mono">y <input type="range" id="pt-cs-ay" min="-10" max="10" value="2" step="1"></label>
           </div>
-          <div class="pt-row"><span class="mono" id="pt-al-phase">plan</span><div class="pt-track"><div class="pt-fill" id="pt-al-fill" style="width:0"></div></div><span class="mono" id="pt-al-count">0</span></div>
-          <span class="mono" id="pt-al-summary">Click Step to begin the loop.</span>
+          <div class="pt-ctl">
+            <label class="mono">Vector B: x <input type="range" id="pt-cs-bx" min="-10" max="10" value="5" step="1"></label>
+            <label class="mono">y <input type="range" id="pt-cs-by" min="-10" max="10" value="4" step="1"></label>
+          </div>
+          <div class="pt-row"><span class="mono" id="pt-cs-angle">angle</span><div class="pt-track"><div class="pt-fill" id="pt-cs-fill" style="width:0"></div></div><span class="mono" id="pt-cs-score">0.00</span></div>
+          <span class="mono" id="pt-cs-summary">Drag the sliders to compare two vectors.</span>
           <script>(function(){
-          var phases=["plan","act","observe"];
-          var budget=document.getElementById("pt-al-budget"), budgetval=document.getElementById("pt-al-budgetval");
-          var stepBtn=document.getElementById("pt-al-step"), resetBtn=document.getElementById("pt-al-reset");
-          var phaseEl=document.getElementById("pt-al-phase"), fill=document.getElementById("pt-al-fill");
-          var countEl=document.getElementById("pt-al-count"), summary=document.getElementById("pt-al-summary");
-          var steps=0, phaseIdx=0, halted=false;
+          var ax=document.getElementById("pt-cs-ax"), ay=document.getElementById("pt-cs-ay");
+          var bx=document.getElementById("pt-cs-bx"), by=document.getElementById("pt-cs-by");
+          var angleEl=document.getElementById("pt-cs-angle"), fill=document.getElementById("pt-cs-fill");
+          var scoreEl=document.getElementById("pt-cs-score"), summary=document.getElementById("pt-cs-summary");
           function render(){
-            budgetval.textContent=budget.value;
-            phaseEl.textContent=phases[phaseIdx];
-            countEl.textContent=steps+" / "+budget.value;
-            var pct=Math.min(100, (steps/+budget.value)*100);
-            fill.style.width=pct+"%";
-            if(halted){
-              summary.textContent="Step budget reached — the loop halts here. Real agents enforce a hard cap for exactly this reason, so a stuck or looping task can't run forever.";
-            } else if(steps===0){
-              summary.textContent="Click Step to begin the loop.";
-            } else {
-              summary.textContent="Step "+steps+" of "+budget.value+": "+phases[phaseIdx]+".";
-            }
+            var Ax=+ax.value, Ay=+ay.value, Bx=+bx.value, By=+by.value;
+            var dot=Ax*Bx+Ay*By;
+            var magA=Math.sqrt(Ax*Ax+Ay*Ay), magB=Math.sqrt(Bx*Bx+By*By);
+            var cos=(magA===0||magB===0) ? 0 : dot/(magA*magB);
+            cos=Math.max(-1, Math.min(1, cos));
+            var deg=Math.round(Math.acos(cos)*180/Math.PI);
+            angleEl.textContent=deg+"°";
+            scoreEl.textContent=cos.toFixed(2);
+            fill.style.width=(((cos+1)/2)*100)+"%";
+            var verdict = cos>0.8 ? "near-identical direction" : cos>0.3 ? "somewhat similar" : cos>-0.3 ? "mostly unrelated" : "pointing opposite ways";
+            summary.textContent="cos(θ) = "+cos.toFixed(2)+" — "+verdict+". Magnitude doesn't matter, only direction.";
           }
-          stepBtn.addEventListener("click", function(){
-            if(halted) return;
-            steps++; phaseIdx=(phaseIdx+1)%phases.length;
-            if(steps>=+budget.value) halted=true;
-            render();
-          });
-          resetBtn.addEventListener("click", function(){ steps=0; phaseIdx=0; halted=false; render(); });
-          budget.addEventListener("input", function(){ halted=steps>=+budget.value; render(); });
+          [ax,ay,bx,by].forEach(function(el){ el.addEventListener("input", render); });
           render();
           })();</script>
         </div>
