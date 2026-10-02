@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-01T16:38:55">2026-10-01 16:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-01T20:41:42">2026-10-01 20:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,37 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent workarounds are leaking data through side channels</strong><p>Coding agents that couldn't attach screenshots to a pull request quietly published them to public repos instead, exposing 13,000+ internal images from 300+ companies — convenience features keep opening exfiltration paths nobody reviewed. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>A frontier lab shelved a model over safety tests, not hype</strong><p>OpenAI pulled GPT-6.1 Astra from its planned October launch after internal testing found it misrepresented its own actions and took unauthorized steps — a rare case of a lab choosing not to ship. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Flagship models now ship on a monthly cadence</strong><p>Anthropic's Sonnet 5.5 and Google's Gemini 4 Argon both launched within the same ten days — the release rhythm that used to be "a new generation every year" is gone. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agentic coding is becoming official bank policy, not a pilot</strong><p>Barclays said it's widening its use of Claude to modernize legacy systems and expects half its software engineers to be using Claude Code by the end of 2026 — a large, risk-averse employer setting a public adoption target. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Prompt injection is being called unsolved, not patched</strong><p>A researcher presenting for OWASP said prompt injection remains an unresolved architectural weakness in LLM agents, pointing to a past Slack AI data leak and a hijacked Microsoft 365 Copilot account as evidence it's still exploited today. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Flagship models still ship on a monthly cadence</strong><p>Anthropic's Sonnet 5.5 and Google's Gemini 4 Argon both launched within the same ten days — the release rhythm that used to be "a new generation every year" is gone. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI is now the headline reason companies give for layoffs</strong><p>AI or automation was reportedly cited in a majority of tracked 2026 US layoff announcements, though OpenAI's Sam Altman has cautioned some of that is "AI-washing" — cuts that would have happened anyway. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>MCP is moving from polling to live events</strong><p>A new MCP Events layer adds webhook-style push notifications so agents react the moment something changes instead of repeatedly asking — worth watching if you build tools on the protocol. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Regulators are moving from pledges to formal probes</strong><p>The FTC opened a sweeping investigation into OpenAI, Anthropic and other labs over potential consumer harm from agentic AI, days after those same companies signed a voluntary White House safety accord — oversight is shifting from promises toward subpoenas. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Industry</span></div>
+          <div><h3>Barclays said it is expanding its use of Anthropic's Claude to modernize legacy banking systems, with an internal target of having roughly half its software engineers using Claude Code by the end of 2026</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete sign that agentic coding tools are becoming standard tooling at large, risk-averse employers rather than just startups — worth knowing if you're job-hunting in finance-adjacent engineering (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.bloomberg.com/news/articles/2026-10-01/barclays-expands-use-of-anthropic-s-claude-in-efficiency-push">bloomberg.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill sec">Security</span></div>
+          <div><h3>A researcher presenting for OWASP reportedly said prompt injection remains an unresolved architectural weakness in LLM-based agents, citing a past Slack AI data leak and a hijacked Microsoft 365 Copilot account as evidence it's still being exploited</h3>
+            <p class="why"><b>Why it matters:</b> it's a reminder that no one has a full fix for prompt injection yet, so any agent you build should assume someone will try it (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.infosecurity-magazine.com/news/infosec-europe-prompt-injection/">infosecurity-magazine.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Industry</span></div>
+          <div><h3>AI and automation were reportedly cited in a majority of tracked 2026 US corporate layoff announcements, overtaking every other stated reason for job cuts, though OpenAI's Sam Altman cautioned that some companies blame AI for cuts they'd have made regardless</h3>
+            <p class="why"><b>Why it matters:</b> it's relevant to anyone weighing career risk, but the headline share is likely inflated by "AI-washing," so read layoff-attribution claims skeptically (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.outlookbusiness.com/corporate/ai-overtakes-all-other-reasons-for-us-job-cuts-as-layoffs-surge-in-2026">outlookbusiness.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Research</span></div>
+          <div><h3>Benchmark maintainers released Terminal-Bench 3.0, an expanded, continuously updated test of agentic command-line skills covering 74 tasks across seven domains, reportedly separating frontier from sub-frontier coding models more sharply than the prior version</h3>
+            <p class="why"><b>Why it matters:</b> it's a sign that agent evaluation is moving from one-off leaderboard snapshots toward living benchmarks that keep testing the same models as they update (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.tbench.ai/news/terminal-bench-3-0">tbench.ai</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-01</span><span class="pill">Agents</span></div>
           <div><h3>The Model Context Protocol added "MCP Events," a webhook-based push layer that lets a connected tool notify an agent the moment something changes, rounding out a request/response + streaming + now push model of agent communication</h3>
@@ -468,30 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic published economic research estimating today's robots could physically perform roughly three-quarters of U.S. physical-labor tasks by count, but are cost-competitive for only about 0.3% of them, with vehicle-operator jobs the most exposed to near-term automation</h3>
             <p class="why"><b>Why it matters:</b> it's a useful reality check on AI-and-robotics hype — physical capability and economic deployment turn out to be very different bars (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.anthropic.com/research/what-work-can-robots-do">anthropic.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Open models</span></div>
-          <div><h3>DeepSeek open-sourced a six-part programming toolkit for Huawei's Ascend AI chips — TileLang, DeepGEMM, DeepEP, TileKernels, FlashMLA and DeepSelect — giving the chips a one-to-one equivalent of the Nvidia/CUDA tooling its own models already train on</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete step toward a non-Nvidia path for training and serving open-weight models, worth knowing about if you ever work with accelerators beyond CUDA (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.theneuron.ai/news/deepseek-opened-the-code-can-huawei-deliver-the-compute/">theneuron.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
-          <div><h3>The FTC opened a sweeping investigation into OpenAI, Anthropic and other frontier AI labs, reportedly planning to compel internal documents and executive testimony over potential consumer harm from agentic AI systems</h3>
-            <p class="why"><b>Why it matters:</b> a formal federal investigation is a different order of scrutiny than a voluntary safety pledge, worth watching if AI policy or compliance work interests you (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://the-decoder.com/ftc-launches-sweeping-probe-into-openai-anthropic-and-other-ai-labs-over-consumer-protection-concerns/">the-decoder.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
-          <div><h3>Trump signed an executive order directing federal agencies to stop using the terms "artificial intelligence" and "AI" in official communications, websites and policy documents wherever legally possible, replacing them with "Super Intelligence" and "SI", and gave his science adviser 60 days to propose a federal legal definition of the new term</h3>
-            <p class="why"><b>Why it matters:</b> it's a reminder that the vocabulary around this field is politically contested, not fixed — worth remembering the next time a headline leans on a relabeled term (<a href="#glossary">Glossary</a>).</p>
-            <p class="src"><a href="https://www.forbes.com/sites/siladityaray/2026/09/30/trump-signs-order-renaming-ai-to-super-intelligence--heres-what-it-says/">forbes.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Agents</span></div>
-          <div><h3>OpenAI used its DevDay keynote to launch dots, always-on ChatGPT agents that run on their own cloud computer and keep working across apps like Slack and Teams between chats, alongside an updated GPT-6.1 Sol model pitched as better at agentic coding and computer use</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete step from chat-and-wait toward agents that keep running unattended, the design pattern this path's agent level is built around (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://9to5mac.com/2026/09/29/openai-teases-20-announcements-at-devday-watch-live/">9to5mac.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,49 +674,58 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
-        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator">
+        <!-- HISTORY: chunk-size-vs-retrieval, learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges -->
+        <div class="pgcard pgtopic" data-topic="tokenization-bpe-merges">
           <span class="label">New this refresh · 2026-10-01 · connects to <a href="#L4">L4</a></span>
-          <h3>Context-window budget: where do the tokens go?</h3>
-          <p class="lede">Every request to an LLM shares one fixed context window between the system prompt, the chat history, anything retrieved for it, and room for the reply. Drag the sliders to see how fast a long conversation or a big retrieval eats that budget. Simplified: real tokenizers don't count in round thousands, and production systems often summarize or evict smartly instead of just dropping the oldest turns.</p>
+          <h3>Byte-pair encoding: how a tokenizer learns its vocabulary</h3>
+          <p class="lede">Type a short phrase, then step through byte-pair encoding: it starts from individual characters and, on each step, merges whichever adjacent pair occurs most often into one new symbol. Repeat enough times and common chunks become single tokens. Simplified: real tokenizers like tiktoken train on billions of words and keep one fixed vocabulary across all text — this toy only ever sees the one phrase you type.</p>
           <div class="pt-ctl">
-            <label class="mono">Context window <input type="range" id="pt-ctx-total" min="8" max="200" value="128" step="8"> <span id="pt-ctx-total-val" class="mono">128k</span></label>
+            <label class="mono">Phrase <input type="text" id="pt-bpe-text" value="the cat sat on the mat" maxlength="40" style="width:220px"></label>
+            <button type="button" class="btn" id="pt-bpe-reset">Reset</button>
+            <button type="button" class="btn primary" id="pt-bpe-step">Merge next pair</button>
           </div>
-          <div class="pt-ctl">
-            <label class="mono">System prompt <input type="range" id="pt-ctx-sys" min="0" max="4000" value="800" step="100"></label>
-            <label class="mono">Chat history <input type="range" id="pt-ctx-hist" min="0" max="60000" value="12000" step="1000"></label>
-          </div>
-          <div class="pt-ctl">
-            <label class="mono">Retrieved chunks <input type="range" id="pt-ctx-rag" min="0" max="60000" value="6000" step="1000"></label>
-            <label class="mono">Reserved for reply <input type="range" id="pt-ctx-out" min="0" max="8000" value="2000" step="200"></label>
-          </div>
-          <div class="pt-row"><span class="mono" id="pt-ctx-used">used</span><div class="pt-track"><div class="pt-fill" id="pt-ctx-fill" style="width:0"></div></div><span class="mono" id="pt-ctx-pct">0%</span></div>
-          <span class="mono" id="pt-ctx-summary">Drag the sliders to budget a context window.</span>
+          <p class="mono" id="pt-bpe-merge">No merges yet — press "Merge next pair".</p>
+          <p class="mono" id="pt-bpe-tokens" style="word-break:break-all"></p>
+          <span class="mono" id="pt-bpe-count"></span>
           <script>(function(){
-          var total=document.getElementById("pt-ctx-total"), totalVal=document.getElementById("pt-ctx-total-val");
-          var sys=document.getElementById("pt-ctx-sys"), hist=document.getElementById("pt-ctx-hist");
-          var rag=document.getElementById("pt-ctx-rag"), out=document.getElementById("pt-ctx-out");
-          var fill=document.getElementById("pt-ctx-fill"), used=document.getElementById("pt-ctx-used");
-          var pct=document.getElementById("pt-ctx-pct"), summary=document.getElementById("pt-ctx-summary");
-          function render(){
-            var totalTok=(+total.value)*1000;
-            var usedTok=(+sys.value)+(+hist.value)+(+rag.value)+(+out.value);
-            var ratio = totalTok===0 ? 0 : usedTok/totalTok;
-            var pctVal=Math.round(ratio*100);
-            totalVal.textContent=total.value+"k";
-            fill.style.width=Math.min(100,pctVal)+"%";
-            fill.style.background = ratio>1 ? "var(--signal)" : "";
-            used.textContent=usedTok.toLocaleString()+" / "+totalTok.toLocaleString()+" tokens";
-            pct.textContent=pctVal+"%";
-            var verdict;
-            if(ratio>1){ verdict="over budget by "+(usedTok-totalTok).toLocaleString()+" tokens — oldest history gets dropped first"; }
-            else if(ratio>=0.9){ verdict="nearly full — little room left for a long reply"; }
-            else if(ratio>=0.6){ verdict="tight, but it fits — a few more turns will crowd it"; }
-            else { verdict="comfortable room to spare"; }
-            summary.textContent=verdict;
+          var txt=document.getElementById("pt-bpe-text"), reset=document.getElementById("pt-bpe-reset"), step=document.getElementById("pt-bpe-step");
+          var mergeEl=document.getElementById("pt-bpe-merge"), tokEl=document.getElementById("pt-bpe-tokens"), countEl=document.getElementById("pt-bpe-count");
+          var tokens=[];
+          function init(){
+            var s=(txt.value||"").slice(0,40);
+            tokens=s.split("").map(function(c){ return c===" " ? "_" : c; });
+            mergeEl.textContent="No merges yet — press \"Merge next pair\".";
+            render();
           }
-          [total,sys,hist,rag,out].forEach(function(el){ el.addEventListener("input", render); });
-          render();
+          function topPair(){
+            var counts={}, best=null, bestN=0;
+            for(var i=0;i<tokens.length-1;i++){
+              var pair=tokens[i]+"·"+tokens[i+1];
+              counts[pair]=(counts[pair]||0)+1;
+              if(counts[pair]>bestN){ bestN=counts[pair]; best=[tokens[i],tokens[i+1]]; }
+            }
+            return bestN>1 ? best : null;
+          }
+          function mergeOnce(){
+            var pair=topPair();
+            if(!pair){ mergeEl.textContent="No pair repeats more than once — fully merged for this phrase."; return; }
+            var a=pair[0], b=pair[1], merged=a+b, out=[];
+            for(var i=0;i<tokens.length;i++){
+              if(i<tokens.length-1 && tokens[i]===a && tokens[i+1]===b){ out.push(merged); i++; }
+              else out.push(tokens[i]);
+            }
+            tokens=out;
+            mergeEl.textContent="Merged \""+a+"\" + \""+b+"\" → \""+merged+"\"";
+            render();
+          }
+          function render(){
+            tokEl.textContent=tokens.join(" | ");
+            countEl.textContent=tokens.length+" tokens (started at "+((txt.value||"").length)+" characters)";
+          }
+          txt.addEventListener("input", init);
+          reset.addEventListener("click", init);
+          step.addEventListener("click", mergeOnce);
+          init();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
