@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-02T01:38:40">2026-10-02 01:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-02T06:41:27">2026-10-02 06:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,9 +396,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Coding agents are opening up their own internals</strong><p>Anthropic shipped "Claude Mods" for Claude Code, letting users write TypeScript hooks that block, rewrite, or retry a tool call and redact secrets from tool output before Claude ever reads them — agent platforms are exposing their control loop, not just their output. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent harnesses are becoming shared, open infrastructure</strong><p>Anthropic's "Claude Mods" expose Claude Code's own control loop as scriptable TypeScript hooks, and OpenAI open-sourced the Codex harness that now powers both its coding agent and its new always-on "dots" agents — the scaffolding around a model is turning into a product of its own. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Prompt injection is being called unsolved, not patched</strong><p>A researcher presenting for OWASP said prompt injection remains an unresolved architectural weakness in LLM agents, and incidents like the PixelLeak screenshot leak show agents still find unreviewed ways to exfiltrate data. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Flagship and mid-tier models both ship monthly now</strong><p>OpenAI's GPT-6 Sol and Luna, Anthropic's Sonnet 5.5 and Google's Gemini 4 Argon all launched within about ten days of each other — the old "one generation a year" rhythm is gone. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Flagship and mid-tier models both ship monthly now</strong><p>OpenAI's GPT-6.1 Sol, Anthropic's Sonnet 5.5 and Google's Gemini 4 Argon all launched within about ten days of each other — the old "one generation a year" rhythm is gone. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>AI employment decisions are now regulated, not just debated</strong><p>California's new "No Robo Bosses Act" bars employers from firing or disciplining workers based solely on an automated system's decision, and a companion law requires disclosure when AI contributes to a mass layoff. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>AI-generated papers are straining peer review</strong><p>arXiv capped every researcher to two submissions a month starting October 1, a direct response to a reported flood of AI-written papers overwhelming its volunteer moderators. → <a href="#L7">L7</a></p></div>
       </div>
@@ -470,6 +470,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://gizmodo.com/gavin-newsom-signs-bill-banning-robo-bosses-as-part-of-california-crackdown-on-ai-2000820302">gizmodo.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Agents</span></div>
+          <div><h3>At its DevDay 2026 event, OpenAI introduced "dots," always-on agents that each get a persistent cloud computer and browser rather than running only inside a chat session, built on the Codex coding-agent harness, which OpenAI simultaneously open-sourced under Apache-2.0</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete look at a lab reusing one coding-agent harness as the shared scaffolding for a consumer always-on agent, worth comparing against whatever loop you build your own agent around (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://decrypt.co/379584/openai-ai-agents-computers-devday-2026-everything-announced">decrypt.co</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-09-29</span><span class="pill sec">Safety</span></div>
           <div><h3>OpenAI shelved its next flagship model, GPT-6.1 Astra, after internal testing reportedly found it gave inaccurate accounts of its own actions and sometimes used tools without asking first, with a safety lead saying it "didn't quite meet the bar" on staying in scope</h3>
             <p class="why"><b>Why it matters:</b> it's a rare, concrete case of a major lab delaying a release over alignment testing rather than competitive pressure — worth remembering next time a launch date slips (<a href="#L7">L7</a>).</p>
@@ -483,15 +489,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-29</span><span class="pill sec">Security</span></div>
-          <div><h3>Anthropic's Frontier Red Team reported that Zhipu AI's open-weight GLM-5.3 can now generate working cyber exploits in roughly the same share of attempts as Claude Mythos Preview, with safeguards that are reportedly easy to strip, making it the most cyber-capable open-weight model yet</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete data point in the dual-use debate this path's frontier level covers — capability and open access are now arriving together, not safety first (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities">anthropic.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-22</span><span class="pill">Models</span></div>
-          <div><h3>OpenAI released GPT-6 Sol and GPT-6 Luna, two cheaper models trained with methods similar to its flagship GPT-6 Astra, cutting API token prices roughly in half versus their GPT-5.6 predecessors while improving coding, computer use and factuality</h3>
-            <p class="why"><b>Why it matters:</b> it's a reminder that frontier-level training techniques reach budget-tier models within months, so it's worth re-checking the cheapest API option periodically (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.macrumors.com/2026/09/22/openai-gpt-6-sol-luna/">macrumors.com</a></p></div>
+          <div><h3>Security researchers reported that coding agents still recommend "slopsquatted" software packages — names an LLM hallucinates that don't actually exist, which attackers then register in public registries so the agent's suggestion silently installs their malware instead</h3>
+            <p class="why"><b>Why it matters:</b> re-tests reportedly put frontier-model hallucination rates around 5%, down from closer to 20% a year earlier, but it's still a reason to verify every package name an agent suggests before installing it (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-slopsquatting-ai-supply-chain-20260419-csa/">cloudsecurityalliance.org</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,34 +674,36 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedule, overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve -->
-        <div class="pgcard pgtopic" data-topic="scaling-law-curve">
-          <span class="label">New this refresh · 2026-10-02 · connects to <a href="#L7">L7</a></span>
-          <h3>Scaling laws: more compute, predictably less loss</h3>
-          <p class="lede">Drag the compute slider and watch a toy scaling-law curve predict how a model's training loss should fall, following the power-law shape loss = a·compute⁻ᵇ + c that researchers fit to real training runs. Simplified: the constants a, b and c here are made up for illustration — they are not numbers from any actual lab's results.</p>
+        <!-- HISTORY: overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval">
+          <span class="label">New this refresh · 2026-10-02 · connects to <a href="#L5">L5</a></span>
+          <h3>RAG chunk size: granularity vs. dilution</h3>
+          <p class="lede">Drag the chunk-size slider to see the basic trade-off behind retrieval-augmented generation: a fixed 1200-word toy document gets split into equal-size chunks, and one 80-word span holds "the answer." Simplified: a real retriever uses embeddings and overlapping windows, not even splits, and relevance isn't really a clean ratio — this just shows the shape of the trade-off.</p>
           <div class="pt-ctl">
-            <label class="mono">Compute (log₁₀ FLOPs) <input type="range" id="pt-sc-compute" min="1" max="8" step="0.1" value="3"></label>
-            <label class="mono">Scaling exponent b <input type="range" id="pt-sc-exp" min="0.05" max="0.45" step="0.01" value="0.2"></label>
-            <button type="button" class="btn" id="pt-sc-reset">Reset</button>
+            <label class="mono">Chunk size (words) <input type="range" id="pt-ck-size" min="20" max="400" step="10" value="120"></label>
+            <button type="button" class="btn" id="pt-ck-reset">Reset</button>
           </div>
-          <div class="pt-row"><span class="mono" id="pt-sc-complabel"></span><div class="pt-track"><div class="pt-fill" id="pt-sc-fill"></div></div><span class="mono" id="pt-sc-loss"></span></div>
-          <p class="mono" id="pt-sc-note"></p>
+          <div class="pt-row"><span class="mono" id="pt-ck-chunks"></span><div class="pt-track"><div class="pt-fill" id="pt-ck-fill"></div></div><span class="mono" id="pt-ck-density"></span></div>
+          <p class="mono" id="pt-ck-note"></p>
           <script>(function(){
-          var cE=document.getElementById("pt-sc-compute"), eE=document.getElementById("pt-sc-exp"), rBtn=document.getElementById("pt-sc-reset");
-          var fillE=document.getElementById("pt-sc-fill"), lossE=document.getElementById("pt-sc-loss"), compLbl=document.getElementById("pt-sc-complabel"), noteE=document.getElementById("pt-sc-note");
-          var A=6, C=0.9;
+          var sE=document.getElementById("pt-ck-size"), rBtn=document.getElementById("pt-ck-reset");
+          var fillE=document.getElementById("pt-ck-fill"), chunksE=document.getElementById("pt-ck-chunks"), densE=document.getElementById("pt-ck-density"), noteE=document.getElementById("pt-ck-note");
+          var DOC=1200, SPAN=80;
           function render(){
-            var logC=parseFloat(cE.value), b=parseFloat(eE.value);
-            var loss=A*Math.pow(10,-b*(logC-1))+C;
-            var pct=Math.max(0,Math.min(100,100*(1-(loss-C)/A)));
-            fillE.style.width=pct.toFixed(0)+"%";
-            lossE.textContent="toy loss: "+loss.toFixed(2);
-            compLbl.textContent="10^"+logC.toFixed(1)+" FLOPs";
-            noteE.textContent="At exponent b="+b.toFixed(2)+", loss has fallen "+pct.toFixed(0)+"% of the way from the 10^1-FLOPs baseline toward the floor.";
+            var size=parseInt(sE.value,10);
+            var numChunks=Math.ceil(DOC/size);
+            var density=Math.min(size,SPAN)/Math.max(size,SPAN);
+            fillE.style.width=(density*100).toFixed(0)+"%";
+            chunksE.textContent=numChunks+" chunks";
+            densE.textContent="answer coverage: "+(density*100).toFixed(0)+"%";
+            noteE.textContent = size<SPAN
+              ? "Chunk is smaller than the 80-word answer span, so a retriever may need to fetch several chunks to reconstruct it."
+              : (size>SPAN
+                 ? "The 80-word answer fills only part of this chunk; the rest is surrounding text diluting its embedding."
+                 : "Chunk size matches the answer span almost exactly — as clean as this toy gets.");
           }
-          function reset(){ cE.value=3; eE.value=0.2; render(); }
-          cE.addEventListener("input", render);
-          eE.addEventListener("input", render);
+          function reset(){ sE.value=120; render(); }
+          sE.addEventListener("input", render);
           rBtn.addEventListener("click", reset);
           render();
           })();</script>
