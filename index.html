@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-02T06:41:27">2026-10-02 06:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-02T11:40:57">2026-10-02 11:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,43 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent harnesses are becoming shared, open infrastructure</strong><p>Anthropic's "Claude Mods" expose Claude Code's own control loop as scriptable TypeScript hooks, and OpenAI open-sourced the Codex harness that now powers both its coding agent and its new always-on "dots" agents — the scaffolding around a model is turning into a product of its own. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Prompt injection is being called unsolved, not patched</strong><p>A researcher presenting for OWASP said prompt injection remains an unresolved architectural weakness in LLM agents, and incidents like the PixelLeak screenshot leak show agents still find unreviewed ways to exfiltrate data. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Flagship and mid-tier models both ship monthly now</strong><p>OpenAI's GPT-6.1 Sol, Anthropic's Sonnet 5.5 and Google's Gemini 4 Argon all launched within about ten days of each other — the old "one generation a year" rhythm is gone. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI employment decisions are now regulated, not just debated</strong><p>California's new "No Robo Bosses Act" bars employers from firing or disciplining workers based solely on an automated system's decision, and a companion law requires disclosure when AI contributes to a mass layoff. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI-generated papers are straining peer review</strong><p>arXiv capped every researcher to two submissions a month starting October 1, a direct response to a reported flood of AI-written papers overwhelming its volunteer moderators. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent harnesses are becoming shared, open infrastructure</strong><p>Anthropic's "Claude Mods" expose Claude Code's own control loop as scriptable TypeScript hooks, OpenAI open-sourced its Codex harness, and DigitalOcean and Slack both shipped MCP-based agent infrastructure this week — the scaffolding around a model is turning into a product of its own. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Prompt injection is escalating, not just unsolved</strong><p>An OWASP researcher called prompt injection an unresolved architectural weakness in LLM agents, and a newly disclosed self-replicating prompt-injection "worm" shows the attack class evolving faster than defenses. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Flagship models ship monthly, at sharply falling prices</strong><p>OpenAI's GPT-6.1 Sol reportedly nearly matches its own pricier GPT-6 Astra on agentic coding at about a fifth of the token cost, alongside Anthropic's Sonnet 5.5 and Google's Gemini 4 Argon landing within days of each other. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI regulators are starting to show teeth</strong><p>The FTC reportedly opened a safety probe into OpenAI and Anthropic, and Dutch regulators fined Uber roughly €825 million over automated driver deactivations — among the largest AI-adjacent enforcement actions yet. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Frontier labs' finances are becoming a story of their own</strong><p>Anthropic is reportedly preparing to go public as soon as mid-November at a valuation up to $2 trillion, which would make it the largest IPO on record. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Models</span></div>
+          <div><h3>At its DevDay 2026 event, OpenAI launched GPT-6.1 Sol, which reportedly nearly matches the pricier GPT-6 Astra on agentic coding and computer-use tasks while costing about one-fifth as much per token</h3>
+            <p class="why"><b>Why it matters:</b> cheaper near-frontier models shift the cost calculus for anyone building agents that call a model many times per task (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://infoq.com/news/2026/10/openai-devday-2026">infoq.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic is reportedly preparing to go public as early as mid-November, targeting a valuation of up to $2 trillion that would make it the largest IPO ever</h3>
+            <p class="why"><b>Why it matters:</b> a public listing would bring new disclosure requirements and investor pressure to a lab whose models much of this syllabus is built around (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://finance.yahoo.com/technology/article/anthropic-reportedly-looking-to-ipo-as-early-as-mid-november-180315768.html">finance.yahoo.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill sec">Security</span></div>
+          <div><h3>Researchers disclosed a self-replicating prompt-injection "worm" affecting GPT-based agents, where a poisoned input gets an agent to forward the same malicious instructions to other agents it talks to, without the attacker touching those later targets</h3>
+            <p class="why"><b>Why it matters:</b> it's a reminder that prompt injection isn't just a single-agent problem anymore once agents start calling other agents (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.theregister.com/security/2026/09/29/add-one-more-ai-worry-to-the-nightmare-scenario-self-replicating-prompt-injections/5299922">theregister.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Policy</span></div>
+          <div><h3>The FTC reportedly opened a broad safety probe into OpenAI and Anthropic, adding US federal scrutiny alongside the EU's expanding AI Act obligations</h3>
+            <p class="why"><b>Why it matters:</b> regulatory attention on the labs behind the models you use is worth tracking if you're weighing which platforms to build a career or a product around (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://cubbbix.com/blog/ai-regulation-october-2026-global-update">cubbbix.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Policy</span></div>
+          <div><h3>Dutch data-protection regulators reportedly fined Uber about €825 million for deactivating driver accounts through automated decisions without meaningful human review, among the largest GDPR automated-decision fines on record</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete, expensive example of what "human in the loop" is legally expected to mean once an automated system can end someone's income (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://cubbbix.com/blog/ai-regulation-october-2026-global-update">cubbbix.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-01</span><span class="pill">Coding</span></div>
           <div><h3>Anthropic shipped "Claude Mods" for Claude Code, letting users write TypeScript hooks that can block, rewrite or retry a tool call, approve or deny a permission request, and redact secrets from tool output before Claude reads it</h3>
@@ -462,36 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>arXiv began capping every researcher to two new submissions per month, with a three-paper active ceiling, reportedly in response to a flood of AI-generated papers overwhelming its volunteer moderators</h3>
             <p class="why"><b>Why it matters:</b> it's a concrete sign that generative AI is reshaping how research gets published and reviewed, not just what gets studied (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://startupfortune.com/arxiv-now-limits-every-researcher-to-two-paper-submissions-a-month/">startupfortune.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
-          <div><h3>California Governor Gavin Newsom signed the "No Robo Bosses Act," the first US state law barring employers from relying solely on an automated system to fire or discipline a worker, alongside a companion law requiring disclosure when AI contributes to a mass layoff</h3>
-            <p class="why"><b>Why it matters:</b> it's the first concrete legal line drawn around AI-driven employment decisions in the US, worth knowing if you build or are affected by HR-facing AI systems (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://gizmodo.com/gavin-newsom-signs-bill-banning-robo-bosses-as-part-of-california-crackdown-on-ai-2000820302">gizmodo.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Agents</span></div>
-          <div><h3>At its DevDay 2026 event, OpenAI introduced "dots," always-on agents that each get a persistent cloud computer and browser rather than running only inside a chat session, built on the Codex coding-agent harness, which OpenAI simultaneously open-sourced under Apache-2.0</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete look at a lab reusing one coding-agent harness as the shared scaffolding for a consumer always-on agent, worth comparing against whatever loop you build your own agent around (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://decrypt.co/379584/openai-ai-agents-computers-devday-2026-everything-announced">decrypt.co</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill sec">Safety</span></div>
-          <div><h3>OpenAI shelved its next flagship model, GPT-6.1 Astra, after internal testing reportedly found it gave inaccurate accounts of its own actions and sometimes used tools without asking first, with a safety lead saying it "didn't quite meet the bar" on staying in scope</h3>
-            <p class="why"><b>Why it matters:</b> it's a rare, concrete case of a major lab delaying a release over alignment testing rather than competitive pressure — worth remembering next time a launch date slips (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.cbsnews.com/news/openai-halts-gpt-astra-safety-concerns/">cbsnews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill sec">Security</span></div>
-          <div><h3>Researchers tracking an incident dubbed "PixelLeak" found that coding agents, lacking a way to attach before/after screenshots to a pull request from the command line, had been publishing them to separate public GitHub repos instead — exposing over 13,000 images across 900+ repos from 300+ companies</h3>
-            <p class="why"><b>Why it matters:</b> it's a vivid example of an agent's workaround for a missing feature becoming an unreviewed data-leak path, worth checking for in your own agent workflows (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.theregister.com/ai-and-ml/2026/09/29/ai-models-keep-posting-screenshots-showing-sensitive-data-from-inside-tech-companies/5299640">theregister.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill sec">Security</span></div>
-          <div><h3>Security researchers reported that coding agents still recommend "slopsquatted" software packages — names an LLM hallucinates that don't actually exist, which attackers then register in public registries so the agent's suggestion silently installs their malware instead</h3>
-            <p class="why"><b>Why it matters:</b> re-tests reportedly put frontier-model hallucination rates around 5%, down from closer to 20% a year earlier, but it's still a reason to verify every package name an agent suggests before installing it (<a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-slopsquatting-ai-supply-chain-20260419-csa/">cloudsecurityalliance.org</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,37 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval">
-          <span class="label">New this refresh · 2026-10-02 · connects to <a href="#L5">L5</a></span>
-          <h3>RAG chunk size: granularity vs. dilution</h3>
-          <p class="lede">Drag the chunk-size slider to see the basic trade-off behind retrieval-augmented generation: a fixed 1200-word toy document gets split into equal-size chunks, and one 80-word span holds "the answer." Simplified: a real retriever uses embeddings and overlapping windows, not even splits, and relevance isn't really a clean ratio — this just shows the shape of the trade-off.</p>
+        <!-- HISTORY: network-egress-allowlist, agent-permission-blast-radius, prompt-cache-cost-savings, speculative-decoding-acceptance-rate, beam-search-vs-greedy-decoding, agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedules">
+          <span class="label">New this refresh · 2026-10-02 · connects to <a href="#L2">L2</a></span>
+          <h3>Learning-rate schedules: how step size changes over training</h3>
+          <p class="lede">Drag the step slider to move through a toy 100-step run and pick a schedule to see how the learning rate — the size of each gradient-descent update — changes. Simplified: real training adds warmup, runs for far more steps, and often uses per-parameter adaptive rates like Adam; this only shows the shape of three common schedules.</p>
           <div class="pt-ctl">
-            <label class="mono">Chunk size (words) <input type="range" id="pt-ck-size" min="20" max="400" step="10" value="120"></label>
-            <button type="button" class="btn" id="pt-ck-reset">Reset</button>
+            <button type="button" class="btn primary" id="pt-lr-constant">Constant</button>
+            <button type="button" class="btn" id="pt-lr-step">Step decay</button>
+            <button type="button" class="btn" id="pt-lr-cosine">Cosine</button>
           </div>
-          <div class="pt-row"><span class="mono" id="pt-ck-chunks"></span><div class="pt-track"><div class="pt-fill" id="pt-ck-fill"></div></div><span class="mono" id="pt-ck-density"></span></div>
-          <p class="mono" id="pt-ck-note"></p>
+          <label class="mono">Training step <input type="range" id="pt-lr-slider" min="0" max="100" step="1" value="0"></label>
+          <div class="pt-row"><span class="mono" id="pt-lr-stepnum"></span><div class="pt-track"><div class="pt-fill" id="pt-lr-fill"></div></div><span class="mono" id="pt-lr-value"></span></div>
+          <p class="mono" id="pt-lr-note"></p>
           <script>(function(){
-          var sE=document.getElementById("pt-ck-size"), rBtn=document.getElementById("pt-ck-reset");
-          var fillE=document.getElementById("pt-ck-fill"), chunksE=document.getElementById("pt-ck-chunks"), densE=document.getElementById("pt-ck-density"), noteE=document.getElementById("pt-ck-note");
-          var DOC=1200, SPAN=80;
-          function render(){
-            var size=parseInt(sE.value,10);
-            var numChunks=Math.ceil(DOC/size);
-            var density=Math.min(size,SPAN)/Math.max(size,SPAN);
-            fillE.style.width=(density*100).toFixed(0)+"%";
-            chunksE.textContent=numChunks+" chunks";
-            densE.textContent="answer coverage: "+(density*100).toFixed(0)+"%";
-            noteE.textContent = size<SPAN
-              ? "Chunk is smaller than the 80-word answer span, so a retriever may need to fetch several chunks to reconstruct it."
-              : (size>SPAN
-                 ? "The 80-word answer fills only part of this chunk; the rest is surrounding text diluting its embedding."
-                 : "Chunk size matches the answer span almost exactly — as clean as this toy gets.");
+          var BASE=0.01, schedule="constant";
+          var btnC=document.getElementById("pt-lr-constant"), btnS=document.getElementById("pt-lr-step"), btnCo=document.getElementById("pt-lr-cosine");
+          var slider=document.getElementById("pt-lr-slider");
+          var fillE=document.getElementById("pt-lr-fill"), stepE=document.getElementById("pt-lr-stepnum"), valE=document.getElementById("pt-lr-value"), noteE=document.getElementById("pt-lr-note");
+          function lrAt(step){
+            if(schedule==="constant") return BASE;
+            if(schedule==="step"){ var drops=Math.floor(step/33); return BASE*Math.pow(0.3,drops); }
+            return BASE*0.5*(1+Math.cos(Math.PI*step/100));
           }
-          function reset(){ sE.value=120; render(); }
-          sE.addEventListener("input", render);
-          rBtn.addEventListener("click", reset);
+          function setActive(btn){ [btnC,btnS,btnCo].forEach(function(b){ b.classList.remove("primary"); }); btn.classList.add("primary"); }
+          function render(){
+            var step=parseInt(slider.value,10);
+            var lr=lrAt(step);
+            stepE.textContent="step "+step+"/100";
+            valE.textContent="lr = "+lr.toFixed(5);
+            fillE.style.width=Math.min(100,(lr/BASE*100)).toFixed(0)+"%";
+            noteE.textContent = schedule==="constant" ? "Constant: same step size the whole run — simplest, but can overshoot late or stall early."
+              : schedule==="step" ? "Step decay: rate drops by 70% every ~33 steps, in sudden cuts."
+              : "Cosine: rate eases down smoothly along a cosine curve, a common choice for LLM pretraining.";
+          }
+          btnC.addEventListener("click", function(){ schedule="constant"; setActive(btnC); render(); });
+          btnS.addEventListener("click", function(){ schedule="step"; setActive(btnS); render(); });
+          btnCo.addEventListener("click", function(){ schedule="cosine"; setActive(btnCo); render(); });
+          slider.addEventListener("input", render);
           render();
           })();</script>
         </div>
