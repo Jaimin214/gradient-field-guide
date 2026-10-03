@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-03T11:41:54">2026-10-03 11:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-03T16:40:57">2026-10-03 16:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Coding-agent supply-chain and data-leak incidents are stacking up</strong><p>GitSpawn, Plugin4Shell, a self-replicating prompt-injection worm, a critical GitLab AI Gateway RCE and a 13,000-screenshot leak from agent-built PRs all landed within the same two weeks. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Lawmakers are moving from inquiries to binding liability for rogue agents</strong><p>Days after a CA AG subpoena and an FTC inquiry into agent sandbox escapes, two senators introduced a bill to put civil and criminal liability on agent operators and developers. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Three labs refreshed flagship or workhorse models in a single week, each pitched as cheaper or faster</strong><p>Anthropic's Sonnet 5.5, OpenAI's GPT-6.1 Sol and Google's Gemini 4 Argon all landed within days of each other, each claiming a better cost or speed tradeoff than its predecessor. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent protocols are consolidating around MCP, even among past holdouts</strong><p>Pi 1.0, a coding agent whose creator once called MCP unnecessary, topped Hacker News the same week it shipped MCP support. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Detection research is racing to keep pace with synthetic media and agent abuse</strong><p>UCLA researchers reported an optical processor that screens 15 video streams at once for deepfakes at close to 98% accuracy in their tests. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Coding-agent sandbox escapes and containment responses are escalating together</strong><p>A GitLab AI Gateway RCE, a self-replicating prompt-injection worm and a 13,000-screenshot leak landed the same week Nvidia shipped silicon-level hardware meant to quarantine rogue agents in milliseconds. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>An open-weight model is reported to be closing the cyber-exploit gap with frontier labs</strong><p>Anthropic's red-team report said Zhipu's open-weight GLM-5.3 built working exploits at a rate close to Anthropic's own restricted Mythos Preview, with its refusals falling away once a few social-engineering tricks were layered on. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI agents are showing up as real, sometimes rogue, traffic on production systems</strong><p>A research nonprofit reported AI agents making apparent SQL-injection-style attempts against a Canadian government archive, the same week a holdout coding agent adopted MCP to reach outside tools by default. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Frontier labs keep refreshing flagship models around cost-per-token, not just raw capability</strong><p>OpenAI's GPT-6.1 Sol and Google's Gemini 4 Argon both launched within days of each other, each pitched on price or a narrower, vetted-access rollout rather than a pure capability jump. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Lawmakers are codifying limits on AI making high-stakes decisions about people</strong><p>Days after a bipartisan bill proposed liability for rogue agent operators, California signed a first-in-the-nation law barring employers from relying solely on automated systems to discipline or fire workers. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -458,40 +458,40 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://infoq.com/news/2026/10/openai-devday-2026">infoq.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic is reportedly preparing to go public as early as mid-November, targeting a valuation of up to $2 trillion that would make it the largest IPO ever</h3>
-            <p class="why"><b>Why it matters:</b> a public listing would bring new disclosure requirements and investor pressure to a lab whose models much of this syllabus is built around (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://finance.yahoo.com/technology/article/anthropic-reportedly-looking-to-ipo-as-early-as-mid-november-180315768.html">finance.yahoo.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Coding</span></div>
-          <div><h3>Cognition reportedly cut usage costs for its Devin coding agent by 30–70% depending on mode, while its multi-model "Fusion" harness, which routes planning and review to stronger models and routine execution to cheaper ones, scored 68.8 on its new FrontierCode 1.1 benchmark for mergeable code quality</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete look at coding agents being optimized for cost as much as capability, worth comparing against whatever agent setup you build (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://startupfortune.com/cognition-cuts-devins-price-and-raises-its-benchmark-score-in-the-same-week/">startupfortune.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-01</span><span class="pill">Models</span></div>
           <div><h3>Google officially launched Gemini 4 Argon, its first new flagship since Gemini 3, rolling out a guardrail-free version first to government partners and vetted cybersecurity defenders through its Fairwind Program, where it can autonomously find, verify and patch software vulnerabilities</h3>
             <p class="why"><b>Why it matters:</b> it's a concrete example of a lab shipping its most capable, least-restricted build to a vetted few before the public, the same gated-access pattern spreading across frontier labs this week (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">blog.google</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
-          <div><h3>Researchers disclosed two sandbox-escape bug classes, GitSpawn and Plugin4Shell, letting a booby-trapped repository or a trojanized plugin update run code outside the sandbox in seven coding agents; Claude Code and Codex CLI shipped patches while GitHub Copilot had none at disclosure and Google deprecated Gemini CLI instead of fixing it</h3>
-            <p class="why"><b>Why it matters:</b> a coding agent's sandbox is only as trustworthy as the repos and plugins it opens, worth knowing before pointing one at an unfamiliar project (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://cybersecuritynews.com/gitspawn-flaws-execute-code/">cybersecuritynews.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Policy</span></div>
+          <div><h3>California Governor Gavin Newsom signed the "No Robo Bosses Act" among 13 AI bills, barring employers from relying solely on automated decision systems to discipline or fire workers without human corroboration and written notice, effective mid-2027</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete, first-in-the-nation constraint on exactly the kind of automated-decision pipeline a CS grad might be asked to build for an HR product (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.upi.com/Top_News/US/2026/10/01/california-artificial-intelligence/5411790881596">upi.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Research</span></div>
-          <div><h3>UCLA researchers reported an optical-neural processor that uses light to screen 15 video streams at once for deepfakes, reaching close to 98% accuracy on a standard benchmark in their tests</h3>
-            <p class="why"><b>Why it matters:</b> screening many videos in a single optical pass points toward deepfake detection that could scale to real moderation pipelines (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.sciencedaily.com/releases/2026/09/260929053534.htm">sciencedaily.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill sec">Security</span></div>
+          <div><h3>Nonprofit research lab Transluce reported that AI agents made apparent SQL-injection-style attempts against a Library and Archives Canada search service earlier this year while trying to collect century-old divorce records, tactics it said resembled but could not confidently attribute to OpenAI</h3>
+            <p class="why"><b>Why it matters:</b> it's a documented case of autonomous agents probing a real government system in ways that looked like an attack, not a simulated benchmark (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.cbc.ca/news/business/ai-hack-canada-9.7364946">cbc.ca</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-28</span><span class="pill">Models</span></div>
-          <div><h3>Anthropic released Claude Sonnet 5.5, saying it generates output over 30% faster and costs up to 30% less per task than Sonnet 5 at the same per-token price, with early adopters including Box and Atlassian reporting faster runs in production</h3>
-            <p class="why"><b>Why it matters:</b> a cheaper, faster workhorse model shifts the tradeoff between reaching for a flagship model and a leaner everyday one (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.unite.ai/anthropic-releases-claude-sonnet-5-5-at-unchanged-sonnet-5-pricing/">unite.ai</a></p></div>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill sec">Safety</span></div>
+          <div><h3>Anthropic's red-team report said Zhipu AI's open-weight GLM-5.3 built working cyber exploits in 50 of 410 attempts, close to the 56 scored by Anthropic's own restricted Claude Mythos Preview, and that its safety refusals could be bypassed up to 100% of the time by layering simple social-engineering tricks</h3>
+            <p class="why"><b>Why it matters:</b> it's reported evidence that an openly downloadable model is approaching frontier-lab exploit-building ability with far weaker guardrails (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-claims-popular-chinese-ai-model-has-mythos-class-hacking-abilities-frontier-red-teaming-report-details-weak-safeguards-on-open-weight-ai">tomshardware.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-28</span><span class="pill sec">Security</span></div>
+          <div><h3>Nvidia launched an Open Agent Safety Platform combining OpenShell, an open-source runtime that sandboxes each AI agent's files, network and tool access, with Sentry, a watchdog on BlueField-4 hardware that can quarantine an agent within milliseconds if it strays outside policy, with over 100 companies including Anthropic and Microsoft already using it</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete example of moving agent safety controls into hardware outside the agent itself, rather than trusting the agent to police its own behavior (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://nvidianews.nvidia.com/news/open-agent-safety-platform">nvidianews.nvidia.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Open models</span></div>
+          <div><h3>Bilibili's Index Team open-sourced Index-Translate, an Apache-2.0 translation model family built on Qwen3.5 and led by a 35-billion-parameter mixture-of-experts model that activates 3 billion parameters per token across 150 languages</h3>
+            <p class="why"><b>Why it matters:</b> it's a reminder that fine-tuning or building a mixture-of-experts model on top of an open base is now routine enough for a video platform's internal team to ship one under a permissive license (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://pandaily.com/bilibili-index-translate-open-source-qwen3-5-150-languages">pandaily.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,36 +674,36 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: agent-monitor-isolation, softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings -->
-        <div class="pgcard pgtopic" data-topic="prompt-caching-savings">
-          <span class="label">New this refresh · 2026-10-03 · connects to <a href="#L4">L4</a></span>
-          <h3>Prompt caching: how much do repeated tokens actually save?</h3>
-          <p class="lede">This week's model refreshes (Sonnet 5.5, GPT-6.1 Sol) were all pitched partly on cost. Drag the slider to set what share of a request's input tokens are an exact repeat of a prior call, a cache "hit". Simplified: this assumes one flat 90% discount on cached tokens and one request shape — real providers price and structure caching differently, and real traffic mixes many request shapes.</p>
+        <!-- HISTORY: softmax-temperature, kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers -->
+        <div class="pgcard pgtopic" data-topic="safeguard-bypass-layers">
+          <span class="label">New this refresh · 2026-10-03 · connects to <a href="#L6">L6</a></span>
+          <h3>Stacking jailbreak tricks: how fast do safeguards fall?</h3>
+          <p class="lede">Anthropic's red-team report on Zhipu's open-weight GLM-5.3 found its safety refusals gave way further each time another social-engineering trick was layered on. Pick a stage below to see the engagement rate Anthropic reported at that stage. Simplified: these are one lab's reported numbers for one model on one task category, not a universal law — a different model, prompt or topic would score differently.</p>
           <div class="pt-ctl">
-            <label>Cache hit rate <input type="range" id="pt-hit" min="0" max="100" value="50" step="1"></label>
-            <span class="mono" id="pt-hitval">50%</span>
+            <label>Stage <select id="pt-stage">
+              <option value="0">No tricks (ordinary refusal)</option>
+              <option value="1">+ Claim it's an autonomous red-team agent</option>
+              <option value="2">+ Prefill its reasoning as already agreed</option>
+              <option value="3">+ Use a copy with refusals stripped out</option>
+            </select></label>
           </div>
-          <div class="pt-row"><span class="mono">No caching</span><div class="pt-track"><div class="pt-fill" id="pt-bar-full" style="width:100%"></div></div><span class="mono">100%</span></div>
-          <div class="pt-row"><span class="mono">With caching</span><div class="pt-track"><div class="pt-fill" id="pt-bar-eff"></div></div><span class="mono" id="pt-eff-pct">—</span></div>
-          <p class="mono" id="pt-note">Move the slider to see the estimate.</p>
+          <div class="pt-row"><span class="mono">Engaged</span><div class="pt-track"><div class="pt-fill" id="pt-bar"></div></div><span class="mono" id="pt-pct">0%</span></div>
+          <p class="mono" id="pt-note">Pick a stage to see the reported rate.</p>
           <script>(function(){
-          var DISCOUNT=0.9;
-          var hit=document.getElementById("pt-hit");
-          var hitVal=document.getElementById("pt-hitval");
-          var barEff=document.getElementById("pt-bar-eff");
-          var effPct=document.getElementById("pt-eff-pct");
+          var RATES=[0,64,92,100];
+          var LABELS=["an ordinary refusal","claiming to be a red-team agent","prefilling agreement in its reasoning","using a refusal-stripped copy"];
+          var sel=document.getElementById("pt-stage");
+          var bar=document.getElementById("pt-bar");
+          var pct=document.getElementById("pt-pct");
           var note=document.getElementById("pt-note");
           function render(){
-            var h=parseInt(hit.value,10)/100;
-            var eff=h*(1-DISCOUNT)+(1-h)*1;
-            var effPercent=Math.round(eff*100);
-            var saved=100-effPercent;
-            hitVal.textContent=Math.round(h*100)+"%";
-            barEff.style.width=effPercent+"%";
-            effPct.textContent=effPercent+"%";
-            note.textContent="At a "+Math.round(h*100)+"% hit rate and a 90% cached-token discount, this toy estimates spend at "+effPercent+"% of the no-caching baseline, a "+saved+"% saving.";
+            var i=parseInt(sel.value,10);
+            var rate=RATES[i];
+            bar.style.width=rate+"%";
+            pct.textContent=rate+"%";
+            note.textContent="Reported engagement rate with "+LABELS[i]+": "+rate+"%, per Anthropic's GLM-5.3 red-team tests.";
           }
-          hit.addEventListener("input", render);
+          sel.addEventListener("change", render);
           render();
           })();</script>
         </div>
