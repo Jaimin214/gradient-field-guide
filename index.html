@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-04T01:41:07">2026-10-04 01:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-04T06:40:55">2026-10-04 06:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,31 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Attacking production systems with AI agents is becoming a commercial service</strong><p>A single operator reportedly used open-source agent frameworks to steal over 600,000 payment-card records from 27 companies for about $25 a target, days after a GitLab AI Gateway RCE and a 13,000-screenshot leak showed the same agents creating their own new attack surface. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Coding agents' own tooling, not just the model, is the new attack surface</strong><p>Booby-trapped git configs were found to run attacker code in at least seven coding agents before any approval prompt, adding to this week's PixelLeak screenshot leak and the GitLab AI Gateway sandbox escape. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>AI oversight is consolidating into named offices and real legal exposure</strong><p>Trump is reported to be naming intelligence chief Jay Clayton as AI czar to run a new White House task force, the same week a bipartisan Senate bill would expose agent operators to hacking-law liability and regulators subpoenaed OpenAI over a sandbox breach. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Frontier labs keep competing on price-per-token as much as raw capability</strong><p>OpenAI's GPT-6.1 Sol and Google's Gemini 4 Argon both shipped within days of each other, each pitched on cost-efficiency or a narrow vetted-access rollout rather than a clean capability jump. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Small, typed "decision models" are emerging as a track separate from chat LLMs</strong><p>Cloudflare's new open-weight Clef and Clef-flash return scored probabilities instead of free text, and within a day Ollama and llama.cpp added a dedicated endpoint to run them locally alongside a desktop Nvidia DGX Spark built to cluster for bigger local models. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Even MCP skeptics are standardizing on the protocol</strong><p>Pi 1.0, built by a developer who once argued the Model Context Protocol was unnecessary, shipped MCP support and topped Hacker News days later, reinforcing MCP as the default way agents reach outside tools. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Frontier labs keep competing on price-per-token as much as raw capability</strong><p>OpenAI's GPT-6.1 Sol launched at about a fifth of its flagship's price, while Meta's new open-weight Muse Glimmer and Cloudflare's Clef push the same cost pressure down to self-hosted models. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Open-weight models keep closing the gap for agentic and local workloads</strong><p>Cloudflare's Clef and Clef-flash "decision models" got a dedicated Ollama/llama.cpp endpoint, and Meta returned to open weights with the 30B, Apache-licensed Muse Glimmer built for agent tasks. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>MCP keeps spreading faster than the governance built to oversee it</strong><p>Pi 1.0's creator, once an MCP skeptic, shipped MCP support days before reporting found the protocol running in production at major enterprises while most AI governance programs don't yet cover it. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-03</span><span class="pill sec">Security</span></div>
+          <div><h3>Security researchers reported that opening a project folder was enough to trigger code execution in at least seven AI coding agents, including Claude Code, Codex and Cursor, because each ran commands from a booby-trapped git configuration file before any user approval prompt appeared</h3>
+            <p class="why"><b>Why it matters:</b> it shows an agent's own developer tooling, not the model, can be the vulnerability, worth checking before pointing any agent at an unfamiliar repository (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://adversa.ai/blog/top-ai-coding-agent-security-resources-october-2026/">adversa.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-03</span><span class="pill">Open models</span></div>
+          <div><h3>Meta returned to open-weight releases with Muse Glimmer, a 30-billion-parameter model optimized for agentic tasks and licensed Apache 2.0, rolling out this week through Ollama, LM Studio, vLLM, SGLang and several hosted inference platforms</h3>
+            <p class="why"><b>Why it matters:</b> a major lab shipping a permissively licensed, agent-tuned model gives self-hosters a credible alternative to Qwen and Llama for building agents (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://venturebeat.com/technology/meta-returns-to-open-source-with-muse-glimmer-an-apache-2-0-licensed-30b-parameter-ai-model-optimized-for-agents-available-now">venturebeat.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-03</span><span class="pill sec">Security</span></div>
+          <div><h3>Reporting on the Model Context Protocol found it already running in production at companies including Uber, Nordstrom, Bloomberg, Duolingo and PwC while most enterprise AI governance programs don't yet cover it, as the spec itself moves toward OAuth 2.1 as its authorization standard for remote servers</h3>
+            <p class="why"><b>Why it matters:</b> if you're building or deploying an MCP server, authorization and access control need to be a first-class design decision, not an afterthought (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thenewstack.io/model-context-protocol-roadmap-2026/">thenewstack.io</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-03</span><span class="pill">Policy</span></div>
           <div><h3>Trump is reported to be naming Director of National Intelligence Jay Clayton as White House AI czar, keeping his DNI role while leading a new "Super Intelligence Force" task force with 120 days to report on AI risks and federal oversight</h3>
@@ -474,24 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Ollama 0.35.1 added a dedicated /v1/systemone endpoint for running Cloudflare's new open-weight Clef and Clef-flash "decision models" locally, and llama.cpp merged a matching typed-decision API the same day</h3>
             <p class="why"><b>Why it matters:</b> a local runtime for models that return a scored decision instead of free text is a different, faster building block than a chat LLM for routing and gating logic inside an agent (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://github.com/ollama/ollama/releases/tag/v0.35.1">github.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Local</span></div>
-          <div><h3>Nvidia launched a 64GB configuration of its DGX Spark desktop AI computer at $4,999, which pairs with a second unit over a direct 200GbE link to pool to 128GB of unified memory, reportedly enough to run models up to roughly 200 billion parameters</h3>
-            <p class="why"><b>Why it matters:</b> clustering two desktop boxes instead of buying one bigger one is a concrete, priced example of how far local inference hardware now stretches (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.storagereview.com/news/nvidia-dgx-spark-64gb-october-23-4999-two-units-cluster-to-128gb">storagereview.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Models</span></div>
-          <div><h3>Google officially launched Gemini 4 Argon, its first new flagship since Gemini 3, rolling out a guardrail-free version first to government partners and vetted cybersecurity defenders through its Fairwind Program, where it can autonomously find, verify and patch software vulnerabilities</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete example of a lab shipping its most capable, least-restricted build to a vetted few before the public, the same gated-access pattern spreading across frontier labs this week (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">blog.google</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Open models</span></div>
-          <div><h3>Cloudflare released Clef and Clef-flash, open-weight "decision models" built on a Qwen backbone that return typed, scored probabilities for a fixed question instead of generating free text, licensed Apache 2.0 and downloadable from Hugging Face</h3>
-            <p class="why"><b>Why it matters:</b> a model family built for fast routing and classification decisions, not conversation, is a different tool than a chat LLM for the gating logic inside an agent pipeline (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/">marktechpost.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,41 +674,42 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature">
+        <!-- HISTORY: mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature, kv-cache-memory-calculator -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator">
           <span class="label">New this refresh · 2026-10-04 · connects to <a href="#L4">L4</a></span>
-          <h3>Softmax temperature: how "sure" should a model sound?</h3>
-          <p class="lede">Four next-token candidates have fixed scores (logits) from a toy model. Dragging temperature rescales those scores before softmax turns them into probabilities: low temperature sharpens the pick toward the top score, high temperature flattens the choices toward a coin flip. This is the same softmax math behind Cloudflare's new Clef decision models in this run's feed, which return a scored probability instead of free text. Simplified: a real model chooses among tens of thousands of tokens, not four, and this skips the top-k/top-p truncation usually layered on top.</p>
+          <h3>The KV-cache: why long context eats your RAM</h3>
+          <p class="lede">Every token a model generates stores a small "key" and "value" vector per layer so it doesn't recompute attention from scratch — that's the KV-cache. Drag context length, model size and precision to see roughly how much memory it takes, the same tradeoff behind this run's news about Nvidia's clustered DGX Spark and local models like Meta's Muse Glimmer. Simplified: this uses a fixed, illustrative formula with rounded head-count and layer-count assumptions, not a real model's actual cache layout.</p>
           <div class="pt-ctl">
-            <label>Temperature <input type="range" id="pt-temp" min="1" max="20" step="1" value="10"></label><span class="mono" id="pt-tempval">1.0</span>
+            <label>Context tokens <input type="range" id="pt-ctx" min="1000" max="128000" step="1000" value="8000"></label><span class="mono" id="pt-ctxval">8,000</span>
+            <label>Model size <input type="range" id="pt-size" min="1" max="4" step="1" value="3"></label><span class="mono" id="pt-sizeval">7B</span>
+            <label>Precision <input type="range" id="pt-prec" min="0" max="2" step="1" value="1"></label><span class="mono" id="pt-precval">fp16</span>
           </div>
-          <div class="pt-row"><span class="mono">"gradient"</span><div class="pt-track"><div class="pt-fill" id="pt-bar0"></div></div><span class="mono" id="pt-out0">0%</span></div>
-          <div class="pt-row"><span class="mono">"descent"</span><div class="pt-track"><div class="pt-fill" id="pt-bar1"></div></div><span class="mono" id="pt-out1">0%</span></div>
-          <div class="pt-row"><span class="mono">"ascent"</span><div class="pt-track"><div class="pt-fill" id="pt-bar2"></div></div><span class="mono" id="pt-out2">0%</span></div>
-          <div class="pt-row"><span class="mono">"banana"</span><div class="pt-track"><div class="pt-fill" id="pt-bar3"></div></div><span class="mono" id="pt-out3">0%</span></div>
-          <p class="mono" id="pt-note">Drag the slider to see probabilities shift.</p>
+          <div class="pt-row"><span class="mono">KV-cache</span><div class="pt-track"><div class="pt-fill" id="pt-bar0"></div></div><span class="mono" id="pt-out0">0 GB</span></div>
+          <p class="mono" id="pt-note">Drag a slider to see the cache size change.</p>
           <script>(function(){
-          var LOGITS=[2.0,1.1,0.9,-1.0];
-          var temp=document.getElementById("pt-temp"), tval=document.getElementById("pt-tempval"), note=document.getElementById("pt-note");
-          var bars=[0,1,2,3].map(function(i){return document.getElementById("pt-bar"+i);});
-          var outs=[0,1,2,3].map(function(i){return document.getElementById("pt-out"+i);});
+          var SIZES=[{label:"1B",layers:16,heads:32,dim:2048},{label:"3B",layers:28,heads:32,dim:3072},{label:"7B",layers:32,heads:32,dim:4096},{label:"13B",layers:40,heads:40,dim:5120}];
+          var PRECS=[{label:"fp32",bytes:4},{label:"fp16",bytes:2},{label:"int8",bytes:1}];
+          var ctx=document.getElementById("pt-ctx"), ctxval=document.getElementById("pt-ctxval");
+          var size=document.getElementById("pt-size"), sizeval=document.getElementById("pt-sizeval");
+          var prec=document.getElementById("pt-prec"), precval=document.getElementById("pt-precval");
+          var bar=document.getElementById("pt-bar0"), out=document.getElementById("pt-out0"), note=document.getElementById("pt-note");
+          var MAXGB=48;
           function render(){
-            var T=parseInt(temp.value,10)/10;
-            tval.textContent=T.toFixed(1);
-            var scaled=LOGITS.map(function(x){return x/T;});
-            var m=Math.max.apply(null,scaled);
-            var exps=scaled.map(function(x){return Math.exp(x-m);});
-            var sum=exps.reduce(function(a,b){return a+b;},0);
-            var probs=exps.map(function(x){return x/sum;});
-            for(var i=0;i<4;i++){
-              var pct=probs[i]*100;
-              bars[i].style.width=pct+"%";
-              outs[i].textContent=pct.toFixed(1)+"%";
-            }
-            var desc = T<=0.3 ? "Low temperature: almost always picks the top-scoring token." : T>=1.5 ? "High temperature: choices are nearly a coin flip across all four." : "Middle ground: the top token is favored but the others stay reachable.";
-            note.textContent="T="+T.toFixed(1)+" — "+desc;
+            var tokens=parseInt(ctx.value,10);
+            var model=SIZES[parseInt(size.value,10)-1];
+            var p=PRECS[parseInt(prec.value,10)];
+            ctxval.textContent=tokens.toLocaleString();
+            sizeval.textContent=model.label;
+            precval.textContent=p.label;
+            var bytesPerToken=2*model.layers*model.dim*p.bytes;
+            var totalGB=(bytesPerToken*tokens)/(1024*1024*1024);
+            var pct=Math.min(100,(totalGB/MAXGB)*100);
+            bar.style.width=pct+"%";
+            out.textContent=totalGB.toFixed(2)+" GB";
+            var desc = totalGB<2 ? "Comfortably fits alongside the model weights on one consumer GPU." : totalGB<16 ? "Starting to compete with the model weights themselves for memory." : "Needs the kind of pooled, clustered memory this week's hardware news is chasing.";
+            note.textContent=desc;
           }
-          temp.addEventListener("input", render);
+          [ctx,size,prec].forEach(function(el){el.addEventListener("input", render);});
           render();
           })();</script>
         </div>
