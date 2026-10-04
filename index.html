@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-03T20:43:22">2026-10-03 20:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-04T01:41:07">2026-10-04 01:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Coding-agent supply-chain attacks are multiplying faster than agents can patch them</strong><p>A malicious git config ("GitSpawn"), a leaked-screenshot pipeline ("PixelLeak") and a critical GitLab AI Gateway RCE all surfaced within days, each exploiting a different trust boundary around coding agents. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Governments are moving from voluntary pledges to real legal liability for agents</strong><p>Days after tech leaders signed a voluntary "Super Intelligence" safety accord with the White House, senators introduced a bill exposing agent operators to hacking-law liability, and California barred employers from letting automated systems fire workers alone. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Trigger-based prompt injections are slipping past defenses tuned for obvious commands</strong><p>A new study found dormant "explosive prompts" that only fire on a chosen trigger bypassed nine production coding agents 43–83% of the time, versus about 3% for plain imperative injections. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Attacking production systems with AI agents is becoming a commercial service</strong><p>A single operator reportedly used open-source agent frameworks to steal over 600,000 payment-card records from 27 companies for about $25 a target, days after a GitLab AI Gateway RCE and a 13,000-screenshot leak showed the same agents creating their own new attack surface. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI oversight is consolidating into named offices and real legal exposure</strong><p>Trump is reported to be naming intelligence chief Jay Clayton as AI czar to run a new White House task force, the same week a bipartisan Senate bill would expose agent operators to hacking-law liability and regulators subpoenaed OpenAI over a sandbox breach. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Frontier labs keep competing on price-per-token as much as raw capability</strong><p>OpenAI's GPT-6.1 Sol and Google's Gemini 4 Argon both shipped within days of each other, each pitched on cost-efficiency or a narrow vetted-access rollout rather than a clean capability jump. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Record AI infrastructure spending and AI-blamed layoffs are happening at the same companies</strong><p>2026 tech layoffs were reported to have passed 225,000 with AI cited as the leading reason, even as the same firms guide tens of billions of dollars toward AI capital spending. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Small, typed "decision models" are emerging as a track separate from chat LLMs</strong><p>Cloudflare's new open-weight Clef and Clef-flash return scored probabilities instead of free text, and within a day Ollama and llama.cpp added a dedicated endpoint to run them locally alongside a desktop Nvidia DGX Spark built to cluster for bigger local models. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Even MCP skeptics are standardizing on the protocol</strong><p>Pi 1.0, built by a developer who once argued the Model Context Protocol was unnecessary, shipped MCP support and topped Hacker News days later, reinforcing MCP as the default way agents reach outside tools. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-03</span><span class="pill">Policy</span></div>
+          <div><h3>Trump is reported to be naming Director of National Intelligence Jay Clayton as White House AI czar, keeping his DNI role while leading a new "Super Intelligence Force" task force with 120 days to report on AI risks and federal oversight</h3>
+            <p class="why"><b>Why it matters:</b> putting one named official in charge of AI oversight is a concrete step toward a federal policy body, worth tracking alongside the liability bills moving the same week (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.axios.com/2026/10/02/trump-new-ai-czar-jay-clayton-dni">axios.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-03</span><span class="pill">Local</span></div>
           <div><h3>YouTuber PewDiePie's team was reported to be releasing Ajax, a 9-billion-parameter model fine-tuned from Alibaba's open-weight Qwen3.5-9B, though public download availability was unconfirmed at time of writing</h3>
@@ -414,6 +420,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Microsoft expanded GitHub Copilot with a natural-language app-and-dashboard builder called Code and a more autonomous, permission-configurable coworker called Autopilot, while IBM began offering a self-hostable version of its Bob coding agent for enterprises that need to keep code inside their own environment</h3>
             <p class="why"><b>Why it matters:</b> self-hostable, permission-scoped agents are becoming a selling point for regulated employers, worth knowing when you're picking which agent stack to learn (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-october-3-2026">aiagentsdirectory.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill sec">Security</span></div>
+          <div><h3>Security researchers reported that one attacker used three open-source AI agent frameworks running Claude, DeepSeek and GLM models to breach at least 27 online retailers and steal more than 600,000 unexpired payment-card records, installing checkout-page skimmers on over 100 sites for an estimated $12,000–$18,000 in total compute cost</h3>
+            <p class="why"><b>Why it matters:</b> it's reported evidence that agentic hacking has crossed into a cheap, repeatable criminal business model, not just a proof of concept (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://gambit.security/blog-posts/autonomous-ai-agents-online-retailers-25-a-company">gambit.security</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-02</span><span class="pill sec">Security</span></div>
@@ -458,40 +470,28 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://infoq.com/news/2026/10/openai-devday-2026">infoq.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Local</span></div>
+          <div><h3>Ollama 0.35.1 added a dedicated /v1/systemone endpoint for running Cloudflare's new open-weight Clef and Clef-flash "decision models" locally, and llama.cpp merged a matching typed-decision API the same day</h3>
+            <p class="why"><b>Why it matters:</b> a local runtime for models that return a scored decision instead of free text is a different, faster building block than a chat LLM for routing and gating logic inside an agent (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://github.com/ollama/ollama/releases/tag/v0.35.1">github.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Local</span></div>
+          <div><h3>Nvidia launched a 64GB configuration of its DGX Spark desktop AI computer at $4,999, which pairs with a second unit over a direct 200GbE link to pool to 128GB of unified memory, reportedly enough to run models up to roughly 200 billion parameters</h3>
+            <p class="why"><b>Why it matters:</b> clustering two desktop boxes instead of buying one bigger one is a concrete, priced example of how far local inference hardware now stretches (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://www.storagereview.com/news/nvidia-dgx-spark-64gb-october-23-4999-two-units-cluster-to-128gb">storagereview.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-01</span><span class="pill">Models</span></div>
           <div><h3>Google officially launched Gemini 4 Argon, its first new flagship since Gemini 3, rolling out a guardrail-free version first to government partners and vetted cybersecurity defenders through its Fairwind Program, where it can autonomously find, verify and patch software vulnerabilities</h3>
             <p class="why"><b>Why it matters:</b> it's a concrete example of a lab shipping its most capable, least-restricted build to a vetted few before the public, the same gated-access pattern spreading across frontier labs this week (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">blog.google</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Policy</span></div>
-          <div><h3>California Governor Gavin Newsom signed the "No Robo Bosses Act" among 13 AI bills, barring employers from relying solely on automated decision systems to discipline or fire workers without human corroboration and written notice, effective mid-2027</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete, first-in-the-nation constraint on exactly the kind of automated-decision pipeline a CS grad might be asked to build for an HR product (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.upi.com/Top_News/US/2026/10/01/california-artificial-intelligence/5411790881596">upi.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Policy</span></div>
-          <div><h3>Trump and the heads of Google, Anthropic, Meta, OpenAI, SpaceX and Nvidia signed a voluntary "Super Intelligence" accord promising internal safety controls, dedicated oversight teams and independent audits, alongside an executive order telling federal agencies to say "super intelligence" instead of "artificial intelligence"</h3>
-            <p class="why"><b>Why it matters:</b> it's a self-regulatory bet rather than binding law, so whether these pledges hold is worth tracking alongside the liability bills moving the same week (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.aljazeera.com/news/2026/9/29/trump-top-tech-firms-sign-accord-to-self-police-ai-development">aljazeera.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill sec">Security</span></div>
-          <div><h3>Researchers disclosed "GitSpawn," showing that a malicious .git/config setting such as core.fsmonitor can make Claude Code, Codex, Cursor and four other coding agents run attacker-chosen commands the moment they call git for context, before any sandbox or approval prompt applies</h3>
-            <p class="why"><b>Why it matters:</b> cloning an untrusted repository, not just opening a file, can be enough to get code execution out of your coding agent (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html">thehackernews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Research</span></div>
-          <div><h3>A research paper on "explosive prompts" found that dormant, trigger-based prompt injections bypassed nine production coding agents — including Codex, Gemini CLI, Claude Code, Cursor and GitHub Copilot — 43 to 83% of the time, far above the roughly 3% success rate of plain imperative injection attempts</h3>
-            <p class="why"><b>Why it matters:</b> an injected instruction that only fires on a chosen trigger is much harder for today's defenses to catch than an obvious command, which matters for anyone building retrieval or tool-using agents (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://arxiv.org/abs/2609.22510">arxiv.org</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
-          <div><h3>Tech layoffs were reported to have topped 225,000 for 2026, with companies increasingly citing AI as the reason even as they pour record capital into AI infrastructure — Oracle widened its restructuring to nearly $2.8 billion and TikTok cut roughly 250 jobs while closing its Nashville office</h3>
-            <p class="why"><b>Why it matters:</b> "AI replaces jobs" and "we're spending billions building AI" are happening at the same employers at once, worth factoring into any job search right now (<a href="#projects">Projects</a>).</p>
-            <p class="src"><a href="https://startupfortune.com/tech-layoffs-top-225000-in-2026-as-companies-blame-the-same-ai-theyre-funding/">startupfortune.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Open models</span></div>
+          <div><h3>Cloudflare released Clef and Clef-flash, open-weight "decision models" built on a Qwen backbone that return typed, scored probabilities for a fixed question instead of generating free text, licensed Apache 2.0 and downloadable from Hugging Face</h3>
+            <p class="why"><b>Why it matters:</b> a model family built for fast routing and classification decisions, not conversation, is a different tool than a chat LLM for the gating logic inside an agent pipeline (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/">marktechpost.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,32 +674,41 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory, lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding -->
-        <div class="pgcard pgtopic" data-topic="speculative-decoding">
-          <span class="label">New this refresh · 2026-10-03 · connects to <a href="#L4">L4</a></span>
-          <h3>Speculative decoding: how many tokens per expensive step?</h3>
-          <p class="lede">A small, fast "draft" model guesses several tokens ahead; the big model checks them in one pass and keeps whatever prefix matches what it would have generated anyway. Drag the draft length and the guess-acceptance rate to see the expected tokens produced per costly forward pass. Simplified: assumes each drafted token is accepted independently at the same rate and ignores the draft model's own compute cost — real speedups are smaller once that overhead counts.</p>
+        <!-- HISTORY: lora-rank-tradeoff, mixture-of-experts-routing, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature">
+          <span class="label">New this refresh · 2026-10-04 · connects to <a href="#L4">L4</a></span>
+          <h3>Softmax temperature: how "sure" should a model sound?</h3>
+          <p class="lede">Four next-token candidates have fixed scores (logits) from a toy model. Dragging temperature rescales those scores before softmax turns them into probabilities: low temperature sharpens the pick toward the top score, high temperature flattens the choices toward a coin flip. This is the same softmax math behind Cloudflare's new Clef decision models in this run's feed, which return a scored probability instead of free text. Simplified: a real model chooses among tens of thousands of tokens, not four, and this skips the top-k/top-p truncation usually layered on top.</p>
           <div class="pt-ctl">
-            <label>Draft length K <input type="range" id="pt-k" min="1" max="8" step="1" value="4"></label><span class="mono" id="pt-kval">4</span>
-            <label>Acceptance rate <input type="range" id="pt-p" min="0" max="100" step="5" value="70"></label><span class="mono" id="pt-pval">70%</span>
+            <label>Temperature <input type="range" id="pt-temp" min="1" max="20" step="1" value="10"></label><span class="mono" id="pt-tempval">1.0</span>
           </div>
-          <div class="pt-row"><span class="mono">Tokens/step</span><div class="pt-track"><div class="pt-fill" id="pt-bar"></div></div><span class="mono" id="pt-out">0.0×</span></div>
-          <p class="mono" id="pt-note">Drag a slider to see the toy estimate.</p>
+          <div class="pt-row"><span class="mono">"gradient"</span><div class="pt-track"><div class="pt-fill" id="pt-bar0"></div></div><span class="mono" id="pt-out0">0%</span></div>
+          <div class="pt-row"><span class="mono">"descent"</span><div class="pt-track"><div class="pt-fill" id="pt-bar1"></div></div><span class="mono" id="pt-out1">0%</span></div>
+          <div class="pt-row"><span class="mono">"ascent"</span><div class="pt-track"><div class="pt-fill" id="pt-bar2"></div></div><span class="mono" id="pt-out2">0%</span></div>
+          <div class="pt-row"><span class="mono">"banana"</span><div class="pt-track"><div class="pt-fill" id="pt-bar3"></div></div><span class="mono" id="pt-out3">0%</span></div>
+          <p class="mono" id="pt-note">Drag the slider to see probabilities shift.</p>
           <script>(function(){
-          var k=document.getElementById("pt-k"), p=document.getElementById("pt-p");
-          var kval=document.getElementById("pt-kval"), pval=document.getElementById("pt-pval");
-          var bar=document.getElementById("pt-bar"), out=document.getElementById("pt-out"), note=document.getElementById("pt-note");
+          var LOGITS=[2.0,1.1,0.9,-1.0];
+          var temp=document.getElementById("pt-temp"), tval=document.getElementById("pt-tempval"), note=document.getElementById("pt-note");
+          var bars=[0,1,2,3].map(function(i){return document.getElementById("pt-bar"+i);});
+          var outs=[0,1,2,3].map(function(i){return document.getElementById("pt-out"+i);});
           function render(){
-            var K=parseInt(k.value,10), pr=parseInt(p.value,10)/100;
-            kval.textContent=K; pval.textContent=p.value+"%";
-            var tokens = pr>=1 ? (K+1) : (1-Math.pow(pr,K+1))/(1-pr);
-            var pct = Math.min(100,(tokens/(K+1))*100);
-            bar.style.width=pct+"%";
-            out.textContent=tokens.toFixed(2)+"×";
-            note.textContent="With K="+K+" drafted tokens and a "+p.value+"% per-token acceptance rate, one big-model forward pass yields about "+tokens.toFixed(2)+" tokens on average (toy formula; max possible here is "+(K+1)+"×).";
+            var T=parseInt(temp.value,10)/10;
+            tval.textContent=T.toFixed(1);
+            var scaled=LOGITS.map(function(x){return x/T;});
+            var m=Math.max.apply(null,scaled);
+            var exps=scaled.map(function(x){return Math.exp(x-m);});
+            var sum=exps.reduce(function(a,b){return a+b;},0);
+            var probs=exps.map(function(x){return x/sum;});
+            for(var i=0;i<4;i++){
+              var pct=probs[i]*100;
+              bars[i].style.width=pct+"%";
+              outs[i].textContent=pct.toFixed(1)+"%";
+            }
+            var desc = T<=0.3 ? "Low temperature: almost always picks the top-scoring token." : T>=1.5 ? "High temperature: choices are nearly a coin flip across all four." : "Middle ground: the top token is favored but the others stay reachable.";
+            note.textContent="T="+T.toFixed(1)+" — "+desc;
           }
-          k.addEventListener("input", render);
-          p.addEventListener("input", render);
+          temp.addEventListener("input", render);
           render();
           })();</script>
         </div>
