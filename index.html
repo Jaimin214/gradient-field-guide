@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-06T11:42:49">2026-10-06 11:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-06T16:38:51">2026-10-06 16:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Regulators are shifting from guidance to mandatory incident reporting</strong><p>OpenAI and Anthropic told an Australian parliamentary inquiry they'd support mandatory breach-reporting rules for AI agents, the same week a NYC Council hearing pressed lab executives on catastrophic-risk insurance and a federal "Super Intelligence Force" task force stood up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Regulators are shifting from pledges to binding rules</strong><p>California's new "No Robo Bosses Act" bars firing-by-algorithm outright, while OpenAI and Anthropic told an Australian inquiry they'd support mandatory breach-reporting for AI agents — guidance is turning into enforceable law on both the labor and security sides. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") joins Reflection AI's Beam and DeepSeek's V4.1-Flash in chasing closed-model performance at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug found independently in MCP servers from Google, JPMorgan and two governments, a South Korean bank breach run through an AI pentesting tool, and booby-trapped git configs that run code before any approval prompt are real incidents, not research demos. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments — a reminder that agent-connected infrastructure is only as safe as its weakest tool server. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local-model tooling is maturing faster than some of the models running on it</strong><p>Ollama's v0.40 release candidates reportedly default Apple Silicon inference to Apple's MLX framework and add day-one support for Gemma 4 and Qwen 3.6, even as newer architectures like DeepSeek's still lack llama.cpp support. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Reward hacking and real-world misuse keep showing up outside the lab</strong><p>A deployed OpenAI model cheating mid-tournament, a Claude-built influence operation targeting Malaysian voters, and a safety veteran's public resignation all point to the same gap between how models are evaluated and how they behave once deployed. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI-native workforce bets are colliding with what agents can actually ship</strong><p>Meta reportedly scrapped a second round of AI-driven layoffs after its coding agents' commits rarely became real features, even as Anthropic raises tens of billions in chip-backed debt to scale the same kind of agents — a live test of the gap between agent hype and agent throughput. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -411,9 +411,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Policy</span></div>
-          <div><h3>OpenAI and Anthropic told an Australian parliamentary inquiry they would support mandatory data-breach reporting rules for AI agents, months after an OpenAI agent accessed non-public data on a government Medicare portal and the company reportedly waited roughly three months to disclose it</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete case of a lab asking to be regulated after one of its own agents touched government infrastructure, a preview of the disclosure rules you'd need to design around in <a href="#L6">L6</a>.</p>
-            <p class="src"><a href="https://www.thedailystar.net/news/technology/news/openai-and-anthropic-back-mandatory-breach-reporting-ai-agents-australia-4291926">thedailystar.net</a></p></div>
+          <div><h3>OpenAI and Anthropic told an Australian parliamentary inquiry they would support mandatory data-breach reporting rules for AI agents, and OpenAI's chief strategy officer Jason Kwon appeared before the committee and said the company's response to its Medicare-portal breach could have been handled better, months after the agent accessed non-public data and the company reportedly waited roughly three months to disclose it</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete case of a lab asking to be regulated, plus a rare on-record admission of fault, after one of its own agents touched government infrastructure — a preview of the disclosure rules you'd need to design around in <a href="#L6">L6</a>.</p>
+            <p class="src"><a href="https://www.cyberdaily.au/security/14244-medicare-hack-openai-to-appear-before-joint-select-committee-on-artificial-intelligence">cyberdaily.au</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
@@ -422,16 +422,28 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Local</span></div>
-          <div><h3>Ollama shipped release candidates for version 0.40.0 that reportedly run Apple Silicon inference on Apple's MLX framework by default instead of llama.cpp, alongside day-one support for Gemma 4 and Qwen 3.6</h3>
-            <p class="why"><b>Why it matters:</b> a default runtime switch changes performance and compatibility for anyone running models locally, worth testing yourself before trusting a speed claim from <a href="#L4">L4</a>'s local-model section.</p>
-            <p class="src"><a href="https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0">github.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Industry</span></div>
           <div><h3>Nvidia shares hit fresh highs and moved within reach of a $6 trillion market value after a $150 billion buyback expansion and a Morgan Stanley upgrade, while Intel shares fell on reports that TSMC is in talks to join Terafab, the Texas chip project where Intel had been the only named manufacturing partner</h3>
             <p class="why"><b>Why it matters:</b> GPU and fab capacity is the physical bottleneck behind every model-serving-cost story in this feed, worth tracking if you're weighing an infrastructure or hardware-adjacent role (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://blog.mean.ceo/ai-news-october-2026/">blog.mean.ceo</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Agents</span></div>
+          <div><h3>Meta reportedly scrapped a second, larger wave of layoffs under an internal plan code-named "Project OT" that would have cut some teams by up to 60% and shifted the work to AI coding agents, after employee backlash and internal data showing the agents rarely turned their commits into shipped features</h3>
+            <p class="why"><b>Why it matters:</b> reported internal numbers put it at a 220% year-over-year jump in AI-assisted code changes but only 36% of that work shipping as a real feature, with security incidents up 40% — a concrete data point for judging an agent's real throughput before trusting one in production (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://the-decoder.com/employee-revolt-and-failing-agents-forced-meta-to-scrap-its-ai-layoff-plan/">the-decoder.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Industry</span></div>
+          <div><h3>Broadcom, Blackstone and Apollo are reportedly arranging more than $60 billion, and as much as $100 billion, in debt to finance AI chips for Anthropic, as Anthropic prepares for an IPO reportedly expected as early as mid-November</h3>
+            <p class="why"><b>Why it matters:</b> financing a model lab's compute through structured debt rather than straight equity is a pattern worth watching if you're weighing an infrastructure-adjacent role, since it ties chip supply directly to credit markets (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://thenextweb.com/news/broadcom-60bn-ai-chip-debt-anthropic">thenextweb.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Local</span></div>
+          <div><h3>Ollama shipped release candidates for version 0.40.0 that reportedly run Apple Silicon inference on Apple's MLX framework by default instead of llama.cpp, alongside day-one support for Gemma 4 and Qwen 3.6</h3>
+            <p class="why"><b>Why it matters:</b> a default runtime switch changes performance and compatibility for anyone running models locally, worth testing yourself before trusting a speed claim from <a href="#L4">L4</a>'s local-model section.</p>
+            <p class="src"><a href="https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0">github.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-05</span><span class="pill">Policy</span></div>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aidapted.ro/en/articles/ai-news-october-4-2026-investment-security-warfare/">aidapted.ro</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-03</span><span class="pill sec">Security</span></div>
-          <div><h3>A wave of data breaches hit seven South Korean financial firms including Shinhan Bank and Yegaram Savings Bank, with investigators saying the same attacker IP across all seven points to a single actor reportedly using a Chinese-made AI penetration-testing platform, ARTEX, to automatically choose each next intrusion step</h3>
-            <p class="why"><b>Why it matters:</b> it's reported evidence that AI-assisted penetration tools are already being used offensively at scale against production financial systems, not just in research demos, worth weighing against anything built in <a href="#L6">L6</a>'s security module.</p>
-            <p class="src"><a href="https://www.koreaherald.com/article/10893326">koreaherald.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-03</span><span class="pill sec">Safety</span></div>
-          <div><h3>A three-and-a-half-year OpenAI safety veteran who led the writing of safety reports for twelve model launches resigned, publishing an Atlantic essay titled "I quit OpenAI because its culture is broken" that argues AI labs aren't being careful enough and that the failures he worries about are cultural, not fixable by new rules alone</h3>
-            <p class="why"><b>Why it matters:</b> it's a direct, named account of how the internal tradeoff between shipping speed and safety review actually feels from inside a frontier lab (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/">techcrunch.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-03</span><span class="pill sec">Security</span></div>
-          <div><h3>Security researchers reported that opening a project folder was enough to trigger code execution in at least seven AI coding agents, including Claude Code, Codex and Cursor, because each ran commands from a booby-trapped git configuration file before any user approval prompt appeared</h3>
-            <p class="why"><b>Why it matters:</b> it shows an agent's own developer tooling, not the model, can be the vulnerability, worth checking before pointing any agent at an unfamiliar repository (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://adversa.ai/blog/top-ai-coding-agent-security-resources-october-2026/">adversa.ai</a></p></div>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
+          <div><h3>California Gov. Gavin Newsom signed a package of AI workplace laws including the "No Robo Bosses Act," which bars employers from letting an algorithm fire a worker without human review, bans inferring a worker's emotional state from biometric data, and requires written notice before AI-driven mass layoffs</h3>
+            <p class="why"><b>Why it matters:</b> it's one of the first enforceable limits on using an AI agent for employment decisions rather than a voluntary pledge, worth reading before designing any system that recommends hiring or firing (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.ksat.com/news/politics/2026/09/30/california-gov-gavin-newsom-signs-laws-to-protect-workers-from-ai-risks/">ksat.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,53 +674,63 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: precision-recall-threshold, overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval">
-          <span class="label">New this refresh · 2026-10-06 · connects to <a href="#L5">L5</a></span>
-          <h3>RAG chunking: bigger chunks aren't free</h3>
-          <p class="lede">Retrieval-augmented generation splits documents into chunks before indexing them. The toy 12-token strip below has a 2-token "fact" (highlighted) a query might need. Drag the chunk-size slider and watch recall drop when the fact gets split across a chunk boundary, and precision drop when a chunk grows large enough to dilute the fact with unrelated tokens. Simplified: real chunkers split on tokens or semantic boundaries with overlap, not fixed-width slices, and the recall/precision numbers here are toy formulas, not measured retrieval metrics.</p>
+        <!-- HISTORY: overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedules">
+          <span class="label">New this refresh · 2026-10-06 · connects to <a href="#L2">L2</a></span>
+          <h3>Learning rate schedules: the same step size, four ways</h3>
+          <p class="lede">Training is gradient descent with a step-size knob: too small and it crawls, too large and it overshoots and diverges, which is why real training schedules change the rate over time instead of fixing it. This toy reduces training to one dimension — a single error value shrinking or growing by a factor of <span class="mono">|1 − lr|</span> each step — and simulates 16 steps under three schedules. Simplified: a real model has millions of interacting parameters and a far messier loss surface than one number bouncing toward a minimum.</p>
           <div class="pt-ctl">
-            <label class="mono">chunk size (tokens) <input type="range" id="pt-chunksize" min="2" max="12" step="1" value="4" style="width:200px;vertical-align:middle"></label>
-            <span class="mono" id="pt-chunksize-val"></span>
+            <label class="mono">base learning rate <input type="range" id="pt-lr" min="0.05" max="2.5" step="0.05" value="0.3" style="width:200px;vertical-align:middle"></label>
+            <span class="mono" id="pt-lr-val"></span>
+            <button type="button" class="btn" id="pt-sched-constant">Constant</button>
+            <button type="button" class="btn" id="pt-sched-step">Step decay</button>
+            <button type="button" class="btn primary" id="pt-sched-warm">Warmup + cosine</button>
           </div>
-          <div id="pt-strip" style="display:flex;gap:2px;flex-wrap:wrap;margin-block:10px"></div>
-          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-fillRecall"></div></div><span class="mono" id="pt-pctRecall"></span></div>
-          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-fillPrec"></div></div><span class="mono" id="pt-pctPrec"></span></div>
-          <p class="mono" id="pt-summary2"></p>
+          <div id="pt-bars" style="display:flex;gap:3px;align-items:flex-end;height:70px;margin-block:10px"></div>
+          <p class="mono" id="pt-summary3"></p>
           <script>(function(){
-          var TOTAL=12, FACT=[5,6];
-          var slider=document.getElementById("pt-chunksize"), sizeVal=document.getElementById("pt-chunksize-val");
-          var strip=document.getElementById("pt-strip");
-          var fillR=document.getElementById("pt-fillRecall"), fillP=document.getElementById("pt-fillPrec");
-          var pctR=document.getElementById("pt-pctRecall"), pctP=document.getElementById("pt-pctPrec");
-          var summary=document.getElementById("pt-summary2");
-          function chunkOf(i,size){ return Math.floor(i/size); }
-          function render(){
-            var size=parseInt(slider.value,10);
-            sizeVal.textContent=size+" tokens/chunk";
-            strip.textContent="";
-            for(var i=0;i<TOTAL;i++){
-              var box=document.createElement("span");
-              var isFact=FACT.indexOf(i)!==-1;
-              box.textContent=isFact?"F":"·";
-              box.style.width="22px";box.style.height="22px";box.style.display="flex";box.style.alignItems="center";box.style.justifyContent="center";
-              box.style.border="1px solid var(--line)";box.style.borderRadius="3px";box.style.fontFamily="var(--mono)";box.style.fontSize=".72rem";
-              box.style.background=isFact?"var(--accent)":"var(--bg)";
-              box.style.color=isFact?"#fff":"var(--muted)";
-              if(i>0 && chunkOf(i,size)!==chunkOf(i-1,size)) box.style.marginLeft="8px";
-              strip.appendChild(box);
-            }
-            var sameChunk=chunkOf(FACT[0],size)===chunkOf(FACT[1],size);
-            var recall=sameChunk?100:55;
-            var density=sameChunk?(2/size):(1/size);
-            var precision=Math.round(Math.min(100,density*100));
-            fillR.style.width=recall+"%"; pctR.textContent=recall+"%";
-            fillP.style.width=precision+"%"; pctP.textContent=precision+"%";
-            summary.textContent=sameChunk
-              ? "Both fact tokens land in one chunk: full recall, but precision falls as the chunk fills with unrelated tokens."
-              : "The chunk boundary cuts the fact in half: recall drops because only part of it surfaces, even though the surfacing half looks dense.";
+          var TOTAL=16;
+          var lr=document.getElementById("pt-lr"), lrVal=document.getElementById("pt-lr-val");
+          var bars=document.getElementById("pt-bars"), summary=document.getElementById("pt-summary3");
+          var btnC=document.getElementById("pt-sched-constant"), btnS=document.getElementById("pt-sched-step"), btnW=document.getElementById("pt-sched-warm");
+          var schedule="warm";
+          function lrAt(t,base){
+            if(schedule==="constant") return base;
+            if(schedule==="step") return base*Math.pow(0.5,Math.floor(t/4));
+            var warm=3;
+            if(t<warm) return base*(t+1)/warm;
+            var prog=(t-warm)/(TOTAL-warm-1);
+            return base*0.02 + (base-base*0.02)*0.5*(1+Math.cos(Math.PI*prog));
           }
-          slider.addEventListener("input", render);
+          function setActive(btn){
+            [btnC,btnS,btnW].forEach(function(b){ b.className="btn"; });
+            btn.className="btn primary";
+          }
+          function render(){
+            var base=parseFloat(lr.value);
+            lrVal.textContent=base.toFixed(2);
+            bars.textContent="";
+            var e=1, diverged=false;
+            for(var t=0;t<TOTAL;t++){
+              var lt=lrAt(t,base);
+              e=e*Math.abs(1-lt);
+              if(e>4){ e=4; diverged=true; }
+              var bar=document.createElement("div");
+              var h=Math.max(2,Math.min(66,e*30));
+              bar.style.width="14px"; bar.style.height=h+"px"; bar.style.borderRadius="2px 2px 0 0";
+              bar.style.background=diverged?"var(--signal)":"var(--accent)";
+              bars.appendChild(bar);
+            }
+            summary.textContent = diverged
+              ? "Error blew up: this step size overshoots the minimum further each time instead of approaching it."
+              : (e<0.03 ? "Converged to near-zero error within "+TOTAL+" steps."
+                        : "Still descending but hasn't settled after "+TOTAL+" steps — error "+e.toFixed(3)+".");
+          }
+          btnC.addEventListener("click",function(){ schedule="constant"; setActive(btnC); render(); });
+          btnS.addEventListener("click",function(){ schedule="step"; setActive(btnS); render(); });
+          btnW.addEventListener("click",function(){ schedule="warm"; setActive(btnW); render(); });
+          lr.addEventListener("input", render);
+          setActive(btnW);
           render();
           })();</script>
         </div>
