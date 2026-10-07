@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-06T20:42:26">2026-10-06 20:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-07T01:43:22">2026-10-07 01:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -399,10 +399,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Regulators are shifting from pledges to binding rules</strong><p>California's new "No Robo Bosses Act" bars firing-by-algorithm outright, while OpenAI and Anthropic told an Australian inquiry they'd support mandatory breach-reporting for AI agents — guidance is turning into enforceable law on both the labor and security sides. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") joins Reflection AI's Beam and DeepSeek's V4.1-Flash in chasing closed-model performance at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments — a reminder that agent-connected infrastructure is only as safe as its weakest tool server. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local-model tooling is maturing faster than some of the models running on it</strong><p>Ollama's v0.40 release candidates reportedly default Apple Silicon inference to Apple's MLX framework and add day-one support for Gemma 4 and Qwen 3.6, even as newer architectures like DeepSeek's still lack llama.cpp support. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local AI is becoming a hardware feature, not just a software choice</strong><p>Ollama's v0.40 release candidates reportedly default Apple Silicon inference to Apple's MLX framework, and Microsoft and Nvidia used an October 7 Windows event to pitch an on-device RTX Spark chip as a new baseline for running models locally instead of in the cloud. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>AI-native workforce bets are colliding with what agents can actually ship</strong><p>Meta reportedly scrapped a second round of AI-driven layoffs after its coding agents' commits rarely became real features, even as Anthropic raises tens of billions in chip-backed debt to scale the same kind of agents — a live test of the gap between agent hype and agent throughput. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Local</span></div>
+          <div><h3>Microsoft and Nvidia held a Windows and Surface event on October 7 built around on-device AI, with Nvidia's new RTX Spark chip powering a Surface Laptop Ultra and a Surface RTX Spark Dev Box, and CEOs Satya Nadella and Jensen Huang appearing together on stage</h3>
+            <p class="why"><b>Why it matters:</b> dedicated silicon for running models on the device itself is the hardware counterpart to the quantization and local-serving material in <a href="#L4">L4</a> — worth comparing against what a consumer GPU can already do.</p>
+            <p class="src"><a href="https://windowscentral.com/microsoft/windows-11/microsoft-surface-event-announced-for-october-7-heres-everything-we-know-so-far">windowscentral.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Research</span></div>
+          <div><h3>A reported NYU-affiliated study found that chain-of-thought explanations from several mid-sized open models matched the model's actual internal computation only 44.8% to 75.9% of the time, depending on the task</h3>
+            <p class="why"><b>Why it matters:</b> a reasoning trace that reads clearly isn't proof a model actually used that reasoning — worth keeping in mind before trusting an agent's stated rationale, a theme <a href="#L7">L7</a>'s interpretability work keeps running into.</p>
+            <p class="src"><a href="https://aiweekly.co/alerts/nyu-llm-chain-of-thought-448759-faithful-across-tasks">aiweekly.co</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Policy</span></div>
           <div><h3>OpenAI said it will add visible watermarks to text generated by ChatGPT to comply with EU transparency rules, while separately piloting image-based advertisements inside ChatGPT conversations</h3>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic disclosed it disrupted a commercial "influence-as-a-service" platform, reportedly built on Claude, that an Istanbul-based firm used to profile Malaysian voters across all 222 parliamentary constituencies and run roughly 1,000 fake social accounts plus a fabricated news outlet</h3>
             <p class="why"><b>Why it matters:</b> it's a concrete example of a frontier lab finding and shutting down real misuse of its own model rather than a hypothetical, worth reading alongside any project that touches user-generated content (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.scmp.com/week-asia/politics/article/3367440/how-ai-plot-targeted-malaysias-elections-and-exposed-deep-data-risks">scmp.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-04</span><span class="pill">Policy</span></div>
-          <div><h3>The Trump administration's new "Super Intelligence Force" task force formally launched, reportedly staffed with leaders from the intelligence community, the Pentagon, the FTC and the Office of Personnel Management alongside newly named AI czar Jay Clayton</h3>
-            <p class="why"><b>Why it matters:</b> it's the clearest sign yet that federal AI oversight is becoming a standing cross-agency body rather than a single appointee, worth tracking alongside the city-level hearings moving the same week (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://aidapted.ro/en/articles/ai-news-october-4-2026-investment-security-warfare/">aidapted.ro</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-01</span><span class="pill sec">Safety</span></div>
-          <div><h3>OpenAI fired three safety-team researchers — Jasmine Wang, Tomek Korbak and Mikita Balesni — after an internal investigation found they had shared sensitive company information, reportedly touching on infrastructure details, with an outside AI-safety organization outside approved channels</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete collision between a frontier lab's confidentiality rules and its own internal safety researchers, worth weighing against the whistleblower-protection questions that come up around agent governance in <a href="#L6">L6</a>.</p>
-            <p class="src"><a href="https://www.thestar.com.my/tech/tech-news/2026/10/02/openai-says-three-staffers-fired-for-mishandling-039sensitive039-info">thestar.com.my</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,44 +674,42 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold">
-          <span class="label">New this refresh · 2026-10-06 · connects to <a href="#L1">L1</a></span>
-          <h3>Precision vs. recall: sliding the decision threshold</h3>
-          <p class="lede">A classifier doesn't output "spam" or "not spam" — it outputs a score, and something has to decide where "yes" starts. Drag the threshold and watch precision and recall pull in opposite directions over a fixed set of 20 scored examples per class. Simplified: a real evaluation set has thousands of examples with messier, more overlapping score distributions than these 40 fixed numbers.</p>
+        <!-- HISTORY: agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size -->
+        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size">
+          <span class="label">New this refresh · 2026-10-07 · connects to <a href="#L1">L1</a></span>
+          <h3>Overfitting vs. model size: the U-shaped test curve</h3>
+          <p class="lede">Slide through twelve toy model sizes and watch training error fall the whole way while test error dips, bottoms out, then climbs back up. Simplified: real training/test curves are noisier and the "best size" shifts with how much data and regularization you have — these 12 numbers are illustrative, not a benchmark result.</p>
           <div class="pt-ctl">
-            <label class="mono">decision threshold <input type="range" id="pt-thresh" min="0" max="1" step="0.01" value="0.5" style="width:200px;vertical-align:middle"></label>
-            <span class="mono" id="pt-thresh-val"></span>
+            <label class="mono">model size <input type="range" id="pt-size" min="0" max="11" step="1" value="0" style="width:200px;vertical-align:middle"></label>
+            <span class="mono" id="pt-size-val"></span>
           </div>
-          <div class="pt-row"><span class="mono">True positives</span><div class="pt-track"><div class="pt-fill" id="pt-fill-tp" style="background:var(--good)"></div></div><span class="mono" id="pt-n-tp"></span></div>
-          <div class="pt-row"><span class="mono">False positives</span><div class="pt-track"><div class="pt-fill" id="pt-fill-fp" style="background:var(--signal)"></div></div><span class="mono" id="pt-n-fp"></span></div>
-          <div class="pt-row"><span class="mono">False negatives</span><div class="pt-track"><div class="pt-fill" id="pt-fill-fn" style="background:var(--signal)"></div></div><span class="mono" id="pt-n-fn"></span></div>
-          <p class="mono" id="pt-summary4"></p>
+          <div class="pt-row"><span class="mono">Train error</span><div class="pt-track"><div class="pt-fill" id="pt-fill-train" style="background:var(--accent)"></div></div><span class="mono" id="pt-n-train"></span></div>
+          <div class="pt-row"><span class="mono">Test error</span><div class="pt-track"><div class="pt-fill" id="pt-fill-test" style="background:var(--signal)"></div></div><span class="mono" id="pt-n-test"></span></div>
+          <p class="mono" id="pt-summary5"></p>
           <script>(function(){
-          var pos=[0.95,0.91,0.88,0.86,0.83,0.81,0.78,0.75,0.72,0.69,0.66,0.63,0.59,0.55,0.51,0.47,0.42,0.37,0.3,0.22];
-          var neg=[0.78,0.7,0.64,0.6,0.55,0.5,0.46,0.43,0.4,0.37,0.34,0.31,0.28,0.25,0.21,0.18,0.14,0.1,0.06,0.03];
-          var thresh=document.getElementById("pt-thresh"), tv=document.getElementById("pt-thresh-val");
-          var fillTp=document.getElementById("pt-fill-tp"), fillFp=document.getElementById("pt-fill-fp"), fillFn=document.getElementById("pt-fill-fn");
-          var nTp=document.getElementById("pt-n-tp"), nFp=document.getElementById("pt-n-fp"), nFn=document.getElementById("pt-n-fn");
-          var summary=document.getElementById("pt-summary4");
+          var sizes=[1,2,4,8,16,32,64,128,256,512,1024,2048];
+          var trainErr=[38,34,29,24,19,14,10,7,5,3,2,1];
+          var testErr=[40,33,27,22,18,15,13,12,13,16,21,29];
+          var slider=document.getElementById("pt-size"), sv=document.getElementById("pt-size-val");
+          var fillTrain=document.getElementById("pt-fill-train"), fillTest=document.getElementById("pt-fill-test");
+          var nTrain=document.getElementById("pt-n-train"), nTest=document.getElementById("pt-n-test");
+          var summary=document.getElementById("pt-summary5");
+          var maxErr=40, best=0;
+          for(var j=1;j<testErr.length;j++){ if(testErr[j]<testErr[best]) best=j; }
           function render(){
-            var t=parseFloat(thresh.value);
-            tv.textContent=t.toFixed(2);
-            var tp=pos.filter(function(s){ return s>=t; }).length;
-            var fn=pos.length-tp;
-            var fp=neg.filter(function(s){ return s>=t; }).length;
-            fillTp.style.width=(tp/pos.length*100)+"%";
-            fillFp.style.width=(fp/neg.length*100)+"%";
-            fillFn.style.width=(fn/pos.length*100)+"%";
-            nTp.textContent=tp+"/"+pos.length;
-            nFp.textContent=fp+"/"+neg.length;
-            nFn.textContent=fn+"/"+pos.length;
-            var precision=(tp+fp)>0 ? tp/(tp+fp) : 1;
-            var recall=tp/pos.length;
-            var f1=(precision+recall)>0 ? 2*precision*recall/(precision+recall) : 0;
-            summary.textContent="Precision "+(precision*100).toFixed(0)+"% · Recall "+(recall*100).toFixed(0)+"% · F1 "+(f1*100).toFixed(0)+"%";
+            var i=parseInt(slider.value,10);
+            sv.textContent=sizes[i]+" toy params";
+            fillTrain.style.width=(trainErr[i]/maxErr*100)+"%";
+            fillTest.style.width=(testErr[i]/maxErr*100)+"%";
+            nTrain.textContent=trainErr[i]+"%";
+            nTest.textContent=testErr[i]+"%";
+            var msg;
+            if(i<best){ msg="Underfitting: both errors are still high — a bigger model should help here."; }
+            else if(i===best){ msg="Sweet spot: test error bottoms out around this size."; }
+            else { msg="Overfitting: training error keeps falling, but test error is climbing back up."; }
+            summary.textContent=msg;
           }
-          thresh.addEventListener("input", render);
+          slider.addEventListener("input", render);
           render();
           })();</script>
         </div>
