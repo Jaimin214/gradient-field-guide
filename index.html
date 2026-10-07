@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-06T16:38:51">2026-10-06 16:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-06T20:42:26">2026-10-06 20:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aidapted.ro/en/articles/ai-news-october-4-2026-investment-security-warfare/">aidapted.ro</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
-          <div><h3>California Gov. Gavin Newsom signed a package of AI workplace laws including the "No Robo Bosses Act," which bars employers from letting an algorithm fire a worker without human review, bans inferring a worker's emotional state from biometric data, and requires written notice before AI-driven mass layoffs</h3>
-            <p class="why"><b>Why it matters:</b> it's one of the first enforceable limits on using an AI agent for employment decisions rather than a voluntary pledge, worth reading before designing any system that recommends hiring or firing (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.ksat.com/news/politics/2026/09/30/california-gov-gavin-newsom-signs-laws-to-protect-workers-from-ai-risks/">ksat.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill sec">Safety</span></div>
+          <div><h3>OpenAI fired three safety-team researchers — Jasmine Wang, Tomek Korbak and Mikita Balesni — after an internal investigation found they had shared sensitive company information, reportedly touching on infrastructure details, with an outside AI-safety organization outside approved channels</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete collision between a frontier lab's confidentiality rules and its own internal safety researchers, worth weighing against the whistleblower-protection questions that come up around agent governance in <a href="#L6">L6</a>.</p>
+            <p class="src"><a href="https://www.thestar.com.my/tech/tech-news/2026/10/02/openai-says-three-staffers-fired-for-mishandling-039sensitive039-info">thestar.com.my</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,63 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules -->
-        <div class="pgcard pgtopic" data-topic="learning-rate-schedules">
-          <span class="label">New this refresh · 2026-10-06 · connects to <a href="#L2">L2</a></span>
-          <h3>Learning rate schedules: the same step size, four ways</h3>
-          <p class="lede">Training is gradient descent with a step-size knob: too small and it crawls, too large and it overshoots and diverges, which is why real training schedules change the rate over time instead of fixing it. This toy reduces training to one dimension — a single error value shrinking or growing by a factor of <span class="mono">|1 − lr|</span> each step — and simulates 16 steps under three schedules. Simplified: a real model has millions of interacting parameters and a far messier loss surface than one number bouncing toward a minimum.</p>
+        <!-- HISTORY: gradient-clipping, agent-worm-fanout, prompt-caching-savings, safeguard-bypass-layers, speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold -->
+        <div class="pgcard pgtopic" data-topic="precision-recall-threshold">
+          <span class="label">New this refresh · 2026-10-06 · connects to <a href="#L1">L1</a></span>
+          <h3>Precision vs. recall: sliding the decision threshold</h3>
+          <p class="lede">A classifier doesn't output "spam" or "not spam" — it outputs a score, and something has to decide where "yes" starts. Drag the threshold and watch precision and recall pull in opposite directions over a fixed set of 20 scored examples per class. Simplified: a real evaluation set has thousands of examples with messier, more overlapping score distributions than these 40 fixed numbers.</p>
           <div class="pt-ctl">
-            <label class="mono">base learning rate <input type="range" id="pt-lr" min="0.05" max="2.5" step="0.05" value="0.3" style="width:200px;vertical-align:middle"></label>
-            <span class="mono" id="pt-lr-val"></span>
-            <button type="button" class="btn" id="pt-sched-constant">Constant</button>
-            <button type="button" class="btn" id="pt-sched-step">Step decay</button>
-            <button type="button" class="btn primary" id="pt-sched-warm">Warmup + cosine</button>
+            <label class="mono">decision threshold <input type="range" id="pt-thresh" min="0" max="1" step="0.01" value="0.5" style="width:200px;vertical-align:middle"></label>
+            <span class="mono" id="pt-thresh-val"></span>
           </div>
-          <div id="pt-bars" style="display:flex;gap:3px;align-items:flex-end;height:70px;margin-block:10px"></div>
-          <p class="mono" id="pt-summary3"></p>
+          <div class="pt-row"><span class="mono">True positives</span><div class="pt-track"><div class="pt-fill" id="pt-fill-tp" style="background:var(--good)"></div></div><span class="mono" id="pt-n-tp"></span></div>
+          <div class="pt-row"><span class="mono">False positives</span><div class="pt-track"><div class="pt-fill" id="pt-fill-fp" style="background:var(--signal)"></div></div><span class="mono" id="pt-n-fp"></span></div>
+          <div class="pt-row"><span class="mono">False negatives</span><div class="pt-track"><div class="pt-fill" id="pt-fill-fn" style="background:var(--signal)"></div></div><span class="mono" id="pt-n-fn"></span></div>
+          <p class="mono" id="pt-summary4"></p>
           <script>(function(){
-          var TOTAL=16;
-          var lr=document.getElementById("pt-lr"), lrVal=document.getElementById("pt-lr-val");
-          var bars=document.getElementById("pt-bars"), summary=document.getElementById("pt-summary3");
-          var btnC=document.getElementById("pt-sched-constant"), btnS=document.getElementById("pt-sched-step"), btnW=document.getElementById("pt-sched-warm");
-          var schedule="warm";
-          function lrAt(t,base){
-            if(schedule==="constant") return base;
-            if(schedule==="step") return base*Math.pow(0.5,Math.floor(t/4));
-            var warm=3;
-            if(t<warm) return base*(t+1)/warm;
-            var prog=(t-warm)/(TOTAL-warm-1);
-            return base*0.02 + (base-base*0.02)*0.5*(1+Math.cos(Math.PI*prog));
-          }
-          function setActive(btn){
-            [btnC,btnS,btnW].forEach(function(b){ b.className="btn"; });
-            btn.className="btn primary";
-          }
+          var pos=[0.95,0.91,0.88,0.86,0.83,0.81,0.78,0.75,0.72,0.69,0.66,0.63,0.59,0.55,0.51,0.47,0.42,0.37,0.3,0.22];
+          var neg=[0.78,0.7,0.64,0.6,0.55,0.5,0.46,0.43,0.4,0.37,0.34,0.31,0.28,0.25,0.21,0.18,0.14,0.1,0.06,0.03];
+          var thresh=document.getElementById("pt-thresh"), tv=document.getElementById("pt-thresh-val");
+          var fillTp=document.getElementById("pt-fill-tp"), fillFp=document.getElementById("pt-fill-fp"), fillFn=document.getElementById("pt-fill-fn");
+          var nTp=document.getElementById("pt-n-tp"), nFp=document.getElementById("pt-n-fp"), nFn=document.getElementById("pt-n-fn");
+          var summary=document.getElementById("pt-summary4");
           function render(){
-            var base=parseFloat(lr.value);
-            lrVal.textContent=base.toFixed(2);
-            bars.textContent="";
-            var e=1, diverged=false;
-            for(var t=0;t<TOTAL;t++){
-              var lt=lrAt(t,base);
-              e=e*Math.abs(1-lt);
-              if(e>4){ e=4; diverged=true; }
-              var bar=document.createElement("div");
-              var h=Math.max(2,Math.min(66,e*30));
-              bar.style.width="14px"; bar.style.height=h+"px"; bar.style.borderRadius="2px 2px 0 0";
-              bar.style.background=diverged?"var(--signal)":"var(--accent)";
-              bars.appendChild(bar);
-            }
-            summary.textContent = diverged
-              ? "Error blew up: this step size overshoots the minimum further each time instead of approaching it."
-              : (e<0.03 ? "Converged to near-zero error within "+TOTAL+" steps."
-                        : "Still descending but hasn't settled after "+TOTAL+" steps — error "+e.toFixed(3)+".");
+            var t=parseFloat(thresh.value);
+            tv.textContent=t.toFixed(2);
+            var tp=pos.filter(function(s){ return s>=t; }).length;
+            var fn=pos.length-tp;
+            var fp=neg.filter(function(s){ return s>=t; }).length;
+            fillTp.style.width=(tp/pos.length*100)+"%";
+            fillFp.style.width=(fp/neg.length*100)+"%";
+            fillFn.style.width=(fn/pos.length*100)+"%";
+            nTp.textContent=tp+"/"+pos.length;
+            nFp.textContent=fp+"/"+neg.length;
+            nFn.textContent=fn+"/"+pos.length;
+            var precision=(tp+fp)>0 ? tp/(tp+fp) : 1;
+            var recall=tp/pos.length;
+            var f1=(precision+recall)>0 ? 2*precision*recall/(precision+recall) : 0;
+            summary.textContent="Precision "+(precision*100).toFixed(0)+"% · Recall "+(recall*100).toFixed(0)+"% · F1 "+(f1*100).toFixed(0)+"%";
           }
-          btnC.addEventListener("click",function(){ schedule="constant"; setActive(btnC); render(); });
-          btnS.addEventListener("click",function(){ schedule="step"; setActive(btnS); render(); });
-          btnW.addEventListener("click",function(){ schedule="warm"; setActive(btnW); render(); });
-          lr.addEventListener("input", render);
-          setActive(btnW);
+          thresh.addEventListener("input", render);
           render();
           })();</script>
         </div>
