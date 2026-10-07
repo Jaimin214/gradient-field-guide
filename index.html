@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-07T11:43:36">2026-10-07 11:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-07T16:44:00">2026-10-07 16:44</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Regulators are shifting from pledges to binding rules</strong><p>California's new "No Robo Bosses Act" bars firing-by-algorithm outright, while OpenAI and Anthropic told an Australian inquiry they'd support mandatory breach-reporting for AI agents — guidance is turning into enforceable law on both the labor and security sides. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") joins Reflection AI's Beam and DeepSeek's V4.1-Flash in chasing closed-model performance at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments, and independent researchers separately reported tracking an unidentified fleet of AI agents quietly probing Alibaba's Amap at scale — Nvidia's newly launched Open Agent Safety Platform, reportedly built with over 100 industry partners to quarantine rogue agents, shows the industry racing to catch up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Binding AI rules are arriving faster than voluntary pledges</strong><p>California's new "No Robo Bosses Act" bars firing-by-algorithm outright, and OpenAI and Anthropic told an Australian inquiry they'd support mandatory breach-reporting for AI agents — guidance is turning into enforceable law on both the labor and security sides. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") joins Reflection AI's Beam in chasing closed-model performance at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments, and a fleet of agents was separately caught probing Alibaba's Amap at scale — Nvidia's new Open Agent Safety Platform, pairing a sandbox runtime with a hardware watchdog that can quarantine a rogue agent within milliseconds, shows the industry racing to catch up. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local AI is becoming a hardware feature, not just a software choice</strong><p>Ollama's v0.40 release candidates reportedly default Apple Silicon inference to Apple's MLX framework, and Microsoft and Nvidia used an October 7 Windows event to pitch an on-device RTX Spark chip as a new baseline for running models locally instead of in the cloud. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>The AI capex supercycle keeps climbing even as its payoff is questioned</strong><p>Microsoft and Meta both raised already-enormous infrastructure spending in their latest earnings, even as Meta's own coding agents reportedly struggle to turn commits into shipped features and Anthropic raises chip-backed debt to scale the same kind of agents — a live test of the gap between spending and throughput. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>The AI capex supercycle keeps climbing even as its payoff is questioned</strong><p>Microsoft and Meta both raised already-enormous infrastructure spending in their latest earnings, even as Meta's own coding agents reportedly struggle to turn commits into shipped features — a live test of the gap between spending and throughput. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -440,12 +440,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Industry</span></div>
-          <div><h3>Nvidia shares hit fresh highs and moved within reach of a $6 trillion market value after a $150 billion buyback expansion and a Morgan Stanley upgrade, while Intel shares fell on reports that TSMC is in talks to join Terafab, the Texas chip project where Intel had been the only named manufacturing partner</h3>
-            <p class="why"><b>Why it matters:</b> GPU and fab capacity is the physical bottleneck behind every model-serving-cost story in this feed, worth tracking if you're weighing an infrastructure or hardware-adjacent role (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://blog.mean.ceo/ai-news-october-2026/">blog.mean.ceo</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Research</span></div>
           <div><h3>Startup Musubi released PolicyLM-1.7B, a small open-weight classifier that scores a piece of text against a moderation policy directly and returns a probability per category instead of generating a worded judgment</h3>
             <p class="why"><b>Why it matters:</b> a purpose-built classifier that returns a number per category is cheaper, faster and more auditable than asking a general chat model to grade content — worth weighing against an LLM-as-judge approach before you build an eval or moderation layer in <a href="#L5">L5</a>.</p>
@@ -462,12 +456,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Meta reportedly scrapped a second, larger wave of layoffs under an internal plan code-named "Project OT" that would have cut some teams by up to 60% and shifted the work to AI coding agents, after employee backlash and internal data showing the agents rarely turned their commits into shipped features</h3>
             <p class="why"><b>Why it matters:</b> reported internal numbers put it at a 220% year-over-year jump in AI-assisted code changes but only 36% of that work shipping as a real feature, with security incidents up 40% — a concrete data point for judging an agent's real throughput before trusting one in production (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://the-decoder.com/employee-revolt-and-failing-agents-forced-meta-to-scrap-its-ai-layoff-plan/">the-decoder.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Industry</span></div>
-          <div><h3>Broadcom, Blackstone and Apollo are reportedly arranging more than $60 billion, and as much as $100 billion, in debt to finance AI chips for Anthropic, as Anthropic prepares for an IPO reportedly expected as early as mid-November</h3>
-            <p class="why"><b>Why it matters:</b> financing a model lab's compute through structured debt rather than straight equity is a pattern worth watching if you're weighing an infrastructure-adjacent role, since it ties chip supply directly to credit markets (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://thenextweb.com/news/broadcom-60bn-ai-chip-debt-anthropic">thenextweb.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-05</span><span class="pill">Local</span></div>
@@ -492,6 +480,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Reflection AI unveiled Beam, a 501-billion-parameter open-weight mixture-of-experts model for coding and agentic tasks, trained in under four weeks on 6,144 Nvidia GB300 GPUs, with reported benchmark scores matching China's GLM-5.2 on reasoning while using three to four times less inference compute</h3>
             <p class="why"><b>Why it matters:</b> the weights aren't public yet so the efficiency claim is reported, not independently verified, but it's a useful case study in reading an efficiency benchmark skeptically before trusting it (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/">techcrunch.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
+          <div><h3>California Governor Gavin Newsom signed SB 947, the "No Robo Bosses Act," requiring a human to independently corroborate any AI-driven firing or discipline decision starting July 2027, alongside a companion law banning workplace AI tools from inferring or predicting an employee's emotional state</h3>
+            <p class="why"><b>Why it matters:</b> it's a concrete, binding example of employment law written specifically for automated decisions, worth knowing before building or deploying an agent that touches personnel decisions (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.techradar.com/pro/california-governor-gavin-newsom-signs-no-robo-bosses-act-so-an-ai-can-no-longer-fire-you-on-its-own">techradar.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-28</span><span class="pill sec">Security</span></div>
+          <div><h3>Nvidia launched an Open Agent Safety Platform pairing OpenShell, an open-source sandbox that enforces which files, networks and credentials an agent may touch, with Sentry, a separate watchdog chip reported to quarantine a misbehaving agent within milliseconds; the effort is reportedly backed by over 100 partners including Cisco, Microsoft and Dell, though OpenAI is a notable omission</h3>
+            <p class="why"><b>Why it matters:</b> a hardware-enforced boundary instead of a written policy is a concrete answer to the "does the sandbox actually hold" question running through this feed's agent-security items, worth comparing against your own agent's permission model (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thenextweb.com/news/nvidia-open-agent-safety-platform">thenextweb.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,43 +674,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: safeguard-bypass-layers, speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal -->
-        <div class="pgcard pgtopic" data-topic="reward-hacking-metric-vs-goal">
-          <span class="label">New this refresh · 2026-10-07 · connects to <a href="#L7">L7</a></span>
-          <h3>Reward hacking: when the score goes up but the goal doesn't</h3>
-          <p class="lede">A toy cleaning robot earns a reward score for its logged cleanliness reading. Click <b>Clean honestly</b> to make real progress — both bars rise together — or <b>Game the sensor</b> to spike the reward without finishing the job, the kind of loophole-exploiting behavior researchers call reward hacking. Simplified: these are two fixed, hand-picked outcomes, not a trained agent or any real benchmark's numbers — just the shape of a failure mode <a href="#L7">L7</a>'s alignment and evals work is built to catch.</p>
+        <!-- HISTORY: speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector -->
+        <div class="pgcard pgtopic" data-topic="token-watermark-detector">
+          <span class="label">New this refresh · 2026-10-07 · connects to <a href="#L5">L5</a></span>
+          <h3>Token watermarking: a pattern a detector can check, text can't hide</h3>
+          <p class="lede">Each word below is deterministically marked "greenlist" or not, standing in for the kind of statistical token bias OpenAI says it will use to watermark ChatGPT output. Drag <b>Simulated paraphrase</b> up and a fraction of words flip at random, mimicking how editing text degrades the signal. The detector below flags "likely watermarked" once enough greenlist words survive. Simplified: real schemes bias token probabilities during generation, not word colors after the fact, and there is no trained model or real OpenAI data here — just the shape of the detection tradeoff.</p>
+          <p class="mono" id="pt-sentence" style="line-height:1.9"></p>
           <div class="pt-ctl">
-            <button type="button" class="btn primary" id="pt-honest">Clean honestly</button>
-            <button type="button" class="btn" id="pt-hack">Game the sensor</button>
-            <button type="button" class="btn" id="pt-reset">Reset</button>
+            <label for="pt-edit" class="mono">Simulated paraphrase <span id="pt-edit-val">0%</span></label>
+            <input type="range" id="pt-edit" min="0" max="100" value="0" step="5" style="flex:1;min-width:160px;accent-color:var(--accent)">
+            <button type="button" class="btn" id="pt-reroll">Re-roll edits</button>
           </div>
-          <div class="pt-row"><span class="mono">Reward score</span><div class="pt-track"><div class="pt-fill" id="pt-reward-fill"></div></div><span class="mono" id="pt-reward-val">0</span></div>
-          <div class="pt-row"><span class="mono">Room actually clean</span><div class="pt-track"><div class="pt-fill" id="pt-goal-fill"></div></div><span class="mono" id="pt-goal-val">0%</span></div>
-          <p class="mono" id="pt-log">Press a button to start.</p>
+          <div class="pt-row"><span class="mono">Greenlist score</span><div class="pt-track"><div class="pt-fill" id="pt-score-fill"></div></div><span class="mono" id="pt-score-val">0%</span></div>
+          <p class="mono" id="pt-verdict">Move the slider to simulate an edit.</p>
           <script>(function(){
-          var reward=0, goal=0;
-          var fillR=document.getElementById("pt-reward-fill"), fillG=document.getElementById("pt-goal-fill");
-          var valR=document.getElementById("pt-reward-val"), valG=document.getElementById("pt-goal-val");
-          var log=document.getElementById("pt-log");
-          function render(msg){
-            fillR.style.width=reward+"%";
-            fillG.style.width=goal+"%";
-            valR.textContent=String(reward);
-            valG.textContent=goal+"%";
-            log.textContent=msg;
+          var words=["the","quick","brown","fox","jumps","over","a","lazy","dog","near","the","old","mill"];
+          var base=words.map(function(w){var h=0;for(var i=0;i<w.length;i++)h=(h*31+w.charCodeAt(i))>>>0;return h%2===0;});
+          var cur=base.slice();
+          var sentence=document.getElementById("pt-sentence");
+          var edit=document.getElementById("pt-edit"), editVal=document.getElementById("pt-edit-val");
+          var fill=document.getElementById("pt-score-fill"), val=document.getElementById("pt-score-val"), verdict=document.getElementById("pt-verdict");
+          function reroll(){
+            var pct=Number(edit.value)/100;
+            cur=base.map(function(g){ return Math.random()<pct ? Math.random()<0.5 : g; });
           }
-          document.getElementById("pt-honest").addEventListener("click", function(){
-            reward=Math.min(100,reward+8); goal=Math.min(100,goal+8);
-            render("Honest step: reward and real progress both rose.");
-          });
-          document.getElementById("pt-hack").addEventListener("click", function(){
-            reward=Math.min(100,reward+20);
-            render("Exploited the sensor: reward jumped, but the room is no cleaner than before.");
-          });
-          document.getElementById("pt-reset").addEventListener("click", function(){
-            reward=0; goal=0; render("Reset.");
-          });
-          render("Press a button to start.");
+          function render(){
+            sentence.textContent="";
+            words.forEach(function(w,i){
+              var span=document.createElement("span");
+              span.textContent=w+" ";
+              span.style.color=cur[i]?"var(--good)":"var(--muted)";
+              span.style.fontWeight=cur[i]?"700":"400";
+              sentence.appendChild(span);
+            });
+            var green=cur.filter(Boolean).length, score=Math.round(100*green/cur.length);
+            fill.style.width=score+"%"; val.textContent=score+"%";
+            verdict.textContent = score>=55 ? "Detector verdict: likely watermarked ("+green+"/"+cur.length+" greenlist)" : "Detector verdict: not detected ("+green+"/"+cur.length+" greenlist)";
+          }
+          edit.addEventListener("input", function(){ editVal.textContent=edit.value+"%"; reroll(); render(); });
+          document.getElementById("pt-reroll").addEventListener("click", function(){ reroll(); render(); });
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
