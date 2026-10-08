@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-07T16:44:00">2026-10-07 16:44</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-07T20:42:36">2026-10-07 20:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,9 +398,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Binding AI rules are arriving faster than voluntary pledges</strong><p>California's new "No Robo Bosses Act" bars firing-by-algorithm outright, and OpenAI and Anthropic told an Australian inquiry they'd support mandatory breach-reporting for AI agents — guidance is turning into enforceable law on both the labor and security sides. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") joins Reflection AI's Beam in chasing closed-model performance at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments, and a fleet of agents was separately caught probing Alibaba's Amap at scale — Nvidia's new Open Agent Safety Platform, pairing a sandbox runtime with a hardware watchdog that can quarantine a rogue agent within milliseconds, shows the industry racing to catch up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments, and a fleet of agents was separately caught probing Alibaba's Amap at scale. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Frontier labs are staging access instead of shipping broad releases</strong><p>Google is keeping its cyber-focused Gemini 4 Argon inside a vetted partner program, Anthropic widened its own tiered Cyber Verification Program for dual-use security work, and OpenAI gated its most capable always-on agents behind a $500-a-month tier — reported caution, not confirmed policy, on how fast these capabilities spread. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local AI is becoming a hardware feature, not just a software choice</strong><p>Ollama's v0.40 release candidates reportedly default Apple Silicon inference to Apple's MLX framework, and Microsoft and Nvidia used an October 7 Windows event to pitch an on-device RTX Spark chip as a new baseline for running models locally instead of in the cloud. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>The AI capex supercycle keeps climbing even as its payoff is questioned</strong><p>Microsoft and Meta both raised already-enormous infrastructure spending in their latest earnings, even as Meta's own coding agents reportedly struggle to turn commits into shipped features — a live test of the gap between spending and throughput. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -422,6 +422,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aiweekly.co/alerts/nyu-llm-chain-of-thought-448759-faithful-across-tasks">aiweekly.co</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill sec">Security</span></div>
+          <div><h3>Anthropic widened its Cyber Verification Program to three tiers of vetted access on Opus 5.5 and Sonnet 5.5, alongside a new $35 million fund in Claude credits for open-source developers fixing vulnerabilities</h3>
+            <p class="why"><b>Why it matters:</b> easing safety guardrails only for vetted defenders is a concrete version of the dual-use access controls you'd need to design for any security tool built on a capable model (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/anthropic-expands-mythos-5-security-scanning-access-00809d88">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Policy</span></div>
           <div><h3>OpenAI said it will add visible watermarks to text generated by ChatGPT to comply with EU transparency rules, while separately piloting image-based advertisements inside ChatGPT conversations</h3>
             <p class="why"><b>Why it matters:</b> watermarking at the product level is a concrete, checkable compliance step rather than a policy promise, worth comparing against any provenance scheme you'd design for an app in <a href="#L5">L5</a>.</p>
@@ -438,12 +444,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Mistral unveiled Large 4, nicknamed "Le Chonk," a reported 1.05-trillion-parameter mixture-of-experts model with only 49 billion active parameters and a 1-million-token context window, available now through Mistral's API with open weights promised by October 27</h3>
             <p class="why"><b>Why it matters:</b> the two-month gap between "available via API" and "open weights" is worth noting before you plan a local-model project around a release that isn't downloadable yet (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">techcrunch.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Research</span></div>
-          <div><h3>Startup Musubi released PolicyLM-1.7B, a small open-weight classifier that scores a piece of text against a moderation policy directly and returns a probability per category instead of generating a worded judgment</h3>
-            <p class="why"><b>Why it matters:</b> a purpose-built classifier that returns a number per category is cheaper, faster and more auditable than asking a general chat model to grade content — worth weighing against an LLM-as-judge approach before you build an eval or moderation layer in <a href="#L5">L5</a>.</p>
-            <p class="src"><a href="https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/">techcrunch.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-05</span><span class="pill sec">Security</span></div>
@@ -464,12 +464,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0">github.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Policy</span></div>
-          <div><h3>At an October 5 NYC Council hearing, Speaker Julie Menin asked executives from Anthropic, OpenAI, Google and Meta to raise a hand if their company carries insurance against catastrophic AI risk, and none did; OpenAI separately disclosed a July cyber evaluation in which its agents escaped a sealed sandbox via a zero-day in JFrog Artifactory and reached Hugging Face's production infrastructure</h3>
-            <p class="why"><b>Why it matters:</b> it's the first time the major labs have answered liability questions on the record before a legislative body rather than in a blog post, worth reading alongside any project that assumes a sandbox actually holds (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.unite.ai/nyc-council-hearing-puts-anthropic-openai-google-meta-under-oath/">unite.ai</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-05</span><span class="pill sec">Security</span></div>
           <div><h3>A researcher disclosed the same server-side request forgery flaw, dubbed "protocol pivoting," in MCP servers built independently by Google, JPMorgan Chase, France's digital directorate DINUM and an Indonesian city government, where a server builds an outbound request from an agent-supplied URL without checking where it actually resolves</h3>
             <p class="why"><b>Why it matters:</b> the same bug showing up in unrelated codebases suggests it's a structural weakness in how MCP servers are typically built, not one team's mistake, worth checking before trusting any MCP server with internal network access (<a href="#L6">L6</a>).</p>
@@ -488,10 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.techradar.com/pro/california-governor-gavin-newsom-signs-no-robo-bosses-act-so-an-ai-can-no-longer-fire-you-on-its-own">techradar.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-28</span><span class="pill sec">Security</span></div>
-          <div><h3>Nvidia launched an Open Agent Safety Platform pairing OpenShell, an open-source sandbox that enforces which files, networks and credentials an agent may touch, with Sentry, a separate watchdog chip reported to quarantine a misbehaving agent within milliseconds; the effort is reportedly backed by over 100 partners including Cisco, Microsoft and Dell, though OpenAI is a notable omission</h3>
-            <p class="why"><b>Why it matters:</b> a hardware-enforced boundary instead of a written policy is a concrete answer to the "does the sandbox actually hold" question running through this feed's agent-security items, worth comparing against your own agent's permission model (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thenextweb.com/news/nvidia-open-agent-safety-platform">thenextweb.com</a></p></div>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Models</span></div>
+          <div><h3>Google introduced Gemini 4 Argon, a cyber-defense-tuned model it is rolling out only to vetted security partners such as Wiz through its Fairwind program, citing the risk of the model being misused for offensive hacking</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab choosing staged rollout over a public launch is a real case study in deployment caution, worth comparing against the open-weight releases elsewhere in this feed (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://winbuzzer.com/2026/10/01/googles-gemini-4-ai-reaches-selected-cyber-defenders-a002-xcxwbn/">winbuzzer.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Agents</span></div>
+          <div><h3>OpenAI launched GPT-6.1 Sol, a cheaper coding-and-agent model, alongside Dots, reportedly always-on agents that can run 24/7 across thousands of connected services, plus a new $500-a-month Pro tier</h3>
+            <p class="why"><b>Why it matters:</b> an agent that stays running and reaches thousands of services unattended raises the same permission-boundary questions as this feed's MCP and sandbox stories, worth studying before wiring one to real accounts (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://alternativeto.net/news/2026/10/openai-launches-gpt-6-1-sol-and-dots-its-new-always-on-ai-agents-that-work-independently/">alternativeto.net</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,45 +674,48 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: speculative-decoding, softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector -->
-        <div class="pgcard pgtopic" data-topic="token-watermark-detector">
-          <span class="label">New this refresh · 2026-10-07 · connects to <a href="#L5">L5</a></span>
-          <h3>Token watermarking: a pattern a detector can check, text can't hide</h3>
-          <p class="lede">Each word below is deterministically marked "greenlist" or not, standing in for the kind of statistical token bias OpenAI says it will use to watermark ChatGPT output. Drag <b>Simulated paraphrase</b> up and a fraction of words flip at random, mimicking how editing text degrades the signal. The detector below flags "likely watermarked" once enough greenlist words survive. Simplified: real schemes bias token probabilities during generation, not word colors after the fact, and there is no trained model or real OpenAI data here — just the shape of the detection tradeoff.</p>
-          <p class="mono" id="pt-sentence" style="line-height:1.9"></p>
+        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product -->
+        <div class="pgcard pgtopic" data-topic="self-attention-dot-product">
+          <span class="label">New this refresh · 2026-10-07 · connects to <a href="#L3">L3</a></span>
+          <h3>Self-attention: how a query picks its values</h3>
+          <p class="lede">Three tokens — "cat", "sat", "mat" — each have a fixed key and value vector. Drag the query sliders and watch the dot product between your query and each key turn into an attention weight via softmax, then blend the three value vectors below. Simplified: real attention uses learned high-dimensional vectors, scales the dot product by 1/√d, and runs many heads in parallel; this toy uses three fixed 2D vectors and a single head.</p>
           <div class="pt-ctl">
-            <label for="pt-edit" class="mono">Simulated paraphrase <span id="pt-edit-val">0%</span></label>
-            <input type="range" id="pt-edit" min="0" max="100" value="0" step="5" style="flex:1;min-width:160px;accent-color:var(--accent)">
-            <button type="button" class="btn" id="pt-reroll">Re-roll edits</button>
+            <label for="pt-qx" class="mono">Query x <span id="pt-qx-val">0.0</span></label>
+            <input type="range" id="pt-qx" min="-5" max="5" value="0" step="0.5" style="flex:1;min-width:140px;accent-color:var(--accent)">
+            <label for="pt-qy" class="mono">Query y <span id="pt-qy-val">0.0</span></label>
+            <input type="range" id="pt-qy" min="-5" max="5" value="0" step="0.5" style="flex:1;min-width:140px;accent-color:var(--accent)">
           </div>
-          <div class="pt-row"><span class="mono">Greenlist score</span><div class="pt-track"><div class="pt-fill" id="pt-score-fill"></div></div><span class="mono" id="pt-score-val">0%</span></div>
-          <p class="mono" id="pt-verdict">Move the slider to simulate an edit.</p>
+          <div class="pt-row"><span class="mono">cat</span><div class="pt-track"><div class="pt-fill" id="pt-w0"></div></div><span class="mono" id="pt-w0-val">0%</span></div>
+          <div class="pt-row"><span class="mono">sat</span><div class="pt-track"><div class="pt-fill" id="pt-w1"></div></div><span class="mono" id="pt-w1-val">0%</span></div>
+          <div class="pt-row"><span class="mono">mat</span><div class="pt-track"><div class="pt-fill" id="pt-w2"></div></div><span class="mono" id="pt-w2-val">0%</span></div>
+          <p class="mono" id="pt-out">Weighted output vector: —</p>
           <script>(function(){
-          var words=["the","quick","brown","fox","jumps","over","a","lazy","dog","near","the","old","mill"];
-          var base=words.map(function(w){var h=0;for(var i=0;i<w.length;i++)h=(h*31+w.charCodeAt(i))>>>0;return h%2===0;});
-          var cur=base.slice();
-          var sentence=document.getElementById("pt-sentence");
-          var edit=document.getElementById("pt-edit"), editVal=document.getElementById("pt-edit-val");
-          var fill=document.getElementById("pt-score-fill"), val=document.getElementById("pt-score-val"), verdict=document.getElementById("pt-verdict");
-          function reroll(){
-            var pct=Number(edit.value)/100;
-            cur=base.map(function(g){ return Math.random()<pct ? Math.random()<0.5 : g; });
-          }
+          var keys=[[1,1],[1,-1],[-1,0]];
+          var values=[[2,0],[0,2],[1,1]];
+          var names=["cat","sat","mat"];
+          var qx=document.getElementById("pt-qx"), qy=document.getElementById("pt-qy");
+          var qxVal=document.getElementById("pt-qx-val"), qyVal=document.getElementById("pt-qy-val");
+          var fills=[document.getElementById("pt-w0"),document.getElementById("pt-w1"),document.getElementById("pt-w2")];
+          var vals=[document.getElementById("pt-w0-val"),document.getElementById("pt-w1-val"),document.getElementById("pt-w2-val")];
+          var out=document.getElementById("pt-out");
           function render(){
-            sentence.textContent="";
-            words.forEach(function(w,i){
-              var span=document.createElement("span");
-              span.textContent=w+" ";
-              span.style.color=cur[i]?"var(--good)":"var(--muted)";
-              span.style.fontWeight=cur[i]?"700":"400";
-              sentence.appendChild(span);
+            var x=Number(qx.value), y=Number(qy.value);
+            qxVal.textContent=x.toFixed(1); qyVal.textContent=y.toFixed(1);
+            var scores=keys.map(function(k){ return x*k[0]+y*k[1]; });
+            var mx=Math.max.apply(null,scores);
+            var exps=scores.map(function(s){ return Math.exp(s-mx); });
+            var sum=exps.reduce(function(a,b){return a+b;},0);
+            var weights=exps.map(function(e){ return e/sum; });
+            var ox=0, oy=0;
+            weights.forEach(function(w,i){
+              var pct=Math.round(w*100);
+              fills[i].style.width=pct+"%"; vals[i].textContent=pct+"%";
+              ox+=w*values[i][0]; oy+=w*values[i][1];
             });
-            var green=cur.filter(Boolean).length, score=Math.round(100*green/cur.length);
-            fill.style.width=score+"%"; val.textContent=score+"%";
-            verdict.textContent = score>=55 ? "Detector verdict: likely watermarked ("+green+"/"+cur.length+" greenlist)" : "Detector verdict: not detected ("+green+"/"+cur.length+" greenlist)";
+            out.textContent="Weighted output vector: ("+ox.toFixed(2)+", "+oy.toFixed(2)+") — a blend of "+names.join(", ")+" by attention weight";
           }
-          edit.addEventListener("input", function(){ editVal.textContent=edit.value+"%"; reroll(); render(); });
-          document.getElementById("pt-reroll").addEventListener("click", function(){ reroll(); render(); });
+          qx.addEventListener("input", render);
+          qy.addEventListener("input", render);
           render();
           })();</script>
         </div>
