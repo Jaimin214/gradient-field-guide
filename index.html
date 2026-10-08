@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-07T20:42:36">2026-10-07 20:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-08T01:43:27">2026-10-08 01:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Binding AI rules are arriving faster than voluntary pledges</strong><p>California's new "No Robo Bosses Act" bars firing-by-algorithm outright, and OpenAI and Anthropic told an Australian inquiry they'd support mandatory breach-reporting for AI agents — guidance is turning into enforceable law on both the labor and security sides. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Binding AI rules are emerging faster than voluntary pledges</strong><p>OpenAI and Anthropic told an Australian parliamentary inquiry they'd support mandatory breach-reporting for AI agents, after one of OpenAI's own agents reportedly touched non-public government data — a sign oversight is moving from guidance toward enforceable law. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") joins Reflection AI's Beam in chasing closed-model performance at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments, and a fleet of agents was separately caught probing Alibaba's Amap at scale. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Frontier labs are staging access instead of shipping broad releases</strong><p>Google is keeping its cyber-focused Gemini 4 Argon inside a vetted partner program, Anthropic widened its own tiered Cyber Verification Program for dual-use security work, and OpenAI gated its most capable always-on agents behind a $500-a-month tier — reported caution, not confirmed policy, on how fast these capabilities spread. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Access to top-tier models is being gated by price and vetting, not just capability</strong><p>Anthropic widened its tiered Cyber Verification Program for dual-use security work, OpenAI gated its most capable always-on agents behind a $500-a-month tier, and Google is narrowing its free Gemini app tier to a smaller model — three labs drawing their own line between free and paid capability. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local AI is becoming a hardware feature, not just a software choice</strong><p>Ollama's v0.40 release candidates reportedly default Apple Silicon inference to Apple's MLX framework, and Microsoft and Nvidia used an October 7 Windows event to pitch an on-device RTX Spark chip as a new baseline for running models locally instead of in the cloud. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-09</span><span class="pill">Industry</span></div>
+          <div><h3>Google will tighten free access to its Gemini app starting October 9, limiting users with no paid plan to the smaller Flash-Lite model and dropping Gemini Pro access for AI Plus subscribers, while AI Pro and Ultra tiers keep every model</h3>
+            <p class="why"><b>Why it matters:</b> tiering a flagship assistant by subscription price is a direct look at how a lab balances free reach against monetizing its best capability — worth weighing against any pricing plan for an app you'd design in <a href="#L5">L5</a>.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/google-limits-gemini-model-access-by-subscription-24b0d7ca">letsdatascience.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill">Industry</span></div>
           <div><h3>Nvidia shares rose after Microsoft and Meta both signaled continued heavy AI infrastructure spending in their latest earnings, with Microsoft's quarterly capital expenditure reported at $16.7 billion (up from $11 billion a year earlier) and Meta lifting its annual capex guidance to a reported $64–72 billion range</h3>
@@ -476,16 +482,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
-          <div><h3>California Governor Gavin Newsom signed SB 947, the "No Robo Bosses Act," requiring a human to independently corroborate any AI-driven firing or discipline decision starting July 2027, alongside a companion law banning workplace AI tools from inferring or predicting an employee's emotional state</h3>
-            <p class="why"><b>Why it matters:</b> it's a concrete, binding example of employment law written specifically for automated decisions, worth knowing before building or deploying an agent that touches personnel decisions (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.techradar.com/pro/california-governor-gavin-newsom-signs-no-robo-bosses-act-so-an-ai-can-no-longer-fire-you-on-its-own">techradar.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Models</span></div>
-          <div><h3>Google introduced Gemini 4 Argon, a cyber-defense-tuned model it is rolling out only to vetted security partners such as Wiz through its Fairwind program, citing the risk of the model being misused for offensive hacking</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab choosing staged rollout over a public launch is a real case study in deployment caution, worth comparing against the open-weight releases elsewhere in this feed (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://winbuzzer.com/2026/10/01/googles-gemini-4-ai-reaches-selected-cyber-defenders-a002-xcxwbn/">winbuzzer.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Industry</span></div>
+          <div><h3>AI-focused companies reportedly took eight of the ten largest U.S. startup funding rounds in the week of September 28, together raising around $2.86 billion, with large rounds going to agentic-AI and robotics startups including Instinct and FieldAI</h3>
+            <p class="why"><b>Why it matters:</b> capital is still concentrating in infrastructure and agentic-AI startups rather than spreading evenly, a useful signal for where the agent-building skills in <a href="#L6">L6</a> are in demand.</p>
+            <p class="src"><a href="https://af.net/realtime/ai-companies-dominate-u-s-startup-funding-rounds-raising-2-86-billion-in-one-week/">af.net</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-30</span><span class="pill">Agents</span></div>
@@ -674,49 +674,52 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product -->
-        <div class="pgcard pgtopic" data-topic="self-attention-dot-product">
-          <span class="label">New this refresh · 2026-10-07 · connects to <a href="#L3">L3</a></span>
-          <h3>Self-attention: how a query picks its values</h3>
-          <p class="lede">Three tokens — "cat", "sat", "mat" — each have a fixed key and value vector. Drag the query sliders and watch the dot product between your query and each key turn into an attention weight via softmax, then blend the three value vectors below. Simplified: real attention uses learned high-dimensional vectors, scales the dot product by 1/√d, and runs many heads in parallel; this toy uses three fixed 2D vectors and a single head.</p>
+        <!-- HISTORY: kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject -->
+        <div class="pgcard pgtopic" data-topic="speculative-decoding-accept-reject">
+          <span class="label">New this refresh · 2026-10-08 · connects to <a href="#L4">L4</a></span>
+          <h3>Speculative decoding: when does the fast guess pay off?</h3>
+          <p class="lede">A small "draft" model guesses several tokens ahead; a larger "target" model only has to verify them, accepting a run of correct guesses in one pass instead of generating one token at a time. Drag the acceptance threshold, then press "Draft a step" to see how many of this toy's six guessed tokens survive verification. Simplified: real systems compare actual token probabilities from two models token-by-token; this toy uses six fixed, made-up confidence scores, not a measured benchmark.</p>
           <div class="pt-ctl">
-            <label for="pt-qx" class="mono">Query x <span id="pt-qx-val">0.0</span></label>
-            <input type="range" id="pt-qx" min="-5" max="5" value="0" step="0.5" style="flex:1;min-width:140px;accent-color:var(--accent)">
-            <label for="pt-qy" class="mono">Query y <span id="pt-qy-val">0.0</span></label>
-            <input type="range" id="pt-qy" min="-5" max="5" value="0" step="0.5" style="flex:1;min-width:140px;accent-color:var(--accent)">
+            <label for="pt-threshold" class="mono">Acceptance threshold <span id="pt-threshold-val">50%</span></label>
+            <input type="range" id="pt-threshold" min="0" max="100" value="50" step="5" style="flex:1;min-width:160px;accent-color:var(--accent)">
+            <button type="button" class="btn primary" id="pt-run">Draft a step</button>
           </div>
-          <div class="pt-row"><span class="mono">cat</span><div class="pt-track"><div class="pt-fill" id="pt-w0"></div></div><span class="mono" id="pt-w0-val">0%</span></div>
-          <div class="pt-row"><span class="mono">sat</span><div class="pt-track"><div class="pt-fill" id="pt-w1"></div></div><span class="mono" id="pt-w1-val">0%</span></div>
-          <div class="pt-row"><span class="mono">mat</span><div class="pt-track"><div class="pt-fill" id="pt-w2"></div></div><span class="mono" id="pt-w2-val">0%</span></div>
-          <p class="mono" id="pt-out">Weighted output vector: —</p>
+          <div class="pt-ctl" id="pt-tokens" style="gap:6px"></div>
+          <p class="mono" id="pt-result">Accepted: —</p>
           <script>(function(){
-          var keys=[[1,1],[1,-1],[-1,0]];
-          var values=[[2,0],[0,2],[1,1]];
-          var names=["cat","sat","mat"];
-          var qx=document.getElementById("pt-qx"), qy=document.getElementById("pt-qy");
-          var qxVal=document.getElementById("pt-qx-val"), qyVal=document.getElementById("pt-qy-val");
-          var fills=[document.getElementById("pt-w0"),document.getElementById("pt-w1"),document.getElementById("pt-w2")];
-          var vals=[document.getElementById("pt-w0-val"),document.getElementById("pt-w1-val"),document.getElementById("pt-w2-val")];
-          var out=document.getElementById("pt-out");
-          function render(){
-            var x=Number(qx.value), y=Number(qy.value);
-            qxVal.textContent=x.toFixed(1); qyVal.textContent=y.toFixed(1);
-            var scores=keys.map(function(k){ return x*k[0]+y*k[1]; });
-            var mx=Math.max.apply(null,scores);
-            var exps=scores.map(function(s){ return Math.exp(s-mx); });
-            var sum=exps.reduce(function(a,b){return a+b;},0);
-            var weights=exps.map(function(e){ return e/sum; });
-            var ox=0, oy=0;
-            weights.forEach(function(w,i){
-              var pct=Math.round(w*100);
-              fills[i].style.width=pct+"%"; vals[i].textContent=pct+"%";
-              ox+=w*values[i][0]; oy+=w*values[i][1];
+          var draft=[["the",92],["quick",78],["brown",61],["fox",44],["jumps",35],["over",58]];
+          var threshold=document.getElementById("pt-threshold");
+          var threshVal=document.getElementById("pt-threshold-val");
+          var tokensEl=document.getElementById("pt-tokens");
+          var result=document.getElementById("pt-result");
+          var runBtn=document.getElementById("pt-run");
+          function renderTokens(acceptedCount){
+            tokensEl.textContent="";
+            draft.forEach(function(pair,i){
+              var span=document.createElement("span");
+              span.className="mono";
+              span.style.padding="4px 8px";
+              span.style.borderRadius="4px";
+              span.style.border="1px solid var(--line)";
+              span.textContent=pair[0]+" "+pair[1]+"%";
+              if(i<acceptedCount){ span.style.background="var(--accent-soft)"; span.style.color="var(--accent)"; }
+              else if(i===acceptedCount){ span.style.background="var(--signal-soft)"; span.style.color="var(--signal)"; }
+              tokensEl.appendChild(span);
             });
-            out.textContent="Weighted output vector: ("+ox.toFixed(2)+", "+oy.toFixed(2)+") — a blend of "+names.join(", ")+" by attention weight";
           }
-          qx.addEventListener("input", render);
-          qy.addEventListener("input", render);
-          render();
+          function step(){
+            var t=Number(threshold.value);
+            threshVal.textContent=t+"%";
+            var accepted=0;
+            for(var i=0;i<draft.length;i++){
+              if(draft[i][1]>=t) accepted++; else break;
+            }
+            renderTokens(accepted);
+            result.textContent="Accepted "+accepted+" of "+draft.length+" guessed tokens before a miss — illustrative speedup this step: "+(accepted+1)+"x verify calls saved vs. one token at a time";
+          }
+          threshold.addEventListener("input", step);
+          runBtn.addEventListener("click", step);
+          step();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
