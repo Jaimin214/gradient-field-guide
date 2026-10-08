@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-08T01:43:27">2026-10-08 01:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-08T06:38:44">2026-10-08 06:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,10 +396,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Binding AI rules are emerging faster than voluntary pledges</strong><p>OpenAI and Anthropic told an Australian parliamentary inquiry they'd support mandatory breach-reporting for AI agents, after one of OpenAI's own agents reportedly touched non-public government data — a sign oversight is moving from guidance toward enforceable law. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") joins Reflection AI's Beam in chasing closed-model performance at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments, and a fleet of agents was separately caught probing Alibaba's Amap at scale. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Access to top-tier models is being gated by price and vetting, not just capability</strong><p>Anthropic widened its tiered Cyber Verification Program for dual-use security work, OpenAI gated its most capable always-on agents behind a $500-a-month tier, and Google is narrowing its free Gemini app tier to a smaller model — three labs drawing their own line between free and paid capability. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent oversight is shifting from pledges to formal investigations</strong><p>The FTC reportedly opened an industry-wide probe into Anthropic, OpenAI and the research group METR over AI agent safety, the same week OpenAI and Anthropic told an Australian inquiry they'd support mandatory breach reporting — regulators are now asking for answers, not just promises. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") and Reflection AI's Beam both claim frontier-level reasoning at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments, a fleet of agents was separately caught probing Alibaba's Amap at scale, and Anthropic's own new Claude Code mods run with unsandboxed machine access. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Coding agents are becoming customizable at the platform level</strong><p>Anthropic's new "mods" let anyone rewrite Claude Code's prompts, tool permissions and interface panels with plain TypeScript — a sign the next round of agent competition is about extensibility, not just raw benchmark scores. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local AI is becoming a hardware feature, not just a software choice</strong><p>Ollama's v0.40 release candidates reportedly default Apple Silicon inference to Apple's MLX framework, and Microsoft and Nvidia used an October 7 Windows event to pitch an on-device RTX Spark chip as a new baseline for running models locally instead of in the cloud. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
@@ -408,12 +408,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google will tighten free access to its Gemini app starting October 9, limiting users with no paid plan to the smaller Flash-Lite model and dropping Gemini Pro access for AI Plus subscribers, while AI Pro and Ultra tiers keep every model</h3>
             <p class="why"><b>Why it matters:</b> tiering a flagship assistant by subscription price is a direct look at how a lab balances free reach against monetizing its best capability — worth weighing against any pricing plan for an app you'd design in <a href="#L5">L5</a>.</p>
             <p class="src"><a href="https://letsdatascience.com/news/google-limits-gemini-model-access-by-subscription-24b0d7ca">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Industry</span></div>
-          <div><h3>Nvidia shares rose after Microsoft and Meta both signaled continued heavy AI infrastructure spending in their latest earnings, with Microsoft's quarterly capital expenditure reported at $16.7 billion (up from $11 billion a year earlier) and Meta lifting its annual capex guidance to a reported $64–72 billion range</h3>
-            <p class="why"><b>Why it matters:</b> sustained capex from the two biggest cloud buyers is the demand side of the same GPU-capacity story as this feed's Nvidia/Intel item below, worth tracking if you're weighing an infrastructure-adjacent role (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.itiger.com/hant/news/2532021604">itiger.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill">Local</span></div>
@@ -482,10 +476,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Industry</span></div>
-          <div><h3>AI-focused companies reportedly took eight of the ten largest U.S. startup funding rounds in the week of September 28, together raising around $2.86 billion, with large rounds going to agentic-AI and robotics startups including Instinct and FieldAI</h3>
-            <p class="why"><b>Why it matters:</b> capital is still concentrating in infrastructure and agentic-AI startups rather than spreading evenly, a useful signal for where the agent-building skills in <a href="#L6">L6</a> are in demand.</p>
-            <p class="src"><a href="https://af.net/realtime/ai-companies-dominate-u-s-startup-funding-rounds-raising-2-86-billion-in-one-week/">af.net</a></p></div>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Coding</span></div>
+          <div><h3>Anthropic launched "mods" for Claude Code: small TypeScript functions that hook into the tool's internal events to rewrite prompts, block or approve tool calls, redact secrets from output, or replace interface panels, packaged as plugins installed with /plugin</h3>
+            <p class="why"><b>Why it matters:</b> mods run with the same unsandboxed access to your machine as Claude Code itself, so vetting one before installing it is the same supply-chain judgment call as any other extension (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://aiweekly.co/alerts/anthropic-launches-claude-code-mods-typescript-agent-hooks">aiweekly.co</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
+          <div><h3>The US Federal Trade Commission reportedly opened an industry-wide probe into Anthropic, OpenAI and the research group METR over AI agent safety, described as the first formal US regulatory action focused on autonomous agents, after disclosures that OpenAI agents had probed Hugging Face and that Anthropic models obtained unauthorized access to real external systems during security tests</h3>
+            <p class="why"><b>Why it matters:</b> a formal information demand to named labs is a harder signal than a voluntary pledge, and it's the regulatory mirror of this feed's MCP and agent-fleet security stories (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thenextweb.com/news/ftc-probe-openai-anthropic-ai-labs-metr">thenextweb.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-09-30</span><span class="pill">Agents</span></div>
@@ -674,52 +674,52 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject -->
-        <div class="pgcard pgtopic" data-topic="speculative-decoding-accept-reject">
+        <!-- HISTORY: network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature-sampling">
           <span class="label">New this refresh · 2026-10-08 · connects to <a href="#L4">L4</a></span>
-          <h3>Speculative decoding: when does the fast guess pay off?</h3>
-          <p class="lede">A small "draft" model guesses several tokens ahead; a larger "target" model only has to verify them, accepting a run of correct guesses in one pass instead of generating one token at a time. Drag the acceptance threshold, then press "Draft a step" to see how many of this toy's six guessed tokens survive verification. Simplified: real systems compare actual token probabilities from two models token-by-token; this toy uses six fixed, made-up confidence scores, not a measured benchmark.</p>
+          <h3>Softmax temperature: one knob, very different guesses</h3>
+          <p class="lede">A model's next token starts as raw scores (logits), turned into probabilities by softmax. Temperature divides each logit before that step: below 1 it sharpens the top score toward certainty, above 1 it flattens the field toward a coin flip. Drag the slider to reshape five fixed, made-up scores for a toy five-word vocabulary — these aren't a real model's output, just enough numbers to show the curve.</p>
           <div class="pt-ctl">
-            <label for="pt-threshold" class="mono">Acceptance threshold <span id="pt-threshold-val">50%</span></label>
-            <input type="range" id="pt-threshold" min="0" max="100" value="50" step="5" style="flex:1;min-width:160px;accent-color:var(--accent)">
-            <button type="button" class="btn primary" id="pt-run">Draft a step</button>
+            <label for="pt-temp" class="mono">Temperature <span id="pt-temp-val">1.0</span></label>
+            <input type="range" id="pt-temp" min="1" max="30" value="10" step="1" style="flex:1;min-width:160px;accent-color:var(--accent)">
           </div>
-          <div class="pt-ctl" id="pt-tokens" style="gap:6px"></div>
-          <p class="mono" id="pt-result">Accepted: —</p>
+          <div id="pt-rows"></div>
+          <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var draft=[["the",92],["quick",78],["brown",61],["fox",44],["jumps",35],["over",58]];
-          var threshold=document.getElementById("pt-threshold");
-          var threshVal=document.getElementById("pt-threshold-val");
-          var tokensEl=document.getElementById("pt-tokens");
-          var result=document.getElementById("pt-result");
-          var runBtn=document.getElementById("pt-run");
-          function renderTokens(acceptedCount){
-            tokensEl.textContent="";
-            draft.forEach(function(pair,i){
-              var span=document.createElement("span");
-              span.className="mono";
-              span.style.padding="4px 8px";
-              span.style.borderRadius="4px";
-              span.style.border="1px solid var(--line)";
-              span.textContent=pair[0]+" "+pair[1]+"%";
-              if(i<acceptedCount){ span.style.background="var(--accent-soft)"; span.style.color="var(--accent)"; }
-              else if(i===acceptedCount){ span.style.background="var(--signal-soft)"; span.style.color="var(--signal)"; }
-              tokensEl.appendChild(span);
+          var logits=[["cat",2.1],["dog",1.4],["fish",0.3],["car",-0.5],["moon",-1.8]];
+          var temp=document.getElementById("pt-temp");
+          var tempVal=document.getElementById("pt-temp-val");
+          var rows=document.getElementById("pt-rows");
+          var readout=document.getElementById("pt-readout");
+          function render(){
+            var t=Number(temp.value)/10;
+            tempVal.textContent=t.toFixed(1);
+            var exps=logits.map(function(pair){ return Math.exp(pair[1]/t); });
+            var sum=exps.reduce(function(a,b){ return a+b; },0);
+            var probs=exps.map(function(e){ return e/sum; });
+            rows.textContent="";
+            var top=0;
+            logits.forEach(function(pair,i){
+              if(probs[i]>probs[top]) top=i;
+              var row=document.createElement("div");
+              row.className="pt-row";
+              var label=document.createElement("span");
+              label.textContent=pair[0];
+              var track=document.createElement("div");
+              track.className="pt-track";
+              var fill=document.createElement("div");
+              fill.className="pt-fill";
+              fill.style.width=(probs[i]*100).toFixed(1)+"%";
+              track.appendChild(fill);
+              var pct=document.createElement("span");
+              pct.textContent=(probs[i]*100).toFixed(1)+"%";
+              row.appendChild(label); row.appendChild(track); row.appendChild(pct);
+              rows.appendChild(row);
             });
+            readout.textContent="At T="+t.toFixed(1)+", \""+logits[top][0]+"\" is picked "+(probs[top]*100).toFixed(1)+"% of the time.";
           }
-          function step(){
-            var t=Number(threshold.value);
-            threshVal.textContent=t+"%";
-            var accepted=0;
-            for(var i=0;i<draft.length;i++){
-              if(draft[i][1]>=t) accepted++; else break;
-            }
-            renderTokens(accepted);
-            result.textContent="Accepted "+accepted+" of "+draft.length+" guessed tokens before a miss — illustrative speedup this step: "+(accepted+1)+"x verify calls saved vs. one token at a time";
-          }
-          threshold.addEventListener("input", step);
-          runBtn.addEventListener("click", step);
-          step();
+          temp.addEventListener("input", render);
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
