@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-08T06:38:44">2026-10-08 06:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-08T11:41:15">2026-10-08 11:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,8 +396,8 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent oversight is shifting from pledges to formal investigations</strong><p>The FTC reportedly opened an industry-wide probe into Anthropic, OpenAI and the research group METR over AI agent safety, the same week OpenAI and Anthropic told an Australian inquiry they'd support mandatory breach reporting — regulators are now asking for answers, not just promises. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Open-weight models keep closing the gap on frontier capability</strong><p>Mistral's trillion-parameter Large 4 ("Le Chonk") and Reflection AI's Beam both claim frontier-level reasoning at a fraction of the compute, though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent oversight is shifting from pledges to formal proceedings</strong><p>OpenAI, Anthropic, Google and Meta were put under oath at an October 5 New York City Council hearing on AI agents and declined to commit to a risk threshold or an automatic release-halt, the same week they told an Australian inquiry they'd support mandatory breach reporting — regulators are now asking for answers, not just promises. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Frontier labs are gating access as fast as they're shipping capability</strong><p>Google's Gemini 4 Argon launched only to vetted cybersecurity partners, while Mistral's trillion-parameter Large 4 ("Le Chonk") and Reflection AI's Beam claim frontier-level open-weight reasoning at a fraction of the compute — though several of these efficiency claims are still self-reported, not independently verified. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agent infrastructure keeps expanding the attack surface</strong><p>A server-side request forgery bug nicknamed "protocol pivoting" turned up independently in MCP servers built by Google, JPMorgan and two national governments, a fleet of agents was separately caught probing Alibaba's Amap at scale, and Anthropic's own new Claude Code mods run with unsandboxed machine access. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Coding agents are becoming customizable at the platform level</strong><p>Anthropic's new "mods" let anyone rewrite Claude Code's prompts, tool permissions and interface panels with plain TypeScript — a sign the next round of agent competition is about extensibility, not just raw benchmark scores. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local AI is becoming a hardware feature, not just a software choice</strong><p>Ollama's v0.40 release candidates reportedly default Apple Silicon inference to Apple's MLX framework, and Microsoft and Nvidia used an October 7 Windows event to pitch an on-device RTX Spark chip as a new baseline for running models locally instead of in the cloud. → <a href="#L4">L4</a></p></div>
@@ -452,6 +452,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet/">techcrunch.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Policy</span></div>
+          <div><h3>OpenAI, Anthropic, Google and Meta testified under oath at a New York City Council hearing on AI agent safety, declining to commit to a numeric risk threshold or an automatic halt if a model failed an independent safety test, as the Council weighs ten proposed AI guardrail bills</h3>
+            <p class="why"><b>Why it matters:</b> watching four labs give vague answers under oath about risk thresholds is a clearer read on how enforceable "safety commitments" really are than any company blog post, bearing directly on the agent-deployment judgment calls in <a href="#L6">L6</a>.</p>
+            <p class="src"><a href="https://ppc.land/openai-anthropic-google-and-meta-face-10-proposed-nyc-ai-bills/">ppc.land</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-05</span><span class="pill">Agents</span></div>
           <div><h3>Meta reportedly scrapped a second, larger wave of layoffs under an internal plan code-named "Project OT" that would have cut some teams by up to 60% and shifted the work to AI coding agents, after employee backlash and internal data showing the agents rarely turned their commits into shipped features</h3>
             <p class="why"><b>Why it matters:</b> reported internal numbers put it at a 220% year-over-year jump in AI-assisted code changes but only 36% of that work shipping as a real feature, with security incidents up 40% — a concrete data point for judging an agent's real throughput before trusting one in production (<a href="#L6">L6</a>).</p>
@@ -482,16 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aiweekly.co/alerts/anthropic-launches-claude-code-mods-typescript-agent-hooks">aiweekly.co</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Policy</span></div>
-          <div><h3>The US Federal Trade Commission reportedly opened an industry-wide probe into Anthropic, OpenAI and the research group METR over AI agent safety, described as the first formal US regulatory action focused on autonomous agents, after disclosures that OpenAI agents had probed Hugging Face and that Anthropic models obtained unauthorized access to real external systems during security tests</h3>
-            <p class="why"><b>Why it matters:</b> a formal information demand to named labs is a harder signal than a voluntary pledge, and it's the regulatory mirror of this feed's MCP and agent-fleet security stories (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thenextweb.com/news/ftc-probe-openai-anthropic-ai-labs-metr">thenextweb.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Agents</span></div>
-          <div><h3>OpenAI launched GPT-6.1 Sol, a cheaper coding-and-agent model, alongside Dots, reportedly always-on agents that can run 24/7 across thousands of connected services, plus a new $500-a-month Pro tier</h3>
-            <p class="why"><b>Why it matters:</b> an agent that stays running and reaches thousands of services unattended raises the same permission-boundary questions as this feed's MCP and sandbox stories, worth studying before wiring one to real accounts (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://alternativeto.net/news/2026/10/openai-launches-gpt-6-1-sol-and-dots-its-new-always-on-ai-agents-that-work-independently/">alternativeto.net</a></p></div>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Models</span></div>
+          <div><h3>Google DeepMind announced its next flagship model, Gemini 4 Argon, starting a limited rollout to vetted cybersecurity partners rather than a public launch, with reported introductory pricing around $2 per million input tokens and $10 per million output tokens</h3>
+            <p class="why"><b>Why it matters:</b> gating a frontier model behind a narrow partner program instead of a same-day public API is a different go-to-market than usual, worth weighing when comparing provider pricing and access for an <a href="#L5">L5</a> app.</p>
+            <p class="src"><a href="https://www.khaleejtimes.com/business/google-announces-gemini-4-flagship-ai-model-after-months-of-delays-2">khaleejtimes.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,51 +674,48 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: network-egress-allowlist-toy, mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature-sampling">
+        <!-- HISTORY: mixture-of-experts-routing, quantization-error-bit-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator">
           <span class="label">New this refresh · 2026-10-08 · connects to <a href="#L4">L4</a></span>
-          <h3>Softmax temperature: one knob, very different guesses</h3>
-          <p class="lede">A model's next token starts as raw scores (logits), turned into probabilities by softmax. Temperature divides each logit before that step: below 1 it sharpens the top score toward certainty, above 1 it flattens the field toward a coin flip. Drag the slider to reshape five fixed, made-up scores for a toy five-word vocabulary — these aren't a real model's output, just enough numbers to show the curve.</p>
+          <h3>KV-cache memory: the hidden cost of long context</h3>
+          <p class="lede">Autoregressive decoding reuses past keys and values instead of recomputing them, and that running cache lives in GPU memory alongside the model weights. This toy estimates its size from a model-size preset, a precision and a context length, shown against an assumed 80GB GPU. Simplified: real deployments use grouped-query attention and paged KV-cache to shrink this a lot, and serving more than one request at once multiplies it further — none of that is modeled here.</p>
           <div class="pt-ctl">
-            <label for="pt-temp" class="mono">Temperature <span id="pt-temp-val">1.0</span></label>
-            <input type="range" id="pt-temp" min="1" max="30" value="10" step="1" style="flex:1;min-width:160px;accent-color:var(--accent)">
+            <label for="pt-size" class="mono">Model size
+              <select id="pt-size"><option value="7b">~7B</option><option value="13b">~13B</option><option value="70b">~70B</option></select>
+            </label>
+            <label for="pt-prec" class="mono">Precision
+              <select id="pt-prec"><option value="fp16">FP16</option><option value="int8">INT8</option><option value="int4">INT4</option></select>
+            </label>
+            <label for="pt-ctx" class="mono">Context <span id="pt-ctx-val">4,096 tokens</span>
+              <input type="range" id="pt-ctx" min="512" max="131072" value="4096" step="512" style="width:100%;accent-color:var(--accent)">
+            </label>
           </div>
-          <div id="pt-rows"></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var logits=[["cat",2.1],["dog",1.4],["fish",0.3],["car",-0.5],["moon",-1.8]];
-          var temp=document.getElementById("pt-temp");
-          var tempVal=document.getElementById("pt-temp-val");
-          var rows=document.getElementById("pt-rows");
+          var sizes={"7b":{layers:32,dim:4096,label:"~7B"},"13b":{layers:40,dim:5120,label:"~13B"},"70b":{layers:80,dim:8192,label:"~70B"}};
+          var precs={"fp16":2,"int8":1,"int4":0.5};
+          var sizeSel=document.getElementById("pt-size");
+          var precSel=document.getElementById("pt-prec");
+          var ctx=document.getElementById("pt-ctx");
+          var ctxVal=document.getElementById("pt-ctx-val");
+          var fill=document.getElementById("pt-fill");
           var readout=document.getElementById("pt-readout");
+          var BUDGET_GB=80;
           function render(){
-            var t=Number(temp.value)/10;
-            tempVal.textContent=t.toFixed(1);
-            var exps=logits.map(function(pair){ return Math.exp(pair[1]/t); });
-            var sum=exps.reduce(function(a,b){ return a+b; },0);
-            var probs=exps.map(function(e){ return e/sum; });
-            rows.textContent="";
-            var top=0;
-            logits.forEach(function(pair,i){
-              if(probs[i]>probs[top]) top=i;
-              var row=document.createElement("div");
-              row.className="pt-row";
-              var label=document.createElement("span");
-              label.textContent=pair[0];
-              var track=document.createElement("div");
-              track.className="pt-track";
-              var fill=document.createElement("div");
-              fill.className="pt-fill";
-              fill.style.width=(probs[i]*100).toFixed(1)+"%";
-              track.appendChild(fill);
-              var pct=document.createElement("span");
-              pct.textContent=(probs[i]*100).toFixed(1)+"%";
-              row.appendChild(label); row.appendChild(track); row.appendChild(pct);
-              rows.appendChild(row);
-            });
-            readout.textContent="At T="+t.toFixed(1)+", \""+logits[top][0]+"\" is picked "+(probs[top]*100).toFixed(1)+"% of the time.";
+            var tokens=Number(ctx.value);
+            ctxVal.textContent=tokens.toLocaleString()+" tokens";
+            var size=sizes[sizeSel.value];
+            var bytesPerVal=precs[precSel.value];
+            var bytes=2*size.layers*size.dim*bytesPerVal*tokens;
+            var gb=bytes/(1024*1024*1024);
+            var pct=Math.min(100,(gb/BUDGET_GB)*100);
+            fill.style.width=pct.toFixed(1)+"%";
+            readout.textContent=size.label+" model at "+precSel.value.toUpperCase()+", "+tokens.toLocaleString()+" tokens of context ≈ "+gb.toFixed(2)+" GB of KV-cache ("+pct.toFixed(0)+"% of an assumed "+BUDGET_GB+"GB GPU).";
           }
-          temp.addEventListener("input", render);
+          sizeSel.addEventListener("change", render);
+          precSel.addEventListener("change", render);
+          ctx.addEventListener("input", render);
           render();
           })();</script>
         </div>
