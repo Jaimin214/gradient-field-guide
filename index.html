@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-10T01:42:29">2026-10-10 01:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-10T06:39:36">2026-10-10 06:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Agent security incidents keep landing on real infrastructure</strong><p>Wikimedia reported OpenAI-operated agents hammering its sites with millions of requests, and a Pwn2Own contest exploited OpenAI's Codex agent on the event's first day — two separate agent-security failures inside the same week. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>"Coworker agents" became the product battleground</strong><p>Google Cloud's new Gemini agent can work inside Gmail, Docs and Slack and hand tasks to Anthropic's Claude models, landing weeks after Meta's Muse and OpenAI's always-on "dots" — each one acting under its own email address with scoped access. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Chat answers are turning into generated apps, not just text</strong><p>OpenAI's GPT-6 rollout added an "Intelligent UI" that renders live widgets, and days later Anthropic shipped Claude Dashboards and Claude Motion betas that build live data dashboards and code-generated animations from a plain-language ask. → <a href="#L5">L5</a></p></div>
         <div><span class="state new">Watch</span><strong>A lab's own numbers can move the market more than its product news</strong><p>OpenAI told investors its annualized revenue was near $50 billion, about $20 billion below an earlier widely circulated figure, and the disclosure alone knocked billions off Nvidia, Oracle and CoreWeave shares the same day. → <a href="#L5">L5</a></p></div>
-        <div><span class="state new">Watch</span><strong>Internal dissent at a frontier lab just became a public fight</strong><p>OpenAI reportedly fired three safety-team researchers after accusing them of sharing internal information with an outside AI-safety organization, reviving the "right to warn" debate that started back in 2024. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>The open-weight race keeps adding trillion-parameter contenders</strong><p>Mistral's Large 4, nicknamed "Le Chonk," launched as a 1.05-trillion-parameter mixture-of-experts model with only 49 billion active parameters, with open weights promised by October 27. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Model-welfare talk is turning into written policy, not just research framing</strong><p>Anthropic's revised usage policy now bans "sustained and needless" cruelty toward Claude, effective November 12 — a narrow, enforceable rule the company says isn't a claim that Claude is conscious. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -408,6 +408,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google will tighten free access to its Gemini app starting October 9, limiting users with no paid plan to the smaller Flash-Lite model and dropping Gemini Pro access for AI Plus subscribers, while AI Pro and Ultra tiers keep every model</h3>
             <p class="why"><b>Why it matters:</b> tiering a flagship assistant by subscription price is a direct look at how a lab balances free reach against monetizing its best capability — worth weighing against any pricing plan for an app you'd design in <a href="#L5">L5</a>.</p>
             <p class="src"><a href="https://letsdatascience.com/news/google-limits-gemini-model-access-by-subscription-24b0d7ca">letsdatascience.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Agents</span></div>
+          <div><h3>Google Cloud launched the Gemini agent, a single work agent that plans tasks, calls tools and returns results inside Gmail, Docs, Sheets, Microsoft 365 and Slack, picking either Google's Gemini models or Anthropic's Claude per task</h3>
+            <p class="why"><b>Why it matters:</b> letting employees spin up "coworker agents" with their own email address and scoped access, on a mix of a rival's models, is a concrete design pattern worth studying before building a tool-using agent of your own (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.thestar.com.my/tech/tech-news/2026/10/08/google-cloud-introduces-gemini-agent-for-work-as-ai-race-heats-up">thestar.com.my</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-08</span><span class="pill sec">Safety</span></div>
+          <div><h3>Anthropic updated its usage policy to prohibit "sustained and needless" abusive or cruel behavior toward Claude, effective November 12, saying the rule targets extreme cases rather than ordinary frustration or dark creative writing</h3>
+            <p class="why"><b>Why it matters:</b> Anthropic frames this as a narrow product rule, not a claim that Claude is conscious, but it's a concrete case of model-welfare concerns becoming an enforceable policy — worth weighing against the alignment debates in <a href="#L7">L7</a>.</p>
+            <p class="src"><a href="https://officechai.com/ai/anthropic-bars-cruel-behaviour-towards-its-models-as-a-part-of-new-policy/">officechai.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-08</span><span class="pill">Industry</span></div>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill sec">Security</span></div>
-          <div><h3>Anthropic widened its Cyber Verification Program to three tiers of vetted access on Opus 5.5 and Sonnet 5.5, alongside a new $35 million fund in Claude credits for open-source developers fixing vulnerabilities</h3>
-            <p class="why"><b>Why it matters:</b> easing safety guardrails only for vetted defenders is a concrete version of the dual-use access controls you'd need to design for any security tool built on a capable model (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/anthropic-expands-mythos-5-security-scanning-access-00809d88">letsdatascience.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
           <div><h3>Mistral unveiled Large 4, nicknamed "Le Chonk," a reported 1.05-trillion-parameter mixture-of-experts model with only 49 billion active parameters and a 1-million-token context window, available now through Mistral's API with open weights promised by October 27</h3>
             <p class="why"><b>Why it matters:</b> the two-month gap between "available via API" and "open weights" is worth noting before you plan a local-model project around a release that isn't downloadable yet (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">techcrunch.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-04</span><span class="pill">Agents</span></div>
-          <div><h3>The Model Context Protocol's current specification reportedly made its core stateless, retired the older HTTP+SSE transport, added MCP Apps and long-running Tasks, and aligned authorization with OAuth, with governance now sitting under the Linux Foundation's Agentic AI Foundation</h3>
-            <p class="why"><b>Why it matters:</b> a tool-calling protocol maturing enough to get its transport and auth model overhauled is a sign MCP is heading toward a stable standard rather than a moving target — worth revisiting before building a tool server in <a href="#L6">L6</a>.</p>
-            <p class="src"><a href="https://radar.firstaimovers.com/agentic-coding-agents-july-2026-momentum-mcp-spec-revision">radar.firstaimovers.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,57 +674,59 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
-        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator">
-          <span class="label">New this refresh · 2026-10-10 · connects to <a href="#L4">L4</a></span>
-          <h3>Where does a context window actually go?</h3>
-          <p class="lede">Drag the sliders to split a model's context window across a system prompt, chat history and retrieved chunks. The bar shows how much is left for the reply, and turns amber once you overflow it — the budgeting problem behind any "1-million-token context" headline. Simplified: real token counts depend on the tokenizer, and these four buckets are round numbers you set, not a real prompt's measured breakdown.</p>
-          <div class="pt-row">
-            <label for="pt-total" class="mono">context window</label>
-            <input type="range" id="pt-total" min="8" max="1000" step="8" value="200">
-            <span class="mono" id="pt-total-val">—</span>
-          </div>
-          <div class="pt-row">
-            <label for="pt-sys" class="mono">system prompt</label>
-            <input type="range" id="pt-sys" min="0" max="50" step="1" value="4">
-            <span class="mono" id="pt-sys-val">—</span>
-          </div>
-          <div class="pt-row">
-            <label for="pt-hist" class="mono">chat history</label>
-            <input type="range" id="pt-hist" min="0" max="400" step="4" value="40">
-            <span class="mono" id="pt-hist-val">—</span>
-          </div>
-          <div class="pt-row">
-            <label for="pt-ret" class="mono">retrieved chunks</label>
-            <input type="range" id="pt-ret" min="0" max="400" step="4" value="20">
-            <span class="mono" id="pt-ret-val">—</span>
-          </div>
+        <!-- HISTORY: chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges -->
+        <div class="pgcard pgtopic" data-topic="bpe-tokenization-merges">
+          <span class="label">New this refresh · 2026-10-10 · connects to <a href="#L3">L3</a></span>
+          <h3>Watch a tokenizer learn merges, one pair at a time</h3>
+          <p class="lede">Byte-pair encoding builds its vocabulary by repeatedly merging the most frequent adjacent symbol pair across a training corpus. Click through the steps below to replay that loop on a tiny four-word corpus and watch the token boundaries change. Simplified: a real tokenizer trains on billions of bytes and keeps thousands of merges — this toy stops at four words and however many steps you click.</p>
           <div class="pt-ctl">
-            <div class="pt-track" style="flex:1;min-width:160px"><div class="pt-fill" id="pt-fill"></div></div>
-            <span class="mono" id="pt-val">—</span>
+            <button type="button" class="btn primary" id="pt-step">Merge next pair</button>
+            <button type="button" class="btn" id="pt-reset">Reset</button>
+            <span class="mono" id="pt-count">0 merges</span>
           </div>
+          <p class="mono" id="pt-corpus" style="word-break:break-word"></p>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var total=document.getElementById("pt-total"), sys=document.getElementById("pt-sys"), hist=document.getElementById("pt-hist"), ret=document.getElementById("pt-ret");
-          var totalVal=document.getElementById("pt-total-val"), sysVal=document.getElementById("pt-sys-val"), histVal=document.getElementById("pt-hist-val"), retVal=document.getElementById("pt-ret-val");
-          var fill=document.getElementById("pt-fill"), val=document.getElementById("pt-val"), readout=document.getElementById("pt-readout");
-          function fmt(k){ return k>=1000 ? (k/1000).toFixed(1)+"M" : k+"k"; }
-          function update(){
-            var t=+total.value, s=+sys.value, h=+hist.value, r=+ret.value;
-            totalVal.textContent=fmt(t); sysVal.textContent=fmt(s); histVal.textContent=fmt(h); retVal.textContent=fmt(r);
-            var used=s+h+r;
-            var pct=Math.max(0,Math.min(100,(used/t)*100));
-            fill.style.width=pct.toFixed(0)+"%";
-            fill.style.background = used>t ? "var(--signal)" : "var(--accent)";
-            val.textContent=fmt(used)+" / "+fmt(t);
-            if(used>t){
-              readout.textContent="over budget by "+fmt(used-t)+" — trim history or retrieved chunks before the reply has room";
-            } else {
-              readout.textContent=fmt(t-used)+" left for the model's reply, out of "+fmt(t)+" total";
-            }
+          var corpusInit=[["l","o","w","_"],["l","o","w","e","r","_"],["n","e","w","e","s","t","_"],["w","i","d","e","s","t","_"]];
+          var freq=[5,2,6,3], words, merges;
+          var stepBtn=document.getElementById("pt-step"), resetBtn=document.getElementById("pt-reset");
+          var corpusEl=document.getElementById("pt-corpus"), readout=document.getElementById("pt-readout"), countEl=document.getElementById("pt-count");
+          function topPair(){
+            var counts={};
+            words.forEach(function(w,i){
+              for(var j=0;j<w.length-1;j++){
+                var k=w[j]+" "+w[j+1];
+                counts[k]=(counts[k]||0)+freq[i];
+              }
+            });
+            var best=null, bestCount=0;
+            for(var k in counts){ if(counts[k]>bestCount){ bestCount=counts[k]; best=k; } }
+            return best ? best.split(" ") : null;
           }
-          [total,sys,hist,ret].forEach(function(el){ el.addEventListener("input", update); });
-          update();
+          function step(){
+            var pair=topPair();
+            if(!pair){ readout.textContent="No pairs left — every word is a single token."; stepBtn.disabled=true; return; }
+            var a=pair[0], b=pair[1], merged=a+b;
+            words=words.map(function(w){
+              var out=[];
+              for(var i=0;i<w.length;i++){
+                if(i<w.length-1 && w[i]===a && w[i+1]===b){ out.push(merged); i++; }
+                else out.push(w[i]);
+              }
+              return out;
+            });
+            merges.push(a+" + "+b+" → "+merged);
+            render();
+          }
+          function render(){
+            corpusEl.textContent=words.map(function(w){ return w.join("·"); }).join("   ");
+            countEl.textContent=merges.length+" merge"+(merges.length===1?"":"s");
+            readout.textContent=merges.length ? "Last merge: "+merges[merges.length-1] : "Click “Merge next pair” to run the first step.";
+          }
+          function reset(){ words=corpusInit.map(function(w){ return w.slice(); }); merges=[]; stepBtn.disabled=false; render(); }
+          stepBtn.addEventListener("click", step);
+          resetBtn.addEventListener("click", reset);
+          reset();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
