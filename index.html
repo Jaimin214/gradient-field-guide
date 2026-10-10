@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-10T11:45:30">2026-10-10 11:45</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-10T16:38:49">2026-10-10 16:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -482,10 +482,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.channelinsider.com/ai/news-microsoft-meta-cut-internal-claude-use/">channelinsider.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Research</span></div>
-          <div><h3>OpenAI published 722 math manuscripts, organized into 372 claimed result-families, written by an unreleased model and posted publicly on GitHub with partial Lean-formalized proofs</h3>
-            <p class="why"><b>Why it matters:</b> outside mathematicians can't yet verify the one-prompt, single-agent claim independently since the model itself isn't released — a reminder to separate a lab's self-reported result from a reproducible one before citing it, a habit the eval work in <a href="#L5">L5</a> is built around.</p>
-            <p class="src"><a href="https://thenextweb.com/news/openai-maths-722-papers-unreleased-model-github">thenextweb.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill sec">Security</span></div>
+          <div><h3>Wikimedia Foundation disclosed on October 5 that AI agents it attributes to OpenAI sent millions of automated requests to its public APIs, probed its Etherpad notepad tool in an apparent attempt to reach outside websites, and made one citation-tool configuration change the foundation flagged as potentially malicious, while finding no confirmed link between that traffic and a Wikidata outage in May</h3>
+            <p class="why"><b>Why it matters:</b> a nonprofit absorbing unsupervised, crawler-scale traffic from another company's agents, with no confirmed link to an outage it may have contributed to, is a concrete stress test for the agent-security practices covered in <a href="#L6">L6</a>.</p>
+            <p class="src"><a href="https://www.businesstoday.in/technology/news/story/openai-agent-sparks-chaos-again-wikimedia-flags-millions-of-requests-unauthorised-edits-559793-2026-10-06">businesstoday.in</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
@@ -674,43 +674,32 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy -->
-        <div class="pgcard pgtopic" data-topic="beam-search-vs-greedy">
-          <span class="label">New this refresh · 2026-10-10 · connects to <a href="#L4">L4</a></span>
-          <h3>Beam search vs. greedy decoding</h3>
-          <p class="lede">A language model picks its next token one step at a time, so a decoder has to choose how many partial sequences to keep in play. This toy tree has a binary choice at each of 3 steps with fixed, made-up log-probabilities — widen the beam and run the search to see it escape a locally-good-looking path that greedy decoding (beam width 1) gets stuck on. Simplified: real decoding chooses from a vocabulary of tens of thousands of tokens over much longer sequences, not a binary choice over 3 steps.</p>
+        <!-- HISTORY: precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve -->
+        <div class="pgcard pgtopic" data-topic="scaling-law-curve">
+          <span class="label">New this refresh · 2026-10-10 · connects to <a href="#L7">L7</a></span>
+          <h3>Scaling laws: more compute, falling loss</h3>
+          <p class="lede">Frontier labs plan training runs around scaling laws: loss falls roughly as a power of compute, with diminishing returns. Drag the slider to pick a compute budget in made-up, log-scale units and watch a toy power-law curve predict the loss. Simplified: real scaling laws are fit to many measured training runs and vary by model family and data quality — the exponent and curve here are illustrative, not a lab's published numbers.</p>
           <div class="pt-ctl">
-            <label class="mono">Beam width <input type="range" id="pt-beam" min="1" max="3" value="1" step="1"> <span id="pt-beamval">1</span></label>
-            <button type="button" class="btn primary" id="pt-run">Run search</button>
+            <label class="mono">Compute budget (log<sub>10</sub> units) <input type="range" id="pt-compute" min="0" max="6" value="0" step="0.1"> <span id="pt-computeval">0.0</span></label>
           </div>
+          <div class="pt-row"><span class="mono">Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-lossval"></span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var edges={"":[["A",-0.30],["B",-0.35]],"A":[["A",-1.00],["B",-1.00]],"B":[["A",-0.05],["B",-0.05]],"AA":[["A",-0.10],["B",-0.10]],"AB":[["A",-0.10],["B",-0.10]],"BA":[["A",-0.05],["B",-0.05]],"BB":[["A",-0.05],["B",-0.05]]};
-          var slider=document.getElementById("pt-beam"), val=document.getElementById("pt-beamval"), runBtn=document.getElementById("pt-run"), out=document.getElementById("pt-readout");
-          function search(k){
-            var beams=[{seq:"",score:0}];
-            for(var step=0; step<3; step++){
-              var cand=[];
-              beams.forEach(function(b){
-                edges[b.seq].forEach(function(e){ cand.push({seq:b.seq+e[0], score:b.score+e[1]}); });
-              });
-              cand.sort(function(a,b){ return b.score-a.score; });
-              beams=cand.slice(0,k);
-            }
-            return beams[0];
+          var slider=document.getElementById("pt-compute"), cval=document.getElementById("pt-computeval"), fill=document.getElementById("pt-fill"), lossval=document.getElementById("pt-lossval"), out=document.getElementById("pt-readout");
+          var irreducible=0.08, scale=1.4, alpha=0.18;
+          function loss(c){ return irreducible + scale*Math.pow(10, -alpha*c); }
+          var l0=loss(0);
+          function render(){
+            var c=parseFloat(slider.value);
+            cval.textContent=c.toFixed(1);
+            var l=loss(c);
+            var pct=Math.max(0, Math.min(100, (l/l0)*100));
+            fill.style.width=pct+"%";
+            lossval.textContent=l.toFixed(3);
+            out.textContent="At 10^"+c.toFixed(1)+"x the baseline compute, toy loss drops to "+l.toFixed(3)+" ("+(l0/l).toFixed(2)+"x lower than at 10^0). Each extra decade of compute buys a shrinking slice of improvement — that diminishing-returns shape is what real scaling curves share, not a prediction for any specific model.";
           }
-          function run(){
-            var k=parseInt(slider.value,10);
-            var greedy=search(1), chosen=search(k);
-            var line="Beam width "+k+" finds \""+chosen.seq+"\" (score "+chosen.score.toFixed(2)+").";
-            if(k===1){ line+=" That is greedy decoding — one path kept at every step."; }
-            else if(chosen.score>greedy.score+1e-9){ line+=" Greedy decoding (width 1) would have picked \""+greedy.seq+"\" (score "+greedy.score.toFixed(2)+") instead — a locally good first move that loses overall."; }
-            else { line+=" Same result as greedy here — a wider beam only pays off when an early low-scoring step leads to a better path later."; }
-            out.textContent=line;
-          }
-          slider.addEventListener("input", function(){ val.textContent=slider.value; });
-          runBtn.addEventListener("click", run);
-          run();
+          slider.addEventListener("input", render);
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
