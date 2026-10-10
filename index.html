@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-09T16:42:00">2026-10-09 16:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-09T20:41:32">2026-10-09 20:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,10 +396,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent security incidents are piling up faster than labs can respond</strong><p>Wikimedia reported OpenAI-operated agents hammering its infrastructure, a Pwn2Own contest exploited OpenAI's Codex agent on its first day, and researchers tracked a separate agent fleet bombarding a mapping service with thousands of requests. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent security incidents keep landing on real infrastructure</strong><p>Wikimedia reported OpenAI-operated agents hammering its sites with millions of requests, and a Pwn2Own contest exploited OpenAI's Codex agent on the event's first day — two separate agent-security failures inside the same week. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Frontier assistants are getting cheaper and more interactive in the same week</strong><p>OpenAI began rolling GPT-6 out to ChatGPT with a new "Intelligent UI" that renders live widgets instead of text, right as Anthropic cut list prices on its small Haiku 5.5 model by a reported 75% for most prompts. → <a href="#L5">L5</a></p></div>
         <div><span class="state new">Watch</span><strong>Internal dissent at a frontier lab just became a public fight</strong><p>OpenAI reportedly fired three safety-team researchers after accusing them of sharing internal information with an outside AI-safety organization, reviving the "right to warn" debate that started back in 2024. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>On-device silicon is chasing the same memory bottleneck as serving software</strong><p>Microsoft and Nvidia pitched a new RTX Spark chip as a baseline for on-device AI at a joint event, the hardware counterpart to the quantization and local-serving trade-offs covered in this guide. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Labeling AI-generated text is turning into a compliance requirement, not a research extra</strong><p>OpenAI began invisibly watermarking ChatGPT and Codex output for EU users under the AI Act, while its own reporting shows paraphrasing can knock detection accuracy down sharply. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>The open-weight race keeps adding trillion-parameter contenders</strong><p>Mistral's Large 4, nicknamed "Le Chonk," launched as a 1.05-trillion-parameter mixture-of-experts model with only 49 billion active parameters, with open weights promised by October 27. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
@@ -470,28 +470,28 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://letsdatascience.com/news/anthropic-expands-mythos-5-security-scanning-access-00809d88">letsdatascience.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Policy</span></div>
-          <div><h3>A global regulatory roundup reported that AI rules tightened across the EU, the US and roughly 15 other countries in early October, pointing to new technical audits, systemic-risk evaluations for general-purpose models, and a growing patchwork of national sovereign-AI policies</h3>
-            <p class="why"><b>Why it matters:</b> "AI regulation" is now a multi-jurisdiction patchwork rather than one law, so it's worth checking which specific audit or disclosure rule actually applies before assuming a single policy covers a product you'd design in <a href="#L5">L5</a> (<a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://af.net/cn/realtime/global-ai-regulation-updates-eu-us-and-15-nations-implement-key-compliance-measures/">af.net</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
           <div><h3>Mistral unveiled Large 4, nicknamed "Le Chonk," a reported 1.05-trillion-parameter mixture-of-experts model with only 49 billion active parameters and a 1-million-token context window, available now through Mistral's API with open weights promised by October 27</h3>
             <p class="why"><b>Why it matters:</b> the two-month gap between "available via API" and "open weights" is worth noting before you plan a local-model project around a release that isn't downloadable yet (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill sec">Security</span></div>
-          <div><h3>Independent researchers calling themselves Swarmchasers reported tracking a large fleet of AI agents, running on Tencent infrastructure, that bombarded Alibaba's Amap mapping service with requests about entrances to parks, museums, zoos and hospitals, logging 1,810 reports across 213 locations at its October 4 peak</h3>
-            <p class="why"><b>Why it matters:</b> the agents reportedly got past Amap's anti-bot defenses using techniques drawn from earlier public disclosures, and nobody has said who built the fleet or why — a concrete, unresolved case of the agent-security gap <a href="#L6">L6</a> covers.</p>
-            <p class="src"><a href="https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet/">techcrunch.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill sec">Safety</span></div>
+          <div><h3>OpenAI began rolling out an invisible watermark it calls textGrain into ChatGPT and Codex output for European Union users, biasing the model's word choices during generation to satisfy the EU AI Act's rule that AI-generated text be machine-identifiable</h3>
+            <p class="why"><b>Why it matters:</b> by OpenAI's own reporting, paraphrasing as little as 10% of the words in a passage can knock detection accuracy from around 92% down into the 60s or lower — a reminder that provenance tools built on sampling tricks (<a href="#L4">L4</a>) are best-effort, not proof.</p>
+            <p class="src"><a href="https://interestingengineering.com/ai-robotics/openai-chatgpt-invisible-watermarks-eu">interestingengineering.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-05</span><span class="pill">Agents</span></div>
           <div><h3>Meta reportedly scrapped a second, larger wave of layoffs under an internal plan code-named "Project OT" that would have cut some teams by up to 60% and shifted the work to AI coding agents, after employee backlash and internal data showing the agents rarely turned their commits into shipped features</h3>
             <p class="why"><b>Why it matters:</b> reported internal numbers put it at a 220% year-over-year jump in AI-assisted code changes but only 36% of that work shipping as a real feature, with security incidents up 40% — a concrete data point for judging an agent's real throughput before trusting one in production (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://the-decoder.com/employee-revolt-and-failing-agents-forced-meta-to-scrap-its-ai-layoff-plan/">the-decoder.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Policy</span></div>
+          <div><h3>Connecticut's SB 5 took effect October 1, requiring any employer that files a federal WARN Act layoff notice in the state to also disclose to the state Department of Labor whether the job cuts are tied to its adoption of AI, enforced solely by the state attorney general</h3>
+            <p class="why"><b>Why it matters:</b> it's reportedly one of the first laws anywhere that forces a paper trail on "AI did this layoff" claims, rather than leaving that connection to press reports — worth watching if other states follow before you weigh any "AI replaced jobs" headline for <a href="#L5">L5</a> (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://www.afslaw.com/perspectives/ai-law-blog/connecticut-takes-aim-ai-employment-decisions-sb-5">afslaw.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,53 +674,56 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter">
-          <span class="label">New this refresh · 2026-10-09 · connects to <a href="#L6">L6</a></span>
-          <h3>How many steps before an agent loop runs out of budget?</h3>
-          <p class="lede">This week's agent-security stories (Wikimedia's flooded servers, the Pwn2Own Codex exploit, a mapping-site agent fleet) all involve an agent looping — plan, act, observe, repeat — with no cap anyone was watching. Set a step budget and a "goal" step below, then run the loop and see whether it stops because it reached the goal or because it ran out of budget first. Simplified: real agents choose each action with a model call, not this toy's fixed rotation, and "reaching the goal" here is just matching a slider value, not a real task signal.</p>
-          <div class="pt-ctl">
-            <label for="pt-budget">step budget</label><input type="range" id="pt-budget" min="1" max="20" value="8"><span class="mono" id="pt-budgetval">8</span>
-            <label for="pt-goal">goal at step</label><input type="range" id="pt-goal" min="1" max="20" value="5"><span class="mono" id="pt-goalval">5</span>
-            <button type="button" class="btn primary" id="pt-run">Run loop</button>
+        <!-- HISTORY: tokenization-bpe-merges, scaling-law-curve, chunk-size-vs-retrieval, learning-rate-schedules, precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings -->
+        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings">
+          <span class="label">New this refresh · 2026-10-09 · connects to <a href="#L5">L5</a></span>
+          <h3>How "close" are two phrases to an embedding model?</h3>
+          <p class="lede">Type two short phrases. Each becomes an 8-dimensional vector from a deterministic character hash, and the bar shows the cosine similarity between them — the same metric a RAG system uses to rank retrieved chunks against a query. Simplified: these are fixed hash vectors, not vectors a real embedding model learned from data, so this toy rewards shared characters, not shared meaning — a trained embedding model can score two phrases as similar with no words in common at all.</p>
+          <div class="pt-row">
+            <label for="pt-a" class="mono">phrase A</label>
+            <input type="text" id="pt-a" value="machine learning" autocomplete="off" style="font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
+            <span></span>
           </div>
-          <div id="pt-log" class="mono" style="display:flex;flex-direction:column;gap:2px;max-height:160px;overflow-y:auto"></div>
-          <p class="mono" id="pt-readout">Set a budget and goal step, then run the loop.</p>
+          <div class="pt-row">
+            <label for="pt-b" class="mono">phrase B</label>
+            <input type="text" id="pt-b" value="deep learning" autocomplete="off" style="font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
+            <span></span>
+          </div>
+          <div class="pt-ctl">
+            <div class="pt-track" style="flex:1;min-width:160px"><div class="pt-fill" id="pt-fill"></div></div>
+            <span class="mono" id="pt-val">—</span>
+          </div>
+          <p class="mono" id="pt-readout">Cosine similarity of two hash-based 8-dim vectors.</p>
           <script>(function(){
-          var ACTIONS=["plan next step","call search tool","read file","call API","write output","check goal"];
-          var budgetEl=document.getElementById("pt-budget"), goalEl=document.getElementById("pt-goal");
-          var budgetVal=document.getElementById("pt-budgetval"), goalVal=document.getElementById("pt-goalval");
-          var runBtn=document.getElementById("pt-run");
-          var log=document.getElementById("pt-log");
-          var readout=document.getElementById("pt-readout");
-          function sync(){ budgetVal.textContent=budgetEl.value; goalVal.textContent=goalEl.value; }
-          budgetEl.addEventListener("input", sync);
-          goalEl.addEventListener("input", sync);
-          function run(){
-            log.textContent="";
-            var budget=parseInt(budgetEl.value,10), goal=parseInt(goalEl.value,10);
-            var step=0;
-            function tick(){
-              step++;
-              var line=document.createElement("div");
-              line.textContent="step "+step+": "+ACTIONS[(step-1)%ACTIONS.length];
-              log.appendChild(line);
-              log.scrollTop=log.scrollHeight;
-              if(step===goal){
-                readout.textContent="Stopped at step "+step+": goal reached.";
-                return;
-              }
-              if(step>=budget){
-                readout.textContent="Stopped at step "+step+": budget exhausted before the goal.";
-                return;
-              }
-              setTimeout(tick, 220);
+          var aEl=document.getElementById("pt-a"), bEl=document.getElementById("pt-b");
+          var fill=document.getElementById("pt-fill"), val=document.getElementById("pt-val"), readout=document.getElementById("pt-readout");
+          function hashVec(s){
+            var v=new Array(8).fill(0);
+            for(var i=0;i<s.length;i++){
+              var c=s.charCodeAt(i);
+              v[(c+i)%8]+=((c*31+i*7)%17)-8;
             }
-            readout.textContent="Running…";
-            tick();
+            return v;
           }
-          runBtn.addEventListener("click", run);
-          sync();
+          function dot(a,b){ var s=0; for(var i=0;i<a.length;i++) s+=a[i]*b[i]; return s; }
+          function norm(a){ return Math.sqrt(dot(a,a)); }
+          function cos(a,b){
+            var na=norm(a), nb=norm(b);
+            if(na===0||nb===0) return 0;
+            return dot(a,b)/(na*nb);
+          }
+          function update(){
+            var a=hashVec(aEl.value.trim().toLowerCase());
+            var b=hashVec(bEl.value.trim().toLowerCase());
+            var c=cos(a,b);
+            var pct=Math.max(0,Math.min(1,(c+1)/2));
+            fill.style.width=(pct*100).toFixed(0)+"%";
+            val.textContent=c.toFixed(3);
+            readout.textContent="cosine similarity: "+c.toFixed(3)+" (range -1 to 1; this toy's hash vectors reward shared characters, not shared meaning)";
+          }
+          aEl.addEventListener("input", update);
+          bEl.addEventListener("input", update);
+          update();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
