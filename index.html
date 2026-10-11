@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-10T16:38:49">2026-10-10 16:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-10T20:38:43">2026-10-10 20:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
+        <div><span class="state rising">Rising</span><strong>Frontier releases now ship behind access gates</strong><p>Google's Gemini 4 Argon claims a benchmark lead over OpenAI and Anthropic but is limited to vetted cybersecurity partners, while Nvidia-backed Reflection AI's 501-billion-parameter Beam undercuts closed rivals on cost with its full weights still pending. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agent security incidents keep landing on real infrastructure</strong><p>Wikimedia reported OpenAI-operated agents hammering its sites with millions of requests, and a Pwn2Own contest exploited OpenAI's Codex agent on the event's first day — two separate agent-security failures inside the same week. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>"Coworker agents" became the product battleground</strong><p>Google Cloud's new Gemini agent can work inside Gmail, Docs and Slack and hand tasks to Anthropic's Claude models, landing weeks after Meta's Muse and OpenAI's always-on "dots" — each one acting under its own email address with scoped access. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Chat answers are turning into generated apps, not just text</strong><p>OpenAI's GPT-6 rollout added an "Intelligent UI" that renders live widgets, and days later Anthropic shipped Claude Dashboards and Claude Motion betas that build live data dashboards and code-generated animations from a plain-language ask. → <a href="#L5">L5</a></p></div>
+        <div><span class="state steady">Steady</span><strong>"Coworker agents" are the product battleground</strong><p>Google Cloud's new Gemini agent can work inside Gmail, Docs and Slack and hand tasks to Anthropic's Claude models, while Anthropic's own Claude Dashboards and Motion betas turn a plain-language ask into a live dashboard or a code-generated animation. → <a href="#L5">L5</a></p></div>
+        <div><span class="state new">Watch</span><strong>Governments are putting frontier labs under oath</strong><p>New York City's Council subpoenaed Elon Musk's SpaceX AI unit and heard a former Anthropic researcher's whistleblower testimony at an AI-safety hearing, days after OpenAI fired three safety researchers over an unauthorized-disclosure dispute. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Big employers are pulling AI tooling back in-house</strong><p>Meta and Microsoft are reportedly cutting how much staff use Anthropic's Claude in favor of cheaper internal tools, the same week GitHub's Copilot CLI added support for talking to models you run yourself through Ollama. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Model-welfare talk is turning into written policy, not just research framing</strong><p>Anthropic's revised usage policy now bans "sustained and needless" cruelty toward Claude, effective November 12 — a narrow, enforceable rule the company says isn't a claim that Claude is conscious. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -440,12 +440,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.commondreams.org/news/openai-firing-whistleblowers">commondreams.org</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Models</span></div>
-          <div><h3>OpenAI began rolling out GPT-6 to ChatGPT this week alongside a new "Intelligent UI" that can render tappable buttons, calculators and editable charts instead of plain text, reaching paid tiers first and free users by October 8</h3>
-            <p class="why"><b>Why it matters:</b> a chat interface that answers with live widgets instead of text blurs the line between a chatbot and a generated app — worth comparing against any interface you'd design for an LLM product in <a href="#L5">L5</a>.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/openai-brings-gpt-6-and-intelligent-ui-to-chatgpt-4f0d797c">letsdatascience.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill">Models</span></div>
           <div><h3>Anthropic launched Claude Haiku 5.5, a small model reportedly priced around 75% below Haiku 4.5 for prompts under 100,000 tokens, with a steeper per-token rate once a prompt crosses that length</h3>
             <p class="why"><b>Why it matters:</b> a cheap small model built for high-volume, low-latency work is the real workhorse behind most production LLM apps — worth weighing against a frontier model's cost for anything you'd scope in <a href="#L5">L5</a> (<a href="#projects">Project 3</a>).</p>
@@ -462,12 +456,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>GitHub's Copilot CLI (from version 1.0.94) added a /model command that discovers models served by a locally running Ollama instance so you can switch the CLI to one of your own models mid-session</h3>
             <p class="why"><b>Why it matters:</b> a mainstream coding-agent CLI now treats a self-hosted model as a first-class option next to hosted ones — worth trying against the local-serving setup in <a href="#L4">L4</a>, though GitHub notes picking a local model does not turn on offline mode or disable telemetry.</p>
             <p class="src"><a href="https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli">github.blog</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Local</span></div>
-          <div><h3>Microsoft and Nvidia held a Windows and Surface event on October 7 built around on-device AI, with Nvidia's new RTX Spark chip powering a Surface Laptop Ultra and a Surface RTX Spark Dev Box, and CEOs Satya Nadella and Jensen Huang appearing together on stage</h3>
-            <p class="why"><b>Why it matters:</b> dedicated silicon for running models on the device itself is the hardware counterpart to the quantization and local-serving material in <a href="#L4">L4</a> — worth comparing against what a consumer GPU can already do.</p>
-            <p class="src"><a href="https://windowscentral.com/microsoft/windows-11/microsoft-surface-event-announced-for-october-7-heres-everything-we-know-so-far">windowscentral.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill">Research</span></div>
@@ -488,10 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.businesstoday.in/technology/news/story/openai-agent-sparks-chaos-again-wikimedia-flags-millions-of-requests-unauthorised-edits-559793-2026-10-06">businesstoday.in</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral unveiled Large 4, nicknamed "Le Chonk," a reported 1.05-trillion-parameter mixture-of-experts model with only 49 billion active parameters and a 1-million-token context window, available now through Mistral's API with open weights promised by October 27</h3>
-            <p class="why"><b>Why it matters:</b> the two-month gap between "available via API" and "open weights" is worth noting before you plan a local-model project around a release that isn't downloadable yet (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">techcrunch.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Policy</span></div>
+          <div><h3>New York City's Council held a citywide AI-safety hearing, subpoenaing Elon Musk's SpaceX AI unit for not responding to requests to appear, hearing a former Anthropic researcher accuse his old employer and OpenAI of "gambling with our lives," and reviewing ten proposed bills on AI whistleblower pay and liability, while Anthropic, OpenAI, Google and Meta sent policy staff to testify</h3>
+            <p class="why"><b>Why it matters:</b> a city council subpoenaing a frontier lab and taking whistleblower testimony under oath is a sharper escalation than a company's own usage policy — a governance layer worth weighing against the alignment debates in <a href="#L7">L7</a>.</p>
+            <p class="src"><a href="https://thenextweb.com/news/nyc-council-subpoena-spacexai-ai-safety-hearing">thenextweb.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Open models</span></div>
+          <div><h3>Nvidia-backed Reflection AI released Beam, its first open-weight model — a 501-billion-parameter mixture-of-experts system with only 23 billion active parameters, a 1-million-token context window and training on 23.8 trillion tokens — which the company says matches Chinese rivals like Z.ai's GLM-5.2 on reasoning at a fraction of the inference cost, though full weights were still pending and the claims are unverified</h3>
+            <p class="why"><b>Why it matters:</b> a well-funded US entrant finally challenging DeepSeek and Qwen in the open-weight race is worth tracking before picking a model to self-host, though treat the efficiency numbers as reported until independent benchmarks land (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://www.scmp.com/tech/tech-trends/article/3369885/nvidia-backed-reflection-ai-challenges-chinese-dominance-open-weight-models">scmp.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Models</span></div>
+          <div><h3>Google introduced Gemini 4 Argon, a frontier model it says beats OpenAI's and Anthropic's models on benchmarks and can generate up to a million output tokens, but is initially restricted to vetted cybersecurity partners and Google's own teams through its Fairwind program rather than given a public release</h3>
+            <p class="why"><b>Why it matters:</b> gating a claimed frontier-beating model behind a vetted-partner program instead of shipping it broadly is a concrete staged-release pattern, worth comparing against the open and local models you can actually run in <a href="#L4">L4</a>.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/google-introduces-gemini-4-argon-with-limited-cyber-defense-d3adff18">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,31 +674,51 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: precision-recall-threshold, overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve -->
-        <div class="pgcard pgtopic" data-topic="scaling-law-curve">
-          <span class="label">New this refresh · 2026-10-10 · connects to <a href="#L7">L7</a></span>
-          <h3>Scaling laws: more compute, falling loss</h3>
-          <p class="lede">Frontier labs plan training runs around scaling laws: loss falls roughly as a power of compute, with diminishing returns. Drag the slider to pick a compute budget in made-up, log-scale units and watch a toy power-law curve predict the loss. Simplified: real scaling laws are fit to many measured training runs and vary by model family and data quality — the exponent and curve here are illustrative, not a lab's published numbers.</p>
+        <!-- HISTORY: overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedule">
+          <span class="label">New this refresh · 2026-10-10 · connects to <a href="#L2">L2</a></span>
+          <h3>Learning-rate schedules: how fast to step</h3>
+          <p class="lede">Training follows a schedule that shrinks the learning rate over time. Pick a schedule and a starting rate, then drag the epoch slider to see the rate itself and a toy loss curve that bounces when the rate stays too high. Simplified: this is a hand-picked formula for intuition, not logs from a real training run — labs like Reflection AI and Google don't publish the exact schedules behind releases like Beam or Gemini 4 Argon.</p>
           <div class="pt-ctl">
-            <label class="mono">Compute budget (log<sub>10</sub> units) <input type="range" id="pt-compute" min="0" max="6" value="0" step="0.1"> <span id="pt-computeval">0.0</span></label>
+            <label class="mono">Schedule <select id="pt-schedule"><option value="constant">Constant</option><option value="step">Step decay</option><option value="cosine" selected>Cosine decay</option></select></label>
+            <label class="mono">Initial rate <input type="range" id="pt-lr0" min="0.05" max="0.5" value="0.4" step="0.01"> <span id="pt-lr0val">0.40</span></label>
+            <label class="mono">Epoch <input type="range" id="pt-epoch" min="0" max="30" value="0" step="1"> <span id="pt-epochval">0</span></label>
           </div>
-          <div class="pt-row"><span class="mono">Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-lossval"></span></div>
+          <div class="pt-row"><span class="mono">Rate</span><div class="pt-track"><div class="pt-fill" id="pt-ratefill"></div></div><span class="mono" id="pt-rateval"></span></div>
+          <div class="pt-row"><span class="mono">Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-lossfill"></div></div><span class="mono" id="pt-lossval"></span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var slider=document.getElementById("pt-compute"), cval=document.getElementById("pt-computeval"), fill=document.getElementById("pt-fill"), lossval=document.getElementById("pt-lossval"), out=document.getElementById("pt-readout");
-          var irreducible=0.08, scale=1.4, alpha=0.18;
-          function loss(c){ return irreducible + scale*Math.pow(10, -alpha*c); }
-          var l0=loss(0);
-          function render(){
-            var c=parseFloat(slider.value);
-            cval.textContent=c.toFixed(1);
-            var l=loss(c);
-            var pct=Math.max(0, Math.min(100, (l/l0)*100));
-            fill.style.width=pct+"%";
-            lossval.textContent=l.toFixed(3);
-            out.textContent="At 10^"+c.toFixed(1)+"x the baseline compute, toy loss drops to "+l.toFixed(3)+" ("+(l0/l).toFixed(2)+"x lower than at 10^0). Each extra decade of compute buys a shrinking slice of improvement — that diminishing-returns shape is what real scaling curves share, not a prediction for any specific model.";
+          var sel=document.getElementById("pt-schedule"), lr0=document.getElementById("pt-lr0"), lr0val=document.getElementById("pt-lr0val"),
+              epoch=document.getElementById("pt-epoch"), epochval=document.getElementById("pt-epochval"),
+              rateFill=document.getElementById("pt-ratefill"), rateVal=document.getElementById("pt-rateval"),
+              lossFill=document.getElementById("pt-lossfill"), lossVal=document.getElementById("pt-lossval"),
+              out=document.getElementById("pt-readout");
+          var TOTAL=30;
+          function rateAt(e, base, kind){
+            if(kind==="constant") return base;
+            if(kind==="step") return base*Math.pow(0.5, Math.floor(e/10));
+            return base*0.5*(1+Math.cos(Math.PI*e/TOTAL));
           }
-          slider.addEventListener("input", render);
+          function lossAt(e, base, kind, r){
+            var instability = kind==="constant" ? Math.max(0, base-0.25)*2.2 : 0;
+            var bounce = instability*Math.sin(e*1.3)*Math.exp(-e/40);
+            return Math.max(0.02, 1/(1+0.18*e) + bounce);
+          }
+          function render(){
+            var base=parseFloat(lr0.value), e=parseFloat(epoch.value), kind=sel.value;
+            lr0val.textContent=base.toFixed(2);
+            epochval.textContent=e;
+            var r=rateAt(e, base, kind), l=lossAt(e, base, kind, r);
+            rateVal.textContent=r.toFixed(3);
+            lossVal.textContent=l.toFixed(3);
+            rateFill.style.width=Math.min(100,(r/0.5)*100)+"%";
+            lossFill.style.width=Math.min(100,(l/1.1)*100)+"%";
+            var note = kind==="constant" && base>0.25 ? "a high constant rate keeps bouncing instead of settling" : kind==="step" ? "the rate halves every 10 epochs, settling in visible steps" : "cosine decay glides the rate smoothly toward zero";
+            out.textContent="Epoch "+e+", "+kind+" schedule from "+base.toFixed(2)+": rate="+r.toFixed(3)+", toy loss="+l.toFixed(3)+" — "+note+". Illustrative formula, not a measured run.";
+          }
+          sel.addEventListener("change", render);
+          lr0.addEventListener("input", render);
+          epoch.addEventListener("input", render);
           render();
           })();</script>
         </div>
