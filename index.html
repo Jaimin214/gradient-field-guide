@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-11T01:41:44">2026-10-11 01:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-11T06:39:27">2026-10-11 06:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,44 +674,37 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold">
+        <!-- HISTORY: reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size -->
+        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size">
           <span class="label">New this refresh · 2026-10-11 · connects to <a href="#L1">L1</a></span>
-          <h3>Precision vs. recall: moving the decision threshold</h3>
-          <p class="lede">A detector like Google's newly public SynthID Detector has to turn a confidence score into a yes/no call somewhere. Drag the threshold to see how many of 20 toy items (half really AI-made, half not, each with a fixed hand-picked score) get caught, missed or wrongly flagged. Simplified: a tiny hardcoded dataset standing in for a real evaluation set — not SynthID's actual numbers, which Google hasn't published.</p>
+          <h3>Overfitting vs. model size: the bias&ndash;variance tradeoff</h3>
+          <p class="lede">Drag the model-capacity slider and watch training error and validation error pull apart. Training error keeps falling as capacity grows &mdash; the model can just memorize more &mdash; but validation error bottoms out and then climbs as the extra capacity starts fitting noise instead of signal. Simplified: both curves are hand-picked formulas chosen to show the shape, not numbers measured on a real dataset.</p>
           <div class="pt-ctl">
-            <label class="mono">Threshold <input type="range" id="pt-thresh" min="0" max="1" value="0.5" step="0.01"> <span id="pt-threshval">0.50</span></label>
+            <label class="mono">Model capacity <input type="range" id="pt-cap" min="1" max="10" value="1" step="1"> <span id="pt-capval">1</span></label>
           </div>
-          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-precfill"></div></div><span class="mono" id="pt-precval"></span></div>
-          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-recfill"></div></div><span class="mono" id="pt-recval"></span></div>
+          <div class="pt-row"><span class="mono">Training error</span><div class="pt-track"><div class="pt-fill" id="pt-trainfill"></div></div><span class="mono" id="pt-trainval"></span></div>
+          <div class="pt-row"><span class="mono">Validation error</span><div class="pt-track"><div class="pt-fill" id="pt-valfill"></div></div><span class="mono" id="pt-valval"></span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var scores=[0.95,0.91,0.88,0.84,0.8,0.74,0.69,0.63,0.58,0.52,0.47,0.41,0.36,0.3,0.25,0.19,0.14,0.09,0.05,0.02];
-          var isAI=[true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false];
-          var thresh=document.getElementById("pt-thresh"), threshVal=document.getElementById("pt-threshval"),
-              precFill=document.getElementById("pt-precfill"), precVal=document.getElementById("pt-precval"),
-              recFill=document.getElementById("pt-recfill"), recVal=document.getElementById("pt-recval"),
+          var cap=document.getElementById("pt-cap"), capVal=document.getElementById("pt-capval"),
+              trainFill=document.getElementById("pt-trainfill"), trainVal=document.getElementById("pt-trainval"),
+              valFill=document.getElementById("pt-valfill"), valVal=document.getElementById("pt-valval"),
               out=document.getElementById("pt-readout");
           function render(){
-            var t=parseFloat(thresh.value);
-            threshVal.textContent=t.toFixed(2);
-            var tp=0, fp=0, fn=0, tn=0;
-            for(var i=0;i<scores.length;i++){
-              var flagged=scores[i]>=t;
-              if(flagged && isAI[i]) tp++;
-              else if(flagged && !isAI[i]) fp++;
-              else if(!flagged && isAI[i]) fn++;
-              else tn++;
-            }
-            var precision = (tp+fp)===0 ? 1 : tp/(tp+fp);
-            var recall = (tp+fn)===0 ? 1 : tp/(tp+fn);
-            precVal.textContent=precision.toFixed(2);
-            recVal.textContent=recall.toFixed(2);
-            precFill.style.width=(precision*100)+"%";
-            recFill.style.width=(recall*100)+"%";
-            out.textContent="Threshold "+t.toFixed(2)+": "+tp+" true positives, "+fp+" false positives, "+fn+" false negatives, "+tn+" true negatives. Lower the threshold and recall climbs as precision falls; raise it and the reverse happens. Toy counts, not a real detector's numbers.";
+            var c=parseInt(cap.value,10);
+            capVal.textContent=c;
+            var train=Math.max(0.03, 0.55/c);
+            var val=Math.min(1, Math.max(0.05, 0.5/c + 0.012*Math.pow(c-2,2)));
+            trainVal.textContent=train.toFixed(2);
+            valVal.textContent=val.toFixed(2);
+            trainFill.style.width=(train*100)+"%";
+            valFill.style.width=(val*100)+"%";
+            var state = c<=2 ? "underfitting: both errors are high, the model is too simple" :
+                        (c<=4 ? "near the sweet spot: validation error is close to its minimum" :
+                        "overfitting: training error keeps dropping but validation error is climbing back up");
+            out.textContent="Capacity "+c+" — training error "+train.toFixed(2)+", validation error "+val.toFixed(2)+". "+state+". Synthetic curves for illustration, not a measured result.";
           }
-          thresh.addEventListener("input", render);
+          cap.addEventListener("input", render);
           render();
           })();</script>
         </div>
