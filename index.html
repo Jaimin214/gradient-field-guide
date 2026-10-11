@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-10T20:38:43">2026-10-10 20:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-11T01:41:44">2026-10-11 01:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier releases now ship behind access gates</strong><p>Google's Gemini 4 Argon claims a benchmark lead over OpenAI and Anthropic but is limited to vetted cybersecurity partners, while Nvidia-backed Reflection AI's 501-billion-parameter Beam undercuts closed rivals on cost with its full weights still pending. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Headline models still arrive half-available</strong><p>Mistral's roughly 1-trillion-parameter Large 4 shipped only as a research-preview API with open weights still pending, the same week Google cut free Gemini users down to its smallest Flash-Lite model — access, not raw capability, is the new bottleneck. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent-to-agent standards are multiplying</strong><p>Meta and Sierra's new Personal Agent Protocol, backed by Stripe, Shopify and Walmart, tries to standardize how a shopping agent proves it represents you, arriving the same week Google Cloud's Gemini agent started working inside Gmail, Docs and Slack. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Lab safety governance keeps generating friction</strong><p>Anthropic's new rule against "cruel" treatment of Claude and OpenAI's firing of three safety researchers over an unauthorized-disclosure dispute both turned internal safety debates into enforceable, contested policy. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Content-provenance tools are going cross-vendor</strong><p>Google opened its SynthID Detector to the public, now able to flag watermarked AI media from OpenAI, Nvidia and Kakao models too, not just its own. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agent security incidents keep landing on real infrastructure</strong><p>Wikimedia reported OpenAI-operated agents hammering its sites with millions of requests, and a Pwn2Own contest exploited OpenAI's Codex agent on the event's first day — two separate agent-security failures inside the same week. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>"Coworker agents" are the product battleground</strong><p>Google Cloud's new Gemini agent can work inside Gmail, Docs and Slack and hand tasks to Anthropic's Claude models, while Anthropic's own Claude Dashboards and Motion betas turn a plain-language ask into a live dashboard or a code-generated animation. → <a href="#L5">L5</a></p></div>
-        <div><span class="state new">Watch</span><strong>Governments are putting frontier labs under oath</strong><p>New York City's Council subpoenaed Elon Musk's SpaceX AI unit and heard a former Anthropic researcher's whistleblower testimony at an AI-safety hearing, days after OpenAI fired three safety researchers over an unauthorized-disclosure dispute. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Big employers are pulling AI tooling back in-house</strong><p>Meta and Microsoft are reportedly cutting how much staff use Anthropic's Claude in favor of cheaper internal tools, the same week GitHub's Copilot CLI added support for talking to models you run yourself through Ollama. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -452,6 +452,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.infosecurity-magazine.com/news/pwn2own-hackers-32-zeroday/">infosecurity-magazine.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Agents</span></div>
+          <div><h3>Meta and Sierra introduced the Personal Agent Protocol, an open standard — joined by Stripe, Shopify, Walmart and others — for how a shopping or service agent authenticates as acting on a specific person's behalf and what access a business grants it</h3>
+            <p class="why"><b>Why it matters:</b> letting a customer, not just a platform, decide whether an agent gets read-only or write access over OAuth is a concrete identity pattern worth studying before any tool-using agent you build in <a href="#L6">L6</a>.</p>
+            <p class="src"><a href="https://www.channelinsider.com/ai/news-meta-walmart-shopify-stripe-ai-agent-standard/">channelinsider.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-07</span><span class="pill sec">Safety</span></div>
+          <div><h3>Google opened its SynthID Detector website to the public worldwide, letting anyone check images, video and audio for SynthID watermarks from Google's own models as well as partner models from OpenAI, Nvidia and Kakao, with Apple reportedly coming soon</h3>
+            <p class="why"><b>Why it matters:</b> a cross-vendor watermark detector only catches content from models that opted in, so it's a partial, not general, defense against synthetic media — a limitation worth weighing against the alignment and misuse debates in <a href="#L7">L7</a>.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/google-opens-synthid-detector-for-cross-provider-ai-media-ch-209056d5">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill">Local</span></div>
           <div><h3>GitHub's Copilot CLI (from version 1.0.94) added a /model command that discovers models served by a locally running Ollama instance so you can switch the CLI to one of your own models mid-session</h3>
             <p class="why"><b>Why it matters:</b> a mainstream coding-agent CLI now treats a self-hosted model as a first-class option next to hosted ones — worth trying against the local-serving setup in <a href="#L4">L4</a>, though GitHub notes picking a local model does not turn on offline mode or disable telemetry.</p>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.businesstoday.in/technology/news/story/openai-agent-sparks-chaos-again-wikimedia-flags-millions-of-requests-unauthorised-edits-559793-2026-10-06">businesstoday.in</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Policy</span></div>
-          <div><h3>New York City's Council held a citywide AI-safety hearing, subpoenaing Elon Musk's SpaceX AI unit for not responding to requests to appear, hearing a former Anthropic researcher accuse his old employer and OpenAI of "gambling with our lives," and reviewing ten proposed bills on AI whistleblower pay and liability, while Anthropic, OpenAI, Google and Meta sent policy staff to testify</h3>
-            <p class="why"><b>Why it matters:</b> a city council subpoenaing a frontier lab and taking whistleblower testimony under oath is a sharper escalation than a company's own usage policy — a governance layer worth weighing against the alignment debates in <a href="#L7">L7</a>.</p>
-            <p class="src"><a href="https://thenextweb.com/news/nyc-council-subpoena-spacexai-ai-safety-hearing">thenextweb.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Open models</span></div>
-          <div><h3>Nvidia-backed Reflection AI released Beam, its first open-weight model — a 501-billion-parameter mixture-of-experts system with only 23 billion active parameters, a 1-million-token context window and training on 23.8 trillion tokens — which the company says matches Chinese rivals like Z.ai's GLM-5.2 on reasoning at a fraction of the inference cost, though full weights were still pending and the claims are unverified</h3>
-            <p class="why"><b>Why it matters:</b> a well-funded US entrant finally challenging DeepSeek and Qwen in the open-weight race is worth tracking before picking a model to self-host, though treat the efficiency numbers as reported until independent benchmarks land (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.scmp.com/tech/tech-trends/article/3369885/nvidia-backed-reflection-ai-challenges-chinese-dominance-open-weight-models">scmp.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-30</span><span class="pill">Models</span></div>
-          <div><h3>Google introduced Gemini 4 Argon, a frontier model it says beats OpenAI's and Anthropic's models on benchmarks and can generate up to a million output tokens, but is initially restricted to vetted cybersecurity partners and Google's own teams through its Fairwind program rather than given a public release</h3>
-            <p class="why"><b>Why it matters:</b> gating a claimed frontier-beating model behind a vetted-partner program instead of shipping it broadly is a concrete staged-release pattern, worth comparing against the open and local models you can actually run in <a href="#L4">L4</a>.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/google-introduces-gemini-4-argon-with-limited-cyber-defense-d3adff18">letsdatascience.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Models</span></div>
+          <div><h3>Mistral released Large 4 in research preview — a roughly 1-trillion-parameter mixture-of-experts model with about 49 billion active parameters — scoring near GPT-6 Luna and DeepSeek V4.1 Flash on Artificial Analysis's Intelligence Index, with open weights planned for later in October</h3>
+            <p class="why"><b>Why it matters:</b> a European lab landing near the top of an independent benchmark, with weights promised rather than shipped, is a concrete case study in staged releases worth comparing against the local models you can actually run today in <a href="#L4">L4</a>.</p>
+            <p class="src"><a href="https://artificialanalysis.ai/articles/mistral-large-4-france-ai">artificialanalysis.ai</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,51 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule -->
-        <div class="pgcard pgtopic" data-topic="learning-rate-schedule">
-          <span class="label">New this refresh · 2026-10-10 · connects to <a href="#L2">L2</a></span>
-          <h3>Learning-rate schedules: how fast to step</h3>
-          <p class="lede">Training follows a schedule that shrinks the learning rate over time. Pick a schedule and a starting rate, then drag the epoch slider to see the rate itself and a toy loss curve that bounces when the rate stays too high. Simplified: this is a hand-picked formula for intuition, not logs from a real training run — labs like Reflection AI and Google don't publish the exact schedules behind releases like Beam or Gemini 4 Argon.</p>
+        <!-- HISTORY: chain-of-thought-faithfulness, reward-hacking-metric-vs-goal, token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold -->
+        <div class="pgcard pgtopic" data-topic="precision-recall-threshold">
+          <span class="label">New this refresh · 2026-10-11 · connects to <a href="#L1">L1</a></span>
+          <h3>Precision vs. recall: moving the decision threshold</h3>
+          <p class="lede">A detector like Google's newly public SynthID Detector has to turn a confidence score into a yes/no call somewhere. Drag the threshold to see how many of 20 toy items (half really AI-made, half not, each with a fixed hand-picked score) get caught, missed or wrongly flagged. Simplified: a tiny hardcoded dataset standing in for a real evaluation set — not SynthID's actual numbers, which Google hasn't published.</p>
           <div class="pt-ctl">
-            <label class="mono">Schedule <select id="pt-schedule"><option value="constant">Constant</option><option value="step">Step decay</option><option value="cosine" selected>Cosine decay</option></select></label>
-            <label class="mono">Initial rate <input type="range" id="pt-lr0" min="0.05" max="0.5" value="0.4" step="0.01"> <span id="pt-lr0val">0.40</span></label>
-            <label class="mono">Epoch <input type="range" id="pt-epoch" min="0" max="30" value="0" step="1"> <span id="pt-epochval">0</span></label>
+            <label class="mono">Threshold <input type="range" id="pt-thresh" min="0" max="1" value="0.5" step="0.01"> <span id="pt-threshval">0.50</span></label>
           </div>
-          <div class="pt-row"><span class="mono">Rate</span><div class="pt-track"><div class="pt-fill" id="pt-ratefill"></div></div><span class="mono" id="pt-rateval"></span></div>
-          <div class="pt-row"><span class="mono">Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-lossfill"></div></div><span class="mono" id="pt-lossval"></span></div>
+          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-precfill"></div></div><span class="mono" id="pt-precval"></span></div>
+          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-recfill"></div></div><span class="mono" id="pt-recval"></span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var sel=document.getElementById("pt-schedule"), lr0=document.getElementById("pt-lr0"), lr0val=document.getElementById("pt-lr0val"),
-              epoch=document.getElementById("pt-epoch"), epochval=document.getElementById("pt-epochval"),
-              rateFill=document.getElementById("pt-ratefill"), rateVal=document.getElementById("pt-rateval"),
-              lossFill=document.getElementById("pt-lossfill"), lossVal=document.getElementById("pt-lossval"),
+          var scores=[0.95,0.91,0.88,0.84,0.8,0.74,0.69,0.63,0.58,0.52,0.47,0.41,0.36,0.3,0.25,0.19,0.14,0.09,0.05,0.02];
+          var isAI=[true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false,false,false,false,false];
+          var thresh=document.getElementById("pt-thresh"), threshVal=document.getElementById("pt-threshval"),
+              precFill=document.getElementById("pt-precfill"), precVal=document.getElementById("pt-precval"),
+              recFill=document.getElementById("pt-recfill"), recVal=document.getElementById("pt-recval"),
               out=document.getElementById("pt-readout");
-          var TOTAL=30;
-          function rateAt(e, base, kind){
-            if(kind==="constant") return base;
-            if(kind==="step") return base*Math.pow(0.5, Math.floor(e/10));
-            return base*0.5*(1+Math.cos(Math.PI*e/TOTAL));
-          }
-          function lossAt(e, base, kind, r){
-            var instability = kind==="constant" ? Math.max(0, base-0.25)*2.2 : 0;
-            var bounce = instability*Math.sin(e*1.3)*Math.exp(-e/40);
-            return Math.max(0.02, 1/(1+0.18*e) + bounce);
-          }
           function render(){
-            var base=parseFloat(lr0.value), e=parseFloat(epoch.value), kind=sel.value;
-            lr0val.textContent=base.toFixed(2);
-            epochval.textContent=e;
-            var r=rateAt(e, base, kind), l=lossAt(e, base, kind, r);
-            rateVal.textContent=r.toFixed(3);
-            lossVal.textContent=l.toFixed(3);
-            rateFill.style.width=Math.min(100,(r/0.5)*100)+"%";
-            lossFill.style.width=Math.min(100,(l/1.1)*100)+"%";
-            var note = kind==="constant" && base>0.25 ? "a high constant rate keeps bouncing instead of settling" : kind==="step" ? "the rate halves every 10 epochs, settling in visible steps" : "cosine decay glides the rate smoothly toward zero";
-            out.textContent="Epoch "+e+", "+kind+" schedule from "+base.toFixed(2)+": rate="+r.toFixed(3)+", toy loss="+l.toFixed(3)+" — "+note+". Illustrative formula, not a measured run.";
+            var t=parseFloat(thresh.value);
+            threshVal.textContent=t.toFixed(2);
+            var tp=0, fp=0, fn=0, tn=0;
+            for(var i=0;i<scores.length;i++){
+              var flagged=scores[i]>=t;
+              if(flagged && isAI[i]) tp++;
+              else if(flagged && !isAI[i]) fp++;
+              else if(!flagged && isAI[i]) fn++;
+              else tn++;
+            }
+            var precision = (tp+fp)===0 ? 1 : tp/(tp+fp);
+            var recall = (tp+fn)===0 ? 1 : tp/(tp+fn);
+            precVal.textContent=precision.toFixed(2);
+            recVal.textContent=recall.toFixed(2);
+            precFill.style.width=(precision*100)+"%";
+            recFill.style.width=(recall*100)+"%";
+            out.textContent="Threshold "+t.toFixed(2)+": "+tp+" true positives, "+fp+" false positives, "+fn+" false negatives, "+tn+" true negatives. Lower the threshold and recall climbs as precision falls; raise it and the reverse happens. Toy counts, not a real detector's numbers.";
           }
-          sel.addEventListener("change", render);
-          lr0.addEventListener("input", render);
-          epoch.addEventListener("input", render);
+          thresh.addEventListener("input", render);
           render();
           })();</script>
         </div>
