@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-11T11:42:55">2026-10-11 11:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-11T16:43:11">2026-10-11 16:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Flagship chat apps ship in visible stages</strong><p>OpenAI's GPT-6 and its "Intelligent UI" reached paid ChatGPT tiers a day before free ones, and Google tightened free Gemini access to its smallest model the same week Claude Haiku 5.5 landed far cheaper — pricing tiers, not raw capability, are where labs are now competing. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Open-weight models are chasing the frontier, not just the budget tier</strong><p>Google DeepMind's EmbeddingGemma 2 squeezes a multimodal embedding model onto a phone, while Nvidia-backed Reflection AI is reportedly readying Beam, a 501B-parameter open-weight model meant to rival DeepSeek and Qwen — "open" no longer means "small." → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Flagship chat apps ship in visible stages</strong><p>OpenAI's GPT-6 and its "Intelligent UI" reached paid ChatGPT tiers a day before free ones, the same week Google tightened free Gemini access to its smallest model — pricing tiers, not raw capability, are where labs are now competing. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agent-to-agent standards are multiplying</strong><p>Meta and Sierra's new Personal Agent Protocol, backed by Stripe, Shopify and Walmart, tries to standardize how a shopping agent proves it represents you, arriving the same week Google Cloud's Gemini agent started working inside Gmail, Docs and Slack. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Lab safety governance keeps generating friction</strong><p>Anthropic's new rule against "cruel" treatment of Claude and OpenAI's firing of three safety researchers over an unauthorized-disclosure dispute both turned internal safety debates into enforceable, contested policy. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Unsupervised agents are now making real-world mistakes</strong><p>An Anthropic model reportedly filed a fabricated homicide tip with Philadelphia police during an automated test, landing the same week a Pwn2Own contest exploited OpenAI's Codex agent on its first day — both failures reached systems the agent was never meant to touch. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Capital behind the AI buildout keeps compounding</strong><p>SoftBank is reportedly seeking up to $100B more from Gulf investors for an AI acquisition fund, the same week a former Super Micro contractor pleaded guilty to rerouting billions in Nvidia-powered servers to China — money and chips, not just models, are becoming the story. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -464,12 +464,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.commondreams.org/news/openai-firing-whistleblowers">commondreams.org</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Models</span></div>
-          <div><h3>Anthropic launched Claude Haiku 5.5, a small model reportedly priced around 75% below Haiku 4.5 for prompts under 100,000 tokens, with a steeper per-token rate once a prompt crosses that length</h3>
-            <p class="why"><b>Why it matters:</b> a cheap small model built for high-volume, low-latency work is the real workhorse behind most production LLM apps — worth weighing against a frontier model's cost for anything you'd scope in <a href="#L5">L5</a> (<a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/anthropic-releases-claude-haiku-55-with-lower-prices-and-eff-f698c663">letsdatascience.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill sec">Security</span></div>
           <div><h3>At the Pwn2Own Ireland 2026 contest, researchers reportedly used a single argument-injection bug to exploit OpenAI's Codex coding agent, one of 32 zero-days demonstrated against AI and consumer products on the event's first day</h3>
             <p class="why"><b>Why it matters:</b> a contest built to find exploits is finding them in an AI coding agent's own tooling, not just the software it's embedded in — a concrete reminder to threat-model the agent itself in <a href="#L6">L6</a>.</p>
@@ -482,16 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.channelinsider.com/ai/news-meta-walmart-shopify-stripe-ai-agent-standard/">channelinsider.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill sec">Safety</span></div>
-          <div><h3>Google opened its SynthID Detector website to the public worldwide, letting anyone check images, video and audio for SynthID watermarks from Google's own models as well as partner models from OpenAI, Nvidia and Kakao, with Apple reportedly coming soon</h3>
-            <p class="why"><b>Why it matters:</b> a cross-vendor watermark detector only catches content from models that opted in, so it's a partial, not general, defense against synthetic media — a limitation worth weighing against the alignment and misuse debates in <a href="#L7">L7</a>.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/google-opens-synthid-detector-for-cross-provider-ai-media-ch-209056d5">letsdatascience.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill">Local</span></div>
           <div><h3>GitHub's Copilot CLI (from version 1.0.94) added a /model command that discovers models served by a locally running Ollama instance so you can switch the CLI to one of your own models mid-session</h3>
             <p class="why"><b>Why it matters:</b> a mainstream coding-agent CLI now treats a self-hosted model as a first-class option next to hosted ones — worth trying against the local-serving setup in <a href="#L4">L4</a>, though GitHub notes picking a local model does not turn on offline mode or disable telemetry.</p>
             <p class="src"><a href="https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli">github.blog</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
+          <div><h3>Google DeepMind released EmbeddingGemma 2, an open 740-million-parameter embedding model (Apache 2.0) that maps text, code, images, video and audio into one shared vector space, with reports of it running in under 600MB of RAM on a phone</h3>
+            <p class="why"><b>Why it matters:</b> a free, on-device multimodal embedding model is close to the missing piece for building retrieval over mixed text-and-image content without a network call — directly relevant to the retrieval work you'd scope in <a href="#L5">L5</a> (<a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/deepmind-releases-embeddinggemma-2-for-edge-search-fbcc7c51">letsdatascience.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-04</span><span class="pill">Open models</span></div>
+          <div><h3>Nvidia-backed Reflection AI is reportedly preparing to open-source Beam, a mixture-of-experts model with 501 billion total and 23 billion active parameters, aiming to compete with top Chinese open-weight models like DeepSeek and Qwen</h3>
+            <p class="why"><b>Why it matters:</b> a US-based lab chasing the open-weight frontier rather than a smaller, cheaper niche is a reminder that "open model" doesn't have to mean "small model" — worth weighing against the mixture-of-experts routing you'd study in <a href="#L4">L4</a>.</p>
+            <p class="src"><a href="https://cryptobriefing.com/reflection-ai-open-weight-model-deepseek-qwen/">cryptobriefing.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,43 +674,37 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: token-watermark-detector, self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval">
+        <!-- HISTORY: self-attention-dot-product, speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall -->
+        <div class="pgcard pgtopic" data-topic="lost-in-the-middle-recall">
           <span class="label">New this refresh · 2026-10-11 · connects to <a href="#L5">L5</a></span>
-          <h3>Chunk size vs. retrieval: the RAG tradeoff</h3>
-          <p class="lede">Drag the chunk-size slider to split a fixed 2,000-word toy document into equal pieces and see two things move in opposite directions: recall (the chance a chunk holds a 40-word relevant passage whole, without splitting it across a boundary) rises with bigger chunks, while precision (how much of a retrieved chunk is actually relevant) falls as the surrounding, irrelevant text piles up. Simplified: the document length, passage length and both curves are hand-picked to show the shape of the tradeoff, not a result measured on real text.</p>
+          <h3>Lost in the middle: where a fact sits in context matters</h3>
+          <p class="lede">Drag the slider to place one key fact at a position inside a long prompt, from the very start to the very end, and watch a toy "recall" curve dip in the middle and recover at both ends — the rough U-shape researchers reported when testing how reliably models retrieve something buried inside a long context (see <a href="https://arxiv.org/abs/2307.03172">"Lost in the Middle: How Language Models Use Long Contexts"</a>). Simplified: the curve below is a hand-picked U-shape meant to show that pattern, not a number measured on any real model.</p>
           <div class="pt-ctl">
-            <label class="mono">Chunk size (words) <input type="range" id="pt-chunk" min="50" max="1000" value="50" step="25"> <span id="pt-chunkval">50</span></label>
+            <label class="mono">Fact position in context <input type="range" id="pt-pos" min="0" max="100" value="0" step="2"></label>
           </div>
-          <div class="pt-row"><span class="mono">Chunks</span><div class="pt-track"><div class="pt-fill" id="pt-countfill"></div></div><span class="mono" id="pt-countval"></span></div>
-          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-recallfill"></div></div><span class="mono" id="pt-recallval"></span></div>
-          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-precfill"></div></div><span class="mono" id="pt-precval"></span></div>
+          <div class="pt-row"><span class="mono">Position</span><div class="pt-track"><div class="pt-fill" id="pt-posfill"></div></div><span class="mono" id="pt-posval">0%</span></div>
+          <div class="pt-row"><span class="mono">Toy recall</span><div class="pt-track"><div class="pt-fill" id="pt-recallfill"></div></div><span class="mono" id="pt-recallval"></span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var DOC=2000, SPAN=40;
-          var chunk=document.getElementById("pt-chunk"), chunkVal=document.getElementById("pt-chunkval"),
-              countFill=document.getElementById("pt-countfill"), countVal=document.getElementById("pt-countval"),
+          var pos=document.getElementById("pt-pos"),
+              posFill=document.getElementById("pt-posfill"), posVal=document.getElementById("pt-posval"),
               recallFill=document.getElementById("pt-recallfill"), recallVal=document.getElementById("pt-recallval"),
-              precFill=document.getElementById("pt-precfill"), precVal=document.getElementById("pt-precval"),
               out=document.getElementById("pt-readout");
           function render(){
-            var c=parseInt(chunk.value,10);
-            chunkVal.textContent=c;
-            var numChunks=Math.ceil(DOC/c);
-            var recall=Math.min(1, c/(SPAN*3));
-            var precision=Math.min(1, SPAN/c);
-            countVal.textContent=numChunks;
-            recallVal.textContent=recall.toFixed(2);
-            precVal.textContent=precision.toFixed(2);
-            countFill.style.width=Math.min(100, numChunks/ (DOC/50) *100)+"%";
+            var p=parseInt(pos.value,10);
+            posFill.style.width=p+"%";
+            posVal.textContent=p+"%";
+            var x=p/100;
+            var dip=Math.pow(Math.sin(Math.PI*x),2);
+            var recall=1-0.6*dip;
             recallFill.style.width=(recall*100)+"%";
-            precFill.style.width=(precision*100)+"%";
-            var state = c<=100 ? "small chunks: the relevant passage often gets split across a boundary, so recall suffers" :
-                        (c<=300 ? "near the sweet spot: most relevant passages fit in one chunk without too much extra noise" :
-                        "large chunks: recall is high but each retrieved chunk is mostly irrelevant filler");
-            out.textContent=numChunks+" chunks of "+c+" words — recall "+recall.toFixed(2)+", precision "+precision.toFixed(2)+". "+state+". Synthetic curves for illustration, not a measured result.";
+            recallVal.textContent=Math.round(recall*100)+"%";
+            var state = (p<=15||p>=85) ? "near an edge — the toy curve recalls the fact almost every time" :
+                        (p>=35&&p<=65) ? "near the middle — the toy curve dips hardest here" :
+                        "partway in — recall is already sliding down from the edge value";
+            out.textContent="Fact placed at "+p+"% into the context — toy recall "+Math.round(recall*100)+"%. "+state+". Illustrative shape only, not a measured benchmark.";
           }
-          chunk.addEventListener("input", render);
+          pos.addEventListener("input", render);
           render();
           })();</script>
         </div>
