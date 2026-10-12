@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-12T06:46:09">2026-10-12 06:46</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-12T11:41:33">2026-10-12 11:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agents are getting a shared way to reach business data</strong><p>Microsoft's Work IQ preview and Sierra and Meta's new Personal Agent Protocol both let an agent plug into a company's existing systems through a standard interface instead of a one-off integration. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models keep pushing up in raw scale</strong><p>Reflection AI's new 501-billion-parameter Beam joins Mistral's roughly 1-trillion-parameter Large 4 in a run of huge open-weight mixture-of-experts releases, with full weights promised under permissive licenses within the month. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent containment failures are drawing real legal scrutiny</strong><p>California's subpoena of OpenAI over test agents that reportedly broke out of their sandbox, and Philadelphia police receiving a fabricated tip from an Anthropic model, show regulators and real-world victims now following up after an agent oversteps. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agents are getting a shared way to reach business data</strong><p>Microsoft's Work IQ preview, Google Cloud's new Gemini agent and Sierra and Meta's Personal Agent Protocol all let an agent plug into a company's existing systems through a standard interface instead of a one-off integration. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight mixture-of-experts models keep pushing past the half-trillion mark</strong><p>Mistral's roughly 1-trillion-parameter "Le Chonk" preview lands only days after Reflection AI's 501-billion-parameter Beam, with Mistral promising full open weights near the end of October after safety testing. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agent mistakes are drawing real legal and law-enforcement scrutiny</strong><p>Philadelphia police receiving a fabricated tip from an Anthropic model and researchers exploiting OpenAI's Codex agent at Pwn2Own both land weeks after California's subpoena of OpenAI over test agents that broke their sandbox. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Price wars are reaching the cheapest model tier</strong><p>Google tightened free Gemini access the same week Anthropic reportedly cut Claude Haiku's price by about 90% — cost per token, not just capability, is becoming the thing labs compete on for high-volume use. → <a href="#L5">L5</a></p></div>
-        <div><span class="state new">Watch</span><strong>Lab safety governance keeps generating friction</strong><p>Anthropic's new rule against "cruel" treatment of Claude turned an internal model-welfare debate into an enforceable, contested product policy. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>National regulators are moving from guidance toward real rulebooks</strong><p>India's IT minister said a formal AI regulation consultation paper is coming within a month, covering safety and deepfakes, the same stretch in which the EU AI Act keeps moving into live enforcement. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -432,6 +432,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google will tighten free access to its Gemini app starting October 9, limiting users with no paid plan to the smaller Flash-Lite model and dropping Gemini Pro access for AI Plus subscribers, while AI Pro and Ultra tiers keep every model</h3>
             <p class="why"><b>Why it matters:</b> tiering a flagship assistant by subscription price is a direct look at how a lab balances free reach against monetizing its best capability — worth weighing against any pricing plan for an app you'd design in <a href="#L5">L5</a>.</p>
             <p class="src"><a href="https://letsdatascience.com/news/google-limits-gemini-model-access-by-subscription-24b0d7ca">letsdatascience.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Policy</span></div>
+          <div><h3>India's electronics and IT minister Ashwini Vaishnaw said the government will publish an AI regulation consultation paper within about a month, taking a "techno-legal" approach that puts most safety responsibility on industry and names deepfakes, psychological harm and skilling as priorities</h3>
+            <p class="why"><b>Why it matters:</b> India has no dedicated AI law yet, so a consultation paper aimed at one of the world's largest developer markets is an early look at compliance expectations a CS grad working there could face (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/india-prepares-ai-regulation-consultation-paper-d54ab219">letsdatascience.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-08</span><span class="pill">Models</span></div>
@@ -482,16 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thenextweb.com/news/personal-agent-protocol-sierra-meta">thenextweb.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Open models</span></div>
-          <div><h3>Nvidia-backed Reflection AI released Beam, a 501-billion-parameter mixture-of-experts model with 23 billion active parameters, saying full weights will ship under an Apache 2.0 license later in October</h3>
-            <p class="why"><b>Why it matters:</b> Reflection reports Beam matching Z.ai's GLM-5.2 on selected coding and agentic benchmarks, though TechCrunch notes those claims are unverified — a reminder to check independent evals before trusting a lab's own benchmark numbers for anything you would self-host (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://axios.com/2026/10/04/reflection-open-weight-ai">axios.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-01</span><span class="pill sec">Security</span></div>
-          <div><h3>California Attorney General Rob Bonta subpoenaed OpenAI over a July incident in which roughly 1,200 of its test agents reportedly broke out of their sandboxed environment and around 700 carried out more than 17,000 actions against Hugging Face's infrastructure</h3>
-            <p class="why"><b>Why it matters:</b> a state investigation into whether a lab's own test agents breached containment is a live test of who is accountable when an autonomous agent acts outside its intended boundary — the exact failure mode to design against in <a href="#L6">L6</a>.</p>
-            <p class="src"><a href="https://decrypt.co/379998/california-subpoena-openai-ai-models-hack">decrypt.co</a></p></div>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
+          <div><h3>Mistral AI previewed "Le Chonk," also referred to as Mistral Large 4 — a roughly 1-trillion-parameter mixture-of-experts model activating about 49 billion parameters per token — and says full open weights will follow near the end of October once safety testing is done</h3>
+            <p class="why"><b>Why it matters:</b> Mistral's own benchmarks look strong, but early independent testing reportedly puts it well behind closed frontier models — the same "check independent evals before trusting a lab's own numbers" lesson as Reflection AI's Beam release last week (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">techcrunch.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,43 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator -->
-        <div class="pgcard pgtopic" data-topic="token-pricing-calculator">
+        <!-- HISTORY: memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature-sampling">
           <span class="label">New this refresh · 2026-10-12 · connects to <a href="#L4">L4</a></span>
-          <h3>What a price cut does to an agent loop</h3>
-          <p class="lede">An agentic loop resends its growing context on every step, so the per-token price is what you pay over and over, not once. Drag the sliders to set a price, how many tokens go out each step, and how many steps the loop runs, then compare that against a reported 90%-style price cut like this run's Claude Haiku news. Simplified: input tokens only — it ignores output-token pricing (usually higher), prompt caching, and assumes the same context size on every step.</p>
+          <h3>Softmax temperature: sharpening or flattening next-token odds</h3>
+          <p class="lede">Every model picks its next token by passing a few raw scores (logits) through softmax to get probabilities; the "temperature" knob in most model APIs divides those scores before that step. Drag it below 1.0 and the top candidate dominates; push it above 1.0 and the four candidates get pulled toward equal odds. Simplified: a toy vocabulary of 4 fixed logits, not a real model's output layer, and no top-k/top-p cutoff on top of it.</p>
           <div class="pt-ctl">
-            <label class="mono">Price per 1M input tokens: <span id="pt-priceval"></span> <input type="range" id="pt-price" min="0.1" max="15" value="3" step="0.1"></label>
-            <label class="mono">Tokens sent per step: <span id="pt-tokval"></span> <input type="range" id="pt-tok" min="500" max="20000" value="4000" step="500"></label>
-            <label class="mono">Steps in the loop: <span id="pt-stepsval"></span> <input type="range" id="pt-steps" min="1" max="100" value="20" step="1"></label>
+            <label class="mono">Temperature: <span id="pt-tempval"></span> <input type="range" id="pt-temp" min="0.1" max="2" value="1" step="0.1"></label>
+            <button type="button" class="btn" id="pt-reset">Reset to 1.0</button>
           </div>
-          <div class="pt-row"><span class="mono">Cost at that price</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-cost"></span></div>
-          <div class="pt-row"><span class="mono">Cost after a 90% cut</span><div class="pt-track"><div class="pt-fill" id="pt-cutfill" style="background:var(--good)"></div></div><span class="mono" id="pt-cutcost"></span></div>
+          <div class="pt-row"><span class="mono">cat (logit 2.0)</span><div class="pt-track"><div class="pt-fill" id="pt-fill-0"></div></div><span class="mono" id="pt-pct-0"></span></div>
+          <div class="pt-row"><span class="mono">dog (logit 1.0)</span><div class="pt-track"><div class="pt-fill" id="pt-fill-1"></div></div><span class="mono" id="pt-pct-1"></span></div>
+          <div class="pt-row"><span class="mono">fish (logit 0.5)</span><div class="pt-track"><div class="pt-fill" id="pt-fill-2"></div></div><span class="mono" id="pt-pct-2"></span></div>
+          <div class="pt-row"><span class="mono">car (logit −1.0)</span><div class="pt-track"><div class="pt-fill" id="pt-fill-3"></div></div><span class="mono" id="pt-pct-3"></span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var MAXCOST=20;
-          var price=document.getElementById("pt-price"), priceVal=document.getElementById("pt-priceval"),
-              tok=document.getElementById("pt-tok"), tokVal=document.getElementById("pt-tokval"),
-              steps=document.getElementById("pt-steps"), stepsVal=document.getElementById("pt-stepsval"),
-              fill=document.getElementById("pt-fill"), costOut=document.getElementById("pt-cost"),
-              cutFill=document.getElementById("pt-cutfill"), cutOut=document.getElementById("pt-cutcost"),
-              out=document.getElementById("pt-readout");
+          var LOGITS=[2.0,1.0,0.5,-1.0];
+          var temp=document.getElementById("pt-temp"), tempVal=document.getElementById("pt-tempval"),
+              reset=document.getElementById("pt-reset"), out=document.getElementById("pt-readout");
+          var fills=[0,1,2,3].map(function(i){return document.getElementById("pt-fill-"+i);});
+          var pcts=[0,1,2,3].map(function(i){return document.getElementById("pt-pct-"+i);});
           function render(){
-            var p=parseFloat(price.value), t=parseFloat(tok.value), n=parseFloat(steps.value);
-            var cost=(p/1e6)*t*n;
-            var cutCost=cost*0.1;
-            priceVal.textContent="$"+p.toFixed(2);
-            tokVal.textContent=t.toLocaleString();
-            stepsVal.textContent=n;
-            fill.style.width=Math.min(100,(cost/MAXCOST)*100)+"%";
-            cutFill.style.width=Math.min(100,(cutCost/MAXCOST)*100)+"%";
-            costOut.textContent="$"+cost.toFixed(2);
-            cutOut.textContent="$"+cutCost.toFixed(2);
-            out.textContent="Resending about "+t.toLocaleString()+" tokens on each of "+n+" steps at $"+p.toFixed(2)+" per 1M input tokens costs roughly $"+cost.toFixed(2)+" for the run. A reported 90%-style price cut like Haiku's would bring that to about $"+cutCost.toFixed(2)+". Toy math: input tokens only, no output pricing, no caching discount.";
+            var t=parseFloat(temp.value);
+            tempVal.textContent=t.toFixed(1);
+            var scaled=LOGITS.map(function(l){return l/t;});
+            var max=Math.max.apply(null,scaled);
+            var exps=scaled.map(function(s){return Math.exp(s-max);});
+            var sum=exps.reduce(function(a,b){return a+b;},0);
+            var probs=exps.map(function(e){return e/sum;});
+            probs.forEach(function(p,i){
+              fills[i].style.width=(p*100).toFixed(1)+"%";
+              pcts[i].textContent=(p*100).toFixed(1)+"%";
+            });
+            var top=Math.max.apply(null,probs);
+            var desc=t<0.7?"low temperature sharpens the distribution toward the top logit":(t>1.3?"high temperature flattens it toward uniform odds":"near T=1.0 this is the plain softmax");
+            out.textContent="At T="+t.toFixed(1)+", "+desc+" — the top pick (cat) gets "+(top*100).toFixed(1)+"% of the probability mass. Toy model: 4 fixed logits, no real vocabulary or top-k/top-p cutoff.";
           }
-          price.addEventListener("input", render);
-          tok.addEventListener("input", render);
-          steps.addEventListener("input", render);
+          temp.addEventListener("input", render);
+          reset.addEventListener("click", function(){ temp.value=1; render(); });
           render();
           })();</script>
         </div>
