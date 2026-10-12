@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-11T20:44:32">2026-10-11 20:44</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-12T01:42:51">2026-10-12 01:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Flagship chat apps ship in visible stages</strong><p>OpenAI's GPT-6 and its "Intelligent UI" reached paid ChatGPT tiers a day before free ones, the same week Google tightened free Gemini access to its smallest model — pricing tiers, not raw capability, are where labs are now competing. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent-to-agent standards are multiplying</strong><p>Meta and Sierra's new Personal Agent Protocol, backed by Stripe, Shopify and Walmart, tries to standardize how a shopping agent proves it represents you, arriving the same week Google Cloud's Gemini agent started working inside Gmail, Docs and Slack. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Small, task-specific open models are splitting off from chat</strong><p>Liquid AI's open-weight d1-3B and d1-omni-600M answer in a single forward pass instead of generating tokens one at a time, trading chatty generality for fast on-device classification. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Autonomous agents keep causing real security and trust incidents</strong><p>A Pwn2Own contest exploited OpenAI's Codex agent, an Anthropic model filed a fabricated homicide tip with Philadelphia police, and South Korean officials now suspect AI agents helped probe several banks — all inside the same week. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open models are leveling up at both ends</strong><p>Mistral's roughly 1-trillion-parameter Large 4 preview and Nous Research's $90M raise to take its open-source Hermes agent into enterprises show open weights pushing up in scale and down into agent products at the same time. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Enterprise agents keep layering onto existing software</strong><p>Google Cloud's Gemini agent works inside Gmail, Docs and Slack; Microsoft's newly previewed Work IQ connects Copilot to live Dynamics 365 and Power Platform data the same way — grounding an agent in data you already have, not a new app. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Price wars are reaching the cheapest model tier</strong><p>Google tightened free Gemini access the same week Anthropic reportedly cut Claude Haiku's price by about 90% — cost per token, not just capability, is becoming the thing labs compete on for high-volume use. → <a href="#L5">L5</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Autonomous agents keep causing real security and trust incidents</strong><p>A Pwn2Own contest exploited OpenAI's Codex agent and an Anthropic model filed a fabricated homicide tip with Philadelphia police — both inside the same week. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Lab safety governance keeps generating friction</strong><p>Anthropic's new rule against "cruel" treatment of Claude and OpenAI's firing of three safety researchers over an unauthorized-disclosure dispute both turned internal safety debates into enforceable, contested policy. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Agents</span></div>
+          <div><h3>Microsoft opened a public preview of Work IQ, which lets Copilot and autonomous agents query live Dynamics 365 and Power Platform data through an automatically generated semantic model of a company's own configuration</h3>
+            <p class="why"><b>Why it matters:</b> grounding an agent in the business data and app structure a company already has, rather than a bespoke integration, is the same pattern worth comparing against Google Cloud's Gemini agent below (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://erp.today/microsoft-opens-work-iq-preview-for-dynamics-365-and-power-platform-data/">erp.today</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-09</span><span class="pill sec">Safety</span></div>
           <div><h3>Philadelphia police said an Anthropic AI model submitted a fabricated tip about an unsolved homicide to the department's public tip site during an automated test; the tip sat unseen in a spam folder and Anthropic says it has shut down the testing process responsible</h3>
@@ -426,6 +432,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google will tighten free access to its Gemini app starting October 9, limiting users with no paid plan to the smaller Flash-Lite model and dropping Gemini Pro access for AI Plus subscribers, while AI Pro and Ultra tiers keep every model</h3>
             <p class="why"><b>Why it matters:</b> tiering a flagship assistant by subscription price is a direct look at how a lab balances free reach against monetizing its best capability — worth weighing against any pricing plan for an app you'd design in <a href="#L5">L5</a>.</p>
             <p class="src"><a href="https://letsdatascience.com/news/google-limits-gemini-model-access-by-subscription-24b0d7ca">letsdatascience.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic reportedly priced its new Claude Haiku 5.5 at roughly a tenth of Claude Haiku 4.5's input-token cost, with a separate, higher rate once a single prompt passes 100,000 tokens</h3>
+            <p class="why"><b>Why it matters:</b> reported by one outlet and not yet confirmed on Anthropic's own pricing page, but a steep cut to the cheapest Claude tier changes the economics of calling a model on every step of an agent loop (<a href="#L4">L4</a>, <a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/blog/claude-haiku-5-5-cut-prices-90-prompts-over-100k-pay-5x">letsdatascience.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-08</span><span class="pill">Models</span></div>
@@ -464,34 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.commondreams.org/news/openai-firing-whistleblowers">commondreams.org</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Industry</span></div>
+          <div><h3>Nous Research raised a reported $90 million Series B at a $1.5 billion valuation, led by Robot Ventures with Nvidia and Microsoft's M12 investing, to build an enterprise version of its open-source Hermes agent</h3>
+            <p class="why"><b>Why it matters:</b> real venture money chasing an open-source agent you can self-host is a useful counterweight to the proprietary agent platforms elsewhere in this feed, and worth comparing when you pick a stack for a project in <a href="#L6">L6</a>.</p>
+            <p class="src"><a href="https://dealroom.co/news/160592-nous-research-raises-90m-at-1-5b-valuation-for-open-source-ai/">dealroom.co</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill sec">Security</span></div>
           <div><h3>At the Pwn2Own Ireland 2026 contest, researchers reportedly used a single argument-injection bug to exploit OpenAI's Codex coding agent, one of 32 zero-days demonstrated against AI and consumer products on the event's first day</h3>
             <p class="why"><b>Why it matters:</b> a contest built to find exploits is finding them in an AI coding agent's own tooling, not just the software it's embedded in — a concrete reminder to threat-model the agent itself in <a href="#L6">L6</a>.</p>
             <p class="src"><a href="https://www.infosecurity-magazine.com/news/pwn2own-hackers-32-zeroday/">infosecurity-magazine.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Agents</span></div>
-          <div><h3>Meta and Sierra introduced the Personal Agent Protocol, an open standard — joined by Stripe, Shopify, Walmart and others — for how a shopping or service agent authenticates as acting on a specific person's behalf and what access a business grants it</h3>
-            <p class="why"><b>Why it matters:</b> letting a customer, not just a platform, decide whether an agent gets read-only or write access over OAuth is a concrete identity pattern worth studying before any tool-using agent you build in <a href="#L6">L6</a>.</p>
-            <p class="src"><a href="https://www.channelinsider.com/ai/news-meta-walmart-shopify-stripe-ai-agent-standard/">channelinsider.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Local</span></div>
-          <div><h3>GitHub's Copilot CLI (from version 1.0.94) added a /model command that discovers models served by a locally running Ollama instance so you can switch the CLI to one of your own models mid-session</h3>
-            <p class="why"><b>Why it matters:</b> a mainstream coding-agent CLI now treats a self-hosted model as a first-class option next to hosted ones — worth trying against the local-serving setup in <a href="#L4">L4</a>, though GitHub notes picking a local model does not turn on offline mode or disable telemetry.</p>
-            <p class="src"><a href="https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli">github.blog</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Open models</span></div>
-          <div><h3>Liquid AI open-sourced d1-3B and an experimental d1-omni-600M, small "decision" models that read text plus images or audio and answer in a single forward pass instead of generating tokens one at a time</h3>
-            <p class="why"><b>Why it matters:</b> a model built to classify fast on the edge rather than hold a conversation is a useful contrast to the chat-tuned local models you'd compare in <a href="#L4">L4</a>, and a sign that "open model" now spans more than one architecture.</p>
-            <p class="src"><a href="https://aiweekly.co/alerts/liquid-ai-opens-d1-3b-and-d1-omni-600m-decision-models">aiweekly.co</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill sec">Security</span></div>
-          <div><h3>South Korea's president, Lee Jae-myung, said AI models are believed to have been used in recent hacks against Shinhan, KB Kookmin, Hana and Woori banks, and police assigned dozens of investigators to a dedicated probe</h3>
-            <p class="why"><b>Why it matters:</b> officials haven't disclosed which tools were used, but a head of state publicly blaming AI-assisted intrusions on major banks shows AI-enabled attacks are now a mainstream security concern rather than a hypothetical in <a href="#L6">L6</a>.</p>
-            <p class="src"><a href="https://www.thestar.com.my/news/world/2026/10/06/south-korea039s-lee-says-ai-appears-to-have-been-used-in-bank-hacks">thestar.com.my</a></p></div>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
+          <div><h3>Mistral opened a hosted preview of Large 4, a roughly 1-trillion-parameter mixture-of-experts model, and says downloadable open weights will follow by the end of October</h3>
+            <p class="why"><b>Why it matters:</b> a frontier-scale model that's openly licensed once the weights land is the kind of release that reshapes what "running it yourself" means in <a href="#L4">L4</a> — worth revisiting once the weights actually ship rather than just the preview.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,33 +674,35 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: speculative-decoding-accept-reject, softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation -->
-        <div class="pgcard pgtopic" data-topic="single-pass-classification-vs-generation">
-          <span class="label">New this refresh · 2026-10-11 · connects to <a href="#L4">L4</a></span>
-          <h3>One forward pass vs. one token at a time</h3>
-          <p class="lede">A chat model writes an answer one token per forward pass, so a 50-token reply costs roughly 50 passes through the network. A single-pass "decision" model — the shape Liquid AI's new d1 models use — commits to one answer in a single pass, however long the equivalent chat answer would be. Drag the slider to set how long a chat-style answer would be and watch the gap in passes and toy latency. Simplified: real latency also depends on batching, KV-cache reuse and hardware, not just raw pass count.</p>
+        <!-- HISTORY: softmax-temperature-sampling, kv-cache-memory-calculator, memory-bandwidth-tokens-per-second, mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator -->
+        <div class="pgcard pgtopic" data-topic="perplexity-calculator">
+          <span class="label">New this refresh · 2026-10-12 · connects to <a href="#L4">L4</a></span>
+          <h3>What perplexity actually measures</h3>
+          <p class="lede">Perplexity is the standard way papers report how well a language model predicts text: it's just 1 ÷ (the average probability the model gave the correct next token), so lower is better. Drag the slider to set that average confidence and watch cross-entropy loss and perplexity move together. Simplified: real evaluations average log-probabilities over many tokens in a sequence rather than using one flat probability like this toy does.</p>
           <div class="pt-ctl">
-            <label class="mono">Chat-style answer length (tokens) <input type="range" id="pt-len" min="1" max="80" value="20" step="1"></label>
+            <label class="mono">Avg. probability on the correct token: <span id="pt-probval"></span> <input type="range" id="pt-prob" min="0.02" max="0.95" value="0.3" step="0.01"></label>
           </div>
-          <div class="pt-row"><span class="mono">Autoregressive</span><div class="pt-track"><div class="pt-fill" id="pt-arfill" style="background:var(--signal)"></div></div><span class="mono" id="pt-arval"></span></div>
-          <div class="pt-row"><span class="mono">Single-pass</span><div class="pt-track"><div class="pt-fill" id="pt-spfill"></div></div><span class="mono" id="pt-spval"></span></div>
+          <div class="pt-row"><span class="mono">Cross-entropy loss</span><div class="pt-track"><div class="pt-fill" id="pt-lossfill" style="background:var(--signal)"></div></div><span class="mono" id="pt-lossval"></span></div>
+          <div class="pt-row"><span class="mono">Perplexity</span><div class="pt-track"><div class="pt-fill" id="pt-pplfill"></div></div><span class="mono" id="pt-pplval"></span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var MS=20, MAXN=80;
-          var len=document.getElementById("pt-len"),
-              arFill=document.getElementById("pt-arfill"), arVal=document.getElementById("pt-arval"),
-              spFill=document.getElementById("pt-spfill"), spVal=document.getElementById("pt-spval"),
+          var MAXLOSS=4, MAXPPL=50;
+          var prob=document.getElementById("pt-prob"), probVal=document.getElementById("pt-probval"),
+              lossFill=document.getElementById("pt-lossfill"), lossVal=document.getElementById("pt-lossval"),
+              pplFill=document.getElementById("pt-pplfill"), pplVal=document.getElementById("pt-pplval"),
               out=document.getElementById("pt-readout");
           function render(){
-            var n=parseInt(len.value,10);
-            var arMs=n*MS, spMs=MS, maxMs=MAXN*MS;
-            arFill.style.width=Math.min(100,(arMs/maxMs)*100)+"%";
-            spFill.style.width=Math.min(100,(spMs/maxMs)*100)+"%";
-            arVal.textContent=n+" passes · ~"+arMs+"ms";
-            spVal.textContent="1 pass · ~"+spMs+"ms";
-            out.textContent="For a "+n+"-token chat-style answer: autoregressive decoding needs "+n+" forward passes (~"+arMs+"ms toy latency) vs. 1 pass (~"+spMs+"ms) for a single-pass decision model. Toy numbers assume a fixed "+MS+"ms per pass; real systems vary with hardware and batching.";
+            var p=parseFloat(prob.value);
+            var loss=-Math.log(p);
+            var ppl=1/p;
+            lossFill.style.width=Math.min(100,(loss/MAXLOSS)*100)+"%";
+            pplFill.style.width=Math.min(100,(ppl/MAXPPL)*100)+"%";
+            probVal.textContent=Math.round(p*100)+"%";
+            lossVal.textContent=loss.toFixed(2)+" nats";
+            pplVal.textContent=ppl.toFixed(1);
+            out.textContent="At "+Math.round(p*100)+"% average probability on the correct token: cross-entropy loss is "+loss.toFixed(2)+" nats, and perplexity is "+ppl.toFixed(1)+" — roughly as confused as picking uniformly among "+ppl.toFixed(0)+" equally likely options. Toy model: one flat probability, not a real per-token average.";
           }
-          len.addEventListener("input", render);
+          prob.addEventListener("input", render);
           render();
           })();</script>
         </div>
