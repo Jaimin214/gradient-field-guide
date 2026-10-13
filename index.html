@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-12T16:39:46">2026-10-12 16:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-12T20:42:58">2026-10-12 20:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,12 +397,24 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Agents are getting a shared way to reach business data</strong><p>Microsoft's Work IQ preview, Google Cloud's new Gemini agent and Sierra and Meta's Personal Agent Protocol all let an agent plug into a company's existing systems through a standard interface instead of a one-off integration. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight mixture-of-experts models keep pushing past the half-trillion mark</strong><p>Mistral's roughly 1-trillion-parameter "Le Chonk" preview lands only days after Reflection AI's 501-billion-parameter Beam, with Mistral promising full open weights near the end of October after safety testing. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Agent mistakes are drawing real legal and law-enforcement scrutiny</strong><p>Philadelphia police receiving a fabricated tip from an Anthropic model and researchers exploiting OpenAI's Codex agent at Pwn2Own both land weeks after California's subpoena of OpenAI over test agents that broke their sandbox. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Price wars are reaching the cheapest model tier</strong><p>Google tightened free Gemini access the same week Anthropic reportedly cut Claude Haiku's price by about 90% — cost per token, not just capability, is becoming the thing labs compete on for high-volume use. → <a href="#L5">L5</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI-assisted math claims are outrunning peer review</strong><p>A preprint reporting faster-than-known algorithms for 3SUM and shortest-paths, with the core algorithm credited to an internal Anthropic research model, is already drawing coverage days after posting, well before anyone has reviewed it. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Price and capacity pressure is squeezing both ends of the market</strong><p>Google tightened free Gemini access, Anthropic reportedly cut Claude Haiku's price by about 90%, and Anthropic separately had to pause its own free startup credits after a demand surge it says it underestimated. → <a href="#L5">L5</a></p></div>
         <div><span class="state new">Watch</span><strong>Oversight is arriving at both the national and city level</strong><p>India's IT minister said a formal AI regulation consultation paper is coming within a month, New York City's Council put Anthropic, OpenAI, Google and Meta under oath over AI-agent harm, and the EU AI Act keeps moving into live enforcement. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-09</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic paused the free year of Claude Team and $1,000 in API credits it had just expanded for startups, after an Anthropic staffer said the program drew roughly 21 times its usual application volume within 48 hours</h3>
+            <p class="why"><b>Why it matters:</b> founders who had already claimed the perks keep them, but approved-and-unclaimed offers are being re-reviewed — a reminder that a vendor's "free credits" program is a cost center it can throttle without notice, worth weighing before relying on one for <a href="#projects">Project 3</a>.</p>
+            <p class="src"><a href="https://fourweekmba.com/ai-anthropic-pauses-claude-team-offer-after-21x-applications/">fourweekmba.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Research</span></div>
+          <div><h3>A preprint by two complexity theorists reports subquadratic algorithms for the 3SUM and all-pairs-shortest-paths problems that would refute two conjectures fine-grained complexity theory has rested on for decades, crediting an internal Anthropic research model — not the public Claude app — with discovering the core algorithm, and says the deterministic parts are machine-checked in the Lean 4 proof assistant</h3>
+            <p class="why"><b>Why it matters:</b> it is an unreviewed preprint, not an accepted result, and the headline-grabbing framing already outran that caveat in a lot of coverage — good practice for judging any "AI solved a famous problem" claim you'll meet studying <a href="#L7">L7</a>.</p>
+            <p class="src"><a href="https://codeforces.com/blog/entry/157444?locale=en">codeforces.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-05</span><span class="pill">Policy</span></div>
           <div><h3>New York City's Council held a hearing putting policy staff from Anthropic, OpenAI, Google and Meta under oath to testify about AI risks, after threatening subpoenas when some firms were slow to confirm attendance</h3>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>At the Pwn2Own Ireland 2026 contest, researchers reportedly used a single argument-injection bug to exploit OpenAI's Codex coding agent, one of 32 zero-days demonstrated against AI and consumer products on the event's first day</h3>
             <p class="why"><b>Why it matters:</b> a contest built to find exploits is finding them in an AI coding agent's own tooling, not just the software it's embedded in — a concrete reminder to threat-model the agent itself in <a href="#L6">L6</a>.</p>
             <p class="src"><a href="https://www.infosecurity-magazine.com/news/pwn2own-hackers-32-zeroday/">infosecurity-magazine.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Agents</span></div>
-          <div><h3>Sierra and Meta published version 0.1 of the Personal Agent Protocol, an open standard for how a personal AI agent authenticates with a business and what access it is granted, backed by Walmart, Stripe, Shopify and Genesys</h3>
-            <p class="why"><b>Why it matters:</b> an OAuth-based tier from guest browsing up to signed-in read or write access is a concrete pattern for scoping what a tool-using agent may do at a business, worth comparing with the Gemini agent and Work IQ above (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thenextweb.com/news/personal-agent-protocol-sierra-meta">thenextweb.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral AI previewed "Le Chonk," also referred to as Mistral Large 4 — a roughly 1-trillion-parameter mixture-of-experts model activating about 49 billion parameters per token — and says full open weights will follow near the end of October once safety testing is done</h3>
-            <p class="why"><b>Why it matters:</b> Mistral's own benchmarks look strong, but early independent testing reportedly puts it well behind closed frontier models — the same "check independent evals before trusting a lab's own numbers" lesson as Reflection AI's Beam release last week (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/">techcrunch.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,55 +674,42 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: mixture-of-experts-routing, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator -->
-        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator">
+        <!-- HISTORY: quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup -->
+        <div class="pgcard pgtopic" data-topic="speculative-decoding-speedup">
           <span class="label">New this refresh · 2026-10-12 · connects to <a href="#L4">L4</a></span>
-          <h3>KV-cache memory: the hidden cost of a long context</h3>
-          <p class="lede">A transformer caches every past token's key and value vectors per layer so it doesn't recompute attention from scratch at each new token — that cache grows linearly with context length and batch size, and at long contexts can outweigh the model's own weights. Drag the sliders and switch precision to see it cross that line. Simplified: a fixed toy "7B-class" shape (32 layers, 4096 hidden dim), dense multi-head attention with no grouped-query attention or paged caching, the tricks real serving stacks use to shrink this.</p>
+          <h3>Speculative decoding: what a small draft model actually buys you</h3>
+          <p class="lede">Speculative decoding runs a small, fast "draft" model to guess several tokens ahead, then lets the big "target" model check them all in a single forward pass — accepted guesses are free. Drag the sliders to see how the draft's accuracy, its speed advantage and how many tokens it dares propose per round trade off into an overall speedup. Simplified toy: one illustrative textbook formula, ignoring batching, memory bandwidth and real hardware variance — read the number as intuition, not a benchmark result.</p>
           <div class="pt-ctl">
-            <label class="mono">Context: <span id="pt-seqval"></span> <input type="range" id="pt-seq" min="1" max="128" value="8" step="1"></label>
-            <label class="mono">Batch size: <span id="pt-batchval"></span> <input type="range" id="pt-batch" min="1" max="32" value="1" step="1"></label>
-            <button type="button" class="btn" id="pt-fp16">fp16</button>
-            <button type="button" class="btn" id="pt-int8">int8</button>
-            <button type="button" class="btn" id="pt-int4">int4</button>
+            <label class="mono">Draft acceptance: <span id="pt-acceptval"></span> <input type="range" id="pt-accept" min="0" max="95" value="70" step="1"></label>
+            <label class="mono">Draft speed advantage: <span id="pt-speedval"></span> <input type="range" id="pt-speed" min="1" max="20" value="5" step="1"></label>
+            <label class="mono">Tokens proposed/round: <span id="pt-gammaval"></span> <input type="range" id="pt-gamma" min="1" max="8" value="4" step="1"></label>
           </div>
-          <div class="pt-row"><span class="mono">KV cache</span><div class="pt-track"><div class="pt-fill" id="pt-fill-kv"></div></div><span class="mono" id="pt-pct-kv"></span></div>
-          <div class="pt-row"><span class="mono">model weights</span><div class="pt-track"><div class="pt-fill" id="pt-fill-wt"></div></div><span class="mono" id="pt-pct-wt"></span></div>
+          <div class="pt-row"><span class="mono">tokens/round</span><div class="pt-track"><div class="pt-fill" id="pt-fill-tok"></div></div><span class="mono" id="pt-pct-tok"></span></div>
+          <div class="pt-row"><span class="mono">speedup</span><div class="pt-track"><div class="pt-fill" id="pt-fill-spd"></div></div><span class="mono" id="pt-pct-spd"></span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var LAYERS=32, HIDDEN=4096, PARAMS=7e9, CAP_GB=80;
-          var BPE={fp16:2,int8:1,int4:0.5};
-          var seq=document.getElementById("pt-seq"), seqVal=document.getElementById("pt-seqval");
-          var batch=document.getElementById("pt-batch"), batchVal=document.getElementById("pt-batchval");
-          var btns={fp16:document.getElementById("pt-fp16"), int8:document.getElementById("pt-int8"), int4:document.getElementById("pt-int4")};
-          var fillKv=document.getElementById("pt-fill-kv"), pctKv=document.getElementById("pt-pct-kv");
-          var fillWt=document.getElementById("pt-fill-wt"), pctWt=document.getElementById("pt-pct-wt");
+          var accept=document.getElementById("pt-accept"), acceptVal=document.getElementById("pt-acceptval");
+          var speed=document.getElementById("pt-speed"), speedVal=document.getElementById("pt-speedval");
+          var gamma=document.getElementById("pt-gamma"), gammaVal=document.getElementById("pt-gammaval");
+          var fillTok=document.getElementById("pt-fill-tok"), pctTok=document.getElementById("pt-pct-tok");
+          var fillSpd=document.getElementById("pt-fill-spd"), pctSpd=document.getElementById("pt-pct-spd");
           var out=document.getElementById("pt-readout");
-          var prec="fp16";
-          function setPrec(p){
-            prec=p;
-            Object.keys(btns).forEach(function(k){btns[k].className="btn"+(k===p?" primary":"");});
-            render();
-          }
           function render(){
-            var tokensK=parseInt(seq.value,10), b=parseInt(batch.value,10);
-            seqVal.textContent=tokensK+"k tokens"; batchVal.textContent=b;
-            var tokens=tokensK*1024, bpe=BPE[prec];
-            var kvGb=(2*LAYERS*HIDDEN*tokens*b*bpe)/1e9;
-            var wtGb=(PARAMS*bpe)/1e9;
-            fillKv.style.width=Math.min(100,kvGb/CAP_GB*100).toFixed(1)+"%";
-            fillWt.style.width=Math.min(100,wtGb/CAP_GB*100).toFixed(1)+"%";
-            pctKv.textContent=kvGb.toFixed(1)+" GB";
-            pctWt.textContent=wtGb.toFixed(1)+" GB";
-            var cmp=kvGb>wtGb?"already bigger than":"still smaller than";
-            out.textContent="At "+tokensK+"k tokens × batch "+b+" in "+prec+", the KV cache is "+cmp+" the toy model's own weights ("+wtGb.toFixed(1)+" GB). Real serving stacks shrink the cache with grouped-query attention and paged caching — this toy uses plain multi-head attention.";
+            var p=accept.value/100, s=Number(speed.value), g=Number(gamma.value);
+            acceptVal.textContent=accept.value+"%"; speedVal.textContent=s+"×"; gammaVal.textContent=g;
+            var expected=(1-Math.pow(p,g+1))/(1-p);
+            var timePerRound=g/s+1;
+            var speedup=expected/timePerRound;
+            fillTok.style.width=Math.min(100,expected/(g+1)*100).toFixed(1)+"%";
+            fillSpd.style.width=Math.min(100,speedup/(g+1)*100).toFixed(1)+"%";
+            pctTok.textContent=expected.toFixed(2)+" / "+(g+1);
+            pctSpd.textContent=speedup.toFixed(2)+"×";
+            out.textContent="At "+accept.value+"% acceptance, a draft "+s+"× faster proposing "+g+" tokens per round yields about "+expected.toFixed(2)+" accepted tokens per round, for a toy speedup of "+speedup.toFixed(2)+"× over plain one-token-at-a-time decoding.";
           }
-          seq.addEventListener("input", render);
-          batch.addEventListener("input", render);
-          btns.fp16.addEventListener("click", function(){setPrec("fp16");});
-          btns.int8.addEventListener("click", function(){setPrec("int8");});
-          btns.int4.addEventListener("click", function(){setPrec("int4");});
-          setPrec("fp16");
+          accept.addEventListener("input", render);
+          speed.addEventListener("input", render);
+          gamma.addEventListener("input", render);
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
