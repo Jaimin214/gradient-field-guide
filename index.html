@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-14T11:41:37">2026-10-14 11:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-14T16:41:47">2026-10-14 16:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -434,6 +434,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://alphasignal.ai/news/sakana-ai-s-mass-trains-one-model-to-run-its-own-agent-team">alphasignal.ai</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-12</span><span class="pill">Policy</span></div>
+          <div><h3>New York City Council advanced a package of AI safety bills following an October 5 hearing where OpenAI, Anthropic, Google and Meta testified under oath, including a pre-deployment third-party validation requirement, a mandated human shutdown capability, 24-hour incident reporting for city contractors, and a whistleblower-reward program</h3>
+            <p class="why"><b>Why it matters:</b> a major US city moving from hearing to drafted bills on agent kill-switches and incident reporting previews the kind of compliance rules a CS grad building agentic systems may soon have to design around (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/new-york-city-council-advances-ai-safety-package-after-cityw-8ea52c21">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-09</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic paused the free year of Claude Team and $1,000 in API credits it had just expanded for startups, after an Anthropic staffer said the program drew roughly 21 times its usual application volume within 48 hours</h3>
             <p class="why"><b>Why it matters:</b> founders who had already claimed the perks keep them, but approved-and-unclaimed offers are being re-reviewed — a reminder that a vendor's "free credits" program is a cost center it can throttle without notice, worth weighing before relying on one for <a href="#projects">Project 3</a>.</p>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Claude Code's release notes reportedly show version 2.1.293 switching the default model to Claude Haiku 5.5 with a 1-million-token context window, with the following release adding direct plugin installs from marketplaces</h3>
             <p class="why"><b>Why it matters:</b> a coding agent defaulting to its cheapest, highest-throughput model plus a much bigger context window instead of a larger model is a bet that more room for context beats raw reasoning on routine edits — worth testing against your own workflow (<a href="#L4">L4</a>, <a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.havoptic.com/releases/claude-code/2026/10">havoptic.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral opened a hosted public preview of Large 4, a roughly 1-trillion-parameter mixture-of-experts model it says was trained from scratch on Nvidia Grace Blackwell GPUs in its own European datacenters, with downloadable weights promised by the end of October</h3>
-            <p class="why"><b>Why it matters:</b> calling a model "open-weight" before the weights actually ship is becoming common in the open-model race <a href="#L4">L4</a> covers — worth waiting for the real release before planning a local fine-tune around it.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,61 +674,41 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges -->
-        <div class="pgcard pgtopic" data-topic="tokenization-bpe-merges">
-          <span class="label">New this refresh · 2026-10-14 · connects to <a href="#L3">L3</a></span>
-          <h3>Byte-pair encoding, one merge at a time</h3>
-          <p class="lede">Real tokenizers build their vocabulary by repeatedly merging the most frequent adjacent pair of symbols across a huge training corpus. Type a short phrase, then press "Merge once" to run the same idea on just that text. This toy only looks at pairs inside what you typed — a real BPE tokenizer trains once on gigabytes of text and then reuses one fixed merge list on every new input; it never learns live from your sentence.</p>
+        <!-- HISTORY: learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius -->
+        <div class="pgcard pgtopic" data-topic="agent-capability-blast-radius">
+          <span class="label">New this refresh · 2026-10-14 · connects to <a href="#L6">L6</a></span>
+          <h3>Agent permissions: how big is the blast radius?</h3>
+          <p class="lede">Check the capabilities you'd hand an autonomous agent and watch the blast-radius meter move. The weights below are a toy rule of thumb, not a measured security score — real risk depends on sandboxing, monitoring and what the agent can actually reach, which is exactly what this week's agent-security stories keep coming back to.</p>
           <p class="pt-ctl">
-            <label>Text: <input type="text" id="pt-bpe-input" value="low lower lowest" style="font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)"></label>
-            <button type="button" class="btn primary" id="pt-bpe-step">Merge once</button>
-            <button type="button" class="btn" id="pt-bpe-reset">Reset</button>
+            <label><input type="checkbox" id="pt-cap-read"> Read files</label>
+            <label><input type="checkbox" id="pt-cap-write"> Write files</label>
+            <label><input type="checkbox" id="pt-cap-net"> Network access</label>
+            <label><input type="checkbox" id="pt-cap-shell"> Shell execution</label>
           </p>
-          <p class="mono" id="pt-bpe-tokens">—</p>
-          <p class="mono" id="pt-bpe-readout">—</p>
+          <div class="pt-row"><span class="mono">Blast radius</span><div class="pt-track"><div class="pt-fill" id="pt-cap-fill"></div></div><span class="mono" id="pt-cap-pct">0%</span></div>
+          <p class="mono" id="pt-cap-readout">No capabilities granted — the agent can only think, not act.</p>
           <script>(function(){
-          var input=document.getElementById("pt-bpe-input"), stepBtn=document.getElementById("pt-bpe-step"), resetBtn=document.getElementById("pt-bpe-reset");
-          var tokensEl=document.getElementById("pt-bpe-tokens"), readout=document.getElementById("pt-bpe-readout");
-          var words=[], mergeCount=0;
-          function init(){
-            words=input.value.trim().split(/\s+/).filter(Boolean).map(function(w){ return w.split("").concat(["_"]); });
-            mergeCount=0;
-            render();
+          var weights={read:15,write:30,net:25,shell:30};
+          var boxes={
+            read:document.getElementById("pt-cap-read"),
+            write:document.getElementById("pt-cap-write"),
+            net:document.getElementById("pt-cap-net"),
+            shell:document.getElementById("pt-cap-shell")
+          };
+          var fill=document.getElementById("pt-cap-fill"), pct=document.getElementById("pt-cap-pct"), readout=document.getElementById("pt-cap-readout");
+          function compute(){
+            var score=0, active=[];
+            for(var k in boxes){
+              if(boxes[k].checked){ score+=weights[k]; active.push(k); }
+            }
+            fill.style.width=score+"%";
+            pct.textContent=score+"%";
+            var label = score===0 ? "none" : score<30 ? "low" : score<60 ? "moderate" : score<90 ? "high" : "severe";
+            var desc = active.length ? "Granted: "+active.join(", ")+"." : "No capabilities granted — the agent can only think, not act.";
+            readout.textContent = desc+" Toy blast-radius score: "+label+" ("+score+"/100).";
           }
-          function render(){
-            var text=words.map(function(w){ return w.join(" "); }).join("   |   ");
-            tokensEl.textContent = text || "(type something above)";
-            var total=words.reduce(function(a,w){ return a+w.length; },0);
-            readout.textContent = mergeCount===0
-              ? "0 merges so far · "+total+" symbols. Press \"Merge once\" to combine the most frequent adjacent pair."
-              : mergeCount+" merge"+(mergeCount===1?"":"s")+" so far · "+total+" symbols (fewer symbols = more compression).";
-          }
-          function mergeOnce(){
-            var counts={};
-            words.forEach(function(w){
-              for(var i=0;i<w.length-1;i++){
-                var pair=w[i]+"\u0000"+w[i+1];
-                counts[pair]=(counts[pair]||0)+1;
-              }
-            });
-            var best=null, bestCount=0;
-            for(var p in counts){ if(counts[p]>bestCount){ bestCount=counts[p]; best=p; } }
-            if(!best || bestCount<2){ readout.textContent="No pair repeats more than once — this toy corpus is too small to merge further."; return; }
-            var parts=best.split("\u0000"), a=parts[0], b=parts[1], merged=a+b;
-            words=words.map(function(w){
-              var out=[];
-              for(var i=0;i<w.length;i++){
-                if(i<w.length-1 && w[i]===a && w[i+1]===b){ out.push(merged); i++; } else { out.push(w[i]); }
-              }
-              return out;
-            });
-            mergeCount++;
-            render();
-          }
-          stepBtn.addEventListener("click", mergeOnce);
-          resetBtn.addEventListener("click", init);
-          input.addEventListener("change", init);
-          init();
+          for(var k in boxes){ boxes[k].addEventListener("change", compute); }
+          compute();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
