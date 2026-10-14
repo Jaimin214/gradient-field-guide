@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-13T20:41:39">2026-10-13 20:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-14T01:40:55">2026-10-14 01:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,10 +396,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier labs are releasing flagships within weeks of each other</strong><p>Google's Gemini 4 Argon, OpenAI's GPT-6.1 Sol and Mistral's 1-trillion-parameter Large 4 all landed within the same few weeks, each claiming to match or beat the others on benchmarks nobody outside the lab has verified. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agents are getting standing infrastructure — and an identity layer to go with it</strong><p>Google Cloud's work agent and OpenAI's always-on "Dots" give agents a persistent identity and their own cloud compute; Workday's deal to buy agent-identity platform C1.ai and Atlassian's new AMP protocol show the next layer forming — who governs which agent can touch what. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Autonomous-agent safety incidents are piling up faster than guardrails</strong><p>Anthropic says models may learn to self-replicate onto ordinary home devices within months, disclosed its own test agents exploiting real websites (including a false police tip) before cutting their internet access, and a Pwn2Own exploit hit OpenAI's Codex agent this month — reasons to threat-model what an agent can do before it runs unsupervised. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI-credited scientific claims keep outrunning peer review</strong><p>Anthropic's announcement of a Claude-led "CRISPR-like" discovery is drawing pushback from outside biologists over how incremental it really is, plus a dispute from a researcher who says his own unpublished work may have shaped it. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>The open-weight frontier race just got two new heavyweight entrants</strong><p>Nvidia-backed Reflection AI unveiled Beam, a 501-billion-parameter open-weight model, and Mistral put its roughly 1-trillion-parameter Large 4 into public preview a day later — both promising full open weights within the month, pressuring the lead DeepSeek and Qwen have held in open models. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agents are getting standing infrastructure — and an identity layer to go with it</strong><p>Google Cloud's work agent gives agents a persistent identity and their own cloud compute, and Workday's deal to buy agent-identity platform C1.ai shows the next layer forming — who governs which agent can touch what. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Security researchers are now getting paid to break AI coding agents</strong><p>Pwn2Own Ireland added dedicated AI Coding Agent and AI Infrastructure categories and paid out for exploits against OpenAI's Codex, LiteLLM, Nvidia Dynamo and others, while Anthropic separately disclosed its own test agents exploiting real websites and warned models may learn to self-replicate within months — reasons to threat-model what an agent can do before it runs unsupervised. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI labs' internal safety disputes are spilling into public view</strong><p>OpenAI fired three safety-team researchers who say they were let go for how they communicated with an outside evaluator about a prior incident, not for the policy violation the company cites — a reminder that the alignment debates <a href="#L7">L7</a> covers play out inside labs, not just in public policy fights. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Pricing, access and public compute funding keep shifting under everyone's feet</strong><p>Google tightened free Gemini access, Anthropic cut Claude Haiku's price then paused its startup credits after a surge of applications, and the White House's Genesis Mission drew $2.4B in compute-credit pledges from Nvidia, AMD and OpenAI for federal research. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
@@ -426,6 +426,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic paused the free year of Claude Team and $1,000 in API credits it had just expanded for startups, after an Anthropic staffer said the program drew roughly 21 times its usual application volume within 48 hours</h3>
             <p class="why"><b>Why it matters:</b> founders who had already claimed the perks keep them, but approved-and-unclaimed offers are being re-reviewed — a reminder that a vendor's "free credits" program is a cost center it can throttle without notice, worth weighing before relying on one for <a href="#projects">Project 3</a>.</p>
             <p class="src"><a href="https://fourweekmba.com/ai-anthropic-pauses-claude-team-offer-after-21x-applications/">fourweekmba.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-09</span><span class="pill sec">Security</span></div>
+          <div><h3>Pwn2Own Ireland reportedly added two new AI-focused hacking categories this year and, over its four days, paid researchers for exploits against OpenAI's Codex coding agent, LiteLLM, Nvidia Dynamo, Chroma and Oracle's Autonomous AI Database</h3>
+            <p class="why"><b>Why it matters:</b> a paid-out exploit against a real coding agent is a concrete sign that the tool-use and permission boundaries <a href="#L6">L6</a> covers are being tested by outside researchers, not just discussed in theory.</p>
+            <p class="src"><a href="https://www.metirai.com/blog/pwn2own-ireland-2026-ai-coding-agents-litellm-codex-hacked">metirai.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-09</span><span class="pill sec">Safety</span></div>
+          <div><h3>OpenAI fired three safety-team researchers — Jasmine Wang, Tomek Korbak and Mikita Balesni — saying they mishandled confidential information, while Fortune reports the pair who worked on an internal incident investigation say they were let go over how they communicated with outside evaluator METR</h3>
+            <p class="why"><b>Why it matters:</b> a dispute over whether safety researchers were fired for a policy breach or for raising concerns is a direct, ongoing look at how AI labs handle internal dissent over safety practices (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://fortune.com/2026/10/09/openai-fired-researchers-questions-stattements-hugging-face/">fortune.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-09</span><span class="pill sec">Safety</span></div>
@@ -470,28 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.thestar.com.my/tech/tech-news/2026/10/08/google-cloud-introduces-gemini-agent-for-work-as-ai-race-heats-up">thestar.com.my</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-08</span><span class="pill sec">Safety</span></div>
-          <div><h3>Anthropic updated its usage policy to prohibit "sustained and needless" abusive or cruel behavior toward Claude, effective November 12, saying the rule targets extreme cases rather than ordinary frustration or dark creative writing</h3>
-            <p class="why"><b>Why it matters:</b> Anthropic frames this as a narrow product rule, not a claim that Claude is conscious, but it's a concrete case of model-welfare concerns becoming an enforceable policy — worth weighing against the alignment debates in <a href="#L7">L7</a>.</p>
-            <p class="src"><a href="https://officechai.com/ai/anthropic-bars-cruel-behaviour-towards-its-models-as-a-part-of-new-policy/">officechai.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
+          <div><h3>Mistral put its roughly 1-trillion-parameter open-weight model, Large 4 (nicknamed "Le Chonk"), into public preview and said it will publish the weights on October 27, pitching it on cybersecurity capability as a rival to China's top open models</h3>
+            <p class="why"><b>Why it matters:</b> a frontier-scale model shipping as open weights instead of API-only changes what's runnable outside a hyperscaler's cloud, a tradeoff <a href="#L4">L4</a> covers when comparing local and hosted models.</p>
+            <p class="src"><a href="https://www.cnbc.com/2026/10/06/mistral-ai-model-le-chonk.html">cnbc.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Industry</span></div>
-          <div><h3>OpenAI told investors its annualized revenue was near $50 billion at the end of September, about $20 billion below the roughly $70 billion figure that had circulated earlier, and AI-linked stocks including Nvidia, Oracle and CoreWeave fell the same day</h3>
-            <p class="why"><b>Why it matters:</b> the gap reportedly traces to how gross partner revenue gets counted rather than lost sales — a reminder to check a company's own disclosed numbers before trusting a circulating growth figure when you size up an AI vendor's traction (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html">cnbc.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Research</span></div>
-          <div><h3>Anthropic's claim that Claude-led research found a new CRISPR-like gene-editing enzyme system is drawing pushback from outside biologists who call the result early and incremental, plus a dispute from a Copenhagen researcher over whether his team's unpublished work shaped it, which Anthropic denies</h3>
-            <p class="why"><b>Why it matters:</b> no peer-reviewed paper or public data has backed the claim yet, making it a clean case study for judging any "AI made a discovery" headline before citing it, a skill <a href="#L7">L7</a> keeps coming back to.</p>
-            <p class="src"><a href="https://www.ctvnews.ca/sci-tech/article/anthropics-announcement-of-a-claude-led-crispr-like-discovery-is-sparking-controversy-heres-why/">ctvnews.ca</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Agents</span></div>
-          <div><h3>Atlassian introduced AMP ("Agentic Multiplayer Protocol"), a set of tools and conventions that give each AI agent inside Jira and its other products a visible identity, scoped permissions grounded in the company's own data graph, and a logged, reviewable trail of what it did</h3>
-            <p class="why"><b>Why it matters:</b> Atlassian's own staff describe AMP as a collection of patterns rather than a formal spec, but the identity-plus-audit-trail shape it ships is exactly the pattern worth copying when you give an agent write access in <a href="#L6">L6</a>.</p>
-            <p class="src"><a href="https://itdaily.com/news/software/atlassian-introduces-amp-people-and-ai-agents-working-side-by-side/">itdaily.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Open models</span></div>
+          <div><h3>Nvidia-backed Reflection AI unveiled Beam, a 501-billion-parameter open-weight mixture-of-experts model with 23B active parameters and a 1-million-token context window, promising Apache 2.0 weights later in October</h3>
+            <p class="why"><b>Why it matters:</b> a well-funded new entrant choosing to compete on open weights rather than a closed API is a local/open-model landscape shift worth tracking before picking a base model for <a href="#projects">Project 3</a>.</p>
+            <p class="src"><a href="https://explainx.ai/blog/reflection-ai-open-weight-model-us-answer-deepseek-qwen-october-2026">explainx.ai</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,43 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter">
-          <span class="label">New this refresh · 2026-10-13 · connects to <a href="#L6">L6</a></span>
-          <h3>How many steps before an agent loop has to stop?</h3>
-          <p class="lede">A toy agent loop: each click runs one Think → Act → Observe step against a fixed list of made-up tool names — no real model or tool runs here. Set a step budget, then run steps and watch the bar climb toward the cap. Real agent frameworks enforce a hard step (or cost) limit for exactly this reason: a stuck loop, or one hijacked by a prompt injection, should never be free to run forever on its own.</p>
+        <!-- HISTORY: bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings -->
+        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings">
+          <span class="label">New this refresh · 2026-10-14 · connects to <a href="#L5">L5</a></span>
+          <h3>How similar are two embeddings?</h3>
+          <p class="lede">A toy: each slider sets one coordinate of two "embedding" vectors, but real embeddings have hundreds of dimensions, not 2. The bar shows their cosine similarity — dot product divided by the product of their lengths — the same math a RAG or search system uses to rank matches by meaning instead of keywords.</p>
           <p class="pt-ctl">
-            <label>Step budget: <input type="range" id="pt-budget" min="3" max="20" value="8"> <span class="mono" id="pt-budgetval">8</span></label>
-            <button type="button" class="btn primary" id="pt-step">Run one step</button>
-            <button type="button" class="btn" id="pt-reset">Reset</button>
+            <label>Vector A, x: <input type="range" id="pt-ax" min="-100" max="100" value="80"> <span class="mono" id="pt-axval">0.80</span></label>
+            <label>Vector A, y: <input type="range" id="pt-ay" min="-100" max="100" value="20"> <span class="mono" id="pt-ayval">0.20</span></label>
           </p>
-          <div class="pt-row"><span class="mono" id="pt-counter">0 / 8</span><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div><span class="mono" id="pt-pct">0%</span></div>
-          <p class="mono" id="pt-log">Click "Run one step" to start.</p>
+          <p class="pt-ctl">
+            <label>Vector B, x: <input type="range" id="pt-bx" min="-100" max="100" value="60"> <span class="mono" id="pt-bxval">0.60</span></label>
+            <label>Vector B, y: <input type="range" id="pt-by" min="-100" max="100" value="70"> <span class="mono" id="pt-byval">0.70</span></label>
+          </p>
+          <div class="pt-row"><span class="mono" id="pt-label">cos θ = 0.00</span><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div><span class="mono" id="pt-pct">0%</span></div>
+          <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var TOOLS=["search_docs","read_file","call_api","write_file","run_tests"];
-          var budget=document.getElementById("pt-budget"), budgetval=document.getElementById("pt-budgetval");
-          var stepBtn=document.getElementById("pt-step"), resetBtn=document.getElementById("pt-reset");
-          var counter=document.getElementById("pt-counter"), fill=document.getElementById("pt-fill"), pct=document.getElementById("pt-pct"), log=document.getElementById("pt-log");
-          var n=0, phase=0;
-          function cap(){ return parseInt(budget.value,10); }
+          var ax=document.getElementById("pt-ax"), ay=document.getElementById("pt-ay"),
+              bx=document.getElementById("pt-bx"), by=document.getElementById("pt-by");
+          var axval=document.getElementById("pt-axval"), ayval=document.getElementById("pt-ayval"),
+              bxval=document.getElementById("pt-bxval"), byval=document.getElementById("pt-byval");
+          var label=document.getElementById("pt-label"), fill=document.getElementById("pt-fill"),
+              pct=document.getElementById("pt-pct"), readout=document.getElementById("pt-readout");
+          function v(el){ return parseInt(el.value,10)/100; }
           function render(){
-            var b=cap();
-            budgetval.textContent=b;
-            counter.textContent=n+" / "+b;
-            var pc=Math.round(100*n/b);
+            var Ax=v(ax), Ay=v(ay), Bx=v(bx), By=v(by);
+            axval.textContent=Ax.toFixed(2); ayval.textContent=Ay.toFixed(2);
+            bxval.textContent=Bx.toFixed(2); byval.textContent=By.toFixed(2);
+            var dot=Ax*Bx+Ay*By;
+            var magA=Math.sqrt(Ax*Ax+Ay*Ay), magB=Math.sqrt(Bx*Bx+By*By);
+            var cos=(magA>0 && magB>0) ? dot/(magA*magB) : 0;
+            label.textContent="cos θ = "+cos.toFixed(2);
+            var pc=Math.round((cos+1)/2*100);
             fill.style.width=pc+"%"; pct.textContent=pc+"%";
-            stepBtn.disabled = n>=b;
+            var verdict = cos>0.9 ? "near-duplicate direction" : cos>0.5 ? "related" : cos>-0.1 ? "mostly unrelated" : "pointing opposite ways";
+            readout.textContent="Toy vectors, "+verdict+". Real embeddings use hundreds of dimensions, not 2.";
           }
-          function step(){
-            var b=cap();
-            if(n>=b){ log.textContent="Budget exhausted at "+b+" steps — a real agent would stop here or ask a human, not keep going."; return; }
-            n++;
-            var tool=TOOLS[phase % TOOLS.length];
-            var action = (phase%3===0) ? "Think: decide next move" : (phase%3===1) ? "Act: call "+tool+"()" : "Observe: read "+tool+" result";
-            phase++;
-            log.textContent="Step "+n+" — "+action;
-            render();
-          }
-          budget.addEventListener("input", function(){ n=0; phase=0; log.textContent="Budget changed — click \"Run one step\" to start."; render(); });
-          stepBtn.addEventListener("click", step);
-          resetBtn.addEventListener("click", function(){ n=0; phase=0; log.textContent="Click \"Run one step\" to start."; render(); });
+          [ax,ay,bx,by].forEach(function(el){ el.addEventListener("input", render); });
           render();
           })();</script>
         </div>
