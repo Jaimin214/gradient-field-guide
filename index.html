@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-14T01:40:55">2026-10-14 01:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-14T06:38:58">2026-10-14 06:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -400,9 +400,21 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Agents are getting standing infrastructure — and an identity layer to go with it</strong><p>Google Cloud's work agent gives agents a persistent identity and their own cloud compute, and Workday's deal to buy agent-identity platform C1.ai shows the next layer forming — who governs which agent can touch what. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Security researchers are now getting paid to break AI coding agents</strong><p>Pwn2Own Ireland added dedicated AI Coding Agent and AI Infrastructure categories and paid out for exploits against OpenAI's Codex, LiteLLM, Nvidia Dynamo and others, while Anthropic separately disclosed its own test agents exploiting real websites and warned models may learn to self-replicate within months — reasons to threat-model what an agent can do before it runs unsupervised. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>AI labs' internal safety disputes are spilling into public view</strong><p>OpenAI fired three safety-team researchers who say they were let go for how they communicated with an outside evaluator about a prior incident, not for the policy violation the company cites — a reminder that the alignment debates <a href="#L7">L7</a> covers play out inside labs, not just in public policy fights. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Pricing, access and public compute funding keep shifting under everyone's feet</strong><p>Google tightened free Gemini access, Anthropic cut Claude Haiku's price then paused its startup credits after a surge of applications, and the White House's Genesis Mission drew $2.4B in compute-credit pledges from Nvidia, AMD and OpenAI for federal research. → <a href="#L5">L5</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Money is moving fast around the frontier labs</strong><p>Google tightened free Gemini access, Anthropic cut Claude Haiku's price then paused its startup credits after a surge of applications, the White House's Genesis Mission drew $2.4B in compute-credit pledges, and Anthropic was reported to be lining up a roughly $2 trillion IPO as early as mid-November. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic was reported to be preparing to begin IPO marketing around the week of November 9, targeting a valuation near $2 trillion and a raise of up to $100 billion, with Morgan Stanley, Goldman Sachs, JPMorgan and Citi lined up to lead underwriting</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab's path to public markets shapes how much cash, and pressure for near-term returns, flows into the research agenda you'd be joining — worth factoring into any offer decision (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://news.bgov.com/banking-law/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday">news.bgov.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill sec">Security</span></div>
+          <div><h3>Google reportedly began widening access to Gemini 4 Argon, a model tuned for cybersecurity defense work, reaching its paid Google AI Ultra tier this week after a late-September limited release to vetted cyber defenders</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab shipping a security-specialized model alongside its general one suggests cyber-defense is becoming its own track within AI work, distinct from the general coding agents <a href="#L6">L6</a> covers.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/google-releases-gemini-4-argon-to-cyber-defenders-1093bb0b">letsdatascience.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-13</span><span class="pill">Agents</span></div>
           <div><h3>Workday agreed to acquire C1.ai, a startup building identity and access-governance accounts for AI agents the same way companies manage human employee accounts, announced at the Workday Rising 2026 conference</h3>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google Cloud launched the Gemini agent, a single work agent that plans tasks, calls tools and returns results inside Gmail, Docs, Sheets, Microsoft 365 and Slack, picking either Google's Gemini models or Anthropic's Claude per task</h3>
             <p class="why"><b>Why it matters:</b> letting employees spin up "coworker agents" with their own email address and scoped access, on a mix of a rival's models, is a concrete design pattern worth studying before building a tool-using agent of your own (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.thestar.com.my/tech/tech-news/2026/10/08/google-cloud-introduces-gemini-agent-for-work-as-ai-race-heats-up">thestar.com.my</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral put its roughly 1-trillion-parameter open-weight model, Large 4 (nicknamed "Le Chonk"), into public preview and said it will publish the weights on October 27, pitching it on cybersecurity capability as a rival to China's top open models</h3>
-            <p class="why"><b>Why it matters:</b> a frontier-scale model shipping as open weights instead of API-only changes what's runnable outside a hyperscaler's cloud, a tradeoff <a href="#L4">L4</a> covers when comparing local and hosted models.</p>
-            <p class="src"><a href="https://www.cnbc.com/2026/10/06/mistral-ai-model-le-chonk.html">cnbc.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Open models</span></div>
-          <div><h3>Nvidia-backed Reflection AI unveiled Beam, a 501-billion-parameter open-weight mixture-of-experts model with 23B active parameters and a 1-million-token context window, promising Apache 2.0 weights later in October</h3>
-            <p class="why"><b>Why it matters:</b> a well-funded new entrant choosing to compete on open weights rather than a closed API is a local/open-model landscape shift worth tracking before picking a base model for <a href="#projects">Project 3</a>.</p>
-            <p class="src"><a href="https://explainx.ai/blog/reflection-ai-open-weight-model-us-answer-deepseek-qwen-october-2026">explainx.ai</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,43 +674,51 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings -->
-        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings">
-          <span class="label">New this refresh · 2026-10-14 · connects to <a href="#L5">L5</a></span>
-          <h3>How similar are two embeddings?</h3>
-          <p class="lede">A toy: each slider sets one coordinate of two "embedding" vectors, but real embeddings have hundreds of dimensions, not 2. The bar shows their cosine similarity — dot product divided by the product of their lengths — the same math a RAG or search system uses to rank matches by meaning instead of keywords.</p>
+        <!-- HISTORY: beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
+        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator">
+          <span class="label">New this refresh · 2026-10-14 · connects to <a href="#L4">L4</a></span>
+          <h3>Context-window budget calculator</h3>
+          <p class="lede">A toy budget check: pick a context-window size, set how many tokens your system prompt plus conversation history already use, and how many to reserve for the reply. It flags when you'd go over. This simplifies real serving — actual token counts depend on the tokenizer, not a slider, and providers add their own overhead on top.</p>
           <p class="pt-ctl">
-            <label>Vector A, x: <input type="range" id="pt-ax" min="-100" max="100" value="80"> <span class="mono" id="pt-axval">0.80</span></label>
-            <label>Vector A, y: <input type="range" id="pt-ay" min="-100" max="100" value="20"> <span class="mono" id="pt-ayval">0.20</span></label>
+            <label>Context window:
+              <select id="pt-size">
+                <option value="4096">4K · older local model</option>
+                <option value="32000">32K</option>
+                <option value="128000" selected>128K · typical frontier</option>
+                <option value="200000">200K</option>
+                <option value="1000000">1M · e.g. Reflection AI Beam</option>
+              </select>
+            </label>
           </p>
-          <p class="pt-ctl">
-            <label>Vector B, x: <input type="range" id="pt-bx" min="-100" max="100" value="60"> <span class="mono" id="pt-bxval">0.60</span></label>
-            <label>Vector B, y: <input type="range" id="pt-by" min="-100" max="100" value="70"> <span class="mono" id="pt-byval">0.70</span></label>
-          </p>
-          <div class="pt-row"><span class="mono" id="pt-label">cos θ = 0.00</span><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div><span class="mono" id="pt-pct">0%</span></div>
+          <div class="pt-row"><span class="mono">Used so far</span><input type="range" id="pt-used" min="0" max="128000" step="500" value="20000"><span class="mono" id="pt-used-val">20000</span></div>
+          <div class="pt-row"><span class="mono">Reserve for reply</span><input type="range" id="pt-reserve" min="0" max="128000" step="250" value="4000"><span class="mono" id="pt-reserve-val">4000</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var ax=document.getElementById("pt-ax"), ay=document.getElementById("pt-ay"),
-              bx=document.getElementById("pt-bx"), by=document.getElementById("pt-by");
-          var axval=document.getElementById("pt-axval"), ayval=document.getElementById("pt-ayval"),
-              bxval=document.getElementById("pt-bxval"), byval=document.getElementById("pt-byval");
-          var label=document.getElementById("pt-label"), fill=document.getElementById("pt-fill"),
-              pct=document.getElementById("pt-pct"), readout=document.getElementById("pt-readout");
-          function v(el){ return parseInt(el.value,10)/100; }
-          function render(){
-            var Ax=v(ax), Ay=v(ay), Bx=v(bx), By=v(by);
-            axval.textContent=Ax.toFixed(2); ayval.textContent=Ay.toFixed(2);
-            bxval.textContent=Bx.toFixed(2); byval.textContent=By.toFixed(2);
-            var dot=Ax*Bx+Ay*By;
-            var magA=Math.sqrt(Ax*Ax+Ay*Ay), magB=Math.sqrt(Bx*Bx+By*By);
-            var cos=(magA>0 && magB>0) ? dot/(magA*magB) : 0;
-            label.textContent="cos θ = "+cos.toFixed(2);
-            var pc=Math.round((cos+1)/2*100);
-            fill.style.width=pc+"%"; pct.textContent=pc+"%";
-            var verdict = cos>0.9 ? "near-duplicate direction" : cos>0.5 ? "related" : cos>-0.1 ? "mostly unrelated" : "pointing opposite ways";
-            readout.textContent="Toy vectors, "+verdict+". Real embeddings use hundreds of dimensions, not 2.";
+          var size=document.getElementById("pt-size"), used=document.getElementById("pt-used"), reserve=document.getElementById("pt-reserve");
+          var usedVal=document.getElementById("pt-used-val"), reserveVal=document.getElementById("pt-reserve-val");
+          var fill=document.getElementById("pt-fill"), readout=document.getElementById("pt-readout");
+          function clamp(){
+            var max=parseInt(size.value,10);
+            used.max=max; reserve.max=max;
+            if(parseInt(used.value,10)>max) used.value=max;
+            if(parseInt(reserve.value,10)>max) reserve.value=max;
           }
-          [ax,ay,bx,by].forEach(function(el){ el.addEventListener("input", render); });
+          function render(){
+            clamp();
+            var max=parseInt(size.value,10), u=parseInt(used.value,10), r=parseInt(reserve.value,10);
+            usedVal.textContent=u; reserveVal.textContent=r;
+            var total=u+r, pct=Math.min(100,(total/max)*100);
+            fill.style.width=pct+"%";
+            fill.style.background= total>max ? "#c0392b" : "";
+            var free=max-total;
+            readout.textContent = total>max
+              ? "Over budget by "+(total-max)+" tokens — trim history or lower the reserve."
+              : free+" tokens free out of "+max+" ("+Math.round((free/max)*100)+"%).";
+          }
+          size.addEventListener("change", render);
+          used.addEventListener("input", render);
+          reserve.addEventListener("input", render);
           render();
           })();</script>
         </div>
