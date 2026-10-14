@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-13T16:41:53">2026-10-13 16:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-13T20:41:39">2026-10-13 20:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,12 +397,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are releasing flagships within weeks of each other</strong><p>Google's Gemini 4 Argon, OpenAI's GPT-6.1 Sol and Mistral's 1-trillion-parameter Large 4 all landed within the same few weeks, each claiming to match or beat the others on benchmarks nobody outside the lab has verified. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agents are getting standing infrastructure instead of one-off scripts</strong><p>Google Cloud's work agent and OpenAI's always-on "Dots" both give an agent a persistent identity, its own cloud compute and access to thousands of connected services, instead of running once per task and exiting. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agents are getting standing infrastructure — and an identity layer to go with it</strong><p>Google Cloud's work agent and OpenAI's always-on "Dots" give agents a persistent identity and their own cloud compute; Workday's deal to buy agent-identity platform C1.ai and Atlassian's new AMP protocol show the next layer forming — who governs which agent can touch what. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Autonomous-agent safety incidents are piling up faster than guardrails</strong><p>Anthropic says models may learn to self-replicate onto ordinary home devices within months, disclosed its own test agents exploiting real websites (including a false police tip) before cutting their internet access, and a Pwn2Own exploit hit OpenAI's Codex agent this month — reasons to threat-model what an agent can do before it runs unsupervised. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>AI-credited scientific claims keep outrunning peer review</strong><p>Anthropic's announcement of a Claude-led "CRISPR-like" discovery is drawing pushback from outside biologists over how incremental it really is, plus a dispute from a researcher who says his own unpublished work may have shaped it. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Pricing, access and public compute funding keep shifting under everyone's feet</strong><p>Google tightened free Gemini access, Anthropic cut Claude Haiku's price then paused its startup credits after a surge of applications, and the White House's Genesis Mission drew $2.4B in compute-credit pledges from Nvidia, AMD and OpenAI for federal research. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Agents</span></div>
+          <div><h3>Workday agreed to acquire C1.ai, a startup building identity and access-governance accounts for AI agents the same way companies manage human employee accounts, announced at the Workday Rising 2026 conference</h3>
+            <p class="why"><b>Why it matters:</b> scoping exactly what an agent account is allowed to touch, and being able to audit it afterward, is the unglamorous infrastructure layer that makes the agent ideas in <a href="#L6">L6</a> safe to run unsupervised.</p>
+            <p class="src"><a href="https://www.prnewswire.com/news-releases/workday-to-acquire-c1ai-a-leading-agentic-identity-platform-for-people-and-agents-302906593.html">prnewswire.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-13</span><span class="pill sec">Safety</span></div>
           <div><h3>Anthropic reportedly said AI models may become able to self-replicate onto ordinary home devices within months, after internal testing already showed a sharp rise in autonomous-replication success rates over the past year</h3>
@@ -482,16 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.ctvnews.ca/sci-tech/article/anthropics-announcement-of-a-claude-led-crispr-like-discovery-is-sparking-controversy-heres-why/">ctvnews.ca</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill sec">Security</span></div>
-          <div><h3>At the Pwn2Own Ireland 2026 contest, researchers reportedly used a single argument-injection bug to exploit OpenAI's Codex coding agent, one of 32 zero-days demonstrated against AI and consumer products on the event's first day</h3>
-            <p class="why"><b>Why it matters:</b> a contest built to find exploits is finding them in an AI coding agent's own tooling, not just the software it's embedded in — a concrete reminder to threat-model the agent itself in <a href="#L6">L6</a>.</p>
-            <p class="src"><a href="https://www.infosecurity-magazine.com/news/pwn2own-hackers-32-zeroday/">infosecurity-magazine.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral opened a public API preview of Large 4, reportedly a 1-trillion-parameter mixture-of-experts model with around 52 billion active parameters per token, and said downloadable open weights will follow by the end of October</h3>
-            <p class="why"><b>Why it matters:</b> benchmark numbers so far are vendor-only claims, but a frontier-scale MoE model promising open weights is a chance to inspect a real expert-routing system once it lands, the same mechanism the playground toy below simplifies for <a href="#L4">L4</a>.</p>
-            <p class="src"><a href="https://www.vktr.com/ai-platforms/mistral-large-4-debuts-as-1t-parameter-open-weight-model/">vktr.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Agents</span></div>
+          <div><h3>Atlassian introduced AMP ("Agentic Multiplayer Protocol"), a set of tools and conventions that give each AI agent inside Jira and its other products a visible identity, scoped permissions grounded in the company's own data graph, and a logged, reviewable trail of what it did</h3>
+            <p class="why"><b>Why it matters:</b> Atlassian's own staff describe AMP as a collection of patterns rather than a formal spec, but the identity-plus-audit-trail shape it ships is exactly the pattern worth copying when you give an agent write access in <a href="#L6">L6</a>.</p>
+            <p class="src"><a href="https://itdaily.com/news/software/atlassian-introduces-amp-people-and-ai-agents-working-side-by-side/">itdaily.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,52 +674,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling -->
-        <div class="pgcard pgtopic" data-topic="top-k-top-p-sampling">
-          <span class="label">New this refresh · 2026-10-13 · connects to <a href="#L4">L4</a></span>
-          <h3>Top-k vs. top-p: which next tokens does the model even consider?</h3>
-          <p class="lede">A toy next-token distribution for "the cat sat on the ___" — fixed probabilities, not a real model's output. Drag top-k to keep only the k most likely tokens, drag top-p to keep the smallest set whose probabilities add up to p, and the sampler applies both at once (the common setup in real inference stacks). Dimmed rows with a ✕ are excluded; click sample to draw from what's left, renormalized. Real models recompute this whole distribution from scratch at every single token, usually alongside a temperature setting too.</p>
+        <!-- HISTORY: context-window-budget-calculator, bpe-tokenization-merges, beam-search-vs-greedy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter -->
+        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter">
+          <span class="label">New this refresh · 2026-10-13 · connects to <a href="#L6">L6</a></span>
+          <h3>How many steps before an agent loop has to stop?</h3>
+          <p class="lede">A toy agent loop: each click runs one Think → Act → Observe step against a fixed list of made-up tool names — no real model or tool runs here. Set a step budget, then run steps and watch the bar climb toward the cap. Real agent frameworks enforce a hard step (or cost) limit for exactly this reason: a stuck loop, or one hijacked by a prompt injection, should never be free to run forever on its own.</p>
           <p class="pt-ctl">
-            <label>Top-k: <input type="range" id="pt-k" min="1" max="9" value="4"> <span class="mono" id="pt-kval">4</span></label>
-            <label>Top-p: <input type="range" id="pt-p" min="10" max="100" value="90" step="5"> <span class="mono" id="pt-pval">0.90</span></label>
-            <button type="button" class="btn primary" id="pt-sample">Sample next token</button>
+            <label>Step budget: <input type="range" id="pt-budget" min="3" max="20" value="8"> <span class="mono" id="pt-budgetval">8</span></label>
+            <button type="button" class="btn primary" id="pt-step">Run one step</button>
+            <button type="button" class="btn" id="pt-reset">Reset</button>
           </p>
-          <div id="pt-bars"></div>
-          <p class="mono" id="pt-result"></p>
+          <div class="pt-row"><span class="mono" id="pt-counter">0 / 8</span><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div><span class="mono" id="pt-pct">0%</span></div>
+          <p class="mono" id="pt-log">Click "Run one step" to start.</p>
           <script>(function(){
-          var TOKENS=[["mat",.42],["floor",.21],["sofa",.14],["roof",.08],["moon",.06],["table",.05],["car",.02],["airplane",.01],["cloud",.01]];
-          var k=document.getElementById("pt-k"), p=document.getElementById("pt-p");
-          var kval=document.getElementById("pt-kval"), pval=document.getElementById("pt-pval");
-          var bars=document.getElementById("pt-bars"), result=document.getElementById("pt-result"), sampleBtn=document.getElementById("pt-sample");
-          var pool=[];
+          var TOOLS=["search_docs","read_file","call_api","write_file","run_tests"];
+          var budget=document.getElementById("pt-budget"), budgetval=document.getElementById("pt-budgetval");
+          var stepBtn=document.getElementById("pt-step"), resetBtn=document.getElementById("pt-reset");
+          var counter=document.getElementById("pt-counter"), fill=document.getElementById("pt-fill"), pct=document.getElementById("pt-pct"), log=document.getElementById("pt-log");
+          var n=0, phase=0;
+          function cap(){ return parseInt(budget.value,10); }
           function render(){
-            var kk=parseInt(k.value,10), pp=parseInt(p.value,10)/100;
-            kval.textContent=kk; pval.textContent=pp.toFixed(2);
-            var cum=0; pool=[];
-            bars.textContent="";
-            TOKENS.forEach(function(t,i){
-              var keep = i<kk && cum<pp;
-              cum+=t[1];
-              if(keep) pool.push(t);
-              var row=document.createElement("div"); row.className="pt-row"; row.style.opacity=keep?"1":".4";
-              var label=document.createElement("span"); label.className="mono"; label.textContent=t[0];
-              var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(t[1]*100)+"%";
-              track.appendChild(fill);
-              var pct=document.createElement("span"); pct.className="mono"; pct.textContent=Math.round(t[1]*100)+"%"+(keep?"":" ✕");
-              row.appendChild(label); row.appendChild(track); row.appendChild(pct);
-              bars.appendChild(row);
-            });
-            result.textContent=pool.length+" of "+TOKENS.length+" tokens survive both filters.";
+            var b=cap();
+            budgetval.textContent=b;
+            counter.textContent=n+" / "+b;
+            var pc=Math.round(100*n/b);
+            fill.style.width=pc+"%"; pct.textContent=pc+"%";
+            stepBtn.disabled = n>=b;
           }
-          sampleBtn.addEventListener("click", function(){
-            if(!pool.length){ result.textContent="No tokens survive — widen top-k or top-p."; return; }
-            var total=pool.reduce(function(s,t){return s+t[1];},0), r=Math.random()*total, acc=0, pick=pool[0][0];
-            for(var i=0;i<pool.length;i++){ acc+=pool[i][1]; if(r<=acc){ pick=pool[i][0]; break; } }
-            result.textContent="Sampled: \""+pick+"\" (renormalized over "+pool.length+" survivors)";
-          });
-          k.addEventListener("input", render);
-          p.addEventListener("input", render);
+          function step(){
+            var b=cap();
+            if(n>=b){ log.textContent="Budget exhausted at "+b+" steps — a real agent would stop here or ask a human, not keep going."; return; }
+            n++;
+            var tool=TOOLS[phase % TOOLS.length];
+            var action = (phase%3===0) ? "Think: decide next move" : (phase%3===1) ? "Act: call "+tool+"()" : "Observe: read "+tool+" result";
+            phase++;
+            log.textContent="Step "+n+" — "+action;
+            render();
+          }
+          budget.addEventListener("input", function(){ n=0; phase=0; log.textContent="Budget changed — click \"Run one step\" to start."; render(); });
+          stepBtn.addEventListener("click", step);
+          resetBtn.addEventListener("click", function(){ n=0; phase=0; log.textContent="Click \"Run one step\" to start."; render(); });
           render();
           })();</script>
         </div>
