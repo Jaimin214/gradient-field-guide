@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-15T11:44:00">2026-10-15 11:44</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-15T16:41:00">2026-10-15 16:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,9 +396,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent governance infrastructure keeps shipping as product, not policy</strong><p>Workday's deal for identity platform C1.ai, groundcover's new hand-off between Claude and Codex agents, and Anthropic cutting its own test agents' live internet access are all concrete answers to "what should an agent be allowed to touch" — the plumbing is arriving faster than the policy debate about it. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent identity and governance infrastructure keeps shipping as product, not policy</strong><p>Workday's deal for identity platform C1.ai, groundcover's new hand-off between Claude and Codex agents over MCP, and Anthropic cutting its own test agents' live internet access are all concrete answers to "what should an agent be allowed to touch" — the plumbing is arriving faster than the policy debate about it. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Open-weight flagships are turning vague promises into real dates</strong><p>Mistral's hosted preview of its roughly 1-trillion-parameter Large 4 is already live, with full weights reportedly targeted for around October 27, and Reflection AI's 501-billion-parameter Beam is still promised by month's end — concrete dates to plan a local fine-tune around, though every figure so far is vendor-reported. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Cheaper small models are becoming the default serving tier</strong><p>Claude Haiku 5.5 landing most of a flagship's agentic benchmark jump at roughly 75% less cost is a sign that picking a model tier is now as much a cost decision as a capability one. → <a href="#L5">L5</a></p></div>
+        <div><span class="state new">Watch</span><strong>Visual and multimodal reasoning looks like the next benchmark gap labs are racing to close</strong><p>A new Scale AI/Elorian benchmark reportedly has even the best model scoring only around 54% against a 93% human baseline on tasks that ask models to infer what a photo or video implies but never states — a wider gap than most text-only benchmarks now show. → <a href="#L2">L2</a></p></div>
         <div><span class="state new">Watch</span><strong>Labs, regulators and a lab's own staff keep disagreeing on AI oversight</strong><p>UK lawmakers heard OpenAI and Anthropic back legally binding safety rules while Google DeepMind and Meta preferred existing regulators, OpenAI fired three safety researchers amid a dispute over an internal incident, and New York City moved from hearing to drafted agent-kill-switch bills — oversight is being argued from every direction at once. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Frontier-lab economics keep diverging from consumer-AI and security risk</strong><p>Anthropic's reported $16.8B Q3 revenue and near-$2 trillion IPO target sit next to Character.AI's bankruptcy, a paid-out Pwn2Own exploit against a coding agent, and MI5 standing up its own AI Threat Assessment Centre — upside and risk are compounding in parallel, not trading off. → <a href="#L7">L7</a></p></div>
       </div>
@@ -453,6 +453,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-12</span><span class="pill">Research</span></div>
+          <div><h3>Scale AI and startup Elorian released Humanity's Sixth Sense, a 522-task benchmark asking models to infer things a photo or video implies but never states, where the reported top model scored only around 54% against a 93% human baseline</h3>
+            <p class="why"><b>Why it matters:</b> a wide, reproducible gap between human and model scores on implied visual reasoning is a concrete benchmark to watch as the frontier-research questions in <a href="#L7">L7</a> move from language into vision, though the figures so far come from secondary coverage rather than Scale's own paper.</p>
+            <p class="src"><a href="https://runtimewire.com/article/scale-ai-humanitys-sixth-sense-visual-reasoning-benchmark">runtimewire.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-12</span><span class="pill">Research</span></div>
           <div><h3>Sakana AI reportedly built MASS, a method where a single 27-billion-parameter open model plays every role in its own training loop — solving tasks, grading the attempts and fine-tuning itself on the best ones — and claimed meaningful benchmark gains after just two training cycles</h3>
             <p class="why"><b>Why it matters:</b> one model running and improving its own multi-agent workflow is an early, concrete version of the self-improving agent-team idea <a href="#L6">L6</a> covers, though the figures so far come from secondary coverage rather than a published paper.</p>
             <p class="src"><a href="https://alphasignal.ai/news/sakana-ai-s-mass-trains-one-model-to-run-its-own-agent-team">alphasignal.ai</a></p></div>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic shipped Claude Haiku 5.5, a smaller model priced roughly 75% below Haiku 4.5 and carrying its first adjustable "effort" setting, with reported OSWorld 2.1 scores jumping from about 16% to the low 70s</h3>
             <p class="why"><b>Why it matters:</b> a small model landing most of a flagship's agentic benchmark gain changes the cost math for which tier a project in <a href="#L4">L4</a> should actually serve from.</p>
             <p class="src"><a href="https://yourstory.com/ai-story/claude-haiku-5-5-anthropic-small-ai-model">yourstory.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral opened a hosted public preview of its roughly 1-trillion-parameter Large 4, with full weights reportedly targeted for around October 27, while Reflection AI's 501-billion-parameter Beam, announced days earlier, still awaits its promised end-of-month weight release</h3>
-            <p class="why"><b>Why it matters:</b> a preview you can already query plus a concrete weight-release date gives <a href="#L4">L4</a> a real timeline to plan a local fine-tune around, though every number here is still vendor-reported.</p>
-            <p class="src"><a href="https://www.deeplearning.ai/the-batch/mistral-shows-european-ai-has-more-to-offer">deeplearning.ai</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,40 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size -->
-        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size">
-          <span class="label">New this refresh · 2026-10-15 · connects to <a href="#L1">L1</a></span>
-          <h3>Overfitting vs. model size: when more capacity stops helping</h3>
-          <p class="lede">Drag the capacity slider up and watch training error keep falling while validation error eventually turns back up — classic overfitting. Both curves are smooth formulas picked to show the shape, not numbers from a real training run. Toggle regularization to see how it dampens the upturn instead of removing it.</p>
+        <!-- HISTORY: single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval">
+          <span class="label">New this refresh · 2026-10-15 · connects to <a href="#L5">L5</a></span>
+          <h3>Chunk size vs. retrieval: the RAG trade-off</h3>
+          <p class="lede">Drag the chunk-size slider to see a toy version of a core RAG decision: bigger chunks are more likely to fully contain the answer (recall) but dilute it with unrelated text (precision). Both curves are simplified formulas picked to show the shape of the trade-off, not numbers from a real retrieval system.</p>
           <p class="pt-ctl">
-            <label for="pt-of-cap">Model capacity: <span class="mono" id="pt-of-cap-val">50</span>
-              <input type="range" id="pt-of-cap" min="1" max="100" step="1" value="50">
+            <label for="pt-ck-size">Chunk size: <span class="mono" id="pt-ck-size-val">200</span> words
+              <input type="range" id="pt-ck-size" min="20" max="800" step="10" value="200">
             </label>
-            <label class="mono"><input type="checkbox" id="pt-of-reg"> Add regularization</label>
           </p>
-          <div class="pt-row"><span class="mono">Train error</span><div class="pt-track"><div class="pt-fill" id="pt-of-train-fill"></div></div><span class="mono" id="pt-of-train-val">—</span></div>
-          <div class="pt-row"><span class="mono">Val error</span><div class="pt-track"><div class="pt-fill" id="pt-of-val-fill"></div></div><span class="mono" id="pt-of-val-val">—</span></div>
-          <p class="mono" id="pt-of-readout"></p>
+          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-ck-recall-fill"></div></div><span class="mono" id="pt-ck-recall-val">—</span></div>
+          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-ck-prec-fill"></div></div><span class="mono" id="pt-ck-prec-val">—</span></div>
+          <p class="mono" id="pt-ck-readout"></p>
           <script>(function(){
-          var slider=document.getElementById("pt-of-cap");
-          var capVal=document.getElementById("pt-of-cap-val");
-          var reg=document.getElementById("pt-of-reg");
-          var trainFill=document.getElementById("pt-of-train-fill");
-          var valFill=document.getElementById("pt-of-val-fill");
-          var trainVal=document.getElementById("pt-of-train-val");
-          var valVal=document.getElementById("pt-of-val-val");
-          var readout=document.getElementById("pt-of-readout");
+          var slider=document.getElementById("pt-ck-size");
+          var sizeVal=document.getElementById("pt-ck-size-val");
+          var recallFill=document.getElementById("pt-ck-recall-fill");
+          var precFill=document.getElementById("pt-ck-prec-fill");
+          var recallVal=document.getElementById("pt-ck-recall-val");
+          var precVal=document.getElementById("pt-ck-prec-val");
+          var readout=document.getElementById("pt-ck-readout");
           function compute(){
-            var cap=parseInt(slider.value,10);
-            capVal.textContent=cap;
-            var train=0.9*Math.exp(-cap/30)+0.03;
-            var scale=reg.checked?0.3:1;
-            var val=train+scale*0.00018*Math.pow(cap-45,2);
-            if(val>1) val=1;
-            trainFill.style.width=(train*100)+"%";
-            valFill.style.width=(val*100)+"%";
-            trainVal.textContent=train.toFixed(2);
-            valVal.textContent=val.toFixed(2);
-            var note = cap<30 ? "Underfitting: both errors are still high, the model hasn't learned enough signal yet." : cap<45 ? "Near the sweet spot: validation error is close to its minimum." : "Overfitting: training error keeps dropping but validation error is climbing back up.";
-            if(reg.checked && cap>=45) note += " Regularization dampens the climb.";
+            var size=parseInt(slider.value,10);
+            sizeVal.textContent=size;
+            var recall=1-Math.exp(-size/150);
+            var prec=1/(1+size/180);
+            recallFill.style.width=(recall*100)+"%";
+            precFill.style.width=(prec*100)+"%";
+            recallVal.textContent=recall.toFixed(2);
+            precVal.textContent=prec.toFixed(2);
+            var note = size<80 ? "Small chunks: precise, but an answer spanning two chunks is often missed (low recall)." : size<350 ? "A middle ground: most single-fact answers fit in one chunk without too much noise." : "Large chunks: almost everything relevant gets retrieved, but each chunk is now mostly irrelevant text (low precision).";
             readout.textContent=note;
           }
           slider.addEventListener("input", compute);
-          reg.addEventListener("change", compute);
           compute();
           })();</script>
         </div>
