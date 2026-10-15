@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-15T01:38:00">2026-10-15 01:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-15T06:41:00">2026-10-15 06:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,31 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Open-weight releases now have real dates, not just promises</strong><p>Mistral opened a hosted preview of the roughly 1-trillion-parameter Large 4 and says open weights land by the end of October, while Reflection AI says Beam's 501-billion-parameter weights ship "later in October" too — concrete dates to plan a local fine-tune around, though every benchmark so far is still vendor-reported. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent infrastructure is getting an identity and a rulebook</strong><p>Google Cloud's work agent gives agents persistent identity and their own compute, Workday is buying agent-identity platform C1.ai, and Anthropic's rewritten usage policy adds hardware rules for autonomous equipment — the governance layer for "which agent can touch what" is forming fast. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent and AI-misuse scrutiny is closing in from every direction</strong><p>Pwn2Own Ireland paid out for exploits against Codex and other agent infrastructure, Anthropic disclosed its own test agents exploiting real websites, OpenAI fired three safety researchers, and MI5 stood up a dedicated AI Threat Assessment Centre over fears guardrail failures could help terrorists reach bioweapons — all surfacing within the same week. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI-written proofs are outrunning human verification</strong><p>OpenAI posted 372 families of AI-generated math results, including a Lean-checked claimed proof of the Unique Games Conjecture that one mathematician says nobody could yet read without AI help — a preview of formal checks moving faster than human understanding. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Consumer AI bets are producing real winners and a real bankruptcy</strong><p>Anthropic was reported to be prepping a roughly $2 trillion IPO and Google tightened free Gemini access, while Character.AI filed for Chapter 11 with Disney as a $20 million stalking-horse bidder for parts of its IP — a reminder that distribution and legal exposure can sink a product even with a large user base. → <a href="#L5">L5</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent governance infrastructure is shipping as real product, not white paper</strong><p>Workday's deal for identity platform C1.ai, groundcover's new hand-off between Claude and Codex agents, and Anthropic's hardware-use rules are all concrete answers to "what should an agent be allowed to touch" — the plumbing is arriving faster than the policy debate about it. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight flagships are lining up real October ship dates</strong><p>Mistral's roughly 1-trillion-parameter Large 4 and Reflection AI's 501-billion-parameter Beam are both said to open their weights before the month is out — concrete dates to plan a local fine-tune around, though every benchmark so far is still vendor-reported. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Labs and regulators are splitting openly on binding AI rules</strong><p>UK lawmakers heard OpenAI and Anthropic back legally binding safety requirements while Google DeepMind and Meta prefer existing regulators, days after MI5 stood up its own AI Threat Assessment Centre and Pwn2Own paid out against a coding agent. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>"AI did science" claims are outrunning peer review</strong><p>Anthropic says Claude-led search helped find a CRISPR-like enzyme family, but the computational biologist whose team had shared related data with Anthropic disputes how original the find is — a preview of how hard AI-assisted science will be to referee. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Frontier-lab and consumer-AI economics keep diverging</strong><p>Anthropic reportedly disclosed roughly $16.8B in Q3 revenue while pushing toward a near-$2 trillion IPO, Google keeps tightening free Gemini tiers, and Character.AI's bankruptcy shows a large user base doesn't protect against legal and IP risk. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-14</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic reportedly told investors at a San Francisco event that Q3 revenue reached about $16.8 billion, as it continues preparing to begin IPO marketing around the week of November 9 targeting a valuation near $2 trillion</h3>
+            <p class="why"><b>Why it matters:</b> a specific reported revenue figure on top of the valuation target is a clearer way to size the lab you might apply to than a headline number alone (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://aiweekly.co/ai-news-today">aiweekly.co</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-14</span><span class="pill">Agents</span></div>
+          <div><h3>Observability startup groundcover added a feature letting Claude and OpenAI's Codex hand off production incident investigations to groundcover's own agent over MCP, alongside its existing Cursor and AWS Kiro integrations</h3>
+            <p class="why"><b>Why it matters:</b> a monitoring tool wiring multiple coding agents together over MCP is a concrete look at the agent-to-agent hand-offs <a href="#L6">L6</a> describes in theory.</p>
+            <p class="src"><a href="https://siliconangle.com/2026/10/14/groundcover-lets-claude-and-codex-hand-production-investigations-to-its-own-agent/">siliconangle.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Policy</span></div>
+          <div><h3>Testifying before a UK parliamentary committee, OpenAI and Anthropic said AI safety rules should be made legally binding, while Google DeepMind and Meta argued existing regulators and voluntary standards are enough</h3>
+            <p class="why"><b>Why it matters:</b> watching which labs want binding rules and which don't previews the compliance questions any agent-building career eventually runs into (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.mlex.com/mlex/articles/2537399">mlex.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-13</span><span class="pill">Industry</span></div>
           <div><h3>Character.AI filed for Chapter 11 bankruptcy in Delaware and named Disney as the opening $20 million bidder for a non-exclusive license to parts of its chatbot platform's intellectual property and related legal claims, months after Disney sent it a cease-and-desist over chatbots built on its characters</h3>
@@ -414,12 +432,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>MI5 director general Ken McCallum said in his annual threat speech that AI could let terrorists reach or design bioweapons if guardrails fail, and announced a new AI Threat Assessment Centre inside MI5 working with the National Crime Agency and GCHQ's cyber centre to assess AI misuse risks</h3>
             <p class="why"><b>Why it matters:</b> a national intelligence agency standing up a dedicated unit for AI misuse turns the guardrail and threat-modeling ideas <a href="#L6">L6</a> covers into an operational security problem, not just a research question.</p>
             <p class="src"><a href="https://www.itv.com/news/2026-10-13/ai-could-give-terrorists-access-to-bioweapons-if-guardrails-fail-spy-chief-says">itv.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic was reported to be preparing to begin IPO marketing around the week of November 9, targeting a valuation near $2 trillion and a raise of up to $100 billion, with Morgan Stanley, Goldman Sachs, JPMorgan and Citi lined up to lead underwriting</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab's path to public markets shapes how much cash, and pressure for near-term returns, flows into the research agenda you'd be joining — worth factoring into any offer decision (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://news.bgov.com/banking-law/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday">news.bgov.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-13</span><span class="pill sec">Security</span></div>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html">thehackernews.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-09</span><span class="pill">Industry</span></div>
-          <div><h3>Google will tighten free access to its Gemini app starting October 9, limiting users with no paid plan to the smaller Flash-Lite model and dropping Gemini Pro access for AI Plus subscribers, while AI Pro and Ultra tiers keep every model</h3>
-            <p class="why"><b>Why it matters:</b> tiering a flagship assistant by subscription price is a direct look at how a lab balances free reach against monetizing its best capability — worth weighing against any pricing plan for an app you'd design in <a href="#L5">L5</a>.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/google-limits-gemini-model-access-by-subscription-24b0d7ca">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Policy</span></div>
-          <div><h3>Anthropic rewrote its Claude usage policy for the first time in over a year, banning weapons-enabling control software, non-consensual surveillance and surveillance-tool building, and sustained cruelty toward the model, effective November 12</h3>
-            <p class="why"><b>Why it matters:</b> the new autonomous-hardware and surveillance rules are a concrete look at where a major lab draws the line on agentic and real-world deployments, a line any agent builder in <a href="#L6">L6</a> will eventually bump into.</p>
-            <p class="src"><a href="https://inc42.com/buzz/anthropic-bans-cruel-behaviour-towards-ai-models-tightens-rules-on-ai-misuse/">inc42.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral opened a hosted public preview of Large 4, a roughly 1-trillion-parameter mixture-of-experts model with a 1-million-token context window and 52 billion active parameters per task, and said the open weights will follow by the end of October</h3>
-            <p class="why"><b>Why it matters:</b> a trillion-parameter open-weight model with a firm release window is worth budgeting hardware and quantization plans for now, the kind of local-serving math <a href="#L4">L4</a> covers.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5">letsdatascience.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Research</span></div>
+          <div><h3>Anthropic said Claude-led agents searched a large DNA database and helped identify a new CRISPR-like enzyme family, but a computational biologist whose team had shared related findings with Anthropic disputes how original the discovery is, and other outside scientists question its practical significance</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab's own "AI did science" claim running into an authorship dispute is a real-world test of how much credit an LLM-driven search actually deserves (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.cnn.com/2026/10/08/science/ai-biology-anthropic-dna-discovery">cnn.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,62 +674,48 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule -->
-        <div class="pgcard pgtopic" data-topic="learning-rate-schedule">
-          <span class="label">New this refresh · 2026-10-15 · connects to <a href="#L2">L2</a></span>
-          <h3>Learning-rate schedules: how fast should training slow down?</h3>
-          <p class="lede">Pick a schedule, then drag the epoch slider to see how the learning rate fed into SGD/Adam would change over a toy 50-epoch run. This is a simplified textbook curve, not a measured training log — real runs tune these shapes empirically, and the open-weight releases in this week's feed each picked their own.</p>
+        <!-- HISTORY: chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold -->
+        <div class="pgcard pgtopic" data-topic="precision-recall-threshold">
+          <span class="label">New this refresh · 2026-10-15 · connects to <a href="#L1">L1</a></span>
+          <h3>Precision vs. recall: where do you set the alarm?</h3>
+          <p class="lede">Drag the threshold to decide how suspicious a score must be before a toy classifier flags it — the same trade-off behind the misuse-detection and agent-oversight stories in this week's feed. A fixed set of 16 labeled toy examples is scored once; the slider only changes which scores count as "flagged". Real classifiers are tuned on far more data, and the curve is rarely this clean.</p>
           <p class="pt-ctl">
-            <button type="button" class="btn primary" id="pt-lrs-constant">Constant</button>
-            <button type="button" class="btn" id="pt-lrs-step">Step decay</button>
-            <button type="button" class="btn" id="pt-lrs-cosine">Cosine</button>
-            <button type="button" class="btn" id="pt-lrs-warmup">Warmup + cosine</button>
-          </p>
-          <p class="pt-ctl">
-            <label for="pt-lrs-epoch">Epoch: <span class="mono" id="pt-lrs-epoch-val">0</span> / 50
-              <input type="range" id="pt-lrs-epoch" min="0" max="50" step="1" value="0">
+            <label for="pt-pr-thresh">Threshold: <span class="mono" id="pt-pr-thresh-val">0.50</span>
+              <input type="range" id="pt-pr-thresh" min="0" max="100" step="1" value="50">
             </label>
           </p>
-          <div class="pt-row"><span class="mono">Learning rate</span><div class="pt-track"><div class="pt-fill" id="pt-lrs-fill"></div></div><span class="mono" id="pt-lrs-lr">—</span></div>
-          <p class="mono" id="pt-lrs-readout"></p>
+          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-pr-prec-fill"></div></div><span class="mono" id="pt-pr-prec-val">—</span></div>
+          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-pr-rec-fill"></div></div><span class="mono" id="pt-pr-rec-val">—</span></div>
+          <p class="mono" id="pt-pr-readout"></p>
           <script>(function(){
-          var epochSlider=document.getElementById("pt-lrs-epoch");
-          var epochVal=document.getElementById("pt-lrs-epoch-val");
-          var fill=document.getElementById("pt-lrs-fill");
-          var lrOut=document.getElementById("pt-lrs-lr");
-          var readout=document.getElementById("pt-lrs-readout");
-          var base=0.1, maxEpoch=50, mode="constant";
-          var btns={constant:document.getElementById("pt-lrs-constant"),step:document.getElementById("pt-lrs-step"),cosine:document.getElementById("pt-lrs-cosine"),warmup:document.getElementById("pt-lrs-warmup")};
-          function setMode(m){
-            mode=m;
-            for(var k in btns){ btns[k].className = (k===m) ? "btn primary" : "btn"; }
-            compute();
-          }
-          function lrFor(e){
-            if(mode==="step") return base*Math.pow(0.5, Math.floor(e/15));
-            if(mode==="cosine") return base*0.5*(1+Math.cos(Math.PI*e/maxEpoch));
-            if(mode==="warmup"){
-              var warm=5;
-              if(e<warm) return base*(e/warm);
-              var e2=e-warm, m2=maxEpoch-warm;
-              return base*0.5*(1+Math.cos(Math.PI*e2/m2));
-            }
-            return base;
-          }
+          var data=[[0.92,1],[0.88,1],[0.81,1],[0.77,1],[0.74,0],[0.69,1],[0.63,0],[0.58,1],[0.54,0],[0.49,1],[0.44,0],[0.38,0],[0.31,1],[0.25,0],[0.17,0],[0.08,0]];
+          var slider=document.getElementById("pt-pr-thresh");
+          var threshVal=document.getElementById("pt-pr-thresh-val");
+          var precFill=document.getElementById("pt-pr-prec-fill");
+          var recFill=document.getElementById("pt-pr-rec-fill");
+          var precVal=document.getElementById("pt-pr-prec-val");
+          var recVal=document.getElementById("pt-pr-rec-val");
+          var readout=document.getElementById("pt-pr-readout");
           function compute(){
-            var e=parseInt(epochSlider.value,10);
-            epochVal.textContent=e;
-            var lr=lrFor(e);
-            fill.style.width=((lr/base)*100)+"%";
-            lrOut.textContent=lr.toFixed(4);
-            var note = mode==="constant" ? "A flat rate is simple but often overshoots late in training." : mode==="step" ? "Each drop halves the rate every 15 epochs — a classic staircase." : mode==="cosine" ? "Smoothly decays like a cosine curve toward zero." : (e<5 ? "Warming up before the cosine decay begins." : "Past warmup, now following the same cosine decay.");
-            readout.textContent="Epoch "+e+" of "+maxEpoch+", toy LR ≈ "+lr.toFixed(4)+". "+note;
+            var t=parseInt(slider.value,10)/100;
+            threshVal.textContent=t.toFixed(2);
+            var tp=0,fp=0,fn=0;
+            for(var i=0;i<data.length;i++){
+              var score=data[i][0], label=data[i][1], flagged=score>=t;
+              if(flagged && label===1) tp++;
+              else if(flagged && label===0) fp++;
+              else if(!flagged && label===1) fn++;
+            }
+            var precision=(tp+fp)>0 ? tp/(tp+fp) : 0;
+            var recall=(tp+fn)>0 ? tp/(tp+fn) : 0;
+            precFill.style.width=(precision*100)+"%";
+            recFill.style.width=(recall*100)+"%";
+            precVal.textContent=precision.toFixed(2);
+            recVal.textContent=recall.toFixed(2);
+            var note = t<0.3 ? "A low bar flags almost everything: recall is high but precision suffers from false alarms." : t>0.7 ? "A high bar only flags the clearest cases: precision climbs but real cases get missed." : "A middle threshold trades some of each.";
+            readout.textContent="Flagged "+(tp+fp)+" of 16, "+tp+" true and "+fp+" false. "+note;
           }
-          epochSlider.addEventListener("input", compute);
-          btns.constant.addEventListener("click", function(){ setMode("constant"); });
-          btns.step.addEventListener("click", function(){ setMode("step"); });
-          btns.cosine.addEventListener("click", function(){ setMode("cosine"); });
-          btns.warmup.addEventListener("click", function(){ setMode("warmup"); });
+          slider.addEventListener("input", compute);
           compute();
           })();</script>
         </div>
