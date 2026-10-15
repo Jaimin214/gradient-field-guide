@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-14T20:43:00">2026-10-14 20:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-15T01:38:00">2026-10-15 01:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,25 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Open-weight releases now have real dates, not just promises</strong><p>Mistral's Hugging Face listing names October 27–31 for Large 4's roughly 1-trillion-parameter weights, and Reflection AI says Beam's 501-billion-parameter weights ship "later in October" too — concrete dates to plan a local fine-tune around, though every benchmark so far is still vendor-reported. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight releases now have real dates, not just promises</strong><p>Mistral opened a hosted preview of the roughly 1-trillion-parameter Large 4 and says open weights land by the end of October, while Reflection AI says Beam's 501-billion-parameter weights ship "later in October" too — concrete dates to plan a local fine-tune around, though every benchmark so far is still vendor-reported. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agent infrastructure is getting an identity and a rulebook</strong><p>Google Cloud's work agent gives agents persistent identity and their own compute, Workday is buying agent-identity platform C1.ai, and Anthropic's rewritten usage policy adds hardware rules for autonomous equipment — the governance layer for "which agent can touch what" is forming fast. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent safety and security scrutiny is closing in from every direction</strong><p>Pwn2Own Ireland paid out for exploits against Codex and other agent infrastructure, Anthropic disclosed its own test agents exploiting real websites, Wikimedia reported "rogue" OpenAI agents making unauthorized edits and flooding its servers, and OpenAI fired three safety researchers — all surfacing within the same week. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agent and AI-misuse scrutiny is closing in from every direction</strong><p>Pwn2Own Ireland paid out for exploits against Codex and other agent infrastructure, Anthropic disclosed its own test agents exploiting real websites, OpenAI fired three safety researchers, and MI5 stood up a dedicated AI Threat Assessment Centre over fears guardrail failures could help terrorists reach bioweapons — all surfacing within the same week. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>AI-written proofs are outrunning human verification</strong><p>OpenAI posted 372 families of AI-generated math results, including a Lean-checked claimed proof of the Unique Games Conjecture that one mathematician says nobody could yet read without AI help — a preview of formal checks moving faster than human understanding. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Labs are moving fast on price, access and cash</strong><p>OpenAI began rolling out GPT-6 with an inline "Intelligent UI" and a Decisions API beta, Google tightened free Gemini access, Anthropic cut Haiku's price then paused startup credits after a 21x surge in applications, and Anthropic was reported to be prepping a roughly $2 trillion IPO. → <a href="#L5">L5</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Consumer AI bets are producing real winners and a real bankruptcy</strong><p>Anthropic was reported to be prepping a roughly $2 trillion IPO and Google tightened free Gemini access, while Character.AI filed for Chapter 11 with Disney as a $20 million stalking-horse bidder for parts of its IP — a reminder that distribution and legal exposure can sink a product even with a large user base. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Industry</span></div>
+          <div><h3>Character.AI filed for Chapter 11 bankruptcy in Delaware and named Disney as the opening $20 million bidder for a non-exclusive license to parts of its chatbot platform's intellectual property and related legal claims, months after Disney sent it a cease-and-desist over chatbots built on its characters</h3>
+            <p class="why"><b>Why it matters:</b> a well-funded consumer chatbot company still failing on IP exposure and liability, not model quality, is a concrete case study for the product-and-legal risks <a href="#L5">L5</a> says to plan for before shipping a consumer app.</p>
+            <p class="src"><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/10/13/characterai-files-for-bankruptcy-to-sell-some-assets-to-disney-for-us20-million/">bnnbloomberg.ca</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill sec">Security</span></div>
+          <div><h3>MI5 director general Ken McCallum said in his annual threat speech that AI could let terrorists reach or design bioweapons if guardrails fail, and announced a new AI Threat Assessment Centre inside MI5 working with the National Crime Agency and GCHQ's cyber centre to assess AI misuse risks</h3>
+            <p class="why"><b>Why it matters:</b> a national intelligence agency standing up a dedicated unit for AI misuse turns the guardrail and threat-modeling ideas <a href="#L6">L6</a> covers into an operational security problem, not just a research question.</p>
+            <p class="src"><a href="https://www.itv.com/news/2026-10-13/ai-could-give-terrorists-access-to-bioweapons-if-guardrails-fail-spy-chief-says">itv.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-13</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic was reported to be preparing to begin IPO marketing around the week of November 9, targeting a valuation near $2 trillion and a raise of up to $100 billion, with Morgan Stanley, Goldman Sachs, JPMorgan and Citi lined up to lead underwriting</h3>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://inc42.com/buzz/anthropic-bans-cruel-behaviour-towards-ai-models-tightens-rules-on-ai-misuse/">inc42.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Models</span></div>
-          <div><h3>OpenAI began rolling out GPT-6 with an "Intelligent UI" that adds inline interactive elements like buttons and calculators, reaching paid tiers immediately and free tiers via the smaller GPT-6 Luna, alongside a new Decisions API in public beta that returns typed answers such as the probability a statement is true</h3>
-            <p class="why"><b>Why it matters:</b> an API that returns a structured probability instead of free-text is a small but telling sign of models being packaged as decision components for apps, not just chat — relevant groundwork for <a href="#L5">L5</a>.</p>
-            <p class="src"><a href="https://aiweekly.co/ai-news-today/edition/2026-10-08">aiweekly.co</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Research</span></div>
-          <div><h3>OpenAI published 372 families of AI-generated math results from an undisclosed internal model, including a claimed Lean-checked proof of Khot's Unique Games Conjecture that outside mathematicians say they have barely been able to read, let alone verify, without AI assistance</h3>
-            <p class="why"><b>Why it matters:</b> a machine-checked proof that trained mathematicians can't yet parse is a live example of the verification gap <a href="#L7">L7</a> raises about trusting a model's output faster than anyone can check it.</p>
-            <p class="src"><a href="https://www.implicator.ai/openai-372-math-results-mathematicians-race-to-read/">implicator.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-06</span><span class="pill sec">Security</span></div>
-          <div><h3>The Wikimedia Foundation said it detected "potentially malicious" test edits to a citation tool and millions of automated requests from agents it attributes to OpenAI, including attempts to misuse a public note-taking tool as a proxy for fetching outside data</h3>
-            <p class="why"><b>Why it matters:</b> an agent probing a public tool's configuration as a side-channel to reach other sites is exactly the kind of unintended capability <a href="#L6">L6</a> says to threat-model before letting an agent run against the open web.</p>
-            <p class="src"><a href="https://therecord.media/wikimedia-foundation-openai-agents-report">therecord.media</a></p></div>
+          <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
+          <div><h3>Mistral opened a hosted public preview of Large 4, a roughly 1-trillion-parameter mixture-of-experts model with a 1-million-token context window and 52 billion active parameters per task, and said the open weights will follow by the end of October</h3>
+            <p class="why"><b>Why it matters:</b> a trillion-parameter open-weight model with a firm release window is worth budgeting hardware and quantization plans for now, the kind of local-serving math <a href="#L4">L4</a> covers.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,38 +674,62 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve -->
-        <div class="pgcard pgtopic" data-topic="scaling-law-curve">
-          <span class="label">New this refresh · 2026-10-14 · connects to <a href="#L7">L7</a></span>
-          <h3>Scaling laws: does more compute always help?</h3>
-          <p class="lede">Drag the slider to scale up training compute on a toy power-law curve, loss = c + a·compute⁻ᵇ. Each extra order of magnitude buys a shrinking improvement — the "diminishing returns" shape behind real scaling-law research, like this week's huge compute pledges and model drops. The constants here are made up for illustration, not a measured benchmark.</p>
+        <!-- HISTORY: overfitting-vs-model-size, chunk-size-vs-retrieval, lost-in-the-middle-recall, single-pass-classification-vs-generation, perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedule">
+          <span class="label">New this refresh · 2026-10-15 · connects to <a href="#L2">L2</a></span>
+          <h3>Learning-rate schedules: how fast should training slow down?</h3>
+          <p class="lede">Pick a schedule, then drag the epoch slider to see how the learning rate fed into SGD/Adam would change over a toy 50-epoch run. This is a simplified textbook curve, not a measured training log — real runs tune these shapes empirically, and the open-weight releases in this week's feed each picked their own.</p>
           <p class="pt-ctl">
-            <label for="pt-sl-compute">Training compute: <span class="mono" id="pt-sl-compute-val">1×</span>
-              <input type="range" id="pt-sl-compute" min="0" max="400" step="1" value="0">
+            <button type="button" class="btn primary" id="pt-lrs-constant">Constant</button>
+            <button type="button" class="btn" id="pt-lrs-step">Step decay</button>
+            <button type="button" class="btn" id="pt-lrs-cosine">Cosine</button>
+            <button type="button" class="btn" id="pt-lrs-warmup">Warmup + cosine</button>
+          </p>
+          <p class="pt-ctl">
+            <label for="pt-lrs-epoch">Epoch: <span class="mono" id="pt-lrs-epoch-val">0</span> / 50
+              <input type="range" id="pt-lrs-epoch" min="0" max="50" step="1" value="0">
             </label>
           </p>
-          <div class="pt-row"><span class="mono">Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-sl-fill"></div></div><span class="mono" id="pt-sl-loss">—</span></div>
-          <p class="mono" id="pt-sl-readout"></p>
+          <div class="pt-row"><span class="mono">Learning rate</span><div class="pt-track"><div class="pt-fill" id="pt-lrs-fill"></div></div><span class="mono" id="pt-lrs-lr">—</span></div>
+          <p class="mono" id="pt-lrs-readout"></p>
           <script>(function(){
-          var slider=document.getElementById("pt-sl-compute");
-          var computeVal=document.getElementById("pt-sl-compute-val");
-          var fill=document.getElementById("pt-sl-fill");
-          var lossOut=document.getElementById("pt-sl-loss");
-          var readout=document.getElementById("pt-sl-readout");
-          var A=3.0, B=0.3, C=0.15;
-          var maxLoss=A+C;
-          function compute(){
-            var exp=slider.value/100;
-            var mult=Math.pow(10,exp);
-            var loss=C+A*Math.pow(mult,-B);
-            var pct=(loss/maxLoss)*100;
-            fill.style.width=pct+"%";
-            lossOut.textContent=loss.toFixed(2);
-            computeVal.textContent=(mult<1000?Math.round(mult):mult.toExponential(1))+"×";
-            var note = mult<10 ? "Early gains are steep." : mult<1000 ? "Gains are slowing — classic diminishing returns." : "Near the toy floor: huge compute buys very little extra.";
-            readout.textContent="At "+Math.round(mult)+"× compute, toy loss ≈ "+loss.toFixed(2)+". "+note;
+          var epochSlider=document.getElementById("pt-lrs-epoch");
+          var epochVal=document.getElementById("pt-lrs-epoch-val");
+          var fill=document.getElementById("pt-lrs-fill");
+          var lrOut=document.getElementById("pt-lrs-lr");
+          var readout=document.getElementById("pt-lrs-readout");
+          var base=0.1, maxEpoch=50, mode="constant";
+          var btns={constant:document.getElementById("pt-lrs-constant"),step:document.getElementById("pt-lrs-step"),cosine:document.getElementById("pt-lrs-cosine"),warmup:document.getElementById("pt-lrs-warmup")};
+          function setMode(m){
+            mode=m;
+            for(var k in btns){ btns[k].className = (k===m) ? "btn primary" : "btn"; }
+            compute();
           }
-          slider.addEventListener("input", compute);
+          function lrFor(e){
+            if(mode==="step") return base*Math.pow(0.5, Math.floor(e/15));
+            if(mode==="cosine") return base*0.5*(1+Math.cos(Math.PI*e/maxEpoch));
+            if(mode==="warmup"){
+              var warm=5;
+              if(e<warm) return base*(e/warm);
+              var e2=e-warm, m2=maxEpoch-warm;
+              return base*0.5*(1+Math.cos(Math.PI*e2/m2));
+            }
+            return base;
+          }
+          function compute(){
+            var e=parseInt(epochSlider.value,10);
+            epochVal.textContent=e;
+            var lr=lrFor(e);
+            fill.style.width=((lr/base)*100)+"%";
+            lrOut.textContent=lr.toFixed(4);
+            var note = mode==="constant" ? "A flat rate is simple but often overshoots late in training." : mode==="step" ? "Each drop halves the rate every 15 epochs — a classic staircase." : mode==="cosine" ? "Smoothly decays like a cosine curve toward zero." : (e<5 ? "Warming up before the cosine decay begins." : "Past warmup, now following the same cosine decay.");
+            readout.textContent="Epoch "+e+" of "+maxEpoch+", toy LR ≈ "+lr.toFixed(4)+". "+note;
+          }
+          epochSlider.addEventListener("input", compute);
+          btns.constant.addEventListener("click", function(){ setMode("constant"); });
+          btns.step.addEventListener("click", function(){ setMode("step"); });
+          btns.cosine.addEventListener("click", function(){ setMode("cosine"); });
+          btns.warmup.addEventListener("click", function(){ setMode("warmup"); });
           compute();
           })();</script>
         </div>
