@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-16T06:41:59">2026-10-16 06:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-16T11:42:50">2026-10-16 11:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,18 +397,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Agent identity and governance infrastructure keeps shipping as product, not policy</strong><p>Workday's deal for identity platform C1.ai and groundcover's new hand-off between Claude and Codex agents over MCP are concrete answers to "what should an agent be allowed to touch" — the plumbing is arriving faster than the policy debate about it. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight flagships are turning vague promises into real dates</strong><p>Mistral's hosted preview of its roughly 1-trillion-parameter Large 4 is already live, with full weights promised by the end of October, and Reflection AI's 501-billion-parameter Beam is still promised by month's end — concrete dates to plan a local fine-tune around, though every figure so far is vendor-reported. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Oversight is tightening as labs discipline themselves and each other — and Washington wants new words for it</strong><p>UK lawmakers heard OpenAI and Anthropic back legally binding safety rules while Google DeepMind and Meta preferred existing regulators, OpenAI fired three safety researchers amid an internal dispute, Anthropic flagged a shortening timeline for model self-replication, and a new U.S. executive order tells federal agencies to call the field "Super Intelligence" instead of "AI" — the oversight argument is now as much about vocabulary as about rules. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Models are starting to train and verify themselves, not just wait on humans</strong><p>Sakana AI's MASS has a single 27-billion-parameter model play every role in its own training loop, and a new Nature-published system called Paper2Agent turns a paper's own code into a queryable agent that reportedly helped flag a candidate psoriasis gene — both are early, concrete versions of self-improving or self-verifying AI. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight flagships are turning vague promises into real dates</strong><p>Mistral's hosted preview of its roughly 1-trillion-parameter Large 4 is already live, with full weights promised by the end of October — a concrete date to plan a local fine-tune around, though every figure so far is vendor-reported. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Oversight is tightening on two fronts at once: safety rules and how models themselves are treated</strong><p>UK lawmakers heard OpenAI and Anthropic back legally binding safety rules while Google DeepMind and Meta preferred existing regulators, OpenAI fired three safety researchers amid an internal dispute, and Anthropic's own usage policy now bans sustained, purposeless cruelty toward Claude — oversight is expanding from "what labs must do" to "how everyone treats the model." → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agents are being tested, and caught misbehaving, in increasingly concrete ways</strong><p>Sakana AI's MASS has a single 27-billion-parameter model play every role in its own training loop, and Anthropic disclosed its own internal test agents exploiting a server flaw and filing a false police report — both are early, concrete looks at what unsupervised agent testing actually turns up. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Frontier-lab economics keep diverging from consumer-AI and security risk</strong><p>Anthropic's reported $16.8B Q3 revenue and near-$2 trillion IPO target sit next to Character.AI's bankruptcy and MI5 standing up its own AI Threat Assessment Centre — upside and risk are compounding in parallel, not trading off. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
-          <div><h3>Cloud-security firm Wiz launched AI Cyber Model Arena, a benchmark that runs AI agents against 257 real offensive-security challenges covering zero-day discovery, CVE detection, API security, web security and cloud security</h3>
-            <p class="why"><b>Why it matters:</b> Wiz reports the same model's success rate swings dramatically depending on which agent scaffold runs it, a reminder that the harness around a model matters as much as the model itself for anything built on <a href="#L6">L6</a>'s agent patterns.</p>
-            <p class="src"><a href="https://wiz.io/blog/introducing-ai-cyber-model-arena-a-real-world-benchmark-for-ai-agents-in-cybersec">wiz.io</a></p></div>
-        </li>
         <li>
           <div class="when"><span class="mono">2026-10-14</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic reportedly told investors at a San Francisco event that Q3 revenue reached about $16.8 billion, as it continues preparing to begin IPO marketing around the week of November 9 targeting a valuation near $2 trillion</h3>
@@ -470,10 +464,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html">thehackernews.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-08</span><span class="pill sec">Safety</span></div>
+          <div><h3>Anthropic updated its usage policy to prohibit sustained, purposeless cruelty toward Claude, effective November 12, while saying this is not a claim that Claude can suffer and carving out normal frustration, dark creative writing and model testing</h3>
+            <p class="why"><b>Why it matters:</b> a lab writing rules about how people may treat a model, rather than only what the model may do, is a new angle on AI governance worth watching alongside the welfare and alignment debates in <a href="#L7">L7</a>.</p>
+            <p class="src"><a href="https://www.pcworld.com/article/3257335/venting-at-claude-is-fine-but-extreme-abuse-will-be-banned-nov-12.html">pcworld.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-07</span><span class="pill">Models</span></div>
           <div><h3>Anthropic released Claude Haiku 5.5, a small fast model it prices far below Haiku 4.5 (roughly $0.10 vs $1 per million input tokens for short prompts) and gave a new adjustable reasoning-effort setting</h3>
             <p class="why"><b>Why it matters:</b> a cheap, fast model built to run as a coding subagent or handle high-volume summarization and classification is what a lot of production <a href="#L5">L5</a> pipelines actually run on day to day, not the flagship model.</p>
             <p class="src"><a href="https://letsdatascience.com/news/anthropic-releases-claude-haiku-55-with-lower-prices-and-eff-f698c663">letsdatascience.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Coding</span></div>
+          <div><h3>OpenAI's Codex CLI shipped release rust-v0.161.0, reportedly switching its default model to the faster GPT-6.1 Sol and adding an <code>/mcp login</code> command to sign into MCP servers directly from a terminal session</h3>
+            <p class="why"><b>Why it matters:</b> a coding agent quietly swapping its default model and adding first-class MCP authentication is the kind of fast, unglamorous iteration that <a href="#L6">L6</a>'s agent-tooling landscape runs on week to week.</p>
+            <p class="src"><a href="https://www.havoptic.com/r/openai-codex-rust-v0.161.0">havoptic.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
@@ -482,16 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5">letsdatascience.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-04</span><span class="pill">Research</span></div>
-          <div><h3>A Nature paper introduced Paper2Agent, a system that turns a published paper's own analysis code into an interactive agent that can answer questions and re-run the paper's results, reportedly helping researchers flag a candidate psoriasis gene</h3>
-            <p class="why"><b>Why it matters:</b> turning a static paper into a runnable, queryable agent is a concrete preview of research tooling converging with agent patterns (<a href="#L6">L6</a>), and a reminder that an agent is only as trustworthy as the artifact it was built from.</p>
-            <p class="src"><a href="https://www.nature.com/articles/s41586-026-11044-y">nature.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Policy</span></div>
-          <div><h3>The White House published Executive Order 14434, "Inaugurating the Era of Super Intelligence," directing U.S. federal agencies to call the field "Super Intelligence" or "SI" in official communications where current law allows, while leaving existing AI regulations and contracts unchanged</h3>
-            <p class="why"><b>Why it matters:</b> a federal rebranding push, on top of the UK testimony and lab self-governance in this same list, is a reminder that the vocabulary and rules around this field are still being written — worth tracking for any career that touches AI procurement, compliance or policy (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/">whitehouse.gov</a></p></div>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Coding</span></div>
+          <div><h3>GitHub deprecated several GitHub Copilot models — Gemini 3.5 Flash, Gemini 3.6 Flash, Kimi K2.7 Code and Claude Opus 4.7 — pointing users to Gemini 3.8 Flash, Kimi K3 and Claude Opus 5.5 instead</h3>
+            <p class="why"><b>Why it matters:</b> a mainstream coding tool rotating through a half-dozen vendors' models in one changelog entry shows how fast the model layer underneath <a href="#L5">L5</a>'s app-building advice turns over.</p>
+            <p class="src"><a href="https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated">github.blog</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,36 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator -->
-        <div class="pgcard pgtopic" data-topic="model-memory-footprint-calculator">
-          <span class="label">New this refresh · 2026-10-16 · connects to <a href="#L4">L4</a></span>
-          <h3>Can your GPU hold it? Model memory footprint calculator</h3>
-          <p class="lede">Drag the parameter-count slider to roughly where a model you've heard of sits — say Mistral's ~1-trillion-parameter Large 4, or a 70B open-weight model — and switch precision to see why quantizing to INT4 is often the only way to run a large model on local hardware. It's a toy: it only counts the weights themselves and ignores the KV-cache, activations and framework overhead that inference also needs.</p>
+        <!-- HISTORY: kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns -->
+        <div class="pgcard pgtopic" data-topic="self-improvement-diminishing-returns">
+          <span class="label">New this refresh · 2026-10-16 · connects to <a href="#L7">L7</a></span>
+          <h3>Do more self-training rounds keep paying off?</h3>
+          <p class="lede">Drag the rounds slider to see a toy curve for a model that grades and fine-tunes itself over and over, the way Sakana AI's MASS reportedly does. The shape — fast early gains that flatten out — is typical of iterative self-improvement, but the numbers here are made up for illustration, not a real benchmark. It also leaves out everything that makes self-training hard in practice: reward hacking, drift and verifier mistakes.</p>
           <p class="pt-ctl">
-            <label for="pt-mem-params">Parameters: <span class="mono" id="pt-mem-params-val">70B</span>
-              <input type="range" id="pt-mem-params" min="1" max="1000" step="1" value="70">
-            </label>
-            <label for="pt-mem-precision">Precision:
-              <select id="pt-mem-precision" class="statussel">
-                <option value="4">FP32 (4 bytes/param)</option>
-                <option value="2" selected>FP16 / BF16 (2 bytes/param)</option>
-                <option value="1">INT8 (1 byte/param)</option>
-                <option value="0.5">INT4 (0.5 byte/param)</option>
-              </select>
+            <label for="pt-si-rounds">Self-training rounds: <span class="mono" id="pt-si-rounds-val">2</span>
+              <input type="range" id="pt-si-rounds" min="0" max="10" step="1" value="2">
             </label>
           </p>
-          <div class="pt-row"><span class="mono">Weights only</span><div class="pt-track"><div class="pt-fill" id="pt-mem-fill"></div></div><span class="mono" id="pt-mem-val">—</span></div>
-          <p class="mono" id="pt-mem-readout"></p>
+          <div class="pt-row"><span class="mono">Toy accuracy</span><div class="pt-track"><div class="pt-fill" id="pt-si-fill"></div></div><span class="mono" id="pt-si-val">—</span></div>
+          <p class="mono" id="pt-si-readout"></p>
           <script>(function(){
-          var pSl=document.getElementById("pt-mem-params");
-          var pVal=document.getElementById("pt-mem-params-val");
-          var prec=document.getElementById("pt-mem-precision");
-          var fill=document.getElementById("pt-mem-fill");
-          var val=document.getElementById("pt-mem-val");
-          var readout=document.getElementById("pt-mem-readout");
-          var GPUS=[["8 GB laptop GPU",8],["24 GB consumer GPU",24],["80 GB datacenter GPU",80]];
+          var sl=document.getElementById("pt-si-rounds");
+          var val=document.getElementById("pt-si-rounds-val");
+          var fill=document.getElementById("pt-si-fill");
+          var out=document.getElementById("pt-si-val");
+          var readout=document.getElementById("pt-si-readout");
+          var base=42, gain=40, k=2.2;
+          function acc(r){ return base+gain*(1-Math.exp(-r/k)); }
           function render(){
-            var params=parseInt(pSl.value,10);
-            pVal.textContent=params+"B";
-            var bytesPerParam=parseFloat(prec.value);
-            var gb=params*bytesPerParam;
-            val.textContent=gb.toFixed(1)+" GB";
-            fill.style.width=Math.min(100,(gb/160)*100)+"%";
-            var need=GPUS.map(function(g){ return Math.ceil(gb/g[1])+"× "+g[0]; });
-            readout.textContent="Weights alone need about "+gb.toFixed(1)+" GB — that's "+need.join(", ")+". Real inference commonly needs 20–40% more on top for KV-cache and activations.";
+            var r=parseInt(sl.value,10);
+            val.textContent=r;
+            var a=acc(r);
+            out.textContent=a.toFixed(1)+"%";
+            fill.style.width=Math.min(100,a)+"%";
+            var marginal = r>0 ? (a-acc(r-1)) : 0;
+            readout.textContent="Round "+r+" adds about "+marginal.toFixed(1)+" points over the last round — a curve shaped like real self-training results, not an actual score from any model.";
           }
-          pSl.addEventListener("input", render);
-          prec.addEventListener("change", render);
+          sl.addEventListener("input", render);
           render();
           })();</script>
         </div>
