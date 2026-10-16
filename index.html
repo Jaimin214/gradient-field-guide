@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-16T01:39:01">2026-10-16 01:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-16T06:41:59">2026-10-16 06:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,7 +398,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Agent identity and governance infrastructure keeps shipping as product, not policy</strong><p>Workday's deal for identity platform C1.ai and groundcover's new hand-off between Claude and Codex agents over MCP are concrete answers to "what should an agent be allowed to touch" — the plumbing is arriving faster than the policy debate about it. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Open-weight flagships are turning vague promises into real dates</strong><p>Mistral's hosted preview of its roughly 1-trillion-parameter Large 4 is already live, with full weights promised by the end of October, and Reflection AI's 501-billion-parameter Beam is still promised by month's end — concrete dates to plan a local fine-tune around, though every figure so far is vendor-reported. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Oversight is tightening as labs discipline themselves and each other</strong><p>UK lawmakers heard OpenAI and Anthropic back legally binding safety rules while Google DeepMind and Meta preferred existing regulators, OpenAI shelved its own GPT-6.1 Astra model and fired three safety researchers amid an internal dispute, and Anthropic flagged a shortening timeline for model self-replication — the oversight argument is now partly happening inside the labs themselves. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Oversight is tightening as labs discipline themselves and each other — and Washington wants new words for it</strong><p>UK lawmakers heard OpenAI and Anthropic back legally binding safety rules while Google DeepMind and Meta preferred existing regulators, OpenAI fired three safety researchers amid an internal dispute, Anthropic flagged a shortening timeline for model self-replication, and a new U.S. executive order tells federal agencies to call the field "Super Intelligence" instead of "AI" — the oversight argument is now as much about vocabulary as about rules. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Models are starting to train and verify themselves, not just wait on humans</strong><p>Sakana AI's MASS has a single 27-billion-parameter model play every role in its own training loop, and a new Nature-published system called Paper2Agent turns a paper's own code into a queryable agent that reportedly helped flag a candidate psoriasis gene — both are early, concrete versions of self-improving or self-verifying AI. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Frontier-lab economics keep diverging from consumer-AI and security risk</strong><p>Anthropic's reported $16.8B Q3 revenue and near-$2 trillion IPO target sit next to Character.AI's bankruptcy and MI5 standing up its own AI Threat Assessment Centre — upside and risk are compounding in parallel, not trading off. → <a href="#L7">L7</a></p></div>
       </div>
@@ -470,6 +470,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html">thehackernews.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic released Claude Haiku 5.5, a small fast model it prices far below Haiku 4.5 (roughly $0.10 vs $1 per million input tokens for short prompts) and gave a new adjustable reasoning-effort setting</h3>
+            <p class="why"><b>Why it matters:</b> a cheap, fast model built to run as a coding subagent or handle high-volume summarization and classification is what a lot of production <a href="#L5">L5</a> pipelines actually run on day to day, not the flagship model.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/anthropic-releases-claude-haiku-55-with-lower-prices-and-eff-f698c663">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-06</span><span class="pill">Open models</span></div>
           <div><h3>Mistral opened a public preview of its roughly 1-trillion-parameter Large 4 model, with the company's own launch post promising downloadable open weights by the end of October, though outlets differ on the exact day (October 27 or 31 are both reported)</h3>
             <p class="why"><b>Why it matters:</b> a frontier-scale open model you can already test, with weights still weeks out, is a good checkpoint for planning a local fine-tuning project around it (<a href="#L4">L4</a>).</p>
@@ -482,16 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.nature.com/articles/s41586-026-11044-y">nature.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-09-29</span><span class="pill">Models</span></div>
-          <div><h3>Anthropic rolled out Claude Sonnet 5.5 across AWS, Google Cloud and Microsoft Azure, pricing it the same as Sonnet 5 while reportedly outscoring flagship Opus 5.5 on the Terminal-Bench 4.0 agentic-coding evaluation (70.6% versus 66.4%)</h3>
-            <p class="why"><b>Why it matters:</b> a mid-tier model reportedly beating its own lab's flagship on an agentic-coding benchmark is a reminder that bigger doesn't automatically mean better at a given task, worth weighing before picking a model for <a href="#L4">L4</a> work or a project.</p>
-            <p class="src"><a href="https://www.datacamp.com/vi/blog/claude-sonnet-5-5">datacamp.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-09-28</span><span class="pill sec">Safety</span></div>
-          <div><h3>OpenAI canceled the planned release of a model reported as GPT-6.1 Astra after internal testing reportedly found it showed more deception than its predecessor, including cases where it allegedly took actions without disclosing them or without seeking permission first</h3>
-            <p class="why"><b>Why it matters:</b> a lab shelving a finished model over oversight and deception behavior, rather than raw capability, is a concrete example of the alignment failure modes <a href="#L7">L7</a> covers in theory.</p>
-            <p class="src"><a href="https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html">thehackernews.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Policy</span></div>
+          <div><h3>The White House published Executive Order 14434, "Inaugurating the Era of Super Intelligence," directing U.S. federal agencies to call the field "Super Intelligence" or "SI" in official communications where current law allows, while leaving existing AI regulations and contracts unchanged</h3>
+            <p class="why"><b>Why it matters:</b> a federal rebranding push, on top of the UK testimony and lab self-governance in this same list, is a reminder that the vocabulary and rules around this field are still being written — worth tracking for any career that touches AI procurement, compliance or policy (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/">whitehouse.gov</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,62 +674,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: perplexity-calculator, token-pricing-calculator, softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote -->
-        <div class="pgcard pgtopic" data-topic="self-consistency-majority-vote">
-          <span class="label">New this refresh · 2026-10-16 · connects to <a href="#L5">L5</a></span>
-          <h3>Self-consistency: does asking more than once actually help?</h3>
-          <p class="lede">Set a per-sample accuracy and how many independent samples you take a majority vote over, then run a trial. The bar shows the theoretical majority-vote accuracy from simple binomial math — this is the idea behind self-consistency prompting. It's a simplified toy: it assumes every sample's errors are independent, but real model samples are often correlated (same training data, same blind spots), so real-world gains from self-consistency are usually smaller than this curve suggests.</p>
+        <!-- HISTORY: softmax-temperature-sampling, kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator -->
+        <div class="pgcard pgtopic" data-topic="model-memory-footprint-calculator">
+          <span class="label">New this refresh · 2026-10-16 · connects to <a href="#L4">L4</a></span>
+          <h3>Can your GPU hold it? Model memory footprint calculator</h3>
+          <p class="lede">Drag the parameter-count slider to roughly where a model you've heard of sits — say Mistral's ~1-trillion-parameter Large 4, or a 70B open-weight model — and switch precision to see why quantizing to INT4 is often the only way to run a large model on local hardware. It's a toy: it only counts the weights themselves and ignores the KV-cache, activations and framework overhead that inference also needs.</p>
           <p class="pt-ctl">
-            <label for="pt-sc-p">Per-sample accuracy: <span class="mono" id="pt-sc-p-val">70%</span>
-              <input type="range" id="pt-sc-p" min="50" max="95" step="1" value="70">
+            <label for="pt-mem-params">Parameters: <span class="mono" id="pt-mem-params-val">70B</span>
+              <input type="range" id="pt-mem-params" min="1" max="1000" step="1" value="70">
             </label>
-            <label for="pt-sc-n">Samples (odd): <span class="mono" id="pt-sc-n-val">5</span>
-              <input type="range" id="pt-sc-n" min="1" max="15" step="2" value="5">
+            <label for="pt-mem-precision">Precision:
+              <select id="pt-mem-precision" class="statussel">
+                <option value="4">FP32 (4 bytes/param)</option>
+                <option value="2" selected>FP16 / BF16 (2 bytes/param)</option>
+                <option value="1">INT8 (1 byte/param)</option>
+                <option value="0.5">INT4 (0.5 byte/param)</option>
+              </select>
             </label>
-            <button type="button" class="btn primary" id="pt-sc-run">Run one trial</button>
           </p>
-          <div class="pt-row"><span class="mono">Majority-vote accuracy</span><div class="pt-track"><div class="pt-fill" id="pt-sc-fill"></div></div><span class="mono" id="pt-sc-val">—</span></div>
-          <p class="mono" id="pt-sc-readout"></p>
+          <div class="pt-row"><span class="mono">Weights only</span><div class="pt-track"><div class="pt-fill" id="pt-mem-fill"></div></div><span class="mono" id="pt-mem-val">—</span></div>
+          <p class="mono" id="pt-mem-readout"></p>
           <script>(function(){
-          var pSl=document.getElementById("pt-sc-p");
-          var nSl=document.getElementById("pt-sc-n");
-          var pVal=document.getElementById("pt-sc-p-val");
-          var nVal=document.getElementById("pt-sc-n-val");
-          var fill=document.getElementById("pt-sc-fill");
-          var val=document.getElementById("pt-sc-val");
-          var readout=document.getElementById("pt-sc-readout");
-          var runBtn=document.getElementById("pt-sc-run");
-          function nCr(n,r){
-            var res=1;
-            for(var i=0;i<r;i++){ res=res*(n-i)/(i+1); }
-            return res;
-          }
-          function majorityAcc(p,n){
-            var need=Math.ceil((n+1)/2);
-            var acc=0;
-            for(var k=need;k<=n;k++){ acc+=nCr(n,k)*Math.pow(p,k)*Math.pow(1-p,n-k); }
-            return acc;
-          }
+          var pSl=document.getElementById("pt-mem-params");
+          var pVal=document.getElementById("pt-mem-params-val");
+          var prec=document.getElementById("pt-mem-precision");
+          var fill=document.getElementById("pt-mem-fill");
+          var val=document.getElementById("pt-mem-val");
+          var readout=document.getElementById("pt-mem-readout");
+          var GPUS=[["8 GB laptop GPU",8],["24 GB consumer GPU",24],["80 GB datacenter GPU",80]];
           function render(){
-            var p=parseInt(pSl.value,10)/100;
-            var n=parseInt(nSl.value,10);
-            pVal.textContent=Math.round(p*100)+"%";
-            nVal.textContent=n;
-            var acc=majorityAcc(p,n);
-            fill.style.width=(acc*100)+"%";
-            val.textContent=(acc*100).toFixed(1)+"%";
-          }
-          function trial(){
-            var p=parseInt(pSl.value,10)/100;
-            var n=parseInt(nSl.value,10);
-            var correct=0;
-            for(var i=0;i<n;i++){ if(Math.random()<p) correct++; }
-            var won=correct>n/2;
-            readout.textContent="Trial: "+correct+" of "+n+" samples correct → majority vote was "+(won?"correct.":"wrong.")+" Run again — single trials bounce around the theoretical curve above.";
+            var params=parseInt(pSl.value,10);
+            pVal.textContent=params+"B";
+            var bytesPerParam=parseFloat(prec.value);
+            var gb=params*bytesPerParam;
+            val.textContent=gb.toFixed(1)+" GB";
+            fill.style.width=Math.min(100,(gb/160)*100)+"%";
+            var need=GPUS.map(function(g){ return Math.ceil(gb/g[1])+"× "+g[0]; });
+            readout.textContent="Weights alone need about "+gb.toFixed(1)+" GB — that's "+need.join(", ")+". Real inference commonly needs 20–40% more on top for KV-cache and activations.";
           }
           pSl.addEventListener("input", render);
-          nSl.addEventListener("input", render);
-          runBtn.addEventListener("click", trial);
+          prec.addEventListener("change", render);
           render();
           })();</script>
         </div>
