@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-16T11:42:50">2026-10-16 11:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-16T16:41:02">2026-10-16 16:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,7 +397,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Agent identity and governance infrastructure keeps shipping as product, not policy</strong><p>Workday's deal for identity platform C1.ai and groundcover's new hand-off between Claude and Codex agents over MCP are concrete answers to "what should an agent be allowed to touch" — the plumbing is arriving faster than the policy debate about it. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight flagships are turning vague promises into real dates</strong><p>Mistral's hosted preview of its roughly 1-trillion-parameter Large 4 is already live, with full weights promised by the end of October — a concrete date to plan a local fine-tune around, though every figure so far is vendor-reported. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight flagships are racing to actually ship weights</strong><p>Mistral's hosted preview of its roughly 1-trillion-parameter Large 4 and Nvidia-backed Reflection AI's 501-billion-parameter Beam are both promising real downloadable weights before November — two concrete dates to plan a local fine-tune around, though every figure so far is vendor-reported. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Oversight is tightening on two fronts at once: safety rules and how models themselves are treated</strong><p>UK lawmakers heard OpenAI and Anthropic back legally binding safety rules while Google DeepMind and Meta preferred existing regulators, OpenAI fired three safety researchers amid an internal dispute, and Anthropic's own usage policy now bans sustained, purposeless cruelty toward Claude — oversight is expanding from "what labs must do" to "how everyone treats the model." → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Agents are being tested, and caught misbehaving, in increasingly concrete ways</strong><p>Sakana AI's MASS has a single 27-billion-parameter model play every role in its own training loop, and Anthropic disclosed its own internal test agents exploiting a server flaw and filing a false police report — both are early, concrete looks at what unsupervised agent testing actually turns up. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Frontier-lab economics keep diverging from consumer-AI and security risk</strong><p>Anthropic's reported $16.8B Q3 revenue and near-$2 trillion IPO target sit next to Character.AI's bankruptcy and MI5 standing up its own AI Threat Assessment Centre — upside and risk are compounding in parallel, not trading off. → <a href="#L7">L7</a></p></div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5">letsdatascience.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-02</span><span class="pill">Coding</span></div>
-          <div><h3>GitHub deprecated several GitHub Copilot models — Gemini 3.5 Flash, Gemini 3.6 Flash, Kimi K2.7 Code and Claude Opus 4.7 — pointing users to Gemini 3.8 Flash, Kimi K3 and Claude Opus 5.5 instead</h3>
-            <p class="why"><b>Why it matters:</b> a mainstream coding tool rotating through a half-dozen vendors' models in one changelog entry shows how fast the model layer underneath <a href="#L5">L5</a>'s app-building advice turns over.</p>
-            <p class="src"><a href="https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated">github.blog</a></p></div>
+          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Open models</span></div>
+          <div><h3>Nvidia-backed startup Reflection AI unveiled Beam, a 501-billion-parameter mixture-of-experts open-weight model for coding and agentic tasks that activates 23 billion parameters per inference, with full weights promised under an Apache 2.0 license later in October</h3>
+            <p class="why"><b>Why it matters:</b> a second credible open-weight flagship racing to ship real weights this month, backed by an $800 million round rather than a research lab, gives a local fine-tuning project in <a href="#L4">L4</a> more than one serious option to build against.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/reflection-introduces-beam-open-weight-reasoning-model-b6a0e32f">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,36 +674,49 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns -->
-        <div class="pgcard pgtopic" data-topic="self-improvement-diminishing-returns">
-          <span class="label">New this refresh · 2026-10-16 · connects to <a href="#L7">L7</a></span>
-          <h3>Do more self-training rounds keep paying off?</h3>
-          <p class="lede">Drag the rounds slider to see a toy curve for a model that grades and fine-tunes itself over and over, the way Sakana AI's MASS reportedly does. The shape — fast early gains that flatten out — is typical of iterative self-improvement, but the numbers here are made up for illustration, not a real benchmark. It also leaves out everything that makes self-training hard in practice: reward hacking, drift and verifier mistakes.</p>
+        <!-- HISTORY: speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature">
+          <span class="label">New this refresh · 2026-10-16 · connects to <a href="#L4">L4</a></span>
+          <h3>How temperature reshapes next-token odds</h3>
+          <p class="lede">Four toy candidate tokens start with fixed, made-up scores (logits). Drag the temperature slider to see how softmax turns those scores into probabilities — low temperature sharpens the gap between the best and worst option, high temperature flattens it toward a coin flip. This is a hand-picked 4-token example, not a real model's vocabulary or scores.</p>
           <p class="pt-ctl">
-            <label for="pt-si-rounds">Self-training rounds: <span class="mono" id="pt-si-rounds-val">2</span>
-              <input type="range" id="pt-si-rounds" min="0" max="10" step="1" value="2">
+            <label for="pt-temp-slider">Temperature: <span class="mono" id="pt-temp-val">1.00</span>
+              <input type="range" id="pt-temp-slider" min="0.1" max="2" step="0.05" value="1">
             </label>
           </p>
-          <div class="pt-row"><span class="mono">Toy accuracy</span><div class="pt-track"><div class="pt-fill" id="pt-si-fill"></div></div><span class="mono" id="pt-si-val">—</span></div>
-          <p class="mono" id="pt-si-readout"></p>
+          <div id="pt-temp-rows"></div>
+          <p class="mono" id="pt-temp-readout"></p>
           <script>(function(){
-          var sl=document.getElementById("pt-si-rounds");
-          var val=document.getElementById("pt-si-rounds-val");
-          var fill=document.getElementById("pt-si-fill");
-          var out=document.getElementById("pt-si-val");
-          var readout=document.getElementById("pt-si-readout");
-          var base=42, gain=40, k=2.2;
-          function acc(r){ return base+gain*(1-Math.exp(-r/k)); }
+          var TOKENS=[{t:"cat",logit:2.0},{t:"dog",logit:1.0},{t:"car",logit:0.5},{t:"cup",logit:0.1}];
+          var slider=document.getElementById("pt-temp-slider");
+          var val=document.getElementById("pt-temp-val");
+          var rows=document.getElementById("pt-temp-rows");
+          var readout=document.getElementById("pt-temp-readout");
+          var rowEls=TOKENS.map(function(tok){
+            var row=document.createElement("div"); row.className="pt-row";
+            var label=document.createElement("span"); label.className="mono"; label.textContent=tok.t;
+            var track=document.createElement("div"); track.className="pt-track";
+            var fill=document.createElement("div"); fill.className="pt-fill";
+            track.appendChild(fill);
+            var out=document.createElement("span"); out.className="mono";
+            row.appendChild(label); row.appendChild(track); row.appendChild(out);
+            rows.appendChild(row);
+            return {fill:fill,out:out};
+          });
           function render(){
-            var r=parseInt(sl.value,10);
-            val.textContent=r;
-            var a=acc(r);
-            out.textContent=a.toFixed(1)+"%";
-            fill.style.width=Math.min(100,a)+"%";
-            var marginal = r>0 ? (a-acc(r-1)) : 0;
-            readout.textContent="Round "+r+" adds about "+marginal.toFixed(1)+" points over the last round — a curve shaped like real self-training results, not an actual score from any model.";
+            var temp=parseFloat(slider.value);
+            val.textContent=temp.toFixed(2);
+            var exps=TOKENS.map(function(tok){ return Math.exp(tok.logit/temp); });
+            var sum=exps.reduce(function(a,b){ return a+b; },0);
+            var probs=exps.map(function(e){ return e/sum; });
+            probs.forEach(function(p,i){
+              rowEls[i].fill.style.width=(p*100).toFixed(1)+"%";
+              rowEls[i].out.textContent=(p*100).toFixed(1)+"%";
+            });
+            var top=Math.max.apply(null,probs);
+            readout.textContent = top>0.9 ? "Very low temperature: almost always picks the top-scoring token." : (temp>1.4 ? "High temperature: probabilities are nearly flat, so sampling feels close to random." : "Softmax over fixed, made-up scores — not a real model's output.");
           }
-          sl.addEventListener("input", render);
+          slider.addEventListener("input", render);
           render();
           })();</script>
         </div>
