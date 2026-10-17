@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-16T16:41:02">2026-10-16 16:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-16T20:41:57">2026-10-16 20:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,8 +396,8 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent identity and governance infrastructure keeps shipping as product, not policy</strong><p>Workday's deal for identity platform C1.ai and groundcover's new hand-off between Claude and Codex agents over MCP are concrete answers to "what should an agent be allowed to touch" — the plumbing is arriving faster than the policy debate about it. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight flagships are racing to actually ship weights</strong><p>Mistral's hosted preview of its roughly 1-trillion-parameter Large 4 and Nvidia-backed Reflection AI's 501-billion-parameter Beam are both promising real downloadable weights before November — two concrete dates to plan a local fine-tune around, though every figure so far is vendor-reported. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent access is shipping to everyone at once: new models, new identity plumbing</strong><p>Google widened Gemini 4 Argon into a background "work" agent for its mainstream Gemini app, Workday's deal for identity platform C1.ai and groundcover's new hand-off between Claude and Codex agents over MCP are concrete answers to "what should an agent be allowed to touch, and as whom" — the plumbing is arriving as fast as the agents themselves. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight flagships are racing to actually ship weights</strong><p>Mistral's hosted preview of its roughly 1-trillion-parameter Large 4 is promising real downloadable weights before November — a concrete date to plan a local fine-tune around, though the figure is vendor-reported. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Oversight is tightening on two fronts at once: safety rules and how models themselves are treated</strong><p>UK lawmakers heard OpenAI and Anthropic back legally binding safety rules while Google DeepMind and Meta preferred existing regulators, OpenAI fired three safety researchers amid an internal dispute, and Anthropic's own usage policy now bans sustained, purposeless cruelty toward Claude — oversight is expanding from "what labs must do" to "how everyone treats the model." → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Agents are being tested, and caught misbehaving, in increasingly concrete ways</strong><p>Sakana AI's MASS has a single 27-billion-parameter model play every role in its own training loop, and Anthropic disclosed its own internal test agents exploiting a server flaw and filing a false police report — both are early, concrete looks at what unsupervised agent testing actually turns up. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Frontier-lab economics keep diverging from consumer-AI and security risk</strong><p>Anthropic's reported $16.8B Q3 revenue and near-$2 trillion IPO target sit next to Character.AI's bankruptcy and MI5 standing up its own AI Threat Assessment Centre — upside and risk are compounding in parallel, not trading off. → <a href="#L7">L7</a></p></div>
@@ -414,6 +414,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Observability startup groundcover added a feature letting Claude and OpenAI's Codex hand off production incident investigations to groundcover's own agent over MCP, alongside its existing Cursor and AWS Kiro integrations</h3>
             <p class="why"><b>Why it matters:</b> a monitoring tool wiring multiple coding agents together over MCP is a concrete look at the agent-to-agent hand-offs <a href="#L6">L6</a> describes in theory.</p>
             <p class="src"><a href="https://siliconangle.com/2026/10/14/groundcover-lets-claude-and-codex-hand-production-investigations-to-its-own-agent/">siliconangle.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Models</span></div>
+          <div><h3>Google widened availability of Gemini 4 Argon, a long-horizon agentic model first previewed in a limited cybersecurity rollout in late September, to all Gemini app Pro and Ultra subscribers as a "work" assistant that can run tasks in the background and reach more than 40 connected apps</h3>
+            <p class="why"><b>Why it matters:</b> shipping a long-running agentic model straight into a mainstream consumer app, not just a developer preview, is the agent-as-product shift <a href="#L6">L6</a> and <a href="#L5">L5</a> both describe.</p>
+            <p class="src"><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-availability">blog.google</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-13</span><span class="pill">Policy</span></div>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Mistral opened a public preview of its roughly 1-trillion-parameter Large 4 model, with the company's own launch post promising downloadable open weights by the end of October, though outlets differ on the exact day (October 27 or 31 are both reported)</h3>
             <p class="why"><b>Why it matters:</b> a frontier-scale open model you can already test, with weights still weeks out, is a good checkpoint for planning a local fine-tuning project around it (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill">Open models</span></div>
-          <div><h3>Nvidia-backed startup Reflection AI unveiled Beam, a 501-billion-parameter mixture-of-experts open-weight model for coding and agentic tasks that activates 23 billion parameters per inference, with full weights promised under an Apache 2.0 license later in October</h3>
-            <p class="why"><b>Why it matters:</b> a second credible open-weight flagship racing to ship real weights this month, backed by an $800 million round rather than a research lab, gives a local fine-tuning project in <a href="#L4">L4</a> more than one serious option to build against.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/reflection-introduces-beam-open-weight-reasoning-model-b6a0e32f">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,49 +674,56 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: speculative-decoding-speedup, mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature">
+        <!-- HISTORY: mixture-of-experts-routing, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator">
           <span class="label">New this refresh · 2026-10-16 · connects to <a href="#L4">L4</a></span>
-          <h3>How temperature reshapes next-token odds</h3>
-          <p class="lede">Four toy candidate tokens start with fixed, made-up scores (logits). Drag the temperature slider to see how softmax turns those scores into probabilities — low temperature sharpens the gap between the best and worst option, high temperature flattens it toward a coin flip. This is a hand-picked 4-token example, not a real model's vocabulary or scores.</p>
+          <h3>Why long context is expensive: the KV cache</h3>
+          <p class="lede">Every token a model generates keeps a key/value vector per layer around for attention — the "KV cache." Pick a toy model size and drag the context-length slider to see roughly how many gigabytes that cache alone takes, before the model's own weights. This uses the simplified formula 2 × layers × hidden size × tokens × bytes-per-number, ignores batching and attention-sharing tricks real serving stacks use, and the three size presets are round illustrative numbers, not any real model's published spec.</p>
           <p class="pt-ctl">
-            <label for="pt-temp-slider">Temperature: <span class="mono" id="pt-temp-val">1.00</span>
-              <input type="range" id="pt-temp-slider" min="0.1" max="2" step="0.05" value="1">
+            <label for="pt-kv-ctx">Context length: <span class="mono" id="pt-kv-ctx-val">4096</span> tokens
+              <input type="range" id="pt-kv-ctx" min="512" max="131072" step="512" value="4096">
             </label>
           </p>
-          <div id="pt-temp-rows"></div>
-          <p class="mono" id="pt-temp-readout"></p>
+          <p class="pt-ctl" id="pt-kv-size-btns">
+            <button type="button" class="btn primary" data-layers="32" data-dim="4096">~7B-size</button>
+            <button type="button" class="btn" data-layers="80" data-dim="8192">~70B-size</button>
+            <button type="button" class="btn" data-layers="126" data-dim="16384">~400B-size</button>
+            <button type="button" class="btn primary" id="pt-kv-fp16">fp16</button>
+            <button type="button" class="btn" id="pt-kv-int8">int8</button>
+          </p>
+          <div class="pt-row"><span class="mono">KV cache</span><div class="pt-track"><div class="pt-fill" id="pt-kv-fill"></div></div><span class="mono" id="pt-kv-out"></span></div>
+          <p class="mono" id="pt-kv-readout"></p>
           <script>(function(){
-          var TOKENS=[{t:"cat",logit:2.0},{t:"dog",logit:1.0},{t:"car",logit:0.5},{t:"cup",logit:0.1}];
-          var slider=document.getElementById("pt-temp-slider");
-          var val=document.getElementById("pt-temp-val");
-          var rows=document.getElementById("pt-temp-rows");
-          var readout=document.getElementById("pt-temp-readout");
-          var rowEls=TOKENS.map(function(tok){
-            var row=document.createElement("div"); row.className="pt-row";
-            var label=document.createElement("span"); label.className="mono"; label.textContent=tok.t;
-            var track=document.createElement("div"); track.className="pt-track";
-            var fill=document.createElement("div"); fill.className="pt-fill";
-            track.appendChild(fill);
-            var out=document.createElement("span"); out.className="mono";
-            row.appendChild(label); row.appendChild(track); row.appendChild(out);
-            rows.appendChild(row);
-            return {fill:fill,out:out};
-          });
-          function render(){
-            var temp=parseFloat(slider.value);
-            val.textContent=temp.toFixed(2);
-            var exps=TOKENS.map(function(tok){ return Math.exp(tok.logit/temp); });
-            var sum=exps.reduce(function(a,b){ return a+b; },0);
-            var probs=exps.map(function(e){ return e/sum; });
-            probs.forEach(function(p,i){
-              rowEls[i].fill.style.width=(p*100).toFixed(1)+"%";
-              rowEls[i].out.textContent=(p*100).toFixed(1)+"%";
+          var state={layers:32,dim:4096,bpe:2};
+          var ctx=document.getElementById("pt-kv-ctx");
+          var ctxVal=document.getElementById("pt-kv-ctx-val");
+          var fill=document.getElementById("pt-kv-fill");
+          var out=document.getElementById("pt-kv-out");
+          var readout=document.getElementById("pt-kv-readout");
+          var sizeBtns=Array.prototype.slice.call(document.querySelectorAll("#pt-kv-size-btns button[data-layers]"));
+          var fp16=document.getElementById("pt-kv-fp16");
+          var int8=document.getElementById("pt-kv-int8");
+          function setActive(group,active){ group.forEach(function(b){ b.className="btn"+(b===active?" primary":""); }); }
+          sizeBtns.forEach(function(b){
+            b.addEventListener("click",function(){
+              state.layers=parseInt(b.getAttribute("data-layers"),10);
+              state.dim=parseInt(b.getAttribute("data-dim"),10);
+              setActive(sizeBtns,b);
+              render();
             });
-            var top=Math.max.apply(null,probs);
-            readout.textContent = top>0.9 ? "Very low temperature: almost always picks the top-scoring token." : (temp>1.4 ? "High temperature: probabilities are nearly flat, so sampling feels close to random." : "Softmax over fixed, made-up scores — not a real model's output.");
+          });
+          fp16.addEventListener("click",function(){ state.bpe=2; setActive([fp16,int8],fp16); render(); });
+          int8.addEventListener("click",function(){ state.bpe=1; setActive([fp16,int8],int8); render(); });
+          ctx.addEventListener("input",render);
+          function render(){
+            var tokens=parseInt(ctx.value,10);
+            ctxVal.textContent=tokens;
+            var bytes=2*state.layers*state.dim*tokens*state.bpe;
+            var gb=bytes/1e9;
+            out.textContent=gb.toFixed(2)+" GB";
+            fill.style.width=Math.min(100,(gb/48)*100).toFixed(1)+"%";
+            readout.textContent = gb>24 ? "Bigger than a single consumer 24GB GPU's VRAM — this is why long contexts push toward multiple GPUs or cache tricks like paging and quantizing the cache itself." : "Fits alongside the model's own weights on a single consumer GPU (weights aren't counted in this bar).";
           }
-          slider.addEventListener("input", render);
           render();
           })();</script>
         </div>
