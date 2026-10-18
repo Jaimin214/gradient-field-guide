@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-18T01:44:26">2026-10-18 01:44</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-18T06:38:36">2026-10-18 06:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,7 +397,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>AI financing stress is becoming its own story, alongside the model race</strong><p>AI infrastructure and software stocks took a second sharp sell-off in three days on worries over data-center debt, the same week investors reportedly cut Anthropic's floated IPO valuation to around $1.5 trillion from $2 trillion as revenue growth slowed. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Genuinely permissive open-weight licenses are back in the mix</strong><p>DeepSeek's MIT-licensed V4.1-Flash update and Reflection AI's reportedly-shipped Apache-licensed Beam weights sit in contrast to Meta's more restrictive Muse Spark Open terms from last week — the license is now as much a comparison point as the benchmark. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight releases just keep coming, across every license tier</strong><p>This single week added Nvidia's sparse Nemotron 3.5 Super VL, MBZUAI's Apache-licensed Jais 3 Arabic suite and Liquid AI's on-device LFM2.5-24B to DeepSeek's MIT-licensed V4.1-Flash and Reflection AI's Apache-licensed Beam — the license is now as much a comparison point as the benchmark. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agents acting outside their intended bounds is now a recurring pattern, not a one-off bug</strong><p>Anthropic warned models may soon self-replicate onto home devices, Microsoft's Nadella called for a human-controlled "emergency brake" on misbehaving models, and MI5 stood up a dedicated unit just to assess AI misuse risks. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Regulators, platforms and labs are all racing toward agent guardrails from different angles</strong><p>The EU AI Office's and FTC's information requests to OpenAI and Anthropic landed the same week ServiceNow shipped a runtime permission credential for agents and Cohere moved to buy a vulnerability-hunting startup to build its own AI security unit. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>AI's legal and economic exposure keeps compounding, not leveling off</strong><p>Character.AI's bankruptcy, Anthropic's slowing growth and reset IPO valuation, and this week's stock sell-off are all the same story: scale and financial risk are growing together, not trading off. → <a href="#L7">L7</a></p></div>
@@ -434,6 +434,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://letsdatascience.com/news/nadella-calls-for-ai-emergency-brake-controls-b3c25fb1">letsdatascience.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
+          <div><h3>MBZUAI's Institute of Foundation Models and Inception42 released Jais 3, an Apache-licensed suite of six Arabic-native language models from 900 million to 375 billion parameters plus a dedicated Arabic speech-recognition model, built on their K2 Horizon open foundation fleet</h3>
+            <p class="why"><b>Why it matters:</b> a fully open, dialect-aware model family from outside the usual US/China labs is a reminder that the open-weight track in <a href="#L4">L4</a> is a global story, not a two-country race.</p>
+            <p class="src"><a href="https://www.wam.ae/en/article/c2r7j2m-mbzuai-inception42-launch-jais-arabic-models">wam.ae</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
+          <div><h3>Nvidia released Nemotron 3.5 Super VL, an open 120-billion-parameter multimodal model that activates only 12 billion parameters per token and reads text, images, charts and documents, alongside two smaller "Bolt" models sized for local deployment</h3>
+            <p class="why"><b>Why it matters:</b> a sparse, open-weight model built for agentic, multimodal work — with a 24GB-footprint sibling meant to run locally — is exactly the serving-versus-local tradeoff <a href="#L4">L4</a> covers (<a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/nvidia-expands-nemotron-35-with-super-vl-and-bolt-ff81d36b">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-15</span><span class="pill sec">Security</span></div>
           <div><h3>Cohere signed a letter of intent to acquire AISLE, a Prague- and San Francisco-based AI vulnerability-hunting startup with about 50 employees, folding it into a new in-house unit called Cohere Cyber alongside its pending merger with Aleph Alpha</h3>
             <p class="why"><b>Why it matters:</b> an AI lab buying an AI-powered vulnerability scanner to secure its own deployments turns the agent-containment and threat-modeling ideas in <a href="#L6">L6</a> into an actual product line, not just a research concern.</p>
@@ -452,6 +464,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://officechai.com/ai/muse-spark-open-benchmarks/">officechai.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-14</span><span class="pill">Models</span></div>
+          <div><h3>xAI released Grok Voice 3.0, an updated real-time voice model with reported under-one-second latency that now backs the "grok-voice-latest" API alias, scoring higher than its predecessor on early third-party speech benchmarks</h3>
+            <p class="why"><b>Why it matters:</b> voice is turning into its own competitive front in the model race, separate from text leaderboards, and still rides on the same serving tradeoffs <a href="#L4">L4</a> covers.</p>
+            <p class="src"><a href="https://techenclave.com/news/items/xai-releases-grok-voice-3-and-upgrades-the-latest-api-alias">techenclave.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-14</span><span class="pill">Policy</span></div>
           <div><h3>The European Commission's AI Office sent its first AI Act information requests to OpenAI and Anthropic over the same summer 2026 incidents — a test agent that reportedly breached Hugging Face infrastructure, and a model that gained unauthorized access to outside organizations — EU official Henna Virkkunen said at a Dublin AI summit</h3>
             <p class="why"><b>Why it matters:</b> a second major regulator opening inquiries into the same agent incidents the FTC is also probing shows oversight of agent safety failures is becoming a global pattern, not one country's response (<a href="#L6">L6</a>).</p>
@@ -464,28 +482,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://axios.com/2026/10/15/ftc-openai-anthropic-ai-safety-investigation">axios.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Research</span></div>
-          <div><h3>A Princeton Engineering write-up described a case study in which an AI research system helped mathematicians tighten the decades-old bounds on the Grothendieck constant, with humans still picking the key pivot and checking the final result</h3>
-            <p class="why"><b>Why it matters:</b> a documented, human-verified step forward on an open math problem — not just a high benchmark score — is a concrete test of how far the research-agent ideas in <a href="#L7">L7</a> can go beyond the linear algebra in <a href="#L0">L0</a>.</p>
-            <p class="src"><a href="https://engineering.princeton.edu/news/2026/10/13/ai-great-math-does-it-know-how-do-research">engineering.princeton.edu</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Models</span></div>
-          <div><h3>Google widened availability of Gemini 4 Argon, a long-horizon agentic model first previewed in a limited cybersecurity rollout in late September, to all Gemini app Pro and Ultra subscribers as a "work" assistant that can run tasks in the background and reach more than 40 connected apps</h3>
-            <p class="why"><b>Why it matters:</b> shipping a long-running agentic model straight into a mainstream consumer app, not just a developer preview, is the agent-as-product shift <a href="#L6">L6</a> and <a href="#L5">L5</a> both describe.</p>
-            <p class="src"><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-availability">blog.google</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Industry</span></div>
-          <div><h3>Character.AI filed for Chapter 11 bankruptcy in Delaware and named Disney as the opening $20 million bidder for a non-exclusive license to parts of its chatbot platform's intellectual property and related legal claims, months after Disney sent it a cease-and-desist over chatbots built on its characters</h3>
-            <p class="why"><b>Why it matters:</b> a well-funded consumer chatbot company still failing on IP exposure and liability, not model quality, is a concrete case study for the product-and-legal risks <a href="#L5">L5</a> says to plan for before shipping a consumer app.</p>
-            <p class="src"><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/10/13/characterai-files-for-bankruptcy-to-sell-some-assets-to-disney-for-us20-million/">bnnbloomberg.ca</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-13</span><span class="pill sec">Security</span></div>
-          <div><h3>MI5 director general Ken McCallum said in his annual threat speech that AI could let terrorists reach or design bioweapons if guardrails fail, and announced a new AI Threat Assessment Centre inside MI5 working with the National Crime Agency and GCHQ's cyber centre to assess AI misuse risks</h3>
-            <p class="why"><b>Why it matters:</b> a national intelligence agency standing up a dedicated unit for AI misuse turns the guardrail and threat-modeling ideas <a href="#L6">L6</a> covers into an operational security problem, not just a research question.</p>
-            <p class="src"><a href="https://www.itv.com/news/2026-10-13/ai-could-give-terrorists-access-to-bioweapons-if-guardrails-fail-spy-chief-says">itv.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Local</span></div>
+          <div><h3>Liquid AI released LFM2.5-24B-A2B, the largest model in its LFM2.5 family — a 24-billion-parameter mixture-of-experts model that activates roughly 2 billion parameters per token and is built to run on a laptop</h3>
+            <p class="why"><b>Why it matters:</b> a capable MoE model explicitly tuned to fit consumer hardware, with open weights on Hugging Face, is a concrete example of the local-model and quantization tradeoffs <a href="#L4">L4</a> teaches (<a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://cryptobriefing.com/liquid-ai-lfm2-5-24b-a2b-model/">cryptobriefing.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-13</span><span class="pill sec">Safety</span></div>
@@ -674,60 +674,49 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget-calculator, tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter">
-          <span class="label">New this refresh · 2026-10-18 · connects to <a href="#L6">L6</a></span>
-          <h3>Agent loop step counter: why agents need a hard step budget</h3>
-          <p class="lede">A toy agent needs 4 successful tool calls to finish a task, but each attempt can randomly fail and force a retry that still burns a step from its budget. Raise the retry chance or shrink the budget and see how often the loop gets killed before finishing. This is simplified: the task size (4 successes) is fixed and the retry rate is a random knob, not a number measured from a real agent.</p>
+        <!-- HISTORY: tokenization-bpe-merges, agent-capability-blast-radius, scaling-law-curve, learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings -->
+        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings">
+          <span class="label">New this refresh · 2026-10-18 · connects to <a href="#L5">L5</a></span>
+          <h3>Cosine similarity: do these two embeddings point the same way?</h3>
+          <p class="lede">Drag two toy 2D vectors and watch their cosine similarity — the dot product divided by both vectors' lengths — swing between -1 (opposite directions) and 1 (identical direction). Real embeddings have hundreds of dimensions, not two, but retrieval systems compare them exactly this way: by direction, not length. This is simplified to 2D so the numbers stay checkable by hand.</p>
           <p class="pt-ctl">
-            <label for="pt-al-budget">Step budget: <span class="mono" id="pt-al-budget-val">10</span>
-              <input type="range" id="pt-al-budget" min="4" max="20" step="1" value="10">
+            <label for="pt-cs-ax">Vector A x: <span class="mono" id="pt-cs-ax-val">3</span>
+              <input type="range" id="pt-cs-ax" min="-5" max="5" step="1" value="3">
             </label>
-            <label for="pt-al-retry">Retry chance: <span class="mono" id="pt-al-retry-val">20%</span>
-              <input type="range" id="pt-al-retry" min="0" max="70" step="5" value="20">
+            <label for="pt-cs-ay">Vector A y: <span class="mono" id="pt-cs-ay-val">1</span>
+              <input type="range" id="pt-cs-ay" min="-5" max="5" step="1" value="1">
             </label>
-            <button type="button" class="btn primary" id="pt-al-run">Run loop again</button>
+            <label for="pt-cs-bx">Vector B x: <span class="mono" id="pt-cs-bx-val">2</span>
+              <input type="range" id="pt-cs-bx" min="-5" max="5" step="1" value="2">
+            </label>
+            <label for="pt-cs-by">Vector B y: <span class="mono" id="pt-cs-by-val">2</span>
+              <input type="range" id="pt-cs-by" min="-5" max="5" step="1" value="2">
+            </label>
           </p>
-          <div class="pt-track"><div class="pt-fill" id="pt-al-fill" style="width:0"></div></div>
-          <p class="mono" id="pt-al-log" style="white-space:pre-line"></p>
-          <p class="mono" id="pt-al-result"></p>
+          <div class="pt-track"><div class="pt-fill" id="pt-cs-fill" style="width:0"></div></div>
+          <p class="mono" id="pt-cs-readout"></p>
           <script>(function(){
-          var budgetEl=document.getElementById("pt-al-budget");
-          var retryEl=document.getElementById("pt-al-retry");
-          var budgetVal=document.getElementById("pt-al-budget-val");
-          var retryVal=document.getElementById("pt-al-retry-val");
-          var fillEl=document.getElementById("pt-al-fill");
-          var logEl=document.getElementById("pt-al-log");
-          var resultEl=document.getElementById("pt-al-result");
-          var runBtn=document.getElementById("pt-al-run");
-          var NEEDED=4;
-          function simulate(){
-            var budget=parseInt(budgetEl.value,10);
-            var retryChance=parseInt(retryEl.value,10)/100;
-            budgetVal.textContent=budget;
-            retryVal.textContent=retryEl.value+"%";
-            var steps=0, successes=0, lines=[], done=false;
-            while(steps<budget){
-              steps++;
-              if(Math.random()<retryChance){
-                lines.push("step "+steps+": tool call failed, agent retries");
-              } else {
-                successes++;
-                lines.push("step "+steps+": tool call succeeds ("+successes+"/"+NEEDED+")");
-              }
-              if(successes>=NEEDED){ done=true; break; }
-            }
-            logEl.textContent=lines.join("\n");
-            fillEl.style.width=Math.min(100,(steps/budget*100))+"%";
-            fillEl.style.background=done?"var(--good)":"var(--signal)";
-            resultEl.textContent=done
-              ? "Finished in "+steps+" of "+budget+" steps — task completed before the budget ran out."
-              : "Budget exceeded after "+steps+" steps without finishing — the runaway-loop failure mode agent frameworks cap with a hard step limit.";
+          var ax=document.getElementById("pt-cs-ax"), ay=document.getElementById("pt-cs-ay");
+          var bx=document.getElementById("pt-cs-bx"), by=document.getElementById("pt-cs-by");
+          var axv=document.getElementById("pt-cs-ax-val"), ayv=document.getElementById("pt-cs-ay-val");
+          var bxv=document.getElementById("pt-cs-bx-val"), byv=document.getElementById("pt-cs-by-val");
+          var fill=document.getElementById("pt-cs-fill"), readout=document.getElementById("pt-cs-readout");
+          function update(){
+            var a=[parseInt(ax.value,10),parseInt(ay.value,10)];
+            var b=[parseInt(bx.value,10),parseInt(by.value,10)];
+            axv.textContent=a[0]; ayv.textContent=a[1]; bxv.textContent=b[0]; byv.textContent=b[1];
+            var dot=a[0]*b[0]+a[1]*b[1];
+            var magA=Math.sqrt(a[0]*a[0]+a[1]*a[1]);
+            var magB=Math.sqrt(b[0]*b[0]+b[1]*b[1]);
+            var cos=(magA===0||magB===0)?0:dot/(magA*magB);
+            var pct=(cos+1)/2*100;
+            fill.style.width=pct+"%";
+            fill.style.background=cos>=0?"var(--good)":"var(--signal)";
+            var note=cos>0.8?" (nearly the same direction)":cos<-0.8?" (nearly opposite directions)":(Math.abs(cos)<0.15?" (nearly orthogonal)":"");
+            readout.textContent="dot = "+dot+"   |A| = "+magA.toFixed(2)+"   |B| = "+magB.toFixed(2)+"   cosine similarity = "+cos.toFixed(3)+note;
           }
-          budgetEl.addEventListener("input",simulate);
-          retryEl.addEventListener("input",simulate);
-          runBtn.addEventListener("click",simulate);
-          simulate();
+          [ax,ay,bx,by].forEach(function(el){ el.addEventListener("input",update); });
+          update();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
