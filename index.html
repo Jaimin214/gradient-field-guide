@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-18T20:42:52">2026-10-18 20:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-19T01:39:09">2026-10-19 01:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://officechai.com/ai/muse-spark-open-benchmarks/">officechai.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
-          <div><h3>MBZUAI's Institute of Foundation Models and Inception42 released Jais 3, a fleet of six Arabic-first open language models ranging from 900 million to 375 billion parameters, plus an Arabic speech-recognition model, all under Apache 2.0</h3>
-            <p class="why"><b>Why it matters:</b> a serious open-weight effort built around a specific language and region, not just English-first scale, is the same open-model landscape <a href="#L4">L4</a> covers, applied somewhere the big US and Chinese labs barely compete.</p>
-            <p class="src"><a href="https://www.hpcwire.com/aiwire/2026/10/16/mbzuai-and-inception42-introduce-jais-3-and-arabic-speech-recognition-model/">hpcwire.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-14</span><span class="pill">Models</span></div>
+          <div><h3>xAI released Grok Voice 3.0, a speech-to-speech model served through its Voice Agent API at roughly the same $0.08-per-minute price as its predecessor, pitched at phone support and in-app voice assistants</h3>
+            <p class="why"><b>Why it matters:</b> voice agents are becoming cheap, swappable infrastructure rather than a novelty, which is the kind of LLM-app building block <a href="#L5">L5</a> covers (vendor-reported benchmarks, not independently audited).</p>
+            <p class="src"><a href="https://www.devx.com/artificial-intelligence-ai/what-is-grok-voice-3-0-xai-speech-to-speech-model/">devx.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Local</span></div>
-          <div><h3>Liquid AI released LFM2.5-24B-A2B, a 24-billion-parameter mixture-of-experts model that activates only about 2 billion parameters per token, with open weights aimed at fast on-device agents</h3>
-            <p class="why"><b>Why it matters:</b> a sparse model built to run as a responsive local agent rather than a benchmark flex is exactly the serving-versus-local tradeoff <a href="#L4">L4</a> covers (<a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://www.llmreference.com/model/lfm-2.5-24b-a2b">llmreference.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-14</span><span class="pill">Policy</span></div>
+          <div><h3>The FTC reportedly sent OpenAI and Anthropic civil investigative demands of more than 50 pages each, seeking documents on AI safety incidents, safeguards, marketing materials and privacy policies, per Axios</h3>
+            <p class="why"><b>Why it matters:</b> a formal, paper-heavy information demand is this agent-safety inquiry moving from announced probe to actual discovery — the regulatory side of the containment questions <a href="#L6">L6</a> raises.</p>
+            <p class="src"><a href="https://fourweekmba.com/ai-ftc-subpoenas-openai-anthropic-over-ai-safety-incidents/">fourweekmba.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,35 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedule, precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy -->
-        <div class="pgcard pgtopic" data-topic="knowledge-distillation-toy">
-          <span class="label">New this refresh · 2026-10-18 · connects to <a href="#L4">L4</a></span>
-          <h3>Knowledge distillation: squeezing a big model into a small one</h3>
-          <p class="lede">A toy "teacher" holds a fixed probability distribution over 6 next-token guesses. Drag the slider to shrink the "student" model's capacity, how many of those tokens it is allowed to keep, and watch the student's renormalized distribution and approximation error change. This is a loose simplification: real distillation trains a student on the teacher's full soft probabilities across many examples, not a hard top-k cutoff on one example, which is closer to what Nvidia's smaller Nemotron "Bolt" models and Liquid AI's on-device models are actually built for.</p>
+        <!-- HISTORY: precision-recall-threshold, overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve -->
+        <div class="pgcard pgtopic" data-topic="scaling-law-curve">
+          <span class="label">New this refresh · 2026-10-19 · connects to <a href="#L7">L7</a></span>
+          <h3>Scaling laws: what more compute buys you</h3>
+          <p class="lede">Frontier labs justify ever-bigger training runs with "scaling laws": loss falls as a power of compute, but with sharply diminishing returns. Drag the slider to pick a training-compute budget (FLOPs, log scale) and watch a toy loss curve respond. The curve shape and numbers here are invented to show the pattern — not a measured scaling law for any real model like Microsoft's MAI-Base-2 or Meta's Muse Spark.</p>
           <p class="pt-ctl">
-            <label for="pt-kd-budget">Student capacity: <span class="mono" id="pt-kd-budget-val">2</span> of 6 tokens kept
-              <input type="range" id="pt-kd-budget" min="1" max="6" step="1" value="2">
+            <label for="pt-sc-compute">Training compute: 10^<span class="mono" id="pt-sc-compute-val">24</span> FLOPs
+              <input type="range" id="pt-sc-compute" min="20" max="27" step="0.5" value="24">
             </label>
           </p>
-          <div id="pt-kd-rows"></div>
-          <p class="mono" id="pt-kd-readout"></p>
+          <div class="pt-row"><span>Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-sc-fill"></div></div><span class="mono" id="pt-sc-val"></span></div>
+          <p class="mono" id="pt-sc-readout"></p>
           <script>(function(){
-          var tokens=["cat","dog","car","run","jump","blue"];
-          var teacher=[0.42,0.23,0.14,0.09,0.07,0.05];
-          var budget=document.getElementById("pt-kd-budget"), budgetv=document.getElementById("pt-kd-budget-val");
-          var rowsEl=document.getElementById("pt-kd-rows"), readout=document.getElementById("pt-kd-readout");
+          var slider=document.getElementById("pt-sc-compute"), sliderv=document.getElementById("pt-sc-compute-val");
+          var fill=document.getElementById("pt-sc-fill"), val=document.getElementById("pt-sc-val"), readout=document.getElementById("pt-sc-readout");
+          var A=120, B=0.095, C=1.4;
+          function loss(logc){ return C + A*Math.pow(10, -B*(logc-20)); }
           function render(){
-            var k=parseInt(budget.value,10);
-            budgetv.textContent=String(k);
-            var idx=teacher.map(function(p,i){ return i; }).sort(function(a,b){ return teacher[b]-teacher[a]; });
-            var kept=idx.slice(0,k);
-            var keptSum=kept.reduce(function(s,i){ return s+teacher[i]; },0);
-            var student=teacher.map(function(p,i){ return kept.indexOf(i)>=0 ? p/keptSum : 0; });
-            rowsEl.innerHTML="";
-            var err=0;
-            tokens.forEach(function(tok,i){
-              var row=document.createElement("div"); row.className="pt-row";
-              var lab=document.createElement("span"); lab.textContent=tok;
-              var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(student[i]*100)+"%";
-              track.appendChild(fill);
-              var pct=document.createElement("span"); pct.className="mono"; pct.textContent=Math.round(student[i]*100)+"%";
-              row.appendChild(lab); row.appendChild(track); row.appendChild(pct);
-              rowsEl.appendChild(row);
-              err += Math.abs(teacher[i]-student[i]);
-            });
-            readout.textContent = "Student kept "+k+" of 6 tokens; toy approximation error (summed |teacher minus student|): "+err.toFixed(2)+". Real distillation trains on soft targets across a whole dataset, not one hard cutoff like this.";
+            var logc=parseFloat(slider.value);
+            sliderv.textContent=logc.toFixed(1);
+            var L=loss(logc);
+            var minL=loss(27), maxL=loss(20);
+            var pct=Math.max(0,Math.min(100,100*(L-minL)/(maxL-minL)));
+            fill.style.width=pct+"%";
+            val.textContent="loss ≈ "+L.toFixed(2);
+            var gain = logc>20 ? (loss(logc-0.5)-L).toFixed(3) : "—";
+            readout.textContent = "Each extra half order of magnitude of compute buys a shrinking loss improvement (Δ≈"+gain+" here) — the diminishing-returns pattern behind scale debates like trillion-parameter models vs. smaller, sparser ones. Numbers are an invented illustration, not a measured scaling law.";
           }
-          budget.addEventListener("input",render);
+          slider.addEventListener("input",render);
           render();
           })();</script>
         </div>
