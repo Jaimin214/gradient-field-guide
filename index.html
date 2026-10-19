@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-19T06:41:39">2026-10-19 06:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-19T11:41:31">2026-10-19 11:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>AI's financing and valuation stress keeps compounding</strong><p>A second stock sell-off, Anthropic's reset IPO valuation near $1.5 trillion and a reported $9 billion junior-debt tranche paying a 10% coupon all point the same way: funding the compute buildout is getting harder, not easier. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Flagship assistants are rolling out broadly while open and sparse model fleets multiply underneath them</strong><p>Google's Gemini 4 "Argon" reached the mainstream consumer app the same week Microsoft's 2.8-trillion-parameter MAI-Base-2, DeepSeek's MIT-licensed V4.1-Flash and Nvidia's sparse Nemotron 3.5 all moved — scale at the top and specialization underneath are both accelerating at once. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Flagship assistants are rolling out broadly while open and sparse model fleets multiply underneath them</strong><p>Google's Gemini 4 "Argon" reached the mainstream consumer app the same week Microsoft's 2.8-trillion-parameter MAI-Base-2, DeepSeek's MIT-licensed V4.1-Flash, Nvidia's sparse Nemotron 3.5 and Meta's 816-billion-parameter Muse Spark Open all moved — scale at the top and specialization underneath are both accelerating at once. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Coding and consumer agents are gaining built-in review and extension points</strong><p>Claude Code's automated code review went generally available and picked up custom "mods," while ChatGPT added an in-chat slide-deck builder — both push agent tooling from novelty toward a reviewable, extensible part of the workflow. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agent governance is converging on labs, vendors and regulators at once</strong><p>Anthropic's reported pitch of its own federal safety bill, Cohere's vulnerability-hunting acquisition and Nadella's call for a model "emergency brake" are all answers to the same underlying problem: agents acting outside their intended bounds. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>The AI job market is bifurcating by specialization, not shrinking uniformly</strong><p>Trackers reportedly show machine-learning engineer postings running well above pre-pandemic levels while general software-engineering postings stay well below it, even as AI is increasingly cited as a reason for tech layoffs. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Coding-agent security is moving from warning to demonstrated exploit</strong><p>Researchers reportedly showed that ordinary GitHub comments, PR titles and issue text can hijack Claude Code's, Gemini CLI's and Copilot's coding agents inside CI pipelines and pull out credentials — the containment problem <a href="#L6">L6</a> covers, no longer hypothetical. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bnnbloomberg.ca/business/company-news/2026/10/15/ai-firm-cohere-to-buy-cybersecurity-company-aisle">bnnbloomberg.ca</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Models</span></div>
-          <div><h3>Google reportedly rolled out Gemini 4 "Argon" broadly to the consumer Gemini app, after announcing it in late September, while the Gemini API separately added audio-to-audio "Live" models for real-time voice apps</h3>
-            <p class="why"><b>Why it matters:</b> a flagship model moving from announcement to the mainstream app in weeks is the deployment side of the training-to-serving pipeline <a href="#L4">L4</a> covers, not just a benchmark headline.</p>
-            <p class="src"><a href="https://www.clone-systems.com/blog/new-ai-models-october-2026-release-guide-and-security">clone-systems.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
+          <div><h3>Meta reportedly published open weights for Muse Spark Open, an 816-billion-parameter model with 42 billion active parameters per token and a 1-million-token context window, under a license with commercial-use limits</h3>
+            <p class="why"><b>Why it matters:</b> a second massive open-weight release in the same week as DeepSeek's is more evidence that frontier-adjacent labs now ship downloadable weights alongside hosted APIs, the tradeoff <a href="#L4">L4</a> and <a href="#projects">Project 2</a> cover.</p>
+            <p class="src"><a href="https://pasqualepillitteri.it/en/news/24330/meta-muse-spark-open-816b-open-weights">pasqualepillitteri.it</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
-          <div><h3>Job trackers reportedly show machine-learning engineer postings running about 59% above their pre-pandemic baseline, while general software-engineering postings remain roughly 49% below it, amid a wave of AI-attributed tech layoffs</h3>
-            <p class="why"><b>Why it matters:</b> for a CS grad, this is the clearest available evidence that "learn AI" is now a career-survival strategy, not just an interest — exactly why this guide's path exists (<a href="#L6">L6</a>, <a href="#projects">Projects</a>).</p>
-            <p class="src"><a href="https://aiweekly.co/alerts/ml-roles-surge-59-as-tech-cuts-hit-148092-in-2026">aiweekly.co</a></p></div>
+          <div class="when"><span class="mono">2026</span><span class="pill sec">Security</span></div>
+          <div><h3>Security researchers reportedly demonstrated a "Comment and Control" attack using crafted GitHub pull-request titles, comments and issue text to hijack Claude Code's security-review action, Google's Gemini CLI action and GitHub's Copilot agent inside CI pipelines, exposing credentials in at least one case</h3>
+            <p class="why"><b>Why it matters:</b> a coding agent that reads untrusted repo text while holding CI secrets is the exact agent-containment failure <a href="#L6">L6</a> warns about, not just a textbook scenario (<a href="#projects">Project 1</a>).</p>
+            <p class="src"><a href="https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/">securityweek.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,54 +674,47 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule -->
-        <div class="pgcard pgtopic" data-topic="learning-rate-schedule">
-          <span class="label">New this refresh · 2026-10-19 · connects to <a href="#L2">L2</a></span>
-          <h3>Learning-rate schedules: why the rate changes mid-training</h3>
-          <p class="lede">Training almost never uses one fixed learning rate the whole way through. Pick a schedule and drag the step slider to see what rate it would use over a toy 1,000-step run. The curve shapes follow the textbook formulas, but the numbers are an invented illustration, not a logged training run from any real model.</p>
+        <!-- HISTORY: chunk-size-vs-retrieval, qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider -->
+        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider">
+          <span class="label">New this refresh · 2026-10-19 · connects to <a href="#L1">L1</a></span>
+          <h3>Precision vs. recall: moving the decision threshold</h3>
+          <p class="lede">A classifier outputs a score, not a label — you pick the cutoff. Drag the threshold over a fixed toy set of 20 scored examples to see precision, recall and F1 trade off. The 20 scores and true labels below are invented for illustration, not a real model's output or a real benchmark.</p>
           <p class="pt-ctl">
-            <label>Schedule:
-              <select id="pt-lr-sched">
-                <option value="step">Step decay</option>
-                <option value="cosine">Cosine decay</option>
-                <option value="warmup">Warmup + cosine</option>
-              </select>
-            </label>
-            <label for="pt-lr-step">Step: <span class="mono" id="pt-lr-step-val">0</span> / 1000
-              <input type="range" id="pt-lr-step" min="0" max="1000" step="10" value="0">
+            <label for="pt-pr-thresh">Threshold: <span class="mono" id="pt-pr-thresh-val">0.50</span>
+              <input type="range" id="pt-pr-thresh" min="1" max="99" step="1" value="50">
             </label>
           </p>
-          <div class="pt-row"><span>Learning rate</span><div class="pt-track"><div class="pt-fill" id="pt-lr-fill"></div></div><span class="mono" id="pt-lr-val"></span></div>
-          <p class="mono" id="pt-lr-readout"></p>
+          <div class="pt-row"><span>Precision</span><div class="pt-track"><div class="pt-fill" id="pt-pr-fill-p"></div></div><span class="mono" id="pt-pr-val-p"></span></div>
+          <div class="pt-row"><span>Recall</span><div class="pt-track"><div class="pt-fill" id="pt-pr-fill-r"></div></div><span class="mono" id="pt-pr-val-r"></span></div>
+          <p class="mono" id="pt-pr-readout"></p>
           <script>(function(){
-          var sel=document.getElementById("pt-lr-sched"), slider=document.getElementById("pt-lr-step"), sv=document.getElementById("pt-lr-step-val");
-          var fill=document.getElementById("pt-lr-fill"), val=document.getElementById("pt-lr-val"), readout=document.getElementById("pt-lr-readout");
-          var MAXLR=0.001, TOTAL=1000, WARM=100;
-          function lrAt(step){
-            var t=step/TOTAL;
-            if(sel.value==="step"){
-              if(step<300) return MAXLR;
-              if(step<600) return MAXLR*0.3;
-              if(step<900) return MAXLR*0.09;
-              return MAXLR*0.027;
-            }
-            if(sel.value==="cosine") return MAXLR*0.5*(1+Math.cos(Math.PI*t));
-            if(step<WARM) return MAXLR*(step/WARM);
-            var t2=(step-WARM)/(TOTAL-WARM);
-            return MAXLR*0.5*(1+Math.cos(Math.PI*t2));
-          }
+          var items=[[0.95,1],[0.91,1],[0.88,1],[0.84,0],[0.80,1],[0.77,1],[0.74,0],[0.70,1],[0.66,1],[0.62,0],
+            [0.58,1],[0.54,0],[0.49,1],[0.45,0],[0.40,0],[0.35,1],[0.30,0],[0.22,0],[0.14,0],[0.07,0]];
+          var slider=document.getElementById("pt-pr-thresh"), tv=document.getElementById("pt-pr-thresh-val");
+          var fp=document.getElementById("pt-pr-fill-p"), fr=document.getElementById("pt-pr-fill-r");
+          var vp=document.getElementById("pt-pr-val-p"), vr=document.getElementById("pt-pr-val-r");
+          var readout=document.getElementById("pt-pr-readout");
           function render(){
-            var step=parseInt(slider.value,10);
-            sv.textContent=step;
-            var lr=lrAt(step);
-            var pct=Math.max(0,Math.min(100,100*lr/MAXLR));
-            fill.style.width=pct+"%";
-            val.textContent="lr ≈ "+lr.toExponential(2);
-            var desc = sel.value==="step" ? "Step decay drops the rate in sudden cliffs at fixed checkpoints." : sel.value==="cosine" ? "Cosine decay glides the rate down smoothly along a cosine curve." : "A short warmup ramps the rate up first, then cosine decay glides it back down.";
-            readout.textContent = desc+" Simplified toy curve — a real run also reacts to loss spikes and gradient noise.";
+            var t=parseInt(slider.value,10)/100;
+            tv.textContent=t.toFixed(2);
+            var tp=0,fpN=0,fn=0,tn=0;
+            for(var i=0;i<items.length;i++){
+              var pred=items[i][0]>=t, actual=items[i][1]===1;
+              if(pred&&actual) tp++;
+              else if(pred&&!actual) fpN++;
+              else if(!pred&&actual) fn++;
+              else tn++;
+            }
+            var precision = (tp+fpN)>0 ? tp/(tp+fpN) : 0;
+            var recall = (tp+fn)>0 ? tp/(tp+fn) : 0;
+            var f1 = (precision+recall)>0 ? 2*precision*recall/(precision+recall) : 0;
+            fp.style.width=(precision*100)+"%";
+            fr.style.width=(recall*100)+"%";
+            vp.textContent=(precision*100).toFixed(0)+"%";
+            vr.textContent=(recall*100).toFixed(0)+"%";
+            readout.textContent="TP "+tp+" · FP "+fpN+" · FN "+fn+" · TN "+tn+" — F1 "+(f1*100).toFixed(0)+"%. Raise the threshold and precision tends up while recall tends down; a real model's scores and the cost of a false positive vs. a false negative decide where to set it.";
           }
           slider.addEventListener("input",render);
-          sel.addEventListener("change",render);
           render();
           })();</script>
         </div>
