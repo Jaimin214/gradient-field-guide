@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-19T20:41:58">2026-10-19 20:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-20T01:41:32">2026-10-20 01:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,7 +397,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>AI's financing and valuation stress keeps compounding</strong><p>A second stock sell-off, Anthropic's reset IPO valuation near $1.5 trillion and a reported $9 billion junior-debt tranche paying a 10% coupon all point the same way: funding the compute buildout is getting harder, not easier. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open and in-house model fleets keep multiplying, including quietly</strong><p>Microsoft's 2.8-trillion-parameter MAI-Base-2, DeepSeek's MIT-licensed V4.1-Flash and Reflection AI's Apache-licensed 501-billion-parameter Beam all shipped the same week three unannounced model IDs ("aurora-red/green/blue-alpha") reportedly turned up in OpenAI's own API. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open and in-house model fleets keep multiplying, including quietly</strong><p>DeepSeek's MIT-licensed V4.1-Flash and Reflection AI's Apache-licensed 501-billion-parameter Beam shipped alongside roughly 20 other October releases, unannounced "aurora-red/green/blue-alpha" IDs surfaced inside OpenAI's API, and Google DeepMind now says Gemini 4 has entered post-training. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Coding agents are gaining official review, extension and directory layers</strong><p>Claude Code's automated code review went generally available and picked up custom "mods" installable through Anthropic's own claude-plugins-official directory, while ChatGPT added an in-chat slide-deck builder — agent tooling is becoming reviewable, extensible and catalog-listed. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agent permission boundaries are showing up in production, not just policy papers</strong><p>Schwab and JPMorgan reportedly began blocking outside AI agents from moving client money, Nadella called for a model "emergency brake," and Anthropic pitched lawmakers its own federal safety bill — all answers to agents acting outside their intended bounds. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Coding-agent security is moving from warning to demonstrated exploit</strong><p>Researchers reportedly showed that ordinary GitHub comments, PR titles and issue text can hijack Claude Code's, Gemini CLI's and Copilot's coding agents inside CI pipelines and pull out credentials — the containment problem <a href="#L6">L6</a> covers, no longer hypothetical. → <a href="#L6">L6</a></p></div>
@@ -476,22 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://letsdatascience.com/news/nadella-calls-for-ai-emergency-brake-controls-b3c25fb1">letsdatascience.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Coding</span></div>
-          <div><h3>Anthropic reportedly made Claude Code's automated code review generally available for Team and Enterprise plans and added "mods," letting users extend Claude Code with custom TypeScript behavior and UI</h3>
-            <p class="why"><b>Why it matters:</b> an editor that reviews its own diffs and can be extended with your own code is exactly the kind of coding-agent building block <a href="#L6">L6</a> and <a href="#projects">Project 1</a> point toward.</p>
-            <p class="src"><a href="https://releasebot.io/updates/anthropic/claude">releasebot.io</a></p></div>
+          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
+          <div><h3>Independent trackers reportedly logged roughly 20 new model releases from 16 providers across October, including xAI's Grok Voice 3.0, an open-weight "Muse Spark" from Meta, Nvidia's Nemotron 3.5 Super VL and Liquid AI's efficiency-focused LFM2.5-24B-A2B</h3>
+            <p class="why"><b>Why it matters:</b> the sheer release cadence is why "current" knowledge of local and open models decays within weeks — the download-and-run landscape <a href="#L4">L4</a> covers keeps reshuffling (<a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://af.net/realtime/confirmed-ai-model-releases-for-october-2026/">af.net</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Models</span></div>
-          <div><h3>Microsoft reportedly unveiled MAI-Base-2, an in-house foundation model with 2.8 trillion total parameters and about 80 billion active per token, trained in 38 days on 16,000 Nvidia GB200 GPUs; pre-training is finished but post-training is not, so nobody outside Microsoft can try it yet</h3>
-            <p class="why"><b>Why it matters:</b> a second, roughly-tripled-in-size in-house base model is Microsoft hedging its reliance on OpenAI with its own frontier training stack — the scale-versus-efficiency tradeoffs <a href="#L7">L7</a> covers, made concrete.</p>
-            <p class="src"><a href="https://pasqualepillitteri.it/en/news/24354/microsoft-mai-base-2-trillion-parameters">pasqualepillitteri.it</a></p></div>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Models</span></div>
+          <div><h3>Google DeepMind's research lead reportedly said Gemini 4 has moved into post-training and is already being tested inside the company's Antigravity coding tool, with Google aiming to ship it well before year-end</h3>
+            <p class="why"><b>Why it matters:</b> a named internal testing ground for an unreleased frontier model previews what you'll be asked to evaluate against once it lands — the frontier-model tracking <a href="#L7">L7</a> covers.</p>
+            <p class="src"><a href="https://thenextweb.com/news/gemini-4-release-kavukcuoglu-post-training">thenextweb.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026</span><span class="pill sec">Security</span></div>
-          <div><h3>Security researchers reportedly demonstrated a "Comment and Control" attack using crafted GitHub pull-request titles, comments and issue text to hijack Claude Code's security-review action, Google's Gemini CLI action and GitHub's Copilot agent inside CI pipelines, exposing credentials in at least one case</h3>
-            <p class="why"><b>Why it matters:</b> a coding agent that reads untrusted repo text while holding CI secrets is the exact agent-containment failure <a href="#L6">L6</a> warns about, not just a textbook scenario (<a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/">securityweek.com</a></p></div>
+          <div class="when"><span class="mono">Aug 2026</span><span class="pill">Industry</span></div>
+          <div><h3>Stanford's 2026 AI Index reportedly found employment for software developers aged 22–25 down nearly 20% since 2024, and Challenger, Gray &amp; Christmas attributed roughly a quarter of 2026's announced U.S. layoffs to AI — though separate survey data suggests some firms simply label ordinary cuts "AI-driven"</h3>
+            <p class="why"><b>Why it matters:</b> if entry-level roles are the ones shrinking, a portfolio of real, finished projects is more of a differentiator than ever (<a href="#projects">Projects</a>).</p>
+            <p class="src"><a href="https://www.analyticsinsight.net/artificial-intelligence/ai-layoffs-vs-ai-hiring-how-firms-are-restructuring-jobs-in-2026">analyticsinsight.net</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,39 +674,42 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-retrieval-tradeoff">
-          <span class="label">New this refresh · 2026-10-19 · connects to <a href="#L5">L5</a></span>
-          <h3>RAG chunking: fewer chunks vs. diluted relevance</h3>
-          <p class="lede">Retrieval-augmented generation splits a document into chunks before embedding and searching them. Drag the slider to change chunk size for a toy 600-word document holding one 35-word answer, and watch the trade-off: how many chunks you end up with, versus what share of the retrieved chunk is actually the answer. This ignores real embeddings, semantic boundaries and chunk overlap — it only counts words.</p>
+        <!-- HISTORY: model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size -->
+        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size">
+          <span class="label">New this refresh · 2026-10-20 · connects to <a href="#L1">L1</a></span>
+          <h3>Overfitting: training error vs. validation error</h3>
+          <p class="lede">Drag the slider to change a toy model's capacity (think: polynomial degree, or parameter count). Training error keeps falling as capacity grows, but validation error traces a U: too little capacity underfits, too much starts memorizing noise instead of the pattern. The curves below come from a simplified formula, not a real trained model or benchmark.</p>
           <p class="pt-ctl">
-            <label for="pt-chunk-size">Chunk size (words): <span class="mono" id="pt-chunk-size-val">100</span>
-              <input type="range" id="pt-chunk-size" min="20" max="300" step="10" value="100">
+            <label for="pt-of-complexity">Model capacity (toy units): <span class="mono" id="pt-of-complexity-val">8</span>
+              <input type="range" id="pt-of-complexity" min="1" max="20" step="1" value="8">
             </label>
           </p>
-          <div class="pt-row"><span>Chunk count</span><div class="pt-track"><div class="pt-fill" id="pt-chunk-fill-count"></div></div><span class="mono" id="pt-chunk-val-count"></span></div>
-          <div class="pt-row"><span>Answer density</span><div class="pt-track"><div class="pt-fill" id="pt-chunk-fill-density"></div></div><span class="mono" id="pt-chunk-val-density"></span></div>
-          <p class="mono" id="pt-chunk-readout"></p>
+          <div class="pt-row"><span>Training error</span><div class="pt-track"><div class="pt-fill" id="pt-of-fill-train"></div></div><span class="mono" id="pt-of-val-train"></span></div>
+          <div class="pt-row"><span>Validation error</span><div class="pt-track"><div class="pt-fill" id="pt-of-fill-val"></div></div><span class="mono" id="pt-of-val-val"></span></div>
+          <p class="mono" id="pt-of-readout"></p>
           <script>(function(){
-          var doc=600, answer=35, maxChunks=Math.ceil(doc/20);
-          var size=document.getElementById("pt-chunk-size");
-          var sizeVal=document.getElementById("pt-chunk-size-val");
-          var fc=document.getElementById("pt-chunk-fill-count"), fd=document.getElementById("pt-chunk-fill-density");
-          var vc=document.getElementById("pt-chunk-val-count"), vd=document.getElementById("pt-chunk-val-density");
-          var readout=document.getElementById("pt-chunk-readout");
+          var slider=document.getElementById("pt-of-complexity");
+          var sliderVal=document.getElementById("pt-of-complexity-val");
+          var ft=document.getElementById("pt-of-fill-train"), fv=document.getElementById("pt-of-fill-val");
+          var vt=document.getElementById("pt-of-val-train"), vv=document.getElementById("pt-of-val-val");
+          var readout=document.getElementById("pt-of-readout");
+          var maxErr=30;
           function render(){
-            var chunkSize=parseInt(size.value,10);
-            sizeVal.textContent=chunkSize;
-            var count=Math.ceil(doc/chunkSize);
-            var density=Math.min(1,answer/chunkSize);
-            fc.style.width=Math.min(count/maxChunks*100,100)+"%";
-            fd.style.width=(density*100)+"%";
-            vc.textContent=count+" chunks";
-            vd.textContent=(density*100).toFixed(0)+"%";
-            var split=chunkSize<answer?" the 35-word answer no longer fits in one chunk, so retrieval needs overlap to avoid cutting it in half.":" the answer fits inside a single chunk.";
-            readout.textContent="At "+chunkSize+"-word chunks, this 600-word toy document splits into "+count+" chunks, and the one holding the answer is "+(density*100).toFixed(0)+"% actual answer —"+split;
+            var c=parseInt(slider.value,10);
+            sliderVal.textContent=c;
+            var train=80/(c+3);
+            var val=train+0.12*Math.pow(c-8,2);
+            ft.style.width=Math.min(train/maxErr*100,100)+"%";
+            fv.style.width=Math.min(val/maxErr*100,100)+"%";
+            vt.textContent=train.toFixed(1)+" (toy units)";
+            vv.textContent=val.toFixed(1)+" (toy units)";
+            var gap=val-train, verdict;
+            if(c<6)verdict="too little capacity — both errors are high (underfitting).";
+            else if(gap>6)verdict="validation error is pulling away from training error — the model is starting to memorize noise (overfitting).";
+            else verdict="training and validation error stay close — a reasonable fit for this toy data.";
+            readout.textContent="At capacity "+c+", the gap between validation and training error is "+gap.toFixed(1)+" toy units: "+verdict;
           }
-          size.addEventListener("input",render);
+          slider.addEventListener("input",render);
           render();
           })();</script>
         </div>
