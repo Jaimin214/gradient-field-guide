@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-19T16:41:36">2026-10-19 16:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-19T20:41:58">2026-10-19 20:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,12 +397,30 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>AI's financing and valuation stress keeps compounding</strong><p>A second stock sell-off, Anthropic's reset IPO valuation near $1.5 trillion and a reported $9 billion junior-debt tranche paying a 10% coupon all point the same way: funding the compute buildout is getting harder, not easier. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Flagship assistants are rolling out broadly while open and sparse model fleets multiply underneath them</strong><p>Google's Gemini 4 "Argon" reached the mainstream consumer app the same week Microsoft's 2.8-trillion-parameter MAI-Base-2, DeepSeek's MIT-licensed V4.1-Flash, Nvidia's sparse Nemotron 3.5 and Meta's 816-billion-parameter Muse Spark Open all moved — scale at the top and specialization underneath are both accelerating at once. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Coding and consumer agents are gaining built-in review and extension points</strong><p>Claude Code's automated code review went generally available and picked up custom "mods," while ChatGPT added an in-chat slide-deck builder — both push agent tooling from novelty toward a reviewable, extensible part of the workflow. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agent governance is converging on labs, vendors and regulators at once</strong><p>Anthropic's reported pitch of its own federal safety bill, Cohere's vulnerability-hunting acquisition and Nadella's call for a model "emergency brake" are all answers to the same underlying problem: agents acting outside their intended bounds. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open and in-house model fleets keep multiplying, including quietly</strong><p>Microsoft's 2.8-trillion-parameter MAI-Base-2, DeepSeek's MIT-licensed V4.1-Flash and Reflection AI's Apache-licensed 501-billion-parameter Beam all shipped the same week three unannounced model IDs ("aurora-red/green/blue-alpha") reportedly turned up in OpenAI's own API. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Coding agents are gaining official review, extension and directory layers</strong><p>Claude Code's automated code review went generally available and picked up custom "mods" installable through Anthropic's own claude-plugins-official directory, while ChatGPT added an in-chat slide-deck builder — agent tooling is becoming reviewable, extensible and catalog-listed. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Agent permission boundaries are showing up in production, not just policy papers</strong><p>Schwab and JPMorgan reportedly began blocking outside AI agents from moving client money, Nadella called for a model "emergency brake," and Anthropic pitched lawmakers its own federal safety bill — all answers to agents acting outside their intended bounds. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Coding-agent security is moving from warning to demonstrated exploit</strong><p>Researchers reportedly showed that ordinary GitHub comments, PR titles and issue text can hijack Claude Code's, Gemini CLI's and Copilot's coding agents inside CI pipelines and pull out credentials — the containment problem <a href="#L6">L6</a> covers, no longer hypothetical. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-18</span><span class="pill">Agents</span></div>
+          <div><h3>Charles Schwab and JPMorgan reportedly began blocking outside AI agents, including Meta's Muse, from directly moving client money, with Schwab building MCP servers that let a client's chosen model check balances but not transact</h3>
+            <p class="why"><b>Why it matters:</b> two major brokerages drawing the agent permission line at "read, don't write" is the containment principle <a href="#L6">L6</a> covers, now shipped in a live financial product.</p>
+            <p class="src"><a href="https://thenextweb.com/news/schwab-blocks-ai-agents-meta-muse">thenextweb.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-18</span><span class="pill">Coding</span></div>
+          <div><h3>Anthropic's claude-plugins-official GitHub repository has become the curated, built-in directory for Claude Code plugins, listing Anthropic-built and partner extensions that install through the editor's own discovery interface</h3>
+            <p class="why"><b>Why it matters:</b> a first-party plugin marketplace is the packaging layer that turns one-off coding-agent scripts into a reusable ecosystem, the extension point <a href="#L6">L6</a> and <a href="#projects">Project 1</a> build toward.</p>
+            <p class="src"><a href="https://www.sourcepulse.org/projects/20980556">sourcepulse.org</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-18</span><span class="pill">Models</span></div>
+          <div><h3>Three undocumented model IDs — aurora-red-alpha, aurora-green-alpha and aurora-blue-alpha — reportedly appeared in OpenAI's API with no accompanying announcement</h3>
+            <p class="why"><b>Why it matters:</b> unannounced model IDs surfacing through a production API is a reminder that frontier labs route internal testing through the same endpoints developers call — worth watching if you build against <a href="#L7">L7</a>-era models.</p>
+            <p class="src"><a href="https://aitoolly.com/ai-news/2026-10-18">aitoolly.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-17</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic reportedly offered Blackstone investors a 10% coupon on $9 billion of junior debt, part of a $60 billion compute-financing package nicknamed Project North Star, according to the Financial Times</h3>
@@ -468,24 +486,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Microsoft reportedly unveiled MAI-Base-2, an in-house foundation model with 2.8 trillion total parameters and about 80 billion active per token, trained in 38 days on 16,000 Nvidia GB200 GPUs; pre-training is finished but post-training is not, so nobody outside Microsoft can try it yet</h3>
             <p class="why"><b>Why it matters:</b> a second, roughly-tripled-in-size in-house base model is Microsoft hedging its reliance on OpenAI with its own frontier training stack — the scale-versus-efficiency tradeoffs <a href="#L7">L7</a> covers, made concrete.</p>
             <p class="src"><a href="https://pasqualepillitteri.it/en/news/24354/microsoft-mai-base-2-trillion-parameters">pasqualepillitteri.it</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
-          <div><h3>Nvidia released Nemotron 3.5 Super VL, an open 120-billion-parameter multimodal model that activates only 12 billion parameters per token and reads text, images, charts and documents, alongside two smaller "Bolt" models sized for local deployment</h3>
-            <p class="why"><b>Why it matters:</b> a sparse, open-weight model built for agentic, multimodal work — with a 24GB-footprint sibling meant to run locally — is exactly the serving-versus-local tradeoff <a href="#L4">L4</a> covers (<a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/nvidia-expands-nemotron-35-with-super-vl-and-bolt-ff81d36b">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-15</span><span class="pill sec">Security</span></div>
-          <div><h3>Cohere signed a letter of intent to acquire AISLE, a Prague- and San Francisco-based AI vulnerability-hunting startup with about 50 employees, folding it into a new in-house unit called Cohere Cyber alongside its pending merger with Aleph Alpha</h3>
-            <p class="why"><b>Why it matters:</b> an AI lab buying an AI-powered vulnerability scanner to secure its own deployments turns the agent-containment and threat-modeling ideas in <a href="#L6">L6</a> into an actual product line, not just a research concern.</p>
-            <p class="src"><a href="https://www.bnnbloomberg.ca/business/company-news/2026/10/15/ai-firm-cohere-to-buy-cybersecurity-company-aisle">bnnbloomberg.ca</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
-          <div><h3>Meta reportedly published open weights for Muse Spark Open, an 816-billion-parameter model with 42 billion active parameters per token and a 1-million-token context window, under a license with commercial-use limits</h3>
-            <p class="why"><b>Why it matters:</b> a second massive open-weight release in the same week as DeepSeek's is more evidence that frontier-adjacent labs now ship downloadable weights alongside hosted APIs, the tradeoff <a href="#L4">L4</a> and <a href="#projects">Project 2</a> cover.</p>
-            <p class="src"><a href="https://pasqualepillitteri.it/en/news/24330/meta-muse-spark-open-816b-open-weights">pasqualepillitteri.it</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026</span><span class="pill sec">Security</span></div>
@@ -674,43 +674,39 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: qk-attention-score, self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator -->
-        <div class="pgcard pgtopic" data-topic="moe-active-params-calculator">
-          <span class="label">New this refresh · 2026-10-19 · connects to <a href="#L4">L4</a></span>
-          <h3>Mixture-of-experts: total size vs. active compute</h3>
-          <p class="lede">This week's releases (Nvidia's Nemotron 3.5, Meta's Muse Spark Open, Microsoft's MAI-Base-2) all quote two numbers: a huge total parameter count and a much smaller "active per token" count. Drag the sliders to see how that gap moves a rough memory estimate versus a rough per-token compute estimate. The memory math assumes a fixed 16-bit weight format and ignores the KV cache, attention cost and real hardware overhead — a toy, not a sizing tool.</p>
+        <!-- HISTORY: self-consistency-majority-vote, model-memory-footprint-calculator, self-improvement-diminishing-returns, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-retrieval-tradeoff">
+          <span class="label">New this refresh · 2026-10-19 · connects to <a href="#L5">L5</a></span>
+          <h3>RAG chunking: fewer chunks vs. diluted relevance</h3>
+          <p class="lede">Retrieval-augmented generation splits a document into chunks before embedding and searching them. Drag the slider to change chunk size for a toy 600-word document holding one 35-word answer, and watch the trade-off: how many chunks you end up with, versus what share of the retrieved chunk is actually the answer. This ignores real embeddings, semantic boundaries and chunk overlap — it only counts words.</p>
           <p class="pt-ctl">
-            <label for="pt-moe-total">Total params (B): <span class="mono" id="pt-moe-total-val">500</span>
-              <input type="range" id="pt-moe-total" min="10" max="3000" step="10" value="500">
-            </label>
-            <label for="pt-moe-active">Active per token (B): <span class="mono" id="pt-moe-active-val">50</span>
-              <input type="range" id="pt-moe-active" min="1" max="3000" step="1" value="50">
+            <label for="pt-chunk-size">Chunk size (words): <span class="mono" id="pt-chunk-size-val">100</span>
+              <input type="range" id="pt-chunk-size" min="20" max="300" step="10" value="100">
             </label>
           </p>
-          <div class="pt-row"><span>Active share</span><div class="pt-track"><div class="pt-fill" id="pt-moe-fill-a"></div></div><span class="mono" id="pt-moe-val-a"></span></div>
-          <div class="pt-row"><span>fp16 memory</span><div class="pt-track"><div class="pt-fill" id="pt-moe-fill-m"></div></div><span class="mono" id="pt-moe-val-m"></span></div>
-          <p class="mono" id="pt-moe-readout"></p>
+          <div class="pt-row"><span>Chunk count</span><div class="pt-track"><div class="pt-fill" id="pt-chunk-fill-count"></div></div><span class="mono" id="pt-chunk-val-count"></span></div>
+          <div class="pt-row"><span>Answer density</span><div class="pt-track"><div class="pt-fill" id="pt-chunk-fill-density"></div></div><span class="mono" id="pt-chunk-val-density"></span></div>
+          <p class="mono" id="pt-chunk-readout"></p>
           <script>(function(){
-          var ts=document.getElementById("pt-moe-total"), as=document.getElementById("pt-moe-active");
-          var tv=document.getElementById("pt-moe-total-val"), av=document.getElementById("pt-moe-active-val");
-          var fa=document.getElementById("pt-moe-fill-a"), fm=document.getElementById("pt-moe-fill-m");
-          var va=document.getElementById("pt-moe-val-a"), vm=document.getElementById("pt-moe-val-m");
-          var readout=document.getElementById("pt-moe-readout");
+          var doc=600, answer=35, maxChunks=Math.ceil(doc/20);
+          var size=document.getElementById("pt-chunk-size");
+          var sizeVal=document.getElementById("pt-chunk-size-val");
+          var fc=document.getElementById("pt-chunk-fill-count"), fd=document.getElementById("pt-chunk-fill-density");
+          var vc=document.getElementById("pt-chunk-val-count"), vd=document.getElementById("pt-chunk-val-density");
+          var readout=document.getElementById("pt-chunk-readout");
           function render(){
-            var total=parseInt(ts.value,10);
-            var active=Math.min(parseInt(as.value,10),total);
-            if(active!==parseInt(as.value,10)) as.value=active;
-            tv.textContent=total; av.textContent=active;
-            var share=active/total*100;
-            var memGB=total*2;
-            fa.style.width=share+"%";
-            fm.style.width=Math.min(memGB/6000*100,100)+"%";
-            va.textContent=share.toFixed(0)+"%";
-            vm.textContent=memGB.toFixed(0)+" GB";
-            readout.textContent="At "+total+"B total and "+active+"B active per token, only "+share.toFixed(0)+"% of the weights fire for any given token — but all "+total+"B still have to sit in memory (~"+memGB.toFixed(0)+" GB at 16-bit) and get loaded. That's why a sparse model can be cheap to run per token while still being expensive to host.";
+            var chunkSize=parseInt(size.value,10);
+            sizeVal.textContent=chunkSize;
+            var count=Math.ceil(doc/chunkSize);
+            var density=Math.min(1,answer/chunkSize);
+            fc.style.width=Math.min(count/maxChunks*100,100)+"%";
+            fd.style.width=(density*100)+"%";
+            vc.textContent=count+" chunks";
+            vd.textContent=(density*100).toFixed(0)+"%";
+            var split=chunkSize<answer?" the 35-word answer no longer fits in one chunk, so retrieval needs overlap to avoid cutting it in half.":" the answer fits inside a single chunk.";
+            readout.textContent="At "+chunkSize+"-word chunks, this 600-word toy document splits into "+count+" chunks, and the one holding the answer is "+(density*100).toFixed(0)+"% actual answer —"+split;
           }
-          ts.addEventListener("input",render);
-          as.addEventListener("input",render);
+          size.addEventListener("input",render);
           render();
           })();</script>
         </div>
