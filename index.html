@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-20T11:42:08">2026-10-20 11:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-20T16:42:12">2026-10-20 16:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://engadget.com/2288104/ftc-subpoenas-open-ai-and-anthropic-following-safety-failures">engadget.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Models</span></div>
-          <div><h3>Google shipped Gemini 4 Argon as a general-availability release across the Gemini app, the API, AI Mode in Search and, for Ultra subscribers, Antigravity, saying the model hedges less and handles coding and multi-step tool use better than its predecessor</h3>
-            <p class="why"><b>Why it matters:</b> a frontier model landing with full API pricing and tool-use claims on day one, rather than a staged preview, is the kind of release the serving and evaluation work in <a href="#L4">L4</a> assumes you can get hands-on with quickly.</p>
-            <p class="src"><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-availability">blog.google</a></p></div>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
+          <div><h3>US tech layoffs stayed elevated through 2026 — reportedly over 139,000 cuts in the first half alone — and a Stanford study reported that employment for 22–25 year-olds in AI-exposed occupations is running about 19% below trend, while experienced workers in the same roles show no comparable drop</h3>
+            <p class="why"><b>Why it matters:</b> the hiring pain is concentrated at the entry level the learning path and five projects are meant to help you route around, not spread evenly across careers (<a href="#L1">L1</a>, <a href="#projects">Projects</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/tech-firms-account-for-nearly-a-third-of-us-layoffs-1501ba06">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,39 +674,48 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate -->
-        <div class="pgcard pgtopic" data-topic="speculative-decoding-acceptance-rate">
-          <span class="label">New this refresh · 2026-10-20 · connects to <a href="#L4">L4</a></span>
-          <h3>Speculative decoding: how much does guessing ahead help?</h3>
-          <p class="lede">A small "draft" model guesses the next few tokens and the real model checks them all in one pass; every guess it accepts is a free token. Drag the slider to see how the per-token acceptance rate changes the expected speedup for a fixed draft length of 4 — real systems use adaptive draft lengths and the verification pass isn't actually free, both simplified away here.</p>
+        <!-- HISTORY: kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin -->
+        <div class="pgcard pgtopic" data-topic="self-consistency-voting-margin">
+          <span class="label">New this refresh · 2026-10-20 · connects to <a href="#L5">L5</a></span>
+          <h3>Self-consistency: does voting across samples help?</h3>
+          <p class="lede">Instead of trusting one generation, sample the model N times and take the majority answer — a cheap mitigation for exactly the kind of one-shot agent misfire in this week's feed. Set the per-sample accuracy and the number of samples to see the majority vote's accuracy, computed from the binomial distribution assuming each sample is an independent, equally-likely coin flip — real model samples are correlated and unevenly confident, which this toy ignores.</p>
           <p class="pt-ctl">
-            <label><input type="range" id="pt-spec-rate" min="0" max="100" value="70" step="1"> Draft acceptance rate: <span id="pt-spec-pct" class="mono">70%</span></label>
+            <label><input type="range" id="pt-sc-p" min="50" max="95" value="60" step="1"> Per-sample accuracy: <span id="pt-sc-pct" class="mono">60%</span></label>
+            <label><input type="range" id="pt-sc-n" min="1" max="11" value="5" step="2"> Samples voted (N): <span id="pt-sc-ncount" class="mono">5</span></label>
           </p>
-          <div class="pt-row"><span>Accepted tokens/pass</span><div class="pt-track"><div class="pt-fill" id="pt-spec-fill-acc"></div></div><span class="mono" id="pt-spec-acc">0</span></div>
-          <div class="pt-row"><span>Tokens/pass vs. baseline</span><div class="pt-track"><div class="pt-fill" id="pt-spec-fill-speed"></div></div><span class="mono" id="pt-spec-speed">1.0×</span></div>
-          <p class="mono" id="pt-spec-readout"></p>
+          <div class="pt-row"><span>Single sample</span><div class="pt-track"><div class="pt-fill" id="pt-sc-fill-single"></div></div><span class="mono" id="pt-sc-single">60%</span></div>
+          <div class="pt-row"><span>Majority of N</span><div class="pt-track"><div class="pt-fill" id="pt-sc-fill-maj"></div></div><span class="mono" id="pt-sc-maj">0%</span></div>
+          <p class="mono" id="pt-sc-readout"></p>
           <script>(function(){
-          var K=4;
-          var slider=document.getElementById("pt-spec-rate");
-          var pctEl=document.getElementById("pt-spec-pct");
-          var accEl=document.getElementById("pt-spec-acc");
-          var speedEl=document.getElementById("pt-spec-speed");
-          var fillAcc=document.getElementById("pt-spec-fill-acc");
-          var fillSpeed=document.getElementById("pt-spec-fill-speed");
-          var readout=document.getElementById("pt-spec-readout");
-          function render(){
-            var p=parseInt(slider.value,10)/100;
-            pctEl.textContent=Math.round(p*100)+"%";
-            var accepted;
-            if(p>=0.999){accepted=K;}else{accepted=p*(1-Math.pow(p,K))/(1-p);}
-            var total=accepted+1;
-            accEl.textContent=accepted.toFixed(2);
-            speedEl.textContent=total.toFixed(2)+"×";
-            fillAcc.style.width=Math.min(100,(accepted/K)*100)+"%";
-            fillSpeed.style.width=Math.min(100,(total/(K+1))*100)+"%";
-            readout.textContent="With a fixed draft length of "+K+" tokens, a "+Math.round(p*100)+"% per-token acceptance rate yields about "+total.toFixed(2)+" tokens per verification pass instead of 1 — this toy ignores the real cost of running the draft model and the verifier's own latency.";
+          var pSlider=document.getElementById("pt-sc-p");
+          var nSlider=document.getElementById("pt-sc-n");
+          var pctEl=document.getElementById("pt-sc-pct");
+          var nEl=document.getElementById("pt-sc-ncount");
+          var singleEl=document.getElementById("pt-sc-single");
+          var majEl=document.getElementById("pt-sc-maj");
+          var fillSingle=document.getElementById("pt-sc-fill-single");
+          var fillMaj=document.getElementById("pt-sc-fill-maj");
+          var readout=document.getElementById("pt-sc-readout");
+          function comb(n,k){var r=1;for(var i=0;i<k;i++){r=r*(n-i)/(i+1);}return r;}
+          function majorityProb(p,n){
+            var need=Math.floor(n/2)+1,sum=0;
+            for(var k=need;k<=n;k++){sum+=comb(n,k)*Math.pow(p,k)*Math.pow(1-p,n-k);}
+            return sum;
           }
-          slider.addEventListener("input",render);
+          function render(){
+            var p=parseInt(pSlider.value,10)/100;
+            var n=parseInt(nSlider.value,10);
+            pctEl.textContent=Math.round(p*100)+"%";
+            nEl.textContent=n;
+            var maj=majorityProb(p,n);
+            singleEl.textContent=Math.round(p*100)+"%";
+            majEl.textContent=Math.round(maj*100)+"%";
+            fillSingle.style.width=Math.round(p*100)+"%";
+            fillMaj.style.width=Math.round(maj*100)+"%";
+            readout.textContent="At "+Math.round(p*100)+"% per-sample accuracy, voting across "+n+" independent samples moves majority accuracy to "+Math.round(maj*100)+"% in this toy — with correlated real samples the gain is smaller, and if p is below 50% voting makes things worse, not better.";
+          }
+          pSlider.addEventListener("input",render);
+          nSlider.addEventListener("input",render);
           render();
           })();</script>
         </div>
