@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-20T16:42:12">2026-10-20 16:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-20T20:41:38">2026-10-20 20:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://engadget.com/2288104/ftc-subpoenas-open-ai-and-anthropic-following-safety-failures">engadget.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
-          <div><h3>US tech layoffs stayed elevated through 2026 — reportedly over 139,000 cuts in the first half alone — and a Stanford study reported that employment for 22–25 year-olds in AI-exposed occupations is running about 19% below trend, while experienced workers in the same roles show no comparable drop</h3>
-            <p class="why"><b>Why it matters:</b> the hiring pain is concentrated at the entry level the learning path and five projects are meant to help you route around, not spread evenly across careers (<a href="#L1">L1</a>, <a href="#projects">Projects</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/tech-firms-account-for-nearly-a-third-of-us-layoffs-1501ba06">letsdatascience.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic released Claude Haiku 5.5, replacing Haiku 4.5 as its fastest, cheapest tier and raising that tier's context window roughly fivefold to 1 million tokens</h3>
+            <p class="why"><b>Why it matters:</b> a cheap model that can now hold a much larger context changes the cost math for the serving and app-building tradeoffs in <a href="#L5">L5</a>, including how big a retrieval or chat history you can afford to stuff into one call.</p>
+            <p class="src"><a href="https://computingforgeeks.com/claude-haiku-5-5-released-features-benchmarks/">computingforgeeks.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,48 +674,56 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin -->
-        <div class="pgcard pgtopic" data-topic="self-consistency-voting-margin">
-          <span class="label">New this refresh · 2026-10-20 · connects to <a href="#L5">L5</a></span>
-          <h3>Self-consistency: does voting across samples help?</h3>
-          <p class="lede">Instead of trusting one generation, sample the model N times and take the majority answer — a cheap mitigation for exactly the kind of one-shot agent misfire in this week's feed. Set the per-sample accuracy and the number of samples to see the majority vote's accuracy, computed from the binomial distribution assuming each sample is an independent, equally-likely coin flip — real model samples are correlated and unevenly confident, which this toy ignores.</p>
+        <!-- HISTORY: lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature">
+          <span class="label">New this refresh · 2026-10-20 · connects to <a href="#L3">L3</a></span>
+          <h3>Temperature: how sharp or flat is the next-token guess?</h3>
+          <p class="lede">A model turns raw scores (logits) for candidate next tokens into probabilities with softmax, and "temperature" divides those logits before that step. Drag the slider to watch five toy candidate words go from a near-certain pick at low temperature to near-equal odds at high temperature. The five scores below are invented for illustration, not pulled from a real model.</p>
           <p class="pt-ctl">
-            <label><input type="range" id="pt-sc-p" min="50" max="95" value="60" step="1"> Per-sample accuracy: <span id="pt-sc-pct" class="mono">60%</span></label>
-            <label><input type="range" id="pt-sc-n" min="1" max="11" value="5" step="2"> Samples voted (N): <span id="pt-sc-ncount" class="mono">5</span></label>
+            <label><input type="range" id="pt-temp-t" min="10" max="200" value="100" step="5"> Temperature (T): <span id="pt-temp-val" class="mono">1.00</span></label>
           </p>
-          <div class="pt-row"><span>Single sample</span><div class="pt-track"><div class="pt-fill" id="pt-sc-fill-single"></div></div><span class="mono" id="pt-sc-single">60%</span></div>
-          <div class="pt-row"><span>Majority of N</span><div class="pt-track"><div class="pt-fill" id="pt-sc-fill-maj"></div></div><span class="mono" id="pt-sc-maj">0%</span></div>
-          <p class="mono" id="pt-sc-readout"></p>
+          <div id="pt-temp-bars"></div>
+          <p class="mono" id="pt-temp-readout"></p>
           <script>(function(){
-          var pSlider=document.getElementById("pt-sc-p");
-          var nSlider=document.getElementById("pt-sc-n");
-          var pctEl=document.getElementById("pt-sc-pct");
-          var nEl=document.getElementById("pt-sc-ncount");
-          var singleEl=document.getElementById("pt-sc-single");
-          var majEl=document.getElementById("pt-sc-maj");
-          var fillSingle=document.getElementById("pt-sc-fill-single");
-          var fillMaj=document.getElementById("pt-sc-fill-maj");
-          var readout=document.getElementById("pt-sc-readout");
-          function comb(n,k){var r=1;for(var i=0;i<k;i++){r=r*(n-i)/(i+1);}return r;}
-          function majorityProb(p,n){
-            var need=Math.floor(n/2)+1,sum=0;
-            for(var k=need;k<=n;k++){sum+=comb(n,k)*Math.pow(p,k)*Math.pow(1-p,n-k);}
-            return sum;
+          var words=["ocean","orange","office","octopus","onion"];
+          var logits=[4.2,2.8,1.5,0.6,0.1];
+          var slider=document.getElementById("pt-temp-t");
+          var valEl=document.getElementById("pt-temp-val");
+          var bars=document.getElementById("pt-temp-bars");
+          var readout=document.getElementById("pt-temp-readout");
+          var rows=[];
+          for(var i=0;i<words.length;i++){
+            var row=document.createElement("div");
+            row.className="pt-row";
+            var label=document.createElement("span");
+            label.textContent=words[i];
+            var track=document.createElement("div");
+            track.className="pt-track";
+            var fill=document.createElement("div");
+            fill.className="pt-fill";
+            track.appendChild(fill);
+            var pct=document.createElement("span");
+            pct.className="mono";
+            row.appendChild(label);row.appendChild(track);row.appendChild(pct);
+            bars.appendChild(row);
+            rows.push({fill:fill,pct:pct});
           }
           function render(){
-            var p=parseInt(pSlider.value,10)/100;
-            var n=parseInt(nSlider.value,10);
-            pctEl.textContent=Math.round(p*100)+"%";
-            nEl.textContent=n;
-            var maj=majorityProb(p,n);
-            singleEl.textContent=Math.round(p*100)+"%";
-            majEl.textContent=Math.round(maj*100)+"%";
-            fillSingle.style.width=Math.round(p*100)+"%";
-            fillMaj.style.width=Math.round(maj*100)+"%";
-            readout.textContent="At "+Math.round(p*100)+"% per-sample accuracy, voting across "+n+" independent samples moves majority accuracy to "+Math.round(maj*100)+"% in this toy — with correlated real samples the gain is smaller, and if p is below 50% voting makes things worse, not better.";
+            var t=parseInt(slider.value,10)/100;
+            valEl.textContent=t.toFixed(2);
+            var exps=logits.map(function(l){return Math.exp(l/t);});
+            var sum=0;for(var i=0;i<exps.length;i++){sum+=exps[i];}
+            var top=0;
+            for(var i=0;i<exps.length;i++){
+              var p=exps[i]/sum;
+              if(p>top)top=p;
+              var pctv=Math.round(p*100);
+              rows[i].fill.style.width=pctv+"%";
+              rows[i].pct.textContent=pctv+"%";
+            }
+            readout.textContent="At T="+t.toFixed(2)+", the top candidate '"+words[0]+"' holds "+Math.round(top*100)+"% of the probability mass. Lower T sharpens the pick toward one word; higher T flattens all five toward equal odds.";
           }
-          pSlider.addEventListener("input",render);
-          nSlider.addEventListener("input",render);
+          slider.addEventListener("input",render);
           render();
           })();</script>
         </div>
