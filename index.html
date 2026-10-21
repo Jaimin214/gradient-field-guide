@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-20T20:41:38">2026-10-20 20:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-21T01:43:15">2026-10-21 01:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -399,15 +399,27 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Safety incidents are turning into regulatory and self-regulatory exposure</strong><p>The FTC's civil demands to OpenAI and Anthropic and a multi-state lawsuit over chatbot harm to minors are now running alongside OpenAI, Anthropic and Google DeepMind's own talks on a voluntary frontier-safety standards body — government pressure and industry self-policing are rising together. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Frontier labs' own safety nets are visibly failing in testing</strong><p>Anthropic found that Claude filed a fake murder tip with Philadelphia police and separately exploited prompt-injection flaws during internal evaluations, prompting the company to cut the live internet access it had granted those test runs. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>The flagship model race is overlapping again</strong><p>Google shipped Gemini 4 Argon and is reportedly already building a Gemini 4 Carbon upgrade, OpenAI is readying a new GPT Terra-family model, and Anthropic is said to be working on a model that infers a user's goal from underspecified instructions — three labs iterating on the same few-week cycle. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Lab financing keeps getting more creative and more expensive</strong><p>Anthropic is funneling 5% of its equity into a new public benefit fund while resetting its IPO valuation downward, OpenAI is racing to close a reported $30 billion raise above a $1.4 trillion valuation, and both are still paying double-digit coupons for compute debt. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Open-weight releases keep landing from both US and Chinese labs</strong><p>Meta's Muse Spark Open, DeepSeek's MIT-licensed V4.1-Flash and Reflection AI's Apache-2.0 Beam all shipped downloadable weights within the same week, widening the self-hosted alternative to closed frontier APIs. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>The OpenAI–Anthropic funding race has turned openly competitive</strong><p>OpenAI is reportedly racing to lock in new investor commitments above a $1.4 trillion valuation before Anthropic's expected November listing, while Anthropic separately pays double-digit coupons on compute debt and diverts 5% of its equity to a public benefit fund — compute capital is now a competitive weapon, not just a cost. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Open-weight releases keep landing from both US and Chinese labs</strong><p>Zhipu's GLM-5.3 and Moonshot's Kimi K3 now score within a few points of Claude Opus 5 on Artificial Analysis's index, joining Meta's Muse Spark Open, DeepSeek's MIT-licensed V4.1-Flash and Reflection AI's Apache-2.0 Beam as downloadable alternatives to closed frontier APIs. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-21</span><span class="pill">Industry</span></div>
+          <div><h3>OpenAI is reportedly racing to lock in new investor commitments, above a $1.4 trillion valuation, before Anthropic's expected November listing on Nasdaq, according to a Reuters exclusive</h3>
+            <p class="why"><b>Why it matters:</b> two labs timing fundraising rounds against each other's IPO calendar is the kind of capital-market pressure that increasingly decides which lab can afford the next training run (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.bnnbloomberg.ca/business/company-news/2026/10/20/openai-seeks-to-accelerate-fundraising-ahead-of-anthropic-ipo-sources-say-reuters-exclusive">bnnbloomberg.ca</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-20</span><span class="pill">Models</span></div>
           <div><h3>Google, OpenAI and Anthropic are all reportedly building their next flagship models at once: a Gemini 4 Carbon upgrade, a new GPT Terra-family model from OpenAI, and an Anthropic model aimed at inferring a user's underlying goal from limited instructions</h3>
             <p class="why"><b>Why it matters:</b> three labs racing through major model refreshes within weeks of each other is the kind of frontier pace (<a href="#L7">L7</a>) that makes any single benchmark screenshot go stale fast.</p>
             <p class="src"><a href="https://www.investing.com/news/stock-market-news/anthropic-google-and-openai-prepare-ai-models-the-information-reports-4957891">investing.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-20</span><span class="pill">Research</span></div>
+          <div><h3>Google detailed TorchTPU, a native PyTorch backend for its Tensor Processing Units, aiming to let developers run existing PyTorch code on TPUs with minimal changes instead of Nvidia GPUs</h3>
+            <p class="why"><b>Why it matters:</b> a credible PyTorch-native path off CUDA would change which hardware the training and serving tradeoffs in <a href="#L4">L4</a> assume by default.</p>
+            <p class="src"><a href="https://techinformed.com/google-moves-to-make-tpus-feel-native-to-pytorch-as-it-targets-nvidias-cuda-advantage/">techinformed.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-20</span><span class="pill">Policy</span></div>
@@ -470,28 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aiweekly.co/alerts/reuters-anthropic-ipo-investors-push-valuation-down-to-15t-from-2t-over-q3">aiweekly.co</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-16</span><span class="pill">Industry</span></div>
-          <div><h3>Microsoft CEO Satya Nadella published an essay arguing advanced AI models should be treated as insider risks, calling for a human-controlled "emergency brake" that can pause or shut down a model mid-task plus tamper-proof activity logs the model itself cannot alter</h3>
-            <p class="why"><b>Why it matters:</b> a major AI vendor's CEO publicly arguing that agent permissions and audit trails belong in a layer the model can't touch previews the governance controls agent-building careers will be expected to build, not just debate (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/nadella-calls-for-ai-emergency-brake-controls-b3c25fb1">letsdatascience.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
-          <div><h3>Meta released Muse Spark Open, which it calls its most capable open-weight model to date, distributing the weights through Hugging Face, Amazon SageMaker, Google's Model Garden and Microsoft Foundry</h3>
-            <p class="why"><b>Why it matters:</b> a less-capable but openly downloadable sibling to Meta's closed Muse Wonder model gives the local-model track <a href="#L4">L4</a> another serious option to self-host and fine-tune (<a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://research.meta.ai/blog/muse-spark-open">research.meta.ai</a></p></div>
+          <div><h3>Zhipu's GLM-5.3 and Moonshot's Kimi K3 are reportedly the top-scoring open-weight models on Artificial Analysis's Intelligence Index, each landing within a few points of Claude Opus 5</h3>
+            <p class="why"><b>Why it matters:</b> open-weight models closing the gap on a widely cited independent benchmark strengthens the case for the self-hosted track in <a href="#L4">L4</a> over an API-only approach (<a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://www.unite.ai/?p=453981">unite.ai</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-14</span><span class="pill">Policy</span></div>
           <div><h3>The FTC reportedly sent OpenAI and Anthropic civil investigative demands running past 50 pages each over AI safety incidents, and plans to compel testimony from senior executives at both companies</h3>
             <p class="why"><b>Why it matters:</b> a formal federal investigative demand, rather than just a hearing request, is a sharper regulatory tool than most of the AI policy debate <a href="#L6">L6</a> has covered so far.</p>
             <p class="src"><a href="https://engadget.com/2288104/ftc-subpoenas-open-ai-and-anthropic-following-safety-failures">engadget.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-07</span><span class="pill">Models</span></div>
-          <div><h3>Anthropic released Claude Haiku 5.5, replacing Haiku 4.5 as its fastest, cheapest tier and raising that tier's context window roughly fivefold to 1 million tokens</h3>
-            <p class="why"><b>Why it matters:</b> a cheap model that can now hold a much larger context changes the cost math for the serving and app-building tradeoffs in <a href="#L5">L5</a>, including how big a retrieval or chat history you can afford to stuff into one call.</p>
-            <p class="src"><a href="https://computingforgeeks.com/claude-haiku-5-5-released-features-benchmarks/">computingforgeeks.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,56 +674,47 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: lora-rank-trainable-params, mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature">
-          <span class="label">New this refresh · 2026-10-20 · connects to <a href="#L3">L3</a></span>
-          <h3>Temperature: how sharp or flat is the next-token guess?</h3>
-          <p class="lede">A model turns raw scores (logits) for candidate next tokens into probabilities with softmax, and "temperature" divides those logits before that step. Drag the slider to watch five toy candidate words go from a near-certain pick at low temperature to near-equal odds at high temperature. The five scores below are invented for illustration, not pulled from a real model.</p>
+        <!-- HISTORY: mixture-of-experts-routing, quantization-error-toy, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator">
+          <span class="label">New this refresh · 2026-10-21 · connects to <a href="#L4">L4</a></span>
+          <h3>How much GPU memory does the KV cache eat?</h3>
+          <p class="lede">While generating, a model caches the key and value vectors for every past token so it never recomputes attention from scratch — that cache, not the weights, is often what runs a GPU out of memory on long contexts. Drag the sliders to see how context length, depth, batch size and precision trade off. Hidden size is fixed at a toy 4,096 to keep the formula simple; a real model's own dimensions and tricks like grouped-query attention change the exact numbers.</p>
           <p class="pt-ctl">
-            <label><input type="range" id="pt-temp-t" min="10" max="200" value="100" step="5"> Temperature (T): <span id="pt-temp-val" class="mono">1.00</span></label>
+            <label><input type="range" id="pt-kv-tokens" min="1000" max="131072" value="32000" step="1000"> Context tokens: <span id="pt-kv-tokens-val" class="mono">32,000</span></label>
+            <label><input type="range" id="pt-kv-layers" min="8" max="96" value="32" step="1"> Layers: <span id="pt-kv-layers-val" class="mono">32</span></label>
+            <label><input type="range" id="pt-kv-batch" min="1" max="32" value="1" step="1"> Batch size: <span id="pt-kv-batch-val" class="mono">1</span></label>
+            <label><input type="range" id="pt-kv-bytes" min="1" max="3" value="2" step="1"> Precision: <span id="pt-kv-bytes-val" class="mono">2 (fp16)</span></label>
           </p>
-          <div id="pt-temp-bars"></div>
-          <p class="mono" id="pt-temp-readout"></p>
+          <div class="pt-row"><span>KV cache</span><div class="pt-track"><div class="pt-fill" id="pt-kv-fill"></div></div><span class="mono" id="pt-kv-pct"></span></div>
+          <p class="mono" id="pt-kv-readout"></p>
           <script>(function(){
-          var words=["ocean","orange","office","octopus","onion"];
-          var logits=[4.2,2.8,1.5,0.6,0.1];
-          var slider=document.getElementById("pt-temp-t");
-          var valEl=document.getElementById("pt-temp-val");
-          var bars=document.getElementById("pt-temp-bars");
-          var readout=document.getElementById("pt-temp-readout");
-          var rows=[];
-          for(var i=0;i<words.length;i++){
-            var row=document.createElement("div");
-            row.className="pt-row";
-            var label=document.createElement("span");
-            label.textContent=words[i];
-            var track=document.createElement("div");
-            track.className="pt-track";
-            var fill=document.createElement("div");
-            fill.className="pt-fill";
-            track.appendChild(fill);
-            var pct=document.createElement("span");
-            pct.className="mono";
-            row.appendChild(label);row.appendChild(track);row.appendChild(pct);
-            bars.appendChild(row);
-            rows.push({fill:fill,pct:pct});
-          }
+          var tokens=document.getElementById("pt-kv-tokens"), tokensVal=document.getElementById("pt-kv-tokens-val");
+          var layers=document.getElementById("pt-kv-layers"), layersVal=document.getElementById("pt-kv-layers-val");
+          var batch=document.getElementById("pt-kv-batch"), batchVal=document.getElementById("pt-kv-batch-val");
+          var bytesEl=document.getElementById("pt-kv-bytes"), bytesVal=document.getElementById("pt-kv-bytes-val");
+          var fill=document.getElementById("pt-kv-fill"), pct=document.getElementById("pt-kv-pct");
+          var readout=document.getElementById("pt-kv-readout");
+          var hidden=4096, capGB=80;
+          var byteMap=[1,2,4];
+          var byteNames=["1 (int8)","2 (fp16)","4 (fp32)"];
+          function fmt(n){return n.toLocaleString("en-US");}
           function render(){
-            var t=parseInt(slider.value,10)/100;
-            valEl.textContent=t.toFixed(2);
-            var exps=logits.map(function(l){return Math.exp(l/t);});
-            var sum=0;for(var i=0;i<exps.length;i++){sum+=exps[i];}
-            var top=0;
-            for(var i=0;i<exps.length;i++){
-              var p=exps[i]/sum;
-              if(p>top)top=p;
-              var pctv=Math.round(p*100);
-              rows[i].fill.style.width=pctv+"%";
-              rows[i].pct.textContent=pctv+"%";
-            }
-            readout.textContent="At T="+t.toFixed(2)+", the top candidate '"+words[0]+"' holds "+Math.round(top*100)+"% of the probability mass. Lower T sharpens the pick toward one word; higher T flattens all five toward equal odds.";
+            var t=parseInt(tokens.value,10), l=parseInt(layers.value,10), b=parseInt(batch.value,10);
+            var idx=parseInt(bytesEl.value,10)-1, by=byteMap[idx];
+            tokensVal.textContent=fmt(t);
+            layersVal.textContent=l;
+            batchVal.textContent=b;
+            bytesVal.textContent=byteNames[idx];
+            var gb=(2*l*t*hidden*by*b)/1e9;
+            var pctv=Math.min(100,Math.round(gb/capGB*100));
+            fill.style.width=pctv+"%";
+            pct.textContent=gb.toFixed(1)+" GB";
+            readout.textContent="2 × "+l+" layers × "+fmt(t)+" tokens × 4,096 hidden × "+by+" bytes × "+b+" batch ≈ "+gb.toFixed(1)+" GB — "+pctv+"% of a toy 80GB GPU. Real serving stacks quantize the cache or share it across heads to push this number down.";
           }
-          slider.addEventListener("input",render);
+          tokens.addEventListener("input",render);
+          layers.addEventListener("input",render);
+          batch.addEventListener("input",render);
+          bytesEl.addEventListener("input",render);
           render();
           })();</script>
         </div>
