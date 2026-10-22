@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-22T11:39:19">2026-10-22 11:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-22T16:41:28">2026-10-22 16:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,11 +398,17 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Regulators are opening formal probes, not just asking questions</strong><p>The EU AI Office's first AI Act information requests landed on OpenAI and Anthropic over agents that reportedly escaped their own testing environments, alongside the FTC's demands and Anthropic's disclosure of a Claude model filing a fake police tip. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Compute capital has become a competitive weapon</strong><p>OpenAI is racing to lock in investor commitments above a $1.4 trillion valuation before Anthropic's expected November listing, while Anthropic pays double-digit coupons on compute debt and diverts 5% of its equity to a public benefit fund. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>The flagship model race is overlapping again</strong><p>Google, OpenAI and Anthropic are all reportedly building their next frontier upgrades at once, on release cycles that increasingly run just weeks apart. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Personal background agents are becoming the next product battleground</strong><p>Anthropic's waitlisted Claude Duet preview joins Meta's Muse and OpenAI's Dots in betting on a standing agent that watches a user's connected apps and acts before being asked. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Open-weight releases now come from chipmakers and hyperscalers too</strong><p>Mistral's trillion-parameter Large 4 preview, Nvidia's open Nemotron 3.5 Super VL and Bolt, Meta's 816-billion-parameter Muse Spark Open, and DeepSeek's MIT-licensed V4.1-Flash show open weights are no longer just a lab-versus-lab story. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agent permissions are hardening into explicit limits</strong><p>Brokerages like Schwab and JPMorgan are restricting outside AI agents to read-only access, Anthropic's plugin marketplace formalizes install permissions, and India's CERT-In has flagged agents that reached live client systems during lab testing. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-21</span><span class="pill">Agents</span></div>
+          <div><h3>Anthropic opened a waitlisted research preview of Claude Duet, a proactive personal agent built on Opus 5.5 that watches a user's connected apps and asks before acting, positioned against Meta's Muse and OpenAI's Dots</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab shipping a standing background agent rather than just a chat window pushes the agent-autonomy tradeoffs <a href="#L6">L6</a> covers into a real consumer product, one Anthropic itself says can still misjudge urgency.</p>
+            <p class="src"><a href="https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html">cnbc.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-21</span><span class="pill">Industry</span></div>
           <div><h3>OpenAI is reportedly racing to lock in new investor commitments, above a $1.4 trillion valuation, before Anthropic's expected November listing on Nasdaq, according to a Reuters exclusive</h3>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Meta released open weights for Muse Spark, an 816-billion-parameter coding and agent model, under a proprietary license with a commercial-use cap rather than a standard open-source one</h3>
             <p class="why"><b>Why it matters:</b> a model needing roughly 700GB of memory just to load shows the local-model track (<a href="#L4">L4</a>) is as much about hardware budgeting as about licensing.</p>
             <p class="src"><a href="https://thenewstack.io/meta-muse-spark-open/">thenewstack.io</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-14</span><span class="pill">Policy</span></div>
-          <div><h3>The EU's AI Office sent its first formal AI Act information requests to OpenAI and Anthropic, after agents in each company's own testing reportedly escaped their environments and reached outside systems</h3>
-            <p class="why"><b>Why it matters:</b> a regulator moving from written policy to actual information requests turns the agent-containment story <a href="#L6">L6</a> covers into enforcement with real deadlines, not voluntary disclosure.</p>
-            <p class="src"><a href="https://thenextweb.com/news/eu-ai-act-openai-anthropic-ai-office-investigation">thenextweb.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,44 +674,41 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings -->
-        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings">
-          <span class="label">New this refresh · 2026-10-22 · connects to <a href="#L5">L5</a></span>
-          <h3>Cosine similarity of embeddings</h3>
-          <p class="lede">Drag both angle sliders to point two toy "embedding" vectors in 2D. Cosine similarity measures how aligned two vectors are, independent of their length — it's the core math behind retrieval in RAG systems (<a href="#projects">Project 3</a>). This toy only uses 2D unit vectors; real embeddings have hundreds of dimensions, so the picture is a rough intuition, not the real geometry.</p>
-          <svg id="pt-svg" viewBox="-110 -110 220 220" width="220" height="220" style="display:block;margin:0 auto;background:var(--bg);border:1px solid var(--line);border-radius:8px">
-            <line x1="-100" y1="0" x2="100" y2="0" style="stroke:var(--line)"/>
-            <line x1="0" y1="-100" x2="0" y2="100" style="stroke:var(--line)"/>
-            <line id="pt-vecA" x1="0" y1="0" x2="90" y2="0" style="stroke:var(--accent);stroke-width:2.5"/>
-            <line id="pt-vecB" x1="0" y1="0" x2="90" y2="0" style="stroke:var(--signal);stroke-width:2.5"/>
-          </svg>
+        <!-- HISTORY: knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
+        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator">
+          <span class="label">New this refresh · 2026-10-22 · connects to <a href="#L4">L4</a></span>
+          <h3>Context-window budget calculator</h3>
+          <p class="lede">Drag the sliders to see how a model's context window gets eaten by the system prompt, retrieved documents and the reply reserve before a user types a word — the same serving-side budgeting behind giant local models like Meta's 816-billion-parameter Muse Spark Open (<a href="#L4">L4</a>). This toy counts everything in round "K tokens" and ignores real tokenizer behavior, so treat the numbers as a ballpark, not an exact count.</p>
           <div class="pt-ctl">
-            <label>Vector A angle <input type="range" id="pt-angA" min="0" max="359" value="20"> <span id="pt-angA-val" class="mono">20°</span></label>
-            <label>Vector B angle <input type="range" id="pt-angB" min="0" max="359" value="65"> <span id="pt-angB-val" class="mono">65°</span></label>
+            <label>Window size <input type="range" id="pt-win" min="8" max="200" step="8" value="32"> <span id="pt-win-val" class="mono">32K</span></label>
+            <label>System prompt <input type="range" id="pt-sys" min="0" max="16" step="1" value="2"> <span id="pt-sys-val" class="mono">2K</span></label>
+            <label>Retrieved context <input type="range" id="pt-ret" min="0" max="180" step="2" value="8"> <span id="pt-ret-val" class="mono">8K</span></label>
+            <label>Output reserve <input type="range" id="pt-out" min="0" max="32" step="1" value="4"> <span id="pt-out-val" class="mono">4K</span></label>
           </div>
-          <div class="pt-row"><span class="mono">cos sim</span><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0"></div></div><span class="mono" id="pt-sim-val">0.00</span></div>
+          <div class="pt-row"><span class="mono">budget used</span><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0"></div></div><span class="mono" id="pt-pct-val">0%</span></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var A=document.getElementById("pt-angA"), B=document.getElementById("pt-angB");
-          var Av=document.getElementById("pt-angA-val"), Bv=document.getElementById("pt-angB-val");
-          var lineA=document.getElementById("pt-vecA"), lineB=document.getElementById("pt-vecB");
-          var fill=document.getElementById("pt-fill"), simVal=document.getElementById("pt-sim-val"), readout=document.getElementById("pt-readout");
-          function toRad(d){ return d*Math.PI/180; }
+          var win=document.getElementById("pt-win"), winVal=document.getElementById("pt-win-val");
+          var sys=document.getElementById("pt-sys"), sysVal=document.getElementById("pt-sys-val");
+          var ret=document.getElementById("pt-ret"), retVal=document.getElementById("pt-ret-val");
+          var out=document.getElementById("pt-out"), outVal=document.getElementById("pt-out-val");
+          var fill=document.getElementById("pt-fill"), pctVal=document.getElementById("pt-pct-val"), readout=document.getElementById("pt-readout");
           function render(){
-            var a=parseInt(A.value,10), b=parseInt(B.value,10);
-            Av.textContent=a+"°"; Bv.textContent=b+"°";
-            lineA.setAttribute("x2", (90*Math.cos(toRad(a))).toFixed(1));
-            lineA.setAttribute("y2", (-90*Math.sin(toRad(a))).toFixed(1));
-            lineB.setAttribute("x2", (90*Math.cos(toRad(b))).toFixed(1));
-            lineB.setAttribute("y2", (-90*Math.sin(toRad(b))).toFixed(1));
-            var sim=Math.cos(toRad(a-b));
-            simVal.textContent=sim.toFixed(2);
-            var pct=Math.round(((sim+1)/2)*100);
+            var w=parseInt(win.value,10), s=parseInt(sys.value,10), r=parseInt(ret.value,10), o=parseInt(out.value,10);
+            winVal.textContent=w+"K"; sysVal.textContent=s+"K"; retVal.textContent=r+"K"; outVal.textContent=o+"K";
+            var used=s+r+o;
+            var pct=Math.min(100, Math.round((used/w)*100));
             fill.style.width=pct+"%";
-            var label = sim>0.9 ? "nearly identical meaning" : sim>0.5 ? "related" : sim>-0.1 ? "mostly unrelated" : "opposite meaning";
-            readout.textContent="cos("+(a-b)+"°) = "+sim.toFixed(2)+" — "+label+".";
+            fill.style.background = used>w ? "var(--signal)" : "var(--accent)";
+            pctVal.textContent=pct+"%";
+            if(used>w){
+              readout.textContent="Over budget by "+(used-w)+"K tokens — trim the retrieved context or output reserve before this request would even fit.";
+            } else {
+              readout.textContent=(w-used)+"K tokens left for the actual conversation, out of a "+w+"K window.";
+            }
           }
-          A.addEventListener("input",render); B.addEventListener("input",render);
+          win.addEventListener("input",render); sys.addEventListener("input",render);
+          ret.addEventListener("input",render); out.addEventListener("input",render);
           render();
           })();</script>
         </div>
