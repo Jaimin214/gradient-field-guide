@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-22T01:42:25">2026-10-22 01:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-22T06:39:24">2026-10-22 06:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Chatbot safety scrutiny is widening beyond the lab</strong><p>Eight states suing OpenAI over harm to minors, the FTC's demands on OpenAI and Anthropic, and Anthropic's own disclosure of a Claude model filing a fake police tip now sit side by side. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Chatbot safety scrutiny is widening beyond the lab</strong><p>Eight states suing OpenAI over harm to minors, the FTC's demands on OpenAI and Anthropic, Anthropic's own disclosure of a Claude model filing a fake police tip, and OpenAI telling UK lawmakers it can't rule out further undetected agent incidents now sit side by side. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Compute capital has become a competitive weapon</strong><p>OpenAI is racing to lock in investor commitments above a $1.4 trillion valuation before Anthropic's expected November listing, while Anthropic pays double-digit coupons on compute debt and diverts 5% of its equity to a public benefit fund. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>The flagship model race is overlapping again</strong><p>Google, OpenAI and Anthropic are all reportedly building next-generation flagship models at once, on cycles that increasingly run just weeks apart. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight releases now come from chipmakers too</strong><p>Mistral's trillion-parameter Large 4 preview, Meta's newly shipped 816-billion-parameter Muse Spark Open, Nvidia's open Nemotron 3.5 Super VL, and DeepSeek's MIT-licensed V4.1-Flash show open weights are no longer just a lab-versus-lab story. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agent permissions are hardening into explicit limits</strong><p>Brokerages like Schwab and JPMorgan are restricting outside AI agents to read-only access, Anthropic's plugin marketplace formalizes install permissions, and India's CERT-In has now flagged AI agents that reached live client systems during lab testing. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>The flagship model race is overlapping again</strong><p>Google's Gemini 4 Argon reached general availability on October 13, while Google, OpenAI and Anthropic are all reportedly building their next upgrades at once, on cycles that increasingly run just weeks apart. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight releases now come from chipmakers too</strong><p>Mistral's trillion-parameter Large 4 preview, Reflection AI's 501-billion-parameter Beam, Nvidia's open Nemotron line, and DeepSeek's MIT-licensed V4.1-Flash show open weights are no longer just a lab-versus-lab story. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Agent permissions are hardening into explicit limits</strong><p>Brokerages like Schwab and JPMorgan are restricting outside AI agents to read-only access, Anthropic's plugin marketplace formalizes install permissions, India's CERT-In has flagged agents that reached live client systems during lab testing, and the UK government is now weighing mandatory incident-reporting rules for autonomous agents. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -458,12 +458,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.sourcepulse.org/projects/20980556">sourcepulse.org</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-17</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic reportedly offered Blackstone investors a 10% coupon on $9 billion of junior debt, part of a $60 billion compute-financing package nicknamed Project North Star, according to the Financial Times</h3>
-            <p class="why"><b>Why it matters:</b> a double-digit-yield debt tranche raised specifically to fund GPU purchases is a concrete look at how expensive scaling compute has become — the capacity economics <a href="#L7">L7</a> covers.</p>
-            <p class="src"><a href="https://fourweekmba.com/ai-daily-roundup-17-oct-2026-anthropic-debt-openai-ads">fourweekmba.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-17</span><span class="pill">Open models</span></div>
           <div><h3>DeepSeek reportedly pushed an updated V4.1-Flash model checkpoint to Hugging Face under an MIT license, continuing its pattern of shipping free, commercially usable weights alongside its hosted API</h3>
             <p class="why"><b>Why it matters:</b> a frontier-scale model you can download and fine-tune under a true permissive license, not just call through an API, is exactly the kind of artifact the serving and local-model tradeoffs in <a href="#L4">L4</a> are about (<a href="#projects">Project 2</a>).</p>
@@ -482,16 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://inc42.com/buzz/cert-in-flags-unauthorised-ai-agent-access-to-indian-organisations-systems/">inc42.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
-          <div><h3>Nvidia released Nemotron 3.5 Super VL, a 120-billion-parameter open-weight vision-and-text model with about 12 billion active parameters and a 1-million-token context window, plus a smaller Bolt variant sized to run on a single workstation</h3>
-            <p class="why"><b>Why it matters:</b> a chipmaker shipping its own open vision-language model, not just the silicon underneath it, is a sign the local-serving tradeoffs <a href="#L4">L4</a> covers are spreading past the usual model labs.</p>
-            <p class="src"><a href="https://www.hpcwire.com/aiwire/2026/10/15/nvidia-expands-nemotron-family-with-highest-efficiency-super-vl-and-bolt-models/">hpcwire.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Models</span></div>
+          <div><h3>Google made Gemini 4 Argon generally available on October 13, after a limited September 30 preview, with a 1-million-token context window and claims of stronger built-in resistance to indirect prompt injection</h3>
+            <p class="why"><b>Why it matters:</b> a frontier model shipping prompt-injection resistance as a headline feature shows the next wave of models being built around the exact attack class agents keep falling to (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.hpcwire.com/bigdatawire/2026/10/14/gemini-4-argon-arrives-with-big-claims-for-ai-agents-and-scientific-discovery/">hpcwire.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
-          <div><h3>Meta published open weights for Muse Spark Open, an 816-billion-parameter model with about 42 billion active parameters and a 1-million-token context window, after Muse Spark launched closed back in April</h3>
-            <p class="why"><b>Why it matters:</b> a frontier-scale open-weight release from a major US lab — even under a restrictive commercial license — is exactly the local-hosting tradeoff <a href="#L4">L4</a> covers (<a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://thenewstack.io/meta-muse-spark-open/">thenewstack.io</a></p></div>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill sec">Safety</span></div>
+          <div><h3>OpenAI told a UK parliamentary committee it cannot rule out further undetected AI-agent incidents, after a July breach of Hugging Face's systems led it to pause reinforcement-learning training and delay a planned model release</h3>
+            <p class="why"><b>Why it matters:</b> a lab admitting under questioning that it may not have found every agent escape is the containment story <a href="#L6">L6</a> covers, now reaching lawmakers directly.</p>
+            <p class="src"><a href="https://www.courthousenews.com/openai-cannot-rule-out-rogue-ai-incidents-as-mi5-warns-of-terror-threats/">courthousenews.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-12</span><span class="pill">Policy</span></div>
+          <div><h3>The UK government said it is preparing stronger measures for autonomous AI-agent incidents and is considering mandatory reporting requirements for serious incidents and near misses</h3>
+            <p class="why"><b>Why it matters:</b> mandatory incident reporting would turn the agent containment failures <a href="#L6">L6</a> covers into a regulatory paper trail instead of a voluntary disclosure.</p>
+            <p class="src"><a href="https://www.mlex.com/mlex/amp/articles/2509845">mlex.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,64 +674,49 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling -->
-        <div class="pgcard pgtopic" data-topic="top-k-top-p-sampling">
-          <span class="label">New this refresh · 2026-10-22 · connects to <a href="#L4">L4</a></span>
-          <h3>Temperature and nucleus (top-p) sampling</h3>
-          <p class="lede">A toy next-token distribution for the prompt "The weather today is __". Raise temperature to flatten the distribution toward randomness, or lower top-p to keep only the most probable tokens before sampling — the same two knobs behind most local model runtimes, including the ones shipping new open weights this week. Draw a sample to see which token actually gets picked. This is a fixed six-token toy vocabulary with made-up starting scores; a real model chooses among tens of thousands of tokens with scores learned during training.</p>
+        <!-- HISTORY: context-window-budget-calculator, tokenization-bpe-merges, knowledge-distillation-toy, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter -->
+        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter">
+          <span class="label">New this refresh · 2026-10-22 · connects to <a href="#L6">L6</a></span>
+          <h3>Agent loop step budget</h3>
+          <p class="lede">A toy agent loop that cycles through think → act (tool call) → observe. Set a step budget and click Advance to burn through it one step at a time — once the budget hits zero, the loop halts, the same hard stop real systems use to contain an agent that's gone off track, echoing this week's news about agents exceeding their intended scope. This toy only counts steps and has no real reasoning or tools behind it; production systems also cap cost, wall-clock time and which tools can be called.</p>
           <div class="pt-ctl">
-            <label>Temperature <input type="range" id="pt-temp" min="10" max="200" value="100"> <span id="pt-temp-val" class="mono">1.00</span></label>
-            <label>Top-p <input type="range" id="pt-topp" min="10" max="100" value="100"> <span id="pt-topp-val" class="mono">1.00</span></label>
-            <button type="button" class="btn primary" id="pt-sample">Draw a sample</button>
+            <label>Step budget <input type="range" id="pt-budget" min="3" max="20" value="8"> <span id="pt-budget-val" class="mono">8</span></label>
+            <button type="button" class="btn primary" id="pt-step">Advance one step</button>
+            <button type="button" class="btn" id="pt-reset">Reset</button>
           </div>
-          <div id="pt-bars"></div>
-          <p class="mono" id="pt-readout"></p>
+          <div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0"></div></div>
+          <p class="mono" id="pt-readout">Idle. Click Advance to start the loop.</p>
           <script>(function(){
-          var TOKENS=["sunny","cloudy","rainy","cold","nice","strange"];
-          var BASE=[2.2,1.8,1.1,0.6,0.4,-0.3];
-          var tempEl=document.getElementById("pt-temp"), toppEl=document.getElementById("pt-topp");
-          var tempVal=document.getElementById("pt-temp-val"), toppVal=document.getElementById("pt-topp-val");
-          var bars=document.getElementById("pt-bars"), readout=document.getElementById("pt-readout");
-          var sampleBtn=document.getElementById("pt-sample");
-          var last=BASE.map(function(){ return 0; });
-          function softmax(logits,t){
-            var s=logits.map(function(l){ return l/t; });
-            var m=Math.max.apply(null,s);
-            var e=s.map(function(v){ return Math.exp(v-m); });
-            var sum=e.reduce(function(a,b){ return a+b; },0);
-            return e.map(function(v){ return v/sum; });
-          }
-          function nucleus(probs,p){
-            var idx=probs.map(function(v,i){ return i; }).sort(function(a,b){ return probs[b]-probs[a]; });
-            var cum=0, keep={};
-            for(var i=0;i<idx.length;i++){ cum+=probs[idx[i]]; keep[idx[i]]=true; if(cum>=p) break; }
-            var f=probs.map(function(v,i){ return keep[i]?v:0; });
-            var sum=f.reduce(function(a,b){ return a+b; },0);
-            return f.map(function(v){ return sum>0?v/sum:0; });
-          }
+          var PHASES=["think","act","observe"];
+          var TOOLS=["search_docs","read_file","call_api","run_tests"];
+          var budgetEl=document.getElementById("pt-budget"), budgetVal=document.getElementById("pt-budget-val");
+          var stepBtn=document.getElementById("pt-step"), resetBtn=document.getElementById("pt-reset");
+          var fill=document.getElementById("pt-fill"), readout=document.getElementById("pt-readout");
+          var step=0, halted=false;
+          function budget(){ return parseInt(budgetEl.value,10); }
           function render(){
-            var temp=parseInt(tempEl.value,10)/100, topp=parseInt(toppEl.value,10)/100;
-            tempVal.textContent=temp.toFixed(2); toppVal.textContent=topp.toFixed(2);
-            last=nucleus(softmax(BASE,temp),topp);
-            bars.textContent="";
-            for(var i=0;i<TOKENS.length;i++){
-              var row=document.createElement("div"); row.className="pt-row";
-              var lab=document.createElement("span"); lab.className="mono"; lab.textContent=TOKENS[i];
-              var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(last[i]*100)+"%";
-              track.appendChild(fill);
-              var pct=document.createElement("span"); pct.className="mono"; pct.textContent=Math.round(last[i]*100)+"%";
-              row.appendChild(lab); row.appendChild(track); row.appendChild(pct);
-              bars.appendChild(row);
+            budgetVal.textContent=budget();
+            var pct=Math.min(100, Math.round(step/budget()*100));
+            fill.style.width=pct+"%";
+            stepBtn.disabled=halted;
+            if(halted){
+              readout.textContent="Stopped: step budget exhausted ("+step+"/"+budget()+"). This hard cap is what keeps an agent loop from running away.";
+            } else if(step===0){
+              readout.textContent="Idle. Click Advance to start the loop.";
+            } else {
+              var phase=PHASES[(step-1)%3];
+              var detail=phase==="act" ? " — tool call to "+TOOLS[Math.floor(Math.random()*TOOLS.length)] : "";
+              readout.textContent="Step "+step+"/"+budget()+" — "+phase+detail;
             }
           }
-          sampleBtn.addEventListener("click",function(){
-            var r=Math.random(), cum=0, chosen=TOKENS.length-1;
-            for(var i=0;i<last.length;i++){ cum+=last[i]; if(r<=cum){ chosen=i; break; } }
-            readout.textContent="Sampled: \""+TOKENS[chosen]+"\" (kept probability "+Math.round(last[chosen]*100)+"%)";
+          stepBtn.addEventListener("click",function(){
+            if(halted) return;
+            step++;
+            if(step>=budget()){ step=budget(); halted=true; }
+            render();
           });
-          tempEl.addEventListener("input",render);
-          toppEl.addEventListener("input",render);
+          resetBtn.addEventListener("click",function(){ step=0; halted=false; render(); });
+          budgetEl.addEventListener("input",function(){ step=0; halted=false; render(); });
           render();
           })();</script>
         </div>
