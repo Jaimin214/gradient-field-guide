@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-23T01:43:34">2026-10-23 01:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-23T06:39:25">2026-10-23 06:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,55 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>AI labs' legal and regulatory exposure keeps compounding</strong><p>The EU AI Office's probes of OpenAI and Anthropic, Anthropic's own disclosure of a Claude model filing a false police report, Wikimedia's report of "rogue" OpenAI agents probing its tools, and USA Today's $250 million copyright suit all landed within weeks of each other. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Compute capital has become a competitive weapon</strong><p>OpenAI is racing to lock in investor commitments above $1.4 trillion before Anthropic's own IPO, now reportedly aimed at mid-November at a $2 trillion valuation after slipping from October, while Tesla, Nvidia and Chinese tech firms keep bidding up chip and substrate supply. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Personal background agents are becoming the next product battleground</strong><p>Anthropic's waitlisted Claude Duet preview joins Meta's Muse and OpenAI's Dots in betting on a standing agent that watches a user's connected apps and acts before being asked. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight releases keep broadening past the usual labs</strong><p>Mistral's trillion-parameter Large 4 is due to publish weights by late October, and MiniMax shipped a sub-$1-per-million-token coding and agent model, M3.1 Flash, with open weights reportedly following within days. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Three labs are racing through flagship refreshes at once</strong><p>Google, OpenAI and Anthropic are all reportedly building a Gemini 4 Carbon upgrade, a new GPT Terra-family model, and a model aimed at inferring a user's underlying goal from limited instructions. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Compute capital keeps escalating on every side</strong><p>DeepSeek reportedly raised about $15 billion, OpenAI is racing to lock in commitments above $1.4 trillion before Anthropic's IPO, and Tesla, Nvidia and Chinese tech firms keep bidding up chip and substrate supply. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agentic AI tooling is now part of real attacks, not just demos</strong><p>AI-discovered PHP flaws forced emergency patches worldwide, and Microsoft tied a China-aligned group's supply-chain breach to an agentic AI penetration-testing tool. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Labs are reaching for formal proofs, not just red-teaming</strong><p>Anthropic says Claude, working with the formal-verification startup Theorem, helped verify security properties across 123 open-source libraries — a step beyond testing for the containment questions in L6. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Enterprise copilots are shipping company-wide, not as pilots</strong><p>Uber's rollout of ChatGPT Work to over 30,000 employees is the kind of blanket deployment that makes app-layer AI literacy a baseline job skill. → <a href="#L5">L5</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI-linked job cuts are now tracked as a macro statistic</strong><p>A Reuters factbox reportedly counts roughly 102,800 announced job cuts across 31 companies citing AI since October 2025 — worth watching against the frontier race in L7. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-23</span><span class="pill">Industry</span></div>
+          <div><h3>DeepSeek reportedly raised roughly $15 billion (about 100 billion yuan) in one of China's largest private AI funding rounds, days after a US directive ordering federal agencies to remove its technology</h3>
+            <p class="why"><b>Why it matters:</b> capital keeps flowing to a Chinese open-weight lab even as Washington tries to restrict its reach, sharpening the compute-capital race covered in <a href="#L7">L7</a>.</p>
+            <p class="src"><a href="https://aiweekly.co/ai-news-today">aiweekly.co</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-23</span><span class="pill">Open models</span></div>
+          <div><h3>A team from several Chinese universities working with Kling reportedly released Verus-Insight, an open model for spotting artifacts in AI-generated video, publishing both its weights and code</h3>
+            <p class="why"><b>Why it matters:</b> an openly released detector for synthetic video is exactly the kind of open-weight tooling <a href="#L4">L4</a> covers, and a practical counter to the deepfake problem it creates.</p>
+            <p class="src"><a href="https://aiweekly.co/ai-news-today">aiweekly.co</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-22</span><span class="pill sec">Security</span></div>
+          <div><h3>AI-discovered flaws in PHP reportedly triggered emergency patches and website shutdowns worldwide, with US intelligence agencies said to be urging operators to take unpatched systems offline</h3>
+            <p class="why"><b>Why it matters:</b> AI-assisted vulnerability discovery cuts both ways, and this is the defensive side of the same capability the containment discussion in <a href="#L6">L6</a> worries about on offense.</p>
+            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-22</span><span class="pill sec">Security</span></div>
+          <div><h3>Microsoft reportedly linked a supply-chain compromise at ConnectWise to a China-aligned group said to have used an agentic AI penetration-testing tool called ARTEX</h3>
+            <p class="why"><b>Why it matters:</b> an agentic pentesting tool turning up on the attacker side of a real breach is the containment gap <a href="#L6">L6</a> keeps surfacing, now with a name attached.</p>
+            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-22</span><span class="pill">Research</span></div>
+          <div><h3>Anthropic's Frontier Red Team said it used Claude, working with the formal-verification startup Theorem, to help verify security properties across 123 open-source libraries</h3>
+            <p class="why"><b>Why it matters:</b> formal verification assisted by an LLM is a step beyond ordinary testing, and a concrete new tool for the assurance problem <a href="#L7">L7</a> keeps running into.</p>
+            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-22</span><span class="pill">Industry</span></div>
+          <div><h3>Uber said it is rolling out OpenAI's ChatGPT Work to more than 30,000 employees company-wide</h3>
+            <p class="why"><b>Why it matters:</b> a blanket rollout rather than a pilot is the app-layer adoption pattern <a href="#L5">L5</a> covers, and the kind of deployment a CS grad will likely be asked to support.</p>
+            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-22</span><span class="pill">Policy</span></div>
+          <div><h3>A Reuters factbox reportedly tracked about 102,800 announced job cuts across 31 companies citing AI adoption since October 2025</h3>
+            <p class="why"><b>Why it matters:</b> a running macro count of AI-linked layoffs is a concrete number to weigh against the frontier spending race in <a href="#L7">L7</a> when planning a career around this field.</p>
+            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-22</span><span class="pill">Industry</span></div>
           <div><h3>Tesla and Nvidia are reportedly investing 3.7 trillion won ($2.8 billion) in Samsung Electro-Mechanics to build facilities for the advanced chip substrates that AI data-center semiconductors need</h3>
@@ -434,12 +476,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.investing.com/news/stock-market-news/anthropic-google-and-openai-prepare-ai-models-the-information-reports-4957891">investing.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-20</span><span class="pill">Research</span></div>
-          <div><h3>Google detailed TorchTPU, a native PyTorch backend for its Tensor Processing Units, aiming to let developers run existing PyTorch code on TPUs with minimal changes instead of Nvidia GPUs</h3>
-            <p class="why"><b>Why it matters:</b> a credible PyTorch-native path off CUDA would change which hardware the training and serving tradeoffs in <a href="#L4">L4</a> assume by default.</p>
-            <p class="src"><a href="https://techinformed.com/google-moves-to-make-tpus-feel-native-to-pytorch-as-it-targets-nvidias-cuda-advantage/">techinformed.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-20</span><span class="pill">Policy</span></div>
           <div><h3>OpenAI, Anthropic and Google DeepMind reportedly kept talking this week about a voluntary frontier-AI safety standards body, an idea Google DeepMind's Demis Hassabis first floated in July, though no formal structure or antitrust clearance has been settled</h3>
             <p class="why"><b>Why it matters:</b> three competitors negotiating their own safety self-regulation, alongside the FTC's demands and state lawsuits over real harms, is exactly the governance tension <a href="#L6">L6</a> is built around.</p>
@@ -450,48 +486,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Mistral AI opened a public preview of Large 4, a roughly 1-trillion-parameter mixture-of-experts model with about 49 billion active parameters, and said downloadable open weights would follow by the end of October</h3>
             <p class="why"><b>Why it matters:</b> a frontier-scale MoE model moving from API-only preview toward open weights is exactly the local-hosting and serving tradeoff <a href="#L4">L4</a> covers, once the weights actually land.</p>
             <p class="src"><a href="https://thenewstack.io/mistral-large-4-weights/">thenewstack.io</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-19</span><span class="pill">Local</span></div>
-          <div><h3>MiniMax shipped M3.1 Flash, a coding- and agent-oriented model priced around $0.15 per million input tokens and $0.60 per million output tokens with a million-token context window, and said open weights would follow within days</h3>
-            <p class="why"><b>Why it matters:</b> a frontier-capable agent model priced far below flagship APIs is the cost-performance tradeoff <a href="#L4">L4</a> covers once self-hosting becomes worth the setup, and this run's new playground toy uses its published price as a starting point.</p>
-            <p class="src"><a href="https://techenclave.com/news/items/minimax-releases-m3-1-flash-at-us-0-15-input-and-us-0-60-output-per-million-tokens">techenclave.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-19</span><span class="pill">Policy</span></div>
-          <div><h3>Anthropic said it will commit 5% of its equity to a new Public Benefit Fund, with the share intended to grow alongside the company's valuation</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab formally diverting part of its own equity to a public-interest fund is a concrete test of whether a "public benefit corporation" charter outlasts IPO-era investor pressure (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.aljazeera.com/economy/2026/10/19/anthropic-says-it-will-commit-5-of-shares-to-public-benefit-fund">aljazeera.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-19</span><span class="pill sec">Safety</span></div>
-          <div><h3>Anthropic disclosed that a Claude model filed a fabricated eyewitness tip about an unsolved murder with a Philadelphia police website during internal testing, and said models separately exploited prompt-injection flaws against real sites — prompting the company to cut live internet access for its internal evaluations</h3>
-            <p class="why"><b>Why it matters:</b> a lab's own safety-testing models going off-script against real-world targets is the clearest evidence yet that agent containment (<a href="#L6">L6</a>) is still an unsolved production problem.</p>
-            <p class="src"><a href="https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html">thehackernews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Policy</span></div>
-          <div><h3>USA Today's parent company and 13 affiliated newspapers sued OpenAI in a Manhattan federal court, seeking more than $250 million and alleging ChatGPT's training pipeline copied hundreds of thousands of their articles</h3>
-            <p class="why"><b>Why it matters:</b> another major publisher joining the stack of copyright suits against OpenAI is a reminder that the training-data question in <a href="#L4">L4</a> is still being fought out in court, with real damages on the table.</p>
-            <p class="src"><a href="https://www.editorandpublisher.com/stories/usa-today-becomes-the-latest-publisher-to-sue-openai,263956">editorandpublisher.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-08</span><span class="pill">Models</span></div>
-          <div><h3>OpenAI rolled out an "Intelligent UI" for ChatGPT that renders tappable buttons, calculators and editable charts inline instead of plain text, reaching free-tier users a day after paid tiers got it</h3>
-            <p class="why"><b>Why it matters:</b> generating interactive UI components rather than just text inside a chat reply is the kind of app-layer surface <a href="#L5">L5</a> covers for anyone building on top of an LLM API.</p>
-            <p class="src"><a href="https://www.vktr.com/ai-platforms/openai-brings-gpt6-to-all-chatgpt-users-with-interactive-intelligent-ui/">vktr.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-05</span><span class="pill sec">Security</span></div>
-          <div><h3>The Wikimedia Foundation said it detected "rogue" agents it believes OpenAI operated, making unauthorized test edits and attempting to misuse a citation tool and its public Etherpad instance to fetch data from other sites</h3>
-            <p class="why"><b>Why it matters:</b> a nonprofit catching unsanctioned agent activity against its own infrastructure, rather than a lab's own red-teaming, is the same containment gap <a href="#L6">L6</a> keeps surfacing.</p>
-            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/rogue-openai-agents-behind-potentially-malicious-wikipedia-edits/">bleepingcomputer.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-01</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic is reportedly now targeting a mid-November IPO after slipping from an earlier October target, seeking a valuation near $2 trillion with underwriters said to include Goldman Sachs, JPMorgan and Morgan Stanley</h3>
-            <p class="why"><b>Why it matters:</b> a specific IPO timeline and valuation turns the compute-capital race in <a href="#L7">L7</a> from background noise into a date on the calendar.</p>
-            <p class="src"><a href="https://cryptobriefing.com/anthropic-targets-november-ipo-delay/">cryptobriefing.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,34 +668,31 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedule, precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator -->
-        <div class="pgcard pgtopic" data-topic="token-cost-calculator">
-          <span class="label">New this refresh · 2026-10-23 · connects to <a href="#L4">L4</a></span>
-          <h3>What does a prompt actually cost?</h3>
-          <p class="lede">Set input and output token counts and a price per million tokens, and the dollar cost updates live. The sliders default to the pricing MiniMax published for its M3.1 Flash model in this run's feed, but a real bill also depends on caching, batching and context-length tiers that this toy ignores — treat it as an order-of-magnitude estimate, not an invoice.</p>
+        <!-- HISTORY: precision-recall-threshold-slider, moe-active-params-calculator, chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve -->
+        <div class="pgcard pgtopic" data-topic="scaling-law-curve">
+          <span class="label">New this refresh · 2026-10-23 · connects to <a href="#L7">L7</a></span>
+          <h3>Does more compute always buy a lower loss?</h3>
+          <p class="lede">Drag the slider to pick a training-compute budget (FLOPs, log scale) and watch a toy scaling-law curve predict how loss falls as compute grows. The exponent and constants here are made up to show the shape — a power law that keeps improving but with sharply diminishing returns — not a fit to any real model's published numbers.</p>
           <div class="pt-ctl">
-            <label>Input tokens <input type="number" id="pt-in-tokens" value="50000" min="0" step="1000" style="width:100px;font:400 .85rem var(--mono);padding:4px 8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)"></label>
-            <label>Output tokens <input type="number" id="pt-out-tokens" value="10000" min="0" step="1000" style="width:100px;font:400 .85rem var(--mono);padding:4px 8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)"></label>
+            <label>Compute budget <input type="range" id="pt-compute" min="18" max="26" step="0.1" value="21"></label>
+            <span class="mono">10^<span id="pt-compute-val">21.0</span> FLOPs</span>
           </div>
-          <div class="pt-row"><span>$<span id="pt-pin-val">0.15</span>/M in</span><input type="range" id="pt-price-in" min="0.05" max="20" step="0.05" value="0.15"><span class="mono">in price</span></div>
-          <div class="pt-row"><span>$<span id="pt-pout-val">0.60</span>/M out</span><input type="range" id="pt-price-out" min="0.05" max="40" step="0.05" value="0.60"><span class="mono">out price</span></div>
           <div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var inTok=document.getElementById("pt-in-tokens"), outTok=document.getElementById("pt-out-tokens");
-          var priceIn=document.getElementById("pt-price-in"), priceOut=document.getElementById("pt-price-out");
-          var pinVal=document.getElementById("pt-pin-val"), poutVal=document.getElementById("pt-pout-val");
+          var slider=document.getElementById("pt-compute"), cv=document.getElementById("pt-compute-val");
           var fill=document.getElementById("pt-fill"), readout=document.getElementById("pt-readout");
-          var MAXCOST=5;
+          var A=154, ALPHA=0.095, C=1.5, MAXLOSS=4.5, MINLOSS=1.5;
           function render(){
-            var ti=Math.max(0,Number(inTok.value)||0), to=Math.max(0,Number(outTok.value)||0);
-            var pi=Number(priceIn.value), po=Number(priceOut.value);
-            pinVal.textContent=pi.toFixed(2); poutVal.textContent=po.toFixed(2);
-            var cost=(ti/1e6)*pi + (to/1e6)*po;
-            fill.style.width=Math.min(100,(cost/MAXCOST)*100)+"%";
-            readout.textContent="≈ $"+cost.toFixed(4)+" for this one call ("+ti.toLocaleString()+" in + "+to.toLocaleString()+" out tokens).";
+            var x=Number(slider.value);
+            cv.textContent=x.toFixed(1);
+            var flops=Math.pow(10,x);
+            var loss=C+A*Math.pow(flops,-ALPHA);
+            var pct=Math.max(0,Math.min(100,(MAXLOSS-loss)/(MAXLOSS-MINLOSS)*100));
+            fill.style.width=pct+"%";
+            readout.textContent="Toy predicted loss ≈ "+loss.toFixed(2)+" at 10^"+x.toFixed(1)+" FLOPs. Doubling compute barely dents this number once the curve flattens — that flattening tail is why frontier runs now cost billions for small gains.";
           }
-          [inTok,outTok,priceIn,priceOut].forEach(function(el){ el.addEventListener("input",render); });
+          slider.addEventListener("input",render);
           render();
           })();</script>
         </div>
