@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-24T11:41:49">2026-10-24 11:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-24T16:42:04">2026-10-24 16:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,7 +398,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Containment incidents are reshaping how labs train and test — and how attackers work too</strong><p>OpenAI reportedly resumed training its most advanced models with open internet access withheld, Microsoft tied a supply-chain breach to an agentic pentesting tool, AI-discovered PHP flaws forced emergency patches, and a single operator reportedly used autonomous AI agents to breach 100+ companies for about $5,000 — the containment question L6 keeps raising now cuts both ways. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Frontier capital keeps compounding on both sides of the Pacific</strong><p>DeepSeek reportedly raised about $15 billion just as Washington pushed federal agencies to drop its technology, while OpenAI is reportedly chasing another $30 billion at a $1.4 trillion valuation ahead of Anthropic's expected November IPO — compute and cash keep escalating together. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>A new flagship or open-weight model lands almost every week</strong><p>Mistral AI priced its trillion-parameter, 52-billion-active-parameter Large 4 for an open-weight release reportedly due October 27, and a university team released an open detector for AI-generated video — any single benchmark screenshot goes stale within days. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Open-weight models and the tooling to serve them keep shipping weekly</strong><p>Mistral AI priced its trillion-parameter, 52-billion-active-parameter Large 4 for an open-weight release reportedly due October 27, a university team released an open detector for AI-generated video, and DeepSeek open-sourced its own production inference engine, DeepInfer — any single benchmark screenshot goes stale within days. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>What to even call AI, and when to disclose it, is now a policy fight</strong><p>A White House order renaming artificial intelligence to Super Intelligence reportedly reached Navy communications, while researchers tracked roughly $137 million in AI-generated political ads running with little disclosure — language and labeling have become their own battleground. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>AI is squeezing entry-level hiring even as senior and ML roles grow</strong><p>A Resume.org survey reportedly found 21% of companies have already frozen entry-level hiring because of AI, while machine-learning job openings run well above pre-pandemic levels — the fundamentals-plus-a-shipped-project path matters more than a generalist resume. → <a href="#L7">L7</a></p></div>
       </div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thenewstack.io/mistral-large-4-weights/">thenewstack.io</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
-          <div><h3>A Resume.org survey reportedly found 21% of companies have already frozen entry-level hiring because of AI, with 36% expecting to by year's end, even as machine-learning job openings run well above pre-pandemic levels</h3>
-            <p class="why"><b>Why it matters:</b> generalist entry-level roles are shrinking while specialist and ML roles grow, a strong case for pairing <a href="#L1">L1</a>–<a href="#L4">L4</a> fundamentals with a shipped project (<a href="#projects">Project 3</a>) instead of a generic resume.</p>
-            <p class="src"><a href="https://businessjournaldaily.com/ai-driving-decline-in-entry-level-hiring-survey-finds/">businessjournaldaily.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-20</span><span class="pill">Local</span></div>
+          <div><h3>DeepSeek open-sourced DeepInfer, its production inference engine for serving DeepSeek-V4.1-Flash, under an Apache-2.0 license with support for both Nvidia and Huawei Ascend chips</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab giving away a serving stack built on ideas from vLLM and SGLang is exactly the local-serving tooling <a href="#L4">L4</a> covers, and a sign open models are racing to close the efficiency gap with closed ones.</p>
+            <p class="src"><a href="https://technode.com/2026/10/21/deepseek-open-sources-inference-framework-with-support-for-nvidia-and-huawei-chips/">technode.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,44 +674,31 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params -->
-        <div class="pgcard pgtopic" data-topic="moe-active-vs-total-params">
+        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence -->
+        <div class="pgcard pgtopic" data-topic="perplexity-next-token-confidence">
           <span class="label">New this refresh · 2026-10-24 · connects to <a href="#L4">L4</a></span>
-          <h3>Active vs. total parameters in a mixture-of-experts model</h3>
-          <p class="lede">Set how big a mixture-of-experts model is in total, then set what share of it each token actually activates. The storage bar tracks total size; the compute bar tracks active size — that gap is why a model like this week's reported 1-trillion-parameter, ~52B-active release can be huge on disk yet cheap to run per token. This is a simplified two-bar toy, not a real memory or FLOP calculation — it ignores attention cost, batching and quantization.</p>
+          <h3>Perplexity: how "surprised" a model is by one token</h3>
+          <p class="lede">Slide the probability a model assigns to the correct next token and watch its single-step perplexity (1 ÷ probability). Lower perplexity means a more confident, better-calibrated prediction — it's the metric labs quote when comparing how well a model fits held-out text. This toy only simulates one token with a made-up probability; a real reported perplexity is averaged over thousands of tokens from an actual model.</p>
           <div class="pt-row">
-            <label for="pt-total">Total params (B)</label>
-            <input type="range" id="pt-total" min="10" max="2000" step="10" value="200">
-            <span class="mono" id="pt-total-val">200B</span>
+            <label for="pt-prob">P(correct token)</label>
+            <input type="range" id="pt-prob" min="1" max="99" step="1" value="40">
+            <span class="mono" id="pt-prob-val">40%</span>
           </div>
-          <div class="pt-row">
-            <label for="pt-active">Active share</label>
-            <input type="range" id="pt-active" min="1" max="100" step="1" value="25">
-            <span class="mono" id="pt-active-val">25%</span>
-          </div>
-          <div class="pt-ctl"><span class="mono">Storage (total)</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-mem-fill" style="background:var(--accent)"></div></div>
-          <div class="pt-ctl"><span class="mono">Compute (active)</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-compute-fill" style="background:var(--signal)"></div></div>
+          <div class="pt-ctl"><span class="mono">Model confidence</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-conf-fill" style="background:var(--accent)"></div></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var total=document.getElementById("pt-total"), totalVal=document.getElementById("pt-total-val");
-          var active=document.getElementById("pt-active"), activeVal=document.getElementById("pt-active-val");
-          var memFill=document.getElementById("pt-mem-fill"), computeFill=document.getElementById("pt-compute-fill");
-          var readout=document.getElementById("pt-readout");
-          var maxB=2000;
+          var prob=document.getElementById("pt-prob"), probVal=document.getElementById("pt-prob-val");
+          var fill=document.getElementById("pt-conf-fill"), readout=document.getElementById("pt-readout");
           function render(){
-            var t=Number(total.value), a=Number(active.value);
-            var activeB=t*a/100;
-            totalVal.textContent=t+"B";
-            activeVal.textContent=a+"%";
-            memFill.style.width=Math.min(100,(t/maxB)*100)+"%";
-            computeFill.style.width=Math.min(100,(activeB/maxB)*100)+"%";
-            var ratio=(t/activeB).toFixed(1);
-            readout.textContent=t+"B total, "+activeB.toFixed(0)+"B active per token — roughly "+ratio+"x less compute than a dense model of the same total size.";
+            var p=Number(prob.value)/100;
+            var perplexity=1/p;
+            probVal.textContent=Math.round(p*100)+"%";
+            fill.style.width=Math.round(p*100)+"%";
+            var label = perplexity<2 ? "very confident" : perplexity<5 ? "fairly confident" : perplexity<15 ? "uncertain" : "very surprised";
+            readout.textContent="Perplexity ≈ "+perplexity.toFixed(2)+" — the model is "+label+" (lower perplexity = better prediction).";
           }
-          total.addEventListener("input",render);
-          active.addEventListener("input",render);
+          prob.addEventListener("input",render);
           render();
           })();</script>
         </div>
