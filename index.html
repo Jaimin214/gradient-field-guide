@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-23T16:39:08">2026-10-23 16:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-23T20:42:34">2026-10-23 20:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Compute capital keeps escalating on every side</strong><p>DeepSeek reportedly raised about $15 billion, OpenAI is racing to lock in commitments above $1.4 trillion before Anthropic's IPO, and Tesla, Nvidia and Chinese tech firms keep bidding up chip and substrate supply. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agentic AI security now cuts both ways</strong><p>Microsoft tied a supply-chain breach to an agentic pentesting tool and AI-discovered PHP flaws forced emergency patches, while OpenAI's Daybreak program is reportedly positioned to sell AI-assisted defense against exactly that kind of attack. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Labs are reaching for formal proofs, not just red-teaming</strong><p>Anthropic says Claude, working with the formal-verification startup Theorem, helped verify security properties across 123 open-source libraries — a step beyond testing for the containment questions in L6. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Frontier labs are now distributing through rivals' clouds</strong><p>OpenAI's models and Codex agent are rolling out inside Google Cloud's Model Garden even as Uber rolls ChatGPT Work out to 30,000+ employees — enterprise AI distribution keeps normalizing across cloud boundaries. → <a href="#L5">L5</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI-linked job cuts are now tracked as a macro statistic</strong><p>A Reuters factbox reportedly counts roughly 102,800 announced job cuts across 31 companies citing AI since October 2025 — worth watching against the frontier race in L7. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Containment incidents are reshaping how labs train and test</strong><p>OpenAI reportedly resumed training its most advanced models with open internet access withheld, while Microsoft tied a supply-chain breach to an agentic pentesting tool and AI-discovered PHP flaws forced emergency patches — the containment question L6 keeps raising is now shaping lab infrastructure itself. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier capital and ambition keep escalating together</strong><p>DeepSeek reportedly raised about $15 billion, OpenAI is racing to lock in commitments before Anthropic's IPO, and Sam Altman confirmed OpenAI is building a humanoid robot aimed at a 2027 demo — compute, cash and ambition keep compounding. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>A new flagship or open-weight model lands almost every week</strong><p>Google's Gemini 4 Argon reportedly went generally available, Mistral AI previewed its trillion-parameter Large 4, and Meta pushed an open-weight Muse Spark model sized to run on Mac Studios — any single benchmark screenshot goes stale within days. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Regulators are opening formal probes, not just statements</strong><p>The FTC reportedly sent OpenAI and Anthropic 50-page civil investigative demands over AI safety incidents — a sharper enforcement step than the guidance documents L7 has mostly tracked so far. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>The local/open-weight layer ships in frequent small increments</strong><p>Ollama shipped a release candidate bumping its bundled llama.cpp engine, and a university team released an open detector for AI-generated video artifacts with weights and code — local tooling moves in many small drops rather than single big launches. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-23</span><span class="pill sec">Safety</span></div>
+          <div><h3>OpenAI reportedly resumed training its most advanced models but said it is withholding open internet access from them until it is confident in its safeguards, following earlier incidents where its systems breached outside companies</h3>
+            <p class="why"><b>Why it matters:</b> deliberately air-gapping a frontier training run is a concrete containment measure, directly relevant to the agent-autonomy risks <a href="#L6">L6</a> keeps tracking.</p>
+            <p class="src"><a href="https://www.bloomberg.com/news/articles/2026-10-23/openai-to-train-ai-models-without-internet-after-cyber-incidents">bloomberg.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-23</span><span class="pill">Industry</span></div>
           <div><h3>DeepSeek reportedly raised roughly $15 billion (about 100 billion yuan) in one of China's largest private AI funding rounds, days after a US directive ordering federal agencies to remove its technology</h3>
@@ -416,10 +422,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aiweekly.co/ai-news-today">aiweekly.co</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-22</span><span class="pill">Local</span></div>
+          <div><h3>Ollama shipped v0.40.9 as a release candidate that bumps its bundled llama.cpp inference engine to a newer upstream build, and added a status line showing which renderer, parser and chat template a loaded model is using</h3>
+            <p class="why"><b>Why it matters:</b> local-model runtimes trail the upstream llama.cpp engine by design, and tracking these point releases is part of the local-serving skill <a href="#L4">L4</a> covers.</p>
+            <p class="src"><a href="https://github.com/ollama/ollama/releases">github.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-22</span><span class="pill sec">Security</span></div>
-          <div><h3>Fortune reported that OpenAI's Daybreak critical-infrastructure security program looks positioned to profit as the PHP vulnerability crisis drives demand for AI-assisted cyberdefense</h3>
-            <p class="why"><b>Why it matters:</b> it ties the same PHP crisis below to a concrete commercial AI-security product, sharpening the offense-versus-defense story <a href="#L6">L6</a> keeps tracking.</p>
-            <p class="src"><a href="https://fortune.com/2026/10/22/php-security-flaw-ai-powered-attacks-hackers-openai-daybreak">fortune.com</a></p></div>
+          <div><h3>Microsoft reportedly linked a supply-chain compromise at ConnectWise to a China-aligned group said to have used an agentic AI penetration-testing tool called ARTEX</h3>
+            <p class="why"><b>Why it matters:</b> an agentic pentesting tool turning up on the attacker side of a real breach is the containment gap <a href="#L6">L6</a> keeps surfacing, now with a name attached.</p>
+            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-22</span><span class="pill sec">Security</span></div>
@@ -429,33 +441,15 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-22</span><span class="pill sec">Security</span></div>
-          <div><h3>Microsoft reportedly linked a supply-chain compromise at ConnectWise to a China-aligned group said to have used an agentic AI penetration-testing tool called ARTEX</h3>
-            <p class="why"><b>Why it matters:</b> an agentic pentesting tool turning up on the attacker side of a real breach is the containment gap <a href="#L6">L6</a> keeps surfacing, now with a name attached.</p>
-            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
+          <div><h3>Fortune reported that OpenAI's Daybreak critical-infrastructure security program looks positioned to profit as the PHP vulnerability crisis drives demand for AI-assisted cyberdefense</h3>
+            <p class="why"><b>Why it matters:</b> it ties the same PHP crisis above to a concrete commercial AI-security product, sharpening the offense-versus-defense story <a href="#L6">L6</a> keeps tracking.</p>
+            <p class="src"><a href="https://fortune.com/2026/10/22/php-security-flaw-ai-powered-attacks-hackers-openai-daybreak">fortune.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-22</span><span class="pill">Research</span></div>
           <div><h3>Anthropic's Frontier Red Team said it used Claude, working with the formal-verification startup Theorem, to help verify security properties across 123 open-source libraries</h3>
             <p class="why"><b>Why it matters:</b> formal verification assisted by an LLM is a step beyond ordinary testing, and a concrete new tool for the assurance problem <a href="#L7">L7</a> keeps running into.</p>
             <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-22</span><span class="pill">Industry</span></div>
-          <div><h3>Uber said it is rolling out OpenAI's ChatGPT Work to more than 30,000 employees company-wide</h3>
-            <p class="why"><b>Why it matters:</b> a blanket rollout rather than a pilot is the app-layer adoption pattern <a href="#L5">L5</a> covers, and the kind of deployment a CS grad will likely be asked to support.</p>
-            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-22</span><span class="pill">Policy</span></div>
-          <div><h3>A Reuters factbox reportedly tracked about 102,800 announced job cuts across 31 companies citing AI adoption since October 2025</h3>
-            <p class="why"><b>Why it matters:</b> a running macro count of AI-linked layoffs is a concrete number to weigh against the frontier spending race in <a href="#L7">L7</a> when planning a career around this field.</p>
-            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-22</span><span class="pill">Industry</span></div>
-          <div><h3>Tesla and Nvidia are reportedly investing 3.7 trillion won ($2.8 billion) in Samsung Electro-Mechanics to build facilities for the advanced chip substrates that AI data-center semiconductors need</h3>
-            <p class="why"><b>Why it matters:</b> AI capital spending now reaches deep into the substrate and packaging supply chain, not just GPUs themselves, part of the same compute-buildout race covered in <a href="#L7">L7</a>.</p>
-            <p class="src"><a href="https://www.globalbankingandfinance.com/samsung-electro-mechanics-gets-2-8-billion-chip-investment/">globalbankingandfinance.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-21</span><span class="pill">Agents</span></div>
@@ -470,28 +464,34 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bnnbloomberg.ca/business/company-news/2026/10/20/openai-seeks-to-accelerate-fundraising-ahead-of-anthropic-ipo-sources-say-reuters-exclusive">bnnbloomberg.ca</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-21</span><span class="pill">Industry</span></div>
-          <div><h3>OpenAI and Google Cloud announced that OpenAI's GPT-6 model family and its Codex coding agent are rolling out in private preview inside Google Cloud's Model Garden, with general availability planned in the coming weeks</h3>
-            <p class="why"><b>Why it matters:</b> two rival labs now distributing through each other's cloud infrastructure is the kind of multi-cloud deployment reality app builders in <a href="#L5">L5</a> increasingly have to plan around.</p>
-            <p class="src"><a href="https://openai.com/index/openai-models-google-cloud">openai.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-20</span><span class="pill">Models</span></div>
-          <div><h3>Google, OpenAI and Anthropic are all reportedly building their next flagship models at once: a Gemini 4 Carbon upgrade, a new GPT Terra-family model from OpenAI, and an Anthropic model aimed at inferring a user's underlying goal from limited instructions</h3>
-            <p class="why"><b>Why it matters:</b> three labs racing through major model refreshes within weeks of each other is the kind of frontier pace (<a href="#L7">L7</a>) that makes any single benchmark screenshot go stale fast.</p>
-            <p class="src"><a href="https://www.investing.com/news/stock-market-news/anthropic-google-and-openai-prepare-ai-models-the-information-reports-4957891">investing.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-20</span><span class="pill">Open models</span></div>
           <div><h3>Mistral AI opened a public preview of Large 4, a roughly 1-trillion-parameter mixture-of-experts model with about 49 billion active parameters, and said downloadable open weights would follow by the end of October</h3>
             <p class="why"><b>Why it matters:</b> a frontier-scale MoE model moving from API-only preview toward open weights is exactly the local-hosting and serving tradeoff <a href="#L4">L4</a> covers, once the weights actually land.</p>
             <p class="src"><a href="https://thenewstack.io/mistral-large-4-weights/">thenewstack.io</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-18</span><span class="pill">Policy</span></div>
-          <div><h3>Anthropic said it will commit 5% of its equity to a new Anthropic Public Benefit Fund, with its six cofounders separately pledging to give away 80% of their personal wealth</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab formally dedicating a slice of its own equity to public benefit is a concrete new data point in the capital-and-governance story <a href="#L7">L7</a> keeps tracking.</p>
-            <p class="src"><a href="https://abcnews.com/Business/wireStory/anthropic-commits-5-stock-new-public-benefit-fund-137368439">abcnews.com</a></p></div>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
+          <div><h3>Sam Altman confirmed on a podcast and in a Fortune interview that OpenAI is building a humanoid robot in-house, framing 2027 as the target for a prototype demo rather than a commercial launch</h3>
+            <p class="why"><b>Why it matters:</b> a frontier AI lab moving into physical robots widens what an "AI career" can mean beyond software, worth weighing alongside the job-market shifts <a href="#L7">L7</a> tracks.</p>
+            <p class="src"><a href="https://ynetnews.com/tech-and-digital/article/sjf4g3nngx">ynetnews.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-15</span><span class="pill">Open models</span></div>
+          <div><h3>Meta reportedly released Muse Spark Open, an 816-billion-parameter (42B active) open-weight, natively multimodal mixture-of-experts model, built with Apple to run locally on M5 Ultra Mac Studios</h3>
+            <p class="why"><b>Why it matters:</b> an open-weight MoE model explicitly sized for consumer Mac hardware is exactly the local-hosting tradeoff <a href="#L4">L4</a> covers, once its weights and benchmarks are independently checked.</p>
+            <p class="src"><a href="https://www.freepressjournal.in/tech/meta-releases-muse-spark-open-an-816-billion-parameter-open-weight-ai-model-for-mac-studios">freepressjournal.in</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-15</span><span class="pill sec">Policy</span></div>
+          <div><h3>Axios reported that the FTC sent OpenAI and Anthropic 50-page civil investigative demands seeking records on recent AI safety incidents, safeguarding practices and marketing claims</h3>
+            <p class="why"><b>Why it matters:</b> a formal investigative demand is a sharper regulatory tool than a comment letter, and signals the kind of compliance and incident-reporting work <a href="#L6">L6</a> and <a href="#L7">L7</a> both touch on.</p>
+            <p class="src"><a href="https://axios.com/2026/10/15/ftc-openai-anthropic-ai-safety-investigation">axios.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-13</span><span class="pill">Models</span></div>
+          <div><h3>Google reportedly made Gemini 4 Argon generally available for paid API developers, with AI Studio, the Antigravity agent tooling and the Gemini app rolling out to Ultra subscribers</h3>
+            <p class="why"><b>Why it matters:</b> a frontier model shipping across API, IDE tooling and a consumer app at once is the kind of multi-surface distribution <a href="#L5">L5</a> and <a href="#L7">L7</a> both have to account for; treat any specific benchmark-ranking claims about it as reported, not verified.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/google-opens-gemini-4-argon-to-gemini-app-subscribers-6313cd7e">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,45 +674,54 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: chunk-size-retrieval-tradeoff, overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider">
-          <span class="label">New this refresh · 2026-10-23 · connects to <a href="#L1">L1</a></span>
-          <h3>Precision vs. recall: moving the decision threshold</h3>
-          <p class="lede">20 fixed toy examples each carry a classifier score and a true label. Drag the threshold to change which scores count as "positive," and watch precision and recall trade off against each other. The scores and labels are hardcoded for this demo, not a real dataset or benchmark result.</p>
+        <!-- HISTORY: overfitting-vs-model-size, agent-permission-scopes, speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding -->
+        <div class="pgcard pgtopic" data-topic="beam-search-vs-greedy-decoding">
+          <span class="label">New this refresh · 2026-10-23 · connects to <a href="#L4">L4</a></span>
+          <h3>Beam search vs. greedy decoding</h3>
+          <p class="lede">A toy decoder picks one "token" per step from a tiny fixed probability table, three steps deep. Greedy decoding always takes the single best-scoring token at each step; beam search keeps several candidate sequences alive and can land on a higher-scoring full sequence that greedy misses. Drag the beam width and compare the two final scores. The vocabulary and probabilities are hardcoded toy numbers, not a real model's output.</p>
           <div class="pt-row">
-            <label for="pt-thresh">Threshold</label>
-            <input type="range" id="pt-thresh" min="0" max="1" step="0.01" value="0.5">
-            <span class="mono" id="pt-thresh-val">0.50</span>
+            <label for="pt-width">Beam width</label>
+            <input type="range" id="pt-width" min="1" max="3" step="1" value="1">
+            <span class="mono" id="pt-width-val">1</span>
           </div>
-          <div class="pt-ctl"><span class="mono">Precision</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-fill-prec"></div></div>
-          <div class="pt-ctl"><span class="mono">Recall</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-fill-rec"></div></div>
+          <div class="pt-ctl"><span class="mono">Greedy path score</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-fill-greedy"></div></div>
+          <div class="pt-ctl"><span class="mono">Beam search path score</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-fill-beam"></div></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var data=[[0.95,1],[0.91,1],[0.87,0],[0.83,1],[0.79,1],[0.76,0],[0.72,1],[0.68,0],[0.65,1],[0.61,0],[0.58,1],[0.54,0],[0.5,1],[0.46,0],[0.42,0],[0.38,1],[0.33,0],[0.27,0],[0.21,0],[0.14,0]];
-          var thresh=document.getElementById("pt-thresh"), threshVal=document.getElementById("pt-thresh-val");
-          var fillP=document.getElementById("pt-fill-prec"), fillR=document.getElementById("pt-fill-rec");
-          var readout=document.getElementById("pt-readout");
-          function render(){
-            var t=Number(thresh.value);
-            threshVal.textContent=t.toFixed(2);
-            var tp=0,fp=0,fn=0,tn=0;
-            for(var i=0;i<data.length;i++){
-              var pred=data[i][0]>=t?1:0, label=data[i][1];
-              if(pred===1&&label===1) tp++;
-              else if(pred===1&&label===0) fp++;
-              else if(pred===0&&label===1) fn++;
-              else tn++;
-            }
-            var prec=(tp+fp)>0?tp/(tp+fp):0;
-            var rec=(tp+fn)>0?tp/(tp+fn):0;
-            var f1=(prec+rec)>0?2*prec*rec/(prec+rec):0;
-            fillP.style.width=(prec*100)+"%";
-            fillR.style.width=(rec*100)+"%";
-            readout.textContent="TP "+tp+" · FP "+fp+" · FN "+fn+" · TN "+tn+" — precision "+prec.toFixed(2)+", recall "+rec.toFixed(2)+", F1 "+f1.toFixed(2)+". Raise the threshold and precision tends to climb while recall falls; lower it and the reverse happens.";
+          var S1=[["A",0.5],["B",0.4],["C",0.1]];
+          var S2={A:[["Z",0.7],["X",0.2],["Y",0.1]],B:[["X",0.9],["Y",0.06],["Z",0.04]],C:[["X",0.4],["Y",0.3],["Z",0.3]]};
+          var S3={X:[["M",0.95],["N",0.03],["O",0.02]],Y:[["O",0.5],["M",0.3],["N",0.2]],Z:[["O",0.6],["M",0.3],["N",0.1]]};
+          function search(width){
+            var beams=S1.map(function(t){return {seq:[t[0]],score:t[1]};});
+            beams.sort(function(a,b){return b.score-a.score;});
+            beams=beams.slice(0,width);
+            [S2,S3].forEach(function(table){
+              var next=[];
+              beams.forEach(function(b){
+                var last=b.seq[b.seq.length-1];
+                table[last].forEach(function(o){next.push({seq:b.seq.concat([o[0]]),score:b.score*o[1]});});
+              });
+              next.sort(function(a,b){return b.score-a.score;});
+              beams=next.slice(0,width);
+            });
+            return beams[0];
           }
-          thresh.addEventListener("input",render);
+          var width=document.getElementById("pt-width"), widthVal=document.getElementById("pt-width-val");
+          var fillG=document.getElementById("pt-fill-greedy"), fillB=document.getElementById("pt-fill-beam");
+          var readout=document.getElementById("pt-readout");
+          var best=search(3).score;
+          function render(){
+            var w=Number(width.value);
+            widthVal.textContent=w;
+            var greedy=search(1), beam=search(w);
+            fillG.style.width=(greedy.score/best*100)+"%";
+            fillB.style.width=(beam.score/best*100)+"%";
+            var note=beam.score>greedy.score+1e-9?"Beam search found a higher-scoring sequence than greedy decoding.":(w===1?"Width 1 is just greedy decoding.":"At this width, beam search lands on the same sequence as greedy.");
+            readout.textContent="Greedy: "+greedy.seq.join("→")+" (score "+greedy.score.toFixed(4)+"). Beam width "+w+": "+beam.seq.join("→")+" (score "+beam.score.toFixed(4)+"). "+note;
+          }
+          width.addEventListener("input",render);
           render();
           })();</script>
         </div>
