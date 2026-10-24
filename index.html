@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-24T06:43:13">2026-10-24 06:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-24T11:41:49">2026-10-24 11:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,9 +396,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Containment incidents are reshaping how labs train and test</strong><p>OpenAI reportedly resumed training its most advanced models with open internet access withheld, while Microsoft tied a supply-chain breach to an agentic pentesting tool and AI-discovered PHP flaws forced emergency patches — the containment question L6 keeps raising is now shaping lab infrastructure itself. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Frontier capital and ambition keep escalating together</strong><p>DeepSeek reportedly raised about $15 billion, OpenAI is reportedly chasing another $30 billion at a $1.4 trillion valuation ahead of Anthropic's IPO, and Sam Altman confirmed OpenAI is building a humanoid robot aimed at a 2027 demo — compute, cash and ambition keep compounding. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>A new flagship or open-weight model lands almost every week</strong><p>Mistral AI priced its trillion-parameter Large 4 for an open-weight release reportedly due October 27, and a university team released an open detector for AI-generated video — any single benchmark screenshot goes stale within days. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Containment incidents are reshaping how labs train and test — and how attackers work too</strong><p>OpenAI reportedly resumed training its most advanced models with open internet access withheld, Microsoft tied a supply-chain breach to an agentic pentesting tool, AI-discovered PHP flaws forced emergency patches, and a single operator reportedly used autonomous AI agents to breach 100+ companies for about $5,000 — the containment question L6 keeps raising now cuts both ways. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier capital keeps compounding on both sides of the Pacific</strong><p>DeepSeek reportedly raised about $15 billion just as Washington pushed federal agencies to drop its technology, while OpenAI is reportedly chasing another $30 billion at a $1.4 trillion valuation ahead of Anthropic's expected November IPO — compute and cash keep escalating together. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>A new flagship or open-weight model lands almost every week</strong><p>Mistral AI priced its trillion-parameter, 52-billion-active-parameter Large 4 for an open-weight release reportedly due October 27, and a university team released an open detector for AI-generated video — any single benchmark screenshot goes stale within days. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>What to even call AI, and when to disclose it, is now a policy fight</strong><p>A White House order renaming artificial intelligence to Super Intelligence reportedly reached Navy communications, while researchers tracked roughly $137 million in AI-generated political ads running with little disclosure — language and labeling have become their own battleground. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>AI is squeezing entry-level hiring even as senior and ML roles grow</strong><p>A Resume.org survey reportedly found 21% of companies have already frozen entry-level hiring because of AI, while machine-learning job openings run well above pre-pandemic levels — the fundamentals-plus-a-shipped-project path matters more than a generalist resume. → <a href="#L7">L7</a></p></div>
       </div>
@@ -476,16 +476,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bnnbloomberg.ca/business/company-news/2026/10/20/openai-seeks-to-accelerate-fundraising-ahead-of-anthropic-ipo-sources-say-reuters-exclusive">bnnbloomberg.ca</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-20</span><span class="pill sec">Security</span></div>
+          <div><h3>Reuters reported that a single operator used autonomous AI agents, reportedly Claude Code paired with a DeepSeek model, to break into exposed instances of the open-source Cairn pentesting tool and compromise 100+ companies' websites for roughly $5,000 in AI usage costs</h3>
+            <p class="why"><b>Why it matters:</b> a real attacker letting an agent chain a whole intrusion end-to-end for pocket change is the clearest evidence yet of the agent-autonomy risk <a href="#L6">L6</a> theorizes about, and a case study worth reading before building anything agentic.</p>
+            <p class="src"><a href="https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html">thehackernews.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-20</span><span class="pill">Open models</span></div>
           <div><h3>Mistral AI opened a public preview of Large 4, a roughly 1-trillion-parameter mixture-of-experts model with about 52 billion active parameters, and multiple outlets now report October 27 as the target date for its open weights</h3>
             <p class="why"><b>Why it matters:</b> a frontier-scale MoE model moving from API-only preview toward open weights is exactly the local-hosting and serving tradeoff <a href="#L4">L4</a> covers, once the weights actually land.</p>
             <p class="src"><a href="https://thenewstack.io/mistral-large-4-weights/">thenewstack.io</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
-          <div><h3>Sam Altman confirmed on a podcast and in a Fortune interview that OpenAI is building a humanoid robot in-house, framing 2027 as the target for a prototype demo rather than a commercial launch</h3>
-            <p class="why"><b>Why it matters:</b> a frontier AI lab moving into physical robots widens what an "AI career" can mean beyond software, worth weighing alongside the job-market shifts <a href="#L7">L7</a> tracks.</p>
-            <p class="src"><a href="https://ynetnews.com/tech-and-digital/article/sjf4g3nngx">ynetnews.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
@@ -674,38 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: speculative-decoding-acceptance-rate, self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size -->
-        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size">
-          <span class="label">New this refresh · 2026-10-24 · connects to <a href="#L1">L1</a></span>
-          <h3>Overfitting vs. model size</h3>
-          <p class="lede">Drag the slider to grow a toy model's capacity and watch training error keep falling while validation error dips, bottoms out, then climbs again — the classic bias-variance tradeoff. The two curves are hand-picked formulas chosen to show that shape, not numbers from a real trained model.</p>
+        <!-- HISTORY: self-consistency-voting-margin, softmax-temperature, kv-cache-memory-calculator, lora-rank-trainable-params, moe-routing-toy, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params -->
+        <div class="pgcard pgtopic" data-topic="moe-active-vs-total-params">
+          <span class="label">New this refresh · 2026-10-24 · connects to <a href="#L4">L4</a></span>
+          <h3>Active vs. total parameters in a mixture-of-experts model</h3>
+          <p class="lede">Set how big a mixture-of-experts model is in total, then set what share of it each token actually activates. The storage bar tracks total size; the compute bar tracks active size — that gap is why a model like this week's reported 1-trillion-parameter, ~52B-active release can be huge on disk yet cheap to run per token. This is a simplified two-bar toy, not a real memory or FLOP calculation — it ignores attention cost, batching and quantization.</p>
           <div class="pt-row">
-            <label for="pt-cap">Model capacity</label>
-            <input type="range" id="pt-cap" min="1" max="20" step="1" value="1">
-            <span class="mono" id="pt-cap-val">1</span>
+            <label for="pt-total">Total params (B)</label>
+            <input type="range" id="pt-total" min="10" max="2000" step="10" value="200">
+            <span class="mono" id="pt-total-val">200B</span>
           </div>
-          <div class="pt-ctl"><span class="mono">Training error</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-train-fill" style="background:var(--accent)"></div></div>
-          <div class="pt-ctl"><span class="mono">Validation error</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-val-fill" style="background:var(--signal)"></div></div>
+          <div class="pt-row">
+            <label for="pt-active">Active share</label>
+            <input type="range" id="pt-active" min="1" max="100" step="1" value="25">
+            <span class="mono" id="pt-active-val">25%</span>
+          </div>
+          <div class="pt-ctl"><span class="mono">Storage (total)</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-mem-fill" style="background:var(--accent)"></div></div>
+          <div class="pt-ctl"><span class="mono">Compute (active)</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-compute-fill" style="background:var(--signal)"></div></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var cap=document.getElementById("pt-cap"), capVal=document.getElementById("pt-cap-val");
-          var trainFill=document.getElementById("pt-train-fill"), valFill=document.getElementById("pt-val-fill");
+          var total=document.getElementById("pt-total"), totalVal=document.getElementById("pt-total-val");
+          var active=document.getElementById("pt-active"), activeVal=document.getElementById("pt-active-val");
+          var memFill=document.getElementById("pt-mem-fill"), computeFill=document.getElementById("pt-compute-fill");
           var readout=document.getElementById("pt-readout");
-          var maxErr=35;
+          var maxB=2000;
           function render(){
-            var c=Number(cap.value);
-            capVal.textContent=c;
-            var bias=60/(c+1), variance=(c*c)/50;
-            var trainErr=bias*0.3+1;
-            var valErr=bias+variance+3;
-            trainFill.style.width=Math.min(100,(trainErr/maxErr)*100)+"%";
-            valFill.style.width=Math.min(100,(valErr/maxErr)*100)+"%";
-            var zone=c<=6?"underfitting: too little capacity, both errors are high":(c<=13?"near the sweet spot: validation error is close to its minimum":"overfitting: training error keeps dropping but validation error is climbing");
-            readout.textContent="Capacity "+c+" → training error "+trainErr.toFixed(1)+", validation error "+valErr.toFixed(1)+" — "+zone+".";
+            var t=Number(total.value), a=Number(active.value);
+            var activeB=t*a/100;
+            totalVal.textContent=t+"B";
+            activeVal.textContent=a+"%";
+            memFill.style.width=Math.min(100,(t/maxB)*100)+"%";
+            computeFill.style.width=Math.min(100,(activeB/maxB)*100)+"%";
+            var ratio=(t/activeB).toFixed(1);
+            readout.textContent=t+"B total, "+activeB.toFixed(0)+"B active per token — roughly "+ratio+"x less compute than a dense model of the same total size.";
           }
-          cap.addEventListener("input",render);
+          total.addEventListener("input",render);
+          active.addEventListener("input",render);
           render();
           })();</script>
         </div>
