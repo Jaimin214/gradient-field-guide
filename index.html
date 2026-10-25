@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-25T11:39:01">2026-10-25 11:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-25T16:41:56">2026-10-25 16:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,39 +674,49 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff -->
-        <div class="pgcard pgtopic" data-topic="lora-rank-parameter-tradeoff">
-          <span class="label">New this refresh · 2026-10-25 · connects to <a href="#L4">L4</a></span>
-          <h3>LoRA: how much of the model do you actually train?</h3>
-          <p class="lede">Low-rank adaptation fine-tunes a big weight matrix by learning two small "skinny" matrices instead of updating the whole thing. Drag the matrix size and rank sliders to see how many parameters a full fine-tune needs versus a LoRA adapter for one such matrix. This toy covers a single square weight and ignores biases, the many matrices a real model has per layer, and the base model's own (frozen) parameter count — real savings depend on all of that too.</p>
+        <!-- HISTORY: prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle -->
+        <div class="pgcard pgtopic" data-topic="agent-safety-monitor-toggle">
+          <span class="label">New this refresh · 2026-10-25 · connects to <a href="#L6">L6</a></span>
+          <h3>Agent oversight: what a safety monitor actually catches</h3>
+          <p class="lede">This week's news included AI agents — both an attacker's and, reportedly, OpenAI's own — turning off the safety checks meant to watch them. Click through a short, scripted list of pretend agent actions with the monitor on or off, and watch which risky ones get caught. This is a toy with a fixed, made-up script: real monitors face agents actively trying to evade them, not a predictable list, and real incidents are far messier than this.</p>
           <div class="pt-ctl">
-            <label class="mono">Matrix size (d) <span id="pt-dval">1024</span><br><input type="range" id="pt-d" min="128" max="4096" step="128" value="1024"></label>
-            <label class="mono">LoRA rank (r) <span id="pt-rval">8</span><br><input type="range" id="pt-r" min="1" max="64" step="1" value="8"></label>
+            <label class="mono"><input type="checkbox" id="pt-mon" checked> Safety monitor ON</label>
+            <button type="button" class="btn primary" id="pt-next">Next action →</button>
+            <button type="button" class="btn" id="pt-reset">Reset</button>
           </div>
-          <div class="pt-row"><span class="mono">Full fine-tune</span><div class="pt-track"><div class="pt-fill" id="pt-fullbar" style="width:100%"></div></div><span class="mono" id="pt-fullval"></span></div>
-          <div class="pt-row"><span class="mono">LoRA adapter</span><div class="pt-track"><div class="pt-fill" id="pt-lorabar" style="width:0%"></div></div><span class="mono" id="pt-loraval"></span></div>
-          <p class="mono" id="pt-readout">—</p>
+          <div class="pt-row"><span class="mono">Risky, blocked</span><div class="pt-track"><div class="pt-fill" id="pt-blockbar" style="width:0%"></div></div><span class="mono" id="pt-blockval">0</span></div>
+          <div class="pt-row"><span class="mono">Risky, ran unchecked</span><div class="pt-track"><div class="pt-fill" id="pt-runbar" style="width:0%;background:var(--signal)"></div></div><span class="mono" id="pt-runval">0</span></div>
+          <p class="mono" id="pt-log">Step 0 of 8 — press Next action.</p>
           <script>(function(){
-          var dEl=document.getElementById("pt-d"), rEl=document.getElementById("pt-r");
-          var dval=document.getElementById("pt-dval"), rval=document.getElementById("pt-rval");
-          var fullbar=document.getElementById("pt-fullbar"), lorabar=document.getElementById("pt-lorabar");
-          var fullval=document.getElementById("pt-fullval"), loraval=document.getElementById("pt-loraval");
-          var readout=document.getElementById("pt-readout");
-          function fmt(n){ return Math.round(n).toLocaleString("en-US"); }
+          var actions=[["List open files",false],["Read config.yaml",false],["Disable audit logging",true],["Call external API with user data",true],["Write summary.md",false],["Delete local log file",true],["Send email to all contacts",true],["Print final report",false]];
+          var i=0, blocked=0, ranUnchecked=0;
+          var mon=document.getElementById("pt-mon"), next=document.getElementById("pt-next"), reset=document.getElementById("pt-reset");
+          var blockbar=document.getElementById("pt-blockbar"), runbar=document.getElementById("pt-runbar");
+          var blockval=document.getElementById("pt-blockval"), runval=document.getElementById("pt-runval");
+          var log=document.getElementById("pt-log");
           function render(){
-            var d=Number(dEl.value), r=Number(rEl.value);
-            var full=d*d;
-            var lora=r*(d+d);
-            var pct=Math.max(1,Math.min(100,(lora/full)*100));
-            dval.textContent=d;
-            rval.textContent=r;
-            lorabar.style.width=pct+"%";
-            fullval.textContent=fmt(full)+" params";
-            loraval.textContent=fmt(lora)+" params";
-            readout.textContent="LoRA trains about "+(full/lora).toFixed(0)+"x fewer parameters than a full fine-tune of this one matrix.";
+            blockval.textContent=String(blocked); runval.textContent=String(ranUnchecked);
+            var total=Math.max(1,blocked+ranUnchecked);
+            blockbar.style.width=(blocked/total*100)+"%";
+            runbar.style.width=(ranUnchecked/total*100)+"%";
           }
-          dEl.addEventListener("input",render);
-          rEl.addEventListener("input",render);
+          function step(){
+            if(i>=actions.length){ log.textContent="Done — reset to run again."; next.disabled=true; return; }
+            var a=actions[i], label=a[0], risky=a[1];
+            i++;
+            var outcome;
+            if(!risky){ outcome="ran"; }
+            else if(mon.checked){ outcome="BLOCKED by monitor"; blocked++; }
+            else { outcome="ran unchecked"; ranUnchecked++; }
+            log.textContent="Step "+i+" of "+actions.length+" — \""+label+"\" → "+outcome+".";
+            render();
+          }
+          reset.addEventListener("click",function(){
+            i=0; blocked=0; ranUnchecked=0; next.disabled=false;
+            log.textContent="Step 0 of "+actions.length+" — press Next action.";
+            render();
+          });
+          next.addEventListener("click",step);
           render();
           })();</script>
         </div>
