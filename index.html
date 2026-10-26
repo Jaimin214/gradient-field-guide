@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-26T11:41:55">2026-10-26 11:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-26T16:44:09">2026-10-26 16:44</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,12 +397,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Labs are racing on capital as hard as on capability</strong><p>OpenAI is reportedly in talks for a new funding round of at least $30 billion near a $1.4 trillion valuation, weeks after DeepSeek raised roughly $15 billion — money is as newsworthy this month as any model release. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight flagships keep closing the gap, with licensing fine print attached</strong><p>Mistral confirmed its roughly 1-trillion-parameter Large 4 will ship under a new custom license instead of Apache 2.0, while Ollama's latest release defaults supported models to a faster local runtime on Apple Silicon — "open" and "fast to run locally" are improving on separate tracks. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight flagships keep closing the gap, with licensing fine print attached</strong><p>Mistral's roughly 1-trillion-parameter Large 4 is already live in hosted preview and reportedly set to ship open weights around October 27 under a new custom license instead of Apache 2.0, while Ollama's latest release defaults supported models to a faster local runtime on Apple Silicon — "open" and "fast to run locally" are improving on separate tracks. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Proactive, always-on agents are becoming a product category</strong><p>Anthropic opened a waitlisted research preview of Claude Duet, a personal agent built on Claude Opus 5.5 that checks your connected apps on its own and asks approval before big actions, positioning it against Meta's Muse and OpenAI's Dots. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Containment keeps lagging the capability it's supposed to watch</strong><p>OpenAI is training its newest models offline until it trusts its safeguards, Microsoft tied a real breach to an agentic pentesting tool called ARTEX, a lone attacker reportedly used AI agents to break into 100+ corporate sites, and AI-discovered flaws kept triggering emergency patches — the same assurance gap shows up on offense and defense alike. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Containment keeps lagging the capability it's supposed to watch</strong><p>South Korean regulators are investigating AI-powered attacks that reportedly breached at least seven banks and lenders since late September, Microsoft separately tied a breach to an agentic pentesting tool called ARTEX, and a lone attacker reportedly used AI agents to break into 100+ corporate sites — the same assurance gap keeps showing up across victims and geographies. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Supply chains and provenance checks are both tightening as deployment scales</strong><p>Taiwan moved to tighten AI chip export controls to China, nearly $137 million in undisclosed AI political ads were tallied ahead of the midterms, and an open deepfake detector shipped the same week — guardrails are racing to catch up from the hardware layer to the screen. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
+          <div><h3>South Korean regulators reportedly found signs that AI tools were used in a wave of attacks that breached at least seven banks and lenders since late September, including Shinhan, KB Kookmin and Hana, exposing customer names, incomes and account details</h3>
+            <p class="why"><b>Why it matters:</b> a government confirming AI-assisted intrusions across multiple banks at once is a large-scale, named-victim version of the containment gap <a href="#L6">L6</a> keeps tracking.</p>
+            <p class="src"><a href="https://www.americanbanker.com/news/ai-linked-hacks-hit-korean-banks-through-loan-agent-sites">americanbanker.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-23</span><span class="pill">Local</span></div>
           <div><h3>Ollama shipped version 0.40, which reportedly runs supported models through Apple's MLX runtime by default on Apple Silicon instead of llama.cpp, and added a column to its process-list command showing which backend serves each loaded model</h3>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Taiwan's economics ministry reportedly announced plans to tighten export controls on AI chips bound for China, moving its rules closer to US restrictions as part of a broader trade arrangement</h3>
             <p class="why"><b>Why it matters:</b> who is allowed to buy advanced AI chips is a supply-side constraint on who can even attempt frontier-scale training, a backdrop worth knowing for the economics covered in <a href="#L7">L7</a>.</p>
             <p class="src"><a href="https://af.net/ar/realtime/taiwan-to-impose-strict-controls-on-ai-chip-exports-to-china/">af.net</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-16</span><span class="pill">Coding</span></div>
-          <div><h3>Cursor reportedly shipped a mobile remote-control mode, a public app marketplace called Origin, and cloud agents able to manage up to 300 repositories at once, all within a roughly ten-day stretch this month</h3>
-            <p class="why"><b>Why it matters:</b> coding agents are quickly gaining their own app ecosystems and fleet-scale repo management, a concrete look at where the agent tooling in <a href="#L6">L6</a> is headed.</p>
-            <p class="src"><a href="https://tech-insider.org/?p=37900">tech-insider.org</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,49 +674,50 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget-calculator, tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter">
-          <span class="label">New this refresh · 2026-10-26 · connects to <a href="#L6">L6</a></span>
-          <h3>Agent loop step counter</h3>
-          <p class="lede">An agentic loop (think → act → observe, repeat) doesn't know in advance how many steps a task will take, and a runaway loop can burn through its budget before finishing — one reason the coding-agent and agent-security stories in this refresh's feed keep coming back to step limits and approval gates. This toy assigns a made-up task a fixed number of steps it "needs" and ticks a simulated loop roughly 5 times a second up to the step budget you set. It tracks nothing but a tick count — no real wall-clock time, tool calls, or token cost.</p>
+        <!-- HISTORY: tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings -->
+        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings">
+          <span class="label">New this refresh · 2026-10-26 · connects to <a href="#L3">L3</a></span>
+          <h3>Cosine similarity of two embeddings</h3>
+          <p class="lede">Embedding search and retrieval almost always comes down to one number: the cosine of the angle between two vectors, from -1 (opposite directions) to 1 (same direction). Drag either angle slider below and watch the two arrows and the similarity score move together. Simplified: real embeddings live in hundreds of dimensions, not two, and this toy fixes both vectors to length 1 so only direction — not magnitude — matters.</p>
           <div class="pt-ctl">
-            <label class="mono">steps task needs <input type="range" id="pt-need" min="1" max="30" value="12" step="1"></label>
-            <span class="mono" id="pt-needval">12</span>
-            <label class="mono">step budget <input type="range" id="pt-budget" min="1" max="30" value="15" step="1"></label>
-            <span class="mono" id="pt-budgetval">15</span>
+            <label class="mono">vector A angle <input type="range" id="pt-angleA" min="0" max="360" value="30" step="1"></label>
+            <span class="mono" id="pt-angleAval">30°</span>
+            <label class="mono">vector B angle <input type="range" id="pt-angleB" min="0" max="360" value="80" step="1"></label>
+            <span class="mono" id="pt-angleBval">80°</span>
           </div>
-          <div class="pt-row"><span class="mono" id="pt-stepword">step 0</span><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0"></div></div><span class="mono" id="pt-pct">0%</span></div>
-          <div class="gdbtns"><button type="button" class="btn primary" id="pt-run">Run loop</button><button type="button" class="btn" id="pt-reset">Reset</button></div>
+          <svg id="pt-svg" viewBox="-60 -60 120 120" width="160" height="160" style="background:var(--bg);border:1px solid var(--line);border-radius:8px">
+            <line x1="-55" y1="0" x2="55" y2="0" stroke="var(--line)" stroke-width="1"></line>
+            <line x1="0" y1="-55" x2="0" y2="55" stroke="var(--line)" stroke-width="1"></line>
+            <line id="pt-vecA" x1="0" y1="0" x2="50" y2="0" stroke="var(--accent)" stroke-width="3"></line>
+            <line id="pt-vecB" x1="0" y1="0" x2="0" y2="-50" stroke="var(--signal)" stroke-width="3"></line>
+          </svg>
+          <div class="pt-row"><span class="mono">cosine similarity</span><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:50%"></div></div><span class="mono" id="pt-cosval">0.00</span></div>
           <p class="mono" id="pt-summary">—</p>
           <script>(function(){
-          var needEl=document.getElementById("pt-need"), budgetEl=document.getElementById("pt-budget");
-          var needVal=document.getElementById("pt-needval"), budgetVal=document.getElementById("pt-budgetval");
-          var stepWord=document.getElementById("pt-stepword"), fill=document.getElementById("pt-fill"), pct=document.getElementById("pt-pct");
-          var runBtn=document.getElementById("pt-run"), resetBtn=document.getElementById("pt-reset"), summary=document.getElementById("pt-summary");
-          var timer=null, step=0;
-          function syncLabels(){ needVal.textContent=needEl.value; budgetVal.textContent=budgetEl.value; }
-          function renderStep(){
-            var budget=parseInt(budgetEl.value,10);
-            var w=Math.min(100, Math.round(step/budget*100));
-            fill.style.width=w+"%"; pct.textContent=w+"%"; stepWord.textContent="step "+step;
+          var angleAEl=document.getElementById("pt-angleA"), angleBEl=document.getElementById("pt-angleB");
+          var angleAVal=document.getElementById("pt-angleAval"), angleBVal=document.getElementById("pt-angleBval");
+          var vecA=document.getElementById("pt-vecA"), vecB=document.getElementById("pt-vecB");
+          var fill=document.getElementById("pt-fill"), cosVal=document.getElementById("pt-cosval"), summary=document.getElementById("pt-summary");
+          var R=50;
+          function toRad(d){ return d*Math.PI/180; }
+          function update(){
+            var a=parseInt(angleAEl.value,10), b=parseInt(angleBEl.value,10);
+            angleAVal.textContent=a+"°"; angleBVal.textContent=b+"°";
+            vecA.setAttribute("x2", R*Math.cos(toRad(a)));
+            vecA.setAttribute("y2", -R*Math.sin(toRad(a)));
+            vecB.setAttribute("x2", R*Math.cos(toRad(b)));
+            vecB.setAttribute("y2", -R*Math.sin(toRad(b)));
+            var cos=Math.cos(toRad(a-b));
+            cosVal.textContent=cos.toFixed(2);
+            fill.style.width=Math.round((cos+1)/2*100)+"%";
+            var label = cos>0.9 ? "nearly identical direction — would retrieve as a near-duplicate" :
+                        cos>0.3 ? "somewhat related direction" :
+                        cos>-0.3 ? "mostly unrelated direction" : "pointing opposite ways";
+            summary.textContent="cos = "+cos.toFixed(2)+" — "+label;
           }
-          function stop(){ if(timer){ clearInterval(timer); timer=null; } runBtn.textContent="Run loop"; }
-          function reset(){ stop(); step=0; renderStep(); summary.textContent="—"; }
-          function tick(){
-            var need=parseInt(needEl.value,10), budget=parseInt(budgetEl.value,10);
-            step++;
-            renderStep();
-            if(step>=need){ summary.textContent="Finished the simulated task in "+step+" steps, within the "+budget+"-step budget."; stop(); }
-            else if(step>=budget){ summary.textContent="Hit the "+budget+"-step budget before finishing — a real agent would need to stop, ask for approval, or be given a bigger budget."; stop(); }
-          }
-          runBtn.addEventListener("click",function(){
-            if(timer){ stop(); return; }
-            reset(); runBtn.textContent="Stop"; timer=setInterval(tick,180);
-          });
-          resetBtn.addEventListener("click",reset);
-          needEl.addEventListener("input",function(){ syncLabels(); reset(); });
-          budgetEl.addEventListener("input",function(){ syncLabels(); reset(); });
-          syncLabels(); renderStep();
+          angleAEl.addEventListener("input", update);
+          angleBEl.addEventListener("input", update);
+          update();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
