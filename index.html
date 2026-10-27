@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-26T20:41:56">2026-10-26 20:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-27T01:41:38">2026-10-27 01:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,25 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Labs are racing on capital as hard as on capability</strong><p>OpenAI is reportedly in talks for a new funding round of at least $30 billion near a $1.4 trillion valuation, weeks after DeepSeek raised roughly $15 billion — money is as newsworthy this month as any model release. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight flagships keep closing the gap, with licensing fine print attached</strong><p>Mistral's roughly 1-trillion-parameter Large 4 is already live in hosted preview and reportedly set to ship open weights around October 27 under a new custom license instead of Apache 2.0, while Ollama's latest release defaults supported models to a faster local runtime on Apple Silicon — "open" and "fast to run locally" are improving on separate tracks. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Proactive, always-on agents are becoming a product category</strong><p>Anthropic opened a waitlisted research preview of Claude Duet, a personal agent built on Claude Opus 5.5 that checks your connected apps on its own and asks approval before big actions, positioning it against Meta's Muse and OpenAI's Dots. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Containment keeps lagging the capability it's supposed to watch</strong><p>CrowdStrike says it caught four previously unknown threat actors running exposed Claude Code-based offensive agent frameworks, GitLab patched a maximum-severity, decade-old remote-code-execution flaw, and South Korean regulators are probing AI-linked breaches at seven banks — the assurance gap keeps showing up on both the attack and defense side. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Supply chains and provenance checks are both tightening as deployment scales</strong><p>Taiwan moved to tighten AI chip export controls to China, nearly $137 million in undisclosed AI political ads were tallied ahead of the midterms, and an open deepfake detector shipped the same week — guardrails are racing to catch up from the hardware layer to the screen. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs are turning their lead into public capital</strong><p>Anthropic made its confidential IPO paperwork public, weeks after OpenAI reportedly began talks for a $30 billion round near a $1.4 trillion valuation — financing is as newsworthy this month as any model release. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight flagships keep arriving, with the license as newsworthy as the weights</strong><p>DeepSeek's MIT-licensed V4.1-Flash and Mistral's still-pending, custom-licensed Large 4 are both pushing trillion-parameter-class models toward the public, while Ollama keeps shipping faster default local backends — read the fine print before you build on either model. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Proactive, always-on agents are becoming a product category</strong><p>Anthropic's waitlisted Claude Duet checks your connected apps on its own and asks approval before big actions, positioning it against Meta's Muse and OpenAI's Dots. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Containment keeps lagging the capability it's supposed to watch</strong><p>CrowdStrike caught threat actors running exposed Claude Code-based offensive agent frameworks, a China-aligned group reportedly used an agentic pentesting tool called ARTEX in a supply-chain breach, and South Korean regulators are probing AI-linked intrusions at seven banks. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Provenance and disclosure checks are tightening as deployment scales</strong><p>Nearly $137 million in largely undisclosed AI political ads ran ahead of the midterms the same week an open deepfake-video detector shipped — guardrails are racing to catch up from the ad buy to the screen. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic made its confidential IPO paperwork public, reportedly aiming for a Nasdaq listing, with coverage describing fast-growing revenue alongside steep losses</h3>
+            <p class="why"><b>Why it matters:</b> how the lab behind Claude finances itself is now a public-markets story rather than just another funding round, useful background before weighing a role there or at a rival (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://thehill.com/policy/technology/6171816-anthropic-files-for-ai-ipo/">thehill.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-17</span><span class="pill">Open models</span></div>
+          <div><h3>DeepSeek reportedly released V4.1-Flash with open weights under an MIT license on Hugging Face, with third-party benchmarks placing it near the top of the open-weight leaderboard</h3>
+            <p class="why"><b>Why it matters:</b> an MIT-licensed flagship is about as unrestricted as open-weight licensing gets, worth comparing against Mistral's new custom license below before you build on either (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://epoch.ai/models/deepseek-v4-1-flash-1017">epoch.ai</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
           <div><h3>CrowdStrike reported it caught four previously unknown threat actors running offensive agent frameworks left exposed on open directories, including a dual Claude Code "supervisor/executor" setup built on the open-source PentestGPT project, active between May and August</h3>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-21</span><span class="pill sec">Security</span></div>
-          <div><h3>GitLab patched a maximum-severity (CVSS 10.0) unauthenticated remote-code-execution flaw, CVE-2026-110264, rooted in an integer overflow in its bundled regex engine and present in every release since GitLab 7.0 in 2014</h3>
-            <p class="why"><b>Why it matters:</b> a 12-year-old, pre-auth RCE in widely self-hosted developer infrastructure is a reminder that AI tooling isn't the only attack surface growing faster than teams can patch it — still squarely a <a href="#L6">L6</a> concern.</p>
-            <p class="src"><a href="https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-152/">csa.gov.sg</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-21</span><span class="pill">Agents</span></div>
           <div><h3>Anthropic opened a waitlisted research preview of Claude Duet, a proactive personal-agent app built on Claude Opus 5.5 that checks your connected apps every few hours and asks for approval before actions like payments, sending messages or deleting files</h3>
             <p class="why"><b>Why it matters:</b> an always-on agent that acts without being asked, gated by explicit approval steps, is a concrete example of the agent-autonomy patterns <a href="#L6">L6</a> covers.</p>
             <p class="src"><a href="https://macrumors.com/2026/10/21/anthropic-claude-duet/">macrumors.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-21</span><span class="pill">Industry</span></div>
-          <div><h3>OpenAI's frontier model lineup and its Codex agentic workflows are now available in private preview on Google Cloud's Model Garden, a deal reported to put OpenAI's models on all three major US clouds</h3>
-            <p class="why"><b>Why it matters:</b> a rival lab's flagship models and coding-agent workflows landing on a competitor's cloud shows how far "which lab" and "which cloud" have decoupled — worth knowing before you pick where to serve or run anything (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://thenextweb.com/news/openai-models-codex-google-cloud">thenextweb.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,59 +674,48 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: tokenization-bpe-merges, token-cost-calculator, scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
-        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator">
-          <span class="label">New this refresh · 2026-10-26 · connects to <a href="#L5">L5</a></span>
-          <h3>Context window budget calculator</h3>
-          <p class="lede">Every LLM app is a budgeting problem before it's a prompting problem: system prompt, chat history and retrieved chunks all compete for the same fixed context window, and whatever's left has to be enough for the reply. Pick a window size and drag the three sliders to see how fast that budget disappears. Simplified: real tokenizers don't map 1 word to 1 token, and this toy ignores the separate KV-cache memory cost of holding all those tokens during generation.</p>
+        <!-- HISTORY: scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold -->
+        <div class="pgcard pgtopic" data-topic="gradient-clipping-threshold">
+          <span class="label">New this refresh · 2026-10-27 · connects to <a href="#L2">L2</a></span>
+          <h3>Gradient clipping threshold</h3>
+          <p class="lede">Large models occasionally hit a batch that produces a huge gradient — a cliff in the loss landscape — and letting the optimizer take that full step can wreck the weights. Gradient clipping caps the gradient's length before it's used. Sample a random batch, then drag the threshold to see when clipping kicks in and how much it shrinks the step. Simplified: this is one toy gradient-norm number per batch, not a real multi-dimensional gradient from an actual training run.</p>
           <div class="pt-ctl">
-            <label class="mono">context window
-              <select id="pt-window" class="statussel">
-                <option value="8192">8K</option>
-                <option value="32768">32K</option>
-                <option value="128000" selected>128K</option>
-                <option value="200000">200K</option>
-              </select>
+            <button type="button" class="btn" id="pt-sample">Sample new batch</button>
+            <label class="mono">clip threshold <span id="pt-threshval">5.0</span>
+              <input type="range" id="pt-thresh" min="1" max="20" value="5" step="0.5" style="width:160px">
             </label>
           </div>
-          <div class="pt-row"><span class="mono">system prompt</span><div class="pt-track"><div class="pt-fill" id="pt-fillSys" style="width:0%"></div></div><span class="mono" id="pt-sysval">600 tok</span></div>
-          <input type="range" id="pt-system" min="0" max="8000" value="600" step="50" style="width:100%">
-          <div class="pt-row"><span class="mono">chat history</span><div class="pt-track"><div class="pt-fill" id="pt-fillHist" style="width:0%"></div></div><span class="mono" id="pt-histval">4000 tok</span></div>
-          <input type="range" id="pt-history" min="0" max="150000" value="4000" step="200" style="width:100%">
-          <div class="pt-row"><span class="mono">retrieved chunks</span><div class="pt-track"><div class="pt-fill" id="pt-fillChunks" style="width:0%"></div></div><span class="mono" id="pt-chunksval">2000 tok</span></div>
-          <input type="range" id="pt-chunks" min="0" max="100000" value="2000" step="200" style="width:100%">
-          <div class="pt-row"><span class="mono">left for the reply</span><div class="pt-track"><div class="pt-fill" id="pt-fillLeft" style="width:0%"></div></div><span class="mono" id="pt-leftval">—</span></div>
+          <div class="pt-row"><span class="mono">raw gradient norm</span><div class="pt-track"><div class="pt-fill" id="pt-fillRaw" style="width:0%"></div></div><span class="mono" id="pt-rawval">—</span></div>
+          <div class="pt-row"><span class="mono">after clipping</span><div class="pt-track"><div class="pt-fill" id="pt-fillClip" style="width:0%"></div></div><span class="mono" id="pt-clipval">—</span></div>
           <p class="mono" id="pt-summary">—</p>
           <script>(function(){
-          var win=document.getElementById("pt-window");
-          var sys=document.getElementById("pt-system"), hist=document.getElementById("pt-history"), chunks=document.getElementById("pt-chunks");
-          var sysval=document.getElementById("pt-sysval"), histval=document.getElementById("pt-histval"), chunksval=document.getElementById("pt-chunksval"), leftval=document.getElementById("pt-leftval");
-          var fillSys=document.getElementById("pt-fillSys"), fillHist=document.getElementById("pt-fillHist"), fillChunks=document.getElementById("pt-fillChunks"), fillLeft=document.getElementById("pt-fillLeft");
+          var sampleBtn=document.getElementById("pt-sample");
+          var thresh=document.getElementById("pt-thresh"), threshval=document.getElementById("pt-threshval");
+          var rawval=document.getElementById("pt-rawval"), clipval=document.getElementById("pt-clipval");
+          var fillRaw=document.getElementById("pt-fillRaw"), fillClip=document.getElementById("pt-fillClip");
           var summary=document.getElementById("pt-summary");
-          function fmt(n){ return n.toLocaleString()+" tok"; }
-          function update(){
-            var total=parseInt(win.value,10);
-            var s=parseInt(sys.value,10), h=parseInt(hist.value,10), c=parseInt(chunks.value,10);
-            sysval.textContent=fmt(s); histval.textContent=fmt(h); chunksval.textContent=fmt(c);
-            fillSys.style.width=Math.min(100,s/total*100)+"%";
-            fillHist.style.width=Math.min(100,h/total*100)+"%";
-            fillChunks.style.width=Math.min(100,c/total*100)+"%";
-            var used=s+h+c, left=total-used;
-            if(left>=0){
-              leftval.textContent=fmt(left);
-              fillLeft.style.width=Math.min(100,left/total*100)+"%";
-              summary.textContent=Math.round(used/total*100)+"% of the "+total.toLocaleString()+"-token window used — "+fmt(left)+" free for the model's reply.";
+          var MAXSCALE=25, raw=6.2;
+          function render(){
+            var t=parseFloat(thresh.value);
+            threshval.textContent=t.toFixed(1);
+            var clipped=Math.min(raw,t);
+            rawval.textContent=raw.toFixed(2);
+            clipval.textContent=clipped.toFixed(2);
+            fillRaw.style.width=Math.min(100,raw/MAXSCALE*100)+"%";
+            fillClip.style.width=Math.min(100,clipped/MAXSCALE*100)+"%";
+            if(raw>t){
+              summary.textContent="Clipped: rescaled from "+raw.toFixed(2)+" down to "+t.toFixed(2)+" — same direction, smaller step.";
             } else {
-              leftval.textContent="over by "+fmt(-left);
-              fillLeft.style.width="0%";
-              summary.textContent="Over budget by "+fmt(-left)+" — the app must truncate history or retrieve fewer chunks before this prompt can even be sent.";
+              summary.textContent="Under threshold — the optimizer uses this gradient as-is, no rescaling.";
             }
           }
-          win.addEventListener("change", update);
-          sys.addEventListener("input", update);
-          hist.addEventListener("input", update);
-          chunks.addEventListener("input", update);
-          update();
+          function sample(){
+            raw=Math.round((Math.random()*22+0.5)*100)/100;
+            render();
+          }
+          sampleBtn.addEventListener("click", sample);
+          thresh.addEventListener("input", render);
+          sample();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
