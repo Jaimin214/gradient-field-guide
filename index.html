@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-27T01:41:38">2026-10-27 01:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-27T06:43:00">2026-10-27 06:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier labs are turning their lead into public capital</strong><p>Anthropic made its confidential IPO paperwork public, weeks after OpenAI reportedly began talks for a $30 billion round near a $1.4 trillion valuation — financing is as newsworthy this month as any model release. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight flagships keep arriving, with the license as newsworthy as the weights</strong><p>DeepSeek's MIT-licensed V4.1-Flash and Mistral's still-pending, custom-licensed Large 4 are both pushing trillion-parameter-class models toward the public, while Ollama keeps shipping faster default local backends — read the fine print before you build on either model. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Proactive, always-on agents are becoming a product category</strong><p>Anthropic's waitlisted Claude Duet checks your connected apps on its own and asks approval before big actions, positioning it against Meta's Muse and OpenAI's Dots. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight flagships keep arriving, with the license as newsworthy as the weights</strong><p>Mistral's roughly 1-trillion-parameter Large 4 reportedly shipped open weights around October 27 under a new custom license, days after DeepSeek's MIT-licensed V4.1-Flash — read the terms before you build on either. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs are turning their lead into public capital</strong><p>Anthropic made its confidential IPO paperwork public and DeepSeek reportedly raised roughly $15 billion — financing is as newsworthy this month as any model release. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Containment keeps lagging the capability it's supposed to watch</strong><p>CrowdStrike caught threat actors running exposed Claude Code-based offensive agent frameworks, a China-aligned group reportedly used an agentic pentesting tool called ARTEX in a supply-chain breach, and South Korean regulators are probing AI-linked intrusions at seven banks. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Provenance and disclosure checks are tightening as deployment scales</strong><p>Nearly $137 million in largely undisclosed AI political ads ran ahead of the midterms the same week an open deepfake-video detector shipped — guardrails are racing to catch up from the ad buy to the screen. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Norms for human–AI interaction and model containment are hardening</strong><p>Anthropic will start enforcing a ban on sustained, needless cruelty toward Claude on November 12, the same stretch in which OpenAI said it's training its newest models without open internet access until its safeguards catch up. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-27</span><span class="pill">Open models</span></div>
+          <div><h3>Mistral reportedly published open weights for its roughly 1-trillion-parameter Large 4 model around October 27, under a new custom license rather than the Apache 2.0 terms used for Large 3, following its October 6 hosted preview and a round of red-teaming</h3>
+            <p class="why"><b>Why it matters:</b> "open-weight" increasingly means "open, with a license worth reading first" — compare these terms against DeepSeek's MIT-licensed V4.1-Flash before building on either (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://thenewstack.io/mistral-large-4-weights/">thenewstack.io</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-26</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic made its confidential IPO paperwork public, reportedly aiming for a Nasdaq listing, with coverage describing fast-growing revenue alongside steep losses</h3>
@@ -410,10 +416,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thehill.com/policy/technology/6171816-anthropic-files-for-ai-ipo/">thehill.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-17</span><span class="pill">Open models</span></div>
-          <div><h3>DeepSeek reportedly released V4.1-Flash with open weights under an MIT license on Hugging Face, with third-party benchmarks placing it near the top of the open-weight leaderboard</h3>
-            <p class="why"><b>Why it matters:</b> an MIT-licensed flagship is about as unrestricted as open-weight licensing gets, worth comparing against Mistral's new custom license below before you build on either (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://epoch.ai/models/deepseek-v4-1-flash-1017">epoch.ai</a></p></div>
+          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Research</span></div>
+          <div><h3>Researchers reportedly identified and fixed two long-standing numerical bugs in standard softmax and cross-entropy implementations — dubbed "softmax collapse" and "softmax cancellation" — that silently zero out gradients for extreme or near-identical logits</h3>
+            <p class="why"><b>Why it matters:</b> a correctness bug sitting underneath nearly every classifier's loss function is a reminder that the math from <a href="#L0">L0</a> isn't just theory — it decides whether a model actually learns.</p>
+            <p class="src"><a href="https://deeplearn.org/arxiv/854498/a-fix-for-softmax-and-cross-entropy">deeplearn.org</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
@@ -432,18 +438,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Ollama shipped version 0.40, which reportedly runs supported models through Apple's MLX runtime by default on Apple Silicon instead of llama.cpp, and added a column to its process-list command showing which backend serves each loaded model</h3>
             <p class="why"><b>Why it matters:</b> the local-model tooling in <a href="#L4">L4</a> keeps picking up faster default backends with no config changes needed, worth checking before you benchmark your own machine.</p>
             <p class="src"><a href="https://www.developersdigest.tech/blog/ollama-0-40-mlx-default-disk-doubling-2026">developersdigest.tech</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
-          <div><h3>OpenAI is reportedly in talks to raise at least $30 billion in a new round that would value the company near $1.4 trillion, described as bridge financing in place of an IPO, with annualized revenue said to be approaching $70 billion</h3>
-            <p class="why"><b>Why it matters:</b> how a lab finances compute at this scale says as much about where the frontier race is headed as any benchmark score, and it's a live data point for the capital-race story in <a href="#L7">L7</a>.</p>
-            <p class="src"><a href="https://pulse2.com/openai-reportedly-targets-at-least-30-billion-funding-at-1-4-trillion-valuation/">pulse2.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-24</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral confirmed its roughly 1-trillion-parameter Large 4 will ship under a new custom license rather than the Apache 2.0 terms used for Large 3, with open weights still targeted for around October 27 after a round of red-teaming</h3>
-            <p class="why"><b>Why it matters:</b> "open-weight" increasingly means "open, with a license worth actually reading" before you build on top of a newly released model (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://betanews.com/article/mistral-large-4-preview-open-weights/">betanews.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-23</span><span class="pill">Policy</span></div>
@@ -492,6 +486,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic opened a waitlisted research preview of Claude Duet, a proactive personal-agent app built on Claude Opus 5.5 that checks your connected apps every few hours and asks for approval before actions like payments, sending messages or deleting files</h3>
             <p class="why"><b>Why it matters:</b> an always-on agent that acts without being asked, gated by explicit approval steps, is a concrete example of the agent-autonomy patterns <a href="#L6">L6</a> covers.</p>
             <p class="src"><a href="https://macrumors.com/2026/10/21/anthropic-claude-duet/">macrumors.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-08</span><span class="pill sec">Safety</span></div>
+          <div><h3>Anthropic updated its usage policy to prohibit sustained, needless cruelty toward Claude, taking effect November 12, with ending the conversation remaining the primary way it enforces the rule</h3>
+            <p class="why"><b>Why it matters:</b> a lab writing rules about how humans treat a model, not just what a model is allowed to do, is a new kind of policy question worth tracking alongside the containment debate in <a href="#L6">L6</a>.</p>
+            <p class="src"><a href="https://www.macrumors.com/2026/10/08/anthropic-user-guideline-update/">macrumors.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,48 +674,59 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: scaling-law-curve, learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold -->
-        <div class="pgcard pgtopic" data-topic="gradient-clipping-threshold">
-          <span class="label">New this refresh · 2026-10-27 · connects to <a href="#L2">L2</a></span>
-          <h3>Gradient clipping threshold</h3>
-          <p class="lede">Large models occasionally hit a batch that produces a huge gradient — a cliff in the loss landscape — and letting the optimizer take that full step can wreck the weights. Gradient clipping caps the gradient's length before it's used. Sample a random batch, then drag the threshold to see when clipping kicks in and how much it shrinks the step. Simplified: this is one toy gradient-norm number per batch, not a real multi-dimensional gradient from an actual training run.</p>
+        <!-- HISTORY: learning-rate-schedule, precision-recall-threshold-slider, beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge -->
+        <div class="pgcard pgtopic" data-topic="bpe-tokenization-merge">
+          <span class="label">New this refresh · 2026-10-27 · connects to <a href="#L3">L3</a></span>
+          <h3>Byte-pair merge steps</h3>
+          <p class="lede">Byte-pair encoding (BPE) builds a tokenizer's vocabulary by repeatedly merging the most frequent adjacent pair of symbols seen in training text. Click "Merge next pair" to watch a short phrase collapse from single characters into larger chunks, one merge at a time — this is roughly how the licenses-and-weights releases in this week's feed, like Mistral Large 4, get their vocabularies built. Simplified: it merges within one short phrase instead of a large corpus, and skips the byte-level encoding real tokenizers use.</p>
           <div class="pt-ctl">
-            <button type="button" class="btn" id="pt-sample">Sample new batch</button>
-            <label class="mono">clip threshold <span id="pt-threshval">5.0</span>
-              <input type="range" id="pt-thresh" min="1" max="20" value="5" step="0.5" style="width:160px">
-            </label>
+            <button type="button" class="btn" id="pt-reset">Reset phrase</button>
+            <button type="button" class="btn primary" id="pt-merge">Merge next pair</button>
+            <span class="mono">merges so far: <span id="pt-count">0</span></span>
           </div>
-          <div class="pt-row"><span class="mono">raw gradient norm</span><div class="pt-track"><div class="pt-fill" id="pt-fillRaw" style="width:0%"></div></div><span class="mono" id="pt-rawval">—</span></div>
-          <div class="pt-row"><span class="mono">after clipping</span><div class="pt-track"><div class="pt-fill" id="pt-fillClip" style="width:0%"></div></div><span class="mono" id="pt-clipval">—</span></div>
-          <p class="mono" id="pt-summary">—</p>
+          <p class="mono" id="pt-tokens" style="word-break:break-all"></p>
+          <p class="mono" id="pt-info">—</p>
           <script>(function(){
-          var sampleBtn=document.getElementById("pt-sample");
-          var thresh=document.getElementById("pt-thresh"), threshval=document.getElementById("pt-threshval");
-          var rawval=document.getElementById("pt-rawval"), clipval=document.getElementById("pt-clipval");
-          var fillRaw=document.getElementById("pt-fillRaw"), fillClip=document.getElementById("pt-fillClip");
-          var summary=document.getElementById("pt-summary");
-          var MAXSCALE=25, raw=6.2;
-          function render(){
-            var t=parseFloat(thresh.value);
-            threshval.textContent=t.toFixed(1);
-            var clipped=Math.min(raw,t);
-            rawval.textContent=raw.toFixed(2);
-            clipval.textContent=clipped.toFixed(2);
-            fillRaw.style.width=Math.min(100,raw/MAXSCALE*100)+"%";
-            fillClip.style.width=Math.min(100,clipped/MAXSCALE*100)+"%";
-            if(raw>t){
-              summary.textContent="Clipped: rescaled from "+raw.toFixed(2)+" down to "+t.toFixed(2)+" — same direction, smaller step.";
-            } else {
-              summary.textContent="Under threshold — the optimizer uses this gradient as-is, no rescaling.";
-            }
-          }
-          function sample(){
-            raw=Math.round((Math.random()*22+0.5)*100)/100;
+          var PHRASE="low lower lowest";
+          var tokens, count;
+          var tokensEl=document.getElementById("pt-tokens"), infoEl=document.getElementById("pt-info"), countEl=document.getElementById("pt-count");
+          function reset(){
+            tokens=PHRASE.split("").map(function(c){return c===" "?"␣":c;});
+            count=0;
             render();
           }
-          sampleBtn.addEventListener("click", sample);
-          thresh.addEventListener("input", render);
-          sample();
+          function mostFrequentPair(){
+            var counts={};
+            for(var i=0;i<tokens.length-1;i++){
+              var pair=tokens[i]+"\u0001"+tokens[i+1];
+              counts[pair]=(counts[pair]||0)+1;
+            }
+            var best=null,bestN=0;
+            for(var p in counts){ if(counts[p]>bestN){bestN=counts[p];best=p;} }
+            return bestN>1?{pair:best,n:bestN}:null;
+          }
+          function merge(){
+            var found=mostFrequentPair();
+            if(!found){ infoEl.textContent="No pair repeats more than once — fully merged for this toy phrase."; return; }
+            var parts=found.pair.split("\u0001");
+            var merged=parts[0]+parts[1];
+            var next=[];
+            for(var i=0;i<tokens.length;i++){
+              if(i<tokens.length-1 && tokens[i]===parts[0] && tokens[i+1]===parts[1]){
+                next.push(merged); i++;
+              } else { next.push(tokens[i]); }
+            }
+            tokens=next; count++;
+            infoEl.textContent="Merged \""+parts[0]+"\" + \""+parts[1]+"\" (seen "+found.n+"x) into \""+merged+"\".";
+            render();
+          }
+          function render(){
+            tokensEl.textContent=tokens.join(" · ");
+            countEl.textContent=count;
+          }
+          document.getElementById("pt-reset").addEventListener("click", reset);
+          document.getElementById("pt-merge").addEventListener("click", merge);
+          reset();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
