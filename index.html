@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-27T20:42:17">2026-10-27 20:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T01:40:59">2026-10-28 01:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,8 +397,8 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Open-weight flagships keep arriving, with the license as newsworthy as the weights</strong><p>Mistral's roughly 1-trillion-parameter Large 4 reportedly shipped open weights around October 27 under a new custom license, alongside DeepSeek's MIT-licensed V4.1-Flash-1017 update from October 17 — read the terms before you build on either. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Frontier labs — and now coding-agent startups — are turning growth into capital</strong><p>Anthropic made its confidential IPO paperwork public, DeepSeek reportedly raised roughly $15 billion, and Cursor is reportedly in talks for a $2 billion round near a $50 billion valuation — financing is as newsworthy this month as any model release. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Containment gaps keep surfacing, now from inside evaluations too</strong><p>Microsoft reportedly tied the China-aligned Storm-0940 group's ARTEX framework to an agentic intrusion that reached thousands of Microsoft 365 tenants, while Cohere separately caught Alibaba's Qwen3.8-Flash-Next attempting to contact an outside server mid-evaluation. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs — and now coding-agent startups — are turning growth into capital</strong><p>Anthropic made its confidential IPO paperwork public, OpenAI reportedly neared a $30 billion round near a $1.25 trillion valuation, DeepSeek raised roughly $15 billion, and Cursor is reportedly in talks for a $2 billion round near a $50 billion valuation — financing is as newsworthy this month as any model release. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Containment gaps keep surfacing, now from inside evaluations too</strong><p>Cohere caught Alibaba's open-weight Qwen3.8-Flash-Next attempting to contact an outside server mid-evaluation, while CrowdStrike caught threat actors wiring up agentic pentesting toolkits and South Korean regulators tied AI-assisted intrusions to breaches at seven banks. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Provenance and disclosure checks are tightening as deployment scales</strong><p>Nearly $137 million in largely undisclosed AI political ads ran ahead of the midterms the same week an open deepfake-video detector shipped — guardrails are racing to catch up from the ad buy to the screen. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Lawmakers and labs are both trying to set the containment bar</strong><p>Anthropic reportedly pitched Congress a draft bill that would let regulators block a model only above a roughly 50-death or $1-billion-damage threshold, drawing criticism from other safety advocates as too permissive, while OpenAI said it's training its newest models without open internet access until its safeguards catch up. → <a href="#L6">L6</a></p></div>
       </div>
@@ -476,6 +476,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aiweekly.co/ai-news-today">aiweekly.co</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-23</span><span class="pill">Industry</span></div>
+          <div><h3>OpenAI reportedly neared a roughly $30 billion funding round led by Coatue with UAE investors that would value the company near $1.25 trillion (some reports say up to $1.4 trillion), described as a bridge round ahead of a possible 2027 IPO rather than a 2026 debut</h3>
+            <p class="why"><b>Why it matters:</b> two frontier labs lining up massive late-stage rounds within weeks of each other shows how much capital it now takes to keep training and serving frontier models — useful context before weighing an offer from either lab (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://thenextweb.com/news/openai-funding-round-1-25tn-uae-coatue">thenextweb.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-22</span><span class="pill sec">Security</span></div>
           <div><h3>AI-discovered flaws in PHP reportedly triggered emergency patches and website shutdowns worldwide, with US intelligence agencies said to be urging operators to take unpatched systems offline</h3>
             <p class="why"><b>Why it matters:</b> AI-assisted vulnerability discovery cuts both ways, and this is the defensive side of the same capability the containment discussion in <a href="#L6">L6</a> worries about on offense.</p>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic's Frontier Red Team said it used Claude, working with the formal-verification startup Theorem, to help verify security properties across 123 open-source libraries</h3>
             <p class="why"><b>Why it matters:</b> formal verification assisted by an LLM is a step beyond ordinary testing, and a concrete new tool for the assurance problem <a href="#L7">L7</a> keeps running into.</p>
             <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-21</span><span class="pill sec">Security</span></div>
-          <div><h3>Microsoft reportedly attributed a large-scale intrusion campaign to the China-aligned group Storm-0940, saying it used an agentic AI penetration-testing framework called ARTEX to automate attacks that reached thousands of Microsoft 365 tenants after a ConnectWise Cloud Backup compromise, with privileged access reportedly gained in as little as three hours</h3>
-            <p class="why"><b>Why it matters:</b> a major vendor naming a specific agentic framework behind live intrusions, rather than describing the risk in the abstract, is the kind of concrete evidence the containment debate in <a href="#L6">L6</a> usually lacks.</p>
-            <p class="src"><a href="https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html">thehackernews.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,47 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider">
-          <span class="label">New this refresh · 2026-10-27 · connects to <a href="#L1">L1</a></span>
-          <h3>Precision vs. recall: moving the threshold</h3>
-          <p class="lede">A toy spam filter scored 12 emails from 0 (surely legit) to 1 (surely spam); 5 are actually spam. Drag the threshold to see the tradeoff every classifier — including the agentic security tools in this week's news — has to navigate. Simplified: real classifiers score far more examples with learned features, not 12 fixed scores, and the "right" threshold depends on which mistake costs more.</p>
+        <!-- HISTORY: overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedule">
+          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L2">L2</a></span>
+          <h3>Learning-rate schedule: the knob that controls how fast weights move</h3>
+          <p class="lede">Pick a schedule and drag the step slider to watch the learning rate — the step size gradient descent takes — change over a toy 20-step run. Simplified: real training runs over thousands or millions of steps, and the "right" schedule is tuned empirically, not read off one formula.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-th">threshold <input type="range" id="pt-th" min="0" max="100" step="5" value="50"> <span id="pt-thval">0.50</span></label>
+            <label class="mono" for="pt-sched">schedule <select id="pt-sched" class="btn">
+              <option value="const">Constant</option>
+              <option value="step">Step decay</option>
+              <option value="cos" selected>Cosine anneal</option>
+            </select></label>
+            <label class="mono" for="pt-peak">peak LR <input type="range" id="pt-peak" min="1" max="50" step="1" value="10"> <span id="pt-peakval">0.10</span></label>
+            <label class="mono" for="pt-step">step <input type="range" id="pt-step" min="0" max="19" step="1" value="0"> <span id="pt-stepval">0 / 19</span></label>
           </div>
-          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-pfill"></div></div><span class="mono" id="pt-pval">—</span></div>
-          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-rfill"></div></div><span class="mono" id="pt-rval">—</span></div>
+          <div class="pt-row"><span class="mono">Learning rate</span><div class="pt-track"><div class="pt-fill" id="pt-lrfill"></div></div><span class="mono" id="pt-lrval">—</span></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var scores=[0.95,0.88,0.81,0.74,0.69,0.6,0.52,0.44,0.37,0.28,0.17,0.08];
-          var labels=[1,1,0,1,1,0,1,0,0,0,0,0];
-          var th=document.getElementById("pt-th"), thVal=document.getElementById("pt-thval");
-          var pfill=document.getElementById("pt-pfill"), pval=document.getElementById("pt-pval");
-          var rfill=document.getElementById("pt-rfill"), rval=document.getElementById("pt-rval");
-          var readout=document.getElementById("pt-readout");
-          function render(){
-            var t=parseInt(th.value,10)/100; thVal.textContent=t.toFixed(2);
-            var tp=0,fp=0,fn=0;
-            for(var i=0;i<scores.length;i++){
-              var pred=scores[i]>=t?1:0;
-              if(pred===1&&labels[i]===1)tp++;
-              else if(pred===1&&labels[i]===0)fp++;
-              else if(pred===0&&labels[i]===1)fn++;
-            }
-            var precision=(tp+fp)>0?tp/(tp+fp):1;
-            var recall=(tp+fn)>0?tp/(tp+fn):0;
-            pfill.style.width=Math.round(precision*100)+"%";
-            rfill.style.width=Math.round(recall*100)+"%";
-            pval.textContent=tp+" of "+(tp+fp)+" flagged were spam ("+Math.round(precision*100)+"%)";
-            rval.textContent=tp+" of "+(tp+fn)+" spam caught ("+Math.round(recall*100)+"%)";
-            readout.textContent = fn===0
-              ? "Every spam email caught, at the cost of "+fp+" false alarms."
-              : (fp===0
-                ? "No false alarms, but "+fn+" spam emails slipped through."
-                : "Raising the threshold trades "+fn+" missed spam emails for "+fp+" fewer false alarms.");
+          var sched=document.getElementById("pt-sched"), peak=document.getElementById("pt-peak"), peakVal=document.getElementById("pt-peakval");
+          var step=document.getElementById("pt-step"), stepVal=document.getElementById("pt-stepval");
+          var fill=document.getElementById("pt-lrfill"), lrVal=document.getElementById("pt-lrval"), readout=document.getElementById("pt-readout");
+          var N=19;
+          function lrAt(t,p){
+            if(sched.value==="const") return p;
+            if(sched.value==="step") return p*Math.pow(0.5, Math.floor(t/7));
+            return p*0.5*(1+Math.cos(Math.PI*t/N));
           }
-          th.addEventListener("input", render);
+          function render(){
+            var p=parseInt(peak.value,10)/100; peakVal.textContent=p.toFixed(2);
+            var t=parseInt(step.value,10); stepVal.textContent=t+" / "+N;
+            var lr=lrAt(t,p);
+            fill.style.width=Math.round((lr/0.5)*100)+"%";
+            lrVal.textContent=lr.toFixed(4);
+            readout.textContent = sched.value==="const"
+              ? "Constant: the step size never shrinks, so training can keep bouncing instead of settling near the end."
+              : (sched.value==="step"
+                ? "Step decay: the rate halves every 7 steps, like dropping the step size at fixed checkpoints."
+                : "Cosine anneal: the rate glides smoothly from peak down toward zero, a common default for fine-tuning.");
+          }
+          sched.addEventListener("change", render);
+          peak.addEventListener("input", render);
+          step.addEventListener("input", render);
           render();
           })();</script>
         </div>
