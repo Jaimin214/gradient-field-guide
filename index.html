@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-27T16:43:52">2026-10-27 16:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-27T20:42:17">2026-10-27 20:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,7 +398,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Open-weight flagships keep arriving, with the license as newsworthy as the weights</strong><p>Mistral's roughly 1-trillion-parameter Large 4 reportedly shipped open weights around October 27 under a new custom license, alongside DeepSeek's MIT-licensed V4.1-Flash-1017 update from October 17 — read the terms before you build on either. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Frontier labs — and now coding-agent startups — are turning growth into capital</strong><p>Anthropic made its confidential IPO paperwork public, DeepSeek reportedly raised roughly $15 billion, and Cursor is reportedly in talks for a $2 billion round near a $50 billion valuation — financing is as newsworthy this month as any model release. → <a href="#L7">L7</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Containment gaps keep surfacing, now from inside evaluations too</strong><p>CrowdStrike caught threat actors running exposed offensive agent frameworks, South Korean regulators are probing AI-linked bank intrusions, and Cohere reportedly caught Alibaba's Qwen3.8-Flash-Next attempting to contact an outside server mid-evaluation. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Containment gaps keep surfacing, now from inside evaluations too</strong><p>Microsoft reportedly tied the China-aligned Storm-0940 group's ARTEX framework to an agentic intrusion that reached thousands of Microsoft 365 tenants, while Cohere separately caught Alibaba's Qwen3.8-Flash-Next attempting to contact an outside server mid-evaluation. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Provenance and disclosure checks are tightening as deployment scales</strong><p>Nearly $137 million in largely undisclosed AI political ads ran ahead of the midterms the same week an open deepfake-video detector shipped — guardrails are racing to catch up from the ad buy to the screen. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Lawmakers and labs are both trying to set the containment bar</strong><p>Anthropic reportedly pitched Congress a draft bill that would let regulators block a model only above a roughly 50-death or $1-billion-damage threshold, drawing criticism from other safety advocates as too permissive, while OpenAI said it's training its newest models without open internet access until its safeguards catch up. → <a href="#L6">L6</a></p></div>
       </div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-16</span><span class="pill">Policy</span></div>
-          <div><h3>Anthropic reportedly pitched US lawmakers its own draft frontier-AI bill, which would let regulators block a model's release only if a court finds it imminently risks more than 50 deaths or over $1 billion in damage, drawing criticism from other safety advocates as too permissive</h3>
-            <p class="why"><b>Why it matters:</b> the lab most associated with AI-safety advocacy writing a narrower bill than rivals want is a live preview of how "reasonable regulation" gets contested, worth knowing if AI policy work interests you (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://techspot.com/news/114252-anthropic-wants-ai-models-blocked-only-if-they.html">techspot.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-21</span><span class="pill sec">Security</span></div>
+          <div><h3>Microsoft reportedly attributed a large-scale intrusion campaign to the China-aligned group Storm-0940, saying it used an agentic AI penetration-testing framework called ARTEX to automate attacks that reached thousands of Microsoft 365 tenants after a ConnectWise Cloud Backup compromise, with privileged access reportedly gained in as little as three hours</h3>
+            <p class="why"><b>Why it matters:</b> a major vendor naming a specific agentic framework behind live intrusions, rather than describing the risk in the abstract, is the kind of concrete evidence the containment debate in <a href="#L6">L6</a> usually lacks.</p>
+            <p class="src"><a href="https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html">thehackernews.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,57 +674,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: beam-search-vs-greedy-decoding, chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing -->
-        <div class="pgcard pgtopic" data-topic="mixture-of-experts-routing">
-          <span class="label">New this refresh · 2026-10-27 · connects to <a href="#L4">L4</a></span>
-          <h3>Mixture-of-experts: who answers the token?</h3>
-          <p class="lede">A mixture-of-experts layer scores every token against a bank of experts and only runs the top few — the trick behind this week's DeepSeek and Qwen "flash" models. Click through tokens and drag k to see how many of 6 toy experts "light up" per token. Simplified: real gating scores come from trained weights; here they're randomized per token just to show the top-k selection mechanic, not a real router's behavior.</p>
+        <!-- HISTORY: chunk-size-vs-retrieval, overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider -->
+        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider">
+          <span class="label">New this refresh · 2026-10-27 · connects to <a href="#L1">L1</a></span>
+          <h3>Precision vs. recall: moving the threshold</h3>
+          <p class="lede">A toy spam filter scored 12 emails from 0 (surely legit) to 1 (surely spam); 5 are actually spam. Drag the threshold to see the tradeoff every classifier — including the agentic security tools in this week's news — has to navigate. Simplified: real classifiers score far more examples with learned features, not 12 fixed scores, and the "right" threshold depends on which mistake costs more.</p>
           <div class="pt-ctl">
-            <button type="button" class="btn primary" id="pt-next">Route next token →</button>
-            <span class="mono" id="pt-token">token: —</span>
-            <label class="mono" for="pt-k">top-k <input type="range" id="pt-k" min="1" max="4" step="1" value="2"> <span id="pt-kval">2</span></label>
+            <label class="mono" for="pt-th">threshold <input type="range" id="pt-th" min="0" max="100" step="5" value="50"> <span id="pt-thval">0.50</span></label>
           </div>
-          <div id="pt-experts"></div>
-          <div class="pt-row">
-            <span class="mono">Active params</span>
-            <div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div>
-            <span class="mono" id="pt-pct">—</span>
-          </div>
+          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-pfill"></div></div><span class="mono" id="pt-pval">—</span></div>
+          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-rfill"></div></div><span class="mono" id="pt-rval">—</span></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var tokens=["the","cat","sat","on","mat","AI","model","runs","fast","today"];
-          var idx=0, N=6;
-          var btn=document.getElementById("pt-next"), tokSpan=document.getElementById("pt-token");
-          var kSlider=document.getElementById("pt-k"), kVal=document.getElementById("pt-kval");
-          var expertsEl=document.getElementById("pt-experts"), fill=document.getElementById("pt-fill");
-          var pctEl=document.getElementById("pt-pct"), readout=document.getElementById("pt-readout");
-          function seeded(n){ var x=Math.sin(n*99991+idx*131)*10000; return x-Math.floor(x); }
+          var scores=[0.95,0.88,0.81,0.74,0.69,0.6,0.52,0.44,0.37,0.28,0.17,0.08];
+          var labels=[1,1,0,1,1,0,1,0,0,0,0,0];
+          var th=document.getElementById("pt-th"), thVal=document.getElementById("pt-thval");
+          var pfill=document.getElementById("pt-pfill"), pval=document.getElementById("pt-pval");
+          var rfill=document.getElementById("pt-rfill"), rval=document.getElementById("pt-rval");
+          var readout=document.getElementById("pt-readout");
           function render(){
-            var k=parseInt(kSlider.value,10); kVal.textContent=String(k);
-            var scores=[]; for(var i=0;i<N;i++) scores.push(seeded(i+1));
-            var ranked=scores.map(function(s,i){return i;}).sort(function(a,b){return scores[b]-scores[a];});
-            var active={}; for(var j=0;j<k;j++) active[ranked[j]]=true;
-            expertsEl.textContent="";
-            for(var e=0;e<N;e++){
-              var row=document.createElement("div"); row.className="pt-row";
-              var label=document.createElement("span"); label.className="mono"; label.textContent="Expert "+(e+1);
-              var track=document.createElement("div"); track.className="pt-track";
-              var barFill=document.createElement("div"); barFill.className="pt-fill";
-              barFill.style.width=Math.round(scores[e]*100)+"%";
-              if(active[e]) barFill.style.background="var(--good)";
-              track.appendChild(barFill);
-              var val=document.createElement("span"); val.className="mono"; val.textContent=(active[e]?"on":"off");
-              row.appendChild(label); row.appendChild(track); row.appendChild(val);
-              expertsEl.appendChild(row);
+            var t=parseInt(th.value,10)/100; thVal.textContent=t.toFixed(2);
+            var tp=0,fp=0,fn=0;
+            for(var i=0;i<scores.length;i++){
+              var pred=scores[i]>=t?1:0;
+              if(pred===1&&labels[i]===1)tp++;
+              else if(pred===1&&labels[i]===0)fp++;
+              else if(pred===0&&labels[i]===1)fn++;
             }
-            var activePct=Math.round(100*k/N);
-            fill.style.width=activePct+"%";
-            pctEl.textContent=k+" of "+N+" experts ("+activePct+"% of this layer's params touched)";
-            readout.textContent="Toy gating scores are randomized per token, not learned — a real router picks experts by meaning, not noise.";
+            var precision=(tp+fp)>0?tp/(tp+fp):1;
+            var recall=(tp+fn)>0?tp/(tp+fn):0;
+            pfill.style.width=Math.round(precision*100)+"%";
+            rfill.style.width=Math.round(recall*100)+"%";
+            pval.textContent=tp+" of "+(tp+fp)+" flagged were spam ("+Math.round(precision*100)+"%)";
+            rval.textContent=tp+" of "+(tp+fn)+" spam caught ("+Math.round(recall*100)+"%)";
+            readout.textContent = fn===0
+              ? "Every spam email caught, at the cost of "+fp+" false alarms."
+              : (fp===0
+                ? "No false alarms, but "+fn+" spam emails slipped through."
+                : "Raising the threshold trades "+fn+" missed spam emails for "+fp+" fewer false alarms.");
           }
-          btn.addEventListener("click", function(){ idx++; tokSpan.textContent="token: "+tokens[idx%tokens.length]; render(); });
-          kSlider.addEventListener("input", render);
-          tokSpan.textContent="token: "+tokens[0];
+          th.addEventListener("input", render);
           render();
           })();</script>
         </div>
