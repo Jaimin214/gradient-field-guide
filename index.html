@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T11:42:29">2026-10-28 11:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T16:39:46">2026-10-28 16:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,54 +674,55 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability -->
-        <div class="pgcard pgtopic" data-topic="softmax-numerical-stability">
-          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L0">L0</a></span>
-          <h3>Why softmax needs a "subtract the max" trick</h3>
-          <p class="lede">Four toy logits get multiplied by a scale slider, then run through two softmax formulas: the textbook one (exponentiate, then normalize) and the stable one every real library uses (subtract the max logit first). Drag the slider up and watch the textbook version break. Simplified to 4 numbers and real JS floating-point — no actual model or benchmark numbers involved.</p>
+        <!-- HISTORY: speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size -->
+        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size">
+          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L1">L1</a></span>
+          <h3>Why a bigger model can score worse on new data</h3>
+          <p class="lede">Drag the model-complexity slider and watch training error keep falling while test error dips, then climbs back up — the classic bias-variance tradeoff behind overfitting. The two curves are a stylized textbook shape computed from a simple formula, not measurements from any real model or dataset; a real learning curve is noisier and depends heavily on how much training data you have.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-scale">logit scale <input type="range" id="pt-scale" min="1" max="100" step="1" value="5"> <span id="pt-scaleval">5×</span></label>
+            <label class="mono" for="pt-complexity">model complexity <input type="range" id="pt-complexity" min="1" max="30" step="1" value="1"> <span id="pt-complexityval">1</span></label>
           </div>
           <div id="pt-rows"></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var BASE=[8,3,1,-5];
-          var scaleEl=document.getElementById("pt-scale"), scaleVal=document.getElementById("pt-scaleval");
+          var el=document.getElementById("pt-complexity"), val=document.getElementById("pt-complexityval");
           var rows=document.getElementById("pt-rows"), readout=document.getElementById("pt-readout");
-          function pct(p){ return isFinite(p) ? (p*100).toFixed(1)+"%" : "NaN"; }
-          function render(){
-            var s=Number(scaleEl.value); scaleVal.textContent=s+"×";
-            var logits=BASE.map(function(x){ return x*s; });
-            var naiveExp=logits.map(function(x){ return Math.exp(x); });
-            var naiveSum=naiveExp.reduce(function(a,b){ return a+b; },0);
-            var naiveP=naiveExp.map(function(e){ return e/naiveSum; });
-            var m=Math.max.apply(null,logits);
-            var stableExp=logits.map(function(x){ return Math.exp(x-m); });
-            var stableSum=stableExp.reduce(function(a,b){ return a+b; },0);
-            var stableP=stableExp.map(function(e){ return e/stableSum; });
-            rows.innerHTML="";
-            for(var i=0;i<logits.length;i++){
-              var row=document.createElement("div");
-              row.className="pt-row";
-              var label=document.createElement("span");
-              label.textContent="x"+i+" = "+logits[i].toFixed(0);
-              var track=document.createElement("div");
-              track.className="pt-track";
-              var fill=document.createElement("div");
-              fill.className="pt-fill";
-              fill.style.width=(isFinite(stableP[i])?stableP[i]*100:0)+"%";
-              track.appendChild(fill);
-              var out=document.createElement("span");
-              out.textContent="stable "+pct(stableP[i])+" · naive "+pct(naiveP[i]);
-              row.appendChild(label); row.appendChild(track); row.appendChild(out);
-              rows.appendChild(row);
-            }
-            var broke=naiveExp.some(function(e){ return !isFinite(e); })||!isFinite(naiveSum)||naiveSum===0;
-            readout.textContent=broke
-              ? "At this scale exp() overflows to Infinity before normalizing — the naive column reads NaN while the max-subtracted version stays correct."
-              : "At this scale both formulas still agree — push the slider higher to make the naive one overflow.";
+          var NOISE=0.08, MAXERR=0.6;
+          function trainErr(c){ return NOISE + 0.4/c; }
+          function testErr(c){ return NOISE + 0.4/c + (c*c)/400; }
+          var best=1, bestErr=Infinity;
+          for(var c=1;c<=30;c++){ var e=testErr(c); if(e<bestErr){ bestErr=e; best=c; } }
+          function bar(label,value){
+            var row=document.createElement("div");
+            row.className="pt-row";
+            var lab=document.createElement("span");
+            lab.textContent=label;
+            var track=document.createElement("div");
+            track.className="pt-track";
+            var fill=document.createElement("div");
+            fill.className="pt-fill";
+            fill.style.width=Math.min(100,(value/MAXERR)*100)+"%";
+            track.appendChild(fill);
+            var out=document.createElement("span");
+            out.textContent=value.toFixed(3);
+            row.appendChild(lab); row.appendChild(track); row.appendChild(out);
+            return row;
           }
-          scaleEl.addEventListener("input", render);
+          function render(){
+            var c=Number(el.value); val.textContent=c;
+            var tr=trainErr(c), te=testErr(c);
+            rows.innerHTML="";
+            rows.appendChild(bar("train error",tr));
+            rows.appendChild(bar("test error",te));
+            var gap=te-tr;
+            var msg = c<best
+              ? "Underfitting: both errors are still falling together — more complexity would help."
+              : (c===best
+                ? "Near the sweet spot (complexity ≈ "+best+") — test error is close to its minimum here."
+                : "Overfitting: training error keeps dropping but test error is climbing back up, gap = "+gap.toFixed(3)+".");
+            readout.textContent=msg;
+          }
+          el.addEventListener("input", render);
           render();
           })();</script>
         </div>
