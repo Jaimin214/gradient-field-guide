@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T06:44:40">2026-10-28 06:44</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T11:42:29">2026-10-28 11:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,51 +674,54 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval">
-          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L5">L5</a></span>
-          <h3>Chunk size vs. retrieval: how big a slice should RAG cut?</h3>
-          <p class="lede">A tiny 6-sentence toy "document" gets split into equal-sized chunks for retrieval. Drag the slider to see how chunk size changes which chunk holds a fixed answer sentence and how much unrelated text rides along with it. Simplified: real RAG systems chunk by tokens with overlap and rank chunks by embedding similarity — this toy just groups whole sentences.</p>
+        <!-- HISTORY: perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability -->
+        <div class="pgcard pgtopic" data-topic="softmax-numerical-stability">
+          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L0">L0</a></span>
+          <h3>Why softmax needs a "subtract the max" trick</h3>
+          <p class="lede">Four toy logits get multiplied by a scale slider, then run through two softmax formulas: the textbook one (exponentiate, then normalize) and the stable one every real library uses (subtract the max logit first). Drag the slider up and watch the textbook version break. Simplified to 4 numbers and real JS floating-point — no actual model or benchmark numbers involved.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-chunk">chunk size (sentences) <input type="range" id="pt-chunk" min="1" max="6" step="1" value="2"> <span id="pt-chunkval">2</span></label>
+            <label class="mono" for="pt-scale">logit scale <input type="range" id="pt-scale" min="1" max="100" step="1" value="5"> <span id="pt-scaleval">5×</span></label>
           </div>
-          <div id="pt-doc" class="mono" style="line-height:1.6"></div>
+          <div id="pt-rows"></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var chunkEl=document.getElementById("pt-chunk"), chunkVal=document.getElementById("pt-chunkval");
-          var docEl=document.getElementById("pt-doc"), readout=document.getElementById("pt-readout");
-          var SENT=[
-            "Mount Kelvin sits in the northern range.",
-            "It was first mapped in 1962 by a survey team.",
-            "The summit elevation is 4,120 meters, the tallest point in the range.",
-            "Local guides recommend climbing between June and September.",
-            "The nearest town, Dravenport, is 40 km away by trail.",
-            "Water sources along the route are scarce after May."
-          ];
-          var ANSWER=2;
+          var BASE=[8,3,1,-5];
+          var scaleEl=document.getElementById("pt-scale"), scaleVal=document.getElementById("pt-scaleval");
+          var rows=document.getElementById("pt-rows"), readout=document.getElementById("pt-readout");
+          function pct(p){ return isFinite(p) ? (p*100).toFixed(1)+"%" : "NaN"; }
           function render(){
-            var n=parseInt(chunkEl.value,10); chunkVal.textContent=n;
-            docEl.textContent="";
-            var chunkCount=0, groupSize=n;
-            for(var i=0;i<SENT.length;i+=n){
-              var group=SENT.slice(i,i+n);
-              var hasAnswer = i<=ANSWER && ANSWER<i+n;
-              if(hasAnswer) groupSize=group.length;
-              var div=document.createElement("div");
-              div.style.border="1px solid var(--line)";
-              div.style.borderRadius="6px";
-              div.style.padding="8px 10px";
-              div.style.marginBottom="4px";
-              if(hasAnswer){ div.style.borderColor="var(--accent)"; div.style.background="var(--accent-soft)"; }
-              div.textContent="Chunk "+chunkCount+": "+group.join(" ");
-              docEl.appendChild(div);
-              chunkCount++;
+            var s=Number(scaleEl.value); scaleVal.textContent=s+"×";
+            var logits=BASE.map(function(x){ return x*s; });
+            var naiveExp=logits.map(function(x){ return Math.exp(x); });
+            var naiveSum=naiveExp.reduce(function(a,b){ return a+b; },0);
+            var naiveP=naiveExp.map(function(e){ return e/naiveSum; });
+            var m=Math.max.apply(null,logits);
+            var stableExp=logits.map(function(x){ return Math.exp(x-m); });
+            var stableSum=stableExp.reduce(function(a,b){ return a+b; },0);
+            var stableP=stableExp.map(function(e){ return e/stableSum; });
+            rows.innerHTML="";
+            for(var i=0;i<logits.length;i++){
+              var row=document.createElement("div");
+              row.className="pt-row";
+              var label=document.createElement("span");
+              label.textContent="x"+i+" = "+logits[i].toFixed(0);
+              var track=document.createElement("div");
+              track.className="pt-track";
+              var fill=document.createElement("div");
+              fill.className="pt-fill";
+              fill.style.width=(isFinite(stableP[i])?stableP[i]*100:0)+"%";
+              track.appendChild(fill);
+              var out=document.createElement("span");
+              out.textContent="stable "+pct(stableP[i])+" · naive "+pct(naiveP[i]);
+              row.appendChild(label); row.appendChild(track); row.appendChild(out);
+              rows.appendChild(row);
             }
-            readout.textContent = groupSize===1
-              ? "At chunk size 1, the answer chunk (highlighted) holds only the target sentence — precise, but retrieval needs the exact right chunk and loses surrounding context."
-              : "At chunk size "+n+", the answer chunk (highlighted) carries "+(groupSize-1)+" other sentence(s) alongside the answer — more context, but the chunk's embedding also reflects the unrelated sentences, which can hurt retrieval ranking.";
+            var broke=naiveExp.some(function(e){ return !isFinite(e); })||!isFinite(naiveSum)||naiveSum===0;
+            readout.textContent=broke
+              ? "At this scale exp() overflows to Infinity before normalizing — the naive column reads NaN while the max-subtracted version stays correct."
+              : "At this scale both formulas still agree — push the slider higher to make the naive one overflow.";
           }
-          chunkEl.addEventListener("input", render);
+          scaleEl.addEventListener("input", render);
           render();
           })();</script>
         </div>
