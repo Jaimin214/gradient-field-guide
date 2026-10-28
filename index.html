@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T01:40:59">2026-10-28 01:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T06:44:40">2026-10-28 06:44</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,47 +674,51 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule -->
-        <div class="pgcard pgtopic" data-topic="learning-rate-schedule">
-          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L2">L2</a></span>
-          <h3>Learning-rate schedule: the knob that controls how fast weights move</h3>
-          <p class="lede">Pick a schedule and drag the step slider to watch the learning rate — the step size gradient descent takes — change over a toy 20-step run. Simplified: real training runs over thousands or millions of steps, and the "right" schedule is tuned empirically, not read off one formula.</p>
+        <!-- HISTORY: moe-active-vs-total-params, perplexity-next-token-confidence, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval">
+          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L5">L5</a></span>
+          <h3>Chunk size vs. retrieval: how big a slice should RAG cut?</h3>
+          <p class="lede">A tiny 6-sentence toy "document" gets split into equal-sized chunks for retrieval. Drag the slider to see how chunk size changes which chunk holds a fixed answer sentence and how much unrelated text rides along with it. Simplified: real RAG systems chunk by tokens with overlap and rank chunks by embedding similarity — this toy just groups whole sentences.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-sched">schedule <select id="pt-sched" class="btn">
-              <option value="const">Constant</option>
-              <option value="step">Step decay</option>
-              <option value="cos" selected>Cosine anneal</option>
-            </select></label>
-            <label class="mono" for="pt-peak">peak LR <input type="range" id="pt-peak" min="1" max="50" step="1" value="10"> <span id="pt-peakval">0.10</span></label>
-            <label class="mono" for="pt-step">step <input type="range" id="pt-step" min="0" max="19" step="1" value="0"> <span id="pt-stepval">0 / 19</span></label>
+            <label class="mono" for="pt-chunk">chunk size (sentences) <input type="range" id="pt-chunk" min="1" max="6" step="1" value="2"> <span id="pt-chunkval">2</span></label>
           </div>
-          <div class="pt-row"><span class="mono">Learning rate</span><div class="pt-track"><div class="pt-fill" id="pt-lrfill"></div></div><span class="mono" id="pt-lrval">—</span></div>
+          <div id="pt-doc" class="mono" style="line-height:1.6"></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var sched=document.getElementById("pt-sched"), peak=document.getElementById("pt-peak"), peakVal=document.getElementById("pt-peakval");
-          var step=document.getElementById("pt-step"), stepVal=document.getElementById("pt-stepval");
-          var fill=document.getElementById("pt-lrfill"), lrVal=document.getElementById("pt-lrval"), readout=document.getElementById("pt-readout");
-          var N=19;
-          function lrAt(t,p){
-            if(sched.value==="const") return p;
-            if(sched.value==="step") return p*Math.pow(0.5, Math.floor(t/7));
-            return p*0.5*(1+Math.cos(Math.PI*t/N));
-          }
+          var chunkEl=document.getElementById("pt-chunk"), chunkVal=document.getElementById("pt-chunkval");
+          var docEl=document.getElementById("pt-doc"), readout=document.getElementById("pt-readout");
+          var SENT=[
+            "Mount Kelvin sits in the northern range.",
+            "It was first mapped in 1962 by a survey team.",
+            "The summit elevation is 4,120 meters, the tallest point in the range.",
+            "Local guides recommend climbing between June and September.",
+            "The nearest town, Dravenport, is 40 km away by trail.",
+            "Water sources along the route are scarce after May."
+          ];
+          var ANSWER=2;
           function render(){
-            var p=parseInt(peak.value,10)/100; peakVal.textContent=p.toFixed(2);
-            var t=parseInt(step.value,10); stepVal.textContent=t+" / "+N;
-            var lr=lrAt(t,p);
-            fill.style.width=Math.round((lr/0.5)*100)+"%";
-            lrVal.textContent=lr.toFixed(4);
-            readout.textContent = sched.value==="const"
-              ? "Constant: the step size never shrinks, so training can keep bouncing instead of settling near the end."
-              : (sched.value==="step"
-                ? "Step decay: the rate halves every 7 steps, like dropping the step size at fixed checkpoints."
-                : "Cosine anneal: the rate glides smoothly from peak down toward zero, a common default for fine-tuning.");
+            var n=parseInt(chunkEl.value,10); chunkVal.textContent=n;
+            docEl.textContent="";
+            var chunkCount=0, groupSize=n;
+            for(var i=0;i<SENT.length;i+=n){
+              var group=SENT.slice(i,i+n);
+              var hasAnswer = i<=ANSWER && ANSWER<i+n;
+              if(hasAnswer) groupSize=group.length;
+              var div=document.createElement("div");
+              div.style.border="1px solid var(--line)";
+              div.style.borderRadius="6px";
+              div.style.padding="8px 10px";
+              div.style.marginBottom="4px";
+              if(hasAnswer){ div.style.borderColor="var(--accent)"; div.style.background="var(--accent-soft)"; }
+              div.textContent="Chunk "+chunkCount+": "+group.join(" ");
+              docEl.appendChild(div);
+              chunkCount++;
+            }
+            readout.textContent = groupSize===1
+              ? "At chunk size 1, the answer chunk (highlighted) holds only the target sentence — precise, but retrieval needs the exact right chunk and loses surrounding context."
+              : "At chunk size "+n+", the answer chunk (highlighted) carries "+(groupSize-1)+" other sentence(s) alongside the answer — more context, but the chunk's embedding also reflects the unrelated sentences, which can hurt retrieval ranking.";
           }
-          sched.addEventListener("change", render);
-          peak.addEventListener("input", render);
-          step.addEventListener("input", render);
+          chunkEl.addEventListener("input", render);
           render();
           })();</script>
         </div>
