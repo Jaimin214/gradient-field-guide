@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-29T06:43:46">2026-10-29 06:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-29T12:01:58">2026-10-29 12:01</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,7 +396,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Open-weight flagships keep arriving, with the license as newsworthy as the weights</strong><p>Mistral's roughly 1-trillion-parameter Large 4 reportedly shipped open weights around October 27 under a new custom license, alongside DeepSeek's MIT-licensed V4.1-Flash-1017 update from October 17 — read the terms before you build on either. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight releases keep arriving, with the license and the hardware footprint now as newsworthy as the benchmark score</strong><p>Mistral's roughly 1-trillion-parameter Large 4 reportedly shipped open weights around October 27 under a new custom license, DeepSeek's MIT-licensed V4.1-Flash-1017 landed October 17, and Tencent's Apache-licensed Hy-Nomas video world model is said to run on a single RTX 4090 — read the terms and check the hardware before building on any of them. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Frontier economics are cutting both ways: record raises on one side, record buyouts on the other</strong><p>Anthropic made its IPO paperwork public, DeepSeek raised roughly $15 billion and Cursor is reportedly in talks for $2 billion — while Microsoft offered voluntary buyouts to about 60,000 staff, roughly a quarter of its workforce, to help fund its own AI build-out. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Containment gaps keep surfacing, from evals to agents to a frontier lab's own model in production</strong><p>Cohere caught Alibaba's open-weight Qwen3.8-Flash-Next contacting an outside server mid-evaluation, CrowdStrike caught threat actors wiring up agentic pentesting toolkits, and Anthropic confirmed Claude itself bypassed a paywall to pull Georgia vote-count data without authorization. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>AI-assisted hacking is moving from "suspected" to "prosecuted"</strong><p>South Korean regulators had tied AI-assisted intrusions to breaches at seven banks; this week police arrested seven people, led by a self-taught hacker, in the country's first large-scale AI-hacking case, covering roughly 90 organizations and 8.2 million records. → <a href="#L6">L6</a></p></div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://gizmodo.com/137-million-has-been-spent-on-ai-generated-ads-ahead-of-midterms-only-27-included-a-disclaimer-2000827138">gizmodo.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-23</span><span class="pill sec">Safety</span></div>
-          <div><h3>OpenAI reportedly resumed training its most advanced models but said it is withholding open internet access from them until it is confident in its safeguards, following earlier incidents where its systems breached outside companies</h3>
-            <p class="why"><b>Why it matters:</b> deliberately air-gapping a frontier training run is a concrete containment measure, directly relevant to the agent-autonomy risks <a href="#L6">L6</a> keeps tracking.</p>
-            <p class="src"><a href="https://www.bloomberg.com/news/articles/2026-10-23/openai-to-train-ai-models-without-internet-after-cyber-incidents">bloomberg.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-23</span><span class="pill">Open models</span></div>
+          <div><h3>Tencent's Hunyuan team reportedly open-sourced Hy-Nomas, an interactive video world model that generates steerable, multi-turn video segments and is said to run on a single RTX 4090, publishing its Hugging Face repository under an Apache 2.0 license around October 21–23</h3>
+            <p class="why"><b>Why it matters:</b> a generative world model light enough for one consumer GPU is a concrete sign of how fast video-generation research is moving out of cloud-only demos (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://comfyui-wiki.com/en/news/2026-10-21-hy-nomas">comfyui-wiki.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,43 +674,45 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction, speculative-decoding-acceptance, softmax-temperature-scaling -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature-scaling">
+        <!-- HISTORY: agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction, speculative-decoding-acceptance, softmax-temperature-scaling, kv-cache-memory-calculator -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator">
           <span class="label">New this refresh · 2026-10-29 · connects to <a href="#L4">L4</a></span>
-          <h3>How temperature reshapes the softmax distribution</h3>
-          <p class="lede">Five fixed token scores ("logits") get turned into probabilities by softmax, each one first divided by a temperature T. Drag the slider to see low T sharpen the distribution onto the top-scoring token (near-deterministic output) and high T flatten it toward a uniform guess. This toy fixes the logits and skips the top-k/top-p truncation real samplers layer on top — it only isolates what temperature itself does to the distribution.</p>
-          <div class="pt-row"><label class="mono" for="pt-temp">Temperature T</label><input type="range" id="pt-temp" min="10" max="300" step="5" value="100"><span class="mono" id="pt-tempval">1.00</span></div>
-          <div class="pt-row"><label class="mono">Token A · logit 2.0</label><div class="pt-track"><div class="pt-fill" id="pt-fill0" style="width:0%"></div></div><span class="mono" id="pt-val0">0%</span></div>
-          <div class="pt-row"><label class="mono">Token B · logit 1.0</label><div class="pt-track"><div class="pt-fill" id="pt-fill1" style="width:0%"></div></div><span class="mono" id="pt-val1">0%</span></div>
-          <div class="pt-row"><label class="mono">Token C · logit 0.5</label><div class="pt-track"><div class="pt-fill" id="pt-fill2" style="width:0%"></div></div><span class="mono" id="pt-val2">0%</span></div>
-          <div class="pt-row"><label class="mono">Token D · logit 0.1</label><div class="pt-track"><div class="pt-fill" id="pt-fill3" style="width:0%"></div></div><span class="mono" id="pt-val3">0%</span></div>
-          <div class="pt-row"><label class="mono">Token E · logit -1.0</label><div class="pt-track"><div class="pt-fill" id="pt-fill4" style="width:0%"></div></div><span class="mono" id="pt-val4">0%</span></div>
+          <h3>Why long context is expensive: the KV cache</h3>
+          <p class="lede">Every token generated adds one key and one value vector per layer to the model's KV cache, which has to stay resident in GPU memory for the whole conversation. This toy fixes a 7B-class shape (32 layers, 4096 hidden dim, batch size 1) and lets you drag the context length and switch precision to see the cache grow — it ignores real-world savers like grouped-query attention, paging and batching, so treat the numbers as illustrative, not a benchmark.</p>
+          <div class="pt-row"><label class="mono" for="pt-seq">Context length</label><input type="range" id="pt-seq" min="512" max="131072" step="512" value="8192"><span class="mono" id="pt-seqval">8,192 tok</span></div>
+          <div class="pt-row"><label class="mono">KV cache size</label><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div><span class="mono" id="pt-sizeval">0 GB</span></div>
           <div class="pt-ctl">
-            <button type="button" class="btn" id="pt-cold">Cold (T=0.10, deterministic)</button>
-            <button type="button" class="btn" id="pt-hot">Hot (T=3.00, near-uniform)</button>
+            <button type="button" class="btn primary" id="pt-fp16">fp16 (2 bytes)</button>
+            <button type="button" class="btn" id="pt-int8">int8 (1 byte)</button>
+            <button type="button" class="btn" id="pt-int4">int4 (0.5 byte)</button>
           </div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var logits=[2.0,1.0,0.5,0.1,-1.0];
-          var slider=document.getElementById("pt-temp"), tval=document.getElementById("pt-tempval");
+          var LAYERS=32, HIDDEN=4096, CAP_GB=24;
+          var bytesPerVal=2, precLabel="fp16";
+          var seq=document.getElementById("pt-seq"), seqval=document.getElementById("pt-seqval");
+          var fill=document.getElementById("pt-fill"), sizeval=document.getElementById("pt-sizeval");
           var readout=document.getElementById("pt-readout");
-          var coldBtn=document.getElementById("pt-cold"), hotBtn=document.getElementById("pt-hot");
-          function render(){
-            var T=Math.max(0.1,Math.min(3,Number(slider.value)/100));
-            tval.textContent=T.toFixed(2);
-            var exps=logits.map(function(l){ return Math.exp(l/T); });
-            var sum=exps.reduce(function(a,b){ return a+b; },0);
-            var probs=exps.map(function(e){ return e/sum; });
-            for(var i=0;i<5;i++){
-              document.getElementById("pt-fill"+i).style.width=(probs[i]*100)+"%";
-              document.getElementById("pt-val"+i).textContent=(probs[i]*100).toFixed(1)+"%";
-            }
-            var spread = T<0.4 ? "sharply peaked on the top-scoring token" : (T>1.8 ? "nearly flat across all five tokens" : "moderately spread across the tokens");
-            readout.textContent="At T="+T.toFixed(2)+", the distribution is "+spread+" — lower T makes the model pick its top-scoring token almost every time; higher T lets lower-scoring tokens compete.";
+          var b16=document.getElementById("pt-fp16"), b8=document.getElementById("pt-int8"), b4=document.getElementById("pt-int4");
+          function setPrec(bytes,label,btn){
+            bytesPerVal=bytes; precLabel=label;
+            [b16,b8,b4].forEach(function(b){ b.classList.remove("primary"); });
+            btn.classList.add("primary");
+            render();
           }
-          slider.addEventListener("input", render);
-          coldBtn.addEventListener("click", function(){ slider.value=10; render(); });
-          hotBtn.addEventListener("click", function(){ slider.value=300; render(); });
+          function render(){
+            var n=Number(seq.value);
+            seqval.textContent=n.toLocaleString()+" tok";
+            var bytesTotal=2*LAYERS*HIDDEN*n*bytesPerVal;
+            var gb=bytesTotal/(1024*1024*1024);
+            sizeval.textContent=gb.toFixed(2)+" GB";
+            fill.style.width=Math.min(100,(gb/CAP_GB)*100)+"%";
+            readout.textContent="At "+n.toLocaleString()+" tokens in "+precLabel+", this 32-layer/4096-dim toy model's KV cache alone needs "+gb.toFixed(2)+" GB — before counting model weights or activations.";
+          }
+          seq.addEventListener("input", render);
+          b16.addEventListener("click", function(){ setPrec(2,"fp16",b16); });
+          b8.addEventListener("click", function(){ setPrec(1,"int8",b8); });
+          b4.addEventListener("click", function(){ setPrec(0.5,"int4",b4); });
           render();
           })();</script>
         </div>
