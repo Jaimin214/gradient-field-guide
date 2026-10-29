@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T16:39:46">2026-10-28 16:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-28T20:41:49">2026-10-28 20:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -482,15 +482,15 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thenextweb.com/news/openai-funding-round-1-25tn-uae-coatue">thenextweb.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
+          <div><h3>Challenger, Gray &amp; Christmas reportedly found AI was the most-cited reason for US job cuts for four straight months in 2026, tied to roughly 23% of the layoffs it tracked this year</h3>
+            <p class="why"><b>Why it matters:</b> when employers increasingly name AI adoption itself as the reason for cuts, the hands-on build-and-evaluate skills this guide teaches — not just chatbot fluency — are what keep a CS grad on the hiring side of that trend (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.outlookbusiness.com/corporate/ai-overtakes-all-other-reasons-for-us-job-cuts-as-layoffs-surge-in-2026">outlookbusiness.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-22</span><span class="pill sec">Security</span></div>
           <div><h3>AI-discovered flaws in PHP reportedly triggered emergency patches and website shutdowns worldwide, with US intelligence agencies said to be urging operators to take unpatched systems offline</h3>
             <p class="why"><b>Why it matters:</b> AI-assisted vulnerability discovery cuts both ways, and this is the defensive side of the same capability the containment discussion in <a href="#L6">L6</a> worries about on offense.</p>
-            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-22</span><span class="pill">Research</span></div>
-          <div><h3>Anthropic's Frontier Red Team said it used Claude, working with the formal-verification startup Theorem, to help verify security properties across 123 open-source libraries</h3>
-            <p class="why"><b>Why it matters:</b> formal verification assisted by an LLM is a step beyond ordinary testing, and a concrete new tool for the assurance problem <a href="#L7">L7</a> keeps running into.</p>
             <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/">theneuron.ai</a></p></div>
         </li>
       </ol>
@@ -674,55 +674,39 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size -->
-        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size">
-          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L1">L1</a></span>
-          <h3>Why a bigger model can score worse on new data</h3>
-          <p class="lede">Drag the model-complexity slider and watch training error keep falling while test error dips, then climbs back up — the classic bias-variance tradeoff behind overfitting. The two curves are a stylized textbook shape computed from a simple formula, not measurements from any real model or dataset; a real learning curve is noisier and depends heavily on how much training data you have.</p>
+        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, lora-rank-parameter-tradeoff, agent-safety-monitor-toggle, quantization-weight-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction -->
+        <div class="pgcard pgtopic" data-topic="perplexity-of-a-prediction">
+          <span class="label">New this refresh · 2026-10-28 · connects to <a href="#L4">L4</a></span>
+          <h3>How surprised is the model?</h3>
+          <p class="lede">Perplexity turns the probability a model assigned to the correct next token into an intuitive "confusion" score: low probability means high surprise means high perplexity. Drag the slider to set that probability and watch cross-entropy loss and perplexity update live. This toy looks at a single token in isolation — a real model's reported perplexity is an average over every token in a whole evaluation set, and today's feed item on the "softmax collapse" bug (left) is a reminder that the softmax probabilities feeding this formula can themselves go wrong.</p>
+          <div class="pt-row"><label class="mono" for="pt-prob">P(correct token)</label><input type="range" id="pt-prob" min="1" max="99" step="1" value="50"><span class="mono" id="pt-probval">0.50</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:50%"></div></div>
           <div class="pt-ctl">
-            <label class="mono" for="pt-complexity">model complexity <input type="range" id="pt-complexity" min="1" max="30" step="1" value="1"> <span id="pt-complexityval">1</span></label>
+            <span class="mono">cross-entropy loss: <b id="pt-loss">0.69</b> nats</span>
+            <span class="mono">perplexity: <b id="pt-perp">2.00</b></span>
+            <button type="button" class="btn" id="pt-confident">Confident model</button>
+            <button type="button" class="btn" id="pt-confused">Confused model</button>
           </div>
-          <div id="pt-rows"></div>
           <p class="mono" id="pt-readout">—</p>
           <script>(function(){
-          var el=document.getElementById("pt-complexity"), val=document.getElementById("pt-complexityval");
-          var rows=document.getElementById("pt-rows"), readout=document.getElementById("pt-readout");
-          var NOISE=0.08, MAXERR=0.6;
-          function trainErr(c){ return NOISE + 0.4/c; }
-          function testErr(c){ return NOISE + 0.4/c + (c*c)/400; }
-          var best=1, bestErr=Infinity;
-          for(var c=1;c<=30;c++){ var e=testErr(c); if(e<bestErr){ bestErr=e; best=c; } }
-          function bar(label,value){
-            var row=document.createElement("div");
-            row.className="pt-row";
-            var lab=document.createElement("span");
-            lab.textContent=label;
-            var track=document.createElement("div");
-            track.className="pt-track";
-            var fill=document.createElement("div");
-            fill.className="pt-fill";
-            fill.style.width=Math.min(100,(value/MAXERR)*100)+"%";
-            track.appendChild(fill);
-            var out=document.createElement("span");
-            out.textContent=value.toFixed(3);
-            row.appendChild(lab); row.appendChild(track); row.appendChild(out);
-            return row;
-          }
+          var slider=document.getElementById("pt-prob"), probval=document.getElementById("pt-probval");
+          var fill=document.getElementById("pt-fill"), lossEl=document.getElementById("pt-loss");
+          var perpEl=document.getElementById("pt-perp"), readout=document.getElementById("pt-readout");
+          var confidentBtn=document.getElementById("pt-confident"), confusedBtn=document.getElementById("pt-confused");
           function render(){
-            var c=Number(el.value); val.textContent=c;
-            var tr=trainErr(c), te=testErr(c);
-            rows.innerHTML="";
-            rows.appendChild(bar("train error",tr));
-            rows.appendChild(bar("test error",te));
-            var gap=te-tr;
-            var msg = c<best
-              ? "Underfitting: both errors are still falling together — more complexity would help."
-              : (c===best
-                ? "Near the sweet spot (complexity ≈ "+best+") — test error is close to its minimum here."
-                : "Overfitting: training error keeps dropping but test error is climbing back up, gap = "+gap.toFixed(3)+".");
-            readout.textContent=msg;
+            var p=Math.max(1,Math.min(99,Number(slider.value)))/100;
+            probval.textContent=p.toFixed(2);
+            fill.style.width=(p*100)+"%";
+            var loss=-Math.log(p);
+            var perp=Math.exp(loss);
+            lossEl.textContent=loss.toFixed(2);
+            perpEl.textContent=perp.toFixed(2);
+            var equiv=Math.max(1,Math.round(perp));
+            readout.textContent="A perplexity of "+perp.toFixed(2)+" means the model is about as unsure here as if it were guessing uniformly among "+equiv+" equally likely tokens.";
           }
-          el.addEventListener("input", render);
+          slider.addEventListener("input", render);
+          confidentBtn.addEventListener("click", function(){ slider.value=95; render(); });
+          confusedBtn.addEventListener("click", function(){ slider.value=10; render(); });
           render();
           })();</script>
         </div>
