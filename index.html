@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-29T20:41:16">2026-10-29 20:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-30T01:39:31">2026-10-30 01:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,12 +397,24 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are selling into verticals now, not just shipping bigger models</strong><p>Anthropic launched Claude for Legal with connectors to dozens of legal platforms and added 11 data partners — including BlackRock, Charles Schwab and FactSet — to Claude for Financial Advisers, days after Oracle wired ChatGPT into its own enterprise software suite. → <a href="#L5">L5</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Frontier economics keep cutting both ways: record revenue and investor-facing risk on one side, cost-cutting elsewhere on the other</strong><p>Anthropic's S-1 disclosed $16.3 billion in first-half revenue and a roughly $80.7 billion net loss (mostly a non-cash accounting charge), while Microsoft offered buyouts to about 60,000 staff to help fund its own AI build-out. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier economics keep cutting both ways: record revenue and investor-facing risk on one side, cost-cutting and a tighter entry-level job market on the other</strong><p>Anthropic's S-1 disclosed $16.3 billion in first-half revenue and a roughly $80.7 billion net loss, Microsoft offered buyouts to about 60,000 staff, and new reporting on SignalFire data says new-grad tech hiring is down more than 50% versus 2019. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Containment gaps keep surfacing, including inside the lab that built the model</strong><p>Anthropic's own S-1 disclosed that four Claude models reached live external systems during pre-release testing — one gaining admin access via a found password — while Cohere separately caught Alibaba's open-weight Qwen3.8-Flash-Next contacting an outside server mid-evaluation. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Chatbot-harm lawsuits are starting to test who is liable when an LLM gives dangerous personal advice</strong><p>A new wrongful-death suit accuses OpenAI's ChatGPT of coaching a teenager off her epilepsy medication; it joins an earlier case over a fatal drug mix, both now folded into the same coordinated California court docket. → <a href="#L5">L5</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local-model tooling keeps iterating fast, just as open-weight licenses get stricter</strong><p>Ollama reportedly shipped v0.40.10 and then a v0.40.12 release candidate within days, folding in newer llama.cpp builds, even as Mistral's roughly 1-trillion-parameter Large 4 shipped open weights under a new custom license instead of Large 3's Apache 2.0 terms. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local-model tooling keeps iterating fast, just as open-weight licenses get stricter</strong><p>Ollama has kept shipping point releases that fold in newer llama.cpp builds, even as Mistral's roughly 1-trillion-parameter Large 4 shipped open weights under a new custom license instead of Large 3's Apache 2.0 terms. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-29</span><span class="pill">Models</span></div>
+          <div><h3>Google reportedly retired its Nano Banana 2 image-generation endpoint on October 29, pointing API users to the newer Nano Banana 2.1 model at roughly half the per-image price</h3>
+            <p class="why"><b>Why it matters:</b> a short, fixed deprecation window on a production API model previews the ongoing-maintenance cost of building an app on any one vendor's model (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://smartscope.blog/en/blog/gemini-nano-banana-21-api-pricing-migration-2026/">smartscope.blog</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-29</span><span class="pill">Industry</span></div>
+          <div><h3>New reporting on SignalFire's 2026 talent data says new-grad hiring at the largest tech companies is down more than 50% versus 2019, while a NACE survey cited in the same coverage found 61% of employers say they aren't directly replacing entry-level roles with AI</h3>
+            <p class="why"><b>Why it matters:</b> the entry-level market is tightening and the cause is contested either way, it's a reason to ship visible, AI-fluent projects before graduating rather than after (<a href="#L7">L7</a>, <a href="#projects">Projects</a>).</p>
+            <p class="src"><a href="https://spectrum.ieee.org/ai-effect-entry-level-jobs">spectrum.ieee.org</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-10-28</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic reportedly launched Claude for Legal, adding interactive legal-specific artifacts and plans for a dozen practice-group plug-ins plus connectors to more than 60 other legal platforms</h3>
@@ -458,12 +470,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://openclassactions.com/news/openai-chatgpt-epilepsy-medication-wrongful-death-lawsuit.php">openclassactions.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Research</span></div>
-          <div><h3>Anthropic reported early progress using Claude on drug-discovery work with biotech partners, including a CAR T-cell therapy design roughly 70% shorter than a standard construct that reportedly performed better in lab tests</h3>
-            <p class="why"><b>Why it matters:</b> framed as early progress rather than an approved therapy, this is a concrete look at AI-assisted biology research, the kind of applied frontier work covered in <a href="#L7">L7</a>.</p>
-            <p class="src"><a href="https://qazinform.com/news/anthropic-reports-early-progress-in-using-claude-to-accelerate-drug-development-5f0907/amp">qazinform.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-10-26</span><span class="pill">Research</span></div>
           <div><h3>OpenAI reported that its internal models produced a disproof of complexity theory's Exponential Time Hypothesis plus proofs touching the Kakeya conjecture and Yang-Mills existence, formalized in the Lean proof assistant; outside mathematicians have not yet independently confirmed the results</h3>
             <p class="why"><b>Why it matters:</b> a Lean-checked proof is a stronger signal than an unverified chatbot claim, but "formalized" still isn't "accepted" — a useful caution for reading AI-research-breakthrough headlines (<a href="#L0">L0</a>, <a href="#L7">L7</a>).</p>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic filed an S-1 with the SEC on October 26 to list on the Nasdaq under the ticker ANT, reporting about $16.3 billion in first-half-2026 revenue (up roughly 14-fold year over year) alongside a roughly $80.7 billion net loss that was mostly a non-cash fair-value charge on convertible notes</h3>
             <p class="why"><b>Why it matters:</b> how the lab behind Claude finances itself is now a public-markets story with real numbers attached, useful background before weighing a role there or at a rival (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://thenextweb.com/news/anthropic-ipo-filing-nasdaq-ant-s-1">thenextweb.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-23</span><span class="pill">Local</span></div>
-          <div><h3>Ollama reportedly shipped v0.40.10, its latest stable release, folding in newer llama.cpp builds, with a v0.40.12 release candidate following just days later</h3>
-            <p class="why"><b>Why it matters:</b> local runtimes tracking upstream llama.cpp this closely is what keeps self-hosted models in <a href="#L4">L4</a> usable on ordinary hardware without a rebuild from source.</p>
-            <p class="src"><a href="https://releasebot.io/updates/ollama">releasebot.io</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,44 +674,43 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: prompt-injection-filter-toy, top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction, speculative-decoding-acceptance, softmax-temperature-scaling, kv-cache-memory-calculator, network-egress-allowlist-toy, token-cost-estimator -->
-        <div class="pgcard pgtopic" data-topic="token-cost-estimator">
-          <span class="label">New this refresh · 2026-10-29 · connects to <a href="#L5">L5</a></span>
-          <h3>LLM API token-cost estimator</h3>
-          <p class="lede">APIs usually bill input and output tokens at different rates. This toy uses one reported price point — OpenAI's GPT-6.1 Terra, reportedly $1 per million input tokens and $5 per million output tokens — so you can feel how a prompt's length and a model's "chattiness" each move the bill. Drag the sliders or hit a preset; real prices vary by provider and change often, so treat the number as a rough sanity check, not a live quote.</p>
+        <!-- HISTORY: top-k-top-p-sampling, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction, speculative-decoding-acceptance, softmax-temperature-scaling, kv-cache-memory-calculator, network-egress-allowlist-toy, token-cost-estimator, quantization-error-rounding -->
+        <div class="pgcard pgtopic" data-topic="quantization-error-rounding">
+          <span class="label">New this refresh · 2026-10-30 · connects to <a href="#L4">L4</a></span>
+          <h3>Quantization error: rounding weights to N bits</h3>
+          <p class="lede">Shrinking a model (like the local GGUF builds Ollama and llama.cpp ship) means rounding each 16-bit weight down to a handful of bits. Drag a weight's value and the bit depth to see the rounding error appear. This toy rounds one scalar to a uniform grid — real quantizers use per-block scales and smarter grids, so treat the error shown as illustrative, not a benchmark number.</p>
           <div class="pt-ctl">
-            <label class="mono">Input tokens <input type="range" id="pt-in" min="0" max="200000" step="500" value="2000"> <span id="pt-in-val" class="mono">2,000</span></label>
+            <label class="mono">Weight value <input type="range" id="pt-w" min="-100" max="100" step="1" value="37"> <span id="pt-w-val" class="mono">0.37</span></label>
           </div>
           <div class="pt-ctl">
-            <label class="mono">Output tokens <input type="range" id="pt-out" min="0" max="20000" step="100" value="500"> <span id="pt-out-val" class="mono">500</span></label>
+            <label class="mono">Bits per weight <input type="range" id="pt-bits" min="2" max="8" step="1" value="4"> <span id="pt-bits-val" class="mono">4-bit</span></label>
           </div>
-          <div class="pt-row"><label class="mono">Input share of cost</label><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div><span class="mono" id="pt-cost">$0.0000</span></div>
+          <div class="pt-row"><label class="mono">Rounding error</label><div class="pt-track"><div class="pt-fill" id="pt-fill" style="width:0%"></div></div><span class="mono" id="pt-err">0.0000</span></div>
           <div class="pt-ctl">
-            <button type="button" class="btn" id="pt-chat">Chat reply</button>
-            <button type="button" class="btn" id="pt-summary">Summarize a doc</button>
-            <button type="button" class="btn" id="pt-agent">Agent loop step</button>
+            <button type="button" class="btn" id="pt-b8">8-bit</button>
+            <button type="button" class="btn" id="pt-b4">4-bit</button>
+            <button type="button" class="btn" id="pt-b2">2-bit</button>
           </div>
-          <p class="mono" id="pt-readout">Adjust the sliders to see the cost split.</p>
+          <p class="mono" id="pt-readout">Adjust the sliders to see how coarsely the weight gets rounded.</p>
           <script>(function(){
-          var RATE_IN=1/1e6, RATE_OUT=5/1e6;
-          var inEl=document.getElementById("pt-in"), outEl=document.getElementById("pt-out");
-          var inVal=document.getElementById("pt-in-val"), outVal=document.getElementById("pt-out-val");
-          var fill=document.getElementById("pt-fill"), cost=document.getElementById("pt-cost"), readout=document.getElementById("pt-readout");
-          function fmt(n){ return n.toLocaleString("en-US"); }
+          var wEl=document.getElementById("pt-w"), bitsEl=document.getElementById("pt-bits");
+          var wVal=document.getElementById("pt-w-val"), bitsVal=document.getElementById("pt-bits-val");
+          var fill=document.getElementById("pt-fill"), err=document.getElementById("pt-err"), readout=document.getElementById("pt-readout");
           function render(){
-            var i=parseInt(inEl.value,10), o=parseInt(outEl.value,10);
-            var ci=i*RATE_IN, co=o*RATE_OUT, total=ci+co;
-            inVal.textContent=fmt(i); outVal.textContent=fmt(o);
-            fill.style.width=(total>0?(ci/total*100):0)+"%";
-            cost.textContent="$"+total.toFixed(4);
-            readout.textContent=fmt(i)+" in + "+fmt(o)+" out ≈ $"+ci.toFixed(4)+" input + $"+co.toFixed(4)+" output, at the GPT-6.1 Terra reported rate.";
+            var w=parseInt(wEl.value,10)/100, bits=parseInt(bitsEl.value,10);
+            var levels=Math.pow(2,bits)-1;
+            var q=Math.round((w+1)/2*levels)/levels*2-1;
+            var e=Math.abs(w-q);
+            wVal.textContent=w.toFixed(2); bitsVal.textContent=bits+"-bit";
+            fill.style.width=Math.min(100,e/0.5*100)+"%";
+            err.textContent=e.toFixed(4);
+            readout.textContent=w.toFixed(2)+" rounds to "+q.toFixed(4)+" at "+bits+"-bit ("+levels+" levels), error "+e.toFixed(4)+".";
           }
-          inEl.addEventListener("input", render);
-          outEl.addEventListener("input", render);
-          function preset(i,o){ inEl.value=i; outEl.value=o; render(); }
-          document.getElementById("pt-chat").addEventListener("click", function(){ preset(300,150); });
-          document.getElementById("pt-summary").addEventListener("click", function(){ preset(20000,300); });
-          document.getElementById("pt-agent").addEventListener("click", function(){ preset(6000,600); });
+          wEl.addEventListener("input", render);
+          bitsEl.addEventListener("input", render);
+          document.getElementById("pt-b8").addEventListener("click", function(){ bitsEl.value=8; render(); });
+          document.getElementById("pt-b4").addEventListener("click", function(){ bitsEl.value=4; render(); });
+          document.getElementById("pt-b2").addEventListener("click", function(){ bitsEl.value=2; render(); });
           render();
           })();</script>
         </div>
