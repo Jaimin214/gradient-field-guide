@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-30T11:39:24">2026-10-30 11:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-30T16:39:34">2026-10-30 16:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,45 +674,49 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction, speculative-decoding-acceptance, softmax-temperature-scaling, kv-cache-memory-calculator, network-egress-allowlist-toy, token-cost-estimator, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling -->
-        <div class="pgcard pgtopic" data-topic="top-k-top-p-sampling">
+        <!-- HISTORY: context-window-budget-calculator, gradient-clipping-threshold, bpe-tokenization-merge, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction, speculative-decoding-acceptance, softmax-temperature-scaling, kv-cache-memory-calculator, network-egress-allowlist-toy, token-cost-estimator, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, model-distillation-dark-knowledge -->
+        <div class="pgcard pgtopic" data-topic="model-distillation-dark-knowledge">
           <span class="label">New this refresh · 2026-10-30 · connects to <a href="#L4">L4</a></span>
-          <h3>Top-k / top-p sampling: which words even get a chance?</h3>
-          <p class="lede">A toy vocabulary of 8 next-word candidates with fixed made-up probabilities. Drag top-k to keep only the k most likely words, or top-p to keep the smallest set whose probabilities add up to p, and watch which words survive. Real decoders combine this with temperature and apply it to the model's full vocabulary (tens of thousands of tokens), not 8 toy ones.</p>
+          <h3>Distillation: what a "soft" teacher teaches a student</h3>
+          <p class="lede">A toy 5-class classifier (loosely after Hinton et al.'s classic cow/dog/car example) scores a photo of a cow. Raising the distillation temperature softens the teacher's output so a student model also sees how confident it was about the wrong answers — the "dark knowledge" that a cow looks a little like a dog. The logits and the dark-knowledge percentage below are invented for illustration, not a real model's output.</p>
           <div class="pt-ctl">
-            <label for="pt-k" class="mono">top-k: <span id="pt-k-val">8</span></label>
-            <input type="range" id="pt-k" min="1" max="8" value="8" step="1">
-            <label for="pt-p" class="mono">top-p: <span id="pt-p-val">1.00</span></label>
-            <input type="range" id="pt-p" min="5" max="100" value="100" step="5">
+            <label for="pt-temp" class="mono">distillation temperature T: <span id="pt-temp-val">1.0</span></label>
+            <input type="range" id="pt-temp" min="1" max="10" value="1" step="0.5">
           </div>
           <div id="pt-bars"></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var WORDS=[["the",.32],["a",.22],["cat",.14],["dog",.1],["sat",.08],["ran",.06],["blue",.05],["xylophone",.03]];
-          var kEl=document.getElementById("pt-k"), pEl=document.getElementById("pt-p");
-          var kVal=document.getElementById("pt-k-val"), pVal=document.getElementById("pt-p-val");
+          var CLASSES=[["cow",4.0],["dog",1.8],["cat",1.5],["horse",0.6],["car",-2.5]];
+          var tEl=document.getElementById("pt-temp"), tVal=document.getElementById("pt-temp-val");
           var bars=document.getElementById("pt-bars"), out=document.getElementById("pt-readout");
+          function softmax(T){
+            var exps=CLASSES.map(function(c){return Math.exp(c[1]/T);});
+            var sum=exps.reduce(function(a,b){return a+b;},0);
+            return exps.map(function(e){return e/sum;});
+          }
           function render(){
-            var k=parseInt(kEl.value,10), p=parseInt(pEl.value,10)/100;
-            kVal.textContent=k; pVal.textContent=p.toFixed(2);
+            var T=parseFloat(tEl.value);
+            tVal.textContent=T.toFixed(1);
+            var probs=softmax(T);
             bars.innerHTML="";
-            var cum=0, kept=[];
-            for (var i=0;i<WORDS.length;i++){
-              var keep = i<k;
-              if (keep && cum<p){ cum+=WORDS[i][1]; } else if (keep){ keep=false; }
-              if (keep) kept.push(WORDS[i][0]);
+            var maxP=0, maxI=0;
+            for (var i=0;i<probs.length;i++){ if (probs[i]>maxP){ maxP=probs[i]; maxI=i; } }
+            for (var i=0;i<CLASSES.length;i++){
               var row=document.createElement("div"); row.className="pt-row";
-              var label=document.createElement("span"); label.textContent=WORDS[i][0];
+              var label=document.createElement("span"); label.textContent=CLASSES[i][0];
               var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(WORDS[i][1]*100)+"%"; fill.style.opacity=keep?"1":".25";
+              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(probs[i]*100)+"%";
               track.appendChild(fill);
-              var pct=document.createElement("span"); pct.textContent=keep?(WORDS[i][1]*100).toFixed(0)+"%":"cut";
+              var pct=document.createElement("span"); pct.textContent=(probs[i]*100).toFixed(1)+"%";
               row.appendChild(label); row.appendChild(track); row.appendChild(pct);
               bars.appendChild(row);
             }
-            out.textContent="Sampling pool: "+kept.join(", ")+" ("+kept.length+" of 8 words left)";
+            var entropy=0;
+            for (var i=0;i<probs.length;i++){ if (probs[i]>0) entropy -= probs[i]*Math.log(probs[i]); }
+            var dark=(entropy/Math.log(CLASSES.length)*100).toFixed(0);
+            out.textContent="Top class: "+CLASSES[maxI][0]+". Toy dark-knowledge signal (info leaked about runner-up classes): "+dark+"% of max entropy — higher T shares more with the student.";
           }
-          kEl.addEventListener("input", render); pEl.addEventListener("input", render);
+          tEl.addEventListener("input", render);
           render();
           })();</script>
         </div>
