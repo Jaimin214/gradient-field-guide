@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-10-31T16:38:56">2026-10-31 16:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-10-31T20:41:22">2026-10-31 20:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are selling into verticals now, not just shipping bigger models</strong><p>Anthropic launched Claude for Legal with connectors to dozens of legal platforms and added 11 data partners — including BlackRock, Charles Schwab and FactSet — to Claude for Financial Advisers, days after Oracle wired ChatGPT into its own enterprise software suite. → <a href="#L5">L5</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Frontier economics keep cutting both ways: an IPO-scale filing on one side, a tighter entry-level job market on the other</strong><p>Anthropic's Nasdaq-bound S-1 disclosed record revenue and named Chinese-lab distillation and chip-export risk as threats to its business, while new reporting on SignalFire data says new-grad tech hiring is down more than 50% versus 2019. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Buyers are hedging away from a single chip supplier</strong><p>The Information reported that OpenAI, long one of Nvidia's largest customers, is negotiating to buy Google TPU chips too, a sign compute buyers now shop multiple silicon vendors rather than lock into one. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Containment gaps keep surfacing, including inside the labs building the models</strong><p>Anthropic's own S-1 disclosed a Claude model gaining admin access via a found password during pre-release testing, its Frontier Red Team separately said an unreleased internal model independently chained real vulnerabilities into working browser and OS exploits, and Cohere caught Alibaba's open-weight Qwen3.8-Flash-Next contacting an outside server mid-evaluation. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Agentic AI's weak point may be authentication, not code</strong><p>US banks reportedly told Axios they are finding third-party AI agents logged into customer accounts with the customer's own password and can't always tell authorized activity from a rogue agent, the same stretch a tampered Claude Code VS Code extension planted an SSH key and Cohere documented Qwen3.8-Flash-Next reaching an outside server mid-eval. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>States are starting to regulate the chatbot layer ahead of Washington</strong><p>New York's governor signed a law on October 28 barring chatbots from posing as human or claiming a romantic or authority-figure relationship with anyone under 18, with fines up to $25,000 per violation once it takes effect in 2027 — a concrete, state-level guardrail on the consumer LLM-app layer. → <a href="#L5">L5</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI-generated proofs are outrunning the humans who'd verify them</strong><p>OpenAI and Anthropic each say an internal model helped disprove a 25-year-old complexity-theory conjecture, but outside reviewers, including a vocal critic of OpenAI's earlier proof dump, are still working through the formalizations. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -408,12 +408,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>A tampered build of Anthropic's official Claude Code VS Code extension reportedly sat live in Cursor's extension marketplace for about 11 hours on October 29 before removal, planting an unauthorized SSH key on the systems of anyone who installed it</h3>
             <p class="why"><b>Why it matters:</b> a coding assistant's own extension pipeline becoming the attack surface is a software-supply-chain risk worth defending against in your own tool setup, not just reading about (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/">theneuron.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-29</span><span class="pill">Models</span></div>
-          <div><h3>Google reportedly retired its Nano Banana 2 image-generation endpoint on October 29, pointing API users to the newer Nano Banana 2.1 model at roughly half the per-image price</h3>
-            <p class="why"><b>Why it matters:</b> a short, fixed deprecation window on a production API model previews the ongoing-maintenance cost of building an app on any one vendor's model (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://smartscope.blog/en/blog/gemini-nano-banana-21-api-pricing-migration-2026/">smartscope.blog</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-29</span><span class="pill">Industry</span></div>
@@ -482,16 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://openclassactions.com/news/openai-chatgpt-epilepsy-medication-wrongful-death-lawsuit.php">openclassactions.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-23</span><span class="pill">Models</span></div>
-          <div><h3>Block reportedly unveiled Dessa, a full-duplex speech-to-speech voice model trained only on human conversation audio with no text or pretrained language model in its pipeline, saying an early version runs locally on a MacBook Pro with an M4 Max chip for a small group of safety researchers</h3>
-            <p class="why"><b>Why it matters:</b> skipping the usual speech-to-text-to-speech chain for a model that fits on a laptop previews the on-device tradeoffs this guide covers for local models (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://techenclave.com/news/items/block-shows-dessa-a-voice-model-trained-entirely-on-human-conversation">techenclave.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-27</span><span class="pill">Industry</span></div>
+          <div><h3>The Information reportedly said OpenAI, one of Nvidia's largest customers, is negotiating to buy Google TPU chips as a second compute source; neither company has confirmed a deal or disclosed terms</h3>
+            <p class="why"><b>Why it matters:</b> a top GPU buyer shopping a second chip vendor is a sign the training and serving stack covered in <a href="#L4">L4</a> is becoming less single-vendor than it looks from the outside.</p>
+            <p class="src"><a href="https://decrypt.co/382090/openai-plans-buy-google-ai-chips-looks-beyond-nvidia">decrypt.co</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Coding</span></div>
-          <div><h3>TanStack reportedly shipped a stable 1.0 of its open-source TanStack AI toolkit, stabilizing 76 packages across chat, tools, MCP, persistence, sandboxes and agents with 23 model-provider adapters, including experimental support for running coding agents like Claude Code or Codex as a sandboxed chat backend</h3>
-            <p class="why"><b>Why it matters:</b> an open-source toolkit standardizing MCP and sandboxed agent execution across providers is the agent-tooling layer in <a href="#L6">L6</a>, worth trying before you build the same plumbing yourself (<a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://tanstack.com/blog/tanstack-ai-1-0">tanstack.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Models</span></div>
+          <div><h3>OpenAI released GPT-6.1 Terra, a mid-tier ChatGPT and API model priced roughly half its predecessor with reportedly large gains on agentic computer-use and coding benchmarks</h3>
+            <p class="why"><b>Why it matters:</b> cheaper mid-tier models aimed at everyday coding and computer-use tasks are the tier most student-built apps will actually call (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/openai-launches-gpt-61-terra-with-3x-faster-ai-agents-50-percent-lower-pricing/">bleepingcomputer.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Research</span></div>
+          <div><h3>OpenAI and Anthropic each reported that an internal AI model helped disprove the Exponential Time Hypothesis, a long-standing complexity-theory conjecture, though outside mathematicians have not yet fully verified either proof</h3>
+            <p class="why"><b>Why it matters:</b> AI-assisted proofs of a decades-old open problem, still awaiting independent review, is the frontier-research pattern in <a href="#L7">L7</a> moving from benchmarks into pure math.</p>
+            <p class="src"><a href="https://runtimewire.com/article/openai-ai-eth-disproof-external-review">runtimewire.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,36 +674,64 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction, speculative-decoding-acceptance, softmax-temperature-scaling, kv-cache-memory-calculator, network-egress-allowlist-toy, token-cost-estimator, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, model-distillation-dark-knowledge, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve -->
-        <div class="pgcard pgtopic" data-topic="scaling-law-curve">
-          <span class="label">New this refresh · 2026-10-31 · connects to <a href="#L7">L7</a></span>
-          <h3>Scaling-law toy: loss vs. compute</h3>
-          <p class="lede">Frontier labs often describe model loss as falling along a power law in compute: roughly <span class="mono">loss ≈ floor + a·C⁻ᵅ</span>. Drag the exponent and the compute multiplier to see how much predicted loss drops. The exponent here is illustrative only, not a fitted value from any published scaling-law paper, and this toy ignores data quality, architecture and everything else that actually shapes real loss curves.</p>
+        <!-- HISTORY: learning-rate-schedule, chunk-size-vs-retrieval, softmax-numerical-stability, overfitting-vs-model-size, perplexity-of-a-prediction, speculative-decoding-acceptance, softmax-temperature-scaling, kv-cache-memory-calculator, network-egress-allowlist-toy, token-cost-estimator, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, model-distillation-dark-knowledge, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing -->
+        <div class="pgcard pgtopic" data-topic="mixture-of-experts-routing">
+          <span class="label">New this refresh · 2026-10-31 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: mixture-of-experts token routing</h3>
+          <p class="lede">Real MoE models like the ones behind this week's GPT-6.1 Terra and Gemini 4 Carbon send each token to only a few "expert" sub-networks instead of running the whole model. Type a sentence and set the expert count and top-k to see which toy experts each word lights up. The routing below is a simple deterministic hash per word, not a trained gate, and it ignores capacity limits and the load-balancing losses real MoE training uses.</p>
           <div class="pt-ctl">
-            <label for="pt-alpha" class="mono">Exponent α: <span id="pt-alpha-val"></span></label>
-            <input type="range" id="pt-alpha" min="5" max="50" value="20" step="1">
-            <label for="pt-compute" class="mono">Compute multiplier: <span id="pt-compute-val"></span>×</label>
-            <input type="range" id="pt-compute" min="1" max="300" value="100" step="1">
+            <label for="pt-moe-text" class="mono">Sentence</label>
+            <input type="text" id="pt-moe-text" value="mixture of experts routes tokens to specialists" autocomplete="off" style="flex:1;min-width:220px;font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
           </div>
-          <div class="pt-row"><span class="mono">Predicted loss</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-pct"></span></div>
-          <p class="mono" id="pt-readout"></p>
+          <div class="pt-ctl">
+            <label for="pt-moe-experts" class="mono">Experts: <span id="pt-moe-experts-val"></span></label>
+            <input type="range" id="pt-moe-experts" min="2" max="8" value="4" step="1">
+            <label for="pt-moe-topk" class="mono">Top-k per token: <span id="pt-moe-topk-val"></span></label>
+            <input type="range" id="pt-moe-topk" min="1" max="4" value="2" step="1">
+          </div>
+          <div id="pt-moe-bars"></div>
+          <p class="mono" id="pt-moe-readout"></p>
           <script>(function(){
-          var alpha=document.getElementById("pt-alpha"), alphaVal=document.getElementById("pt-alpha-val"),
-              compute=document.getElementById("pt-compute"), computeVal=document.getElementById("pt-compute-val"),
-              fill=document.getElementById("pt-fill"), pct=document.getElementById("pt-pct"),
-              readout=document.getElementById("pt-readout");
-          function render(){
-            var a=parseInt(alpha.value,10)/100, mult=parseInt(compute.value,10);
-            alphaVal.textContent=a.toFixed(2);
-            computeVal.textContent=mult;
-            var ratio=Math.pow(mult, -a);
-            var pctVal=Math.max(0,Math.min(100,ratio*100));
-            fill.style.width=pctVal.toFixed(1)+"%";
-            pct.textContent=pctVal.toFixed(1)+"% of baseline";
-            readout.textContent="Toy formula only: at "+mult+"× compute with α="+a.toFixed(2)+", predicted loss is "+pctVal.toFixed(1)+"% of the 1× baseline — real scaling curves also depend on data and architecture.";
+          var textEl=document.getElementById("pt-moe-text"),
+              expEl=document.getElementById("pt-moe-experts"), expVal=document.getElementById("pt-moe-experts-val"),
+              topkEl=document.getElementById("pt-moe-topk"), topkVal=document.getElementById("pt-moe-topk-val"),
+              bars=document.getElementById("pt-moe-bars"), readout=document.getElementById("pt-moe-readout");
+          function hash(s, salt){
+            var h = salt % 97;
+            for (var i=0;i<s.length;i++){ h = (h*31 + s.charCodeAt(i)) % 97; }
+            return h;
           }
-          alpha.addEventListener("input", render);
-          compute.addEventListener("input", render);
+          function clearBars(){ while (bars.firstChild) bars.removeChild(bars.firstChild); }
+          function render(){
+            var E=parseInt(expEl.value,10), K=Math.min(parseInt(topkEl.value,10), E);
+            expVal.textContent=E; topkVal.textContent=K; topkEl.max=E;
+            var words=textEl.value.trim().split(/\s+/).filter(Boolean);
+            var counts=new Array(E).fill(0), lastChosen=[];
+            words.forEach(function(w, wi){
+              var scores=[];
+              for (var e=0;e<E;e++){ scores.push({e:e, s:hash(w, e*17+wi*7+1)}); }
+              scores.sort(function(a,b){ return b.s-a.s; });
+              var chosen=scores.slice(0,K).map(function(x){ return x.e; });
+              chosen.forEach(function(e){ counts[e]++; });
+              lastChosen=chosen;
+            });
+            clearBars();
+            var max=Math.max.apply(null, counts.concat([1]));
+            for (var e=0;e<E;e++){
+              var row=document.createElement("div"); row.className="pt-row";
+              var label=document.createElement("span"); label.className="mono"; label.textContent="Expert "+e;
+              var track=document.createElement("div"); track.className="pt-track";
+              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(counts[e]/max*100)+"%";
+              track.appendChild(fill);
+              var count=document.createElement("span"); count.className="mono"; count.textContent=String(counts[e]);
+              row.appendChild(label); row.appendChild(track); row.appendChild(count);
+              bars.appendChild(row);
+            }
+            readout.textContent = words.length ? ("Toy only: last word routed to experts "+lastChosen.join(", ")+" of "+E+" — real gates are learned, not hashed.") : "Type a sentence above.";
+          }
+          textEl.addEventListener("input", render);
+          expEl.addEventListener("input", render);
+          topkEl.addEventListener("input", render);
           render();
           })();</script>
         </div>
