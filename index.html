@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-03T00:42:00">2026-11-03 00:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-03T05:41:00">2026-11-03 05:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt Intelligence Index gave Gemini 4 Carbon the #1 spot over Claude Opus 5.5 by roughly a point, itself a reversal from the day before — a reason to read any single leaderboard snapshot skeptically. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Mistral shipped open weights for its roughly trillion-parameter Large 4 model days after a closed API preview, narrowing the gap between what you can download and what only an API hands you. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Zhipu's GLM-5.3 and Moonshot's Kimi K3 reportedly topped October's open-weights leaderboard, edging out Qwen3.8 and Mistral's newly open-weighted, roughly trillion-parameter Large 4. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Frontier labs are racing to cash in while burning historic sums</strong><p>Anthropic's IPO filing disclosed an $80.7B net loss against $16.2B of first-half revenue, and OpenAI reportedly trimmed its own funding round's valuation target — a sign this cycle's economics are still unsettled. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Platforms are curbing open-ended AI companionship for minors</strong><p>Character.AI said it will end open-ended chats for under-18 users by November 25, following New York's new law barring chatbots from claiming a romantic or authority-figure relationship with minors. → <a href="#L5">L5</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local-model tooling is quietly turning into a paid cloud business</strong><p>Ollama, the tool many self-hosting tutorials assume is free, is reportedly leaning into paid, per-token cloud tiers even as it keeps wrapping llama.cpp for free local runs — a reminder that "local" and "free" aren't the same guarantee. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -422,6 +422,24 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aiweekly.co/alerts/npr-about-half-of-us-adults-use-ai-chatbots-42-for-information-as-voters-ask">aiweekly.co</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic filed an S-1 with the SEC to list on the Nasdaq Global Select Market under the ticker "ANT," disclosing $16.2B of first-half-2026 revenue against an $80.7B net loss — mostly non-cash charges — with Goldman Sachs and Morgan Stanley leading a 22-bank underwriting group and no date or price range set yet</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab opening its books this far is the clearest look yet at how much capital this cycle actually burns, context worth having before weighing a job offer that leans on equity (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.shacknews.com/article/151141/anthropic-claude-stock-ipo">shacknews.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
+          <div><h3>OpenAI reportedly lowered the valuation target for its roughly $30B funding round from about $1.4 trillion to $1.25 trillion, with Coatue said to be in talks to co-lead, after some large investors responded coolly to the original ask</h3>
+            <p class="why"><b>Why it matters:</b> a top lab trimming its own valuation ask mid-round is a sign capital for this cycle isn't unconditional, useful context before chasing an offer that leans on equity (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://thenextweb.com/news/openai-funding-round-1-25tn-uae-coatue">thenextweb.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Open models</span></div>
+          <div><h3>Artificial Analysis's open-weights index reportedly ranked Zhipu's GLM-5.3 and Moonshot's Kimi K3 as October's top open-weight models, each scoring around 44–45 on its Intelligence Index and narrowly ahead of Qwen3.8-Max, Mistral's Large 4 and Nvidia's Nemotron 3.5 Bolt</h3>
+            <p class="why"><b>Why it matters:</b> two more serious contenders for "best model you can actually download" is good news if you're weighing which open runtime to build a local-model project around (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
+            <p class="src"><a href="https://artificialanalysis.ai/models/comparisons/glm-5-3-vs-kimi-k3">artificialanalysis.ai</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
           <div><h3>Reddit's CEO reportedly told investors on a Q3 earnings call that Google's AI Overviews and AI Mode cut average weekly search referrals to Reddit by more than a million in October, pointing to Google's AI-generated summaries rather than any change in how Google crawls the site</h3>
             <p class="why"><b>Why it matters:</b> a major content platform publicly quantifying how AI-generated summaries reroute traffic away from the open web previews the distribution problem any app built on <a href="#L5">L5</a>'s retrieval patterns eventually has to answer.</p>
@@ -432,12 +450,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Ollama, the widely used tool for running open models such as Llama, Qwen and Gemma on your own machine, is reportedly shifting emphasis toward paid, per-token cloud-hosted tiers alongside its free local mode, while continuing to wrap llama.cpp under the hood</h3>
             <p class="why"><b>Why it matters:</b> a lot of self-hosting tutorials assume Ollama stays simple and free forever, so its drift toward a metered cloud product is worth tracking before you build a local-model project around it (<a href="#L4">L4</a>, <a href="#projects">Projects</a>).</p>
             <p class="src"><a href="https://devtoollab.com/blog/ollama-alternatives">devtoollab.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-30</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic reportedly pushed its IPO timeline from October into November, with bankers said to be eyeing a roadshow around the week of November 9 — after the November 3 US midterm elections — for a Nasdaq debut under the ticker "ANT" before Thanksgiving</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab's IPO calendar is a visible marker of how much commercial pressure is now riding on model progress, the same backdrop worth weighing when picking where to work after <a href="#L7">L7</a>.</p>
-            <p class="src"><a href="https://cryptobriefing.com/anthropic-targets-november-ipo-delay/">cryptobriefing.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
@@ -474,18 +486,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>New York's governor signed a youth AI-chatbot safety law on October 28 barring chatbots from posing as a real person, claiming to be alive, or claiming a romantic, personal or authority-figure relationship with anyone under 18, with age-verification duties and fines up to $25,000 per violation once it takes effect January 1, 2027</h3>
             <p class="why"><b>Why it matters:</b> a state regulating a chatbot's claimed persona and relationships, not just its outputs, is the kind of deployment-layer rule the consumer apps in <a href="#L5">L5</a> now have to design around state by state.</p>
             <p class="src"><a href="https://iapp.org/news/a/new-york-s-governor-signs-youth-ai-chatbot-safety-bill">iapp.org</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-28</span><span class="pill">Models</span></div>
-          <div><h3>Google reportedly rolled out Gemini 4 Carbon, a cybersecurity-focused model priced at $2 per million input tokens and $10 per million output, gated to a defender-only early access program instead of the general API</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab shipping a security-specialized model, not just a bigger general one, is a sign the skills in <a href="#L6">L6</a> are becoming their own product category.</p>
-            <p class="src"><a href="https://androidauthority.com/google-announces-gemini-4-carbon-3729367">androidauthority.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-28</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic reportedly launched Claude for Legal, adding interactive legal-specific artifacts and plans for a dozen practice-group plug-ins plus connectors to more than 60 other legal platforms</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab building a dedicated legal-workflow layer on top of its base model is the vertical LLM-app pattern covered in <a href="#L5">L5</a>, and a hint at where legal-tech hiring is headed.</p>
-            <p class="src"><a href="https://www.abajournal.com/news/article/anthropic-raises-the-bar-with-claude-for-legal-artifacts-law-specific-interactive-tools">abajournal.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-28</span><span class="pill">Research</span></div>
@@ -674,47 +674,39 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: prompt-injection-filter-toy, top-k-top-p-sampling, model-distillation-dark-knowledge, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator -->
-        <div class="pgcard pgtopic" data-topic="token-cost-calculator" id="pt-cost-card">
+        <!-- HISTORY: top-k-top-p-sampling, model-distillation-dark-knowledge, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error -->
+        <div class="pgcard pgtopic" data-topic="quantization-rounding-error" id="pt-q-card">
           <span class="label">New this refresh · 2026-11-03 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: what does a prompt actually cost?</h3>
-          <p class="lede">This week's Gemini 4 Carbon launch priced API calls at $2 per million input tokens and $10 per million output tokens — a pattern most LLM providers share. Drag the sliders to see how prompt length, response length, and per-token pricing combine into a dollar figure. This simplifies real billing, which also involves caching, batching, and volume discounts.</p>
+          <h3>Toy: what quantization actually throws away</h3>
+          <p class="lede">With GLM-5.3, Kimi K3 and Mistral's Large 4 all shipping as open weights this month, whether you can run one locally comes down to how many bits per weight you can afford. Drag "true weight" and "bits" to see one 32-bit float get rounded to the nearest representable level. This simplifies real quantization, which works on whole tensors with per-block scale factors, not one value in isolation.</p>
           <div class="pt-ctl">
-            <label for="pt-cost-in" class="mono">Input tokens: <span id="pt-cost-in-val">1500</span></label>
-            <input type="range" id="pt-cost-in" min="0" max="200000" step="500" value="1500">
-            <label for="pt-cost-out" class="mono">Output tokens: <span id="pt-cost-out-val">500</span></label>
-            <input type="range" id="pt-cost-out" min="0" max="50000" step="100" value="500">
-            <label for="pt-cost-pin" class="mono">$ / 1M input: <span id="pt-cost-pin-val">2.00</span></label>
-            <input type="range" id="pt-cost-pin" min="0" max="20" step="0.5" value="2">
-            <label for="pt-cost-pout" class="mono">$ / 1M output: <span id="pt-cost-pout-val">10.00</span></label>
-            <input type="range" id="pt-cost-pout" min="0" max="80" step="0.5" value="10">
+            <label for="pt-q-wt" class="mono">True weight: <span id="pt-q-wt-val">0.6734</span></label>
+            <input type="range" id="pt-q-wt" min="-1" max="1" step="0.0001" value="0.6734">
+            <label for="pt-q-bits" class="mono">Bits per weight: <span id="pt-q-bits-val">4-bit (16 levels)</span></label>
+            <input type="range" id="pt-q-bits" min="2" max="8" step="1" value="4">
           </div>
-          <div class="pt-row"><span class="mono" id="pt-cost-config"></span><div class="pt-track"><div class="pt-fill" id="pt-cost-fill"></div></div><span class="mono" id="pt-cost-size"></span></div>
-          <p class="mono" id="pt-cost-readout"></p>
+          <div class="pt-row"><span class="mono" id="pt-q-quant"></span><div class="pt-track"><div class="pt-fill" id="pt-q-fill"></div></div><span class="mono">error ÷ step</span></div>
+          <p class="mono" id="pt-q-readout"></p>
           <script>(function(){
-          var ids=["in","out","pin","pout"], els={}, valEls={};
-          ids.forEach(function(id){
-            els[id]=document.getElementById("pt-cost-"+id);
-            valEls[id]=document.getElementById("pt-cost-"+id+"-val");
-          });
-          var fill=document.getElementById("pt-cost-fill"), sizeEl=document.getElementById("pt-cost-size"),
-              configEl=document.getElementById("pt-cost-config"), readout=document.getElementById("pt-cost-readout");
+          var wtEl=document.getElementById("pt-q-wt"), bitsEl=document.getElementById("pt-q-bits");
+          var wtVal=document.getElementById("pt-q-wt-val"), bitsVal=document.getElementById("pt-q-bits-val");
+          var fill=document.getElementById("pt-q-fill"), readout=document.getElementById("pt-q-readout"),
+              quantEl=document.getElementById("pt-q-quant");
           function update(){
-            var inTok=parseInt(els.in.value,10), outTok=parseInt(els.out.value,10);
-            var pin=parseFloat(els.pin.value), pout=parseFloat(els.pout.value);
-            valEls.in.textContent=inTok; valEls.out.textContent=outTok;
-            valEls.pin.textContent=pin.toFixed(2); valEls.pout.textContent=pout.toFixed(2);
-            var cost=(inTok/1e6)*pin + (outTok/1e6)*pout;
-            var per1k=cost*1000;
-            fill.style.width=Math.min(100,(cost/8)*100).toFixed(1)+"%";
-            sizeEl.textContent="$"+cost.toFixed(4);
-            configEl.textContent=inTok+" in + "+outTok+" out tokens";
-            readout.textContent="One call: $"+cost.toFixed(4)+" — 1,000 calls like it: $"+per1k.toFixed(2)+". Real bills also shift with caching and volume discounts.";
+            var wt=parseFloat(wtEl.value), bits=parseInt(bitsEl.value,10);
+            var levels=Math.pow(2,bits);
+            var step=2/(levels-1);
+            var idx=Math.round((wt+1)/step);
+            var quant=idx*step-1;
+            var err=Math.abs(wt-quant);
+            wtVal.textContent=wt.toFixed(4);
+            bitsVal.textContent=bits+"-bit ("+levels+" levels)";
+            quantEl.textContent="quantized: "+quant.toFixed(4);
+            fill.style.width=Math.min(100,(err/step)*100).toFixed(0)+"%";
+            readout.textContent="Rounds to the nearest of "+levels+" levels spaced "+step.toFixed(4)+" apart → error "+err.toFixed(4)+" ("+((err/2)*100).toFixed(2)+"% of the full −1..1 range). Drop bits and that per-weight error grows, then compounds across billions of weights.";
           }
-          ids.forEach(function(id){
-            els[id].addEventListener("input", update);
-            els[id].addEventListener("change", update);
-          });
+          wtEl.addEventListener("input", update);
+          bitsEl.addEventListener("input", update);
           update();
           })();</script>
         </div>
