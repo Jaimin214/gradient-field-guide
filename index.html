@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-02T19:42:47">2026-11-02 19:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-03T00:42:00">2026-11-03 00:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -400,7 +400,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Mistral shipped open weights for its roughly trillion-parameter Large 4 model days after a closed API preview, narrowing the gap between what you can download and what only an API hands you. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Platforms are curbing open-ended AI companionship for minors</strong><p>Character.AI said it will end open-ended chats for under-18 users by November 25, following New York's new law barring chatbots from claiming a romantic or authority-figure relationship with minors. → <a href="#L5">L5</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Infrastructure money keeps chasing custom inference chips</strong><p>UK startup Fractile is reportedly in talks to raise at a $6.5B valuation months after a $250M deal to supply Anthropic with inference chips — a sign some of this cycle's biggest bets are on serving tokens cheaply, not just training bigger models. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local-model tooling is quietly turning into a paid cloud business</strong><p>Ollama, the tool many self-hosting tutorials assume is free, is reportedly leaning into paid, per-token cloud tiers even as it keeps wrapping llama.cpp for free local runs — a reminder that "local" and "free" aren't the same guarantee. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -426,6 +426,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Reddit's CEO reportedly told investors on a Q3 earnings call that Google's AI Overviews and AI Mode cut average weekly search referrals to Reddit by more than a million in October, pointing to Google's AI-generated summaries rather than any change in how Google crawls the site</h3>
             <p class="why"><b>Why it matters:</b> a major content platform publicly quantifying how AI-generated summaries reroute traffic away from the open web previews the distribution problem any app built on <a href="#L5">L5</a>'s retrieval patterns eventually has to answer.</p>
             <p class="src"><a href="https://engadget.com/2227553/reddit-s-ceo-sure-seems-frustrated-with-google-s-ai-overviews">engadget.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Local</span></div>
+          <div><h3>Ollama, the widely used tool for running open models such as Llama, Qwen and Gemma on your own machine, is reportedly shifting emphasis toward paid, per-token cloud-hosted tiers alongside its free local mode, while continuing to wrap llama.cpp under the hood</h3>
+            <p class="why"><b>Why it matters:</b> a lot of self-hosting tutorials assume Ollama stays simple and free forever, so its drift toward a metered cloud product is worth tracking before you build a local-model project around it (<a href="#L4">L4</a>, <a href="#projects">Projects</a>).</p>
+            <p class="src"><a href="https://devtoollab.com/blog/ollama-alternatives">devtoollab.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-30</span><span class="pill">Industry</span></div>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Artificial Analysis reportedly rebuilt its Intelligence Index (v5) and found Google's Gemini 4 Carbon took the #1 spot from Claude Opus 5.5 by roughly one point (about 59 versus 58), a lead that had itself only changed hands the day before; Carbon still trails Opus 5.5 on the coding-agent benchmark</h3>
             <p class="why"><b>Why it matters:</b> a frontier-model leaderboard flipping within a single day of a reindex is a concrete reason to treat any one benchmark claim as a moving snapshot, not a verdict, before citing it in a project write-up (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1">artificialanalysis.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Coding</span></div>
-          <div><h3>Anthropic reportedly added guidance steering Claude Code's Opus 5.5 away from recreating another developer's specific existing game, after Steam was flooded with AI-generated clones</h3>
-            <p class="why"><b>Why it matters:</b> a coding agent getting a built-in guardrail against recreating someone else's product previews the IP and policy limits any agentic coding tool you build will need (<a href="#L5">L5</a>, <a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games">gamedeveloper.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,37 +674,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, model-distillation-dark-knowledge, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay -->
-        <div class="pgcard pgtopic" data-topic="multi-step-success-decay" id="pt-decay-card">
-          <span class="label">New this refresh · 2026-11-02 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: why agent chains fail more than any single step</h3>
-          <p class="lede">A new benchmark this week found top agents finishing only a small share of realistic multi-step tasks. Drag the sliders to see why: if each step in a chain succeeds independently with probability p, the odds the whole chain succeeds are p raised to the number of steps. This simplifies real agents, whose steps aren't truly independent and can retry or checkpoint, but the compounding effect is real.</p>
+        <!-- HISTORY: prompt-injection-filter-toy, top-k-top-p-sampling, model-distillation-dark-knowledge, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator -->
+        <div class="pgcard pgtopic" data-topic="token-cost-calculator" id="pt-cost-card">
+          <span class="label">New this refresh · 2026-11-03 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: what does a prompt actually cost?</h3>
+          <p class="lede">This week's Gemini 4 Carbon launch priced API calls at $2 per million input tokens and $10 per million output tokens — a pattern most LLM providers share. Drag the sliders to see how prompt length, response length, and per-token pricing combine into a dollar figure. This simplifies real billing, which also involves caching, batching, and volume discounts.</p>
           <div class="pt-ctl">
-            <label for="pt-decay-p" class="mono">Per-step success: <span id="pt-decay-p-val">90</span>%</label>
-            <input type="range" id="pt-decay-p" min="50" max="99" step="1" value="90">
-            <label for="pt-decay-n" class="mono">Steps in the chain: <span id="pt-decay-n-val">5</span></label>
-            <input type="range" id="pt-decay-n" min="1" max="30" step="1" value="5">
+            <label for="pt-cost-in" class="mono">Input tokens: <span id="pt-cost-in-val">1500</span></label>
+            <input type="range" id="pt-cost-in" min="0" max="200000" step="500" value="1500">
+            <label for="pt-cost-out" class="mono">Output tokens: <span id="pt-cost-out-val">500</span></label>
+            <input type="range" id="pt-cost-out" min="0" max="50000" step="100" value="500">
+            <label for="pt-cost-pin" class="mono">$ / 1M input: <span id="pt-cost-pin-val">2.00</span></label>
+            <input type="range" id="pt-cost-pin" min="0" max="20" step="0.5" value="2">
+            <label for="pt-cost-pout" class="mono">$ / 1M output: <span id="pt-cost-pout-val">10.00</span></label>
+            <input type="range" id="pt-cost-pout" min="0" max="80" step="0.5" value="10">
           </div>
-          <div class="pt-row"><span class="mono" id="pt-decay-config"></span><div class="pt-track"><div class="pt-fill" id="pt-decay-fill"></div></div><span class="mono" id="pt-decay-size"></span></div>
-          <p class="mono" id="pt-decay-readout"></p>
+          <div class="pt-row"><span class="mono" id="pt-cost-config"></span><div class="pt-track"><div class="pt-fill" id="pt-cost-fill"></div></div><span class="mono" id="pt-cost-size"></span></div>
+          <p class="mono" id="pt-cost-readout"></p>
           <script>(function(){
-          var p=document.getElementById("pt-decay-p"), n=document.getElementById("pt-decay-n");
-          var pVal=document.getElementById("pt-decay-p-val"), nVal=document.getElementById("pt-decay-n-val");
-          var fill=document.getElementById("pt-decay-fill"), sizeEl=document.getElementById("pt-decay-size"),
-              configEl=document.getElementById("pt-decay-config"), readout=document.getElementById("pt-decay-readout");
+          var ids=["in","out","pin","pout"], els={}, valEls={};
+          ids.forEach(function(id){
+            els[id]=document.getElementById("pt-cost-"+id);
+            valEls[id]=document.getElementById("pt-cost-"+id+"-val");
+          });
+          var fill=document.getElementById("pt-cost-fill"), sizeEl=document.getElementById("pt-cost-size"),
+              configEl=document.getElementById("pt-cost-config"), readout=document.getElementById("pt-cost-readout");
           function update(){
-            var P=parseInt(p.value,10)/100, N=parseInt(n.value,10);
-            pVal.textContent=parseInt(p.value,10); nVal.textContent=N;
-            var overall=Math.pow(P,N)*100;
-            fill.style.width=Math.min(100,overall).toFixed(1)+"%";
-            sizeEl.textContent=overall.toFixed(1)+"%";
-            configEl.textContent=parseInt(p.value,10)+"% × "+N+" steps";
-            readout.textContent="Chain success: "+overall.toFixed(1)+"% — "+
-              (overall<50 ? "a coin flip or worse, even though each step alone looked reliable." : "still likely to finish end to end.");
+            var inTok=parseInt(els.in.value,10), outTok=parseInt(els.out.value,10);
+            var pin=parseFloat(els.pin.value), pout=parseFloat(els.pout.value);
+            valEls.in.textContent=inTok; valEls.out.textContent=outTok;
+            valEls.pin.textContent=pin.toFixed(2); valEls.pout.textContent=pout.toFixed(2);
+            var cost=(inTok/1e6)*pin + (outTok/1e6)*pout;
+            var per1k=cost*1000;
+            fill.style.width=Math.min(100,(cost/8)*100).toFixed(1)+"%";
+            sizeEl.textContent="$"+cost.toFixed(4);
+            configEl.textContent=inTok+" in + "+outTok+" out tokens";
+            readout.textContent="One call: $"+cost.toFixed(4)+" — 1,000 calls like it: $"+per1k.toFixed(2)+". Real bills also shift with caching and volume discounts.";
           }
-          [p,n].forEach(function(el){
-            el.addEventListener("input", update);
-            el.addEventListener("change", update);
+          ids.forEach(function(id){
+            els[id].addEventListener("input", update);
+            els[id].addEventListener("change", update);
           });
           update();
           })();</script>
