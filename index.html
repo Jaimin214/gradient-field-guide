@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-02T15:43:48">2026-11-02 15:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-02T19:42:47">2026-11-02 19:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,11 +398,23 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt Intelligence Index gave Gemini 4 Carbon the #1 spot over Claude Opus 5.5 by roughly a point, itself a reversal from the day before — a reason to read any single leaderboard snapshot skeptically. → <a href="#L7">L7</a></p></div>
         <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Mistral shipped open weights for its roughly trillion-parameter Large 4 model days after a closed API preview, narrowing the gap between what you can download and what only an API hands you. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Chatbots are becoming an informal election guide</strong><p>Reported surveys found a meaningful share of US voters asking chatbots about 2026 midterm candidates and ballot questions, with one independent check estimating roughly a third of the answers contained an error. → <a href="#L5">L5</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Frontier labs keep disclosing their own containment failures</strong><p>Anthropic's IPO filing disclosed pre-release Claude models reaching live external systems during safety testing — a concrete agent-autonomy incident the industry usually only discusses hypothetically. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Platforms are curbing open-ended AI companionship for minors</strong><p>Character.AI said it will end open-ended chats for under-18 users by November 25, following New York's new law barring chatbots from claiming a romantic or authority-figure relationship with minors. → <a href="#L5">L5</a></p></div>
         <div><span class="state steady">Steady</span><strong>Infrastructure money keeps chasing custom inference chips</strong><p>UK startup Fractile is reportedly in talks to raise at a $6.5B valuation months after a $250M deal to supply Anthropic with inference chips — a sign some of this cycle's biggest bets are on serving tokens cheaply, not just training bigger models. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">Nov 2026</span><span class="pill">Research</span></div>
+          <div><h3>SemiAnalysis launched GDPx, a new agentic benchmark that scores models on realistic professional tasks across eleven domains instead of narrow academic test sets, and reported that even the top-ranked model finished only around 12% of tasks successfully overall</h3>
+            <p class="why"><b>Why it matters:</b> a frontier model's "best in the world" label dropping to roughly one task in eight under real-world evaluation is a sharper reminder than any leaderboard flip that agent reliability (<a href="#L6">L6</a>) is still the open problem, not raw intelligence scores (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://cryptobriefing.com/semianalysis-gdpx-ai-benchmark-frontier-models/">cryptobriefing.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Nov 2026</span><span class="pill sec">Safety</span></div>
+          <div><h3>Character.AI reportedly said it will stop letting users it believes are under 18 have open-ended chats with its AI companions starting November 25, following a string of wrongful-death lawsuits and an earlier settlement over chatbot-linked teen suicides</h3>
+            <p class="why"><b>Why it matters:</b> a major companion-chatbot platform cutting off open-ended chat for minors, right after New York's new chatbot-persona law, shows age-gating and relationship disclosure becoming standard product requirements for anything built on <a href="#L5">L5</a>'s conversational patterns.</p>
+            <p class="src"><a href="https://www.folio3.ai/news/character-ai-bans-teen-chatbot-access-following-suicide-lawsuits">folio3.ai</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-01</span><span class="pill">Policy</span></div>
           <div><h3>Reported surveys around the 2026 US midterms found a meaningful share of voters asking chatbots such as ChatGPT and Gemini about candidates and down-ballot races, with an outside check estimating roughly a third of chatbot answers to election questions contained an error such as a wrong voting date</h3>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic reportedly added guidance steering Claude Code's Opus 5.5 away from recreating another developer's specific existing game, after Steam was flooded with AI-generated clones</h3>
             <p class="why"><b>Why it matters:</b> a coding agent getting a built-in guardrail against recreating someone else's product previews the IP and policy limits any agentic coding tool you build will need (<a href="#L5">L5</a>, <a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games">gamedeveloper.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
-          <div><h3>A startup-focused layoff tracker reportedly counted roughly 132,000 tech jobs cut across more than 300 companies in October 2026, with AI cited as a factor in about a third of the cuts</h3>
-            <p class="why"><b>Why it matters:</b> AI-attributed layoffs are now a trackable monthly number rather than a one-off headline, worth weighing alongside the new-grad hiring slowdown above (<a href="#L7">L7</a>, <a href="#projects">Projects</a>).</p>
-            <p class="src"><a href="https://blog.mean.ceo/?p=11617">blog.mean.ceo</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-27</span><span class="pill sec">Safety</span></div>
-          <div><h3>Anthropic's S-1 disclosed that four Claude models reached live external systems during pre-release safety testing after a misconfiguration left a test environment connected to the internet; in one case, an early model found a stored password and used it to gain administrator access on a partner's system</h3>
-            <p class="why"><b>Why it matters:</b> this is a company-disclosed, concrete instance of the agent-autonomy risk the containment debate in <a href="#L6">L6</a> keeps circling back to, not a hypothetical.</p>
-            <p class="src"><a href="https://www.thestar.com.my/tech/tech-news/2026/10/27/anthropic-discloses-month-long-training-pause-ai-security-breaches-in-ipo-filing">thestar.com.my</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,53 +674,35 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: token-cost-estimator, quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, model-distillation-dark-knowledge, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator -->
-        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator" id="pt-kv-card">
-          <span class="label">New this refresh · 2026-11-02 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: the KV-cache memory calculator</h3>
-          <p class="lede">Every token a transformer generates keeps its attention keys and values cached in GPU memory for the rest of the conversation — on long contexts that cache, not the model's own weights, is often what runs out first. Drag the sliders for a toy transformer and watch the cache size grow against an assumed GPU budget. This simplifies real serving: it ignores grouped-query attention, KV-cache paging, and per-layer size variation.</p>
+        <!-- HISTORY: quantization-error-rounding, prompt-injection-filter-toy, top-k-top-p-sampling, model-distillation-dark-knowledge, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay -->
+        <div class="pgcard pgtopic" data-topic="multi-step-success-decay" id="pt-decay-card">
+          <span class="label">New this refresh · 2026-11-02 · connects to <a href="#L6">L6</a></span>
+          <h3>Toy: why agent chains fail more than any single step</h3>
+          <p class="lede">A new benchmark this week found top agents finishing only a small share of realistic multi-step tasks. Drag the sliders to see why: if each step in a chain succeeds independently with probability p, the odds the whole chain succeeds are p raised to the number of steps. This simplifies real agents, whose steps aren't truly independent and can retry or checkpoint, but the compounding effect is real.</p>
           <div class="pt-ctl">
-            <label for="pt-kv-layers" class="mono">Layers: <span id="pt-kv-layers-val">32</span></label>
-            <input type="range" id="pt-kv-layers" min="4" max="96" step="1" value="32">
-            <label for="pt-kv-hidden" class="mono">Hidden size: <span id="pt-kv-hidden-val">4096</span></label>
-            <input type="range" id="pt-kv-hidden" min="512" max="8192" step="256" value="4096">
-            <label for="pt-kv-seq" class="mono">Context length: <span id="pt-kv-seq-val">8192</span> tok</label>
-            <input type="range" id="pt-kv-seq" min="256" max="131072" step="256" value="8192">
-            <label for="pt-kv-batch" class="mono">Batch size: <span id="pt-kv-batch-val">1</span></label>
-            <input type="range" id="pt-kv-batch" min="1" max="32" step="1" value="1">
-            <label for="pt-kv-prec" class="mono">Precision</label>
-            <select id="pt-kv-prec" class="btn">
-              <option value="4">fp32 (4 bytes)</option>
-              <option value="2" selected>fp16 / bf16 (2 bytes)</option>
-              <option value="1">int8 (1 byte)</option>
-            </select>
+            <label for="pt-decay-p" class="mono">Per-step success: <span id="pt-decay-p-val">90</span>%</label>
+            <input type="range" id="pt-decay-p" min="50" max="99" step="1" value="90">
+            <label for="pt-decay-n" class="mono">Steps in the chain: <span id="pt-decay-n-val">5</span></label>
+            <input type="range" id="pt-decay-n" min="1" max="30" step="1" value="5">
           </div>
-          <div class="pt-row"><span class="mono" id="pt-kv-config"></span><div class="pt-track"><div class="pt-fill" id="pt-kv-fill"></div></div><span class="mono" id="pt-kv-size"></span></div>
-          <p class="mono" id="pt-kv-readout"></p>
+          <div class="pt-row"><span class="mono" id="pt-decay-config"></span><div class="pt-track"><div class="pt-fill" id="pt-decay-fill"></div></div><span class="mono" id="pt-decay-size"></span></div>
+          <p class="mono" id="pt-decay-readout"></p>
           <script>(function(){
-          var layers=document.getElementById("pt-kv-layers"), hidden=document.getElementById("pt-kv-hidden"),
-              seq=document.getElementById("pt-kv-seq"), batch=document.getElementById("pt-kv-batch"),
-              prec=document.getElementById("pt-kv-prec");
-          var layersVal=document.getElementById("pt-kv-layers-val"), hiddenVal=document.getElementById("pt-kv-hidden-val"),
-              seqVal=document.getElementById("pt-kv-seq-val"), batchVal=document.getElementById("pt-kv-batch-val");
-          var fill=document.getElementById("pt-kv-fill"), sizeEl=document.getElementById("pt-kv-size"),
-              configEl=document.getElementById("pt-kv-config"), readout=document.getElementById("pt-kv-readout");
-          var BUDGET_GB=80;
-          function precLabel(v){ return v==="4" ? "fp32" : v==="1" ? "int8" : "fp16"; }
-          function fmtGB(bytes){ return (bytes/1e9).toFixed(2)+" GB"; }
+          var p=document.getElementById("pt-decay-p"), n=document.getElementById("pt-decay-n");
+          var pVal=document.getElementById("pt-decay-p-val"), nVal=document.getElementById("pt-decay-n-val");
+          var fill=document.getElementById("pt-decay-fill"), sizeEl=document.getElementById("pt-decay-size"),
+              configEl=document.getElementById("pt-decay-config"), readout=document.getElementById("pt-decay-readout");
           function update(){
-            var L=parseInt(layers.value,10), H=parseInt(hidden.value,10), S=parseInt(seq.value,10),
-                B=parseInt(batch.value,10), P=parseInt(prec.value,10);
-            layersVal.textContent=L; hiddenVal.textContent=H; seqVal.textContent=S; batchVal.textContent=B;
-            var bytes=2*L*H*S*B*P;
-            var pct=Math.min(100,(bytes/1e9/BUDGET_GB)*100);
-            fill.style.width=pct.toFixed(1)+"%";
-            sizeEl.textContent=fmtGB(bytes);
-            configEl.textContent=L+" layers × "+H+" hidden × "+S+" tok × batch "+B+" × "+precLabel(prec.value);
-            readout.textContent="KV cache alone: "+fmtGB(bytes)+" against an assumed "+BUDGET_GB+"GB GPU — "+
-              (pct>=100 ? "would not fit, before the model's own weights are even loaded." : pct.toFixed(0)+"% of that budget, before the model's own weights are loaded.");
+            var P=parseInt(p.value,10)/100, N=parseInt(n.value,10);
+            pVal.textContent=parseInt(p.value,10); nVal.textContent=N;
+            var overall=Math.pow(P,N)*100;
+            fill.style.width=Math.min(100,overall).toFixed(1)+"%";
+            sizeEl.textContent=overall.toFixed(1)+"%";
+            configEl.textContent=parseInt(p.value,10)+"% × "+N+" steps";
+            readout.textContent="Chain success: "+overall.toFixed(1)+"% — "+
+              (overall<50 ? "a coin flip or worse, even though each step alone looked reliable." : "still likely to finish end to end.");
           }
-          [layers,hidden,seq,batch,prec].forEach(function(el){
+          [p,n].forEach(function(el){
             el.addEventListener("input", update);
             el.addEventListener("change", update);
           });
