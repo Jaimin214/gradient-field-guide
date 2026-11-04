@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-03T15:40:00">2026-11-03 15:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-03T19:42:33">2026-11-03 19:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,12 +397,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt Intelligence Index gave Gemini 4 Carbon the #1 spot over Claude Opus 5.5 by roughly a point, and OpenAI answered by shipping GPT-6.1 Terra at half its predecessor's price — a reason to read any single leaderboard snapshot skeptically. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Zhipu's GLM-5.3 and Moonshot's Kimi K3 reportedly topped October's open-weights leaderboard, edging out Qwen3.8 and Mistral's newly open-weighted, roughly trillion-parameter Large 4. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Zhipu's GLM-5.3 and Moonshot's Kimi K3 reportedly topped October's open-weights leaderboard, and startup Reflection AI joined the race by open-weighting its roughly 501B-parameter Beam model under Apache 2.0. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Frontier labs are racing to cash in while burning historic sums</strong><p>Anthropic's IPO filing disclosed an $80.7B net loss against $16.2B of first-half revenue, and OpenAI reportedly trimmed its own funding round's valuation target — a sign this cycle's economics are still unsettled. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Agent-building blocks are migrating to neutral foundations</strong><p>Anthropic handed its widely adopted Agent Skills standard to the same Linux Foundation body that already hosts the Model Context Protocol, joined by new donations from OpenAI, Hugging Face and Alibaba — a sign agent plumbing is heading toward shared governance rather than one vendor's spec. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-10-16</span><span class="pill">Open models</span></div>
+          <div><h3>Reflection AI released Beam, a roughly 501-billion-parameter sparse mixture-of-experts model, as open weights on Hugging Face under an Apache 2.0 license, with FP8 and NVFP4 checkpoints small enough to self-host on four GPUs</h3>
+            <p class="why"><b>Why it matters:</b> a well-funded startup open-weighting a frontier-scale model gives you another serious option to download and run for a local-model project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>), though its benchmark claims are self-reported and still unverified.</p>
+            <p class="src"><a href="https://techjacksolutions.com/ai-brief/reflection-ai-beam-501b-weights-live-apache-download/">techjacksolutions.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill">Industry</span></div>
           <div><h3>OpenAI reportedly notified Cursor-maker Anysphere in August that it will cut off Cursor's access to OpenAI's models on November 12, invoking a change-of-control clause after SpaceX completed its roughly $60B acquisition of the company</h3>
@@ -480,12 +486,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Artificial Analysis's open-weights index reportedly ranked Zhipu's GLM-5.3 and Moonshot's Kimi K3 as October's top open-weight models, each scoring around 44–45 on its Intelligence Index and narrowly ahead of Qwen3.8-Max, Mistral's Large 4 and Nvidia's Nemotron 3.5 Bolt</h3>
             <p class="why"><b>Why it matters:</b> two more serious contenders for "best model you can actually download" is good news if you're weighing which open runtime to build a local-model project around (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
             <p class="src"><a href="https://artificialanalysis.ai/models/comparisons/glm-5-3-vs-kimi-k3">artificialanalysis.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Industry</span></div>
-          <div><h3>Reddit's CEO reportedly told investors on a Q3 earnings call that Google's AI Overviews and AI Mode cut average weekly search referrals to Reddit by more than a million in October, pointing to Google's AI-generated summaries rather than any change in how Google crawls the site</h3>
-            <p class="why"><b>Why it matters:</b> a major content platform publicly quantifying how AI-generated summaries reroute traffic away from the open web previews the distribution problem any app built on <a href="#L5">L5</a>'s retrieval patterns eventually has to answer.</p>
-            <p class="src"><a href="https://engadget.com/2227553/reddit-s-ceo-sure-seems-frustrated-with-google-s-ai-overviews">engadget.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Oct 2026</span><span class="pill">Local</span></div>
@@ -674,48 +674,54 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling -->
-        <div class="pgcard pgtopic" data-topic="top-p-top-k-sampling" id="pt-tp-card">
-          <span class="label">New this refresh · 2026-11-03 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: top-k and top-p cut off the next-token list</h3>
-          <p class="lede">A model scores every token in its vocabulary, then samples one. Top-k keeps only the k highest-scoring tokens; top-p (nucleus sampling) instead keeps the smallest set whose probabilities add up to p, so the cutoff shrinks when the model is confident and grows when it's unsure. This toy applies both to a tiny fixed 10-token distribution — real vocabularies have tens of thousands of tokens, and GPT-6.1 Terra's and Gemini 4's actual sampling settings aren't public.</p>
+        <!-- HISTORY: cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist -->
+        <div class="pgcard pgtopic" data-topic="token-watermark-greenlist" id="pt-wm-card">
+          <span class="label">New this refresh · 2026-11-03 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: green-list token watermark detector</h3>
+          <p class="lede">Statistical text watermarks — the kind xAI, OpenAI and Anthropic are rolling out under the EU AI Act — bias a model toward a secret "green list" of tokens at each generation step, then detect the mark later by counting how many green tokens turned up. This toy fakes a tiny 16-word vocabulary with a random green/red split and only 12 tokens; real schemes hash the actual preceding tokens to pick the list and need hundreds of tokens before the statistics are trustworthy.</p>
           <div class="pt-ctl">
-            <label class="mono">top-k <input type="range" id="pt-tp-k" min="1" max="10" value="10"> <span id="pt-tp-kval">10</span></label>
-            <label class="mono">top-p <input type="range" id="pt-tp-p" min="0" max="100" value="100"> <span id="pt-tp-pval">1.00</span></label>
+            <label class="mono">Watermark bias <input type="range" id="pt-wm-bias" min="0" max="5" step="0.5" value="2"> <span id="pt-wm-biasval">2.0</span></label>
+            <button type="button" class="btn primary" id="pt-wm-gen">Generate sequence</button>
           </div>
-          <div id="pt-tp-bars"></div>
-          <p class="mono" id="pt-tp-readout">Kept tokens will be listed here.</p>
+          <p class="mono" id="pt-wm-seq" style="line-height:2"></p>
+          <div class="pt-row">
+            <span class="mono">Green share</span>
+            <div class="pt-track"><div class="pt-fill" id="pt-wm-fill"></div></div>
+            <span class="mono" id="pt-wm-pct">0%</span>
+          </div>
+          <p class="mono" id="pt-wm-verdict">Generate a sequence to see the detector's call.</p>
           <script>(function(){
-          var TOKS=[["the",.32],["a",.21],["of",.14],["cat",.09],["dog",.07],["ran",.05],["blue",.04],["xyz",.03],["foo",.03],["q",.02]];
-          var kIn=document.getElementById("pt-tp-k"), pIn=document.getElementById("pt-tp-p");
-          var kVal=document.getElementById("pt-tp-kval"), pVal=document.getElementById("pt-tp-pval");
-          var bars=document.getElementById("pt-tp-bars"), readout=document.getElementById("pt-tp-readout");
-          function update(){
-            var k=+kIn.value, p=(+pIn.value)/100;
-            kVal.textContent=k; pVal.textContent=p.toFixed(2);
-            var byK=TOKS.slice(0,k);
-            var cum=0, byP=[];
-            for(var i=0;i<TOKS.length;i++){ cum+=TOKS[i][1]; byP.push(TOKS[i]); if(cum>=p) break; }
-            var kept=byK.filter(function(t){ return byP.indexOf(t)!==-1; });
-            bars.innerHTML="";
-            TOKS.forEach(function(t){
-              var inSet=kept.indexOf(t)!==-1;
-              var row=document.createElement("div"); row.className="pt-row";
-              var label=document.createElement("span"); label.className="mono"; label.textContent=t[0];
-              var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill";
-              fill.style.width=Math.round(t[1]*100)+"%";
-              fill.style.opacity=inSet?"1":".25";
-              track.appendChild(fill);
-              var pct=document.createElement("span"); pct.className="mono"; pct.textContent=Math.round(t[1]*100)+"%";
-              row.appendChild(label); row.appendChild(track); row.appendChild(pct);
-              bars.appendChild(row);
-            });
-            readout.textContent=kept.length+" of 10 tokens survive both cutoffs: "+kept.map(function(t){return t[0];}).join(", ")+". Lower top-k or top-p and the model can only sample from this shrunken set.";
+          var VOCAB=["gradient","signal","latent","cipher","token","vector","kernel","agent","memo","shard","drift","proxy","relay","cache","prompt","weight"];
+          var bias=document.getElementById("pt-wm-bias"), biasval=document.getElementById("pt-wm-biasval"),
+              gen=document.getElementById("pt-wm-gen"), seq=document.getElementById("pt-wm-seq"),
+              fill=document.getElementById("pt-wm-fill"), pct=document.getElementById("pt-wm-pct"),
+              verdict=document.getElementById("pt-wm-verdict");
+          function run(){
+            var b=parseFloat(bias.value); biasval.textContent=b.toFixed(1);
+            var green={}; VOCAB.forEach(function(w){ if(Math.random()<0.5) green[w]=true; });
+            seq.textContent=""; var greenCount=0, n=12;
+            for(var i=0;i<n;i++){
+              var pool=VOCAB.filter(function(w){ return green[w]; });
+              var pickGreen = Math.random() < (0.5 + b*0.08);
+              var word = (pickGreen && pool.length) ? pool[Math.floor(Math.random()*pool.length)]
+                                                     : VOCAB[Math.floor(Math.random()*VOCAB.length)];
+              var isGreen = !!green[word];
+              if(isGreen) greenCount++;
+              var span=document.createElement("span");
+              span.textContent=word+(i<n-1?" ":"");
+              span.style.color = isGreen ? "var(--good)" : "var(--signal)";
+              seq.appendChild(span);
+            }
+            var frac = greenCount/n;
+            fill.style.width=(frac*100)+"%";
+            pct.textContent=Math.round(frac*100)+"%";
+            verdict.textContent = frac>0.65
+              ? "Detector verdict: flagged as likely watermarked (green share well above the ~50% unwatermarked baseline)."
+              : "Detector verdict: looks unwatermarked (green share close to the ~50% baseline).";
           }
-          kIn.addEventListener("input", update);
-          pIn.addEventListener("input", update);
-          update();
+          gen.addEventListener("click", run);
+          bias.addEventListener("input", function(){ biasval.textContent=parseFloat(bias.value).toFixed(1); });
+          run();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
