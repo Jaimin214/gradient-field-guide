@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-04T15:42:02">2026-11-04 15:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-04T19:39:46">2026-11-04 19:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,64 +674,40 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges -->
-        <div class="pgcard pgtopic" data-topic="tokenization-bpe-merges" id="pt-bpe-card">
-          <span class="label">New this refresh · 2026-11-04 · connects to <a href="#L3">L3</a></span>
-          <h3>Toy: BPE tokenization merges</h3>
-          <p class="lede">Byte-pair encoding builds a tokenizer's vocabulary by repeatedly merging whichever adjacent pair of symbols occurs most often across a corpus. Click "Merge next pair" to watch a tiny five-word corpus turn from raw characters into subword chunks, one merge at a time. A real tokenizer like the ones inside GPT-6.1 Terra or Kimi K3.1 Pro runs this over billions of characters and keeps thousands of merges — this toy only has five words, so the mechanism stays visible.</p>
+        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges -->
+        <div class="pgcard pgtopic" data-topic="perplexity-loss-calculator" id="pt-ppl-card">
+          <span class="label">New this refresh · 2026-11-04 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: perplexity from one token's probability</h3>
+          <p class="lede">Perplexity is the standard score for how well a language model predicts text: lower is better. Drag the slider to set the probability a model assigned to the correct next token, and watch cross-entropy loss and perplexity react. This toy uses a single token — a real eval, like the ones behind GPT-6.1 Terra or Kimi K3.1 Pro, averages this over millions of tokens, so read the shape of the curve, not the exact numbers.</p>
           <div class="pt-ctl">
-            <button type="button" class="btn primary" id="pt-bpe-step">Merge next pair</button>
-            <button type="button" class="btn" id="pt-bpe-reset">Reset</button>
-            <span class="mono" id="pt-bpe-count">Merges: 0</span>
+            <label class="mono" for="pt-ppl-range">P(correct token)</label>
+            <input type="range" id="pt-ppl-range" min="1" max="99" value="50" step="1">
+            <span class="mono" id="pt-ppl-pct">50%</span>
           </div>
-          <p class="mono" id="pt-bpe-words"></p>
-          <p class="mono" id="pt-bpe-info"></p>
+          <div class="pt-row"><span class="mono">Cross-entropy loss</span><div class="pt-track"><div class="pt-fill" id="pt-ppl-lossfill"></div></div><span class="mono" id="pt-ppl-lossval"></span></div>
+          <div class="pt-row"><span class="mono">Perplexity</span><div class="pt-track"><div class="pt-fill" id="pt-ppl-pplfill"></div></div><span class="mono" id="pt-ppl-pplval"></span></div>
+          <p class="mono" id="pt-ppl-info"></p>
           <script>(function(){
-          var CORPUS=["low","lower","lowest","newer","wider"];
-          var words, merges;
-          function reset(){
-            words=CORPUS.map(function(w){ return w.split(""); });
-            merges=[];
-            render();
-          }
-          function pairCounts(){
-            var counts={};
-            words.forEach(function(w){
-              for(var i=0;i<w.length-1;i++){
-                var k=w[i]+"\u0001"+w[i+1];
-                counts[k]=(counts[k]||0)+1;
-              }
-            });
-            return counts;
-          }
-          function step(){
-            var counts=pairCounts();
-            var best=null, bestN=0;
-            for(var k in counts){ if(counts[k]>bestN){ bestN=counts[k]; best=k; } }
-            if(!best || bestN<2){
-              document.getElementById("pt-bpe-info").textContent="No pair repeats more than once anymore — merging stops here, the same way a real BPE trainer stops at its target vocabulary size.";
-              return;
-            }
-            var parts=best.split("\u0001"), a=parts[0], b=parts[1], merged=a+b;
-            words=words.map(function(w){
-              var out=[];
-              for(var i=0;i<w.length;i++){
-                if(i<w.length-1 && w[i]===a && w[i+1]===b){ out.push(merged); i++; }
-                else out.push(w[i]);
-              }
-              return out;
-            });
-            merges.push(a+" + "+b+" → "+merged+" (seen "+bestN+"×)");
-            render();
-          }
+          var range=document.getElementById("pt-ppl-range");
+          var pct=document.getElementById("pt-ppl-pct");
+          var lossFill=document.getElementById("pt-ppl-lossfill");
+          var lossVal=document.getElementById("pt-ppl-lossval");
+          var pplFill=document.getElementById("pt-ppl-pplfill");
+          var pplVal=document.getElementById("pt-ppl-pplval");
+          var info=document.getElementById("pt-ppl-info");
           function render(){
-            document.getElementById("pt-bpe-words").textContent=words.map(function(w){ return w.join("·"); }).join("   ");
-            document.getElementById("pt-bpe-count").textContent="Merges: "+merges.length;
-            document.getElementById("pt-bpe-info").textContent=merges.length ? ("Last merge: "+merges[merges.length-1]) : "Starting from raw characters — click Merge next pair.";
+            var p=Number(range.value)/100;
+            pct.textContent=Math.round(p*100)+"%";
+            var loss=-Math.log(p);
+            var ppl=Math.exp(loss);
+            lossVal.textContent=loss.toFixed(2);
+            pplVal.textContent=ppl.toFixed(1);
+            lossFill.style.width=Math.min(100, loss/5*100)+"%";
+            pplFill.style.width=Math.min(100, ppl/50*100)+"%";
+            info.textContent = p>0.7 ? "Confident and right: loss stays low, perplexity near 1." : (p>0.3 ? "Middling confidence: both loss and perplexity climb fast as probability drops." : "Low confidence: perplexity explodes — one bad token like this can dominate a corpus-wide average.");
           }
-          document.getElementById("pt-bpe-step").addEventListener("click", step);
-          document.getElementById("pt-bpe-reset").addEventListener("click", reset);
-          reset();
+          range.addEventListener("input", render);
+          render();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
