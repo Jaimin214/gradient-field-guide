@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T10:42:28">2026-11-05 10:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T15:38:50">2026-11-05 15:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt v5.0 Intelligence Index put Gemini 4 Carbon at 59 versus Claude Opus 5.5's 58, with GPT-6.1 Terra's own score on that index still unverified — treat any single leaderboard snapshot skeptically. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Nvidia-backed Reflection AI's 501B-parameter Beam are now openly weighted near the frontier, while reports disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship downloadable open weights at all — read "open" claims carefully. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Google's staged rollout of Gemini 4 Carbon and Artificial Analysis's rebuilt v5.0 Intelligence Index, which put Carbon at 59 versus Claude Opus 5.5's 58 with GPT-6.1 Terra's own score still unverified, are a reminder to treat any single leaderboard snapshot skeptically. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot shipped full downloadable weights for its trillion-parameter-class Kimi K3.1 Pro this week, while reports disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all — read "open" claims carefully. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agent sandboxes and local-inference servers keep turning out to be the real attack surface</strong><p>A tampered Claude Code VS Code extension and a reported sandbox-escape technique against Vercel's AI-agent isolation, both surfacing within the same two weeks, are a reminder that isolation and clean weights aren't enough on their own. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Frontier labs are converging on shared plumbing even as their economics wobble</strong><p>OpenAI, Google, Microsoft and Anthropic agreed to honor one shared robots.txt AI-training opt-out, and Claude's own managed deployment reached general availability on Google Cloud — all while OpenAI cut its funding-round target by $10B and Anthropic's IPO roadshow looms over a reported $109.7B trailing-twelve-month loss. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Agent sandboxes and the software supply chain keep turning out to be the real attack surface</strong><p>A tampered Claude Code VS Code extension and a reported technique for exfiltrating data through an already-allowlisted domain inside Vercel's AI-agent sandbox both show that isolation and clean weights aren't enough on their own. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI products are reaching into more sensitive, real-world data</strong><p>Anthropic's new Personal Finance feature gives Claude read-only access to users' bank and card data, arriving the same week OpenAI, Google, Microsoft and Anthropic agreed to honor a shared robots.txt AI-training opt-out — provenance and access-scoping are becoming product requirements, not afterthoughts. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-11-05</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic launched a Personal Finance feature in Claude for paid US beta users, letting Claude read (not move or invest) linked bank and card data through a Plaid connection, after the capability had circulated as an unannounced "Claude Money" leak in app testing since mid-October</h3>
+            <p class="why"><b>Why it matters:</b> wiring an assistant into live, sensitive financial data with a deliberately read-only scope is a concrete case study in connector and permission design for anything you build on <a href="#L5">L5</a>'s app patterns or <a href="#L6">L6</a>'s agents.</p>
+            <p class="src"><a href="https://9to5mac.com/2026/11/05/anthropic-upgrades-claude-with-new-personal-finance-feature">9to5mac.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
           <div><h3>Moonshot AI reportedly began publishing the full open weights for Kimi K3.1 Pro, a trillion-parameter-class model with a reported 1M-token context window, after running it only through its API and apps since an October 23 launch, with cyber-related training data said to be stripped from this release</h3>
@@ -470,22 +476,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/">theneuron.ai</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-10-28</span><span class="pill">Models</span></div>
+          <div><h3>Google introduced Gemini 4 Carbon, a frontier model focused on cybersecurity defense and long-running tasks, giving a small group of "cyber defender" partners first access through its Fairwind Program before a staged rollout to developers, businesses and consumers</h3>
+            <p class="why"><b>Why it matters:</b> an early-access, security-first rollout for a frontier model is worth watching if a job offer touches defensive security work, and it's the model behind this week's leaderboard swings at <a href="#L7">L7</a>.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/google-announces-gemini-4-carbon-limiting-first-access-to-cy-f33fd14e">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-10-26</span><span class="pill">Models</span></div>
           <div><h3>OpenAI released GPT-6.1 Terra, a coding- and computer-use-focused model priced at $1/$5 per million tokens, half its predecessor's rate, and reported a Terminal-Bench 4.0 score around 50% at its highest reasoning setting versus about 22% for the model it replaces</h3>
             <p class="why"><b>Why it matters:</b> the benchmark jump is self-reported by OpenAI, but the price cut alongside Mistral's and Zhipu's open-weight pushes shows serving models cheaply (<a href="#L4">L4</a>) is now as competitive as training the smartest one.</p>
             <p class="src"><a href="https://letsdatascience.com/news/openai-releases-gpt-61-terra-cutting-price-50-and-benchmark-bc892dc4">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-23</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic's own managed deployment of the full Claude Platform reached general availability on Google Cloud alongside the existing Google-managed option, giving Google Cloud customers day-zero access to new Claude features and models including Opus 5.5 and Sonnet 5.5, with OpenAI's models reportedly joining Google Cloud around the same time</h3>
-            <p class="why"><b>Why it matters:</b> picking which cloud marketplace and billing path serves a model is now a real design decision for an <a href="#L5">L5</a> app or <a href="#projects">Project 3</a>-style build, not just which model to call.</p>
-            <p class="src"><a href="https://claude.com/blog/claude-models-on-google-cloud-anthropic-managed">claude.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Open models</span></div>
-          <div><h3>Nvidia-backed Reflection AI released open weights for Beam, a 501-billion-parameter mixture-of-experts model with a 23-billion active-parameter path and a 1M-token context window, claiming rough parity with China's GLM-5.2 while using far less inference compute</h3>
-            <p class="why"><b>Why it matters:</b> the benchmark claims are vendor-reported and unverified, but it's another large Western open-weight option worth weighing against Mistral's Large 4 and DeepSeek's lineup for a local-model project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/reflection-introduces-beam-open-weight-reasoning-model-b6a0e32f">letsdatascience.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
@@ -674,66 +674,64 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold" id="pt-prcard">
-          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: precision vs. recall threshold slider</h3>
-          <p class="lede">16 fixed toy "spam filter" scores, each already labeled spam or not. Drag the threshold to see which scores count as a positive prediction, and watch precision and recall trade off — raise it and precision climbs while recall falls, the same trade-off real-world evals like this week's GDPx benchmark (<a href="#L6">L6</a>) have to pick a side on. The scores and labels below are hardcoded, not from a trained model.</p>
+        <!-- HISTORY: beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedules" id="pt-lrcard">
+          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L2">L2</a></span>
+          <h3>Toy: learning-rate schedule explorer</h3>
+          <p class="lede">Pick a schedule shape and a starting learning rate, then drag the step slider to see what rate the optimizer would actually be using at that point in training. The three curves are toy formulas for the schedule shape only — not output from any real training run, and real schedules also depend on warmup, batch size and the dataset.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-pr-th">Decision threshold</label>
-            <input type="range" id="pt-pr-th" min="0" max="100" step="1" value="50">
-            <span class="mono" id="pt-pr-thval">0.50</span>
+            <label class="mono" for="pt-lr-init">Initial LR</label>
+            <input type="range" id="pt-lr-init" min="0" max="40" step="1" value="22">
+            <span class="mono" id="pt-lr-initval"></span>
           </div>
-          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-pr-precfill"></div></div><span class="mono" id="pt-pr-precval"></span></div>
-          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-pr-recfill"></div></div><span class="mono" id="pt-pr-recval"></span></div>
-          <p id="pt-pr-counts" class="mono" style="font-size:.85rem"></p>
-          <div id="pt-pr-dots" style="display:flex;flex-wrap:wrap;gap:4px;margin-block:8px"></div>
+          <div class="pt-ctl">
+            <button type="button" class="btn" id="pt-lr-btn-const">Constant</button>
+            <button type="button" class="btn" id="pt-lr-btn-step">Step decay</button>
+            <button type="button" class="btn primary" id="pt-lr-btn-cos">Cosine decay</button>
+          </div>
+          <div class="pt-ctl">
+            <label class="mono" for="pt-lr-stepslider">Training step</label>
+            <input type="range" id="pt-lr-stepslider" min="0" max="100" step="1" value="0">
+            <span class="mono" id="pt-lr-stepval"></span>
+          </div>
+          <div class="pt-row"><span class="mono">LR now</span><div class="pt-track"><div class="pt-fill" id="pt-lr-fill"></div></div><span class="mono" id="pt-lr-val"></span></div>
           <script>(function(){
-          var DATA=[[0.95,1],[0.91,1],[0.86,1],[0.82,0],[0.78,1],[0.74,0],[0.69,1],[0.65,0],[0.60,1],[0.55,0],[0.51,0],[0.47,1],[0.42,0],[0.35,0],[0.24,0],[0.12,0]];
-          var th=document.getElementById("pt-pr-th");
-          var thVal=document.getElementById("pt-pr-thval");
-          var precFill=document.getElementById("pt-pr-precfill");
-          var precVal=document.getElementById("pt-pr-precval");
-          var recFill=document.getElementById("pt-pr-recfill");
-          var recVal=document.getElementById("pt-pr-recval");
-          var counts=document.getElementById("pt-pr-counts");
-          var dots=document.getElementById("pt-pr-dots");
-          function buildDots(){
-            dots.textContent="";
-            for(var i=0;i<DATA.length;i++){
-              var d=document.createElement("div");
-              d.id="pt-pr-dot-"+i;
-              d.style.width="16px"; d.style.height="16px"; d.style.borderRadius="50%";
-              dots.appendChild(d);
-            }
+          var init=document.getElementById("pt-lr-init");
+          var initVal=document.getElementById("pt-lr-initval");
+          var stepSlider=document.getElementById("pt-lr-stepslider");
+          var stepVal=document.getElementById("pt-lr-stepval");
+          var fill=document.getElementById("pt-lr-fill");
+          var val=document.getElementById("pt-lr-val");
+          var btnConst=document.getElementById("pt-lr-btn-const");
+          var btnStep=document.getElementById("pt-lr-btn-step");
+          var btnCos=document.getElementById("pt-lr-btn-cos");
+          var buttons={constant:btnConst,step:btnStep,cosine:btnCos};
+          var schedule="cosine";
+          function lr0(){ return Math.pow(10, -4 + (Number(init.value)/40)*3); }
+          function fmt(n){ return n.toFixed(5); }
+          function setSchedule(name){
+            schedule=name;
+            for(var k in buttons){ buttons[k].classList.toggle("primary", k===name); }
+            render();
           }
           function render(){
-            var t=Number(th.value)/100;
-            thVal.textContent=t.toFixed(2);
-            var tp=0,fp=0,fn=0,tn=0;
-            for(var i=0;i<DATA.length;i++){
-              var score=DATA[i][0], label=DATA[i][1];
-              var pred = score>=t ? 1 : 0;
-              if(pred===1&&label===1) tp++;
-              else if(pred===1&&label===0) fp++;
-              else if(pred===0&&label===1) fn++;
-              else tn++;
-              var dot=document.getElementById("pt-pr-dot-"+i);
-              if(dot){
-                dot.style.border = label===1 ? "2px solid var(--signal)" : "2px solid var(--line)";
-                dot.style.background = pred===1 ? "var(--accent)" : "var(--surface)";
-              }
-            }
-            var prec = (tp+fp)>0 ? tp/(tp+fp) : 0;
-            var rec = (tp+fn)>0 ? tp/(tp+fn) : 0;
-            precFill.style.width=(prec*100).toFixed(0)+"%";
-            precVal.textContent=(prec*100).toFixed(0)+"%";
-            recFill.style.width=(rec*100).toFixed(0)+"%";
-            recVal.textContent=(rec*100).toFixed(0)+"%";
-            counts.textContent="TP "+tp+" · FP "+fp+" · FN "+fn+" · TN "+tn;
+            var base=lr0();
+            initVal.textContent=fmt(base);
+            var pct=Number(stepSlider.value);
+            stepVal.textContent=pct+" / 100";
+            var lr;
+            if(schedule==="constant") lr=base;
+            else if(schedule==="step") lr=base*Math.pow(0.1, Math.floor(pct/25));
+            else lr=base*0.5*(1+Math.cos(Math.PI*pct/100));
+            fill.style.width=(Math.max(0,Math.min(1,lr/base))*100).toFixed(0)+"%";
+            val.textContent=fmt(lr);
           }
-          th.addEventListener("input", render);
-          buildDots(); render();
+          init.addEventListener("input", render);
+          stepSlider.addEventListener("input", render);
+          btnConst.addEventListener("click", function(){ setSchedule("constant"); });
+          btnStep.addEventListener("click", function(){ setSchedule("step"); });
+          btnCos.addEventListener("click", function(){ setSchedule("cosine"); });
+          render();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
