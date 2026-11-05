@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T05:43:32">2026-11-05 05:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T10:42:28">2026-11-05 10:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt Intelligence Index gave Gemini 4 Carbon the #1 spot over Claude Opus 5.5 by roughly a point, OpenAI answered with GPT-6.1 Terra at half its predecessor's price, and Reflection AI is now claiming parity with China's GLM-5.2 on far less compute — read any single leaderboard snapshot skeptically. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot reportedly began publishing full open weights for its trillion-parameter-class Kimi K3.1 Pro on November 4, and Nvidia-backed Reflection AI released its own 501B-parameter open MoE model, Beam, joining Mistral's Large 4 among the strongest openly-weighted options — though DeepSeek's V4.1 Flash and Zhipu's GLM-5.3 are still rated ahead of all of them. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt v5.0 Intelligence Index put Gemini 4 Carbon at 59 versus Claude Opus 5.5's 58, with GPT-6.1 Terra's own score on that index still unverified — treat any single leaderboard snapshot skeptically. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Nvidia-backed Reflection AI's 501B-parameter Beam are now openly weighted near the frontier, while reports disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship downloadable open weights at all — read "open" claims carefully. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent sandboxes and local-inference servers keep turning out to be the real attack surface</strong><p>A tampered Claude Code VS Code extension, a disclosed auth-bypass flaw in Nvidia's NemoClaw local-inference framework, and a reported sandbox-escape technique against Vercel's AI-agent isolation all surfaced within the same two weeks — isolation and clean weights aren't enough on their own. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Frontier labs are racing to cash in while burning historic sums</strong><p>Anthropic's S-1 reportedly shows a $109.7B trailing-twelve-month net loss against $19.7B of revenue, with its IPO roadshow said to start as soon as the week of November 9, while OpenAI separately trimmed its own funding round's valuation target — a sign this cycle's economics are still unsettled. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Agent sandboxes and local-inference servers keep turning out to be the real attack surface</strong><p>A tampered Claude Code VS Code extension and a reported sandbox-escape technique against Vercel's AI-agent isolation, both surfacing within the same two weeks, are a reminder that isolation and clean weights aren't enough on their own. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Frontier labs are converging on shared plumbing even as their economics wobble</strong><p>OpenAI, Google, Microsoft and Anthropic agreed to honor one shared robots.txt AI-training opt-out, and Claude's own managed deployment reached general availability on Google Cloud — all while OpenAI cut its funding-round target by $10B and Anthropic's IPO roadshow looms over a reported $109.7B trailing-twelve-month loss. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -434,18 +434,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://openai.com/blog/our-decision-on-cursor-following-its-acquisition-by-spacex">openai.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Models</span></div>
-          <div><h3>OpenAI released GPT-6.1 Terra, a coding- and computer-use-focused model priced at $1/$5 per million tokens, half its predecessor's rate, and reported a Terminal-Bench 4.0 score around 50% at its highest reasoning setting versus about 22% for the model it replaces</h3>
-            <p class="why"><b>Why it matters:</b> the benchmark jump is self-reported by OpenAI, but the price cut alongside Mistral's and Zhipu's open-weight pushes shows serving models cheaply (<a href="#L4">L4</a>) is now as competitive as training the smartest one.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/openai-releases-gpt-61-terra-cutting-price-50-and-benchmark-bc892dc4">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Open models</span></div>
-          <div><h3>Nvidia-backed Reflection AI released open weights for Beam, a 501-billion-parameter mixture-of-experts model with a 23-billion active-parameter path and a 1M-token context window, claiming rough parity with China's GLM-5.2 while using far less inference compute</h3>
-            <p class="why"><b>Why it matters:</b> the benchmark claims are vendor-reported and unverified, but it's another large Western open-weight option worth weighing against Mistral's Large 4 and DeepSeek's lineup for a local-model project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/reflection-introduces-beam-open-weight-reasoning-model-b6a0e32f">letsdatascience.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill">Research</span></div>
           <div><h3>Researchers released WebHarbor, a benchmark that dockerizes 15-plus live websites into frozen, reproducible mirrors so GUI web agents are scored against a stable target instead of constantly-changing real sites</h3>
             <p class="why"><b>Why it matters:</b> if you're building or evaluating a browsing agent (<a href="#L6">L6</a>), this is a reminder that self-reported agent benchmark numbers are often less reproducible than they look, which matters for evals you design yourself (<a href="#L5">L5</a>).</p>
@@ -464,10 +452,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.folio3.ai/news/character-ai-bans-teen-chatbot-access-following-suicide-lawsuits">folio3.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-01</span><span class="pill">Policy</span></div>
-          <div><h3>Reported surveys around the 2026 US midterms found a meaningful share of voters asking chatbots such as ChatGPT and Gemini about candidates and down-ballot races, with an outside check estimating roughly a third of chatbot answers to election questions contained an error such as a wrong voting date</h3>
-            <p class="why"><b>Why it matters:</b> a chatbot's wrong answer about an election date is a small, real-world instance of the accuracy problems covered in <a href="#L5">L5</a>, surfacing right before people vote.</p>
-            <p class="src"><a href="https://aiweekly.co/alerts/npr-about-half-of-us-adults-use-ai-chatbots-42-for-information-as-voters-ask">aiweekly.co</a></p></div>
+          <div class="when"><span class="mono">2026-10-30</span><span class="pill">Industry</span></div>
+          <div><h3>The Financial Times reported OpenAI cut the target for its in-progress funding round by $10B to about $20B, now raising at a reported $1.25T valuation after some investors pulled back commitments as AI stocks sold off, with only around $11B said to be committed so far</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab trimming its own raise right as Anthropic heads toward an IPO is a sign the capital these labs lean on (<a href="#L7">L7</a>) is getting pickier, context worth having before weighing an equity-heavy offer.</p>
+            <p class="src"><a href="https://thenextweb.com/news/openai-funding-round-20bn-target-cut-ft">thenextweb.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-30</span><span class="pill">Policy</span></div>
+          <div><h3>OpenAI, Google, Microsoft and Anthropic said they will each honor a single shared robots.txt token letting publishers opt out of AI training across all four crawlers at once, built from an IETF draft Anthropic proposed, though Google and Microsoft reportedly won't start honoring it until 2027</h3>
+            <p class="why"><b>Why it matters:</b> a shared, machine-readable opt-out standard is exactly the kind of provenance and consent signal apps built on <a href="#L5">L5</a>'s scraping and RAG pipelines will increasingly need to respect.</p>
+            <p class="src"><a href="https://thenextweb.com/news/ai-training-opt-out-robots-txt-google-openai-microsoft-anthropic">thenextweb.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-10-29</span><span class="pill sec">Security</span></div>
@@ -476,22 +470,28 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/">theneuron.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
-          <div><h3>Researchers disclosed CVE-2026-65105, a missing-authentication flaw in Nvidia's NemoClaw local-inference framework that reportedly let a malicious webpage use DNS rebinding to reach a victim's local Ollama API and plant poisoned model templates, since patched</h3>
-            <p class="why"><b>Why it matters:</b> a concrete reminder that a local model server you run for a project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>) is still a network service that needs the same authentication hygiene as anything exposed to a browser.</p>
-            <p class="src"><a href="https://www.sentinelone.com/vulnerability-database/cve-2026-65105/">sentinelone.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Models</span></div>
+          <div><h3>OpenAI released GPT-6.1 Terra, a coding- and computer-use-focused model priced at $1/$5 per million tokens, half its predecessor's rate, and reported a Terminal-Bench 4.0 score around 50% at its highest reasoning setting versus about 22% for the model it replaces</h3>
+            <p class="why"><b>Why it matters:</b> the benchmark jump is self-reported by OpenAI, but the price cut alongside Mistral's and Zhipu's open-weight pushes shows serving models cheaply (<a href="#L4">L4</a>) is now as competitive as training the smartest one.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/openai-releases-gpt-61-terra-cutting-price-50-and-benchmark-bc892dc4">letsdatascience.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-23</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic's own managed deployment of the full Claude Platform reached general availability on Google Cloud alongside the existing Google-managed option, giving Google Cloud customers day-zero access to new Claude features and models including Opus 5.5 and Sonnet 5.5, with OpenAI's models reportedly joining Google Cloud around the same time</h3>
+            <p class="why"><b>Why it matters:</b> picking which cloud marketplace and billing path serves a model is now a real design decision for an <a href="#L5">L5</a> app or <a href="#projects">Project 3</a>-style build, not just which model to call.</p>
+            <p class="src"><a href="https://claude.com/blog/claude-models-on-google-cloud-anthropic-managed">claude.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Open models</span></div>
+          <div><h3>Nvidia-backed Reflection AI released open weights for Beam, a 501-billion-parameter mixture-of-experts model with a 23-billion active-parameter path and a 1M-token context window, claiming rough parity with China's GLM-5.2 while using far less inference compute</h3>
+            <p class="why"><b>Why it matters:</b> the benchmark claims are vendor-reported and unverified, but it's another large Western open-weight option worth weighing against Mistral's Large 4 and DeepSeek's lineup for a local-model project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/reflection-introduces-beam-open-weight-reasoning-model-b6a0e32f">letsdatascience.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
           <div><h3>Security researchers reportedly demonstrated "VerCellBreak," a technique letting code inside Vercel's sandboxed AI-agent environment exfiltrate data through an already-allowlisted domain via TLS certificate tricks, without breaking the sandbox itself; Vercel called it outside its bug-bounty scope</h3>
             <p class="why"><b>Why it matters:</b> shows that sandboxing an autonomous agent (<a href="#L6">L6</a>) isn't enough on its own — the domains you trust for egress can become the leak path even when the isolation boundary holds.</p>
             <p class="src"><a href="https://therecord.media/sandbox-vulnerability-gives-rogue-ai-agents-path-out">therecord.media</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Research</span></div>
-          <div><h3>A NeurIPS 2026 paper proposed scoring a coding agent's in-progress trajectory with a small draft model to flag likely failures early, inverting the usual speculative-decoding setup, and reported it cut per-call execution errors by several percentage points and token cost by roughly a sixth</h3>
-            <p class="why"><b>Why it matters:</b> ties the speculative-decoding mechanics you'd study at <a href="#L4">L4</a> directly to the agent-reliability gap this week's GDPx numbers highlight at <a href="#L6">L6</a> — small models can double as cheap failure detectors, not just faster decoders.</p>
-            <p class="src"><a href="https://arxiv.org/pdf/2609.05274">arxiv.org</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,76 +674,66 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve -->
-        <div class="pgcard pgtopic" data-topic="mixture-of-experts-routing" id="pt-moe-card">
-          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: mixture-of-experts token routing</h3>
-          <p class="lede">Large open models like this week's Beam route each token through only a handful of "expert" sub-networks out of many, instead of running the whole model every time. Set the total experts and how many activate per token, then route a few tokens to see which experts light up. The routing below is random, not learned, and the 70B figure is an illustrative toy model size, not a real benchmark.</p>
+        <!-- HISTORY: chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing -->
+        <div class="pgcard pgtopic" data-topic="precision-recall-threshold" id="pt-prcard">
+          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L1">L1</a></span>
+          <h3>Toy: precision vs. recall threshold slider</h3>
+          <p class="lede">16 fixed toy "spam filter" scores, each already labeled spam or not. Drag the threshold to see which scores count as a positive prediction, and watch precision and recall trade off — raise it and precision climbs while recall falls, the same trade-off real-world evals like this week's GDPx benchmark (<a href="#L6">L6</a>) have to pick a side on. The scores and labels below are hardcoded, not from a trained model.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-moe-n">Total experts (N)</label>
-            <input type="range" id="pt-moe-n" min="8" max="64" step="8" value="8">
-            <span class="mono" id="pt-moe-nval">8</span>
+            <label class="mono" for="pt-pr-th">Decision threshold</label>
+            <input type="range" id="pt-pr-th" min="0" max="100" step="1" value="50">
+            <span class="mono" id="pt-pr-thval">0.50</span>
           </div>
-          <div class="pt-ctl">
-            <label class="mono" for="pt-moe-k">Active experts per token (top-k)</label>
-            <input type="range" id="pt-moe-k" min="1" max="8" step="1" value="2">
-            <span class="mono" id="pt-moe-kval">2</span>
-          </div>
-          <div class="pt-row"><span class="mono">Active params of 70B toy model</span><div class="pt-track"><div class="pt-fill" id="pt-moe-fracfill"></div></div><span class="mono" id="pt-moe-fracval"></span></div>
-          <div id="pt-moe-grid" style="display:flex;flex-wrap:wrap;gap:4px;margin-block:8px"></div>
-          <div class="pt-ctl">
-            <button type="button" class="btn primary" id="pt-moe-route">Route a token</button>
-            <span class="mono" id="pt-moe-info"></span>
-          </div>
+          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-pr-precfill"></div></div><span class="mono" id="pt-pr-precval"></span></div>
+          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-pr-recfill"></div></div><span class="mono" id="pt-pr-recval"></span></div>
+          <p id="pt-pr-counts" class="mono" style="font-size:.85rem"></p>
+          <div id="pt-pr-dots" style="display:flex;flex-wrap:wrap;gap:4px;margin-block:8px"></div>
           <script>(function(){
-          var nRange=document.getElementById("pt-moe-n");
-          var kRange=document.getElementById("pt-moe-k");
-          var nVal=document.getElementById("pt-moe-nval");
-          var kVal=document.getElementById("pt-moe-kval");
-          var fracFill=document.getElementById("pt-moe-fracfill");
-          var fracVal=document.getElementById("pt-moe-fracval");
-          var grid=document.getElementById("pt-moe-grid");
-          var routeBtn=document.getElementById("pt-moe-route");
-          var info=document.getElementById("pt-moe-info");
-          function clampK(){
-            var n=Number(nRange.value);
-            kRange.max=String(Math.min(8,n));
-            if(Number(kRange.value)>n){ kRange.value=String(Math.min(8,n)); }
-          }
-          function buildGrid(){
-            grid.textContent="";
-            var n=Number(nRange.value);
-            for(var i=0;i<n;i++){
-              var cell=document.createElement("div");
-              cell.id="pt-moe-cell-"+i;
-              cell.style.width="18px"; cell.style.height="18px"; cell.style.borderRadius="3px";
-              cell.style.background="var(--hm0)";
-              grid.appendChild(cell);
+          var DATA=[[0.95,1],[0.91,1],[0.86,1],[0.82,0],[0.78,1],[0.74,0],[0.69,1],[0.65,0],[0.60,1],[0.55,0],[0.51,0],[0.47,1],[0.42,0],[0.35,0],[0.24,0],[0.12,0]];
+          var th=document.getElementById("pt-pr-th");
+          var thVal=document.getElementById("pt-pr-thval");
+          var precFill=document.getElementById("pt-pr-precfill");
+          var precVal=document.getElementById("pt-pr-precval");
+          var recFill=document.getElementById("pt-pr-recfill");
+          var recVal=document.getElementById("pt-pr-recval");
+          var counts=document.getElementById("pt-pr-counts");
+          var dots=document.getElementById("pt-pr-dots");
+          function buildDots(){
+            dots.textContent="";
+            for(var i=0;i<DATA.length;i++){
+              var d=document.createElement("div");
+              d.id="pt-pr-dot-"+i;
+              d.style.width="16px"; d.style.height="16px"; d.style.borderRadius="50%";
+              dots.appendChild(d);
             }
           }
           function render(){
-            nVal.textContent=nRange.value;
-            kVal.textContent=kRange.value;
-            var n=Number(nRange.value), k=Number(kRange.value);
-            var frac=k/n;
-            fracFill.style.width=Math.min(100,frac*100)+"%";
-            fracVal.textContent=(frac*100).toFixed(1)+"% (~"+(frac*70).toFixed(1)+"B)";
-          }
-          function route(){
-            var n=Number(nRange.value), k=Number(kRange.value);
-            var chosen={};
-            while(Object.keys(chosen).length<k){ chosen[Math.floor(Math.random()*n)]=true; }
-            for(var i=0;i<n;i++){
-              var cell=document.getElementById("pt-moe-cell-"+i);
-              if(cell){ cell.style.background = chosen[i] ? "var(--accent)" : "var(--hm0)"; }
+            var t=Number(th.value)/100;
+            thVal.textContent=t.toFixed(2);
+            var tp=0,fp=0,fn=0,tn=0;
+            for(var i=0;i<DATA.length;i++){
+              var score=DATA[i][0], label=DATA[i][1];
+              var pred = score>=t ? 1 : 0;
+              if(pred===1&&label===1) tp++;
+              else if(pred===1&&label===0) fp++;
+              else if(pred===0&&label===1) fn++;
+              else tn++;
+              var dot=document.getElementById("pt-pr-dot-"+i);
+              if(dot){
+                dot.style.border = label===1 ? "2px solid var(--signal)" : "2px solid var(--line)";
+                dot.style.background = pred===1 ? "var(--accent)" : "var(--surface)";
+              }
             }
-            var ids=Object.keys(chosen).sort(function(a,b){return a-b;});
-            info.textContent = "Lit up experts: " + ids.join(", ");
+            var prec = (tp+fp)>0 ? tp/(tp+fp) : 0;
+            var rec = (tp+fn)>0 ? tp/(tp+fn) : 0;
+            precFill.style.width=(prec*100).toFixed(0)+"%";
+            precVal.textContent=(prec*100).toFixed(0)+"%";
+            recFill.style.width=(rec*100).toFixed(0)+"%";
+            recVal.textContent=(rec*100).toFixed(0)+"%";
+            counts.textContent="TP "+tp+" · FP "+fp+" · FN "+fn+" · TN "+tn;
           }
-          nRange.addEventListener("input", function(){ clampK(); buildGrid(); render(); route(); });
-          kRange.addEventListener("input", function(){ clampK(); render(); });
-          routeBtn.addEventListener("click", route);
-          buildGrid(); render(); route();
+          th.addEventListener("input", render);
+          buildDots(); render();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
