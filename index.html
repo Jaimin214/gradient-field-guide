@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-04T19:39:46">2026-11-04 19:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T00:40:47">2026-11-05 00:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,37 +674,39 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges -->
-        <div class="pgcard pgtopic" data-topic="perplexity-loss-calculator" id="pt-ppl-card">
-          <span class="label">New this refresh · 2026-11-04 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: perplexity from one token's probability</h3>
-          <p class="lede">Perplexity is the standard score for how well a language model predicts text: lower is better. Drag the slider to set the probability a model assigned to the correct next token, and watch cross-entropy loss and perplexity react. This toy uses a single token — a real eval, like the ones behind GPT-6.1 Terra or Kimi K3.1 Pro, averages this over millions of tokens, so read the shape of the curve, not the exact numbers.</p>
+        <!-- HISTORY: precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator -->
+        <div class="pgcard pgtopic" data-topic="scaling-law-curve" id="pt-scale-card">
+          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L7">L7</a></span>
+          <h3>Toy: the scaling-law curve of diminishing returns</h3>
+          <p class="lede">Scaling laws describe how a model's loss falls as you pour in more training compute — fast at first, then flattening. Drag the slider through orders of magnitude of compute and watch the toy loss curve bend. This uses a made-up exponent, not a real published constant, to show the shape only — it's why labs racing for the "best model" this week (see the radar above) now lean on data quality and inference-time tricks as much as raw scale.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-ppl-range">P(correct token)</label>
-            <input type="range" id="pt-ppl-range" min="1" max="99" value="50" step="1">
-            <span class="mono" id="pt-ppl-pct">50%</span>
+            <label class="mono" for="pt-scale-range">log10(training compute, FLOPs)</label>
+            <input type="range" id="pt-scale-range" min="18" max="26" value="20" step="1">
+            <span class="mono" id="pt-scale-val">10^20</span>
           </div>
-          <div class="pt-row"><span class="mono">Cross-entropy loss</span><div class="pt-track"><div class="pt-fill" id="pt-ppl-lossfill"></div></div><span class="mono" id="pt-ppl-lossval"></span></div>
-          <div class="pt-row"><span class="mono">Perplexity</span><div class="pt-track"><div class="pt-fill" id="pt-ppl-pplfill"></div></div><span class="mono" id="pt-ppl-pplval"></span></div>
-          <p class="mono" id="pt-ppl-info"></p>
+          <div class="pt-row"><span class="mono">Toy loss (relative)</span><div class="pt-track"><div class="pt-fill" id="pt-scale-lossfill"></div></div><span class="mono" id="pt-scale-lossval"></span></div>
+          <div class="pt-row"><span class="mono">Gain from last 10x compute</span><div class="pt-track"><div class="pt-fill" id="pt-scale-gainfill"></div></div><span class="mono" id="pt-scale-gainval"></span></div>
+          <p class="mono" id="pt-scale-info"></p>
           <script>(function(){
-          var range=document.getElementById("pt-ppl-range");
-          var pct=document.getElementById("pt-ppl-pct");
-          var lossFill=document.getElementById("pt-ppl-lossfill");
-          var lossVal=document.getElementById("pt-ppl-lossval");
-          var pplFill=document.getElementById("pt-ppl-pplfill");
-          var pplVal=document.getElementById("pt-ppl-pplval");
-          var info=document.getElementById("pt-ppl-info");
+          var range=document.getElementById("pt-scale-range");
+          var val=document.getElementById("pt-scale-val");
+          var lossFill=document.getElementById("pt-scale-lossfill");
+          var lossVal=document.getElementById("pt-scale-lossval");
+          var gainFill=document.getElementById("pt-scale-gainfill");
+          var gainVal=document.getElementById("pt-scale-gainval");
+          var info=document.getElementById("pt-scale-info");
+          var ALPHA=0.05;
+          function lossAt(logC){ return Math.pow(10, -(logC-18)*ALPHA); }
           function render(){
-            var p=Number(range.value)/100;
-            pct.textContent=Math.round(p*100)+"%";
-            var loss=-Math.log(p);
-            var ppl=Math.exp(loss);
-            lossVal.textContent=loss.toFixed(2);
-            pplVal.textContent=ppl.toFixed(1);
-            lossFill.style.width=Math.min(100, loss/5*100)+"%";
-            pplFill.style.width=Math.min(100, ppl/50*100)+"%";
-            info.textContent = p>0.7 ? "Confident and right: loss stays low, perplexity near 1." : (p>0.3 ? "Middling confidence: both loss and perplexity climb fast as probability drops." : "Low confidence: perplexity explodes — one bad token like this can dominate a corpus-wide average.");
+            var logC=Number(range.value);
+            val.textContent="10^"+logC;
+            var loss=lossAt(logC);
+            var gain=lossAt(logC-1)-loss;
+            lossVal.textContent=loss.toFixed(3);
+            gainVal.textContent=gain.toFixed(4);
+            lossFill.style.width=Math.min(100, loss*100)+"%";
+            gainFill.style.width=Math.min(100, gain*800)+"%";
+            info.textContent = logC<21 ? "Small-scale regime: each 10x more compute still buys a big relative drop in loss." : (logC<24 ? "Mid-scale: the gain per extra decade of compute is visibly shrinking — the classic scaling-law bend." : "Frontier scale: another 10x compute buys only a sliver more — a toy reason bigger training runs alone stop paying off.");
           }
           range.addEventListener("input", render);
           render();
