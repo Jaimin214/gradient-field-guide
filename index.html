@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T00:40:47">2026-11-05 00:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T05:43:32">2026-11-05 05:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -447,27 +447,21 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill">Research</span></div>
+          <div><h3>Researchers released WebHarbor, a benchmark that dockerizes 15-plus live websites into frozen, reproducible mirrors so GUI web agents are scored against a stable target instead of constantly-changing real sites</h3>
+            <p class="why"><b>Why it matters:</b> if you're building or evaluating a browsing agent (<a href="#L6">L6</a>), this is a reminder that self-reported agent benchmark numbers are often less reproducible than they look, which matters for evals you design yourself (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://github.com/aiming-lab/WebHarbor">github.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Nov 2026</span><span class="pill">Research</span></div>
           <div><h3>SemiAnalysis launched GDPx, a new agentic benchmark that scores models on realistic professional tasks across eleven domains instead of narrow academic test sets, and reported that even the top-ranked model finished only around 12% of tasks successfully overall</h3>
             <p class="why"><b>Why it matters:</b> a frontier model's "best in the world" label dropping to roughly one task in eight under real-world evaluation is a sharper reminder than any leaderboard flip that agent reliability (<a href="#L6">L6</a>) is still the open problem, not raw intelligence scores (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://cryptobriefing.com/semianalysis-gdpx-ai-benchmark-frontier-models/">cryptobriefing.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Research</span></div>
-          <div><h3>OpenAI reportedly said an internal model produced Lean-checked proofs disproving three open problems, including the 1999 Exponential Time Hypothesis, and Anthropic separately published a related complexity-theory paper on faster 3-SAT solving credited only to "Claude" — outside experts haven't yet verified either claim</h3>
-            <p class="why"><b>Why it matters:</b> read it as "reported," not settled, but a model producing machine-checked progress on decades-old complexity-theory questions is a vivid data point for how far the math underneath <a href="#L0">L0</a> and <a href="#L7">L7</a> has come.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/openai-claims-ai-disproved-exponential-time-hypothesis-relea-d7c8838b">letsdatascience.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill sec">Safety</span></div>
           <div><h3>Character.AI reportedly said it will stop letting users it believes are under 18 have open-ended chats with its AI companions starting November 25, following a string of wrongful-death lawsuits and an earlier settlement over chatbot-linked teen suicides</h3>
             <p class="why"><b>Why it matters:</b> a major companion-chatbot platform cutting off open-ended chat for minors, right after New York's new chatbot-persona law, shows age-gating and relationship disclosure becoming standard product requirements for anything built on <a href="#L5">L5</a>'s conversational patterns.</p>
             <p class="src"><a href="https://www.folio3.ai/news/character-ai-bans-teen-chatbot-access-following-suicide-lawsuits">folio3.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Nov 2026</span><span class="pill sec">Safety</span></div>
-          <div><h3>Coverage following Character.AI's planned minor-chat restriction reported growing pressure from child-safety advocates and regulators for AI companion-chatbot platforms to adopt stronger age-assurance and age-verification measures</h3>
-            <p class="why"><b>Why it matters:</b> age verification is turning from an edge case into a baseline product requirement for anything built on <a href="#L5">L5</a>'s conversational patterns, not just a policy talking point.</p>
-            <p class="src"><a href="https://www.biometricupdate.com/202511/calls-for-chatbot-age-assurance-increase-as-allegations-of-self-harm-psychosis-grow">biometricupdate.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-01</span><span class="pill">Policy</span></div>
@@ -492,6 +486,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Security researchers reportedly demonstrated "VerCellBreak," a technique letting code inside Vercel's sandboxed AI-agent environment exfiltrate data through an already-allowlisted domain via TLS certificate tricks, without breaking the sandbox itself; Vercel called it outside its bug-bounty scope</h3>
             <p class="why"><b>Why it matters:</b> shows that sandboxing an autonomous agent (<a href="#L6">L6</a>) isn't enough on its own — the domains you trust for egress can become the leak path even when the isolation boundary holds.</p>
             <p class="src"><a href="https://therecord.media/sandbox-vulnerability-gives-rogue-ai-agents-path-out">therecord.media</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Sep 2026</span><span class="pill">Research</span></div>
+          <div><h3>A NeurIPS 2026 paper proposed scoring a coding agent's in-progress trajectory with a small draft model to flag likely failures early, inverting the usual speculative-decoding setup, and reported it cut per-call execution errors by several percentage points and token cost by roughly a sixth</h3>
+            <p class="why"><b>Why it matters:</b> ties the speculative-decoding mechanics you'd study at <a href="#L4">L4</a> directly to the agent-reliability gap this week's GDPx numbers highlight at <a href="#L6">L6</a> — small models can double as cheap failure detectors, not just faster decoders.</p>
+            <p class="src"><a href="https://arxiv.org/pdf/2609.05274">arxiv.org</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,42 +674,76 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: precision-recall-threshold-slider, learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator -->
-        <div class="pgcard pgtopic" data-topic="scaling-law-curve" id="pt-scale-card">
-          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L7">L7</a></span>
-          <h3>Toy: the scaling-law curve of diminishing returns</h3>
-          <p class="lede">Scaling laws describe how a model's loss falls as you pour in more training compute — fast at first, then flattening. Drag the slider through orders of magnitude of compute and watch the toy loss curve bend. This uses a made-up exponent, not a real published constant, to show the shape only — it's why labs racing for the "best model" this week (see the radar above) now lean on data quality and inference-time tricks as much as raw scale.</p>
+        <!-- HISTORY: learning-rate-schedule, chunk-size-vs-retrieval, beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve -->
+        <div class="pgcard pgtopic" data-topic="mixture-of-experts-routing" id="pt-moe-card">
+          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: mixture-of-experts token routing</h3>
+          <p class="lede">Large open models like this week's Beam route each token through only a handful of "expert" sub-networks out of many, instead of running the whole model every time. Set the total experts and how many activate per token, then route a few tokens to see which experts light up. The routing below is random, not learned, and the 70B figure is an illustrative toy model size, not a real benchmark.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-scale-range">log10(training compute, FLOPs)</label>
-            <input type="range" id="pt-scale-range" min="18" max="26" value="20" step="1">
-            <span class="mono" id="pt-scale-val">10^20</span>
+            <label class="mono" for="pt-moe-n">Total experts (N)</label>
+            <input type="range" id="pt-moe-n" min="8" max="64" step="8" value="8">
+            <span class="mono" id="pt-moe-nval">8</span>
           </div>
-          <div class="pt-row"><span class="mono">Toy loss (relative)</span><div class="pt-track"><div class="pt-fill" id="pt-scale-lossfill"></div></div><span class="mono" id="pt-scale-lossval"></span></div>
-          <div class="pt-row"><span class="mono">Gain from last 10x compute</span><div class="pt-track"><div class="pt-fill" id="pt-scale-gainfill"></div></div><span class="mono" id="pt-scale-gainval"></span></div>
-          <p class="mono" id="pt-scale-info"></p>
+          <div class="pt-ctl">
+            <label class="mono" for="pt-moe-k">Active experts per token (top-k)</label>
+            <input type="range" id="pt-moe-k" min="1" max="8" step="1" value="2">
+            <span class="mono" id="pt-moe-kval">2</span>
+          </div>
+          <div class="pt-row"><span class="mono">Active params of 70B toy model</span><div class="pt-track"><div class="pt-fill" id="pt-moe-fracfill"></div></div><span class="mono" id="pt-moe-fracval"></span></div>
+          <div id="pt-moe-grid" style="display:flex;flex-wrap:wrap;gap:4px;margin-block:8px"></div>
+          <div class="pt-ctl">
+            <button type="button" class="btn primary" id="pt-moe-route">Route a token</button>
+            <span class="mono" id="pt-moe-info"></span>
+          </div>
           <script>(function(){
-          var range=document.getElementById("pt-scale-range");
-          var val=document.getElementById("pt-scale-val");
-          var lossFill=document.getElementById("pt-scale-lossfill");
-          var lossVal=document.getElementById("pt-scale-lossval");
-          var gainFill=document.getElementById("pt-scale-gainfill");
-          var gainVal=document.getElementById("pt-scale-gainval");
-          var info=document.getElementById("pt-scale-info");
-          var ALPHA=0.05;
-          function lossAt(logC){ return Math.pow(10, -(logC-18)*ALPHA); }
-          function render(){
-            var logC=Number(range.value);
-            val.textContent="10^"+logC;
-            var loss=lossAt(logC);
-            var gain=lossAt(logC-1)-loss;
-            lossVal.textContent=loss.toFixed(3);
-            gainVal.textContent=gain.toFixed(4);
-            lossFill.style.width=Math.min(100, loss*100)+"%";
-            gainFill.style.width=Math.min(100, gain*800)+"%";
-            info.textContent = logC<21 ? "Small-scale regime: each 10x more compute still buys a big relative drop in loss." : (logC<24 ? "Mid-scale: the gain per extra decade of compute is visibly shrinking — the classic scaling-law bend." : "Frontier scale: another 10x compute buys only a sliver more — a toy reason bigger training runs alone stop paying off.");
+          var nRange=document.getElementById("pt-moe-n");
+          var kRange=document.getElementById("pt-moe-k");
+          var nVal=document.getElementById("pt-moe-nval");
+          var kVal=document.getElementById("pt-moe-kval");
+          var fracFill=document.getElementById("pt-moe-fracfill");
+          var fracVal=document.getElementById("pt-moe-fracval");
+          var grid=document.getElementById("pt-moe-grid");
+          var routeBtn=document.getElementById("pt-moe-route");
+          var info=document.getElementById("pt-moe-info");
+          function clampK(){
+            var n=Number(nRange.value);
+            kRange.max=String(Math.min(8,n));
+            if(Number(kRange.value)>n){ kRange.value=String(Math.min(8,n)); }
           }
-          range.addEventListener("input", render);
-          render();
+          function buildGrid(){
+            grid.textContent="";
+            var n=Number(nRange.value);
+            for(var i=0;i<n;i++){
+              var cell=document.createElement("div");
+              cell.id="pt-moe-cell-"+i;
+              cell.style.width="18px"; cell.style.height="18px"; cell.style.borderRadius="3px";
+              cell.style.background="var(--hm0)";
+              grid.appendChild(cell);
+            }
+          }
+          function render(){
+            nVal.textContent=nRange.value;
+            kVal.textContent=kRange.value;
+            var n=Number(nRange.value), k=Number(kRange.value);
+            var frac=k/n;
+            fracFill.style.width=Math.min(100,frac*100)+"%";
+            fracVal.textContent=(frac*100).toFixed(1)+"% (~"+(frac*70).toFixed(1)+"B)";
+          }
+          function route(){
+            var n=Number(nRange.value), k=Number(kRange.value);
+            var chosen={};
+            while(Object.keys(chosen).length<k){ chosen[Math.floor(Math.random()*n)]=true; }
+            for(var i=0;i<n;i++){
+              var cell=document.getElementById("pt-moe-cell-"+i);
+              if(cell){ cell.style.background = chosen[i] ? "var(--accent)" : "var(--hm0)"; }
+            }
+            var ids=Object.keys(chosen).sort(function(a,b){return a-b;});
+            info.textContent = "Lit up experts: " + ids.join(", ");
+          }
+          nRange.addEventListener("input", function(){ clampK(); buildGrid(); render(); route(); });
+          kRange.addEventListener("input", function(){ clampK(); render(); });
+          routeBtn.addEventListener("click", route);
+          buildGrid(); render(); route();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
