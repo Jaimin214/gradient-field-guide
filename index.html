@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T00:42:24">2026-11-06 00:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T05:42:08">2026-11-06 05:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -400,9 +400,15 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot shipped full downloadable weights for its trillion-parameter-class Kimi K3.1 Pro this week, while reports disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all — read "open" claims carefully. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agent sandboxes and the software supply chain keep turning out to be the real attack surface</strong><p>A tampered Claude Code VS Code extension and a reported technique for exfiltrating data through an already-allowlisted domain inside Vercel's AI-agent sandbox both show that isolation and clean weights aren't enough on their own. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI products are reaching into more sensitive, real-world data</strong><p>Anthropic's new Personal Finance feature gives Claude read-only access to users' bank and card data, arriving the same week OpenAI, Google, Microsoft and Anthropic agreed to honor a shared robots.txt AI-training opt-out — provenance and access-scoping are becoming product requirements, not afterthoughts. → <a href="#L5">L5</a></p></div>
+        <div><span class="state new">Watch</span><strong>Data-center buildout is turning into a political liability for AI labs</strong><p>Voters rejected the large majority of November 3 U.S. local ballot measures aimed at AI data centers, and OpenAI responded within days by pledging to cover local energy costs and drop NDAs with officials — compute buildout is now a community-relations problem, not just an engineering one. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-11-05</span><span class="pill">Policy</span></div>
+          <div><h3>Axios reported that voters rejected AI data-center proposals in 43 of 44 decided U.S. ballot measures on November 3, and within days OpenAI said it would drop NDAs with local officials and help cover electricity and infrastructure costs at its sites, while reportedly pushing to rebrand its facilities as "compute campuses"</h3>
+            <p class="why"><b>Why it matters:</b> community and political pushback over power, water and land use is starting to shape where the compute behind training and serving gets built, a cost and availability factor worth tracking if you're counting on cheap infrastructure at <a href="#L4">L4</a> or weighing a job in this industry (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://axios.com/2026/11/05/ai-data-center-election-backlash-concessions">axios.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-05</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic launched a Personal Finance feature in Claude for paid US beta users, letting Claude read (not move or invest) linked bank and card data through a Plaid connection, after the capability had circulated as an unannounced "Claude Money" leak in app testing since mid-October</h3>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google introduced Gemini 4 Carbon, a frontier model focused on cybersecurity defense and long-running tasks, giving a small group of "cyber defender" partners first access through its Fairwind Program before a staged rollout to developers, businesses and consumers</h3>
             <p class="why"><b>Why it matters:</b> an early-access, security-first rollout for a frontier model is worth watching if a job offer touches defensive security work, and it's the model behind this week's leaderboard swings at <a href="#L7">L7</a>.</p>
             <p class="src"><a href="https://letsdatascience.com/news/google-announces-gemini-4-carbon-limiting-first-access-to-cy-f33fd14e">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Models</span></div>
-          <div><h3>OpenAI released GPT-6.1 Terra, a coding- and computer-use-focused model priced at $1/$5 per million tokens, half its predecessor's rate, and reported a Terminal-Bench 4.0 score around 50% at its highest reasoning setting versus about 22% for the model it replaces</h3>
-            <p class="why"><b>Why it matters:</b> the benchmark jump is self-reported by OpenAI, but the price cut alongside Mistral's and Zhipu's open-weight pushes shows serving models cheaply (<a href="#L4">L4</a>) is now as competitive as training the smartest one.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/openai-releases-gpt-61-terra-cutting-price-50-and-benchmark-bc892dc4">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,45 +674,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval -->
-        <div class="pgcard pgtopic" data-topic="lost-in-the-middle-context-position" id="pt-limcard">
-          <span class="label">New this refresh · 2026-11-06 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: lost in the middle</h3>
-          <p class="lede">Drag where a key fact sits inside a long context window and watch a toy "recall" score rise and fall. Long-context models tend to find facts near the start or end of a prompt more reliably than ones buried in the middle; this simulates that U-shaped pattern with a made-up formula — not a real benchmark — and a longer window (second slider) exaggerates the dip, loosely motivated by this week's news about million-token-context models like Kimi K3.1 Pro.</p>
+        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size -->
+        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size" id="pt-ovfcard">
+          <span class="label">New this refresh · 2026-11-06 · connects to <a href="#L1">L1</a></span>
+          <h3>Toy: benchmark score vs. real-world score</h3>
+          <p class="lede">Drag model capacity and how heavily it was tuned to one benchmark, and watch two toy scores diverge. This is a simplified, made-up simulation of overfitting — not real numbers — loosely motivated by this week's news that leaderboard rankings keep shuffling while a separate real-task benchmark (GDPx) reportedly put even the top model's success rate around 12%: a high score on the thing you optimized for doesn't guarantee it generalizes.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-lim-pos">Fact position</label>
-            <input type="range" id="pt-lim-pos" min="0" max="100" value="50">
-            <span class="mono" id="pt-lim-posval"></span>
+            <label class="mono" for="pt-ovf-cap">Model capacity</label>
+            <input type="range" id="pt-ovf-cap" min="1" max="5" step="1" value="3">
+            <span class="mono" id="pt-ovf-capval"></span>
           </div>
           <div class="pt-ctl">
-            <label class="mono" for="pt-lim-len">Context length</label>
-            <input type="range" id="pt-lim-len" min="1" max="4" step="1" value="2">
-            <span class="mono" id="pt-lim-lenval"></span>
+            <label class="mono" for="pt-ovf-tune">Benchmark-specific tuning</label>
+            <input type="range" id="pt-ovf-tune" min="0" max="100" value="30">
+            <span class="mono" id="pt-ovf-tuneval"></span>
           </div>
-          <div class="pt-row"><span class="mono">Recall score</span><div class="pt-track"><div class="pt-fill" id="pt-lim-fill"></div></div><span class="mono" id="pt-lim-score"></span></div>
-          <p class="mono" id="pt-lim-note"></p>
+          <div class="pt-row"><span class="mono">Benchmark score</span><div class="pt-track"><div class="pt-fill" id="pt-ovf-bfill"></div></div><span class="mono" id="pt-ovf-bscore"></span></div>
+          <div class="pt-row"><span class="mono">Real-world score</span><div class="pt-track"><div class="pt-fill" id="pt-ovf-rfill"></div></div><span class="mono" id="pt-ovf-rscore"></span></div>
+          <p class="mono" id="pt-ovf-note"></p>
           <script>(function(){
-          var LENS=["8K","32K","128K","1M"];
-          var pos=document.getElementById("pt-lim-pos"), len=document.getElementById("pt-lim-len");
-          var posval=document.getElementById("pt-lim-posval"), lenval=document.getElementById("pt-lim-lenval");
-          var fill=document.getElementById("pt-lim-fill"), score=document.getElementById("pt-lim-score");
-          var note=document.getElementById("pt-lim-note");
+          var CAPS=["Tiny","Small","Medium","Large","Huge"];
+          var cap=document.getElementById("pt-ovf-cap"), tune=document.getElementById("pt-ovf-tune");
+          var capval=document.getElementById("pt-ovf-capval"), tuneval=document.getElementById("pt-ovf-tuneval");
+          var bfill=document.getElementById("pt-ovf-bfill"), rfill=document.getElementById("pt-ovf-rfill");
+          var bscore=document.getElementById("pt-ovf-bscore"), rscore=document.getElementById("pt-ovf-rscore");
+          var note=document.getElementById("pt-ovf-note");
+          function clamp(v){ return Math.max(3, Math.min(100, Math.round(v))); }
           function render(){
-            var p=Number(pos.value)/100;
-            var l=Number(len.value);
-            var label=LENS[l-1];
-            var depth=0.25+l*0.17;
-            var dip=Math.sin(p*Math.PI);
-            var acc=Math.max(5,Math.round((1-depth*dip)*100));
-            posval.textContent=pos.value+"% through the prompt";
-            lenval.textContent=label+" tokens";
-            fill.style.width=acc+"%";
-            score.textContent=acc+"%";
-            var where=p<0.15?"near the start":p>0.85?"near the end":"in the middle";
-            note.textContent="Toy model: a fact placed "+where+" of a "+label+"-token window scores "+acc+"% recall in this simulation.";
+            var c=Number(cap.value), t=Number(tune.value);
+            var bench=clamp(18+c*9+t*0.6);
+            var overfit=Math.max(0,t-35)*0.9;
+            var real=clamp(14+c*10-overfit);
+            capval.textContent=CAPS[c-1];
+            tuneval.textContent=t+"% tuned to the benchmark";
+            bfill.style.width=bench+"%"; bscore.textContent=bench+"%";
+            rfill.style.width=real+"%"; rscore.textContent=real+"%";
+            var gap=bench-real;
+            note.textContent="Toy model: a "+gap+"-point gap between benchmark and real-world score in this simulation — "+(gap>25?"heavy overfitting to the benchmark.":gap>10?"some overfitting to the benchmark.":"close generalization in this toy.");
           }
-          pos.addEventListener("input", render);
-          len.addEventListener("input", render);
+          cap.addEventListener("input", render);
+          tune.addEventListener("input", render);
           render();
           })();</script>
         </div>
