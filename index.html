@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T15:38:50">2026-11-05 15:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T19:39:18">2026-11-05 19:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,63 +674,43 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: beam-search-decoding-width, overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold -->
-        <div class="pgcard pgtopic" data-topic="learning-rate-schedules" id="pt-lrcard">
-          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L2">L2</a></span>
-          <h3>Toy: learning-rate schedule explorer</h3>
-          <p class="lede">Pick a schedule shape and a starting learning rate, then drag the step slider to see what rate the optimizer would actually be using at that point in training. The three curves are toy formulas for the schedule shape only — not output from any real training run, and real schedules also depend on warmup, batch size and the dataset.</p>
+        <!-- HISTORY: overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval" id="pt-chunkcard">
+          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: chunk size vs. retrieval quality</h3>
+          <p class="lede">Drag the chunk-size slider to see a RAG pipeline's tradeoff: smaller chunks keep each retrieved piece focused but may split an answer across several chunks, while larger chunks dilute relevance with surrounding text. This uses one fixed fake 6,000-word document and one fixed fake 150-word answer span — it is a toy, not a benchmark, and real relevance depends on the embedding model and the query, not just chunk size.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-lr-init">Initial LR</label>
-            <input type="range" id="pt-lr-init" min="0" max="40" step="1" value="22">
-            <span class="mono" id="pt-lr-initval"></span>
+            <label class="mono" for="pt-chunk-size">Chunk size (words)</label>
+            <input type="range" id="pt-chunk-size" min="50" max="1000" step="25" value="300">
+            <span class="mono" id="pt-chunk-sizeval"></span>
           </div>
-          <div class="pt-ctl">
-            <button type="button" class="btn" id="pt-lr-btn-const">Constant</button>
-            <button type="button" class="btn" id="pt-lr-btn-step">Step decay</button>
-            <button type="button" class="btn primary" id="pt-lr-btn-cos">Cosine decay</button>
-          </div>
-          <div class="pt-ctl">
-            <label class="mono" for="pt-lr-stepslider">Training step</label>
-            <input type="range" id="pt-lr-stepslider" min="0" max="100" step="1" value="0">
-            <span class="mono" id="pt-lr-stepval"></span>
-          </div>
-          <div class="pt-row"><span class="mono">LR now</span><div class="pt-track"><div class="pt-fill" id="pt-lr-fill"></div></div><span class="mono" id="pt-lr-val"></span></div>
+          <div class="pt-row"><span class="mono">Chunks in doc</span><div class="pt-track"><div class="pt-fill" id="pt-chunk-countfill"></div></div><span class="mono" id="pt-chunk-countval"></span></div>
+          <div class="pt-row"><span class="mono">Signal density</span><div class="pt-track"><div class="pt-fill" id="pt-chunk-densfill"></div></div><span class="mono" id="pt-chunk-densval"></span></div>
+          <p class="mono" id="pt-chunk-note"></p>
           <script>(function(){
-          var init=document.getElementById("pt-lr-init");
-          var initVal=document.getElementById("pt-lr-initval");
-          var stepSlider=document.getElementById("pt-lr-stepslider");
-          var stepVal=document.getElementById("pt-lr-stepval");
-          var fill=document.getElementById("pt-lr-fill");
-          var val=document.getElementById("pt-lr-val");
-          var btnConst=document.getElementById("pt-lr-btn-const");
-          var btnStep=document.getElementById("pt-lr-btn-step");
-          var btnCos=document.getElementById("pt-lr-btn-cos");
-          var buttons={constant:btnConst,step:btnStep,cosine:btnCos};
-          var schedule="cosine";
-          function lr0(){ return Math.pow(10, -4 + (Number(init.value)/40)*3); }
-          function fmt(n){ return n.toFixed(5); }
-          function setSchedule(name){
-            schedule=name;
-            for(var k in buttons){ buttons[k].classList.toggle("primary", k===name); }
-            render();
-          }
+          var DOC=6000, ANSWER=150, TOPK=3;
+          var slider=document.getElementById("pt-chunk-size");
+          var sizeval=document.getElementById("pt-chunk-sizeval");
+          var countfill=document.getElementById("pt-chunk-countfill");
+          var countval=document.getElementById("pt-chunk-countval");
+          var densfill=document.getElementById("pt-chunk-densfill");
+          var densval=document.getElementById("pt-chunk-densval");
+          var note=document.getElementById("pt-chunk-note");
           function render(){
-            var base=lr0();
-            initVal.textContent=fmt(base);
-            var pct=Number(stepSlider.value);
-            stepVal.textContent=pct+" / 100";
-            var lr;
-            if(schedule==="constant") lr=base;
-            else if(schedule==="step") lr=base*Math.pow(0.1, Math.floor(pct/25));
-            else lr=base*0.5*(1+Math.cos(Math.PI*pct/100));
-            fill.style.width=(Math.max(0,Math.min(1,lr/base))*100).toFixed(0)+"%";
-            val.textContent=fmt(lr);
+            var size=Number(slider.value);
+            sizeval.textContent=size+" words/chunk";
+            var count=Math.ceil(DOC/size);
+            countfill.style.width=Math.min(100,(count/120)*100).toFixed(0)+"%";
+            countval.textContent=count+" chunks";
+            var density, needed;
+            if(size<=ANSWER){ density=1; needed=Math.ceil(ANSWER/size); }
+            else { density=ANSWER/size; needed=1; }
+            densfill.style.width=(density*100).toFixed(0)+"%";
+            densval.textContent=(density*100).toFixed(0)+"% relevant per chunk";
+            var tokens=Math.round(size*TOPK*1.3);
+            note.textContent="Top-"+TOPK+" retrieval pulls ~"+tokens+" toy tokens; needs "+needed+" chunk(s) to cover the full toy answer span.";
           }
-          init.addEventListener("input", render);
-          stepSlider.addEventListener("input", render);
-          btnConst.addEventListener("click", function(){ setSchedule("constant"); });
-          btnStep.addEventListener("click", function(){ setSchedule("step"); });
-          btnCos.addEventListener("click", function(){ setSchedule("cosine"); });
+          slider.addEventListener("input", render);
           render();
           })();</script>
         </div>
