@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T05:42:08">2026-11-06 05:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T10:38:56">2026-11-06 10:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,46 +674,45 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size -->
-        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size" id="pt-ovfcard">
-          <span class="label">New this refresh · 2026-11-06 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: benchmark score vs. real-world score</h3>
-          <p class="lede">Drag model capacity and how heavily it was tuned to one benchmark, and watch two toy scores diverge. This is a simplified, made-up simulation of overfitting — not real numbers — loosely motivated by this week's news that leaderboard rankings keep shuffling while a separate real-task benchmark (GDPx) reportedly put even the top model's success rate around 12%: a high score on the thing you optimized for doesn't guarantee it generalizes.</p>
+        <!-- HISTORY: kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting -->
+        <div class="pgcard pgtopic" data-topic="self-consistency-voting" id="pt-scvcard">
+          <span class="label">New this refresh · 2026-11-06 · connects to <a href="#L6">L6</a></span>
+          <h3>Toy: does voting across samples save an unreliable agent?</h3>
+          <p class="lede">Set how often one run of a task succeeds, and how many independent attempts you sample and majority-vote across. This is a simplified, made-up simulation — not real numbers — loosely motivated by this week's news that even top-ranked models reportedly finish only a minority of tasks on realistic agent benchmarks like GDPx. It assumes every attempt is independent and equally likely to succeed, which real agent runs rarely are.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-ovf-cap">Model capacity</label>
-            <input type="range" id="pt-ovf-cap" min="1" max="5" step="1" value="3">
-            <span class="mono" id="pt-ovf-capval"></span>
+            <label class="mono" for="pt-scv-acc">Per-run success rate</label>
+            <input type="range" id="pt-scv-acc" min="5" max="95" step="1" value="40">
+            <span class="mono" id="pt-scv-accval"></span>
           </div>
           <div class="pt-ctl">
-            <label class="mono" for="pt-ovf-tune">Benchmark-specific tuning</label>
-            <input type="range" id="pt-ovf-tune" min="0" max="100" value="30">
-            <span class="mono" id="pt-ovf-tuneval"></span>
+            <label class="mono" for="pt-scv-k">Independent samples (k)</label>
+            <input type="range" id="pt-scv-k" min="1" max="9" step="2" value="5">
+            <span class="mono" id="pt-scv-kval"></span>
           </div>
-          <div class="pt-row"><span class="mono">Benchmark score</span><div class="pt-track"><div class="pt-fill" id="pt-ovf-bfill"></div></div><span class="mono" id="pt-ovf-bscore"></span></div>
-          <div class="pt-row"><span class="mono">Real-world score</span><div class="pt-track"><div class="pt-fill" id="pt-ovf-rfill"></div></div><span class="mono" id="pt-ovf-rscore"></span></div>
-          <p class="mono" id="pt-ovf-note"></p>
+          <div class="pt-row"><span class="mono">Single run</span><div class="pt-track"><div class="pt-fill" id="pt-scv-sfill"></div></div><span class="mono" id="pt-scv-sscore"></span></div>
+          <div class="pt-row"><span class="mono">Majority vote</span><div class="pt-track"><div class="pt-fill" id="pt-scv-mfill"></div></div><span class="mono" id="pt-scv-mscore"></span></div>
+          <p class="mono" id="pt-scv-note"></p>
           <script>(function(){
-          var CAPS=["Tiny","Small","Medium","Large","Huge"];
-          var cap=document.getElementById("pt-ovf-cap"), tune=document.getElementById("pt-ovf-tune");
-          var capval=document.getElementById("pt-ovf-capval"), tuneval=document.getElementById("pt-ovf-tuneval");
-          var bfill=document.getElementById("pt-ovf-bfill"), rfill=document.getElementById("pt-ovf-rfill");
-          var bscore=document.getElementById("pt-ovf-bscore"), rscore=document.getElementById("pt-ovf-rscore");
-          var note=document.getElementById("pt-ovf-note");
-          function clamp(v){ return Math.max(3, Math.min(100, Math.round(v))); }
+          var acc=document.getElementById("pt-scv-acc"), k=document.getElementById("pt-scv-k");
+          var accval=document.getElementById("pt-scv-accval"), kval=document.getElementById("pt-scv-kval");
+          var sfill=document.getElementById("pt-scv-sfill"), mfill=document.getElementById("pt-scv-mfill");
+          var sscore=document.getElementById("pt-scv-sscore"), mscore=document.getElementById("pt-scv-mscore");
+          var note=document.getElementById("pt-scv-note");
+          function choose(n,r){ var num=1,den=1; for(var i=0;i<r;i++){ num*=(n-i); den*=(i+1); } return num/den; }
           function render(){
-            var c=Number(cap.value), t=Number(tune.value);
-            var bench=clamp(18+c*9+t*0.6);
-            var overfit=Math.max(0,t-35)*0.9;
-            var real=clamp(14+c*10-overfit);
-            capval.textContent=CAPS[c-1];
-            tuneval.textContent=t+"% tuned to the benchmark";
-            bfill.style.width=bench+"%"; bscore.textContent=bench+"%";
-            rfill.style.width=real+"%"; rscore.textContent=real+"%";
-            var gap=bench-real;
-            note.textContent="Toy model: a "+gap+"-point gap between benchmark and real-world score in this simulation — "+(gap>25?"heavy overfitting to the benchmark.":gap>10?"some overfitting to the benchmark.":"close generalization in this toy.");
+            var p=Number(acc.value)/100, n=Number(k.value);
+            var maj=0;
+            for(var i=Math.floor(n/2)+1;i<=n;i++){ maj+=choose(n,i)*Math.pow(p,i)*Math.pow(1-p,n-i); }
+            var sPct=Math.round(p*100), mPct=Math.round(maj*100);
+            accval.textContent=sPct+"% per run";
+            kval.textContent=n+" samples, majority vote";
+            sfill.style.width=sPct+"%"; sscore.textContent=sPct+"%";
+            mfill.style.width=mPct+"%"; mscore.textContent=mPct+"%";
+            var gain=mPct-sPct;
+            note.textContent="Toy model: voting across "+n+" independent tries "+(gain>=0?"lifts accuracy by "+gain+" points":"changes accuracy by "+gain+" points")+" in this simulation — real agent errors are often correlated, so the true gain is usually smaller.";
           }
-          cap.addEventListener("input", render);
-          tune.addEventListener("input", render);
+          acc.addEventListener("input", render);
+          k.addEventListener("input", render);
           render();
           })();</script>
         </div>
