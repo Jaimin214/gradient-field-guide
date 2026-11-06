@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-05T19:39:18">2026-11-05 19:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T00:42:24">2026-11-06 00:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,7 +396,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Google's staged rollout of Gemini 4 Carbon and Artificial Analysis's rebuilt v5.0 Intelligence Index, which put Carbon at 59 versus Claude Opus 5.5's 58 with GPT-6.1 Terra's own score still unverified, are a reminder to treat any single leaderboard snapshot skeptically. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt v5.0 Intelligence Index put Gemini 4 Carbon at 59 versus Claude Opus 5.5's 58, and a second tracker, BenchLM, agreed on that ranking order on November 5 while scoring them 88.8 versus 86.4 on its own scale — a reminder to read a leaderboard's methodology before citing its number. → <a href="#L7">L7</a></p></div>
         <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot shipped full downloadable weights for its trillion-parameter-class Kimi K3.1 Pro this week, while reports disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all — read "open" claims carefully. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agent sandboxes and the software supply chain keep turning out to be the real attack surface</strong><p>A tampered Claude Code VS Code extension and a reported technique for exfiltrating data through an already-allowlisted domain inside Vercel's AI-agent sandbox both show that isolation and clean weights aren't enough on their own. → <a href="#L6">L6</a></p></div>
@@ -408,6 +408,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic launched a Personal Finance feature in Claude for paid US beta users, letting Claude read (not move or invest) linked bank and card data through a Plaid connection, after the capability had circulated as an unannounced "Claude Money" leak in app testing since mid-October</h3>
             <p class="why"><b>Why it matters:</b> wiring an assistant into live, sensitive financial data with a deliberately read-only scope is a concrete case study in connector and permission design for anything you build on <a href="#L5">L5</a>'s app patterns or <a href="#L6">L6</a>'s agents.</p>
             <p class="src"><a href="https://9to5mac.com/2026/11/05/anthropic-upgrades-claude-with-new-personal-finance-feature">9to5mac.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-05</span><span class="pill">Models</span></div>
+          <div><h3>Leaderboard aggregator BenchLM's November 5 update reportedly ranked Google's Gemini 4 Carbon first among the 300-plus models it tracks, at a composite score of 88.8, just ahead of Anthropic's Claude Opus 5.5 at 86.4, on a different scale than Artificial Analysis's rival index</h3>
+            <p class="why"><b>Why it matters:</b> two independent trackers landing on the same ranking order but very different numbers is a good reminder to check a leaderboard's methodology before quoting its score (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://benchlm.ai/">benchlm.ai</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>OpenAI released GPT-6.1 Terra, a coding- and computer-use-focused model priced at $1/$5 per million tokens, half its predecessor's rate, and reported a Terminal-Bench 4.0 score around 50% at its highest reasoning setting versus about 22% for the model it replaces</h3>
             <p class="why"><b>Why it matters:</b> the benchmark jump is self-reported by OpenAI, but the price cut alongside Mistral's and Zhipu's open-weight pushes shows serving models cheaply (<a href="#L4">L4</a>) is now as competitive as training the smartest one.</p>
             <p class="src"><a href="https://letsdatascience.com/news/openai-releases-gpt-61-terra-cutting-price-50-and-benchmark-bc892dc4">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill sec">Security</span></div>
-          <div><h3>Security researchers reportedly demonstrated "VerCellBreak," a technique letting code inside Vercel's sandboxed AI-agent environment exfiltrate data through an already-allowlisted domain via TLS certificate tricks, without breaking the sandbox itself; Vercel called it outside its bug-bounty scope</h3>
-            <p class="why"><b>Why it matters:</b> shows that sandboxing an autonomous agent (<a href="#L6">L6</a>) isn't enough on its own — the domains you trust for egress can become the leak path even when the isolation boundary holds.</p>
-            <p class="src"><a href="https://therecord.media/sandbox-vulnerability-gives-rogue-ai-agents-path-out">therecord.media</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,43 +674,45 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-capacity, lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval" id="pt-chunkcard">
-          <span class="label">New this refresh · 2026-11-05 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: chunk size vs. retrieval quality</h3>
-          <p class="lede">Drag the chunk-size slider to see a RAG pipeline's tradeoff: smaller chunks keep each retrieved piece focused but may split an answer across several chunks, while larger chunks dilute relevance with surrounding text. This uses one fixed fake 6,000-word document and one fixed fake 150-word answer span — it is a toy, not a benchmark, and real relevance depends on the embedding model and the query, not just chunk size.</p>
+        <!-- HISTORY: lora-rank-parameter-tradeoff, speculative-decoding-acceptance-rate, softmax-temperature, kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval -->
+        <div class="pgcard pgtopic" data-topic="lost-in-the-middle-context-position" id="pt-limcard">
+          <span class="label">New this refresh · 2026-11-06 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: lost in the middle</h3>
+          <p class="lede">Drag where a key fact sits inside a long context window and watch a toy "recall" score rise and fall. Long-context models tend to find facts near the start or end of a prompt more reliably than ones buried in the middle; this simulates that U-shaped pattern with a made-up formula — not a real benchmark — and a longer window (second slider) exaggerates the dip, loosely motivated by this week's news about million-token-context models like Kimi K3.1 Pro.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-chunk-size">Chunk size (words)</label>
-            <input type="range" id="pt-chunk-size" min="50" max="1000" step="25" value="300">
-            <span class="mono" id="pt-chunk-sizeval"></span>
+            <label class="mono" for="pt-lim-pos">Fact position</label>
+            <input type="range" id="pt-lim-pos" min="0" max="100" value="50">
+            <span class="mono" id="pt-lim-posval"></span>
           </div>
-          <div class="pt-row"><span class="mono">Chunks in doc</span><div class="pt-track"><div class="pt-fill" id="pt-chunk-countfill"></div></div><span class="mono" id="pt-chunk-countval"></span></div>
-          <div class="pt-row"><span class="mono">Signal density</span><div class="pt-track"><div class="pt-fill" id="pt-chunk-densfill"></div></div><span class="mono" id="pt-chunk-densval"></span></div>
-          <p class="mono" id="pt-chunk-note"></p>
+          <div class="pt-ctl">
+            <label class="mono" for="pt-lim-len">Context length</label>
+            <input type="range" id="pt-lim-len" min="1" max="4" step="1" value="2">
+            <span class="mono" id="pt-lim-lenval"></span>
+          </div>
+          <div class="pt-row"><span class="mono">Recall score</span><div class="pt-track"><div class="pt-fill" id="pt-lim-fill"></div></div><span class="mono" id="pt-lim-score"></span></div>
+          <p class="mono" id="pt-lim-note"></p>
           <script>(function(){
-          var DOC=6000, ANSWER=150, TOPK=3;
-          var slider=document.getElementById("pt-chunk-size");
-          var sizeval=document.getElementById("pt-chunk-sizeval");
-          var countfill=document.getElementById("pt-chunk-countfill");
-          var countval=document.getElementById("pt-chunk-countval");
-          var densfill=document.getElementById("pt-chunk-densfill");
-          var densval=document.getElementById("pt-chunk-densval");
-          var note=document.getElementById("pt-chunk-note");
+          var LENS=["8K","32K","128K","1M"];
+          var pos=document.getElementById("pt-lim-pos"), len=document.getElementById("pt-lim-len");
+          var posval=document.getElementById("pt-lim-posval"), lenval=document.getElementById("pt-lim-lenval");
+          var fill=document.getElementById("pt-lim-fill"), score=document.getElementById("pt-lim-score");
+          var note=document.getElementById("pt-lim-note");
           function render(){
-            var size=Number(slider.value);
-            sizeval.textContent=size+" words/chunk";
-            var count=Math.ceil(DOC/size);
-            countfill.style.width=Math.min(100,(count/120)*100).toFixed(0)+"%";
-            countval.textContent=count+" chunks";
-            var density, needed;
-            if(size<=ANSWER){ density=1; needed=Math.ceil(ANSWER/size); }
-            else { density=ANSWER/size; needed=1; }
-            densfill.style.width=(density*100).toFixed(0)+"%";
-            densval.textContent=(density*100).toFixed(0)+"% relevant per chunk";
-            var tokens=Math.round(size*TOPK*1.3);
-            note.textContent="Top-"+TOPK+" retrieval pulls ~"+tokens+" toy tokens; needs "+needed+" chunk(s) to cover the full toy answer span.";
+            var p=Number(pos.value)/100;
+            var l=Number(len.value);
+            var label=LENS[l-1];
+            var depth=0.25+l*0.17;
+            var dip=Math.sin(p*Math.PI);
+            var acc=Math.max(5,Math.round((1-depth*dip)*100));
+            posval.textContent=pos.value+"% through the prompt";
+            lenval.textContent=label+" tokens";
+            fill.style.width=acc+"%";
+            score.textContent=acc+"%";
+            var where=p<0.15?"near the start":p>0.85?"near the end":"in the middle";
+            note.textContent="Toy model: a fact placed "+where+" of a "+label+"-token window scores "+acc+"% recall in this simulation.";
           }
-          slider.addEventListener("input", render);
+          pos.addEventListener("input", render);
+          len.addEventListener("input", render);
           render();
           })();</script>
         </div>
