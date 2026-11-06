@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T10:38:56">2026-11-06 10:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T15:42:11">2026-11-06 15:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -399,8 +399,8 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt v5.0 Intelligence Index put Gemini 4 Carbon at 59 versus Claude Opus 5.5's 58, and a second tracker, BenchLM, agreed on that ranking order on November 5 while scoring them 88.8 versus 86.4 on its own scale — a reminder to read a leaderboard's methodology before citing its number. → <a href="#L7">L7</a></p></div>
         <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot shipped full downloadable weights for its trillion-parameter-class Kimi K3.1 Pro this week, while reports disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all — read "open" claims carefully. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agent sandboxes and the software supply chain keep turning out to be the real attack surface</strong><p>A tampered Claude Code VS Code extension and a reported technique for exfiltrating data through an already-allowlisted domain inside Vercel's AI-agent sandbox both show that isolation and clean weights aren't enough on their own. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Data-center buildout is turning into a political liability for AI labs</strong><p>Voters rejected the large majority of November 3 U.S. local ballot measures aimed at AI data centers, and OpenAI responded within days by pledging to cover local energy costs and drop NDAs with officials — compute buildout is now a community-relations problem, not just an engineering one. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Prompt injection keeps turning agent sandboxes into the real attack surface</strong><p>Independent research dubbed "Comment and Control" showed GitHub issue and PR text could hijack Claude Code's security-review action, Google's Gemini CLI Action and GitHub's Copilot Agent into leaking secrets, and all three vendors quietly paid bug bounties without assigning a CVE. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI buildout and AI-in-schools pushes are both hitting political backlash</strong><p>Voters rejected most November 3 U.S. ballot measures aimed at data centers and OpenAI responded by dropping local NDAs, while Google's plan to cut school Search access for districts that disable its AI tools drew a bipartisan Senate letter and "monopoly power" accusations from officials. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -440,10 +440,28 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://docs.x.ai/developers/advanced-api-usage/watermarking.md">docs.x.ai</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-03</span><span class="pill">Policy</span></div>
+          <div><h3>Google said it will turn off its AI tools by default for K-12 students in early 2027 unless school administrators opt in, but reversed course from its August default so that districts choosing to disable AI entirely will also lose access to Google Search</h3>
+            <p class="why"><b>Why it matters:</b> NYC's mayor, a former FTC chair and two U.S. senators publicly accused Google of using search-engine dominance to pressure schools into adopting AI, an early look at the product and policy tradeoffs you'll navigate building anything with <a href="#L5">L5</a>'s app patterns for a younger or captive audience.</p>
+            <p class="src"><a href="https://www.cbsnews.com/news/google-search-access-schools-ai-tools/">cbsnews.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-02</span><span class="pill">Industry</span></div>
           <div><h3>OpenAI created a new Senior Counselor for National Security Modernization role and named Dan Driscoll to it, tasked with working alongside U.S. and allied government agencies on AI-related national-security and cyber-resilience matters</h3>
             <p class="why"><b>Why it matters:</b> a frontier lab building a dedicated government-liaison role is a sign AI companies are embedding further into defense and policy work, context worth having if a job offer touches regulated or dual-use AI (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://openai.com/index/dan-driscoll-joins-openai/">openai.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-02</span><span class="pill">Research</span></div>
+          <div><h3>Anthropic open-sourced FlashProve, a research prototype that uses zero-knowledge proofs to let a provider show a reply really came from specific, committed model weights without revealing those weights, reporting proving costs around 70-95x the GPU time of just running the model</h3>
+            <p class="why"><b>Why it matters:</b> cryptographically verifiable inference is an early answer to "which model actually answered this," a trust problem that matters once you're comparing leaderboard claims (<a href="#L7">L7</a>) or building evals that assume you know what you're grading (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://anthropic.com/research/provable-inference">anthropic.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Nov 2026</span><span class="pill sec">Security</span></div>
+          <div><h3>Researcher Aonan Guan's "Comment and Control" writeup reported that text hidden in a GitHub pull-request title or issue comment could hijack Claude Code's security-review action, Google's Gemini CLI Action and GitHub's Copilot Agent in CI, in one case getting an agent to post its own API key back as a public comment</h3>
+            <p class="why"><b>Why it matters:</b> Anthropic, Google and GitHub each reportedly paid a bug bounty but assigned no CVE, so an agent you wire into CI on default settings (<a href="#L6">L6</a>) may already be exposed without your scanners ever flagging it.</p>
+            <p class="src"><a href="https://thenextweb.com/news/ai-agents-hijacked-prompt-injection-bug-bounties-no-cve">thenextweb.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill">Industry</span></div>
@@ -474,24 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>The Financial Times reported OpenAI cut the target for its in-progress funding round by $10B to about $20B, now raising at a reported $1.25T valuation after some investors pulled back commitments as AI stocks sold off, with only around $11B said to be committed so far</h3>
             <p class="why"><b>Why it matters:</b> a frontier lab trimming its own raise right as Anthropic heads toward an IPO is a sign the capital these labs lean on (<a href="#L7">L7</a>) is getting pickier, context worth having before weighing an equity-heavy offer.</p>
             <p class="src"><a href="https://thenextweb.com/news/openai-funding-round-20bn-target-cut-ft">thenextweb.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-30</span><span class="pill">Policy</span></div>
-          <div><h3>OpenAI, Google, Microsoft and Anthropic said they will each honor a single shared robots.txt token letting publishers opt out of AI training across all four crawlers at once, built from an IETF draft Anthropic proposed, though Google and Microsoft reportedly won't start honoring it until 2027</h3>
-            <p class="why"><b>Why it matters:</b> a shared, machine-readable opt-out standard is exactly the kind of provenance and consent signal apps built on <a href="#L5">L5</a>'s scraping and RAG pipelines will increasingly need to respect.</p>
-            <p class="src"><a href="https://thenextweb.com/news/ai-training-opt-out-robots-txt-google-openai-microsoft-anthropic">thenextweb.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-29</span><span class="pill sec">Security</span></div>
-          <div><h3>A tampered build of Anthropic's official Claude Code VS Code extension reportedly sat live in Cursor's extension marketplace for about 11 hours on October 29 before removal, planting an unauthorized SSH key on the systems of anyone who installed it</h3>
-            <p class="why"><b>Why it matters:</b> a coding assistant's own extension pipeline becoming the attack surface is a software-supply-chain risk worth defending against in your own tool setup, not just reading about (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/">theneuron.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-28</span><span class="pill">Models</span></div>
-          <div><h3>Google introduced Gemini 4 Carbon, a frontier model focused on cybersecurity defense and long-running tasks, giving a small group of "cyber defender" partners first access through its Fairwind Program before a staged rollout to developers, businesses and consumers</h3>
-            <p class="why"><b>Why it matters:</b> an early-access, security-first rollout for a frontier model is worth watching if a job offer touches defensive security work, and it's the model behind this week's leaderboard swings at <a href="#L7">L7</a>.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/google-announces-gemini-4-carbon-limiting-first-access-to-cy-f33fd14e">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,45 +674,42 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting -->
-        <div class="pgcard pgtopic" data-topic="self-consistency-voting" id="pt-scvcard">
-          <span class="label">New this refresh · 2026-11-06 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: does voting across samples save an unreliable agent?</h3>
-          <p class="lede">Set how often one run of a task succeeds, and how many independent attempts you sample and majority-vote across. This is a simplified, made-up simulation — not real numbers — loosely motivated by this week's news that even top-ranked models reportedly finish only a minority of tasks on realistic agent benchmarks like GDPx. It assumes every attempt is independent and equally likely to succeed, which real agent runs rarely are.</p>
+        <!-- HISTORY: multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature" id="pt-smtcard">
+          <span class="label">New this refresh · 2026-11-06 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: what temperature does to next-token odds</h3>
+          <p class="lede">Five made-up candidate "next tokens" have fixed, invented scores (logits). Drag temperature to see softmax(logits/T) reshape them into probabilities before any token is actually sampled. This is a simplified toy with made-up numbers, not a real model's output — but the formula is the real one behind the "temperature" setting in every API, including this week's news about providers racing to make model outputs verifiable (<a href="#L7">L7</a>).</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-scv-acc">Per-run success rate</label>
-            <input type="range" id="pt-scv-acc" min="5" max="95" step="1" value="40">
-            <span class="mono" id="pt-scv-accval"></span>
+            <label class="mono" for="pt-smt-temp">Temperature (T)</label>
+            <input type="range" id="pt-smt-temp" min="0.1" max="2.5" step="0.1" value="1">
+            <span class="mono" id="pt-smt-tempval"></span>
           </div>
-          <div class="pt-ctl">
-            <label class="mono" for="pt-scv-k">Independent samples (k)</label>
-            <input type="range" id="pt-scv-k" min="1" max="9" step="2" value="5">
-            <span class="mono" id="pt-scv-kval"></span>
-          </div>
-          <div class="pt-row"><span class="mono">Single run</span><div class="pt-track"><div class="pt-fill" id="pt-scv-sfill"></div></div><span class="mono" id="pt-scv-sscore"></span></div>
-          <div class="pt-row"><span class="mono">Majority vote</span><div class="pt-track"><div class="pt-fill" id="pt-scv-mfill"></div></div><span class="mono" id="pt-scv-mscore"></span></div>
-          <p class="mono" id="pt-scv-note"></p>
+          <div class="pt-row"><span class="mono">cat</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-0"></div></div><span class="mono" id="pt-smt-score-0"></span></div>
+          <div class="pt-row"><span class="mono">dog</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-1"></div></div><span class="mono" id="pt-smt-score-1"></span></div>
+          <div class="pt-row"><span class="mono">fish</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-2"></div></div><span class="mono" id="pt-smt-score-2"></span></div>
+          <div class="pt-row"><span class="mono">car</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-3"></div></div><span class="mono" id="pt-smt-score-3"></span></div>
+          <div class="pt-row"><span class="mono">sky</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-4"></div></div><span class="mono" id="pt-smt-score-4"></span></div>
+          <p class="mono" id="pt-smt-note"></p>
           <script>(function(){
-          var acc=document.getElementById("pt-scv-acc"), k=document.getElementById("pt-scv-k");
-          var accval=document.getElementById("pt-scv-accval"), kval=document.getElementById("pt-scv-kval");
-          var sfill=document.getElementById("pt-scv-sfill"), mfill=document.getElementById("pt-scv-mfill");
-          var sscore=document.getElementById("pt-scv-sscore"), mscore=document.getElementById("pt-scv-mscore");
-          var note=document.getElementById("pt-scv-note");
-          function choose(n,r){ var num=1,den=1; for(var i=0;i<r;i++){ num*=(n-i); den*=(i+1); } return num/den; }
+          var logits=[2.1,1.8,0.9,0.2,-0.5];
+          var temp=document.getElementById("pt-smt-temp"), tempval=document.getElementById("pt-smt-tempval");
+          var fills=[], scores=[];
+          for(var i=0;i<5;i++){ fills.push(document.getElementById("pt-smt-fill-"+i)); scores.push(document.getElementById("pt-smt-score-"+i)); }
+          var note=document.getElementById("pt-smt-note");
           function render(){
-            var p=Number(acc.value)/100, n=Number(k.value);
-            var maj=0;
-            for(var i=Math.floor(n/2)+1;i<=n;i++){ maj+=choose(n,i)*Math.pow(p,i)*Math.pow(1-p,n-i); }
-            var sPct=Math.round(p*100), mPct=Math.round(maj*100);
-            accval.textContent=sPct+"% per run";
-            kval.textContent=n+" samples, majority vote";
-            sfill.style.width=sPct+"%"; sscore.textContent=sPct+"%";
-            mfill.style.width=mPct+"%"; mscore.textContent=mPct+"%";
-            var gain=mPct-sPct;
-            note.textContent="Toy model: voting across "+n+" independent tries "+(gain>=0?"lifts accuracy by "+gain+" points":"changes accuracy by "+gain+" points")+" in this simulation — real agent errors are often correlated, so the true gain is usually smaller.";
+            var t=Number(temp.value);
+            tempval.textContent="T = "+t.toFixed(1);
+            var exps=logits.map(function(l){ return Math.exp(l/t); });
+            var sum=exps.reduce(function(a,b){ return a+b; },0);
+            var probs=exps.map(function(e){ return e/sum; });
+            for(var i=0;i<5;i++){
+              var pct=Math.round(probs[i]*100);
+              fills[i].style.width=pct+"%";
+              scores[i].textContent=pct+"%";
+            }
+            note.textContent = t<0.5 ? "Low T: the distribution nearly collapses onto the single highest-scoring token." : (t>1.6 ? "High T: the scores get squashed closer together, so sampling is closer to a coin flip across tokens." : "Mid T: a balance between always picking the top token and sampling almost uniformly.");
           }
-          acc.addEventListener("input", render);
-          k.addEventListener("input", render);
+          temp.addEventListener("input", render);
           render();
           })();</script>
         </div>
