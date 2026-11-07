@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T15:42:11">2026-11-06 15:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-06T19:42:56">2026-11-06 19:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -400,7 +400,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot shipped full downloadable weights for its trillion-parameter-class Kimi K3.1 Pro this week, while reports disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all — read "open" claims carefully. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Prompt injection keeps turning agent sandboxes into the real attack surface</strong><p>Independent research dubbed "Comment and Control" showed GitHub issue and PR text could hijack Claude Code's security-review action, Google's Gemini CLI Action and GitHub's Copilot Agent into leaking secrets, and all three vendors quietly paid bug bounties without assigning a CVE. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI buildout and AI-in-schools pushes are both hitting political backlash</strong><p>Voters rejected most November 3 U.S. ballot measures aimed at data centers and OpenAI responded by dropping local NDAs, while Google's plan to cut school Search access for districts that disable its AI tools drew a bipartisan Senate letter and "monopoly power" accusations from officials. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI buildout, schools, and web-crawling are all hitting new friction</strong><p>Voters rejected most November 3 U.S. ballot measures aimed at data centers, Google's plan to cut school Search access for districts that disable its AI tools drew Senate pushback, and four major labs agreed on a shared robots.txt token letting publishers opt future pages out of AI training. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.folio3.ai/news/character-ai-bans-teen-chatbot-access-following-suicide-lawsuits">folio3.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-10-30</span><span class="pill">Industry</span></div>
-          <div><h3>The Financial Times reported OpenAI cut the target for its in-progress funding round by $10B to about $20B, now raising at a reported $1.25T valuation after some investors pulled back commitments as AI stocks sold off, with only around $11B said to be committed so far</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab trimming its own raise right as Anthropic heads toward an IPO is a sign the capital these labs lean on (<a href="#L7">L7</a>) is getting pickier, context worth having before weighing an equity-heavy offer.</p>
-            <p class="src"><a href="https://thenextweb.com/news/openai-funding-round-20bn-target-cut-ft">thenextweb.com</a></p></div>
+          <div class="when"><span class="mono">2026-10-31</span><span class="pill">Policy</span></div>
+          <div><h3>Google, Microsoft, Anthropic and OpenAI said they will support a shared robots.txt opt-out token that lets publishers block their pages from future AI-training crawls, kept separate from the indexing and live-answer "grounding" crawls sites still allow</h3>
+            <p class="why"><b>Why it matters:</b> a vendor-backed, machine-readable way to say "don't train on this" is a concrete content-licensing signal to design around if you're building anything that crawls or retrieves the web (<a href="#L5">L5</a>) — though it only covers future crawls, not data these labs already collected.</p>
+            <p class="src"><a href="https://siliconangle.com/2026/10/30/google-anthropic-and-others-to-support-new-ai-crawling-opt-out-standard/">siliconangle.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,42 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: multi-step-success-decay, token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature" id="pt-smtcard">
+        <!-- HISTORY: token-cost-calculator, quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator" id="pt-kvcard">
           <span class="label">New this refresh · 2026-11-06 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: what temperature does to next-token odds</h3>
-          <p class="lede">Five made-up candidate "next tokens" have fixed, invented scores (logits). Drag temperature to see softmax(logits/T) reshape them into probabilities before any token is actually sampled. This is a simplified toy with made-up numbers, not a real model's output — but the formula is the real one behind the "temperature" setting in every API, including this week's news about providers racing to make model outputs verifiable (<a href="#L7">L7</a>).</p>
+          <h3>Toy: how big does the KV cache get?</h3>
+          <p class="lede">Every token a model has already read or generated gets cached as "key" and "value" vectors so attention doesn't recompute them each step — that cache is a big, easy-to-forget chunk of GPU memory. Drag context length and batch size, and toggle precision, to see the cache size for a fixed toy model shape. This is simplified: it assumes one made-up model (32 layers, 4096 hidden size, no grouped-query attention) and ignores the memory the model's own weights and activations also need — but it's the same math behind this week's talk of million-token context windows on models like Kimi K3.1 Pro (<a href="#L4">L4</a>).</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-smt-temp">Temperature (T)</label>
-            <input type="range" id="pt-smt-temp" min="0.1" max="2.5" step="0.1" value="1">
-            <span class="mono" id="pt-smt-tempval"></span>
+            <label class="mono" for="pt-kv-ctx">Context length</label>
+            <input type="range" id="pt-kv-ctx" min="1000" max="1000000" step="1000" value="8000">
+            <span class="mono" id="pt-kv-ctxval"></span>
           </div>
-          <div class="pt-row"><span class="mono">cat</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-0"></div></div><span class="mono" id="pt-smt-score-0"></span></div>
-          <div class="pt-row"><span class="mono">dog</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-1"></div></div><span class="mono" id="pt-smt-score-1"></span></div>
-          <div class="pt-row"><span class="mono">fish</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-2"></div></div><span class="mono" id="pt-smt-score-2"></span></div>
-          <div class="pt-row"><span class="mono">car</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-3"></div></div><span class="mono" id="pt-smt-score-3"></span></div>
-          <div class="pt-row"><span class="mono">sky</span><div class="pt-track"><div class="pt-fill" id="pt-smt-fill-4"></div></div><span class="mono" id="pt-smt-score-4"></span></div>
-          <p class="mono" id="pt-smt-note"></p>
+          <div class="pt-ctl">
+            <label class="mono" for="pt-kv-batch">Batch size</label>
+            <input type="range" id="pt-kv-batch" min="1" max="32" step="1" value="1">
+            <span class="mono" id="pt-kv-batchval"></span>
+            <button type="button" class="btn" id="pt-kv-prec">Precision: fp16</button>
+          </div>
+          <div class="pt-row"><span class="mono">KV cache</span><div class="pt-track"><div class="pt-fill" id="pt-kv-fill"></div></div><span class="mono" id="pt-kv-size"></span></div>
+          <p class="mono" id="pt-kv-note"></p>
           <script>(function(){
-          var logits=[2.1,1.8,0.9,0.2,-0.5];
-          var temp=document.getElementById("pt-smt-temp"), tempval=document.getElementById("pt-smt-tempval");
-          var fills=[], scores=[];
-          for(var i=0;i<5;i++){ fills.push(document.getElementById("pt-smt-fill-"+i)); scores.push(document.getElementById("pt-smt-score-"+i)); }
-          var note=document.getElementById("pt-smt-note");
+          var layers=32, hidden=4096, bytesPerElem={fp16:2, int8:1};
+          var prec="fp16", maxGB=200;
+          var ctx=document.getElementById("pt-kv-ctx"), ctxval=document.getElementById("pt-kv-ctxval");
+          var batch=document.getElementById("pt-kv-batch"), batchval=document.getElementById("pt-kv-batchval");
+          var precBtn=document.getElementById("pt-kv-prec");
+          var fill=document.getElementById("pt-kv-fill"), size=document.getElementById("pt-kv-size"), note=document.getElementById("pt-kv-note");
           function render(){
-            var t=Number(temp.value);
-            tempval.textContent="T = "+t.toFixed(1);
-            var exps=logits.map(function(l){ return Math.exp(l/t); });
-            var sum=exps.reduce(function(a,b){ return a+b; },0);
-            var probs=exps.map(function(e){ return e/sum; });
-            for(var i=0;i<5;i++){
-              var pct=Math.round(probs[i]*100);
-              fills[i].style.width=pct+"%";
-              scores[i].textContent=pct+"%";
-            }
-            note.textContent = t<0.5 ? "Low T: the distribution nearly collapses onto the single highest-scoring token." : (t>1.6 ? "High T: the scores get squashed closer together, so sampling is closer to a coin flip across tokens." : "Mid T: a balance between always picking the top token and sampling almost uniformly.");
+            var c=Number(ctx.value), b=Number(batch.value);
+            ctxval.textContent=c.toLocaleString()+" tokens";
+            batchval.textContent="batch "+b;
+            var bytes = 2 * layers * hidden * c * b * bytesPerElem[prec];
+            var gb = bytes / (1024*1024*1024);
+            size.textContent = gb.toFixed(2)+" GB";
+            fill.style.width = Math.min(100, (gb/maxGB)*100)+"%";
+            note.textContent = gb>80 ? "That's bigger than a single high-end GPU's memory — this is why long-context, high-batch serving needs multiple GPUs or cache tricks." : "Toy numbers only: a fixed 32-layer, 4096-hidden model shape, ignoring weights and activations.";
           }
-          temp.addEventListener("input", render);
+          precBtn.addEventListener("click", function(){ prec = prec==="fp16" ? "int8" : "fp16"; precBtn.textContent="Precision: "+prec; render(); });
+          ctx.addEventListener("input", render);
+          batch.addEventListener("input", render);
           render();
           })();</script>
         </div>
