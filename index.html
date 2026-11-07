@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-07T05:41:22">2026-11-07 05:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-07T10:43:31">2026-11-07 10:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -400,9 +400,21 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Open-weight models keep closing the gap at the top end</strong><p>Moonshot shipped full downloadable weights for its trillion-parameter-class Kimi K3.1 Pro, and Mistral followed with open weights for its own ~1-trillion-parameter Large 4, while reports disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all — read "open" claims carefully. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real-world agentic benchmarks keep humbling frontier models</strong><p>SemiAnalysis's new GDPx benchmark scores models on realistic professional tasks instead of academic test sets, and reported the best model finishing only around 12% of tasks — a reminder that agent reliability lags leaderboard intelligence scores. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Prompt injection keeps turning agent sandboxes into the real attack surface</strong><p>Independent research dubbed "Comment and Control" showed GitHub issue and PR text could hijack Claude Code's security-review action, Google's Gemini CLI Action and GitHub's Copilot Agent into leaking secrets, and all three vendors quietly paid bug bounties without assigning a CVE. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>AI buildout, schools, and web-crawling are all hitting new friction</strong><p>Voters rejected most November 3 U.S. ballot measures aimed at data centers, Google's plan to cut school Search access for districts that disable its AI tools drew Senate pushback, and four major labs agreed on a shared robots.txt token letting publishers opt future pages out of AI training. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Big labs are buying up the agent-tooling layer, and funding it heavily</strong><p>Meta reportedly bought Conductor, which orchestrates parallel Claude Code, Codex, Cursor and OpenCode agents, into its Superintelligence Labs team, OpenAI is cutting Cursor's own model access over its SpaceX acquisition, and Mira Murati's Thinking Machines Lab was reported to be raising $5-6B at roughly a $40B valuation — control over agent orchestration is becoming as contested as the models themselves. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Industry</span></div>
+          <div><h3>Mira Murati's Thinking Machines Lab was reported to be raising $5-6B at roughly a $40B pre-money valuation, with Accel in talks to lead and Nvidia said to supply close to half the capital</h3>
+            <p class="why"><b>Why it matters:</b> a lab barely two years old commanding a $40B valuation on compute-heavy terms, with a GPU maker funding its own future demand, is a pattern worth recognizing before weighing any AI job offer's equity story (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://thenextweb.com/news/thinking-machines-lab-6bn-round-nvidia-accel">thenextweb.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
+          <div><h3>Meta reportedly acquired Conductor, a startup whose app lets developers run several coding agents — including Claude Code, Codex, Cursor and OpenCode — in parallel sandboxed workspaces and then review the merged results, folding its team into Meta Superintelligence Labs</h3>
+            <p class="why"><b>Why it matters:</b> a major lab betting on orchestrating many agents at once, rather than only building a smarter single model, is a concrete pattern to study if you're designing a multi-agent coding workflow (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://axios.com/2026/11/04/meta-acquires-ai-coding-startup-conductor">axios.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-05</span><span class="pill">Policy</span></div>
           <div><h3>Axios reported that voters rejected AI data-center proposals in 43 of 44 decided U.S. ballot measures on November 3, and within days OpenAI said it would drop NDAs with local officials and help cover electricity and infrastructure costs at its sites, while reportedly pushing to rebrand its facilities as "compute campuses"</h3>
@@ -471,12 +483,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill">Research</span></div>
-          <div><h3>Researchers released WebHarbor, a benchmark that dockerizes 15-plus live websites into frozen, reproducible mirrors so GUI web agents are scored against a stable target instead of constantly-changing real sites</h3>
-            <p class="why"><b>Why it matters:</b> if you're building or evaluating a browsing agent (<a href="#L6">L6</a>), this is a reminder that self-reported agent benchmark numbers are often less reproducible than they look, which matters for evals you design yourself (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://github.com/aiming-lab/WebHarbor">github.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Nov 2026</span><span class="pill">Research</span></div>
           <div><h3>SemiAnalysis launched GDPx, a new agentic benchmark that scores models on realistic professional tasks across eleven domains instead of narrow academic test sets, and reported that even the top-ranked model finished only around 12% of tasks successfully overall</h3>
             <p class="why"><b>Why it matters:</b> a frontier model's "best in the world" label dropping to roughly one task in eight under real-world evaluation is a sharper reminder than any leaderboard flip that agent reliability (<a href="#L6">L6</a>) is still the open problem, not raw intelligence scores (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://cryptobriefing.com/semianalysis-gdpx-ai-benchmark-frontier-models/">cryptobriefing.com</a></p></div>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Character.AI reportedly said it will stop letting users it believes are under 18 have open-ended chats with its AI companions starting November 25, following a string of wrongful-death lawsuits and an earlier settlement over chatbot-linked teen suicides</h3>
             <p class="why"><b>Why it matters:</b> a major companion-chatbot platform cutting off open-ended chat for minors, right after New York's new chatbot-persona law, shows age-gating and relationship disclosure becoming standard product requirements for anything built on <a href="#L5">L5</a>'s conversational patterns.</p>
             <p class="src"><a href="https://www.folio3.ai/news/character-ai-bans-teen-chatbot-access-following-suicide-lawsuits">folio3.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-29</span><span class="pill">Open models</span></div>
-          <div><h3>Mistral AI released full downloadable weights for Large 4, a reported roughly 1-trillion-parameter model, under its own Mistral Ecosystem Open-Weight license, about three weeks after first previewing it as an API-only model</h3>
-            <p class="why"><b>Why it matters:</b> a second trillion-parameter-class lab choosing to ship weights instead of keeping the model API-only, alongside Moonshot's Kimi K3.1 Pro, gives you another serious option to weigh if you're sizing a self-hosted model for a local project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/mistral-releases-open-weights-for-1-trillion-parameter-mistr-d712eb0e">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,39 +674,38 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead -->
-        <div class="pgcard pgtopic" data-topic="zk-proof-inference-overhead" id="pt-zk">
-          <span class="label">New this refresh · 2026-11-07 · connects to <a href="#L7">L7</a></span>
-          <h3>Toy: what it costs to prove an answer's source</h3>
-          <p class="lede">A zero-knowledge proof of inference lets a provider show a reply really came from specific, committed model weights without revealing those weights — Anthropic's research prototype FlashProve reported doing this at roughly 70–95x the GPU time of just running the model. Drag the base inference time and the proving-overhead multiplier to see the real wait that adds. Simplified: actual overhead depends heavily on model size and proof system, and this ignores the separate (often cheaper) verification step and one-time setup cost.</p>
+        <!-- HISTORY: top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error -->
+        <div class="pgcard pgtopic" data-topic="quantization-error" id="pt-quant">
+          <span class="label">New this refresh · 2026-11-07 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: what quantizing weights costs you</h3>
+          <p class="lede">Models are usually trained in 16- or 32-bit floats, then "quantized" to fewer bits so they fit on consumer hardware. Drag the bit-width down to see how few discrete levels are left to represent each weight, how much rounding error that leaves, and roughly how large a trillion-parameter model like this week's Kimi K3.1 Pro or Mistral Large 4 would be on disk. Simplified: real quantizers use per-block scales and mixed precision, not one uniform range for the whole model.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-zk-base">Base inference time</label>
-            <input type="range" id="pt-zk-base" min="2" max="50" step="1" value="12">
-            <span class="mono" id="pt-zk-baseval"></span>
+            <label class="mono" for="pt-quant-bits">Bits per weight</label>
+            <input type="range" id="pt-quant-bits" min="2" max="16" step="1" value="16">
+            <span class="mono" id="pt-quant-bitsval"></span>
           </div>
-          <div class="pt-ctl">
-            <label class="mono" for="pt-zk-mult">Proving overhead</label>
-            <input type="range" id="pt-zk-mult" min="10" max="120" step="5" value="80">
-            <span class="mono" id="pt-zk-multval"></span>
-          </div>
-          <div class="pt-row"><span class="mono">Time to prove</span><div class="pt-track"><div class="pt-fill" id="pt-zk-fill"></div></div><span class="mono" id="pt-zk-out"></span></div>
-          <p class="mono" id="pt-zk-note"></p>
+          <div class="pt-row"><span class="mono">Levels available</span><div class="pt-track"><div class="pt-fill" id="pt-quant-levelfill"></div></div><span class="mono" id="pt-quant-levelout"></span></div>
+          <div class="pt-row"><span class="mono">Max rounding error</span><div class="pt-track"><div class="pt-fill" id="pt-quant-errfill"></div></div><span class="mono" id="pt-quant-errout"></span></div>
+          <p class="mono" id="pt-quant-note"></p>
           <script>(function(){
-          var base=document.getElementById("pt-zk-base"), baseval=document.getElementById("pt-zk-baseval");
-          var mult=document.getElementById("pt-zk-mult"), multval=document.getElementById("pt-zk-multval");
-          var fill=document.getElementById("pt-zk-fill"), out=document.getElementById("pt-zk-out"), note=document.getElementById("pt-zk-note");
-          var maxTime=600;
+          var bits=document.getElementById("pt-quant-bits"), bitsval=document.getElementById("pt-quant-bitsval");
+          var levelfill=document.getElementById("pt-quant-levelfill"), levelout=document.getElementById("pt-quant-levelout");
+          var errfill=document.getElementById("pt-quant-errfill"), errout=document.getElementById("pt-quant-errout");
+          var note=document.getElementById("pt-quant-note");
+          var range=2, params=1e12;
           function render(){
-            var b=Number(base.value)/10, m=Number(mult.value);
-            baseval.textContent=b.toFixed(1)+"s";
-            multval.textContent=m+"x";
-            var total=b*m;
-            out.textContent = total<60 ? total.toFixed(1)+"s" : (total/60).toFixed(1)+" min";
-            fill.style.width=Math.min(100,(total/maxTime)*100)+"%";
-            note.textContent = m<40 ? "Toy numbers only: today's zero-knowledge inference proofs run closer to the higher end of this range." : "Roughly matches FlashProve's reported 70-95x proving overhead — real systems also pay a separate, usually cheaper, verification step.";
+            var b=Number(bits.value);
+            bitsval.textContent=b+"-bit";
+            var levels=Math.pow(2,b);
+            levelout.textContent=levels.toLocaleString()+" levels";
+            levelfill.style.width=Math.min(100,(b/16)*100)+"%";
+            var step=range/levels, err=step/2;
+            errout.textContent="±"+err.toFixed(6);
+            errfill.style.width=Math.min(100,(err/0.25)*100)+"%";
+            var gb=(params*b/8)/1e9;
+            note.textContent = "A 1-trillion-parameter model like Kimi K3.1 Pro or Mistral Large 4 would need roughly "+gb.toFixed(0)+" GB on disk at "+b+" bits/weight (toy estimate, no overhead counted).";
           }
-          base.addEventListener("input", render);
-          mult.addEventListener("input", render);
+          bits.addEventListener("input", render);
           render();
           })();</script>
         </div>
