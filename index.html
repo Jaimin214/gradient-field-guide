@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-07T00:42:08">2026-11-07 00:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-07T05:41:22">2026-11-07 05:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,39 +674,39 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: quantization-rounding-error, prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate -->
-        <div class="pgcard pgtopic" data-topic="speculative-decoding-acceptance-rate" id="pt-specdec">
-          <span class="label">New this refresh · 2026-11-07 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: how much does speculative decoding actually save?</h3>
-          <p class="lede">A small, fast "draft" model guesses the next few tokens and a big model checks them all in a single pass, keeping only the ones it agrees with. Drag the draft model's acceptance rate and how many tokens it guesses per round to see the expected speedup over plain one-token-at-a-time decoding. This is simplified: it assumes every guessed token has the same, independent chance of being accepted and ignores the draft model's own compute cost and real-world batching effects — but the same acceptance-rate math is part of why serving costs, like this cycle's cheaper per-token pricing from labs racing on agentic benchmarks, depend so much on how good the draft guesses are (<a href="#L4">L4</a>).</p>
+        <!-- HISTORY: prompt-injection-filter-toy, top-p-top-k-sampling, token-watermark-greenlist, agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead -->
+        <div class="pgcard pgtopic" data-topic="zk-proof-inference-overhead" id="pt-zk">
+          <span class="label">New this refresh · 2026-11-07 · connects to <a href="#L7">L7</a></span>
+          <h3>Toy: what it costs to prove an answer's source</h3>
+          <p class="lede">A zero-knowledge proof of inference lets a provider show a reply really came from specific, committed model weights without revealing those weights — Anthropic's research prototype FlashProve reported doing this at roughly 70–95x the GPU time of just running the model. Drag the base inference time and the proving-overhead multiplier to see the real wait that adds. Simplified: actual overhead depends heavily on model size and proof system, and this ignores the separate (often cheaper) verification step and one-time setup cost.</p>
           <div class="pt-ctl">
-            <label class="mono" for="pt-sd-p">Acceptance rate</label>
-            <input type="range" id="pt-sd-p" min="0" max="99" step="1" value="70">
-            <span class="mono" id="pt-sd-pval"></span>
+            <label class="mono" for="pt-zk-base">Base inference time</label>
+            <input type="range" id="pt-zk-base" min="2" max="50" step="1" value="12">
+            <span class="mono" id="pt-zk-baseval"></span>
           </div>
           <div class="pt-ctl">
-            <label class="mono" for="pt-sd-k">Tokens drafted per round</label>
-            <input type="range" id="pt-sd-k" min="1" max="8" step="1" value="4">
-            <span class="mono" id="pt-sd-kval"></span>
+            <label class="mono" for="pt-zk-mult">Proving overhead</label>
+            <input type="range" id="pt-zk-mult" min="10" max="120" step="5" value="80">
+            <span class="mono" id="pt-zk-multval"></span>
           </div>
-          <div class="pt-row"><span class="mono">Expected speedup</span><div class="pt-track"><div class="pt-fill" id="pt-sd-fill"></div></div><span class="mono" id="pt-sd-out"></span></div>
-          <p class="mono" id="pt-sd-note"></p>
+          <div class="pt-row"><span class="mono">Time to prove</span><div class="pt-track"><div class="pt-fill" id="pt-zk-fill"></div></div><span class="mono" id="pt-zk-out"></span></div>
+          <p class="mono" id="pt-zk-note"></p>
           <script>(function(){
-          var p=document.getElementById("pt-sd-p"), pval=document.getElementById("pt-sd-pval");
-          var k=document.getElementById("pt-sd-k"), kval=document.getElementById("pt-sd-kval");
-          var fill=document.getElementById("pt-sd-fill"), out=document.getElementById("pt-sd-out"), note=document.getElementById("pt-sd-note");
-          var maxSpeedup=9;
+          var base=document.getElementById("pt-zk-base"), baseval=document.getElementById("pt-zk-baseval");
+          var mult=document.getElementById("pt-zk-mult"), multval=document.getElementById("pt-zk-multval");
+          var fill=document.getElementById("pt-zk-fill"), out=document.getElementById("pt-zk-out"), note=document.getElementById("pt-zk-note");
+          var maxTime=600;
           function render(){
-            var acc=Number(p.value)/100, rounds=Number(k.value);
-            pval.textContent=Math.round(acc*100)+"%";
-            kval.textContent=rounds+" tokens";
-            var speedup = acc>=0.999 ? rounds+1 : (1-Math.pow(acc,rounds+1))/(1-acc);
-            out.textContent=speedup.toFixed(2)+"x";
-            fill.style.width=Math.min(100,(speedup/maxSpeedup)*100)+"%";
-            note.textContent = acc<0.4 ? "Low acceptance wastes most of the draft model's guesses — rounds mostly fall back to one token." : "Toy numbers only: real serving also pays for the draft model's own forward pass and batching overhead.";
+            var b=Number(base.value)/10, m=Number(mult.value);
+            baseval.textContent=b.toFixed(1)+"s";
+            multval.textContent=m+"x";
+            var total=b*m;
+            out.textContent = total<60 ? total.toFixed(1)+"s" : (total/60).toFixed(1)+" min";
+            fill.style.width=Math.min(100,(total/maxTime)*100)+"%";
+            note.textContent = m<40 ? "Toy numbers only: today's zero-knowledge inference proofs run closer to the higher end of this range." : "Roughly matches FlashProve's reported 70-95x proving overhead — real systems also pay a separate, usually cheaper, verification step.";
           }
-          p.addEventListener("input", render);
-          k.addEventListener("input", render);
+          base.addEventListener("input", render);
+          mult.addEventListener("input", render);
           render();
           })();</script>
         </div>
