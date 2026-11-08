@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-08T05:41:01">2026-11-08 05:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-08T10:42:03">2026-11-08 10:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,10 +396,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt v5.0 Intelligence Index put Gemini 4 Carbon at 59 versus Claude Opus 5.5's 58, and a second tracker, BenchLM, agreed on that ranking order on November 5 while scoring them 88.8 versus 86.4 on its own scale — a reminder to read a leaderboard's methodology before citing its number. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Two labs reported independently disproving a 27-year-old complexity-theory assumption within hours of each other</strong><p>OpenAI and Anthropic each posted a paper claiming their models found a sub-exponential 3-SAT algorithm that would refute the Exponential Time Hypothesis — Anthropic says Claude's research model did it with no human input — but outside reviewers haven't verified either proof yet, so treat this as reported, not settled. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Agents are finding real vulnerabilities everywhere, including in the agent tooling itself</strong><p>OpenAI's reported 948-exploit Linux kernel run and Anthropic's Claude catching two critical Xen hypervisor bugs sit next to a plainer reminder: Claude Code itself shipped a disclosed flaw, CVE-2026-46406, letting a local user on a shared machine hijack another user's /copy output before version 2.1.128 fixed it. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Coding-agent defaults keep leaking real secrets, not just research demos</strong><p>Security researchers reported finding 1,122 public GitHub repositories where Claude Code's "don't ask again" approval setting had saved a real API key or password straight into a committed local settings file — a concrete reminder to audit what your own agent tooling writes to disk. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Open-weight models and local runtimes keep narrowing the gap</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, and a reported Ollama release candidate on November 5 was already adding support for running Kimi's tooling locally — though reports still disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Open-weight models, local runtimes, and serving tricks keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, a reported Ollama release candidate was already adding support for running Kimi's tooling locally, and on the hosted side Anthropic's new Message Threads beta is reported to cut time-to-first-token roughly 35% on long agent conversations by resending only the latest turn. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Mega-rounds keep climbing while AI's labor-market effect looks more like a hiring freeze than mass layoffs</strong><p>Anthropic's IPO is reportedly eyeing a $1.5-2 trillion valuation and Thinking Machines Lab a $40B round, even as a Challenger tally updated November 4 found AI cited in roughly 120,000 of 573,000 US job cuts announced through September — about a fifth — while planned hiring over the same period was still up 3% on last year. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.itpro.com/cloud/cloud-security/363146/xen-lifts-lid-on-virtual-machine-security-bug">itpro.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-03</span><span class="pill">Policy</span></div>
-          <div><h3>Google, OpenAI, Microsoft and Anthropic said on October 30 they will each honor a shared robots.txt signal — a token telling crawlers not to use a site's content for future model training — though the proposal remains an informal draft rather than an adopted web standard</h3>
-            <p class="why"><b>Why it matters:</b> a single opt-out token covering four major labs' crawlers previews the kind of data-provenance and consent controls you'll need to respect when building anything that scrapes or ingests web content at <a href="#L5">L5</a>.</p>
-            <p class="src"><a href="https://www.itechpost.com/articles/237707/20261103/google-openai-anthropic-unite-introduce-new-ai-scraping-controls.htm">itechpost.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-02</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic opened a Message Threads public beta for the Claude API, letting an agent send only its newest message plus the previous response's ID instead of replaying the full conversation each turn, which Anthropic reported cuts median time-to-first-token by roughly 35% on 500K-1M-token requests</h3>
+            <p class="why"><b>Why it matters:</b> it trims request size and latency for long agent sessions, not token billing — a concrete serving-side tradeoff worth understanding before you build long-running agent loops on <a href="#L4">L4</a> or <a href="#L6">L6</a>'s patterns.</p>
+            <p class="src"><a href="https://aiweekly.co/alerts/anthropic-opens-message-threads-beta-35-faster-first-token">aiweekly.co</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-03</span><span class="pill">Policy</span></div>
-          <div><h3>xAI said its Grok API will begin applying an invisible watermark to generated text by default starting November 7, to comply with the EU AI Act, with a per-model opt-out and a response header that flags watermarked output</h3>
-            <p class="why"><b>Why it matters:</b> a major model provider building content-provenance marking into its API as an on-by-default setting previews the labeling and disclosure rules apps built on <a href="#L5">L5</a>'s generation patterns will increasingly need to handle.</p>
-            <p class="src"><a href="https://docs.x.ai/developers/advanced-api-usage/watermarking.md">docs.x.ai</a></p></div>
+          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Research</span></div>
+          <div><h3>OpenAI and Anthropic each reportedly posted a paper, hours apart in late October, claiming an AI research model found a sub-exponential algorithm for 3-SAT that would refute the decades-old Exponential Time Hypothesis — Anthropic says Claude produced its version independently, with no human-written proof steps</h3>
+            <p class="why"><b>Why it matters:</b> this is reported, not peer-reviewed — some researchers are already skeptical the algorithm beats brute force at practical sizes — but it's a vivid case study in reading a bold AI-for-math claim skeptically rather than taking a press post at face value (<a href="#L0">L0</a>, <a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://hackernoon.com/openai-and-anthropic-claim-ai-has-disproved-a-27-year-old-computer-science-hypothesis">hackernoon.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,32 +674,41 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter" id="pt-agentloop">
-          <span class="label">New this refresh · 2026-11-08 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: agent loop step budget</h3>
-          <p class="lede">Coding and security agents — like this week's Conductor-style multi-agent rigs, or the pipeline that chased 948 Linux kernel bugs — rarely succeed in one shot: they loop, calling a tool, checking the result, and trying again. Set a step budget and a task difficulty to see how the odds of finishing change. Simplified: real agents don't have one fixed per-step success rate, and most loops get cut off by a budget or timeout, not by converging to certainty.</p>
+        <!-- HISTORY: tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity -->
+        <div class="pgcard pgtopic" data-topic="embedding-cosine-similarity" id="pt-cosine">
+          <span class="label">New this refresh · 2026-11-08 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: cosine similarity of embeddings</h3>
+          <p class="lede">RAG and semantic search (<a href="#L5">L5</a>) rank results by how close two embedding vectors point, measured with cosine similarity. Drag each angle to represent a word's embedding, or click a preset pair. Simplified: real embeddings live in hundreds of dimensions, not one 2D angle, and this circle only illustrates the idea — the numbers aren't from an actual trained model.</p>
           <div class="pt-ctl">
-            <label class="mono">Step budget <input type="range" id="pt-agentloop-steps" min="1" max="20" value="6" aria-label="Step budget"> <span id="pt-agentloop-stepsval">6</span></label>
-            <label class="mono">Task difficulty <select id="pt-agentloop-diff"><option value="0.55">Easy</option><option value="0.3" selected>Medium</option><option value="0.12">Hard</option></select></label>
+            <label class="mono">Word A angle <input type="range" id="pt-cosine-a" min="0" max="360" value="30" aria-label="Word A angle"> <span id="pt-cosine-aval">30°</span></label>
+            <label class="mono">Word B angle <input type="range" id="pt-cosine-b" min="0" max="360" value="60" aria-label="Word B angle"> <span id="pt-cosine-bval">60°</span></label>
           </div>
-          <div class="pt-row"><span>Steps used</span><div class="pt-track"><div class="pt-fill" id="pt-agentloop-fill"></div></div><span id="pt-agentloop-count">0 / 20</span></div>
-          <p class="mono" id="pt-agentloop-note"></p>
+          <div class="pt-ctl">
+            <button type="button" class="btn" id="pt-cosine-p1">cat / dog</button>
+            <button type="button" class="btn" id="pt-cosine-p2">cat / airplane</button>
+            <button type="button" class="btn" id="pt-cosine-p3">good / bad</button>
+          </div>
+          <div class="pt-row"><span>Cosine similarity</span><div class="pt-track"><div class="pt-fill" id="pt-cosine-fill"></div></div><span id="pt-cosine-count">0.00</span></div>
+          <p class="mono" id="pt-cosine-note"></p>
           <script>(function(){
-          var steps=document.getElementById("pt-agentloop-steps"), stepsval=document.getElementById("pt-agentloop-stepsval");
-          var diff=document.getElementById("pt-agentloop-diff");
-          var fill=document.getElementById("pt-agentloop-fill"), count=document.getElementById("pt-agentloop-count"), note=document.getElementById("pt-agentloop-note");
+          var a=document.getElementById("pt-cosine-a"), aval=document.getElementById("pt-cosine-aval");
+          var b=document.getElementById("pt-cosine-b"), bval=document.getElementById("pt-cosine-bval");
+          var fill=document.getElementById("pt-cosine-fill"), count=document.getElementById("pt-cosine-count"), note=document.getElementById("pt-cosine-note");
           function render(){
-            var n=parseInt(steps.value,10);
-            stepsval.textContent=n;
-            var p=parseFloat(diff.value);
-            var success=1-Math.pow(1-p,n);
-            fill.style.width=Math.min(100,(n/20)*100)+"%";
-            count.textContent=n+" / 20";
-            note.textContent="At "+n+" step"+(n===1?"":"s")+" with a "+Math.round(p*100)+"% toy per-step success chance: roughly "+Math.round(success*100)+"% odds the agent finishes — a stand-in for a real agent's adaptive, non-constant step-to-step success rate.";
+            var av=parseInt(a.value,10), bv=parseInt(b.value,10);
+            aval.textContent=av+"°"; bval.textContent=bv+"°";
+            var cos=Math.cos((av-bv)*Math.PI/180);
+            fill.style.width=(((cos+1)/2)*100)+"%";
+            count.textContent=cos.toFixed(2);
+            var label = cos>0.9?"near-duplicate meaning":cos>0.5?"related":cos>0?"loosely related":cos>-0.5?"mostly unrelated":"opposite meaning";
+            note.textContent="cos="+cos.toFixed(2)+" — toy verdict: "+label+". A real embedding model would place these in hundreds of dimensions, not one angle.";
           }
-          steps.addEventListener("input", render);
-          diff.addEventListener("change", render);
+          function preset(av,bv){ a.value=av; b.value=bv; render(); }
+          document.getElementById("pt-cosine-p1").addEventListener("click", function(){ preset(20,35); });
+          document.getElementById("pt-cosine-p2").addEventListener("click", function(){ preset(20,200); });
+          document.getElementById("pt-cosine-p3").addEventListener("click", function(){ preset(10,190); });
+          a.addEventListener("input", render);
+          b.addEventListener("input", render);
           render();
           })();</script>
         </div>
