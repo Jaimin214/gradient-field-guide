@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-08T10:42:03">2026-11-08 10:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-08T15:41:46">2026-11-08 15:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state new">Watch</span><strong>Two labs reported independently disproving a 27-year-old complexity-theory assumption within hours of each other</strong><p>OpenAI and Anthropic each posted a paper claiming their models found a sub-exponential 3-SAT algorithm that would refute the Exponential Time Hypothesis — Anthropic says Claude's research model did it with no human input — but outside reviewers haven't verified either proof yet, so treat this as reported, not settled. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Dedicated cybersecurity models are becoming their own fast-iterating, tightly gated product line</strong><p>OpenAI shipped GPT-6 Cyber on November 5 — its fourth cyber-specific model this year — rating it Critical risk under its own Preparedness Framework and gating it behind an application process, alongside Anthropic's and Google's rival cyber models. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Agents are finding real vulnerabilities everywhere, including in the agent tooling itself</strong><p>OpenAI's reported 948-exploit Linux kernel run and Anthropic's Claude catching two critical Xen hypervisor bugs sit next to a plainer reminder: Claude Code itself shipped a disclosed flaw, CVE-2026-46406, letting a local user on a shared machine hijack another user's /copy output before version 2.1.128 fixed it. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Coding-agent defaults keep leaking real secrets, not just research demos</strong><p>Security researchers reported finding 1,122 public GitHub repositories where Claude Code's "don't ask again" approval setting had saved a real API key or password straight into a committed local settings file — a concrete reminder to audit what your own agent tooling writes to disk. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Open-weight models, local runtimes, and serving tricks keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, a reported Ollama release candidate was already adding support for running Kimi's tooling locally, and on the hosted side Anthropic's new Message Threads beta is reported to cut time-to-first-token roughly 35% on long agent conversations by resending only the latest turn. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Mega-rounds keep climbing while AI's labor-market effect looks more like a hiring freeze than mass layoffs</strong><p>Anthropic's IPO is reportedly eyeing a $1.5-2 trillion valuation and Thinking Machines Lab a $40B round, even as a Challenger tally updated November 4 found AI cited in roughly 120,000 of 573,000 US job cuts announced through September — about a fifth — while planned hiring over the same period was still up 3% on last year. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Open-weight models, local runtimes, and serving tricks keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, and a reported Ollama release candidate was already adding support for running Kimi's tooling locally. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Labs are starting to build cryptographic tooling to verify which model actually served a response</strong><p>Anthropic open-sourced FlashProve, a zkSNARK-style prototype letting a provider prove a specific, pre-committed model produced a given output without revealing its weights — tested only on an open Llama checkpoint at roughly 70-95x normal inference cost, it's an early research prototype, not a deployed check. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-11-05</span><span class="pill sec">Security</span></div>
+          <div><h3>OpenAI released GPT-6 Cyber, a version of its GPT-6 Astra model built for authorized vulnerability research, rating it Critical risk — the top tier in its own Preparedness Framework, up from High for its predecessor — and gating access behind an application process for vetted security customers</h3>
+            <p class="why"><b>Why it matters:</b> a dedicated, tightly gated cybersecurity model line — OpenAI's fourth this year, alongside rival cyber models from Anthropic and Google — is now its own fast-iterating product category, worth understanding before you build or rely on any agent with offensive-security capability (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://venturebeat.com/technology/openai-launches-gpt-6-cyber-with-stronger-exploit-research-and-higher-api-price-than-anthropic-and-google">venturebeat.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-07</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic's IPO timeline reportedly firmed up, with its roadshow said to be able to start as early as November 10 and a Nasdaq debut under the ticker ANT targeted for the week of November 16, with the Wall Street Journal reportedly citing a possible raise above $100B at a $1.5-2 trillion valuation</h3>
@@ -482,16 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.itpro.com/cloud/cloud-security/363146/xen-lifts-lid-on-virtual-machine-security-bug">itpro.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-02</span><span class="pill">Models</span></div>
-          <div><h3>Anthropic opened a Message Threads public beta for the Claude API, letting an agent send only its newest message plus the previous response's ID instead of replaying the full conversation each turn, which Anthropic reported cuts median time-to-first-token by roughly 35% on 500K-1M-token requests</h3>
-            <p class="why"><b>Why it matters:</b> it trims request size and latency for long agent sessions, not token billing — a concrete serving-side tradeoff worth understanding before you build long-running agent loops on <a href="#L4">L4</a> or <a href="#L6">L6</a>'s patterns.</p>
-            <p class="src"><a href="https://aiweekly.co/alerts/anthropic-opens-message-threads-beta-35-faster-first-token">aiweekly.co</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Oct 2026</span><span class="pill">Research</span></div>
-          <div><h3>OpenAI and Anthropic each reportedly posted a paper, hours apart in late October, claiming an AI research model found a sub-exponential algorithm for 3-SAT that would refute the decades-old Exponential Time Hypothesis — Anthropic says Claude produced its version independently, with no human-written proof steps</h3>
-            <p class="why"><b>Why it matters:</b> this is reported, not peer-reviewed — some researchers are already skeptical the algorithm beats brute force at practical sizes — but it's a vivid case study in reading a bold AI-for-math claim skeptically rather than taking a press post at face value (<a href="#L0">L0</a>, <a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://hackernoon.com/openai-and-anthropic-claim-ai-has-disproved-a-27-year-old-computer-science-hypothesis">hackernoon.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-02</span><span class="pill">Research</span></div>
+          <div><h3>Anthropic open-sourced FlashProve, a zkSNARK-style prototype letting a provider generate a cryptographic proof that a specific, pre-committed model produced a given response, without revealing that model's weights, and reported testing it on an open Llama 4 Maverick checkpoint at roughly 70-95x normal inference cost</h3>
+            <p class="why"><b>Why it matters:</b> it's a research prototype, not a deployed check, and only works if a lab voluntarily publishes a model fingerprint first — but it's an early, concrete attempt at tooling to verify which model actually served a request, worth knowing about before trusting any vendor's claim (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/anthropic-open-sources-flashprove-a-zksnark-prototype-for-pr-70e97488">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,41 +674,49 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity -->
-        <div class="pgcard pgtopic" data-topic="embedding-cosine-similarity" id="pt-cosine">
-          <span class="label">New this refresh · 2026-11-08 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: cosine similarity of embeddings</h3>
-          <p class="lede">RAG and semantic search (<a href="#L5">L5</a>) rank results by how close two embedding vectors point, measured with cosine similarity. Drag each angle to represent a word's embedding, or click a preset pair. Simplified: real embeddings live in hundreds of dimensions, not one 2D angle, and this circle only illustrates the idea — the numbers aren't from an actual trained model.</p>
+        <!-- HISTORY: perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator -->
+        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator" id="pt-ctx">
+          <span class="label">New this refresh · 2026-11-08 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: context-window budget calculator</h3>
+          <p class="lede">Serving an LLM means splitting one fixed context window — like Kimi K3.1 Pro's reported 1M-token window (<a href="#L4">L4</a>) — between the system prompt, conversation history, retrieved documents, and room left for the model's own output. Pick a window size and drag the sliders to see what's left. Simplified: real tokenizers don't map 1 word to 1 token, and this ignores the extra safety headroom production systems reserve.</p>
           <div class="pt-ctl">
-            <label class="mono">Word A angle <input type="range" id="pt-cosine-a" min="0" max="360" value="30" aria-label="Word A angle"> <span id="pt-cosine-aval">30°</span></label>
-            <label class="mono">Word B angle <input type="range" id="pt-cosine-b" min="0" max="360" value="60" aria-label="Word B angle"> <span id="pt-cosine-bval">60°</span></label>
+            <button type="button" class="btn" id="pt-ctx-8k">8K window</button>
+            <button type="button" class="btn" id="pt-ctx-32k">32K window</button>
+            <button type="button" class="btn primary" id="pt-ctx-128k">128K window</button>
+            <button type="button" class="btn" id="pt-ctx-1m">1M window</button>
           </div>
           <div class="pt-ctl">
-            <button type="button" class="btn" id="pt-cosine-p1">cat / dog</button>
-            <button type="button" class="btn" id="pt-cosine-p2">cat / airplane</button>
-            <button type="button" class="btn" id="pt-cosine-p3">good / bad</button>
+            <label class="mono">System prompt <input type="range" id="pt-ctx-sys" min="0" max="100" value="2" aria-label="System prompt, in thousands of tokens"> <span id="pt-ctx-sysval">2K</span></label>
+            <label class="mono">History <input type="range" id="pt-ctx-hist" min="0" max="100" value="10" aria-label="Conversation history, in thousands of tokens"> <span id="pt-ctx-histval">10K</span></label>
+            <label class="mono">Retrieved docs <input type="range" id="pt-ctx-rag" min="0" max="100" value="20" aria-label="Retrieved context, in thousands of tokens"> <span id="pt-ctx-ragval">20K</span></label>
+            <label class="mono">Output reserve <input type="range" id="pt-ctx-out" min="0" max="100" value="4" aria-label="Reserved output, in thousands of tokens"> <span id="pt-ctx-outval">4K</span></label>
           </div>
-          <div class="pt-row"><span>Cosine similarity</span><div class="pt-track"><div class="pt-fill" id="pt-cosine-fill"></div></div><span id="pt-cosine-count">0.00</span></div>
-          <p class="mono" id="pt-cosine-note"></p>
+          <div class="pt-row"><span>Budget used</span><div class="pt-track"><div class="pt-fill" id="pt-ctx-fill"></div></div><span id="pt-ctx-count">0%</span></div>
+          <p class="mono" id="pt-ctx-note"></p>
           <script>(function(){
-          var a=document.getElementById("pt-cosine-a"), aval=document.getElementById("pt-cosine-aval");
-          var b=document.getElementById("pt-cosine-b"), bval=document.getElementById("pt-cosine-bval");
-          var fill=document.getElementById("pt-cosine-fill"), count=document.getElementById("pt-cosine-count"), note=document.getElementById("pt-cosine-note");
+          var total=128;
+          var sys=document.getElementById("pt-ctx-sys"), hist=document.getElementById("pt-ctx-hist"), rag=document.getElementById("pt-ctx-rag"), out=document.getElementById("pt-ctx-out");
+          var sysval=document.getElementById("pt-ctx-sysval"), histval=document.getElementById("pt-ctx-histval"), ragval=document.getElementById("pt-ctx-ragval"), outval=document.getElementById("pt-ctx-outval");
+          var fill=document.getElementById("pt-ctx-fill"), count=document.getElementById("pt-ctx-count"), note=document.getElementById("pt-ctx-note");
+          function setTotal(k){ total=k; render(); }
+          document.getElementById("pt-ctx-8k").addEventListener("click", function(){ setTotal(8); });
+          document.getElementById("pt-ctx-32k").addEventListener("click", function(){ setTotal(32); });
+          document.getElementById("pt-ctx-128k").addEventListener("click", function(){ setTotal(128); });
+          document.getElementById("pt-ctx-1m").addEventListener("click", function(){ setTotal(1000); });
           function render(){
-            var av=parseInt(a.value,10), bv=parseInt(b.value,10);
-            aval.textContent=av+"°"; bval.textContent=bv+"°";
-            var cos=Math.cos((av-bv)*Math.PI/180);
-            fill.style.width=(((cos+1)/2)*100)+"%";
-            count.textContent=cos.toFixed(2);
-            var label = cos>0.9?"near-duplicate meaning":cos>0.5?"related":cos>0?"loosely related":cos>-0.5?"mostly unrelated":"opposite meaning";
-            note.textContent="cos="+cos.toFixed(2)+" — toy verdict: "+label+". A real embedding model would place these in hundreds of dimensions, not one angle.";
+            var s=parseInt(sys.value,10), h=parseInt(hist.value,10), r=parseInt(rag.value,10), o=parseInt(out.value,10);
+            sysval.textContent=s+"K"; histval.textContent=h+"K"; ragval.textContent=r+"K"; outval.textContent=o+"K";
+            var used=s+h+r+o;
+            var pct=Math.min(100,(used/total)*100);
+            fill.style.width=pct+"%";
+            fill.style.background = used>total ? "var(--signal)" : "var(--accent)";
+            count.textContent=Math.round((used/total)*100)+"%";
+            note.textContent = used>total ? ("Over budget by "+(used-total)+"K tokens of a "+total+"K window — something has to be trimmed or truncated.") : (total-used)+"K tokens still free out of a "+total+"K window. Toy units are thousands of tokens, not real tokenizer counts.";
           }
-          function preset(av,bv){ a.value=av; b.value=bv; render(); }
-          document.getElementById("pt-cosine-p1").addEventListener("click", function(){ preset(20,35); });
-          document.getElementById("pt-cosine-p2").addEventListener("click", function(){ preset(20,200); });
-          document.getElementById("pt-cosine-p3").addEventListener("click", function(){ preset(10,190); });
-          a.addEventListener("input", render);
-          b.addEventListener("input", render);
+          sys.addEventListener("input", render);
+          hist.addEventListener("input", render);
+          rag.addEventListener("input", render);
+          out.addEventListener("input", render);
           render();
           })();</script>
         </div>
