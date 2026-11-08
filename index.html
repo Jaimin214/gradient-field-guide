@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-08T00:40:40">2026-11-08 00:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-08T05:41:01">2026-11-08 05:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt v5.0 Intelligence Index put Gemini 4 Carbon at 59 versus Claude Opus 5.5's 58, and a second tracker, BenchLM, agreed on that ranking order on November 5 while scoring them 88.8 versus 86.4 on its own scale — a reminder to read a leaderboard's methodology before citing its number. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agents are starting to find and weaponize real production vulnerabilities, not just toy CTFs</strong><p>OpenAI reported an autonomous pipeline that discovered and wrote working exploits for 948 distinct Linux kernel bugs in a single run, and days earlier the Xen Project credited Anthropic's Claude with finding two critical hypervisor VM-escape flaws — agentic security research moving from demo to production codebases. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agents are finding real vulnerabilities everywhere, including in the agent tooling itself</strong><p>OpenAI's reported 948-exploit Linux kernel run and Anthropic's Claude catching two critical Xen hypervisor bugs sit next to a plainer reminder: Claude Code itself shipped a disclosed flaw, CVE-2026-46406, letting a local user on a shared machine hijack another user's /copy output before version 2.1.128 fixed it. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Coding-agent defaults keep leaking real secrets, not just research demos</strong><p>Security researchers reported finding 1,122 public GitHub repositories where Claude Code's "don't ask again" approval setting had saved a real API key or password straight into a committed local settings file — a concrete reminder to audit what your own agent tooling writes to disk. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Open-weight models and local runtimes keep narrowing the gap</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, and a reported Ollama release candidate on November 5 was already adding support for running Kimi's tooling locally — though reports still disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Big labs are buying up the agent-orchestration layer</strong><p>Meta reportedly bought Conductor, a startup whose app runs parallel Claude Code, Codex, Cursor and OpenCode agents in sandboxed workspaces, folding its team into Meta Superintelligence Labs — a sign orchestrating many agents at once is becoming its own product category, not just a wrapper around one model. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Mega-rounds keep climbing while AI's labor-market effect looks more like a hiring freeze than mass layoffs</strong><p>Anthropic's IPO is reportedly eyeing a $1.5-2 trillion valuation and Thinking Machines Lab a $40B round, even as a Challenger tally updated November 4 found AI cited in roughly 120,000 of 573,000 US job cuts announced through September — about a fifth — while planned hiring over the same period was still up 3% on last year. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -414,6 +414,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Mira Murati's Thinking Machines Lab was reported to be raising $5-6B at roughly a $40B pre-money valuation, with Accel in talks to lead and Nvidia said to supply close to half the capital</h3>
             <p class="why"><b>Why it matters:</b> a lab barely two years old commanding a $40B valuation on compute-heavy terms, with a GPU maker funding its own future demand, is a pattern worth recognizing before weighing any AI job offer's equity story (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://thenextweb.com/news/thinking-machines-lab-6bn-round-nvidia-accel">thenextweb.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">Nov 2026</span><span class="pill sec">Security</span></div>
+          <div><h3>A disclosed Claude Code flaw, CVE-2026-46406, is reported to have let a local user on a shared machine read or overwrite another user's /copy output through a hardcoded, world-readable temp file path, before version 2.1.128 fixed it with randomized, per-user paths and symlink protection</h3>
+            <p class="why"><b>Why it matters:</b> coding agents ship ordinary CVEs like any other software, so keeping the tool itself updated — and not assuming a shared machine's temp directory is private — matters as much as auditing what the agent does with your code (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://access.redhat.com/security/cve/cve-2026-46406">access.redhat.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-05</span><span class="pill sec">Security</span></div>
@@ -444,6 +450,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Leaderboard aggregator BenchLM's November 5 update reportedly ranked Google's Gemini 4 Carbon first among the 300-plus models it tracks, at a composite score of 88.8, just ahead of Anthropic's Claude Opus 5.5 at 86.4, on a different scale than Artificial Analysis's rival index</h3>
             <p class="why"><b>Why it matters:</b> two independent trackers landing on the same ranking order but very different numbers is a good reminder to check a leaderboard's methodology before quoting its score (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://benchlm.ai/">benchlm.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Industry</span></div>
+          <div><h3>A Challenger-based jobs tracker updated November 4 reported AI was cited in roughly 120,000 of the about 573,000 US job cuts announced from January through September 2026 — about a fifth — while employers' planned hiring over the same period was still up 3% from 2025</h3>
+            <p class="why"><b>Why it matters:</b> several economists quoted alongside this data argue AI's labor effect so far looks more like weaker hiring, especially for entry-level roles, than mass layoffs — worth weighing against any single scary headline number when planning a job search (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://bigideasdb.com/ai-layoffs-2026-statistics">bigideasdb.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>xAI said its Grok API will begin applying an invisible watermark to generated text by default starting November 7, to comply with the EU AI Act, with a per-model opt-out and a response header that flags watermarked output</h3>
             <p class="why"><b>Why it matters:</b> a major model provider building content-provenance marking into its API as an on-by-default setting previews the labeling and disclosure rules apps built on <a href="#L5">L5</a>'s generation patterns will increasingly need to handle.</p>
             <p class="src"><a href="https://docs.x.ai/developers/advanced-api-usage/watermarking.md">docs.x.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-03</span><span class="pill">Policy</span></div>
-          <div><h3>Google said it will turn off its AI tools by default for K-12 students in early 2027 unless school administrators opt in, but reversed course from its August default so that districts choosing to disable AI entirely will also lose access to Google Search</h3>
-            <p class="why"><b>Why it matters:</b> NYC's mayor, a former FTC chair and two U.S. senators publicly accused Google of using search-engine dominance to pressure schools into adopting AI, an early look at the product and policy tradeoffs you'll navigate building anything with <a href="#L5">L5</a>'s app patterns for a younger or captive audience.</p>
-            <p class="src"><a href="https://www.cbsnews.com/news/google-search-access-schools-ai-tools/">cbsnews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-02</span><span class="pill">Coding</span></div>
-          <div><h3>GitHub shipped VS Code 1.145 with Copilot updates including remote agent sessions that behave more like local ones, preview support for apps and canvases inside chat, cron-based scheduling for recurring automations, and a quieter default chat view</h3>
-            <p class="why"><b>Why it matters:</b> cron-scheduled, remote-feeling agent sessions inside a mainstream editor is a concrete look at where the "agent loop" pattern from <a href="#L6">L6</a> is heading for everyday coding work.</p>
-            <p class="src"><a href="https://code.visualstudio.com/updates">code.visualstudio.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,31 +674,32 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage -->
-        <div class="pgcard pgtopic" data-topic="exploit-search-coverage" id="pt-xsrch">
+        <!-- HISTORY: context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter -->
+        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter" id="pt-agentloop">
           <span class="label">New this refresh · 2026-11-08 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: exploit-search coverage vs. compute</h3>
-          <p class="lede">Automated bug-hunting pipelines — like this week's 948-exploit Linux kernel run — don't find bugs at a constant rate: early spend turns up the easy ones fast, then coverage flattens and the cost per bug climbs. Drag the compute slider to watch a toy coverage curve bend. Simplified: real pipelines depend heavily on codebase size, harness quality and deduping, not one dial.</p>
+          <h3>Toy: agent loop step budget</h3>
+          <p class="lede">Coding and security agents — like this week's Conductor-style multi-agent rigs, or the pipeline that chased 948 Linux kernel bugs — rarely succeed in one shot: they loop, calling a tool, checking the result, and trying again. Set a step budget and a task difficulty to see how the odds of finishing change. Simplified: real agents don't have one fixed per-step success rate, and most loops get cut off by a budget or timeout, not by converging to certainty.</p>
           <div class="pt-ctl">
-            <label class="mono">Compute budget <input type="range" id="pt-xsrch-budget" min="0" max="100" value="20" aria-label="Compute budget percent"> <span id="pt-xsrch-budgetval">20</span>%</label>
+            <label class="mono">Step budget <input type="range" id="pt-agentloop-steps" min="1" max="20" value="6" aria-label="Step budget"> <span id="pt-agentloop-stepsval">6</span></label>
+            <label class="mono">Task difficulty <select id="pt-agentloop-diff"><option value="0.55">Easy</option><option value="0.3" selected>Medium</option><option value="0.12">Hard</option></select></label>
           </div>
-          <div class="pt-row"><span>Bugs found</span><div class="pt-track"><div class="pt-fill" id="pt-xsrch-fill"></div></div><span id="pt-xsrch-count">0 / 1000</span></div>
-          <p class="mono" id="pt-xsrch-note"></p>
+          <div class="pt-row"><span>Steps used</span><div class="pt-track"><div class="pt-fill" id="pt-agentloop-fill"></div></div><span id="pt-agentloop-count">0 / 20</span></div>
+          <p class="mono" id="pt-agentloop-note"></p>
           <script>(function(){
-          var TOTAL=1000;
-          var b=document.getElementById("pt-xsrch-budget"), bv=document.getElementById("pt-xsrch-budgetval");
-          var fill=document.getElementById("pt-xsrch-fill"), count=document.getElementById("pt-xsrch-count"), note=document.getElementById("pt-xsrch-note");
+          var steps=document.getElementById("pt-agentloop-steps"), stepsval=document.getElementById("pt-agentloop-stepsval");
+          var diff=document.getElementById("pt-agentloop-diff");
+          var fill=document.getElementById("pt-agentloop-fill"), count=document.getElementById("pt-agentloop-count"), note=document.getElementById("pt-agentloop-note");
           function render(){
-            var pct=parseInt(b.value,10);
-            bv.textContent=pct;
-            var frac=1-Math.exp(-pct/28);
-            var found=Math.round(frac*TOTAL);
-            fill.style.width=(frac*100)+"%";
-            count.textContent=found+" / "+TOTAL;
-            var costPerBug=found>0?Math.round((pct/100)*1200000/found):0;
-            note.textContent="At "+pct+"% of a toy budget: ~"+Math.round(frac*100)+"% coverage, roughly $"+costPerBug+" per bug found (toy numbers, loosely scaled off this week's $1.2M / 948-exploit run) — the curve bends because easy bugs get found first.";
+            var n=parseInt(steps.value,10);
+            stepsval.textContent=n;
+            var p=parseFloat(diff.value);
+            var success=1-Math.pow(1-p,n);
+            fill.style.width=Math.min(100,(n/20)*100)+"%";
+            count.textContent=n+" / 20";
+            note.textContent="At "+n+" step"+(n===1?"":"s")+" with a "+Math.round(p*100)+"% toy per-step success chance: roughly "+Math.round(success*100)+"% odds the agent finishes — a stand-in for a real agent's adaptive, non-constant step-to-step success rate.";
           }
-          b.addEventListener("input", render);
+          steps.addEventListener("input", render);
+          diff.addEventListener("change", render);
           render();
           })();</script>
         </div>
