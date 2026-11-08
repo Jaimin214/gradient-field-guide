@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-07T19:40:38">2026-11-07 19:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-08T00:40:40">2026-11-08 00:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>The "best model" title keeps changing hands within days</strong><p>Artificial Analysis's rebuilt v5.0 Intelligence Index put Gemini 4 Carbon at 59 versus Claude Opus 5.5's 58, and a second tracker, BenchLM, agreed on that ranking order on November 5 while scoring them 88.8 versus 86.4 on its own scale — a reminder to read a leaderboard's methodology before citing its number. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models and local runtimes keep narrowing the gap</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, and a reported Ollama release candidate on November 5 was already adding support for running Kimi's tooling locally — though reports still disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agents are starting to find and weaponize real production vulnerabilities, not just toy CTFs</strong><p>OpenAI reported an autonomous pipeline that discovered and wrote working exploits for 948 distinct Linux kernel bugs in a single run, and days earlier the Xen Project credited Anthropic's Claude with finding two critical hypervisor VM-escape flaws — agentic security research moving from demo to production codebases. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Coding-agent defaults keep leaking real secrets, not just research demos</strong><p>Security researchers reported finding 1,122 public GitHub repositories where Claude Code's "don't ask again" approval setting had saved a real API key or password straight into a committed local settings file — a concrete reminder to audit what your own agent tooling writes to disk. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Open-weight models and local runtimes keep narrowing the gap</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, and a reported Ollama release candidate on November 5 was already adding support for running Kimi's tooling locally — though reports still disagree on whether Alibaba's Qwen3.8 and Zhipu's GLM-5.3 actually ship open weights at all. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Big labs are buying up the agent-orchestration layer</strong><p>Meta reportedly bought Conductor, a startup whose app runs parallel Claude Code, Codex, Cursor and OpenCode agents in sandboxed workspaces, folding its team into Meta Superintelligence Labs — a sign orchestrating many agents at once is becoming its own product category, not just a wrapper around one model. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Frontier labs keep competing hard while coordinating on shared rules</strong><p>Google, OpenAI, Microsoft and Anthropic said on October 30 they will each honor one shared robots.txt signal opting content out of future AI training, even as the same companies keep racing on funding, infrastructure deals and leaderboard position reported elsewhere in this feed. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -458,6 +458,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://letsdatascience.com/news/moonshot-releases-kimi-k31-pro-api-open-weights-due-nov-4-786e160c">letsdatascience.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill sec">Security</span></div>
+          <div><h3>OpenAI reported running an autonomous research pipeline that discovered, validated and wrote working exploits for 948 distinct Linux kernel privilege-escalation bugs in a single automated pass, spending about $1.2M in API credits versus an estimated $18.9-66.3M bounty-equivalent value</h3>
+            <p class="why"><b>Why it matters:</b> a pipeline this cheap finding and weaponizing real kernel bugs at scale is a concrete preview of how both offensive and defensive security research are being automated, worth studying before you build or rely on an agent with broad system access (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.csoonline.com/article/4245265/openai-built-an-ai-pipeline-to-find-exploit-and-patch-linux-flaws.html">csoonline.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-03</span><span class="pill sec">Security</span></div>
+          <div><h3>The Xen Project published advisory XSA-523 crediting Anthropic's Claude with finding two critical grant-copy bugs that could let a malicious guest virtual machine read and write another domain's memory, including the host's management domain, on Xen 4.6 and later</h3>
+            <p class="why"><b>Why it matters:</b> a model being named in a hypervisor vendor's own security advisory, not just a lab's marketing post, is a concrete data point for anyone weighing whether to let an agent audit infrastructure code (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.itpro.com/cloud/cloud-security/363146/xen-lifts-lid-on-virtual-machine-security-bug">itpro.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-03</span><span class="pill">Policy</span></div>
           <div><h3>Google, OpenAI, Microsoft and Anthropic said on October 30 they will each honor a shared robots.txt signal — a token telling crawlers not to use a site's content for future model training — though the proposal remains an informal draft rather than an adopted web standard</h3>
             <p class="why"><b>Why it matters:</b> a single opt-out token covering four major labs' crawlers previews the kind of data-provenance and consent controls you'll need to respect when building anything that scrapes or ingests web content at <a href="#L5">L5</a>.</p>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>GitHub shipped VS Code 1.145 with Copilot updates including remote agent sessions that behave more like local ones, preview support for apps and canvases inside chat, cron-based scheduling for recurring automations, and a quieter default chat view</h3>
             <p class="why"><b>Why it matters:</b> cron-scheduled, remote-feeling agent sessions inside a mainstream editor is a concrete look at where the "agent loop" pattern from <a href="#L6">L6</a> is heading for everyday coding work.</p>
             <p class="src"><a href="https://code.visualstudio.com/updates">code.visualstudio.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-02</span><span class="pill">Industry</span></div>
-          <div><h3>OpenAI created a new Senior Counselor for National Security Modernization role and named Dan Driscoll to it, tasked with working alongside U.S. and allied government agencies on AI-related national-security and cyber-resilience matters</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab building a dedicated government-liaison role is a sign AI companies are embedding further into defense and policy work, context worth having if a job offer touches regulated or dual-use AI (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://openai.com/index/dan-driscoll-joins-openai/">openai.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-02</span><span class="pill">Research</span></div>
-          <div><h3>Anthropic open-sourced FlashProve, a research prototype that uses zero-knowledge proofs to let a provider show a reply really came from specific, committed model weights without revealing those weights, reporting proving costs around 70-95x the GPU time of just running the model</h3>
-            <p class="why"><b>Why it matters:</b> cryptographically verifiable inference is an early answer to "which model actually answered this," a trust problem that matters once you're comparing leaderboard claims (<a href="#L7">L7</a>) or building evals that assume you know what you're grading (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://anthropic.com/research/provable-inference">anthropic.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,45 +674,31 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: agent-loop-step-budget, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling -->
-        <div class="pgcard pgtopic" data-topic="top-k-top-p-sampling" id="pt-samp">
-          <span class="label">New this refresh · 2026-11-07 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: top-k / top-p (nucleus) sampling</h3>
-          <p class="lede">A model doesn't always pick its single most-likely next token — it samples from a narrowed pool. Top-k keeps only the k highest-ranked candidates; top-p (nucleus) keeps the smallest set whose probabilities add up to p. A token survives here only if both conditions let it through. Simplified: these ten "tokens" have fixed, made-up probabilities — a real model computes them from a softmax over tens of thousands of vocabulary entries at every step.</p>
+        <!-- HISTORY: cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, perplexity-loss-calculator, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage -->
+        <div class="pgcard pgtopic" data-topic="exploit-search-coverage" id="pt-xsrch">
+          <span class="label">New this refresh · 2026-11-08 · connects to <a href="#L6">L6</a></span>
+          <h3>Toy: exploit-search coverage vs. compute</h3>
+          <p class="lede">Automated bug-hunting pipelines — like this week's 948-exploit Linux kernel run — don't find bugs at a constant rate: early spend turns up the easy ones fast, then coverage flattens and the cost per bug climbs. Drag the compute slider to watch a toy coverage curve bend. Simplified: real pipelines depend heavily on codebase size, harness quality and deduping, not one dial.</p>
           <div class="pt-ctl">
-            <label class="mono">Top-k <input type="range" id="pt-samp-k" min="1" max="10" value="10" aria-label="Top-k"> <span id="pt-samp-kval">10</span></label>
-            <label class="mono">Top-p <input type="range" id="pt-samp-p" min="10" max="100" step="5" value="100" aria-label="Top-p"> <span id="pt-samp-pval">1.00</span></label>
+            <label class="mono">Compute budget <input type="range" id="pt-xsrch-budget" min="0" max="100" value="20" aria-label="Compute budget percent"> <span id="pt-xsrch-budgetval">20</span>%</label>
           </div>
-          <div id="pt-samp-list"></div>
-          <p class="mono" id="pt-samp-note"></p>
+          <div class="pt-row"><span>Bugs found</span><div class="pt-track"><div class="pt-fill" id="pt-xsrch-fill"></div></div><span id="pt-xsrch-count">0 / 1000</span></div>
+          <p class="mono" id="pt-xsrch-note"></p>
           <script>(function(){
-          var TOKENS=[["the",.28],["a",.19],["model",.14],["new",.10],["this",.08],["very",.06],["banana",.05],["xyzzy",.04],["42",.03],["qwerty",.03]];
-          var kEl=document.getElementById("pt-samp-k"), pEl=document.getElementById("pt-samp-p");
-          var kVal=document.getElementById("pt-samp-kval"), pVal=document.getElementById("pt-samp-pval");
-          var list=document.getElementById("pt-samp-list"), note=document.getElementById("pt-samp-note");
+          var TOTAL=1000;
+          var b=document.getElementById("pt-xsrch-budget"), bv=document.getElementById("pt-xsrch-budgetval");
+          var fill=document.getElementById("pt-xsrch-fill"), count=document.getElementById("pt-xsrch-count"), note=document.getElementById("pt-xsrch-note");
           function render(){
-            var k=parseInt(kEl.value,10), p=parseInt(pEl.value,10)/100;
-            kVal.textContent=k; pVal.textContent=p.toFixed(2);
-            list.textContent="";
-            var cum=0, survive=0;
-            for(var i=0;i<TOKENS.length;i++){
-              var tok=TOKENS[i][0], prob=TOKENS[i][1];
-              var before=cum; cum+=prob;
-              var kept=(i<k)&&(before<p);
-              if(kept) survive++;
-              var row=document.createElement("div"); row.className="pt-row";
-              var label=document.createElement("span"); label.textContent=tok+" "+Math.round(prob*100)+"%";
-              var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(prob*100)+"%"; fill.style.opacity=kept?"1":".25";
-              track.appendChild(fill);
-              var tag=document.createElement("span"); tag.textContent=kept?"kept":"cut";
-              row.appendChild(label); row.appendChild(track); row.appendChild(tag);
-              list.appendChild(row);
-            }
-            note.textContent=survive+" of "+TOKENS.length+" toy tokens survive both filters — raise k or p to widen the pool the next token gets sampled from.";
+            var pct=parseInt(b.value,10);
+            bv.textContent=pct;
+            var frac=1-Math.exp(-pct/28);
+            var found=Math.round(frac*TOTAL);
+            fill.style.width=(frac*100)+"%";
+            count.textContent=found+" / "+TOTAL;
+            var costPerBug=found>0?Math.round((pct/100)*1200000/found):0;
+            note.textContent="At "+pct+"% of a toy budget: ~"+Math.round(frac*100)+"% coverage, roughly $"+costPerBug+" per bug found (toy numbers, loosely scaled off this week's $1.2M / 948-exploit run) — the curve bends because easy bugs get found first.";
           }
-          kEl.addEventListener("input", render);
-          pEl.addEventListener("input", render);
+          b.addEventListener("input", render);
           render();
           })();</script>
         </div>
