@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-09T05:39:43">2026-11-09 05:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-09T10:42:12">2026-11-09 10:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Dedicated cybersecurity models are becoming their own fast-iterating, tightly gated product line</strong><p>OpenAI shipped GPT-6 Cyber on November 5 — its fourth cyber-specific model this year — rating it Critical risk under its own Preparedness Framework and gating it behind an application process, alongside Anthropic's and Google's rival cyber models. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agents are finding real vulnerabilities everywhere, including in the agent tooling itself</strong><p>OpenAI's reported 948-exploit Linux kernel run and Anthropic's Claude catching two critical Xen hypervisor bugs sit next to a plainer reminder: Claude Code itself shipped a disclosed flaw, CVE-2026-46406, letting a local user on a shared machine hijack another user's /copy output before version 2.1.128 fixed it. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Coding-agent defaults keep leaking real secrets, not just research demos</strong><p>Security researchers reported finding 1,122 public GitHub repositories where Claude Code's "don't ask again" approval setting had saved a real API key or password straight into a committed local settings file — a concrete reminder to audit what your own agent tooling writes to disk. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Open-weight models, local runtimes, and serving tricks keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, and Cognition's new SWE-2 Flash coding-agent model is itself built on another lab's open-weight base, Thinking Machines' Inkling-Small — even though Cognition kept its own fine-tune closed. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>AI company valuations are swinging by hundreds of billions within weeks, as funding rounds and IPO pricing collide with a cooling AI-stock market</strong><p>OpenAI reportedly closed an $11B tranche at a $1.25T valuation — scaled back from a $30B, $1.4T target — while Anthropic's IPO backers reportedly marked its own valuation down from roughly $2T toward $1.1-1.3T over the same stretch. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Independent evaluators say frontier AI capability growth is accelerating, not slowing</strong><p>METR reported on November 5 that Anthropic's measured capability growth since October 2025 has run at roughly 1.9x its earlier pace, with wide uncertainty and a planned compute-split audit that Anthropic cancelled before METR could finish it. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Always-on, persistent agents are turning into a paid subscription category</strong><p>Perplexity's $200/month Teammates, launched this week, gives a named agent a standing role — running a campaign or research project across many sessions — a different shape than a single-prompt chatbot, and one Claude and OpenAI are both racing to match. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Security research and offensive AI tooling keep advancing together</strong><p>OpenAI's gated, Critical-risk GPT-6 Cyber model, its reported 948-exploit Linux kernel run, Anthropic's Claude catching two critical Xen hypervisor bugs, and a disclosed Claude Code CVE together show how fast both defensive and offensive AI security tooling are moving. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Coding-agent defaults keep leaking real secrets, not just research demos</strong><p>Security researchers reported finding 1,122 public GitHub repositories where Claude Code's "don't ask again" approval setting had saved a real API key or password straight into a committed local settings file. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Open-weight models keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter Kimi K3.1 Pro and Mistral's 1T-parameter Large 4 are now both downloadable in full, and Cognition's new SWE-2 Flash coding-agent model is itself built on another lab's open-weight base. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -416,16 +416,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://gvwire.com/2026/11/06/openai-secures-11-billion-funding-at-1-25-trillion-valuation-bloomberg-news-reports/">gvwire.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Agents</span></div>
+          <div><h3>Perplexity launched Teammates, letting its $200/month Max subscribers spin up named AI agents that hold a standing, ongoing role — such as running a marketing campaign or a research project — across many sessions instead of answering one prompt at a time</h3>
+            <p class="why"><b>Why it matters:</b> a persistent agent with its own browser, desktop and memory is a different product shape than a chat window, worth studying as a pattern before you design your own long-running agent for <a href="#L6">L6</a> or <a href="#projects">Project 4</a>.</p>
+            <p class="src"><a href="https://www.techrepublic.com/article/news-perplexity-teammates-ai-agents-pricing-features/">techrepublic.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-05</span><span class="pill">Research</span></div>
+          <div><h3>Independent evaluator METR reported that Anthropic's measured AI capability growth since October 2025 has run at roughly 1.9x its pace from March 2024 to October 2025, while flagging wide uncertainty and noting Anthropic cancelled a planned audit of how it splits compute between capability and safety work before METR could finish it</h3>
+            <p class="why"><b>Why it matters:</b> an outside group estimating the pace of frontier progress, with the gaps it says it couldn't verify spelled out, is worth weighing before you plan a research agenda or career around assumptions about how fast the field is slowing down (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.itv.com/news/2026-11-05/anthropic-is-speeding-up-its-ai-development-outside-researchers-say">itv.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-05</span><span class="pill sec">Security</span></div>
           <div><h3>OpenAI released GPT-6 Cyber, a version of its GPT-6 Astra model built for authorized vulnerability research, rating it Critical risk — the top tier in its own Preparedness Framework, up from High for its predecessor — and gating access behind an application process for vetted security customers</h3>
             <p class="why"><b>Why it matters:</b> a dedicated, tightly gated cybersecurity model line — OpenAI's fourth this year, alongside rival cyber models from Anthropic and Google — is now its own fast-iterating product category, worth understanding before you build or rely on any agent with offensive-security capability (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://venturebeat.com/technology/openai-launches-gpt-6-cyber-with-stronger-exploit-research-and-higher-api-price-than-anthropic-and-google">venturebeat.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Industry</span></div>
-          <div><h3>Mira Murati's Thinking Machines Lab was reported to be raising $5-6B at roughly a $40B pre-money valuation, with Accel in talks to lead and Nvidia said to supply close to half the capital</h3>
-            <p class="why"><b>Why it matters:</b> a lab barely two years old commanding a $40B valuation on compute-heavy terms, with a GPU maker funding its own future demand, is a pattern worth recognizing before weighing any AI job offer's equity story (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://thenextweb.com/news/thinking-machines-lab-6bn-round-nvidia-accel">thenextweb.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill sec">Security</span></div>
@@ -456,12 +462,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic launched a Personal Finance feature in Claude for paid US beta users, letting Claude read (not move or invest) linked bank and card data through a Plaid connection, after the capability had circulated as an unannounced "Claude Money" leak in app testing since mid-October</h3>
             <p class="why"><b>Why it matters:</b> wiring an assistant into live, sensitive financial data with a deliberately read-only scope is a concrete case study in connector and permission design for anything you build on <a href="#L5">L5</a>'s app patterns or <a href="#L6">L6</a>'s agents.</p>
             <p class="src"><a href="https://9to5mac.com/2026/11/05/anthropic-upgrades-claude-with-new-personal-finance-feature">9to5mac.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Industry</span></div>
-          <div><h3>A Challenger-based jobs tracker updated November 4 reported AI was cited in roughly 120,000 of the about 573,000 US job cuts announced from January through September 2026 — about a fifth — while employers' planned hiring over the same period was still up 3% from 2025</h3>
-            <p class="why"><b>Why it matters:</b> several economists quoted alongside this data argue AI's labor effect so far looks more like weaker hiring, especially for entry-level roles, than mass layoffs — worth weighing against any single scary headline number when planning a job search (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://bigideasdb.com/ai-layoffs-2026-statistics">bigideasdb.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
@@ -674,35 +674,33 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve -->
-        <div class="pgcard pgtopic" data-topic="scaling-law-curve" id="pt-scaling">
+        <!-- HISTORY: learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing -->
+        <div class="pgcard pgtopic" data-topic="mixture-of-experts-routing" id="pt-moe">
           <span class="label">New this refresh · 2026-11-09 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: a scaling law for compute vs. loss</h3>
-          <p class="lede">Why labs keep training ever-bigger models, like this week's trillion-parameter Kimi K3.1 Pro or the open-weight base under Cognition's new SWE-2 Flash: training loss tends to fall as a power law in compute. Drag the sliders to see a simplified curve shift. Simplified: real scaling laws are fit from thousands of measured training runs per architecture — this toy uses one made-up formula, so the loss numbers are illustrative, not a real benchmark.</p>
-          <div class="pt-row"><label for="pt-scaling-compute">Compute</label><input type="range" id="pt-scaling-compute" min="18" max="26" step="0.1" value="22"><span class="mono" id="pt-scaling-compute-val">10^22</span></div>
-          <div class="pt-row"><label for="pt-scaling-alpha">Exponent α</label><input type="range" id="pt-scaling-alpha" min="0.05" max="0.5" step="0.01" value="0.17"><span class="mono" id="pt-scaling-alpha-val">0.17</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-scaling-fill"></div></div>
-          <p class="mono" id="pt-scaling-readout"></p>
+          <h3>Toy: mixture-of-experts routing</h3>
+          <p class="lede">Models like this week's Mistral Large 4 and Moonshot's Kimi K3.1 Pro are trillion-parameter-class, but only a sliver of those parameters run per token: a router picks a handful of "expert" sub-networks out of many. Drag the sliders to see how many experts activate and what share of the model that touches. Simplified: a real router learns which experts to pick per token; this toy only computes the arithmetic share, it doesn't simulate actual routing decisions or specialization.</p>
+          <div class="pt-row"><label for="pt-moe-n">Total experts</label><input type="range" id="pt-moe-n" min="2" max="128" step="1" value="128"><span class="mono" id="pt-moe-n-val">128</span></div>
+          <div class="pt-row"><label for="pt-moe-k">Active per token</label><input type="range" id="pt-moe-k" min="1" max="16" step="1" value="4"><span class="mono" id="pt-moe-k-val">4</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-moe-fill"></div></div>
+          <p class="mono" id="pt-moe-readout"></p>
           <script>(function(){
-          var computeEl=document.getElementById("pt-scaling-compute");
-          var alphaEl=document.getElementById("pt-scaling-alpha");
-          var computeVal=document.getElementById("pt-scaling-compute-val");
-          var alphaVal=document.getElementById("pt-scaling-alpha-val");
-          var fill=document.getElementById("pt-scaling-fill");
-          var readout=document.getElementById("pt-scaling-readout");
-          var IRRED=1.0, SCALE=5, REF=22, LOMAX=25, LOMIN=1;
+          var nEl=document.getElementById("pt-moe-n");
+          var kEl=document.getElementById("pt-moe-k");
+          var nVal=document.getElementById("pt-moe-n-val");
+          var kVal=document.getElementById("pt-moe-k-val");
+          var fill=document.getElementById("pt-moe-fill");
+          var readout=document.getElementById("pt-moe-readout");
           function render(){
-            var c=parseFloat(computeEl.value), a=parseFloat(alphaEl.value);
-            var ratio=Math.pow(10, c-REF);
-            var loss=IRRED+SCALE*Math.pow(ratio, -a);
-            computeVal.textContent="10^"+c.toFixed(1);
-            alphaVal.textContent=a.toFixed(2);
-            var pct=Math.max(0,Math.min(100, 100-((loss-LOMIN)/(LOMAX-LOMIN))*100));
+            var n=parseInt(nEl.value,10), k=parseInt(kEl.value,10);
+            if(k>n){k=n;}
+            nVal.textContent=n;
+            kVal.textContent=k;
+            var pct=(k/n)*100;
             fill.style.width=pct+"%";
-            readout.textContent="At 10^"+c.toFixed(1)+" FLOPs, α="+a.toFixed(2)+" → predicted loss ≈ "+loss.toFixed(2)+" (toy units, not a real benchmark)";
+            readout.textContent=k+" of "+n+" experts active per token ≈ "+pct.toFixed(1)+"% of the expert parameters touched (toy arithmetic, not a real router's choices)";
           }
-          computeEl.addEventListener("input", render);
-          alphaEl.addEventListener("input", render);
+          nEl.addEventListener("input", render);
+          kEl.addEventListener("input", render);
           render();
           })();</script>
         </div>
