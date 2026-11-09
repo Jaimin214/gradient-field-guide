@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-09T00:39:41">2026-11-09 00:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-09T05:39:43">2026-11-09 05:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -399,7 +399,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Dedicated cybersecurity models are becoming their own fast-iterating, tightly gated product line</strong><p>OpenAI shipped GPT-6 Cyber on November 5 — its fourth cyber-specific model this year — rating it Critical risk under its own Preparedness Framework and gating it behind an application process, alongside Anthropic's and Google's rival cyber models. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Agents are finding real vulnerabilities everywhere, including in the agent tooling itself</strong><p>OpenAI's reported 948-exploit Linux kernel run and Anthropic's Claude catching two critical Xen hypervisor bugs sit next to a plainer reminder: Claude Code itself shipped a disclosed flaw, CVE-2026-46406, letting a local user on a shared machine hijack another user's /copy output before version 2.1.128 fixed it. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Coding-agent defaults keep leaking real secrets, not just research demos</strong><p>Security researchers reported finding 1,122 public GitHub repositories where Claude Code's "don't ask again" approval setting had saved a real API key or password straight into a committed local settings file — a concrete reminder to audit what your own agent tooling writes to disk. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Open-weight models, local runtimes, and serving tricks keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, and a reported Ollama release candidate was already adding support for running Kimi's tooling locally. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Open-weight models, local runtimes, and serving tricks keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter-class Kimi K3.1 Pro and Mistral's Large 4 are now downloadable in full, and Cognition's new SWE-2 Flash coding-agent model is itself built on another lab's open-weight base, Thinking Machines' Inkling-Small — even though Cognition kept its own fine-tune closed. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>AI company valuations are swinging by hundreds of billions within weeks, as funding rounds and IPO pricing collide with a cooling AI-stock market</strong><p>OpenAI reportedly closed an $11B tranche at a $1.25T valuation — scaled back from a $30B, $1.4T target — while Anthropic's IPO backers reportedly marked its own valuation down from roughly $2T toward $1.1-1.3T over the same stretch. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
@@ -470,6 +470,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://axios.com/2026/11/04/meta-acquires-ai-coding-startup-conductor">axios.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
+          <div><h3>Cognition reportedly released SWE-2 Flash, a coding-agent model for its Devin tool built on Thinking Machines Lab's open-weight Inkling-Small base model, claiming about 3x the speed of its flagship SWE-2 at roughly a fifth of the price, while keeping its own fine-tune closed despite the open base</h3>
+            <p class="why"><b>Why it matters:</b> a commercial coding agent built on someone else's open-weight base while the product itself stays closed is a licensing and build-vs-buy pattern worth noticing before you choose what to build Project 2's coding agent on (<a href="#L4">L4</a>, <a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/blog/cognition-swe-2-flash-built-on-open-weights-wont-share-own">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
           <div><h3>Moonshot AI reportedly began publishing the full open weights for Kimi K3.1 Pro, a trillion-parameter-class model with a reported 1M-token context window, after running it only through its API and apps since an October 23 launch, with cyber-related training data said to be stripped from this release</h3>
             <p class="why"><b>Why it matters:</b> an open-weight model this large, deliberately shipped with offensive cyber capability pared back, is worth weighing against Mistral's Large 4 if you're choosing what to self-host for a local-model project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>The Xen Project published advisory XSA-523 crediting Anthropic's Claude with finding two critical grant-copy bugs that could let a malicious guest virtual machine read and write another domain's memory, including the host's management domain, on Xen 4.6 and later</h3>
             <p class="why"><b>Why it matters:</b> a model being named in a hypervisor vendor's own security advisory, not just a lab's marketing post, is a concrete data point for anyone weighing whether to let an agent audit infrastructure code (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.itpro.com/cloud/cloud-security/363146/xen-lifts-lid-on-virtual-machine-security-bug">itpro.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Research</span></div>
-          <div><h3>OpenAI and Anthropic each reported that an AI system had produced a proof refuting the Exponential Time Hypothesis, a roughly 27-year-old assumption in computational complexity theory, posting rival papers within hours of one another and formal Lean versions that, by Anthropic's own account, no person had yet fully checked</h3>
-            <p class="why"><b>Why it matters:</b> two labs racing to publish an unverified, AI-generated proof of a foundational theoretical-CS result is a sharp reminder to treat "AI did research" headlines as provisional until independent experts confirm them (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.aljazeera.com/news/2026/10/27/ai-makes-discoveries-in-mathematics-computer-science-physics-openai-says">aljazeera.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,50 +674,36 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner -->
-        <div class="pgcard pgtopic" data-topic="secret-key-pattern-scanner" id="pt-secretscan">
-          <span class="label">New this refresh · 2026-11-09 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: would a regex catch that leaked key?</h3>
-          <p class="lede">This week's feed mentions "don't ask again" settings quietly saving real API keys into 1,122 public repos. Here's the crude first line of defense: a handful of regexes that flag text shaped like a secret. Edit the box or click Scan to see what a naive scanner catches and what it has to guess at. Simplified: real secret scanners add entropy checks, provider-specific formats and live verification against the issuing service — this toy only pattern-matches, so it will miss disguised secrets and flag harmless look-alikes.</p>
-          <textarea id="pt-secretscan-input" rows="4" style="width:100%;box-sizing:border-box;font-family:var(--mono);font-size:.82rem;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">export OPENAI_KEY=sk-ab12cd34ef56gh78ij90kl12mn34op56
-github_token = ghp_1A2b3C4d5E6f7G8h9I0jKlMnOpQrStUvWx
-echo "hello world, nothing secret in this line"
-PASSWORD=Summer2026!</textarea>
-          <div class="pt-ctl">
-            <button type="button" class="btn primary" id="pt-secretscan-run">Scan for secrets</button>
-            <span class="mono" id="pt-secretscan-count"></span>
-          </div>
-          <div id="pt-secretscan-results" class="mono" style="display:flex;flex-direction:column;gap:4px;font-size:.82rem"></div>
+        <!-- HISTORY: precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve -->
+        <div class="pgcard pgtopic" data-topic="scaling-law-curve" id="pt-scaling">
+          <span class="label">New this refresh · 2026-11-09 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: a scaling law for compute vs. loss</h3>
+          <p class="lede">Why labs keep training ever-bigger models, like this week's trillion-parameter Kimi K3.1 Pro or the open-weight base under Cognition's new SWE-2 Flash: training loss tends to fall as a power law in compute. Drag the sliders to see a simplified curve shift. Simplified: real scaling laws are fit from thousands of measured training runs per architecture — this toy uses one made-up formula, so the loss numbers are illustrative, not a real benchmark.</p>
+          <div class="pt-row"><label for="pt-scaling-compute">Compute</label><input type="range" id="pt-scaling-compute" min="18" max="26" step="0.1" value="22"><span class="mono" id="pt-scaling-compute-val">10^22</span></div>
+          <div class="pt-row"><label for="pt-scaling-alpha">Exponent α</label><input type="range" id="pt-scaling-alpha" min="0.05" max="0.5" step="0.01" value="0.17"><span class="mono" id="pt-scaling-alpha-val">0.17</span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-scaling-fill"></div></div>
+          <p class="mono" id="pt-scaling-readout"></p>
           <script>(function(){
-          var PATTERNS=[
-            {name:"OpenAI-style key", re:/sk-[A-Za-z0-9]{20,}/g},
-            {name:"GitHub token", re:/gh[pousr]_[A-Za-z0-9]{20,}/g},
-            {name:"Hardcoded password", re:/password\s*=\s*\S+/gi},
-            {name:"Generic 32+ char secret", re:/\b[A-Za-z0-9]{32,}\b/g}
-          ];
-          var ta=document.getElementById("pt-secretscan-input");
-          var btn=document.getElementById("pt-secretscan-run");
-          var countEl=document.getElementById("pt-secretscan-count");
-          var results=document.getElementById("pt-secretscan-results");
-          function scan(){
-            while(results.firstChild){ results.removeChild(results.firstChild); }
-            var text=ta.value, total=0, seen={};
-            PATTERNS.forEach(function(p){
-              var m; p.re.lastIndex=0;
-              while((m=p.re.exec(text))){
-                var key=p.name+":"+m[0];
-                if(seen[key]) continue;
-                seen[key]=true; total++;
-                var snippet=m[0].length>26 ? m[0].slice(0,26)+"…" : m[0];
-                var row=document.createElement("div");
-                row.textContent=p.name+" → "+snippet;
-                results.appendChild(row);
-              }
-            });
-            countEl.textContent=total+(total===1?" possible secret":" possible secrets")+" found (regex only — not proof of a real leak)";
+          var computeEl=document.getElementById("pt-scaling-compute");
+          var alphaEl=document.getElementById("pt-scaling-alpha");
+          var computeVal=document.getElementById("pt-scaling-compute-val");
+          var alphaVal=document.getElementById("pt-scaling-alpha-val");
+          var fill=document.getElementById("pt-scaling-fill");
+          var readout=document.getElementById("pt-scaling-readout");
+          var IRRED=1.0, SCALE=5, REF=22, LOMAX=25, LOMIN=1;
+          function render(){
+            var c=parseFloat(computeEl.value), a=parseFloat(alphaEl.value);
+            var ratio=Math.pow(10, c-REF);
+            var loss=IRRED+SCALE*Math.pow(ratio, -a);
+            computeVal.textContent="10^"+c.toFixed(1);
+            alphaVal.textContent=a.toFixed(2);
+            var pct=Math.max(0,Math.min(100, 100-((loss-LOMIN)/(LOMAX-LOMIN))*100));
+            fill.style.width=pct+"%";
+            readout.textContent="At 10^"+c.toFixed(1)+" FLOPs, α="+a.toFixed(2)+" → predicted loss ≈ "+loss.toFixed(2)+" (toy units, not a real benchmark)";
           }
-          btn.addEventListener("click", scan);
-          scan();
+          computeEl.addEventListener("input", render);
+          alphaEl.addEventListener("input", render);
+          render();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
