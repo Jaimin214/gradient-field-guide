@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-08T19:43:05">2026-11-08 19:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-09T00:39:41">2026-11-09 00:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -458,12 +458,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://9to5mac.com/2026/11/05/anthropic-upgrades-claude-with-new-personal-finance-feature">9to5mac.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-05</span><span class="pill">Models</span></div>
-          <div><h3>Leaderboard aggregator BenchLM's November 5 update reportedly ranked Google's Gemini 4 Carbon first among the 300-plus models it tracks, at a composite score of 88.8, just ahead of Anthropic's Claude Opus 5.5 at 86.4, on a different scale than Artificial Analysis's rival index</h3>
-            <p class="why"><b>Why it matters:</b> two independent trackers landing on the same ranking order but very different numbers is a good reminder to check a leaderboard's methodology before quoting its score (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://benchlm.ai/">benchlm.ai</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Industry</span></div>
           <div><h3>A Challenger-based jobs tracker updated November 4 reported AI was cited in roughly 120,000 of the about 573,000 US job cuts announced from January through September 2026 — about a fifth — while employers' planned hiring over the same period was still up 3% from 2025</h3>
             <p class="why"><b>Why it matters:</b> several economists quoted alongside this data argue AI's labor effect so far looks more like weaker hiring, especially for entry-level roles, than mass layoffs — worth weighing against any single scary headline number when planning a job search (<a href="#L7">L7</a>).</p>
@@ -492,6 +486,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>The Xen Project published advisory XSA-523 crediting Anthropic's Claude with finding two critical grant-copy bugs that could let a malicious guest virtual machine read and write another domain's memory, including the host's management domain, on Xen 4.6 and later</h3>
             <p class="why"><b>Why it matters:</b> a model being named in a hypervisor vendor's own security advisory, not just a lab's marketing post, is a concrete data point for anyone weighing whether to let an agent audit infrastructure code (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.itpro.com/cloud/cloud-security/363146/xen-lifts-lid-on-virtual-machine-security-bug">itpro.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-26</span><span class="pill">Research</span></div>
+          <div><h3>OpenAI and Anthropic each reported that an AI system had produced a proof refuting the Exponential Time Hypothesis, a roughly 27-year-old assumption in computational complexity theory, posting rival papers within hours of one another and formal Lean versions that, by Anthropic's own account, no person had yet fully checked</h3>
+            <p class="why"><b>Why it matters:</b> two labs racing to publish an unverified, AI-generated proof of a foundational theoretical-CS result is a sharp reminder to treat "AI did research" headlines as provisional until independent experts confirm them (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.aljazeera.com/news/2026/10/27/ai-makes-discoveries-in-mathematics-computer-science-physics-openai-says">aljazeera.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,58 +674,50 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges -->
-        <div class="pgcard pgtopic" data-topic="tokenization-bpe-merges" id="pt-bpe">
-          <span class="label">New this refresh · 2026-11-08 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: byte-pair encoding (BPE) merges</h3>
-          <p class="lede">Before a model like a local Ollama checkpoint ever sees a word, a tokenizer built with byte-pair encoding has already split it into sub-word pieces — the same tokens that fill up the context budget in the calculator above. Drag the slider to run more merge steps over a tiny 7-word toy corpus, each step fusing whichever adjacent pair occurs most often. Simplified: a real tokenizer trains on billions of words with byte-level fallback and special tokens, not 7 hand-picked words.</p>
+        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold, learning-rate-schedules, chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner -->
+        <div class="pgcard pgtopic" data-topic="secret-key-pattern-scanner" id="pt-secretscan">
+          <span class="label">New this refresh · 2026-11-09 · connects to <a href="#L6">L6</a></span>
+          <h3>Toy: would a regex catch that leaked key?</h3>
+          <p class="lede">This week's feed mentions "don't ask again" settings quietly saving real API keys into 1,122 public repos. Here's the crude first line of defense: a handful of regexes that flag text shaped like a secret. Edit the box or click Scan to see what a naive scanner catches and what it has to guess at. Simplified: real secret scanners add entropy checks, provider-specific formats and live verification against the issuing service — this toy only pattern-matches, so it will miss disguised secrets and flag harmless look-alikes.</p>
+          <textarea id="pt-secretscan-input" rows="4" style="width:100%;box-sizing:border-box;font-family:var(--mono);font-size:.82rem;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">export OPENAI_KEY=sk-ab12cd34ef56gh78ij90kl12mn34op56
+github_token = ghp_1A2b3C4d5E6f7G8h9I0jKlMnOpQrStUvWx
+echo "hello world, nothing secret in this line"
+PASSWORD=Summer2026!</textarea>
           <div class="pt-ctl">
-            <label class="mono">Merge steps <input type="range" id="pt-bpe-slider" min="0" max="8" value="0" aria-label="Number of BPE merge steps"> <span id="pt-bpe-steplabel">0</span></label>
+            <button type="button" class="btn primary" id="pt-secretscan-run">Scan for secrets</button>
+            <span class="mono" id="pt-secretscan-count"></span>
           </div>
-          <p class="mono">Merges so far: <span id="pt-bpe-log">(none yet)</span></p>
-          <p class="mono">"lowest" tokenizes as: <span id="pt-bpe-tokens"></span></p>
+          <div id="pt-secretscan-results" class="mono" style="display:flex;flex-direction:column;gap:4px;font-size:.82rem"></div>
           <script>(function(){
-          var corpus=[["l","o","w"],["l","o","w","e","r"],["l","o","w","e","s","t"],["n","e","w","e","r"],["n","e","w","e","s","t"],["w","i","d","e","r"],["w","i","d","e","s","t"]];
-          var weight=[5,2,6,6,3,3,9];
-          var sample=2;
-          var slider=document.getElementById("pt-bpe-slider"), stepLabel=document.getElementById("pt-bpe-steplabel"), log=document.getElementById("pt-bpe-log"), tokensOut=document.getElementById("pt-bpe-tokens");
-          function runMerges(n){
-            var words=corpus.map(function(w){ return w.slice(); });
-            var merges=[];
-            for(var step=0; step<n; step++){
-              var counts={};
-              for(var i=0;i<words.length;i++){
-                var w=words[i];
-                for(var j=0;j<w.length-1;j++){
-                  var pair=w[j]+" "+w[j+1];
-                  counts[pair]=(counts[pair]||0)+weight[i];
-                }
+          var PATTERNS=[
+            {name:"OpenAI-style key", re:/sk-[A-Za-z0-9]{20,}/g},
+            {name:"GitHub token", re:/gh[pousr]_[A-Za-z0-9]{20,}/g},
+            {name:"Hardcoded password", re:/password\s*=\s*\S+/gi},
+            {name:"Generic 32+ char secret", re:/\b[A-Za-z0-9]{32,}\b/g}
+          ];
+          var ta=document.getElementById("pt-secretscan-input");
+          var btn=document.getElementById("pt-secretscan-run");
+          var countEl=document.getElementById("pt-secretscan-count");
+          var results=document.getElementById("pt-secretscan-results");
+          function scan(){
+            while(results.firstChild){ results.removeChild(results.firstChild); }
+            var text=ta.value, total=0, seen={};
+            PATTERNS.forEach(function(p){
+              var m; p.re.lastIndex=0;
+              while((m=p.re.exec(text))){
+                var key=p.name+":"+m[0];
+                if(seen[key]) continue;
+                seen[key]=true; total++;
+                var snippet=m[0].length>26 ? m[0].slice(0,26)+"…" : m[0];
+                var row=document.createElement("div");
+                row.textContent=p.name+" → "+snippet;
+                results.appendChild(row);
               }
-              var best=null, bestCount=0;
-              for(var p in counts){ if(counts[p]>bestCount){ bestCount=counts[p]; best=p; } }
-              if(!best) break;
-              var parts=best.split(" ");
-              merges.push(parts[0]+parts[1]);
-              for(var i=0;i<words.length;i++){
-                var w=words[i], nw=[];
-                for(var j=0;j<w.length;j++){
-                  if(j<w.length-1 && w[j]===parts[0] && w[j+1]===parts[1]){ nw.push(parts[0]+parts[1]); j++; }
-                  else nw.push(w[j]);
-                }
-                words[i]=nw;
-              }
-            }
-            return {words:words, merges:merges};
+            });
+            countEl.textContent=total+(total===1?" possible secret":" possible secrets")+" found (regex only — not proof of a real leak)";
           }
-          function render(){
-            var n=parseInt(slider.value,10);
-            stepLabel.textContent=n;
-            var result=runMerges(n);
-            log.textContent=result.merges.length ? result.merges.join(" → ") : "(none yet)";
-            tokensOut.textContent=result.words[sample].join(" | ");
-          }
-          slider.addEventListener("input", render);
-          render();
+          btn.addEventListener("click", scan);
+          scan();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
