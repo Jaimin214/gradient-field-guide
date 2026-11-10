@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-09T15:38:52">2026-11-09 15:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-09T19:42:19">2026-11-09 19:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Independent evaluators say frontier AI capability growth is accelerating, not slowing</strong><p>METR reported on November 5 that Anthropic's measured capability growth since October 2025 has run at roughly 1.9x its earlier pace, with wide uncertainty and a planned compute-split audit that Anthropic cancelled before METR could finish it; Anthropic's November 9 release of two upgraded flagship models reinforces the trend. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Always-on, persistent agents are turning into a paid subscription category</strong><p>Perplexity's $200/month Teammates, launched this week, gives a named agent a standing role — running a campaign or research project across many sessions — a different shape than a single-prompt chatbot, and one Claude and OpenAI are both racing to match. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Security research and offensive AI tooling keep advancing together</strong><p>OpenAI's gated, Critical-risk GPT-6 Cyber model, its reported 948-exploit Linux kernel run, and a disclosed Claude Code CVE together show how fast both defensive and offensive AI security tooling are moving, with much of the discovery pipeline itself now AI-driven. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Coding-agent defaults keep leaking real secrets, not just research demos</strong><p>Security researchers reported finding 1,122 public GitHub repositories where Claude Code's "don't ask again" approval setting had saved a real API key or password straight into a committed local settings file. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Open-weight models keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter Kimi K3.1 Pro and Mistral's 1T-parameter Large 4 are now both downloadable in full, and Cognition's new SWE-2 Flash coding-agent model is itself built on another lab's open-weight base. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs are pairing revenue and capability claims ahead of their IPOs</strong><p>Anthropic's reported $16.8B Q3 revenue and METR's estimate of 1.9x faster capability growth are both landing in the same roadshow window as its November 9 release of two upgraded flagship models — numbers worth checking against the eventual audited prospectus. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Coding platforms are being bought up to orchestrate fleets of agents, not just write code</strong><p>Meta's acquisition of Conductor (which runs Claude Code, Codex, Cursor and OpenCode in parallel) and OpenAI's planned purchase of Pierre Computer's code-review tooling, announced the same day, show labs investing in the scaffolding around coding agents as much as the models themselves. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Open-weight models keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter Kimi K3.1 Pro and Mistral's 1T-parameter Large 4 are now both downloadable in full, and Cognition's SWE-2 Flash coding-agent model is itself built on another lab's open-weight base. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Security research and offensive AI tooling keep advancing together</strong><p>OpenAI's gated, Critical-risk GPT-6 Cyber model, a disclosed Claude Code CVE, and reports of 1,122 public repos where Claude Code's "don't ask again" setting saved real secrets all show defensive and offensive AI security tooling moving at the same pace. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Always-on, persistent agents are turning into a paid subscription category</strong><p>Perplexity's $200/month Teammates gives a named agent a standing role — running a campaign or research project across many sessions — a different shape than a single-prompt chatbot, and one Claude and OpenAI are both racing to match. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic reportedly told prospective investors its Q3 revenue reached $16.8 billion, up 45% from Q2's $11.6 billion, and that the quarter was profitable on an adjusted basis, as it prepares to begin marketing an IPO targeting a valuation above $1.5 trillion</h3>
+            <p class="why"><b>Why it matters:</b> these are unaudited, investor-meeting numbers reported secondhand, not figures from a published prospectus — a reminder to check a growth company's own pitch against its eventual audited filing before weighing an equity story (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://thenextweb.com/news/anthropic-q3-revenue-16-8bn-ipo">thenextweb.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-09</span><span class="pill">Models</span></div>
           <div><h3>Anthropic released two new flagship models, Claude Mythos 5.2 and Claude Fable 5.2, saying both outperform Claude Opus 5.5 on nearly every capability it evaluated and that Fable 5.2 generates responses up to 30% faster than its 5.1 predecessor</h3>
@@ -471,27 +477,21 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
-          <div><h3>Meta reportedly acquired Conductor, a startup whose app lets developers run several coding agents — including Claude Code, Codex, Cursor and OpenCode — in parallel sandboxed workspaces and then review the merged results, folding its team into Meta Superintelligence Labs</h3>
-            <p class="why"><b>Why it matters:</b> a major lab betting on orchestrating many agents at once, rather than only building a smarter single model, is a concrete pattern to study if you're designing a multi-agent coding workflow (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://axios.com/2026/11/04/meta-acquires-ai-coding-startup-conductor">axios.com</a></p></div>
+          <div><h3>Meta reportedly acquired Conductor, a startup whose app lets developers run several coding agents — including Claude Code, Codex, Cursor and OpenCode — in parallel sandboxed workspaces for review, and the same day OpenAI announced plans to acquire Pierre Computer, maker of the Trees and Diffs code-review libraries already used inside Codex</h3>
+            <p class="why"><b>Why it matters:</b> two major labs buying up code-review and multi-agent orchestration tooling on the same day is a sign the coding-agent race is shifting toward the scaffolding around the model, not only the model itself — worth studying before you design a multi-agent coding workflow (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/blog/meta-openai-bought-coding-tools-same-day-one-shutting-down">letsdatascience.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
-          <div><h3>Cognition reportedly released SWE-2 Flash, a coding-agent model for its Devin tool built on Thinking Machines Lab's open-weight Inkling-Small base model, claiming about 3x the speed of its flagship SWE-2 at roughly a fifth of the price, while keeping its own fine-tune closed despite the open base</h3>
-            <p class="why"><b>Why it matters:</b> a commercial coding agent built on someone else's open-weight base while the product itself stays closed is a licensing and build-vs-buy pattern worth noticing before you choose what to build Project 2's coding agent on (<a href="#L4">L4</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/blog/cognition-swe-2-flash-built-on-open-weights-wont-share-own">letsdatascience.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Models</span></div>
+          <div><h3>OpenAI released GPT-Image 2.6 in two variants — Flare, tuned for fast drafts, and Sunburst, tuned for detail and consistency — with third-party evaluators reporting both ranked near the top of image-generation leaderboards</h3>
+            <p class="why"><b>Why it matters:</b> shipping a fast/cheap tier alongside a slower, higher-quality tier of the same model family is a pricing-and-latency pattern worth recognizing when you pick a model for an app you're building (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://www.netlify.com/changelog/gpt-image-2-6-sunburst-flare-ai-gateway/">netlify.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
           <div><h3>Moonshot AI reportedly began publishing the full open weights for Kimi K3.1 Pro, a trillion-parameter-class model with a reported 1M-token context window, after running it only through its API and apps since an October 23 launch, with cyber-related training data said to be stripped from this release</h3>
             <p class="why"><b>Why it matters:</b> an open-weight model this large, deliberately shipped with offensive cyber capability pared back, is worth weighing against Mistral's Large 4 if you're choosing what to self-host for a local-model project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
             <p class="src"><a href="https://letsdatascience.com/news/moonshot-releases-kimi-k31-pro-api-open-weights-due-nov-4-786e160c">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill sec">Security</span></div>
-          <div><h3>OpenAI reported running an autonomous research pipeline that discovered, validated and wrote working exploits for 948 distinct Linux kernel privilege-escalation bugs in a single automated pass, spending about $1.2M in API credits versus an estimated $18.9-66.3M bounty-equivalent value</h3>
-            <p class="why"><b>Why it matters:</b> a pipeline this cheap finding and weaponizing real kernel bugs at scale is a concrete preview of how both offensive and defensive security research are being automated, worth studying before you build or rely on an agent with broad system access (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.csoonline.com/article/4245265/openai-built-an-ai-pipeline-to-find-exploit-and-patch-linux-flaws.html">csoonline.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,34 +674,54 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: chunk-size-vs-retrieval, lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider" id="pt-pr">
-          <span class="label">New this refresh · 2026-11-09 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: precision/recall threshold slider</h3>
-          <p class="lede">A classifier doesn't output "spam" or "not spam" — it outputs a score, and you pick the cutoff. Drag the threshold across 10 fixed positive-class scores and 10 fixed negative-class scores (chosen for this demo, not a real benchmark) and watch precision, recall and F1 move in opposite directions. Simplified: real evaluation sets have thousands of examples and a smooth curve; this toy uses 20 fixed points so you can see each one flip.</p>
-          <div class="pt-row"><label for="pt-pr-t">Threshold</label><input type="range" id="pt-pr-t" min="0" max="100" step="1" value="50"><span class="mono" id="pt-pr-t-val">50</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-pr-fill"></div></div>
-          <p class="mono" id="pt-pr-readout"></p>
+        <!-- HISTORY: lost-in-the-middle-context-position, overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedule-explorer" id="pt-lr">
+          <span class="label">New this refresh · 2026-11-09 · connects to <a href="#L2">L2</a></span>
+          <h3>Toy: learning-rate schedule explorer</h3>
+          <p class="lede">Training doesn't use one fixed learning rate the whole way through — it's usually scheduled to shrink over time. Pick a schedule, drag the base rate and the training step, and watch the effective rate and a simulated toy loss respond. Simplified: this isn't a real training run — it's one synthetic loss number updated by a simple formula, just enough to show why schedule shape matters.</p>
+          <div class="pt-ctl">
+            <button type="button" class="btn primary" id="pt-lr-const">Constant</button>
+            <button type="button" class="btn" id="pt-lr-step">Step decay</button>
+            <button type="button" class="btn" id="pt-lr-cos">Cosine decay</button>
+          </div>
+          <div class="pt-row"><label for="pt-lr-base">Base LR</label><input type="range" id="pt-lr-base" min="1" max="50" step="1" value="20"><span class="mono" id="pt-lr-base-val"></span></div>
+          <div class="pt-row"><label for="pt-lr-stepn">Step</label><input type="range" id="pt-lr-stepn" min="0" max="100" step="1" value="0"><span class="mono" id="pt-lr-stepn-val"></span></div>
+          <div class="pt-track"><div class="pt-fill" id="pt-lr-fill"></div></div>
+          <p class="mono" id="pt-lr-readout"></p>
           <script>(function(){
-          var pos=[92,88,81,76,70,63,58,51,44,30];
-          var neg=[12,20,27,33,39,46,53,60,68,78];
-          var t=document.getElementById("pt-pr-t");
-          var tVal=document.getElementById("pt-pr-t-val");
-          var fill=document.getElementById("pt-pr-fill");
-          var readout=document.getElementById("pt-pr-readout");
-          function render(){
-            var th=parseInt(t.value,10);
-            tVal.textContent=th;
-            var tp=0,fn=0,fp=0,tn=0,i;
-            for(i=0;i<pos.length;i++){ if(pos[i]>=th){tp++;} else {fn++;} }
-            for(i=0;i<neg.length;i++){ if(neg[i]>=th){fp++;} else {tn++;} }
-            var precision=(tp+fp)>0 ? tp/(tp+fp) : 0;
-            var recall=(tp+fn)>0 ? tp/(tp+fn) : 0;
-            var f1=(precision+recall)>0 ? 2*precision*recall/(precision+recall) : 0;
-            fill.style.width=(recall*100)+"%";
-            readout.textContent="TP="+tp+" FP="+fp+" FN="+fn+" TN="+tn+" · precision="+precision.toFixed(2)+" recall="+recall.toFixed(2)+" F1="+f1.toFixed(2)+" (toy scores, not a real benchmark)";
+          var mode="const";
+          var bC=document.getElementById("pt-lr-const"), bS=document.getElementById("pt-lr-step"), bK=document.getElementById("pt-lr-cos");
+          var base=document.getElementById("pt-lr-base"), baseVal=document.getElementById("pt-lr-base-val");
+          var stepn=document.getElementById("pt-lr-stepn"), stepVal=document.getElementById("pt-lr-stepn-val");
+          var fill=document.getElementById("pt-lr-fill"), readout=document.getElementById("pt-lr-readout");
+          function setMode(m){
+            mode=m;
+            bC.className="btn"+(m==="const"?" primary":"");
+            bS.className="btn"+(m==="step"?" primary":"");
+            bK.className="btn"+(m==="cos"?" primary":"");
+            render();
           }
-          t.addEventListener("input", render);
+          function lrAt(lr0, s){
+            if(mode==="const") return lr0;
+            if(mode==="step") return lr0*Math.pow(0.5, Math.floor(s/30));
+            return lr0*0.5*(1+Math.cos(Math.PI*Math.min(s,100)/100));
+          }
+          function render(){
+            var lr0=parseInt(base.value,10)/500;
+            var s=parseInt(stepn.value,10);
+            baseVal.textContent=lr0.toFixed(3);
+            stepVal.textContent=s;
+            var loss=4.0, i;
+            for(i=0;i<s;i++){ loss -= lrAt(lr0,i)*loss*0.5; if(loss<0.02) loss=0.02; }
+            var lrNow=lrAt(lr0,s);
+            fill.style.width=Math.min(100,(lrNow/lr0)*100)+"%";
+            readout.textContent="step "+s+"/100 · effective LR="+lrNow.toFixed(4)+" · simulated loss≈"+loss.toFixed(2)+" (toy formula, not a real training run)";
+          }
+          bC.addEventListener("click", function(){ setMode("const"); });
+          bS.addEventListener("click", function(){ setMode("step"); });
+          bK.addEventListener("click", function(){ setMode("cos"); });
+          base.addEventListener("input", render);
+          stepn.addEventListener("input", render);
           render();
           })();</script>
         </div>
