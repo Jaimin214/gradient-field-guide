@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-10T00:40:00">2026-11-10 00:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-10T05:39:06">2026-11-10 05:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -400,9 +400,27 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state new">Watch</span><strong>Coding platforms are being bought up to orchestrate fleets of agents, not just write code</strong><p>Meta's acquisition of Conductor (which runs Claude Code, Codex, Cursor and OpenCode in parallel) and OpenAI's planned purchase of Pierre Computer's code-review tooling, announced the same day, show labs investing in the scaffolding around coding agents as much as the models themselves. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Open-weight models keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter Kimi K3.1 Pro, Tencent's newly generally-available Hy4 (reportedly 770B parameters with vision and computer-use skills), and Mistral's 1T-parameter Large 4 are now all downloadable in full. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Security research and offensive AI tooling keep advancing together</strong><p>OpenAI's gated, Critical-risk GPT-6 Cyber model, a disclosed Claude Code CVE, and reports of 1,122 public repos where Claude Code's "don't ask again" setting saved real secrets all show defensive and offensive AI security tooling moving at the same pace. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Always-on, persistent agents are turning into a paid subscription category</strong><p>Perplexity's $200/month Teammates gives a named agent a standing role — running a campaign or research project across many sessions — a different shape than a single-prompt chatbot, and one Claude and OpenAI are both racing to match. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Doubts are creeping into the AI-infrastructure and AI-jobs narratives</strong><p>Asset manager Ares reportedly told investors it doesn't know how to underwrite GPU depreciation risk, and a fresh read of layoffs.fyi data found AI explicitly cited in only a small share of 2026's tech layoffs — both pushing back on simple "AI bubble" or "AI is taking the jobs" framings. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Industry</span></div>
+          <div><h3>Google began rolling out a "Memory summary" view in Gemini that lets US Google AI subscribers see, edit and delete what the assistant has inferred about them from past chats</h3>
+            <p class="why"><b>Why it matters:</b> giving people a visible, editable summary of what an assistant has inferred about them is a concrete pattern worth studying before you add personalization or memory to an app of your own (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://9to5google.com/2026/11/09/google-gemini-memory-summary">9to5google.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-29</span><span class="pill">Industry</span></div>
+          <div><h3>Asset manager Ares reportedly told investors on its Q3 earnings call that it does not know how to underwrite the decline and depreciation curves on AI chips, as lenders grow warier of loans backed by GPUs as collateral</h3>
+            <p class="why"><b>Why it matters:</b> if GPUs depreciate faster than lenders assumed, the economics behind the current data-center buildout get shakier — worth weighing before betting a career path on unlimited cheap compute (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.dealstreetasia.com/?p=499609">dealstreetasia.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-05</span><span class="pill">Policy</span></div>
+          <div><h3>An analysis of layoffs.fyi data found that of 392 US tech layoff events recorded in 2026 through November 4, only a small share of the companies that gave a reason cited AI, cutting against the narrative that AI is the main driver of this year's tech layoffs</h3>
+            <p class="why"><b>Why it matters:</b> before taking "AI is replacing jobs" headlines at face value, it's worth checking what laid-off companies actually said versus what commentary assumes — relevant to any job search in this field (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://ryandoser.com/research/ai-layoffs-2026/">ryandoser.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-09</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic reportedly told prospective investors its Q3 revenue reached $16.8 billion, up 45% from Q2's $11.6 billion, and that the quarter was profitable on an adjusted basis, as it prepares to begin marketing an IPO targeting a valuation above $1.5 trillion</h3>
@@ -474,24 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic launched a Personal Finance feature in Claude for paid US beta users, letting Claude read (not move or invest) linked bank and card data through a Plaid connection, after the capability had circulated as an unannounced "Claude Money" leak in app testing since mid-October</h3>
             <p class="why"><b>Why it matters:</b> wiring an assistant into live, sensitive financial data with a deliberately read-only scope is a concrete case study in connector and permission design for anything you build on <a href="#L5">L5</a>'s app patterns or <a href="#L6">L6</a>'s agents.</p>
             <p class="src"><a href="https://9to5mac.com/2026/11/05/anthropic-upgrades-claude-with-new-personal-finance-feature">9to5mac.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
-          <div><h3>Meta reportedly acquired Conductor, a startup whose app lets developers run several coding agents — including Claude Code, Codex, Cursor and OpenCode — in parallel sandboxed workspaces for review, and the same day OpenAI announced plans to acquire Pierre Computer, maker of the Trees and Diffs code-review libraries already used inside Codex</h3>
-            <p class="why"><b>Why it matters:</b> two major labs buying up code-review and multi-agent orchestration tooling on the same day is a sign the coding-agent race is shifting toward the scaffolding around the model, not only the model itself — worth studying before you design a multi-agent coding workflow (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/blog/meta-openai-bought-coding-tools-same-day-one-shutting-down">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
-          <div><h3>Tencent reportedly made its Hunyuan Hy4 model generally available, built on an open-weight preview said to have 770 billion total parameters and a context window beyond 1 million tokens, with the general-release version adding the ability to read an image and drive a desktop (computer use)</h3>
-            <p class="why"><b>Why it matters:</b> another large open-weight model shipping with computer-use and vision built in — alongside Kimi K3.1 Pro and Mistral Large 4 — is worth weighing if you're choosing what to self-host for an agent project (<a href="#L4">L4</a>, <a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.eesel.ai/blog/tencent-hy4">eesel.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
-          <div><h3>Moonshot AI reportedly began publishing the full open weights for Kimi K3.1 Pro, a trillion-parameter-class model with a reported 1M-token context window, after running it only through its API and apps since an October 23 launch, with cyber-related training data said to be stripped from this release</h3>
-            <p class="why"><b>Why it matters:</b> an open-weight model this large, deliberately shipped with offensive cyber capability pared back, is worth weighing against Mistral's Large 4 if you're choosing what to self-host for a local-model project (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/moonshot-releases-kimi-k31-pro-api-open-weights-due-nov-4-786e160c">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,34 +674,32 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-retrieval-tradeoff" id="pt-ck">
-          <span class="label">New this refresh · 2026-11-10 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: chunk size vs. retrieval</h3>
-          <p class="lede">A RAG pipeline splits documents into chunks before embedding them. Drag the chunk size and watch precision (how much of a retrieved chunk is actually relevant) trade off against recall (how much of the relevant passage a single chunk can capture whole). Simplified: real retrieval also depends on overlap, embeddings and re-ranking — this toy assumes one clean ~80-word relevant passage and one clean cut point per chunk.</p>
-          <div class="pt-row"><label for="pt-ck-size">Chunk size</label><input type="range" id="pt-ck-size" min="20" max="400" step="10" value="100"><span class="mono" id="pt-ck-size-val"></span></div>
-          <div class="pt-row"><label>Precision</label><div class="pt-track"><div class="pt-fill" id="pt-ck-prec-fill"></div></div><span class="mono" id="pt-ck-prec-val"></span></div>
-          <div class="pt-row"><label>Recall</label><div class="pt-track"><div class="pt-fill" id="pt-ck-rec-fill"></div></div><span class="mono" id="pt-ck-rec-val"></span></div>
-          <p class="mono" id="pt-ck-readout"></p>
+        <!-- HISTORY: self-consistency-voting, softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost -->
+        <div class="pgcard pgtopic" data-topic="attention-quadratic-cost" id="pt-aq">
+          <span class="label">New this refresh · 2026-11-10 · connects to <a href="#L3">L3</a></span>
+          <h3>Toy: why attention cost explodes with context length</h3>
+          <p class="lede">Self-attention compares every token against every other token, so its work grows roughly with the square of context length, while a hypothetical linear-cost layer grows only proportionally. Drag the slider and watch the quadratic bar lag, then shoot past, the linear one near the top of the range. Simplified: real serving cost also depends on hidden size, head count and tricks like FlashAttention or sparse attention — this toy only isolates the n² vs n shape.</p>
+          <div class="pt-row"><label for="pt-aq-len">Context length</label><input type="range" id="pt-aq-len" min="100" max="32000" step="100" value="4000"><span class="mono" id="pt-aq-len-val"></span></div>
+          <div class="pt-row"><label>Attention (n²)</label><div class="pt-track"><div class="pt-fill" id="pt-aq-quad-fill"></div></div><span class="mono" id="pt-aq-quad-val"></span></div>
+          <div class="pt-row"><label>Linear layer (n)</label><div class="pt-track"><div class="pt-fill" id="pt-aq-lin-fill"></div></div><span class="mono" id="pt-aq-lin-val"></span></div>
+          <p class="mono" id="pt-aq-readout"></p>
           <script>(function(){
-          var REL=80;
-          var size=document.getElementById("pt-ck-size"), sizeVal=document.getElementById("pt-ck-size-val");
-          var precFill=document.getElementById("pt-ck-prec-fill"), precVal=document.getElementById("pt-ck-prec-val");
-          var recFill=document.getElementById("pt-ck-rec-fill"), recVal=document.getElementById("pt-ck-rec-val");
-          var readout=document.getElementById("pt-ck-readout");
+          var MAXN=32000;
+          var slider=document.getElementById("pt-aq-len"), lenVal=document.getElementById("pt-aq-len-val");
+          var quadFill=document.getElementById("pt-aq-quad-fill"), quadVal=document.getElementById("pt-aq-quad-val");
+          var linFill=document.getElementById("pt-aq-lin-fill"), linVal=document.getElementById("pt-aq-lin-val");
+          var readout=document.getElementById("pt-aq-readout");
           function render(){
-            var c=parseInt(size.value,10);
-            sizeVal.textContent=c+" words/chunk";
-            var prec=Math.min(1, REL/c);
-            var rec=Math.min(1, c/REL);
-            precFill.style.width=(prec*100)+"%";
-            recFill.style.width=(rec*100)+"%";
-            precVal.textContent=(prec*100).toFixed(0)+"%";
-            recVal.textContent=(rec*100).toFixed(0)+"%";
-            var note = c<REL ? "chunk is smaller than the relevant passage — it can split the answer across chunks" : "chunk comfortably holds the passage but dilutes it with surrounding text";
-            readout.textContent="toy model, ~"+REL+"-word relevant passage: "+note+".";
+            var n=parseInt(slider.value,10);
+            lenVal.textContent=n.toLocaleString()+" tokens";
+            var quadFrac=Math.pow(n/MAXN,2), linFrac=n/MAXN;
+            quadFill.style.width=(quadFrac*100)+"%";
+            linFill.style.width=(linFrac*100)+"%";
+            quadVal.textContent=(n*n).toLocaleString()+" pairwise comparisons";
+            linVal.textContent=n.toLocaleString()+" comparisons";
+            readout.textContent="toy model: at "+n.toLocaleString()+" tokens, attention does about "+n.toLocaleString()+"x more pairwise work than a linear layer.";
           }
-          size.addEventListener("input", render);
+          slider.addEventListener("input", render);
           render();
           })();</script>
         </div>
