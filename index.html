@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-10T10:42:29">2026-11-10 10:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-10T15:44:19">2026-11-10 15:44</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,34 +674,38 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost, overfitting-vs-model-size -->
-        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size" id="pt-of">
-          <span class="label">New this refresh · 2026-11-10 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: overfitting vs. model capacity</h3>
-          <p class="lede">Drag the slider to raise a model's capacity against a small, fixed, noisy dataset. Training error keeps falling the bigger the model gets, but test error traces the classic U: too little capacity underfits, too much overfits by memorizing noise. Simplified: both curves come from a toy formula tuned to produce this shape, not from an actual training run — real overfitting also depends on dataset size, regularization and architecture.</p>
-          <div class="pt-row"><label for="pt-of-cap">Model capacity</label><input type="range" id="pt-of-cap" min="1" max="100" step="1" value="10"><span class="mono" id="pt-of-cap-val"></span></div>
-          <div class="pt-row"><label>Training error</label><div class="pt-track"><div class="pt-fill" id="pt-of-train-fill"></div></div><span class="mono" id="pt-of-train-val"></span></div>
-          <div class="pt-row"><label>Test error</label><div class="pt-track"><div class="pt-fill" id="pt-of-test-fill"></div></div><span class="mono" id="pt-of-test-val"></span></div>
-          <p class="mono" id="pt-of-readout"></p>
+        <!-- HISTORY: kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost, overfitting-vs-model-size, agent-permission-scope-toy -->
+        <div class="pgcard pgtopic" data-topic="agent-permission-scope-toy" id="pt-aps">
+          <span class="label">New this refresh · 2026-11-10 · connects to <a href="#L6">L6</a></span>
+          <h3>Toy: how fast does "don't ask again" add up?</h3>
+          <p class="lede">A toy model of the tradeoff behind this week's report that a coding agent's "don't ask again" setting let secrets slip into public repos. Set how often a command might carry a secret and how many commands you run a day, then flip blanket approval on or off. Simplified: this is illustrative arithmetic on numbers you pick, not a measured leak rate from any real tool or dataset.</p>
+          <div class="pt-row"><label for="pt-aps-risk">Secret risk / command</label><input type="range" id="pt-aps-risk" min="1" max="25" step="1" value="5"><span class="mono" id="pt-aps-riskval"></span></div>
+          <div class="pt-row"><label for="pt-aps-vol">Commands / day</label><input type="range" id="pt-aps-vol" min="5" max="200" step="5" value="40"><span class="mono" id="pt-aps-volval"></span></div>
+          <div class="pt-ctl">
+            <label class="mono"><input type="checkbox" id="pt-aps-remember"> "Don't ask again" enabled</label>
+            <button type="button" class="btn" id="pt-aps-reset">Reset</button>
+          </div>
+          <div class="pt-row"><label>Exposure this month</label><div class="pt-track"><div class="pt-fill" id="pt-aps-fill"></div></div><span class="mono" id="pt-aps-pct"></span></div>
+          <p class="mono" id="pt-aps-out"></p>
           <script>(function(){
-          var MAXERR=20;
-          var slider=document.getElementById("pt-of-cap"), capVal=document.getElementById("pt-of-cap-val");
-          var trainFill=document.getElementById("pt-of-train-fill"), trainVal=document.getElementById("pt-of-train-val");
-          var testFill=document.getElementById("pt-of-test-fill"), testVal=document.getElementById("pt-of-test-val");
-          var readout=document.getElementById("pt-of-readout");
+          var risk=document.getElementById("pt-aps-risk"), vol=document.getElementById("pt-aps-vol"),
+              remember=document.getElementById("pt-aps-remember"), reset=document.getElementById("pt-aps-reset"),
+              riskval=document.getElementById("pt-aps-riskval"), volval=document.getElementById("pt-aps-volval"),
+              fill=document.getElementById("pt-aps-fill"), pct=document.getElementById("pt-aps-pct"), out=document.getElementById("pt-aps-out");
           function render(){
-            var c=parseInt(slider.value,10);
-            capVal.textContent="capacity "+c;
-            var train=80/(c+4);
-            var test=train+(c*c)/2000;
-            trainFill.style.width=Math.min(100,(train/MAXERR)*100)+"%";
-            testFill.style.width=Math.min(100,(test/MAXERR)*100)+"%";
-            trainVal.textContent=train.toFixed(1)+"% error";
-            testVal.textContent=test.toFixed(1)+"% error";
-            var regime=c<20?"underfitting — too simple to capture the pattern":(c>60?"overfitting — memorizing noise, test error climbing":"near the sweet spot for this toy dataset");
-            readout.textContent="toy model: "+regime+" (train/test gap = "+(test-train).toFixed(1)+" points).";
+            var r=parseInt(risk.value,10), v=parseInt(vol.value,10);
+            riskval.textContent=r+"%"; volval.textContent=v;
+            var monthly=v*30;
+            var exposed=remember.checked ? Math.round(monthly*(r/100)) : 0;
+            var share=Math.min(100,Math.round((exposed/monthly)*100));
+            fill.style.width=share+"%";
+            pct.textContent=share+"%";
+            out.textContent = remember.checked
+              ? "Toy estimate: with blanket approval on, about "+exposed+" of "+monthly+" commands this month could carry a secret and run unreviewed."
+              : "With blanket approval off, all "+monthly+" commands this month get reviewed individually, so this toy model counts 0 slipping through unseen.";
           }
-          slider.addEventListener("input", render);
+          [risk,vol,remember].forEach(function(el){ el.addEventListener("input", render); });
+          reset.addEventListener("click", function(){ risk.value=5; vol.value=40; remember.checked=false; render(); });
           render();
           })();</script>
         </div>
