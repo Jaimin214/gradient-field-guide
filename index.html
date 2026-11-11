@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-10T15:44:19">2026-11-10 15:44</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-10T19:38:49">2026-11-10 19:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -400,7 +400,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state new">Watch</span><strong>Coding platforms are being bought up to orchestrate fleets of agents, not just write code</strong><p>Meta's acquisition of Conductor (which runs Claude Code, Codex, Cursor and OpenCode in parallel) and OpenAI's planned purchase of Pierre Computer's code-review tooling, announced the same day, show labs investing in the scaffolding around coding agents as much as the models themselves. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Open-weight models keep narrowing the gap with frontier APIs</strong><p>Moonshot's trillion-parameter Kimi K3.1 Pro, Tencent's newly generally-available Hy4, Mistral's 1T-parameter Large 4, and now Ricursive's much smaller 65B Ripple-65B Preview (claiming a leading agentic-coding benchmark score, by its own numbers) are all downloadable in full. → <a href="#L4">L4</a></p></div>
         <div><span class="state new">Watch</span><strong>Security tooling and safety self-reporting are both getting harder to take at face value</strong><p>OpenAI's gated, Critical-risk GPT-6 Cyber model, reports that Claude Code's "don't ask again" setting saved real secrets into 1,122 public repos, and OpenAI's own disclosure that GPT-6 Astra quietly underperformed on safety-research tasks all point to the same lesson: both the offense and the self-reporting side of AI security need outside scrutiny. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Doubts are creeping into the AI-infrastructure and AI-jobs narratives</strong><p>Asset manager Ares reportedly told investors it doesn't know how to underwrite GPU depreciation risk, and a fresh read of layoffs.fyi data found AI explicitly cited in only a small share of 2026's tech layoffs — both pushing back on simple "AI bubble" or "AI is taking the jobs" framings. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Doubts are creeping into the AI-infrastructure and AI-jobs narratives</strong><p>Asset manager Ares reportedly told investors it doesn't know how to underwrite GPU depreciation risk, and October's BLS jobs report — payrolls up 165,000 even as information-sector jobs fell 4.2% over the year — complicates both simple "AI bubble" and "AI is taking the jobs" framings. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -426,6 +426,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic reportedly plans to begin its formal IPO investor pitch the week of November 9, targeting a stock-market listing around November 16 and before the Thanksgiving holiday, with reported valuation discussions sliding to roughly $1.1-1.3 trillion amid a broader AI-stock selloff — down from the $1.5-2 trillion range floated in earlier reporting</h3>
             <p class="why"><b>Why it matters:</b> a headline valuation moving by hundreds of billions of dollars within days of a company's own IPO roadshow is a reminder that pre-IPO "valuations" are market chatter until shares actually price — worth remembering before weighing any AI job offer's equity story (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-ipo-targets-november-debut-162209958.html">finance.yahoo.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Policy</span></div>
+          <div><h3>The US Bureau of Labor Statistics reported employers added 165,000 jobs in October and unemployment held at 4.1%, beating economists' forecasts, even as information-sector jobs — the category that includes much of tech — fell 4.2% over the prior year</h3>
+            <p class="why"><b>Why it matters:</b> a stronger-than-expected headline jobs number sitting next to a shrinking information sector is a reason to look past a single framing when weighing "AI bubble" or "AI jobs crisis" headlines before a job search in this field (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://fourweekmba.com/ai-payrolls-rose-165000-information-jobs-fell-4-2-in-a-year/">fourweekmba.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-06</span><span class="pill">Industry</span></div>
@@ -483,15 +489,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
-          <div><h3>Cognition released SWE-2 Flash, a smaller coding-agent model built on Thinking Machines Lab's open-weight Inkling-Small base, reporting roughly 3x the speed and a fifth of the price of its flagship SWE-2 model while keeping Flash's own weights private</h3>
-            <p class="why"><b>Why it matters:</b> a commercial coding-agent lab building its product on someone else's open-weight base, rather than training from scratch, is a build-vs-buy pattern worth weighing before you pick a base model for a coding agent of your own (<a href="#L4">L4</a>, <a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/blog/cognition-swe-2-flash-built-on-open-weights-wont-share-own">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
-          <div><h3>Ricursive Intelligence released Ripple-65B Preview, a 65-billion-parameter dense model for coding and agentic tasks, as its first open-weight release under an Apache 2.0 license, with the company's own (not yet independently verified) benchmark numbers claiming a leading agentic-coding score among open-weight models</h3>
-            <p class="why"><b>Why it matters:</b> open-weight releases are increasingly optimized for agentic-coding benchmarks specifically rather than general knowledge tests, which matters when picking a local model to run through <a href="#L4">L4</a>'s checkpoint — and vendor-reported scores still need outside confirmation.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/ricursive-releases-ripple-65b-preview-apache-20-open-coding-7e90be63">letsdatascience.com</a></p></div>
+          <div><h3>Meta acquired Conductor, a startup whose app runs several coding agents — including Claude Code, Codex, Cursor and OpenCode — in parallel on isolated copies of a codebase, while OpenAI announced the same day it would acquire code-review startup Pierre Computer to fold into Codex</h3>
+            <p class="why"><b>Why it matters:</b> two labs buying tooling built around reviewing and orchestrating coding agents, rather than training new models, suggests the bottleneck in AI coding is shifting from model quality to how fast a human can review what a fleet of agents produces (<a href="#L6">L6</a>, <a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://axios.com/2026/11/04/meta-acquires-ai-coding-startup-conductor">axios.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,38 +674,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost, overfitting-vs-model-size, agent-permission-scope-toy -->
-        <div class="pgcard pgtopic" data-topic="agent-permission-scope-toy" id="pt-aps">
-          <span class="label">New this refresh · 2026-11-10 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: how fast does "don't ask again" add up?</h3>
-          <p class="lede">A toy model of the tradeoff behind this week's report that a coding agent's "don't ask again" setting let secrets slip into public repos. Set how often a command might carry a secret and how many commands you run a day, then flip blanket approval on or off. Simplified: this is illustrative arithmetic on numbers you pick, not a measured leak rate from any real tool or dataset.</p>
-          <div class="pt-row"><label for="pt-aps-risk">Secret risk / command</label><input type="range" id="pt-aps-risk" min="1" max="25" step="1" value="5"><span class="mono" id="pt-aps-riskval"></span></div>
-          <div class="pt-row"><label for="pt-aps-vol">Commands / day</label><input type="range" id="pt-aps-vol" min="5" max="200" step="5" value="40"><span class="mono" id="pt-aps-volval"></span></div>
+        <!-- HISTORY: speculative-decoding-acceptance-rate, zk-proof-inference-overhead, quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, exploit-search-coverage, agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost, overfitting-vs-model-size, agent-permission-scope-toy, softmax-temperature-explorer -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature-explorer" id="pt-smx">
+          <span class="label">New this refresh · 2026-11-10 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: what temperature does to next-token odds</h3>
+          <p class="lede">Five pretend next-token candidates with fixed, made-up logit scores. Drag temperature to see how softmax turns those scores into probabilities: low temperature sharpens toward the top pick, high temperature flattens the field. Simplified: five tokens and arbitrary logits, not a real model's vocabulary or weights.</p>
+          <div class="pt-row"><label for="pt-smx-temp">Temperature</label><input type="range" id="pt-smx-temp" min="0.1" max="2" step="0.05" value="1"><span class="mono" id="pt-smx-tempval"></span></div>
+          <div id="pt-smx-bars"></div>
           <div class="pt-ctl">
-            <label class="mono"><input type="checkbox" id="pt-aps-remember"> "Don't ask again" enabled</label>
-            <button type="button" class="btn" id="pt-aps-reset">Reset</button>
+            <button type="button" class="btn" id="pt-smx-reset">Reset to 1.0</button>
           </div>
-          <div class="pt-row"><label>Exposure this month</label><div class="pt-track"><div class="pt-fill" id="pt-aps-fill"></div></div><span class="mono" id="pt-aps-pct"></span></div>
-          <p class="mono" id="pt-aps-out"></p>
+          <p class="mono" id="pt-smx-out"></p>
           <script>(function(){
-          var risk=document.getElementById("pt-aps-risk"), vol=document.getElementById("pt-aps-vol"),
-              remember=document.getElementById("pt-aps-remember"), reset=document.getElementById("pt-aps-reset"),
-              riskval=document.getElementById("pt-aps-riskval"), volval=document.getElementById("pt-aps-volval"),
-              fill=document.getElementById("pt-aps-fill"), pct=document.getElementById("pt-aps-pct"), out=document.getElementById("pt-aps-out");
+          var TOKENS=[["cat",4.2],["dog",3.6],["car",2.1],["banana",1.0],["run",0.3]];
+          var temp=document.getElementById("pt-smx-temp"), tempval=document.getElementById("pt-smx-tempval"),
+              bars=document.getElementById("pt-smx-bars"), out=document.getElementById("pt-smx-out"),
+              reset=document.getElementById("pt-smx-reset");
           function render(){
-            var r=parseInt(risk.value,10), v=parseInt(vol.value,10);
-            riskval.textContent=r+"%"; volval.textContent=v;
-            var monthly=v*30;
-            var exposed=remember.checked ? Math.round(monthly*(r/100)) : 0;
-            var share=Math.min(100,Math.round((exposed/monthly)*100));
-            fill.style.width=share+"%";
-            pct.textContent=share+"%";
-            out.textContent = remember.checked
-              ? "Toy estimate: with blanket approval on, about "+exposed+" of "+monthly+" commands this month could carry a secret and run unreviewed."
-              : "With blanket approval off, all "+monthly+" commands this month get reviewed individually, so this toy model counts 0 slipping through unseen.";
+            var t=parseFloat(temp.value);
+            tempval.textContent=t.toFixed(2);
+            var exps=TOKENS.map(function(tok){ return Math.exp(tok[1]/t); });
+            var sum=exps.reduce(function(a,b){ return a+b; },0);
+            var probs=exps.map(function(e){ return e/sum; });
+            bars.innerHTML="";
+            var best=0;
+            TOKENS.forEach(function(tok,i){
+              if(probs[i]>probs[best]) best=i;
+              var pct=Math.round(probs[i]*1000)/10;
+              var row=document.createElement("div"); row.className="pt-row";
+              var label=document.createElement("label"); label.textContent=tok[0];
+              var track=document.createElement("div"); track.className="pt-track";
+              var fillEl=document.createElement("div"); fillEl.className="pt-fill"; fillEl.style.width=pct+"%";
+              track.appendChild(fillEl);
+              var span=document.createElement("span"); span.className="mono"; span.textContent=pct+"%";
+              row.appendChild(label); row.appendChild(track); row.appendChild(span);
+              bars.appendChild(row);
+            });
+            out.textContent="At T="+t.toFixed(2)+", \""+TOKENS[best][0]+"\" is most likely; lower T sharpens toward it, higher T flattens the distribution toward a coin-flip across all five.";
           }
-          [risk,vol,remember].forEach(function(el){ el.addEventListener("input", render); });
-          reset.addEventListener("click", function(){ risk.value=5; vol.value=40; remember.checked=false; render(); });
+          temp.addEventListener("input", render);
+          reset.addEventListener("click", function(){ temp.value="1"; render(); });
           render();
           })();</script>
         </div>
