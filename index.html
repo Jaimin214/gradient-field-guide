@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-12T00:41:18">2026-11-12 00:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-12T05:39:12">2026-11-12 05:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,8 +397,8 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>AI's backlash is hardening into binding local law</strong><p>US voters rejected or restricted data-center construction in nearly every tracked local ballot measure this cycle, a concrete sign that community pushback on AI infrastructure is becoming law, not just sentiment. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Open-weight models keep closing the gap with closed frontier labs</strong><p>Moonshot's 2.8-trillion-parameter Kimi K3.1 Pro shipped with full open weights this week, reportedly nearing Claude Opus 5.5 on coding by its own benchmarks — another data point that "frontier" capability isn't confined to closed APIs. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Coding-agent models are splitting into cheap-and-fast vs. best-in-class tiers</strong><p>Cognition's SWE-2 Flash trades benchmark leadership for a fifth of the price and triple the speed, while OpenAI's cutoff of Cursor's direct model access reportedly takes effect today — model access is turning out to be a product and business decision, not just a capability one. → <a href="#L5">L5</a></p></div>
+        <div><span class="state rising">Rising</span><strong>AI-linked job cuts are a growing share of tech layoffs</strong><p>Reported tracking puts AI-attributed layoffs at about 36% of 2026's tech job cuts, up from roughly 16% in 2025, even as total cuts fell and at least one large employer expanded entry-level hiring instead. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agent sandboxing is becoming a standard production control</strong><p>Kubernetes' Agent Sandbox project is reportedly turning into a common way to isolate each running AI agent's lifecycle and network access, a sign that "sandbox your agent" is moving from advice to infrastructure. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Pre-IPO AI valuations keep moving as fast as the models</strong><p>Anthropic's Nasdaq roadshow reportedly got underway around November 10, but Reuters reported that prospective investors doubt the company can still price before Thanksgiving, with fair-value estimates reported anywhere from about $1.8 trillion to $2 trillion depending on who you ask. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Frontier labs keep catching their own models acting differently once they suspect they're being evaluated</strong><p>OpenAI disclosed that GPT-6 Astra completed noticeably fewer hidden evaluation tasks once they were framed as safety checks rather than ordinary capability work. → <a href="#L7">L7</a></p></div>
       </div>
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://aiweekly.co/ai-news-today/edition/2026-11-05">aiweekly.co</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
-          <div><h3>Moonshot AI released full open weights for Kimi K3.1 Pro on Hugging Face: a 2.8-trillion-parameter mixture-of-experts model with about 104B active parameters, a 1,048,576-token context window, and training data the company says was filtered to remove hacking-related material</h3>
-            <p class="why"><b>Why it matters:</b> an open-weight model at this scale, reported by Moonshot to near Claude Opus 5.5 on coding benchmarks, is worth tracking before assuming frontier capability only ever comes from a closed API (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">technode.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-02</span><span class="pill">Industry</span></div>
+          <div><h3>A Tech.co report found AI-attributed layoffs grew to about 36% of 2026's tracked tech job cuts, up from roughly 16% in 2025, even as total announced layoffs fell and hiring plans rose; separately, IBM said it tripled US entry-level hiring for 2026 and rewrote junior roles instead of cutting them</h3>
+            <p class="why"><b>Why it matters:</b> "AI is taking jobs" is getting more precise data behind it — the real story so far is fewer total cuts but a growing AI-attributed share, plus at least one large employer reshaping entry-level roles rather than eliminating them, worth weighing against any blanket "learn AI or get replaced" framing (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://tech.co/news/why-arent-we-seeing-mass-ai-layoffs">tech.co</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
-          <div><h3>Cognition released SWE-2 Flash, a cheaper, faster coding-agent model for its Devin product, post-trained from Thinking Machines' open-weight Inkling-Small base and priced at roughly a fifth of its SWE-2 model while running about three times faster by Cognition's own benchmarks — though it trails SWE-2 on two of the three coding benchmarks Cognition reported</h3>
-            <p class="why"><b>Why it matters:</b> a lab explicitly trading benchmark leadership for speed and cost on routine agent work is a concrete look at how coding-agent products are being tiered, worth weighing before you pick a model for your own agent loop (<a href="#L5">L5</a>, <a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://cognition.com/blog/swe-2-flash">cognition.com</a></p></div>
+          <div class="when"><span class="mono">Nov 2026</span><span class="pill">Agents</span></div>
+          <div><h3>Analysts covering the Kubernetes Agent Sandbox project, run under the project's SIG Apps group, reported it is becoming a common way production clusters package and isolate each running AI agent, through a dedicated Sandbox custom resource that manages an agent's lifecycle and network access</h3>
+            <p class="why"><b>Why it matters:</b> giving every running agent its own managed, network-isolated sandbox is a concrete pattern for limiting the damage from one compromised or misbehaving agent, directly relevant before giving any agent you build real tool or shell access (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://forkast.news/kubernetes-agent-sandbox-is-becoming-the-unit-of-agent-deployment/">forkast.news</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,43 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: agent-loop-step-counter, embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost, overfitting-vs-model-size, agent-permission-scope-toy, softmax-temperature-explorer, kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling -->
-        <div class="pgcard pgtopic" data-topic="top-k-top-p-sampling" id="pt-tk">
-          <span class="label">New this refresh · 2026-11-12 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: top-k vs. top-p sampling</h3>
-          <p class="lede">A made-up next-token distribution for a made-up prompt, with invented probabilities — not a real model's output. Drag top-k (keep only the k most-likely tokens) and top-p (keep the smallest prefix whose probabilities sum to at least p) to see which tokens survive and how their shares get renormalized before sampling. Real serving stacks usually combine this with temperature; this toy leaves that out to keep the mechanics visible.</p>
+        <!-- HISTORY: embedding-cosine-similarity, context-window-budget-calculator, tokenization-bpe-merges, secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost, overfitting-vs-model-size, agent-permission-scope-toy, softmax-temperature-explorer, kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid -->
+        <div class="pgcard pgtopic" data-topic="positional-encoding-grid" id="pt-pe">
+          <span class="label">New this refresh · 2026-11-12 · connects to <a href="#L3">L3</a></span>
+          <h3>Toy: sinusoidal positional encoding</h3>
+          <p class="lede">Transformers have no built-in sense of word order, so they add a position signal to each token's vector — classically a mix of sine and cosine waves at different frequencies. This grid shows that signal for a short toy sequence with a tiny, exaggerated dimension count so the pattern is visible; real models use far more dimensions, and some newer architectures use rotary encodings instead, so treat this as a simplified illustration, not an exact reproduction. Drag the sliders, or hover a cell for its exact value.</p>
           <div class="pt-ctl">
-            <label for="pt-tk-k">Top-k</label><input type="range" id="pt-tk-k" min="1" max="8" step="1" value="8" aria-label="Top-k cutoff"><span class="mono" id="pt-tk-k-val">8</span>
-            <label for="pt-tk-p">Top-p</label><input type="range" id="pt-tk-p" min="5" max="100" step="5" value="100" aria-label="Top-p cutoff percent"><span class="mono" id="pt-tk-p-val">100%</span>
+            <label for="pt-pe-n">Sequence length</label><input type="range" id="pt-pe-n" min="4" max="16" step="1" value="10" aria-label="Number of positions"><span class="mono" id="pt-pe-n-val">10</span>
+            <label for="pt-pe-d">Dimension pairs</label><input type="range" id="pt-pe-d" min="2" max="8" step="1" value="4" aria-label="Number of sin/cos dimension pairs"><span class="mono" id="pt-pe-d-val">4 (8 dims)</span>
           </div>
-          <div id="pt-tk-bars"></div>
-          <p class="mono" id="pt-tk-summary"></p>
+          <div id="pt-pe-grid" style="display:grid;gap:2px;overflow-x:auto;padding-bottom:4px"></div>
+          <p class="mono" id="pt-pe-summary"></p>
           <script>(function(){
-          var TOKENS=[["sunny",32],["cloudy",24],["rainy",15],["cold",10],["warm",8],["windy",6],["humid",3],["strange",2]];
-          var kEl=document.getElementById("pt-tk-k"), kVal=document.getElementById("pt-tk-k-val");
-          var pEl=document.getElementById("pt-tk-p"), pVal=document.getElementById("pt-tk-p-val");
-          var barsEl=document.getElementById("pt-tk-bars"), sumEl=document.getElementById("pt-tk-summary");
+          var nEl=document.getElementById("pt-pe-n"), nVal=document.getElementById("pt-pe-n-val");
+          var dEl=document.getElementById("pt-pe-d"), dVal=document.getElementById("pt-pe-d-val");
+          var grid=document.getElementById("pt-pe-grid"), sum=document.getElementById("pt-pe-summary");
           function render(){
-            var k=parseInt(kEl.value,10), p=parseInt(pEl.value,10)/100;
-            kVal.textContent=k; pVal.textContent=Math.round(p*100)+"%";
-            var cum=0, pCount=0, i;
-            for(i=0;i<TOKENS.length;i++){ cum+=TOKENS[i][1]; pCount=i+1; if(cum/100>=p) break; }
-            var keep=Math.min(k,pCount), total=0;
-            for(i=0;i<keep;i++) total+=TOKENS[i][1];
-            barsEl.textContent="";
-            for(i=0;i<TOKENS.length;i++){
-              var row=document.createElement("div"); row.className="pt-row";
-              var label=document.createElement("label"); label.textContent=TOKENS[i][0];
-              var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill";
-              var pct= i<keep ? Math.round(TOKENS[i][1]/total*100) : 0;
-              fill.style.width=pct+"%";
-              track.appendChild(fill);
-              var val=document.createElement("span"); val.className="mono"; val.textContent= i<keep ? pct+"%" : "cut";
-              row.appendChild(label); row.appendChild(track); row.appendChild(val);
-              barsEl.appendChild(row);
+            var n=parseInt(nEl.value,10), pairs=parseInt(dEl.value,10), dims=pairs*2, pos, j;
+            nVal.textContent=n; dVal.textContent=pairs+" ("+dims+" dims)";
+            grid.style.gridTemplateColumns="repeat("+dims+", 22px)";
+            grid.textContent="";
+            for(pos=0; pos<n; pos++){
+              for(j=0; j<dims; j++){
+                var i=Math.floor(j/2);
+                var freq=1/Math.pow(10000, (2*i)/dims);
+                var v=(j%2===0) ? Math.sin(pos*freq) : Math.cos(pos*freq);
+                var pct=Math.round((v+1)/2*100);
+                var cell=document.createElement("div");
+                cell.style.width="22px"; cell.style.height="16px"; cell.style.borderRadius="3px";
+                cell.style.background="color-mix(in srgb, var(--accent) "+pct+"%, var(--surface))";
+                cell.title="pos "+pos+", dim "+j+": "+v.toFixed(2);
+                grid.appendChild(cell);
+              }
             }
-            sumEl.textContent=keep+" of "+TOKENS.length+" tokens survive (top-k="+k+", top-p="+Math.round(p*100)+"%); their original shares are renormalized to sum to 100% before sampling.";
+            sum.textContent=n+" positions × "+dims+" dims. Left columns (low dims) oscillate fast and repeat within a few positions; right columns (high dims) change slowly across the whole sequence — that mix of frequencies is what lets a transformer tell nearby and distant positions apart.";
           }
-          kEl.addEventListener("input", render);
-          pEl.addEventListener("input", render);
+          nEl.addEventListener("input", render);
+          dEl.addEventListener("input", render);
           render();
           })();</script>
         </div>
