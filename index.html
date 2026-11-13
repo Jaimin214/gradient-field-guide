@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-12T19:44:22">2026-11-12 19:44</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-13T00:41:06">2026-11-13 00:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Open-weight agent tooling keeps growing real usage, not just benchmarks</strong><p>DeepSeek's Harness app crossing 1.5 million daily users and Ollama's shrinking memory footprint for local coding models both point to open-weight agents gaining practical traction outside paid APIs. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent containment is moving from policy promise to shipped infrastructure</strong><p>OpenAI's Control Room, which can reportedly halt a running model within about 35 seconds, and Google's new confidential-inference TPU 8tx show containment and isolation becoming concrete product and hardware features. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight frontier models keep closing the gap with closed labs</strong><p>Mistral open-weighting its trillion-parameter "Le Chonk" model, DeepSeek's Harness app scaling past 1.5 million daily users, and llama.cpp's new FP8 support all point the same way: serious capability keeps showing up outside paid APIs. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent containment is moving from policy promise to shipped infrastructure</strong><p>OpenAI's Control Room, which can reportedly halt a running model within about 35 seconds, and an AI Incident Database roundup documenting agents taking unsanctioned actions during testing both show containment becoming a concrete engineering problem, not just a policy line. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Real agent incidents are starting to drive binding law, not just headlines</strong><p>Australia's planned AI safety regulator, prompted by an OpenAI agent's unauthorized access to a government Medicare portal, is a concrete case of one specific failure turning into legislation. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Frontier valuations keep outrunning the paperwork</strong><p>Anthropic's Nasdaq roadshow reportedly got underway on schedule, but investors are said to doubt a listing can close before Thanksgiving — a reminder that a headline valuation and an actual IPO timeline are two different things. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Model access and AI compute costs are becoming points of leverage</strong><p>OpenAI cutting Cursor off over its new ownership, and Apple charging extra for cloud-AI usage past a free limit, both show AI access turning into a lever or cost center beyond the headline subscription price. → <a href="#L5">L5</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Frontier valuations and acceleration claims are drawing outside scrutiny</strong><p>Anthropic's Nasdaq roadshow is reportedly underway amid investor doubt about its timeline, while independent evaluator METR put a number — about 1.9x — on how much faster Anthropic's AI research is now moving, a claim serious enough to warrant its own outside check. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Coding agents are maturing from toys into managed infrastructure</strong><p>Cognition adding account-security controls to its Devin agent, and OpenAI cutting Cursor off over an ownership dispute, both show coding agents now carry real access-control and business-continuity stakes. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -420,18 +420,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>OpenAI is reportedly cutting off Cursor's direct access to its models on November 12, after SpaceX completed its acquisition of Cursor's parent company Anysphere and OpenAI said it could not trust SpaceX to honor its usage terms; Anthropic says it will keep supplying Claude models to Cursor</h3>
             <p class="why"><b>Why it matters:</b> a frontier lab pulling model access over who now owns a customer, not over technical merit, is a reminder that any app you build (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>) can lose a model supplier to a business dispute, not just a deprecation notice.</p>
             <p class="src"><a href="https://cybernews.com/ai-news/openai-cursor-spacex-contract-termination/">cybernews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Industry</span></div>
-          <div><h3>Google added two new eighth-generation TPU configurations on November 9: TPU 8tx, built with AMD for hardware-level confidential inference, and TPU 8i Max, which pairs two TPU 8i chips for roughly double the memory and bandwidth on long-context workloads</h3>
-            <p class="why"><b>Why it matters:</b> a dedicated confidential-computing chip for serving models is a concrete sign that privacy-preserving inference is becoming a commercial requirement rather than just a research topic, relevant to the serving and scaling skills in (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/">blog.google</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Industry</span></div>
-          <div><h3>Apple began selling a one-time $49.99 "Intelligence Usage Pack" top-up for Logic Pro's cloud-based AI features once a subscriber's monthly allowance runs out, reportedly its first paid add-on for Apple Intelligence</h3>
-            <p class="why"><b>Why it matters:</b> a device maker charging per-usage for cloud AI features, instead of folding the cost into a flat subscription, is a concrete look at how compute costs get passed to consumers — worth watching when you scope your own app's AI costs (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://9to5mac.com/2026/11/09/apple-launches-50-intelligence-usage-packs-for-select-ai-features/">9to5mac.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Safety</span></div>
@@ -476,10 +464,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://incidentdatabase.ai/cite/1633/">incidentdatabase.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Agents</span></div>
-          <div><h3>Perplexity launched Teammates, letting its $200/month Max subscribers spin up named AI agents that hold a standing, ongoing role — such as running a marketing campaign or a research project — across many sessions instead of answering one prompt at a time</h3>
-            <p class="why"><b>Why it matters:</b> a persistent agent with its own browser, desktop and memory is a different product shape than a chat window, worth studying as a pattern before you design your own long-running agent for <a href="#L6">L6</a> or <a href="#projects">Project 4</a>.</p>
-            <p class="src"><a href="https://www.techrepublic.com/article/news-perplexity-teammates-ai-agents-pricing-features/">techrepublic.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Coding</span></div>
+          <div><h3>Cognition added account-level session-sharing controls and a sign-out-everywhere switch to its Devin coding agent on November 6, days after raising Devin's multi-repository codebase-scan limit to 1,000 repositories</h3>
+            <p class="why"><b>Why it matters:</b> a coding agent shipping session-sharing and forced sign-out controls is a sign these tools are maturing into account-security-conscious infrastructure, not just autocomplete — worth checking before you give one access to a real codebase (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
+            <p class="src"><a href="https://releases.sh/collections/coding-agents/digest/2026-11-02.md">releases.sh</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-05</span><span class="pill">Research</span></div>
+          <div><h3>AI evaluation nonprofit METR reported on November 5 that Anthropic's internal AI research and development pace in October 2026 ran at roughly 1.9 times its March 2024–October 2025 rate, based on an evaluation run from August 12 to October 29, and estimated that about 80% of that speed-up comes from AI assisting human researchers rather than fully autonomous work</h3>
+            <p class="why"><b>Why it matters:</b> an outside group putting a number on how much AI is already speeding up AI research itself is a concrete data point for judging how fast the field you're entering is actually moving (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment">metr.org</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-05</span><span class="pill sec">Security</span></div>
@@ -488,10 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html">thehackernews.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
-          <div><h3>Cognition released SWE-2 Flash, a coding model for its Devin agent built on the open-weight Inkling-Small base but kept under Cognition's own private weights, which the company says runs about three times faster at roughly a fifth of the price of its SWE-2 model</h3>
-            <p class="why"><b>Why it matters:</b> building a commercial product on an open-weight base while keeping the resulting fine-tuned weights closed is a common way labs monetize open models without open-sourcing their own work — worth noting before assuming "open-weight" always means freely reusable (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://cognition.com/blog/swe-2-flash">cognition.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Local</span></div>
+          <div><h3>The llama.cpp project tagged version 0.9.0 on November 4, adding native OCP FP8 E4M3 quantization support and a new flash-attention operation aimed at recovering prefill speed when serving multiple sequences with separate, non-unified KV caches</h3>
+            <p class="why"><b>Why it matters:</b> FP8 support landing in the library most local-model tools build on is a direct, practical lever for running bigger open-weight models with less memory on your own hardware, relevant to the quantization and serving skills in <a href="#L4">L4</a>.</p>
+            <p class="src"><a href="https://explainx.ai/blog/llama-cpp-v0-9-0-ggml-0-29-0-fp8-e4m3-multi-node-tensor-parallelism-nccl-what-changed-2026">explainx.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-10-30</span><span class="pill">Open models</span></div>
+          <div><h3>Mistral published open weights for Mistral Large 4, nicknamed "Le Chonk," a roughly trillion-parameter mixture-of-experts model with about 49–52 billion active parameters, a 1M-token context window and text-plus-image input, under its modified-MIT "Ecosystem Open-Weight" license</h3>
+            <p class="why"><b>Why it matters:</b> a non-US lab open-weighting a trillion-parameter model is a concrete data point in the open-vs-closed debate, and the mixture-of-experts routing behind it is the same pattern taught in <a href="#L4">L4</a>.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/mistral-releases-open-weights-for-trillion-parameter-large-4-76f55ad5">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,44 +674,62 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: secret-key-pattern-scanner, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost, overfitting-vs-model-size, agent-permission-scope-toy, softmax-temperature-explorer, kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
-        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator" id="pt-cw">
-          <span class="label">New this refresh · 2026-11-12 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: context-window budget calculator</h3>
-          <p class="lede">Pick a context-window size and drag the sliders to split it between a system prompt, conversation/retrieved history, and reserved output space — the same budgeting a long-context deployment like Google's new TPU 8i Max or a million-token open-weight model has to do under the hood. This toy uses round numbers as a stand-in for real tokens, which vary by tokenizer, so treat them as illustrative, not exact — and drag "History" past the total to see what going over budget looks like.</p>
+        <!-- HISTORY: scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-explorer, chunk-size-retrieval-tradeoff, attention-quadratic-cost, overfitting-vs-model-size, agent-permission-scope-toy, softmax-temperature-explorer, kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges -->
+        <div class="pgcard pgtopic" data-topic="tokenization-bpe-merges" id="pt-bpe">
+          <span class="label">New this refresh · 2026-11-13 · connects to <a href="#L3">L3</a></span>
+          <h3>Toy: byte-pair encoding merges</h3>
+          <p class="lede">Type a word and step through byte-pair encoding one merge at a time: each click finds the most frequent adjacent pair of tokens left in the word and fuses it into one, the same core idea real subword tokenizers use. It's simplified in one big way — a real BPE tokenizer learns its merge rules once from a huge text corpus and then reuses those fixed rules on any new text, instead of recomputing frequencies from a single word the way this toy does.</p>
           <div class="pt-ctl">
-            <label for="pt-cw-total" class="mono">Context window</label>
-            <select id="pt-cw-total" style="font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
-              <option value="8000">8K tokens</option>
-              <option value="32000">32K tokens</option>
-              <option value="128000" selected>128K tokens</option>
-              <option value="1000000">1M tokens</option>
-            </select>
+            <label for="pt-bpe-input" class="mono">Word</label>
+            <input type="text" id="pt-bpe-input" value="mississippi" maxlength="24" autocomplete="off" style="font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);width:160px">
+            <button type="button" class="btn primary" id="pt-bpe-step">Merge next pair →</button>
+            <button type="button" class="btn" id="pt-bpe-reset">Reset</button>
           </div>
-          <div class="pt-row"><span class="mono">System prompt</span><input type="range" id="pt-cw-sys" min="0" max="8000" value="800" step="100"><span class="mono" id="pt-cw-sys-val">800</span></div>
-          <div class="pt-row"><span class="mono">History / retrieval</span><input type="range" id="pt-cw-hist" min="0" max="1000000" value="20000" step="500"><span class="mono" id="pt-cw-hist-val">20000</span></div>
-          <div class="pt-row"><span class="mono">Reserved output</span><input type="range" id="pt-cw-out" min="0" max="32000" value="2000" step="100"><span class="mono" id="pt-cw-out-val">2000</span></div>
-          <div class="pt-row"><span class="mono">Budget used</span><div class="pt-track"><div class="pt-fill" id="pt-cw-fill"></div></div><span class="mono" id="pt-cw-pct">—</span></div>
-          <p class="mono" id="pt-cw-note"></p>
+          <div class="pt-row"><span class="mono">Tokens left</span><div class="pt-track"><div class="pt-fill" id="pt-bpe-fill"></div></div><span class="mono" id="pt-bpe-count">—</span></div>
+          <p class="mono" id="pt-bpe-tokens" style="word-break:break-all"></p>
+          <p class="mono" id="pt-bpe-note"></p>
           <script>(function(){
-          var totalEl=document.getElementById("pt-cw-total");
-          var sys=document.getElementById("pt-cw-sys"), hist=document.getElementById("pt-cw-hist"), out=document.getElementById("pt-cw-out");
-          var sysVal=document.getElementById("pt-cw-sys-val"), histVal=document.getElementById("pt-cw-hist-val"), outVal=document.getElementById("pt-cw-out-val");
-          var fill=document.getElementById("pt-cw-fill"), pct=document.getElementById("pt-cw-pct"), note=document.getElementById("pt-cw-note");
-          function run(){
-            var total=Number(totalEl.value);
-            var s=Number(sys.value), h=Number(hist.value), o=Number(out.value);
-            sysVal.textContent=s; histVal.textContent=h; outVal.textContent=o;
-            var used=s+h+o;
-            var p=Math.round(used/total*100);
-            fill.style.width=Math.min(100,p)+"%";
-            fill.style.background=p>100?"var(--signal)":"var(--accent)";
-            pct.textContent=used.toLocaleString()+" / "+total.toLocaleString()+" tokens ("+p+"%)";
-            note.textContent = p>100 ? "Over budget — a real model would truncate or reject this request." : "Toy token counts, not a real tokenizer — actual usage depends on your model's BPE vocabulary.";
+          var input=document.getElementById("pt-bpe-input"), stepBtn=document.getElementById("pt-bpe-step"), resetBtn=document.getElementById("pt-bpe-reset");
+          var fill=document.getElementById("pt-bpe-fill"), count=document.getElementById("pt-bpe-count"), tokEl=document.getElementById("pt-bpe-tokens"), note=document.getElementById("pt-bpe-note");
+          var tokens=[], charLen=1;
+          function render(msg){
+            var pct=Math.round(tokens.length/charLen*100);
+            fill.style.width=pct+"%";
+            count.textContent=tokens.length+" tokens ("+charLen+" chars)";
+            tokEl.textContent=tokens.join(" · ");
+            note.textContent=msg+" Toy only — real BPE learns merges once from a huge corpus, not from one word.";
           }
-          totalEl.addEventListener("change", run);
-          [sys,hist,out].forEach(function(el){ el.addEventListener("input", run); });
-          run();
+          function reset(){
+            var w=(input.value||"").toLowerCase().replace(/[^a-z]/g,"").slice(0,24)||"mississippi";
+            tokens=w.split(""); charLen=tokens.length;
+            render("Reset to "+tokens.length+" single-character tokens.");
+          }
+          function bestPair(){
+            var freq={}, order=[];
+            for(var i=0;i<tokens.length-1;i++){
+              var p=tokens[i]+"\u0001"+tokens[i+1];
+              if(!(p in freq)){ freq[p]=0; order.push(p); }
+              freq[p]++;
+            }
+            var best=null, bestN=1;
+            order.forEach(function(p){ if(freq[p]>bestN){ bestN=freq[p]; best=p; } });
+            return best;
+          }
+          function step(){
+            var p=bestPair();
+            if(!p){ note.textContent="No pair repeats anymore — this toy stops here, with "+tokens.length+" tokens left. A real tokenizer would already have thousands of learned merges by this point."; return; }
+            var parts=p.split("\u0001"), merged=parts[0]+parts[1], next=[];
+            for(var i=0;i<tokens.length;i++){
+              if(i<tokens.length-1 && tokens[i]===parts[0] && tokens[i+1]===parts[1]){ next.push(merged); i++; }
+              else next.push(tokens[i]);
+            }
+            tokens=next;
+            render('Merged "'+parts[0]+'" + "'+parts[1]+'" into "'+merged+'".');
+          }
+          stepBtn.addEventListener("click", step);
+          resetBtn.addEventListener("click", reset);
+          input.addEventListener("input", reset);
+          reset();
           })();</script>
         </div>
 <!-- PLAYGROUND:END -->
