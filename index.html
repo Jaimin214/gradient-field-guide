@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-14T00:41:51">2026-11-14 00:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-14T05:38:29">2026-11-14 05:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -674,52 +674,57 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: attention-quadratic-cost, overfitting-vs-model-size, agent-permission-scope-toy, softmax-temperature-explorer, kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve -->
-        <div class="pgcard pgtopic" data-topic="learning-rate-schedule-curve" id="pt-lr">
-          <span class="label">New this refresh · 2026-11-14 · connects to <a href="#L2">L2</a></span>
-          <h3>Toy: learning-rate schedules</h3>
-          <p class="lede">Training steps through a fixed number of updates, and the learning rate — how big each step is — usually changes on a schedule instead of staying fixed. Pick a schedule and drag the step slider to see the rate at that point and a made-up, illustrative loss curve. Simplified: the "loss" here is one smooth toy formula, not a real model's training run, so read the numbers as shape, not result.</p>
+        <!-- HISTORY: overfitting-vs-model-size, agent-permission-scope-toy, softmax-temperature-explorer, kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval" id="pt-ck">
+          <span class="label">New this refresh · 2026-11-14 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: chunk size vs. retrieval</h3>
+          <p class="lede">RAG apps split documents into chunks before search, and chunk size changes what gets retrieved. This toy splits a five-sentence, five-topic paragraph into equal-size word chunks and scores each chunk against your query by counting shared words — no real embeddings. Drag the slider wider and watch the best-matching chunk fill up with off-topic "padding" from neighboring sentences; make it narrow and chunks start losing surrounding context instead.</p>
           <div class="pt-ctl">
-            <button type="button" class="btn" id="pt-lr-constant">Constant</button>
-            <button type="button" class="btn" id="pt-lr-step">Step decay</button>
-            <button type="button" class="btn primary" id="pt-lr-cosine">Cosine decay</button>
+            <label for="pt-ck-size" class="mono">Chunk size</label><input type="range" id="pt-ck-size" min="6" max="48" step="2" value="14"><span class="mono" id="pt-ck-sizeval">14w</span>
+            <label for="pt-ck-query" class="mono">Query</label><input type="text" id="pt-ck-query" value="tokenization merges" class="mono" style="padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
           </div>
-          <div class="pt-row"><label for="pt-lr-step-slider" class="mono">Step</label><input type="range" id="pt-lr-step-slider" min="0" max="100" step="1" value="0"><span class="mono" id="pt-lr-stepval">0 / 100</span></div>
-          <div class="pt-track"><div class="pt-fill" id="pt-lr-ratefill"></div></div>
-          <p class="pt-ctl mono">Learning rate: <strong id="pt-lr-rateval">—</strong> <span>Toy loss: <strong id="pt-lr-lossval">—</strong></span></p>
+          <div id="pt-ck-chunks"></div>
+          <p class="mono" id="pt-ck-readout"></p>
           <script>(function(){
-          var base=0.1, schedule="cosine";
-          var btns={constant:document.getElementById("pt-lr-constant"),step:document.getElementById("pt-lr-step"),cosine:document.getElementById("pt-lr-cosine")};
-          var slider=document.getElementById("pt-lr-step-slider"), stepval=document.getElementById("pt-lr-stepval");
-          var fill=document.getElementById("pt-lr-ratefill"), rateval=document.getElementById("pt-lr-rateval"), lossval=document.getElementById("pt-lr-lossval");
-          function rateAt(s){
-            var t=s/100;
-            if(schedule==="constant") return base;
-            if(schedule==="step") return base*(t<0.33?1:t<0.66?0.3:0.1);
-            return base*0.5*(1+Math.cos(Math.PI*t));
-          }
-          function lossAt(s){
-            var decay=0;
-            for(var i=0;i<=s;i++){ decay += rateAt(i); }
-            return (2*Math.exp(-decay*0.08)+0.05).toFixed(3);
-          }
+          var CORPUS="Mixture of experts models route each token to a handful of specialized sub networks instead of running the whole model every time. Tokenization splits text into subword pieces using byte pair encoding merges learned from frequent character pairs. Agent safety research studies how to keep autonomous systems inside the boundaries their operators intended. Quantization shrinks model weights to fewer bits to save memory during local inference. Retrieval augmented generation finds relevant passages before the model writes an answer.";
+          var words=CORPUS.split(/\s+/);
+          var sizeEl=document.getElementById("pt-ck-size"), sizeval=document.getElementById("pt-ck-sizeval");
+          var queryEl=document.getElementById("pt-ck-query"), chunksEl=document.getElementById("pt-ck-chunks"), readoutEl=document.getElementById("pt-ck-readout");
           function render(){
-            var s=Number(slider.value), r=rateAt(s);
-            stepval.textContent=s+" / 100";
-            rateval.textContent=r.toFixed(4);
-            lossval.textContent=lossAt(s);
-            fill.style.width=Math.round((r/base)*100)+"%";
+            var n=parseInt(sizeEl.value,10);
+            sizeval.textContent=n+"w";
+            var qWords=queryEl.value.toLowerCase().split(/\s+/).filter(Boolean);
+            var chunks=[];
+            for(var i=0;i<words.length;i+=n) chunks.push(words.slice(i,i+n));
+            var bestIdx=0, bestScore=-1;
+            var scores=chunks.map(function(c,idx){
+              var lower=c.map(function(w){ return w.toLowerCase().replace(/[^a-z]/g,""); });
+              var score=qWords.reduce(function(s,qw){ return s+(lower.indexOf(qw)>=0?1:0); },0);
+              if(score>bestScore){ bestScore=score; bestIdx=idx; }
+              return score;
+            });
+            chunksEl.textContent="";
+            chunks.forEach(function(c,idx){
+              var row=document.createElement("div");
+              row.className="pt-row";
+              row.style.gridTemplateColumns="70px 1fr 44px";
+              var label=document.createElement("span"); label.className="mono"; label.textContent="chunk "+(idx+1);
+              var track=document.createElement("div"); track.className="pt-track";
+              var fill=document.createElement("div"); fill.className="pt-fill";
+              fill.style.width=Math.round(scores[idx]/Math.max(1,qWords.length)*100)+"%";
+              if(idx===bestIdx) fill.style.background="var(--good)";
+              track.appendChild(fill);
+              var count=document.createElement("span"); count.className="mono"; count.textContent=c.length+"w";
+              row.appendChild(label); row.appendChild(track); row.appendChild(count);
+              chunksEl.appendChild(row);
+            });
+            var retrieved=chunks[bestIdx]||[];
+            var padding=retrieved.length-bestScore;
+            readoutEl.textContent="Retrieved chunk "+(bestIdx+1)+": "+retrieved.length+" words, "+bestScore+" query-word match(es), "+padding+" words of off-topic padding riding along.";
           }
-          function setSchedule(name){
-            schedule=name;
-            for(var k in btns){ btns[k].classList.toggle("primary", k===name); }
-            render();
-          }
-          btns.constant.addEventListener("click", function(){ setSchedule("constant"); });
-          btns.step.addEventListener("click", function(){ setSchedule("step"); });
-          btns.cosine.addEventListener("click", function(){ setSchedule("cosine"); });
-          slider.addEventListener("input", render);
-          setSchedule("cosine");
+          sizeEl.addEventListener("input", render);
+          queryEl.addEventListener("input", render);
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
