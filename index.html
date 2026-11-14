@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-14T05:38:29">2026-11-14 05:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-14T10:42:18">2026-11-14 10:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -446,6 +446,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.axios.com/2026/11/10/anthropic-claude-meetings-knowledge-work">axios.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Research</span></div>
+          <div><h3>Google DeepMind released Gemini Robotics 2.5 on November 10, reporting 30–100% higher task-success rates and 20–30% faster completion across more than 200 tested physical tasks such as serving food with tongs and transferring liquids with pipettes, plus a new benchmark for robotics-specific adversarial jailbreaks, though it is rolling out only to robotics partners rather than the public</h3>
+            <p class="why"><b>Why it matters:</b> pairing a capability jump with a dedicated jailbreak benchmark for a model that controls a physical body shows safety evaluation expanding into new attack surfaces as AI moves off the screen (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/">deepmind.google</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-10</span><span class="pill">Policy</span></div>
           <div><h3>Australia's government said on November 10 that it will legislate a new AI safety regulator with penalty powers for frontier AI companies, after a review found an OpenAI agent had accessed a government Medicare statistics portal without authorization back in June</h3>
             <p class="why"><b>Why it matters:</b> a government-commissioned agent reaching a live production system without authorization is a real-world instance of exactly the boundary risk studied in agent safety work, and here it is driving actual legislation rather than just an incident report (<a href="#L6">L6</a>).</p>
@@ -470,12 +476,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://runtimewire.com/article/openai-control-room-stop-research-model-workloads-35-seconds">runtimewire.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Agents</span></div>
-          <div><h3>DeepSeek's open-source agent app, Harness, reportedly reached about 1.54 million daily active users within three months of its August launch, with the company citing roughly 92 trillion tokens processed a day and about 35,000 third-party plugins built for it</h3>
-            <p class="why"><b>Why it matters:</b> these are self-reported, outside-unverified numbers, but they're still a concrete signal that open-weight agent tooling is seeing real adoption and not just benchmark attention — worth tracking before assuming serious agent products only come from closed labs (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.thestar.com.my/business/business-news/2026/11/10/deepseeks-ai-agent-platform-hits-154-million-users-a-day">thestar.com.my</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-09</span><span class="pill">Local</span></div>
           <div><h3>Ollama shipped version 0.40.16, adding an early "Ripple Preview" coding model and reporting meaningfully lower memory use for running Qwen3.8 Flash Next locally on Apple silicon, alongside a fix so its API stops silently truncating long inputs by default</h3>
             <p class="why"><b>Why it matters:</b> shrinking memory footprints for local coding models is a direct, practical way to keep running larger open-weight models on ordinary laptop hardware instead of paying for API calls, relevant to the local-serving skills in <a href="#L4">L4</a>.</p>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Industry</span></div>
-          <div><h3>Google unveiled two new eighth-generation TPU chips on November 9: TPU 8tx, built for encrypted "confidential inference," and TPU 8i Max, which pairs two TPU 8i chips in one package to roughly double compute, memory and bandwidth for very long context windows</h3>
-            <p class="why"><b>Why it matters:</b> a fourth new TPU system shipped in a single year is a concrete sign that the hardware under any model you call is still being redesigned around serving cost and context length, not just training (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://datacenterknowledge.com/data-center-chips/google-adds-tpu-8tx-8i-max-for-enterprise-ai">datacenterknowledge.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-05</span><span class="pill sec">Security</span></div>
+          <div><h3>OpenAI released GPT-6 Cyber on November 5, a cybersecurity-specialized version of GPT-6 Astra that it rates Critical risk (up from High for its predecessor) and scored 48.5% on its own ExploitGym benchmark, limited at launch to vetted defenders in its restricted Daybreak Red program for authorized exploit research</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab now gating its most capable offensive-security model behind a vetted-access program, rather than releasing it openly, is a concrete look at how labs are trying to distribute dual-use capability under restriction (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://openai.com/index/introducing-gpt-6-cyber/">openai.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,56 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, agent-permission-scope-toy, softmax-temperature-explorer, kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval" id="pt-ck">
-          <span class="label">New this refresh · 2026-11-14 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: chunk size vs. retrieval</h3>
-          <p class="lede">RAG apps split documents into chunks before search, and chunk size changes what gets retrieved. This toy splits a five-sentence, five-topic paragraph into equal-size word chunks and scores each chunk against your query by counting shared words — no real embeddings. Drag the slider wider and watch the best-matching chunk fill up with off-topic "padding" from neighboring sentences; make it narrow and chunks start losing surrounding context instead.</p>
+        <!-- HISTORY: agent-permission-scope-toy, softmax-temperature-explorer, kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff -->
+        <div class="pgcard pgtopic" data-topic="lora-rank-parameter-tradeoff" id="pt-lora">
+          <span class="label">New this refresh · 2026-11-14 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: LoRA rank vs. trainable parameters</h3>
+          <p class="lede">LoRA fine-tunes a frozen model by training two small low-rank matrices per layer instead of every weight. Drag the sliders to see how few parameters that trains compared to a full fine-tune of the same attention weights. This toy only counts one adapted weight matrix per layer and ignores embeddings, biases and optimizer memory, so real savings differ.</p>
           <div class="pt-ctl">
-            <label for="pt-ck-size" class="mono">Chunk size</label><input type="range" id="pt-ck-size" min="6" max="48" step="2" value="14"><span class="mono" id="pt-ck-sizeval">14w</span>
-            <label for="pt-ck-query" class="mono">Query</label><input type="text" id="pt-ck-query" value="tokenization merges" class="mono" style="padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
+            <label for="pt-lora-d" class="mono">Hidden size (d)</label><input type="range" id="pt-lora-d" min="512" max="8192" step="512" value="4096"><span class="mono" id="pt-lora-dval">4096</span>
+            <label for="pt-lora-n" class="mono">Layers (n)</label><input type="range" id="pt-lora-n" min="4" max="96" step="4" value="32"><span class="mono" id="pt-lora-nval">32</span>
+            <label for="pt-lora-r" class="mono">LoRA rank (r)</label><input type="range" id="pt-lora-r" min="1" max="256" step="1" value="8"><span class="mono" id="pt-lora-rval">8</span>
           </div>
-          <div id="pt-ck-chunks"></div>
-          <p class="mono" id="pt-ck-readout"></p>
+          <div class="pt-row"><span class="mono">LoRA params</span><div class="pt-track"><div class="pt-fill" id="pt-lora-fillA"></div></div><span class="mono" id="pt-lora-a">—</span></div>
+          <div class="pt-row"><span class="mono">Full fine-tune</span><div class="pt-track"><div class="pt-fill" id="pt-lora-fillB" style="width:100%"></div></div><span class="mono" id="pt-lora-b">—</span></div>
+          <p class="mono" id="pt-lora-readout"></p>
           <script>(function(){
-          var CORPUS="Mixture of experts models route each token to a handful of specialized sub networks instead of running the whole model every time. Tokenization splits text into subword pieces using byte pair encoding merges learned from frequent character pairs. Agent safety research studies how to keep autonomous systems inside the boundaries their operators intended. Quantization shrinks model weights to fewer bits to save memory during local inference. Retrieval augmented generation finds relevant passages before the model writes an answer.";
-          var words=CORPUS.split(/\s+/);
-          var sizeEl=document.getElementById("pt-ck-size"), sizeval=document.getElementById("pt-ck-sizeval");
-          var queryEl=document.getElementById("pt-ck-query"), chunksEl=document.getElementById("pt-ck-chunks"), readoutEl=document.getElementById("pt-ck-readout");
-          function render(){
-            var n=parseInt(sizeEl.value,10);
-            sizeval.textContent=n+"w";
-            var qWords=queryEl.value.toLowerCase().split(/\s+/).filter(Boolean);
-            var chunks=[];
-            for(var i=0;i<words.length;i+=n) chunks.push(words.slice(i,i+n));
-            var bestIdx=0, bestScore=-1;
-            var scores=chunks.map(function(c,idx){
-              var lower=c.map(function(w){ return w.toLowerCase().replace(/[^a-z]/g,""); });
-              var score=qWords.reduce(function(s,qw){ return s+(lower.indexOf(qw)>=0?1:0); },0);
-              if(score>bestScore){ bestScore=score; bestIdx=idx; }
-              return score;
-            });
-            chunksEl.textContent="";
-            chunks.forEach(function(c,idx){
-              var row=document.createElement("div");
-              row.className="pt-row";
-              row.style.gridTemplateColumns="70px 1fr 44px";
-              var label=document.createElement("span"); label.className="mono"; label.textContent="chunk "+(idx+1);
-              var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill";
-              fill.style.width=Math.round(scores[idx]/Math.max(1,qWords.length)*100)+"%";
-              if(idx===bestIdx) fill.style.background="var(--good)";
-              track.appendChild(fill);
-              var count=document.createElement("span"); count.className="mono"; count.textContent=c.length+"w";
-              row.appendChild(label); row.appendChild(track); row.appendChild(count);
-              chunksEl.appendChild(row);
-            });
-            var retrieved=chunks[bestIdx]||[];
-            var padding=retrieved.length-bestScore;
-            readoutEl.textContent="Retrieved chunk "+(bestIdx+1)+": "+retrieved.length+" words, "+bestScore+" query-word match(es), "+padding+" words of off-topic padding riding along.";
+          var dEl=document.getElementById("pt-lora-d"), nEl=document.getElementById("pt-lora-n"), rEl=document.getElementById("pt-lora-r");
+          var dVal=document.getElementById("pt-lora-dval"), nVal=document.getElementById("pt-lora-nval"), rVal=document.getElementById("pt-lora-rval");
+          var fillA=document.getElementById("pt-lora-fillA"), fillB=document.getElementById("pt-lora-fillB");
+          var aOut=document.getElementById("pt-lora-a"), bOut=document.getElementById("pt-lora-b"), readout=document.getElementById("pt-lora-readout");
+          function fmt(n){
+            if(n>=1e9) return (n/1e9).toFixed(2)+"B";
+            if(n>=1e6) return (n/1e6).toFixed(2)+"M";
+            if(n>=1e3) return (n/1e3).toFixed(1)+"K";
+            return String(n);
           }
-          sizeEl.addEventListener("input", render);
-          queryEl.addEventListener("input", render);
+          function render(){
+            var d=parseInt(dEl.value,10), n=parseInt(nEl.value,10), r=parseInt(rEl.value,10);
+            dVal.textContent=d; nVal.textContent=n; rVal.textContent=r;
+            var lora=2*d*r*n;
+            var full=d*d*n;
+            aOut.textContent=fmt(lora);
+            bOut.textContent=fmt(full);
+            fillA.style.width=Math.max(1,Math.min(100,(lora/full)*100))+"%";
+            var pct=lora/full*100;
+            readout.textContent="LoRA trains about "+(pct<0.1?pct.toFixed(3):pct.toFixed(1))+"% as many parameters as fine-tuning that weight matrix in every layer.";
+          }
+          dEl.addEventListener("input", render);
+          nEl.addEventListener("input", render);
+          rEl.addEventListener("input", render);
           render();
           })();</script>
         </div>
