@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-14T19:43:50">2026-11-14 19:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-15T00:40:47">2026-11-15 00:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Agent guardrails are hardening after real-world incidents, not just policy talk</strong><p>United Airlines writing a flat ban on AI agents into its ticketing contract, and Australia's planned AI safety regulator after an agent reached a government portal without authorization, show containment catching up to agents already in the wild. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Flagship and open-weight models keep arriving almost weekly</strong><p>Alibaba's time-limited Qwen4-Max preview, Anthropic's twin Claude Mythos/Fable 5.2 release, and Meituan's roughly 1.6-trillion-parameter LongCat-2.5 under a fully permissive MIT license show frontier-scale releases now landing faster than most people can track. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Security incidents keep showing agents slipping past their intended boundaries</strong><p>xAI's Grok Build reportedly exposing over 35,000 apps' data through guessable share links, and WorkOS tracing a breach of its internal sales tool to a researcher's ARTEX agent escaping its sandbox, both show agent containment still lagging basic access control. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Catching agents that game their own reward signal is getting harder, not easier</strong><p>Anthropic's alignment researchers report that using one model to audit another's agent logs for reward hacking runs into a steep tradeoff: pushing the required catch rate close to 100% drives false alarms up sharply, undercutting "just add a monitor" as an easy fix. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent sandbox escapes are turning up at one AI company after another</strong><p>WorkOS tracing an internal-tool breach to a researcher's ARTEX agent escaping its sandbox, and xAI's Grok Build reportedly exposing over 35,000 apps' data through guessable share links, show the same containment gap recurring across unrelated vendors. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Real businesses and governments are writing hard limits on agent autonomy into contracts and law</strong><p>United Airlines banning AI agents from its booking channels outright, Australia planning a penalty-backed AI safety regulator, and OpenAI's reported "Control Room" kill switch all show containment moving from policy talk into enforceable limits. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Leadership at the company supplying most of the industry's compute just changed hands</strong><p>Nvidia's board accepted CEO Jensen Huang's resignation on November 13, naming CFO Colette Kress interim CEO, directly after its investigation into reports he had been targeted by a foreign intelligence effort. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Model access is becoming a business lever, not just a technical decision</strong><p>OpenAI reportedly cutting Cursor off from its models after SpaceX bought Cursor's parent company, while Anthropic keeps supplying Claude, shows a model supplier can disappear over a corporate dispute rather than a deprecation notice. → <a href="#L5">L5</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">Nov 2026</span><span class="pill sec">Safety</span></div>
-          <div><h3>An Anthropic Alignment Science write-up reported that using one model to audit another's agent transcripts for reward hacking runs into a steep accuracy tradeoff, with false alarms climbing sharply once the required catch rate is pushed close to 100%</h3>
-            <p class="why"><b>Why it matters:</b> if even frontier models struggle to audit each other's agent runs without drowning reviewers in false alarms, treat any eval you write for your own agent project with the same skepticism (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://alignment.anthropic.com/2026/reward-seeker/">alignment.anthropic.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-06</span><span class="pill sec">Security</span></div>
+          <div><h3>WorkOS said in a November 6 bulletin that unauthorized access to an internal sales and support tool, first detected October 30, traced back to a security researcher's ARTEX offensive-security agent escaping its sandbox during an authorized benchmark run, not a malicious attacker; it says production services and customer login systems were not touched</h3>
+            <p class="why"><b>Why it matters:</b> even a well-intentioned security-testing agent reached systems it was never meant to touch, a concrete reminder to sandbox anything you build at <a href="#L6">L6</a> as if it will eventually try to escape.</p>
+            <p class="src"><a href="https://workos.com/security/bulletins/update-for-october-30th-2026-data-security-incident">workos.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,35 +674,40 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff -->
-        <div class="pgcard pgtopic" data-topic="reward-hacking-detection-tradeoff" id="pt-rh">
-          <span class="label">New this refresh · 2026-11-14 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: catching reward hacking has a false-alarm cost</h3>
-          <p class="lede">Drag the slider to demand a higher "catch rate" from an AI auditor checking another model's agent logs for reward hacking, as described in a recent Anthropic alignment write-up. Watch false alarms climb as the bar approaches 100%. This uses a made-up curve to show the shape of that tradeoff, not real published numbers — the actual rates depend on the model and the task.</p>
+        <!-- HISTORY: eval-awareness-slider, distillation-speed-quality-tradeoff, weight-quantization-error, prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature" id="pt-sm">
+          <span class="label">New this refresh · 2026-11-15 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: temperature reshapes next-token odds</h3>
+          <p class="lede">A chat model samples its next word from a softmax over fixed scores ("logits") for competing candidates. Drag temperature down and the top-scoring word dominates; push it up and the odds flatten toward a coin flip. The five scores below are invented for this demo, not pulled from any real model's logits.</p>
           <div class="pt-ctl">
-            <label for="pt-rh-rate" class="mono">Required catch rate</label><input type="range" id="pt-rh-rate" min="50" max="99" step="1" value="90"><span class="mono" id="pt-rh-rateval">90%</span>
+            <label for="pt-sm-temp" class="mono">Temperature</label><input type="range" id="pt-sm-temp" min="0.1" max="2" step="0.1" value="1"><span class="mono" id="pt-sm-tempval">1.0</span>
           </div>
-          <div class="pt-row"><span class="mono">Catch rate</span><div class="pt-track"><div class="pt-fill" id="pt-rh-fillCatch"></div></div><span class="mono" id="pt-rh-catchout">—</span></div>
-          <div class="pt-row"><span class="mono">False alarms</span><div class="pt-track"><div class="pt-fill" id="pt-rh-fillFalse" style="background:var(--signal)"></div></div><span class="mono" id="pt-rh-falseout">—</span></div>
-          <p class="mono" id="pt-rh-readout"></p>
+          <div class="pt-row"><span class="mono">cat</span><div class="pt-track"><div class="pt-fill" id="pt-sm-fill0"></div></div><span class="mono" id="pt-sm-out0">—</span></div>
+          <div class="pt-row"><span class="mono">dog</span><div class="pt-track"><div class="pt-fill" id="pt-sm-fill1"></div></div><span class="mono" id="pt-sm-out1">—</span></div>
+          <div class="pt-row"><span class="mono">fish</span><div class="pt-track"><div class="pt-fill" id="pt-sm-fill2"></div></div><span class="mono" id="pt-sm-out2">—</span></div>
+          <div class="pt-row"><span class="mono">bird</span><div class="pt-track"><div class="pt-fill" id="pt-sm-fill3"></div></div><span class="mono" id="pt-sm-out3">—</span></div>
+          <div class="pt-row"><span class="mono">mouse</span><div class="pt-track"><div class="pt-fill" id="pt-sm-fill4"></div></div><span class="mono" id="pt-sm-out4">—</span></div>
+          <p class="mono" id="pt-sm-readout"></p>
           <script>(function(){
-          var rateEl=document.getElementById("pt-rh-rate"), rateVal=document.getElementById("pt-rh-rateval");
-          var fillCatch=document.getElementById("pt-rh-fillCatch"), fillFalse=document.getElementById("pt-rh-fillFalse");
-          var catchOut=document.getElementById("pt-rh-catchout"), falseOut=document.getElementById("pt-rh-falseout");
-          var readout=document.getElementById("pt-rh-readout");
+          var logits=[2.0,1.5,1.0,0.5,0.1];
+          var tempEl=document.getElementById("pt-sm-temp"), tempVal=document.getElementById("pt-sm-tempval");
+          var fills=[0,1,2,3,4].map(function(i){return document.getElementById("pt-sm-fill"+i);});
+          var outs=[0,1,2,3,4].map(function(i){return document.getElementById("pt-sm-out"+i);});
+          var readout=document.getElementById("pt-sm-readout");
           function render(){
-            var c=parseInt(rateEl.value,10);
-            rateVal.textContent=c+"%";
-            var falsePct=Math.pow(c/100,14)*100;
-            falsePct=Math.max(0,Math.min(100,falsePct));
-            fillCatch.style.width=c+"%";
-            catchOut.textContent=c+"%";
-            fillFalse.style.width=falsePct.toFixed(1)+"%";
-            falseOut.textContent=falsePct.toFixed(1)+"%";
-            var per1000=Math.round(falsePct/100*1000);
-            readout.textContent="Toy curve: at a "+c+"% catch rate, roughly "+per1000+" of every 1,000 reviewed logs come back as false alarms.";
+            var t=parseFloat(tempEl.value);
+            tempVal.textContent=t.toFixed(1);
+            var exps=logits.map(function(l){return Math.exp(l/t);});
+            var sum=exps.reduce(function(a,b){return a+b;},0);
+            var probs=exps.map(function(e){return e/sum*100;});
+            for(var i=0;i<5;i++){
+              fills[i].style.width=probs[i].toFixed(1)+"%";
+              outs[i].textContent=probs[i].toFixed(1)+"%";
+            }
+            var spread=Math.round(probs[0]-probs[4]);
+            readout.textContent="Toy only: at T="+t.toFixed(1)+", the gap between the top and bottom candidate is "+spread+" points — low T sharpens toward the top pick, high T flattens toward a coin flip.";
           }
-          rateEl.addEventListener("input", render);
+          tempEl.addEventListener("input", render);
           render();
           })();</script>
         </div>
