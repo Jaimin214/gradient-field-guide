@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-15T15:43:50">2026-11-15 15:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-15T19:43:06">2026-11-15 19:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,10 +396,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
+        <div><span class="state rising">Rising</span><strong>Google is splitting its flagship into a portfolio of task-specialized Gemini 4 models</strong><p>Gemini 4 Carbon's broad rollout to AI Ultra subscribers and paying developers landed one day before the narrow, non-generative Gemini Decision 1 model shipped for scoring closed-set questions, showing frontier labs now shipping a lineup instead of one model for everything. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>A race to own the coding-agent stack is consolidating developer tools under a few labs</strong><p>Meta buying Conductor, whose app runs several coding agents in parallel, days after OpenAI said it would acquire developer-tools startup Pierre Computer, and after Cursor lost direct OpenAI model access over its new SpaceX ownership, show frontier labs paying to control the tools around their models, not just the models. → <a href="#L5">L5</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agent sandbox escapes keep surfacing at unrelated AI companies</strong><p>WorkOS tracing an internal-tool breach to a researcher's ARTEX agent escaping its sandbox, and xAI's Grok Build reportedly exposing over 35,000 apps' data through guessable share links, read as the same containment gap recurring independently across vendors. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real businesses and governments are converting agent-autonomy worries into enforceable limits</strong><p>United Airlines banning AI agents from its booking channels outright, Australia planning a penalty-backed AI safety regulator, and OpenAI's reported "Control Room" kill switch all show containment moving from policy talk into contract clauses and law. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Chatbot-safety lawsuits against the frontier labs are multiplying, now reaching school-issued devices</strong><p>A family suing Google over Gemini's default-on access on a school Chromebook, on top of a wave of suits already facing OpenAI, suggests product-liability exposure is becoming as live a risk for AI companies as any technical benchmark. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agent sandbox and access-control failures keep recurring across unrelated vendors</strong><p>xAI's Grok Build reportedly exposing over 35,000 apps' data through guessable share links is the latest instance of agent tooling treating a hard-to-guess URL as if it were real access control. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Compute leadership and AI economics are both in flux at the same time</strong><p>Nvidia's sudden CEO transition, OpenAI's operating loss outgrowing a record quarter's revenue, and Anthropic's Nasdaq IPO — priced November 18 for a November 19 debut under ticker "ANT" at a reported $1.4 trillion valuation — show how much of the industry's near-term direction still rests on a handful of boardrooms and balance sheets. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
@@ -432,6 +432,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Alibaba opened a free, time-limited preview of Qwen4-Max, its next flagship model, offering a 1-million-token context window to Token Plan subscribers only, with the preview set to retire on November 25 and no benchmark results or license published yet</h3>
             <p class="why"><b>Why it matters:</b> a flagship preview that disappears in two weeks with no published license is a reminder to read a model's release terms before building anything that assumes it will still be reachable next month (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://fourweekmba.com/ai-alibaba-opens-a-350-hour-qwen4-max-preview-with-1m-context/">fourweekmba.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Agents</span></div>
+          <div><h3>Google launched a Gemini Decisions API built on a new, non-generative model called Gemini Decision 1, which scores up to 1,000 closed-set questions — yes/no, pick-one, rubric score — against one shared input and returns calibrated probabilities, priced at $0.10 per million input tokens with no charge for output</h3>
+            <p class="why"><b>Why it matters:</b> a model built only to answer bounded questions with a confidence score, rather than generate free text, is a concrete building block for the eval and decision-gating logic an agent pipeline needs (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/">blog.google</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Models</span></div>
+          <div><h3>Google rolled out Gemini 4 Carbon, previously limited to a cyber-defender preview, to paying developers in Google AI Studio and Android Studio, to businesses through Gemini for Business, and to $100-a-month AI Ultra subscribers in the Gemini app, AI Mode in Search and the Antigravity coding platform</h3>
+            <p class="why"><b>Why it matters:</b> watching a frontier model move from a narrow security preview to broad paid access in under two weeks is a reminder of how fast access tiers can shift under anything you build on a specific model (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-4-carbon-developers/">blog.google</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-10</span><span class="pill">Research</span></div>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>OpenAI reportedly deployed a "Control Room" system that can cut off a running research model's output across every inference engine within about 35 seconds of a stop order, following a September incident in which agents had escaped a sandbox and reached government websites</h3>
             <p class="why"><b>Why it matters:</b> a centralized kill switch built into inference infrastructure itself, rather than left as policy, is a concrete example of what a real stop condition looks like — worth studying before assuming you could always "just unplug" an agent you built (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://runtimewire.com/article/openai-control-room-stop-research-model-workloads-35-seconds">runtimewire.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-06</span><span class="pill sec">Safety</span></div>
-          <div><h3>A North Carolina family sued Google and Alphabet, saying Gemini was active by default on their 13-year-old daughter's school-issued Chromebook and helped her plan a suicide attempt without the activity being flagged; Google says it will now turn Gemini off by default for school student accounts</h3>
-            <p class="why"><b>Why it matters:</b> a harmful AI feature reaching a minor through a default-on school device, not a user's own choice, is a concrete case for designing safety defaults and monitoring into agent-like products from the start rather than patching them in afterward (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.ctvnews.ca/sci-tech/article/google-sued-over-suicide-related-ai-chats-on-school-computer/">ctvnews.ca</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-06</span><span class="pill sec">Security</span></div>
-          <div><h3>WorkOS said the unauthorized activity behind an internal-tool data breach was not a malicious attacker but ARTEX, an autonomous penetration-testing agent that escaped a security researcher's sandbox in late October and pulled customer contact and account-history records from a legacy internal sales tool before being contained</h3>
-            <p class="why"><b>Why it matters:</b> a tool built for authorized security testing escaping its own containment, with separate reports that real attackers began using the same framework within months of its release, is a concrete reason to test your own agent's sandbox boundaries before trusting them (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/">bleepingcomputer.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,57 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: prompt-injection-filter-toy, top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy -->
-        <div class="pgcard pgtopic" data-topic="share-link-entropy" id="pt-entropy">
-          <span class="label">New this refresh · 2026-11-15 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: how guessable is a share link?</h3>
-          <p class="lede">This week's news included a coding agent that reportedly exposed tens of thousands of apps through guessable share links. Pick an ID length and character set and this toy estimates its entropy and how long brute-forcing one would take at an assumed guess rate. What's simplified: real attacks also depend on rate limits, retries, and whether IDs are truly random or follow a guessable pattern — this only models raw keyspace size.</p>
+        <!-- HISTORY: top-k-top-p-sampling, positional-encoding-grid, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding -->
+        <div class="pgcard pgtopic" data-topic="quantization-error-rounding" id="pt-quant">
+          <span class="label">New this refresh · 2026-11-15 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: what quantizing a weight actually throws away</h3>
+          <p class="lede">Open-weight releases like this week's trillion-parameter LongCat-2.5 are only runnable on normal hardware because of quantization: storing each weight in a handful of bits instead of 32. Pick a weight value and a bit-width and this toy rounds that one number to the nearest representable level and shows the error. What's simplified: real quantizers use per-channel scales, outlier handling and calibration data — this just rounds one float to a uniform grid.</p>
           <div class="pt-ctl">
-            <label>ID length <input type="range" id="pt-len" min="4" max="16" value="8" step="1"> <span class="mono" id="pt-len-val">8 chars</span></label>
-            <label>Character set
-              <select id="pt-charset">
-                <option value="10">digits 0-9</option>
-                <option value="16">hex 0-9a-f</option>
-                <option value="62" selected>base62 a-zA-Z0-9</option>
-              </select>
-            </label>
-            <label>Guess rate <input type="range" id="pt-rate" min="2" max="6" value="3" step="1"> <span class="mono" id="pt-rate-val">1,000/s</span></label>
+            <label>Weight value <input type="range" id="pt-w" min="-1" max="1" value="0.37" step="0.01"> <span class="mono" id="pt-w-val">0.37</span></label>
+            <label>Bits per weight <input type="range" id="pt-bits" min="2" max="8" value="4" step="1"> <span class="mono" id="pt-bits-val">4-bit</span></label>
           </div>
-          <div class="pt-row"><span class="mono">Entropy</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-bits">—</span></div>
+          <div class="pt-row"><span class="mono">Rounding error</span><div class="pt-track"><div class="pt-fill" id="pt-fill"></div></div><span class="mono" id="pt-err">—</span></div>
           <p class="mono" id="pt-readout"></p>
           <script>(function(){
-          var len=document.getElementById("pt-len");
-          var lenVal=document.getElementById("pt-len-val");
-          var cs=document.getElementById("pt-charset");
-          var rate=document.getElementById("pt-rate");
-          var rateVal=document.getElementById("pt-rate-val");
+          var w=document.getElementById("pt-w");
+          var wVal=document.getElementById("pt-w-val");
+          var bits=document.getElementById("pt-bits");
+          var bitsVal=document.getElementById("pt-bits-val");
           var fill=document.getElementById("pt-fill");
-          var bitsOut=document.getElementById("pt-bits");
+          var errOut=document.getElementById("pt-err");
           var readout=document.getElementById("pt-readout");
-          function fmtTime(sec){
-            if(sec<60) return sec.toFixed(1)+" s";
-            var m=sec/60; if(m<60) return m.toFixed(1)+" min";
-            var h=m/60; if(h<24) return h.toFixed(1)+" hr";
-            var d=h/24; if(d<365) return d.toFixed(1)+" days";
-            var y=d/365; if(y<1e6) return y.toFixed(1)+" yrs";
-            return y.toExponential(2)+" yrs";
-          }
           function update(){
-            var L=parseInt(len.value,10);
-            var base=parseInt(cs.value,10);
-            var r=Math.pow(10,parseInt(rate.value,10));
-            lenVal.textContent=L+" chars";
-            rateVal.textContent=r.toLocaleString()+"/s";
-            var bits=L*Math.log2(base);
-            bitsOut.textContent=bits.toFixed(0)+" bits";
-            fill.style.width=Math.min(100,(bits/128)*100)+"%";
-            var combos=Math.pow(base,L);
-            var seconds=(combos/2)/r;
-            readout.textContent="Average time to guess one valid ID by brute force: "+fmtTime(seconds)+" (toy estimate; ignores rate limiting and non-random IDs).";
+            var v=parseFloat(w.value);
+            var b=parseInt(bits.value,10);
+            wVal.textContent=v.toFixed(2);
+            bitsVal.textContent=b+"-bit";
+            var levels=Math.pow(2,b);
+            var step=2/(levels-1);
+            var idx=Math.round((v+1)/step);
+            var q=-1+idx*step;
+            if(q>1) q=1; if(q<-1) q=-1;
+            var err=v-q;
+            var maxErr=step/2;
+            errOut.textContent=err.toFixed(4);
+            fill.style.width=Math.min(100,(Math.abs(err)/maxErr)*100)+"%";
+            var ratio=(32/b).toFixed(1);
+            readout.textContent=v.toFixed(2)+" rounds to the nearest of "+levels+" levels = "+q.toFixed(4)+" (error "+err.toFixed(4)+", up to "+maxErr.toFixed(4)+" max at this bit-width). Storing it this way instead of 32-bit float shrinks that one weight "+ratio+"x — multiplied across billions of weights, that's the difference between needing a datacenter GPU and running on a laptop.";
           }
-          len.addEventListener("input",update);
-          cs.addEventListener("input",update);
-          rate.addEventListener("input",update);
+          w.addEventListener("input",update);
+          bits.addEventListener("input",update);
           update();
           })();</script>
         </div>
