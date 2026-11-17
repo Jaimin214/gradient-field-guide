@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-17T10:43:00">2026-11-17 10:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-17T15:39:03">2026-11-17 15:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,7 +396,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>AI inference and agent-testing infrastructure keeps getting breached from every angle</strong><p>NEAR AI's inference servers fell to a remote-code-execution flaw in the open-source SGLang engine and Fireworks AI widened its October breach to confidential secrets and partial model weights, the same week an open-source pentesting agent called AntiFox read a live AWS production secret. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>AI supply-chain and agent-testing infrastructure keeps getting breached from every angle</strong><p>A leaked Fireworks AI key let attackers plant a trojanized Claude Code extension on Cursor's own marketplace, and an open-source pentesting agent called AntiFox was separately used to read a live AWS production secret. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Capital and compute leadership keep shifting as fast as the models do</strong><p>Nvidia's board accepting Jensen Huang's resignation landed the same week Anthropic's Nasdaq debut under ticker "ANT" was reported about six times oversubscribed ahead of a planned November 19 trading start. → <a href="#L7">L7</a></p></div>
         <div><span class="state new">Watch</span><strong>Open-weight models keep shrinking to fit a single consumer GPU</strong><p>Edge0 open-sourced a 145-billion-parameter mixture-of-experts model that reportedly peaks around 29GB of memory on one consumer GPU, built on top of Qwen3.8 Flash Next, continuing open models' push from data-center racks toward laptops. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real businesses and governments are converting agent-autonomy worries into enforceable limits</strong><p>United Airlines banned AI agents from its booking channels by contract, and New York's frontier-model filing portal opened with reporting deadlines attached. → <a href="#L6">L6</a></p></div>
@@ -408,6 +408,24 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic's Nasdaq IPO is reportedly oversubscribed by about six times its roughly 825 million offered shares ahead of a planned November 18 pricing and November 19 debut under ticker "ANT," with the $70–$78 range implying a valuation near $1.4 trillion and a $26 billion private placement from investors including Nvidia, Google and Microsoft</h3>
             <p class="why"><b>Why it matters:</b> heavy demand for a listing this size shows how much capital keeps flowing toward frontier AI labs, worth weighing against any AI employer's own cash position before judging an equity offer (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.mitrade.com/insights/more/mores/ant-ipo-two-prices-20261116J1027">mitrade.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-15</span><span class="pill">Models</span></div>
+          <div><h3>Bland AI opened a limited research preview of Tofu-1, which it describes as its first full-duplex speech-to-speech model, processing a caller's raw audio directly rather than transcribing it to text and back so tone, hesitation and background noise stay available to the model</h3>
+            <p class="why"><b>Why it matters:</b> a voice model that reasons over raw audio instead of a text transcript is a concrete look at the architecture shift <a href="#L4">L4</a> covers, though Bland's own noise-robustness claims are reported, not independently verified yet.</p>
+            <p class="src"><a href="https://www.marktechpost.com/2026/11/15/bland-tofu-1-full-duplex-speech-to-speech-model/">marktechpost.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
+          <div><h3>Cursor confirmed that a leaked Fireworks AI API key let attackers plant a trojanized copy of Anthropic's Claude Code extension on its VS Code marketplace cache for about 11 hours in late October, reaching up to 5,000 users with builds reported to attempt installing persistent SSH backdoors, before Cursor pulled them and moved its inference traffic off Fireworks</h3>
+            <p class="why"><b>Why it matters:</b> a single leaked inference-provider key cascading into a trojanized editor extension is a concrete supply-chain failure mode worth designing against in any tool you build on top of someone else's API key (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html">thehackernews.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Agents</span></div>
+          <div><h3>Cloudflare open-sourced Kitesurf, an experimental browser engine built specifically for AI agents that runs as Rust-compiled code inside V8 isolates on Cloudflare Workers with no Chromium underneath, assembled from the Blitz rendering engine, Firefox's Stylo CSS parser and the Boa JavaScript engine</h3>
+            <p class="why"><b>Why it matters:</b> a from-scratch, headless-Chrome-free browser built only for agent workloads is worth knowing about before assuming Playwright or Puppeteer is the only way to give an agent web access (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://blog.cloudflare.com/kitesurf-open-source/">blog.cloudflare.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill">Industry</span></div>
@@ -474,24 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Security firm Claroc reported on November 10 that xAI's Grok Build coding agent had exposed data from more than 35,000 user-built apps through guessable, unauthenticated share links, including internal business documents belonging to xAI and SpaceX, before the links were taken down</h3>
             <p class="why"><b>Why it matters:</b> treating a hard-to-guess URL as access control is a recurring design mistake in agent tooling, worth testing for before trusting any share link your own agent project generates (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html">thehackernews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Industry</span></div>
-          <div><h3>OpenAI opened a beta Business Hub that lets eligible companies claim and verify an official profile inside ChatGPT, with Shopify and domain-based verification routes, plus a separate Business Agents feature restricted to US businesses for automated transactions</h3>
-            <p class="why"><b>Why it matters:</b> a verified-profile layer inside a chat assistant is an early look at chat interfaces becoming a discovery and commerce surface, worth knowing before assuming customers only find a business through search (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://itbrief.co.uk/story/openai-launches-chatgpt-business-hub-for-companies">itbrief.co.uk</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
-          <div><h3>NEAR AI disclosed that an attacker used a remote-code-execution flaw in the open-source SGLang inference engine to run code on one of its inference servers on November 8, then reached an internal system behind a deprecated "Private Chat" feature, exposing data tied to roughly 100 users and 18 agents</h3>
-            <p class="why"><b>Why it matters:</b> a vulnerability in the serving engine rather than the model itself breached a confidential-inference setup, a reminder that the inference stack underneath any agent you deploy needs its own patching discipline (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html">thehackernews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
-          <div><h3>Fireworks AI widened its disclosure of an October breach, saying attackers who used internal credentials to access customer accounts also reached confidential secrets, datasets and unfinished model weights for a small subset of customers, with a second, separate incident traced to a breached third-party cloud provider</h3>
-            <p class="why"><b>Why it matters:</b> a model-hosting vendor's breach reaching into customers' own unfinished weights and secrets is a reason to ask any inference provider exactly what it can see before sending a proprietary model or dataset through its API (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks">therecord.media</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,45 +674,41 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance -->
-        <div class="pgcard pgtopic" data-topic="typosquat-edit-distance" id="pt-typo">
-          <span class="label">New this refresh · 2026-11-17 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: how close is that domain to the real one?</h3>
-          <p class="lede">Type a domain you're unsure about and this toy computes its edit distance — the fewest single-character insertions, deletions or substitutions needed to turn one string into another — against a short list of well-known AI brand domains, the same spelling-distance idea behind this week's "TypoPrompting" look-alike-domain campaign. What's simplified: real anti-phishing filters also weigh domain age, visually-swapped characters and page content, not just spelling distance.</p>
+        <!-- HISTORY: precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve -->
+        <div class="pgcard pgtopic" data-topic="scaling-law-curve" id="pt-scale">
+          <span class="label">New this refresh · 2026-11-17 · connects to <a href="#L7">L7</a></span>
+          <h3>Toy: why 10x more compute rarely means 10x less loss</h3>
+          <p class="lede">Drag the slider to spend more compute on training and watch the toy loss shrink but flatten out — a simplified stand-in for the power-law scaling behavior behind this week's compute and capital news. What's simplified: real scaling laws split a compute budget between parameters and data with constants a lab fits to its own training runs; this uses one made-up exponent just to show the diminishing-returns shape, not real numbers from any lab.</p>
           <div class="pt-ctl">
-            <label>Domain to check: <input type="text" id="pt-typo-input" value="claudee.ai" style="font-family:var(--mono);padding:4px 8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)"></label>
-            <button type="button" class="btn primary" id="pt-typo-check">Check</button>
+            <label>Training compute (relative, log scale): <input type="range" id="pt-scale-compute" min="0" max="100" value="20"></label>
           </div>
-          <p class="mono" id="pt-typo-readout"></p>
+          <div class="pt-row"><span>Compute spent</span><div class="pt-track"><div class="pt-fill" id="pt-scale-computebar"></div></div><span class="mono" id="pt-scale-computenum"></span></div>
+          <div class="pt-row"><span>Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-scale-lossbar"></div></div><span class="mono" id="pt-scale-lossnum"></span></div>
+          <p class="mono" id="pt-scale-readout"></p>
           <script>(function(){
-          var KNOWN=["claude.ai","anthropic.com","chatgpt.com","openai.com","gemini.google.com","copilot.microsoft.com"];
-          function dist(a,b){
-            var m=a.length,n=b.length,d=[],i,j;
-            for(i=0;i<=m;i++){d[i]=[i];}
-            for(j=0;j<=n;j++){d[0][j]=j;}
-            for(i=1;i<=m;i++){
-              for(j=1;j<=n;j++){
-                var cost=a[i-1]===b[j-1]?0:1;
-                d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+cost);
-              }
-            }
-            return d[m][n];
+          var slider=document.getElementById("pt-scale-compute");
+          var computeBar=document.getElementById("pt-scale-computebar");
+          var computeNum=document.getElementById("pt-scale-computenum");
+          var lossBar=document.getElementById("pt-scale-lossbar");
+          var lossNum=document.getElementById("pt-scale-lossnum");
+          var readout=document.getElementById("pt-scale-readout");
+          var MAXLOSS=4.5, ASYM=1.5, EXP=0.08;
+          function lossAt(compute){
+            return 3*Math.pow(compute,-EXP)+ASYM;
           }
-          var input=document.getElementById("pt-typo-input");
-          var out=document.getElementById("pt-typo-readout");
           function render(){
-            var v=input.value.trim().toLowerCase();
-            if(!v){out.textContent="Type a domain above.";return;}
-            var best=null,bestD=Infinity;
-            for(var k=0;k<KNOWN.length;k++){
-              var dk=dist(v,KNOWN[k]);
-              if(dk<bestD){bestD=dk;best=KNOWN[k];}
-            }
-            var verdict=bestD===0?"exact match":bestD<=2?"RISKY — very close to a known brand domain":"looks distinct from the known list";
-            out.textContent="Closest known domain: "+best+" (edit distance "+bestD+") — "+verdict;
+            var s=Number(slider.value);
+            var compute=Math.pow(10,s/25);
+            var loss=lossAt(compute);
+            computeBar.style.width=s+"%";
+            computeNum.textContent="~"+compute.toFixed(0)+"x baseline";
+            var lossPct=Math.max(0,Math.min(100,(loss/MAXLOSS)*100));
+            lossBar.style.width=lossPct+"%";
+            lossNum.textContent=loss.toFixed(2);
+            var drop=loss-lossAt(compute*2);
+            readout.textContent="Doubling compute again from here would only cut toy loss by about "+drop.toFixed(3)+" more — diminishing returns, not a cliff.";
           }
-          input.addEventListener("input",render);
-          document.getElementById("pt-typo-check").addEventListener("click",render);
+          slider.addEventListener("input",render);
           render();
           })();</script>
         </div>
