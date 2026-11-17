@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-16T19:43:15">2026-11-16 19:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-17T00:41:54">2026-11-17 00:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
+        <div><span class="state rising">Rising</span><strong>Agentic tools are becoming attackers' preferred weapon, not just their target</strong><p>AntiFox's open-source pentesting agents pulled a live AWS production secret, and a 186-domain "TypoPrompting" campaign impersonated Claude, ChatGPT and Gemini to spread malware. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Capital and compute leadership keep shifting as fast as the models do</strong><p>Nvidia's board accepting Jensen Huang's resignation landed the same week Anthropic's Nasdaq debut under ticker "ANT" was reported about six times oversubscribed ahead of a planned November 19 trading start. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>New model releases are shipping with built-in safety tiers instead of one access level for everyone</strong><p>Anthropic split Claude Fable 5.2 and Mythos 5.2 by safeguard level rather than capability, and Google widened Gemini 4 Carbon from a narrow security preview to general paid access in under two weeks. → <a href="#L4">L4</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent sandboxes keep failing in new ways almost every week</strong><p>Security-testing firm Irregular reportedly traced earlier breaches of real OpenAI, Meta and Google systems to its own misconfigured isolation controls, on top of the already-reported Grok Build and Claude Code leaks. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Dedicated cyber models are turning benchmark scores into dual-use warnings</strong><p>OpenAI's GPT-6 Cyber nearly doubled its predecessor's exploit-finding score on release behind a vetted-customer gate, while AntiFox's misuse shows what happens once an offensive agent slips past that kind of gatekeeping. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Real businesses and governments are converting agent-autonomy worries into enforceable limits</strong><p>United Airlines banned AI agents from its booking channels by contract, and New York's frontier-model filing portal opened with reporting deadlines attached. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models and local tooling keep narrowing the gap with frontier labs</strong><p>Moonshot's full release of the roughly 2.8-trillion-parameter Kimi K3.1 Pro and Ollama's v0.40.16 point release trimming local memory use both point to near-frontier work running on your own hardware. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>New model releases are shipping with built-in safety tiers instead of one access level for everyone</strong><p>Anthropic split Claude Fable 5.2 and Mythos 5.2 by safeguard level rather than capability, and Google widened Gemini 4 Carbon from a narrow security preview to general paid access in under two weeks. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -416,6 +416,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm">sec.gov</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-12</span><span class="pill sec">Security</span></div>
+          <div><h3>Security researchers at Island reported on November 12 that 186 look-alike domains impersonating 27 AI brands, including Claude, ChatGPT, Gemini and Copilot, push visitors toward fake verification pages that run malicious PowerShell commands or install a browser-hijacking tool, a pattern the researchers call "TypoPrompting"</h3>
+            <p class="why"><b>Why it matters:</b> a malware campaign built entirely on typos in AI brand names is a cheap trick worth watching for before clicking an AI tool link from a search ad or a message (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html">thehackernews.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-11</span><span class="pill">Agents</span></div>
           <div><h3>United Airlines revised its Contract of Carriage on November 11 to bar AI agents, even ones a traveler personally supervises, from buying tickets or changing reservations through any booking channel, and added AI-agent bookings to the reservations it may cancel without notice</h3>
             <p class="why"><b>Why it matters:</b> a major airline writing "no AI agents" directly into its contract terms is a concrete look at where real businesses are drawing the line on agentic commerce, worth studying before building anything that acts on a user's behalf (<a href="#L6">L6</a>).</p>
@@ -426,6 +432,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google launched a Gemini Decisions API built on a new, non-generative model called Gemini Decision 1, which scores up to 1,000 closed-set questions — yes/no, pick-one, rubric score — against one shared input and returns calibrated probabilities, priced at $0.10 per million input tokens with no charge for output</h3>
             <p class="why"><b>Why it matters:</b> a model built only to answer bounded questions with a confidence score, rather than generate free text, is a concrete building block for the eval and decision-gating logic an agent pipeline needs (<a href="#L5">L5</a>).</p>
             <p class="src"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/">blog.google</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
+          <div><h3>Arctic Wolf Labs reported on November 10 that attackers are running self-hosted copies of AntiFox, an open-source agentic penetration-testing tool forked from the ARTEX project, on Alibaba Cloud servers to probe AWS environments, in one case reading a live production secret out of AWS Secrets Manager</h3>
+            <p class="why"><b>Why it matters:</b> an open-source agent framework built for authorized penetration testing getting repurposed for real credential theft is a reminder that an agent's capabilities carry no built-in sense of who's allowed to use them (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html">thehackernews.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-10</span><span class="pill">Policy</span></div>
@@ -476,22 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.remio.ai/post/ollama-v0-40-16-adds-ripple-preview-and-tightens-coding-agent-controls">remio.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill sec">Security</span></div>
-          <div><h3>AI security-testing firm Irregular reportedly traced a string of earlier incidents — in which agents built on OpenAI, Anthropic, Meta and Google models reached real company systems during benchmark tests — to its own misconfigured isolation controls rather than any flaw in the underlying models</h3>
-            <p class="why"><b>Why it matters:</b> a root cause this mundane, a misconfigured test harness rather than a model choosing to misbehave, is a reminder that sandbox and isolation configuration deserve the same scrutiny as an agent's own permissions (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.securityweek.com/irregular-details-how-a-naming-error-let-ai-models-attack-a-real-company/">securityweek.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
-          <div><h3>Moonshot AI published the full weights of Kimi K3.1 Pro on Hugging Face on November 4, a roughly 2.8-trillion-parameter mixture-of-experts model with a 1-million-token context window, under a Kimi-specific license that reportedly requires naming the model in some commercial products; Moonshot says it stripped cyber-offense-related training data from this open release</h3>
-            <p class="why"><b>Why it matters:</b> a near-frontier open-weight checkpoint with real license strings attached is exactly the kind of fine print L4's serving and quantization work assumes you'll read before building on it (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">technode.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
-          <div><h3>Meta acquired Conductor, a startup whose desktop app runs multiple coding agents from labs including Anthropic and OpenAI in parallel on the same project, folding its team into Meta Superintelligence Labs and winding down the hosted Conductor Cloud service over the following weeks</h3>
-            <p class="why"><b>Why it matters:</b> an acquihire shutting down a hosted multi-agent coding tool with only weeks of notice is a reminder that the orchestration layer around agents can disappear faster than the model underneath it (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://www.infoworld.com/article/4245065/meta-acquires-conductor-as-ai-coding-shifts-toward-multi-agent-development.html">infoworld.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Models</span></div>
+          <div><h3>OpenAI released GPT-6 Cyber, a cybersecurity-specialized variant of GPT-6 Astra for authorized vulnerability discovery and exploit development, reporting a jump to 48.5% on its internal ExploitGym benchmark from 32.1% for the prior GPT-5.6 Cyber, with access initially limited to vetted Daybreak Red customers</h3>
+            <p class="why"><b>Why it matters:</b> a model whose own release benchmarks are exploit-finding scores is a concrete look at how a lab quantifies dual-use capability before deciding who gets to use it (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://openai.com/index/introducing-gpt-6-cyber/">openai.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,58 +674,51 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings -->
-        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings" id="pt-cos">
-          <span class="label">New this refresh · 2026-11-16 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: cosine similarity of embeddings</h3>
-          <p class="lede">Real embeddings have hundreds of dimensions; this toy uses three sliders per vector so you can feel the geometry. Drag either vector's sliders, or load a preset pair, and watch cosine similarity — the measure RAG search and this week's Gemini Decisions API use to compare meaning — update live. What's simplified: three hand-set numbers stand in for a learned, high-dimensional vector; real embeddings are never typed in by hand.</p>
+        <!-- HISTORY: speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
+        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator" id="pt-cwb">
+          <span class="label">New this refresh · 2026-11-17 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: context-window budget calculator</h3>
+          <p class="lede">A model's context window is a fixed token budget shared by everything you send it: instructions, retrieved documents, conversation history, and the room left for its answer. Pick a window size and drag the sliders to see how fast a long system prompt or chat history crowds out the answer — or blows the budget outright. What's simplified: real tokens are uneven sub-word pieces, not the round numbers a slider gives you.</p>
           <div class="pt-ctl">
-            <button type="button" class="btn" id="pt-cos-preset1">Load "cat" vs "dog"</button>
-            <button type="button" class="btn" id="pt-cos-preset2">Load "cat" vs "car"</button>
-            <button type="button" class="btn" id="pt-cos-preset3">Load opposite vectors</button>
+            <label>Context window <select id="pt-cwb-total">
+              <option value="8000">8K (small open model)</option>
+              <option value="32000" selected>32K (typical chat default)</option>
+              <option value="128000">128K (modern frontier default)</option>
+              <option value="1000000">1M (long-context flagship)</option>
+            </select></label>
           </div>
           <div class="pt-ctl">
-            <label>A: x <input type="range" id="pt-cos-ax" min="-1" max="1" step="0.05" value="0.8"></label>
-            <label>y <input type="range" id="pt-cos-ay" min="-1" max="1" step="0.05" value="0.5"></label>
-            <label>z <input type="range" id="pt-cos-az" min="-1" max="1" step="0.05" value="0.2"></label>
+            <label>System prompt <input type="range" id="pt-cwb-sys" min="0" max="20000" step="100" value="1500"></label>
+            <label>Retrieved context <input type="range" id="pt-cwb-ctx" min="0" max="50000" step="100" value="4000"></label>
+            <label>Conversation history <input type="range" id="pt-cwb-hist" min="0" max="50000" step="100" value="6000"></label>
+            <label>Reserved for answer <input type="range" id="pt-cwb-ans" min="0" max="20000" step="100" value="2000"></label>
           </div>
-          <div class="pt-ctl">
-            <label>B: x <input type="range" id="pt-cos-bx" min="-1" max="1" step="0.05" value="0.7"></label>
-            <label>y <input type="range" id="pt-cos-by" min="-1" max="1" step="0.05" value="0.6"></label>
-            <label>z <input type="range" id="pt-cos-bz" min="-1" max="1" step="0.05" value="0.3"></label>
-          </div>
-          <div class="pt-row"><span class="mono">cos(A,B)</span><div class="pt-track"><div class="pt-fill" id="pt-cos-fill"></div></div><span class="mono" id="pt-cos-val">0.00</span></div>
-          <p class="mono" id="pt-cos-readout"></p>
+          <div class="pt-row"><span class="mono">used / window</span><div class="pt-track"><div class="pt-fill" id="pt-cwb-fill"></div></div><span class="mono" id="pt-cwb-val">0%</span></div>
+          <p class="mono" id="pt-cwb-readout"></p>
           <script>(function(){
-          var ids=["ax","ay","az","bx","by","bz"];
+          var total=document.getElementById("pt-cwb-total");
+          var ids=["sys","ctx","hist","ans"];
           var el={};
-          ids.forEach(function(k){el[k]=document.getElementById("pt-cos-"+k);});
-          var val=document.getElementById("pt-cos-val");
-          var fill=document.getElementById("pt-cos-fill");
-          var readout=document.getElementById("pt-cos-readout");
-          function vec(p){return [parseFloat(el[p+"x"].value),parseFloat(el[p+"y"].value),parseFloat(el[p+"z"].value)];}
-          function dot(u,v){return u[0]*v[0]+u[1]*v[1]+u[2]*v[2];}
-          function mag(u){return Math.sqrt(dot(u,u));}
+          ids.forEach(function(k){el[k]=document.getElementById("pt-cwb-"+k);});
+          var fill=document.getElementById("pt-cwb-fill");
+          var val=document.getElementById("pt-cwb-val");
+          var readout=document.getElementById("pt-cwb-readout");
+          function fmt(n){return n.toLocaleString();}
           function update(){
-            var a=vec("a"),b=vec("b");
-            var denom=mag(a)*mag(b);
-            var cos=denom===0?0:dot(a,b)/denom;
-            val.textContent=cos.toFixed(2);
-            fill.style.width=((cos+1)/2*100)+"%";
-            var msg="Pointing the same way, like near-synonyms in a real embedding space.";
-            if(cos<0.3) msg="Nearly unrelated — barely any shared direction.";
-            if(cos<0) msg="Pointing opposite ways — about as dissimilar as this space gets.";
-            readout.textContent="cosine = "+cos.toFixed(2)+". "+msg;
-          }
-          function load(a,b){
-            el.ax.value=a[0];el.ay.value=a[1];el.az.value=a[2];
-            el.bx.value=b[0];el.by.value=b[1];el.bz.value=b[2];
-            update();
+            var cap=parseInt(total.value,10);
+            var used=ids.reduce(function(s,k){return s+parseInt(el[k].value,10);},0);
+            var pct=Math.min(100,(used/cap*100));
+            fill.style.width=pct+"%";
+            fill.style.background=used>cap?"#c0392b":"";
+            val.textContent=Math.round(used/cap*100)+"%";
+            if(used>cap){
+              readout.textContent="Over budget by "+fmt(used-cap)+" of "+fmt(cap)+" tokens — something has to be trimmed before the model can even start answering.";
+            }else{
+              readout.textContent=fmt(used)+" of "+fmt(cap)+" tokens used, "+fmt(cap-used)+" left for the model to work with.";
+            }
           }
           ids.forEach(function(k){el[k].addEventListener("input",update);});
-          document.getElementById("pt-cos-preset1").addEventListener("click",function(){load([0.8,0.5,0.2],[0.75,0.55,0.25]);});
-          document.getElementById("pt-cos-preset2").addEventListener("click",function(){load([0.8,0.5,0.2],[-0.1,0.2,0.9]);});
-          document.getElementById("pt-cos-preset3").addEventListener("click",function(){load([0.8,0.5,0.2],[-0.8,-0.5,-0.2]);});
+          total.addEventListener("change",update);
           update();
           })();</script>
         </div>
