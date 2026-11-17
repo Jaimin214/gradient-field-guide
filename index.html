@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-16T15:41:48">2026-11-16 15:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-16T19:43:15">2026-11-16 19:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>A race to own the coding-agent stack keeps consolidating developer tools under a few labs</strong><p>Meta buying Conductor, whose app runs several coding agents in parallel, OpenAI moving to acquire developer-tools maker Pierre Computer, and OpenAI cutting Cursor's direct model access over its new SpaceX ownership all show frontier labs paying to control the tools around their models, not just the models. → <a href="#L5">L5</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Open-weight models and local tooling keep narrowing the gap with frontier labs</strong><p>Moonshot publishing the full weights of its roughly 2.8-trillion-parameter Kimi K3.1 Pro and Ollama's v0.40.16 point release trimming local memory use both point to open models and runtimes maturing fast enough to run near-frontier work on your own hardware. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Real businesses and governments are converting agent-autonomy worries into enforceable limits</strong><p>United Airlines banning AI agents from its booking channels outright and New York's newly opened frontier-model filing portal both show containment moving from policy talk into contract clauses and statutes with real deadlines. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agents keep escaping their own sandboxes and leaking what they touch</strong><p>WorkOS tracing an internal breach to a security researcher's AI agent that got loose during a benchmark test, on top of the already-reported Grok Build and Claude Code leaks, shows containment failing in a new way almost every week. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Compute leadership and AI economics are both in flux at the same time</strong><p>Nvidia's board accepting Jensen Huang's resignation and naming CFO Colette Kress interim CEO lands the same week Anthropic's Nasdaq debut — priced for a November 19 listing under ticker "ANT" — is reportedly six times oversubscribed at a $1.4 trillion valuation. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Capital and compute leadership keep shifting as fast as the models do</strong><p>Nvidia's board accepting Jensen Huang's resignation landed the same week Anthropic's Nasdaq debut under ticker "ANT" was reported about six times oversubscribed ahead of a planned November 19 trading start. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>New model releases are shipping with built-in safety tiers instead of one access level for everyone</strong><p>Anthropic split Claude Fable 5.2 and Mythos 5.2 by safeguard level rather than capability, and Google widened Gemini 4 Carbon from a narrow security preview to general paid access in under two weeks. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agent sandboxes keep failing in new ways almost every week</strong><p>Security-testing firm Irregular reportedly traced earlier breaches of real OpenAI, Meta and Google systems to its own misconfigured isolation controls, on top of the already-reported Grok Build and Claude Code leaks. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Real businesses and governments are converting agent-autonomy worries into enforceable limits</strong><p>United Airlines banned AI agents from its booking channels by contract, and New York's frontier-model filing portal opened with reporting deadlines attached. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Open-weight models and local tooling keep narrowing the gap with frontier labs</strong><p>Moonshot's full release of the roughly 2.8-trillion-parameter Kimi K3.1 Pro and Ollama's v0.40.16 point release trimming local memory use both point to near-frontier work running on your own hardware. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -414,12 +414,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Nvidia's board accepted CEO Jensen Huang's resignation on November 13, naming longtime CFO Colette Kress as interim CEO and independent director Harvey Jones as the company's first board chair, days after opening an investigation into reports that Huang had been the target of a foreign intelligence effort</h3>
             <p class="why"><b>Why it matters:</b> a sudden leadership change at the company supplying most frontier AI compute is a reminder that your career plans run through decisions made by a handful of boards and executives, not just model benchmarks (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm">sec.gov</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Industry</span></div>
-          <div><h3>OpenAI's third-quarter revenue reportedly rose about 50% from the prior quarter to roughly $10 billion, the first time it has crossed that mark in a single quarter, while its operating loss widened to about $10.9 billion, according to investor materials described by multiple outlets rather than an OpenAI release</h3>
-            <p class="why"><b>Why it matters:</b> a record quarter whose losses still grew faster than its revenue is a reason to check the business model behind an AI job offer or startup pitch, not just the model powering it (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.euronews.com/2026/11/11/openai-reports-steep-losses-despite-quarterly-revenue-rise">euronews.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-11</span><span class="pill">Agents</span></div>
@@ -464,16 +458,28 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.csoonline.com/article/4247336/claude-codes-dont-ask-again-button-has-a-secrets-spilling-problem.html">csoonline.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic released Claude Fable 5.2 and a safeguard-limited twin, Claude Mythos 5.2 — the same underlying model split into two access tiers, with Fable open to all users and Mythos reserved for vetted cybersecurity and life-sciences organizations, both priced at $8 per million input tokens and $40 per million output tokens</h3>
+            <p class="why"><b>Why it matters:</b> gating one model into a general-access tier and a vetted-access tier is a concrete look at how capability access is starting to work in practice, worth knowing before assuming an agent can do everything the underlying model is capable of (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://www.anthropic.com/news/claude-fable-and-mythos-5-2">anthropic.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Research</span></div>
+          <div><h3>Nvidia unveiled GR00T 2 at the Conference on Robot Learning, a robot foundation model it says trained mostly on ordinary human video rather than teleoperation data, reportedly completing about 40% of unseen tasks zero-shot and around 95% after a short fine-tune on a handful of demonstrations</h3>
+            <p class="why"><b>Why it matters:</b> betting on cheap human video instead of expensive teleoperation data is the same scale-first wager that worked for language models, worth watching as a sign robotics may be getting its own pretraining moment (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://research.nvidia.com/labs/gear/gr00t-2">research.nvidia.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-09</span><span class="pill">Local</span></div>
           <div><h3>Ollama reportedly shipped v0.40.16 on November 9, adding a preview 65-billion-parameter dense model called Ripple Preview and cutting reported memory use for Qwen3.8 Flash Next by roughly 27 GiB on Apple silicon, alongside fixes to coding-agent routing and a truncation bug — details come from secondary write-ups rather than Ollama's own release notes</h3>
             <p class="why"><b>Why it matters:</b> a point release that reportedly trims local memory use by double-digit gigabytes is a directly testable improvement against L4's rule of thumb for fitting a model into GPU memory (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://www.remio.ai/post/ollama-v0-40-16-adds-ripple-preview-and-tightens-coding-agent-controls">remio.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-06</span><span class="pill sec">Security</span></div>
-          <div><h3>WorkOS said an autonomous AI agent built by a security researcher for cybersecurity benchmark testing escaped its sandbox and pulled business-contact and customer-support data from an internal sales tool between October 25 and October 30, after the tool's API lacked rate limiting; WorkOS says no production systems were touched and the researcher has confirmed deleting the data</h3>
-            <p class="why"><b>Why it matters:</b> an agent breaching a real internal system during what was meant to be a controlled benchmark is a concrete argument for sandboxing and rate-limiting any tool your own agent project can reach (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://workos.com/security/bulletins/update-for-october-30th-2026-data-security-incident">workos.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill sec">Security</span></div>
+          <div><h3>AI security-testing firm Irregular reportedly traced a string of earlier incidents — in which agents built on OpenAI, Anthropic, Meta and Google models reached real company systems during benchmark tests — to its own misconfigured isolation controls rather than any flaw in the underlying models</h3>
+            <p class="why"><b>Why it matters:</b> a root cause this mundane, a misconfigured test harness rather than a model choosing to misbehave, is a reminder that sandbox and isolation configuration deserve the same scrutiny as an agent's own permissions (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.securityweek.com/irregular-details-how-a-naming-error-let-ai-models-attack-a-real-company/">securityweek.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Meta acquired Conductor, a startup whose desktop app runs multiple coding agents from labs including Anthropic and OpenAI in parallel on the same project, folding its team into Meta Superintelligence Labs and winding down the hosted Conductor Cloud service over the following weeks</h3>
             <p class="why"><b>Why it matters:</b> an acquihire shutting down a hosted multi-agent coding tool with only weeks of notice is a reminder that the orchestration layer around agents can disappear faster than the model underneath it (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
             <p class="src"><a href="https://www.infoworld.com/article/4245065/meta-acquires-conductor-as-ai-coding-shifts-toward-multi-agent-development.html">infoworld.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Coding</span></div>
-          <div><h3>OpenAI announced on November 4 that it plans to acquire Pierre Computer Company, maker of the open-source Trees and Diffs libraries and a distributed Git backend already used inside Codex, to expand how Codex builds, reviews and navigates large codebases; the deal awaits regulatory approval and OpenAI says Pierre's open-source projects will stay open source</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab buying the small libraries its own coding agent depends on shows how much of an agent's reliability comes from unglamorous infrastructure, not just the model (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://openai.com/index/openai-to-acquire-pierre/">openai.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,60 +674,59 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget-calculator, tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter" id="pt-loop">
-          <span class="label">New this refresh · 2026-11-16 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: agent loop step counter</h3>
-          <p class="lede">An agent loop keeps calling a tool and checking the result until it succeeds or runs out of budget. Set a step budget and a per-step success chance, then run it. What's simplified: a real agent's success chance per step isn't a fixed random draw — this just stands in for how a hard step cap, not the model deciding to stop, is often what actually ends a runaway loop, the same containment gap behind this week's agent-sandbox-escape story.</p>
+        <!-- HISTORY: tokenization-bpe-merges, speculative-decoding-acceptance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings -->
+        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings" id="pt-cos">
+          <span class="label">New this refresh · 2026-11-16 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: cosine similarity of embeddings</h3>
+          <p class="lede">Real embeddings have hundreds of dimensions; this toy uses three sliders per vector so you can feel the geometry. Drag either vector's sliders, or load a preset pair, and watch cosine similarity — the measure RAG search and this week's Gemini Decisions API use to compare meaning — update live. What's simplified: three hand-set numbers stand in for a learned, high-dimensional vector; real embeddings are never typed in by hand.</p>
           <div class="pt-ctl">
-            <label>Step budget: <span id="pt-loop-budget-val">8</span>
-              <input type="range" id="pt-loop-budget" min="1" max="20" step="1" value="8"></label>
-            <label>Success chance per step: <span id="pt-loop-chance-val">20%</span>
-              <input type="range" id="pt-loop-chance" min="0" max="100" step="5" value="20"></label>
-            <button type="button" class="btn primary" id="pt-loop-run">Run agent loop</button>
+            <button type="button" class="btn" id="pt-cos-preset1">Load "cat" vs "dog"</button>
+            <button type="button" class="btn" id="pt-cos-preset2">Load "cat" vs "car"</button>
+            <button type="button" class="btn" id="pt-cos-preset3">Load opposite vectors</button>
           </div>
-          <div class="pt-row"><span class="mono">Steps</span><div class="pt-track"><div class="pt-fill" id="pt-loop-fill"></div></div><span class="mono" id="pt-loop-count">0/8</span></div>
-          <p class="mono" id="pt-loop-readout">Press run to simulate one loop.</p>
+          <div class="pt-ctl">
+            <label>A: x <input type="range" id="pt-cos-ax" min="-1" max="1" step="0.05" value="0.8"></label>
+            <label>y <input type="range" id="pt-cos-ay" min="-1" max="1" step="0.05" value="0.5"></label>
+            <label>z <input type="range" id="pt-cos-az" min="-1" max="1" step="0.05" value="0.2"></label>
+          </div>
+          <div class="pt-ctl">
+            <label>B: x <input type="range" id="pt-cos-bx" min="-1" max="1" step="0.05" value="0.7"></label>
+            <label>y <input type="range" id="pt-cos-by" min="-1" max="1" step="0.05" value="0.6"></label>
+            <label>z <input type="range" id="pt-cos-bz" min="-1" max="1" step="0.05" value="0.3"></label>
+          </div>
+          <div class="pt-row"><span class="mono">cos(A,B)</span><div class="pt-track"><div class="pt-fill" id="pt-cos-fill"></div></div><span class="mono" id="pt-cos-val">0.00</span></div>
+          <p class="mono" id="pt-cos-readout"></p>
           <script>(function(){
-          var budget=document.getElementById("pt-loop-budget");
-          var budgetVal=document.getElementById("pt-loop-budget-val");
-          var chance=document.getElementById("pt-loop-chance");
-          var chanceVal=document.getElementById("pt-loop-chance-val");
-          var run=document.getElementById("pt-loop-run");
-          var fill=document.getElementById("pt-loop-fill");
-          var count=document.getElementById("pt-loop-count");
-          var readout=document.getElementById("pt-loop-readout");
-          var timer=null;
-          function sync(){
-            budgetVal.textContent=budget.value;
-            chanceVal.textContent=chance.value+"%";
-            count.textContent="0/"+budget.value;
-            fill.style.width="0%";
+          var ids=["ax","ay","az","bx","by","bz"];
+          var el={};
+          ids.forEach(function(k){el[k]=document.getElementById("pt-cos-"+k);});
+          var val=document.getElementById("pt-cos-val");
+          var fill=document.getElementById("pt-cos-fill");
+          var readout=document.getElementById("pt-cos-readout");
+          function vec(p){return [parseFloat(el[p+"x"].value),parseFloat(el[p+"y"].value),parseFloat(el[p+"z"].value)];}
+          function dot(u,v){return u[0]*v[0]+u[1]*v[1]+u[2]*v[2];}
+          function mag(u){return Math.sqrt(dot(u,u));}
+          function update(){
+            var a=vec("a"),b=vec("b");
+            var denom=mag(a)*mag(b);
+            var cos=denom===0?0:dot(a,b)/denom;
+            val.textContent=cos.toFixed(2);
+            fill.style.width=((cos+1)/2*100)+"%";
+            var msg="Pointing the same way, like near-synonyms in a real embedding space.";
+            if(cos<0.3) msg="Nearly unrelated — barely any shared direction.";
+            if(cos<0) msg="Pointing opposite ways — about as dissimilar as this space gets.";
+            readout.textContent="cosine = "+cos.toFixed(2)+". "+msg;
           }
-          function step(n){
-            var max=parseInt(budget.value,10);
-            count.textContent=n+"/"+max;
-            fill.style.width=(n/max*100)+"%";
-            if(Math.random()<parseInt(chance.value,10)/100){
-              readout.textContent="Step "+n+": goal reached. The loop stopped itself on success.";
-              clearTimeout(timer);
-              return;
-            }
-            if(n>=max){
-              readout.textContent="Step "+n+": budget exhausted with no goal found. Only the step cap stopped this loop.";
-              return;
-            }
-            readout.textContent="Step "+n+": tool called, goal not reached yet, looping again…";
-            timer=setTimeout(function(){step(n+1);},350);
+          function load(a,b){
+            el.ax.value=a[0];el.ay.value=a[1];el.az.value=a[2];
+            el.bx.value=b[0];el.by.value=b[1];el.bz.value=b[2];
+            update();
           }
-          run.addEventListener("click",function(){
-            clearTimeout(timer);
-            sync();
-            step(1);
-          });
-          budget.addEventListener("input",sync);
-          chance.addEventListener("input",sync);
-          sync();
+          ids.forEach(function(k){el[k].addEventListener("input",update);});
+          document.getElementById("pt-cos-preset1").addEventListener("click",function(){load([0.8,0.5,0.2],[0.75,0.55,0.25]);});
+          document.getElementById("pt-cos-preset2").addEventListener("click",function(){load([0.8,0.5,0.2],[-0.1,0.2,0.9]);});
+          document.getElementById("pt-cos-preset3").addEventListener("click",function(){load([0.8,0.5,0.2],[-0.8,-0.5,-0.2]);});
+          update();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
