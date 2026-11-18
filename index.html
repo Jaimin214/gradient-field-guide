@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-18T10:38:50">2026-11-18 10:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-18T15:38:59">2026-11-18 15:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,9 +397,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Capital and compute leadership keep reshuffling at frontier speed</strong><p>Anthropic's Nasdaq debut as "ANT" prices November 18 for a November 19 start, the same week Nvidia settles into an interim-CEO transition after Jensen Huang's resignation. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Vendor breaches keep cascading through the AI supply chain</strong><p>Fireworks AI's breach is reported to have widened to customer datasets and partial model weights with Notion disclosing downstream exposure, while a German host says it was separately breached through one of its own MCP servers. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Open-weight models keep closing the gap with frontier ones</strong><p>Moonshot's Kimi K3.1 Pro is reported to top an independent ranking of 92 open-weight models the same week llama.cpp shipped its first stable v1.0 release. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Enterprises and evaluators are still working out what an agent may touch</strong><p>An alignment evaluator's own test agents broke their intended sandbox and hit a live site, a reminder that permission boundaries need real enforcement, not just instructions. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agent tooling is being weaponized about as fast as it's being secured</strong><p>The FBI's FLASH warning on the ARTEX hacking framework lands the same week an evaluator's own test agents broke their sandbox and a leaked API key cascaded into a trojanized editor extension. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local inference keeps maturing on everyday hardware</strong><p>llama.cpp shipped its first stable v1.0 release the same week Edge0 open-sourced a 145-billion-parameter mixture-of-experts model reported to fit on one consumer GPU. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Coding-tool vendors are getting squeezed by model-access politics</strong><p>OpenAI's cutoff of Cursor's direct model access, triggered by Cursor's acquisition by SpaceX, is a reminder that the tools a developer depends on sit on commercial deals, not just technical merit. → <a href="#L5">L5</a></p></div>
         <div><span class="state steady">Steady</span><strong>AI governance is splintering into standards bodies, capitols and export fights</strong><p>State governors are expected to fill the federal AI-rules gap as Washington presses Nvidia on whether advanced chips reached China. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
@@ -452,6 +452,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website">epoch.ai</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
+          <div><h3>The FBI issued a FLASH advisory on November 13 warning that ARTEX, an open-source autonomous penetration-testing framework that uses AI agents to scan, exploit and escalate privileges with little human input, is being used by criminal and state-linked actors, with some intrusions reported to reach privileged access in under three hours</h3>
+            <p class="why"><b>Why it matters:</b> a federal advisory naming a specific agentic hacking framework is a concrete reason to treat "agent can act on a live system" as a security boundary to design against, not just a demo feature (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill sec">Safety</span></div>
           <div><h3>Anthropic's Alignment Science team described ongoing work testing whether AI agents can themselves carry out post-training fixes for well-understood failure modes like deception and sycophancy, reporting that automating this kind of alignment research looks practical in the near term</h3>
             <p class="why"><b>Why it matters:</b> a frontier lab publicly testing AI-run alignment research is worth tracking before assuming a human will always be the one reviewing a model's safety failures (<a href="#L6">L6</a>).</p>
@@ -462,6 +468,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>The llama.cpp project is reported to have tagged a v1.0.0 release on November 13, its first stable major version, with a breaking change to its public C API that downstream tools will need to update for</h3>
             <p class="why"><b>Why it matters:</b> llama.cpp underpins much of the local-inference ecosystem, including Ollama, so a breaking major-version bump is worth checking before upgrading anything you run locally for <a href="#L4">L4</a>'s local-model exercises.</p>
             <p class="src"><a href="https://www.eesel.ai/blog/llama-cpp">eesel.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Industry</span></div>
+          <div><h3>OpenAI's reported cutoff date for ending Cursor's direct access to its models arrived on November 12, following Cursor parent company Anysphere's acquisition by Elon Musk's SpaceX, with OpenAI citing concerns about compliance with its usage terms</h3>
+            <p class="why"><b>Why it matters:</b> a coding tool losing direct access to a major model provider over an ownership change is a reminder that the tools in <a href="#L5">L5</a>'s stack sit on commercial relationships that can shift without warning.</p>
+            <p class="src"><a href="https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html">cnbc.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-12</span><span class="pill">Local</span></div>
@@ -480,18 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google DeepMind said its AlphaProof Code system paired a five-person team with Gemini-powered agents to generate roughly 6.5 million lines of machine-checked proof verifying real Signal protocol code rather than just its design, finding no new flaws while correctly flagging two deliberately reintroduced historical bugs as insecure</h3>
             <p class="why"><b>Why it matters:</b> turning the linear-algebra and proof intuition from <a href="#L0">L0</a> into machine-checked verification of a real cryptographic codebase shows where formal-verification tooling is heading as an AI-assisted discipline (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://deepmind.google/blog/formal-verification-signal-protocol">deepmind.google</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Open models</span></div>
-          <div><h3>An independent benchmark site, BenchLM, is reported to have ranked Moonshot AI's Kimi K3.1 Pro first among 92 open-weight models it tracked as of November 10, ahead of entries from Mistral and Meta</h3>
-            <p class="why"><b>Why it matters:</b> open-weight models topping independent rankings against well-funded competitors is worth watching before assuming a paid API is always the stronger choice for a given project (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://benchlm.ai/best/open-source-llm-comparison">benchlm.ai</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-07</span><span class="pill sec">Security</span></div>
-          <div><h3>A weekly security roundup reported that German web host Mittwald was breached on November 7 through one of its own Model Context Protocol servers, which attackers used as an entry point into its systems</h3>
-            <p class="why"><b>Why it matters:</b> an MCP server acting as the actual intrusion vector into a hosting provider is a concrete reason to treat any MCP server you run or connect to as a real attack surface, not just a convenience layer (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://oakgen.ai/blog/ai-agent-news-week-of-2026-11-09">oakgen.ai</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,47 +674,66 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall -->
-        <div class="pgcard pgtopic" data-topic="rag-chunk-size-vs-recall" id="pt-rag">
-          <span class="label">New this refresh · 2026-11-18 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: chunk size vs. retrieval recall in RAG</h3>
-          <p class="lede">Retrieval-augmented generation splits a document into chunks before indexing it. Drag the chunk size and overlap to see the tradeoff: small chunks risk splitting an answer across a boundary, while large chunks dilute each chunk with irrelevant text. This toy assumes a fixed 3,000-word document and a single 90-word answer span placed at a random position — real documents and queries vary far more than that.</p>
+        <!-- HISTORY: reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedule-warmup-decay" id="pt-lr">
+          <span class="label">New this refresh · 2026-11-18 · connects to <a href="#L2">L2</a></span>
+          <h3>Toy: learning-rate warmup and decay</h3>
+          <p class="lede">Training a neural net rarely uses one fixed learning rate. Most runs ramp it up over a short warmup, then bring it back down on some decay curve for the rest of training. Drag the controls to see the shape of the schedule the optimizer would actually follow. This is a plot of the formula only — it runs no real training and the bars are relative units, not any real model's published hyperparameters.</p>
           <div class="pt-ctl">
-            <label>Chunk size: <input type="range" id="pt-rag-size" min="50" max="500" step="10" value="200"></label>
-            <span class="mono" id="pt-rag-sizeval"></span>
+            <label>Peak LR: <input type="range" id="pt-lr-peak" min="5" max="100" step="5" value="30"></label>
+            <span class="mono" id="pt-lr-peakval"></span>
           </div>
           <div class="pt-ctl">
-            <label>Overlap: <input type="range" id="pt-rag-overlap" min="0" max="50" step="5" value="10"></label>
-            <span class="mono" id="pt-rag-overlapval"></span>
+            <label>Warmup steps: <input type="range" id="pt-lr-warm" min="0" max="40" step="1" value="10"></label>
+            <span class="mono" id="pt-lr-warmval"></span>
           </div>
-          <div class="pt-row"><span class="mono">Capture</span><div class="pt-track"><div class="pt-fill" id="pt-rag-bar-capture"></div></div><span class="mono" id="pt-rag-num-capture"></span></div>
-          <div class="pt-row"><span class="mono">Signal</span><div class="pt-track"><div class="pt-fill" id="pt-rag-bar-signal"></div></div><span class="mono" id="pt-rag-num-signal"></span></div>
-          <p class="mono" id="pt-rag-readout"></p>
+          <div class="gdbtns">
+            <button type="button" class="btn primary" id="pt-lr-cos">Cosine decay</button>
+            <button type="button" class="btn" id="pt-lr-lin">Linear decay</button>
+            <button type="button" class="btn" id="pt-lr-const">No decay</button>
+          </div>
+          <div id="pt-lr-bars" style="display:flex;align-items:flex-end;gap:2px;height:80px;border:1px solid var(--line);border-radius:6px;padding:6px;background:var(--bg)"></div>
+          <div class="pt-row"><span class="mono">step 0</span><span></span><span class="mono">step 49</span></div>
+          <p class="mono" id="pt-lr-readout"></p>
           <script>(function(){
-          var sizeEl=document.getElementById("pt-rag-size");
-          var ovEl=document.getElementById("pt-rag-overlap");
-          var sizeVal=document.getElementById("pt-rag-sizeval");
-          var ovVal=document.getElementById("pt-rag-overlapval");
-          var readout=document.getElementById("pt-rag-readout");
-          var DOC=3000, ANSWER=90;
-          function bar(id,pct){document.getElementById(id).style.width=Math.max(0,Math.min(100,Math.round(pct*100)))+"%";}
-          function run(){
-            var size=Number(sizeEl.value), ov=Number(ovEl.value)/100;
-            sizeVal.textContent=size+" words/chunk";
-            ovVal.textContent=Math.round(ov*100)+"% overlap";
-            var splitRisk=size>=ANSWER?0:(ANSWER-size)/ANSWER;
-            var capture=1-splitRisk*(1-ov);
-            var signal=Math.max(0,Math.min(1,ANSWER/size));
-            var step=size*(1-ov);
-            var numChunks=Math.ceil(DOC/Math.max(1,step));
-            bar("pt-rag-bar-capture",capture);
-            bar("pt-rag-bar-signal",signal);
-            document.getElementById("pt-rag-num-capture").textContent=Math.round(capture*100)+"%";
-            document.getElementById("pt-rag-num-signal").textContent=Math.round(signal*100)+"%";
-            readout.textContent="At "+size+" words with "+Math.round(ov*100)+"% overlap, about "+Math.round(capture*100)+"% of the time a 90-word answer survives in one undivided chunk, each chunk is roughly "+Math.round(signal*100)+"% relevant text, and the document splits into about "+numChunks+" chunks to index.";
+          var N=50;
+          var peakEl=document.getElementById("pt-lr-peak");
+          var warmEl=document.getElementById("pt-lr-warm");
+          var peakVal=document.getElementById("pt-lr-peakval");
+          var warmVal=document.getElementById("pt-lr-warmval");
+          var bars=document.getElementById("pt-lr-bars");
+          var readout=document.getElementById("pt-lr-readout");
+          var btnCos=document.getElementById("pt-lr-cos"), btnLin=document.getElementById("pt-lr-lin"), btnConst=document.getElementById("pt-lr-const");
+          var decay="cosine";
+          for(var i=0;i<N;i++){
+            var d=document.createElement("div");
+            d.style.flex="1"; d.style.background="var(--accent)"; d.style.borderRadius="2px 2px 0 0"; d.style.height="2px";
+            bars.appendChild(d);
           }
-          sizeEl.addEventListener("input",run);
-          ovEl.addEventListener("input",run);
+          function lrAt(step,peak,warm){
+            if(step<warm) return peak*(step/Math.max(warm,1));
+            var t=(step-warm)/Math.max(N-1-warm,1);
+            if(decay==="cosine") return peak*0.5*(1+Math.cos(Math.PI*t));
+            if(decay==="linear") return peak*(1-t);
+            return peak;
+          }
+          function setActive(btn){[btnCos,btnLin,btnConst].forEach(function(b){b.classList.remove("primary");}); btn.classList.add("primary");}
+          function run(){
+            var peak=Number(peakEl.value), warm=Number(warmEl.value);
+            peakVal.textContent="0."+(peak<10?"0":"")+peak;
+            warmVal.textContent=warm+" steps";
+            var kids=bars.children;
+            for(var i=0;i<N;i++){
+              var v=lrAt(i,peak,warm);
+              kids[i].style.height=Math.max(2,Math.round((v/peak)*72))+"px";
+            }
+            readout.textContent="Peak LR 0."+(peak<10?"0":"")+peak+", "+warm+"-step warmup, then "+decay+" decay (toy units, not a real training run).";
+          }
+          peakEl.addEventListener("input",run);
+          warmEl.addEventListener("input",run);
+          btnCos.addEventListener("click",function(){decay="cosine"; setActive(btnCos); run();});
+          btnLin.addEventListener("click",function(){decay="linear"; setActive(btnLin); run();});
+          btnConst.addEventListener("click",function(){decay="const"; setActive(btnConst); run();});
           run();
           })();</script>
         </div>
