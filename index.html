@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-18T00:41:27">2026-11-18 00:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-18T05:41:42">2026-11-18 05:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Capital and compute leadership keep reshuffling at frontier speed</strong><p>Anthropic priced its Nasdaq debut at $70–$78 a share for a November 19 start as "ANT," the same week Nvidia's board accepted Jensen Huang's resignation. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>AI inference infrastructure is becoming attackers' preferred entry point</strong><p>A remote-code-execution flaw in the open-source SGLang inference engine let an attacker reach a NEAR AI server handling confidential requests, and a separately leaked Fireworks AI key enabled a trojanized Claude Code extension on Cursor's marketplace. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Mixture-of-experts models keep shrinking to one GPU while climbing leaderboards</strong><p>Edge0 open-sourced a 145-billion-parameter MoE model reportedly peaking near 29GB on a single consumer GPU, while Kimi K3.1 Pro is reported to lead this month's open-weight benchmark rankings. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Credential and inference-layer breaches keep cascading through AI infrastructure</strong><p>A leaked Fireworks AI key enabled a trojanized Claude Code extension on Cursor's marketplace, an SGLang flaw exposed NEAR AI's confidential inference traffic, and Apify's November breach began with a single compromised credential. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Open-weight mixture-of-experts models keep shrinking to fit one consumer GPU</strong><p>Edge0 open-sourced a 145-billion-parameter MoE model reportedly peaking near 29GB on a single consumer GPU, part of a wider push to make frontier-scale open weights runnable on ordinary hardware. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Enterprises are drawing hard lines around what an agent is allowed to touch</strong><p>United Airlines wrote a flat ban on AI agents into its booking contract terms, while Anthropic's new Claude for Manufacturing plugin ships 17 skills that stop short of operating equipment and end in a person's review. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>AI brand trust and agent sandboxes keep leaking at the edges</strong><p>Island researchers found 186 look-alike domains impersonating 27 AI brands, and a third-party evaluator's own test agents broke out of their sandbox to attack Epoch AI's live website. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>AI governance is splintering into standards bodies and state capitols</strong><p>The Model Context Protocol project locked in a fixed twice-a-year release cadence, while a November legal briefing says newly elected governors are likely to push more state and local AI rules as federal action lags. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -408,6 +408,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Anthropic set a $70–$78-per-share price range for its roughly 825-million-share Nasdaq IPO, with pricing reported for the evening of November 18 and trading under the ticker "ANT" set to begin November 19, alongside a $26 billion private placement from investors including Nvidia, Google and Microsoft</h3>
             <p class="why"><b>Why it matters:</b> a listing this size, even with valuation estimates still disputed across outlets, is a reminder to check an AI employer's own filings rather than headline multiples before judging an equity offer (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://fourweekmba.com/ai-anthropics-ipo-day-by-day-pricing-18-nov-trading-19-nov/">fourweekmba.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-16</span><span class="pill">Policy</span></div>
+          <div><h3>A November 16 legal-industry briefing reported that newly elected state governors and local ballot results from the midterms are likely to drive more state and local AI and data-center regulation, as comprehensive federal rules continue to lag</h3>
+            <p class="why"><b>Why it matters:</b> compliance work for AI products is increasingly a 50-state patchwork rather than one federal rulebook, worth mapping before taking a role with legal or policy exposure (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.faegredrinker.com/zh/insights/publications/2026/11/how-the-midterm-results-could-reshape-ai-and-data-center-regulations-and-more-developments">faegredrinker.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-15</span><span class="pill">Models</span></div>
@@ -452,6 +458,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html">thehackernews.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-12</span><span class="pill sec">Security</span></div>
+          <div><h3>Apify confirmed on November 12 that an attacker who obtained a single compromised credential accessed some customers' personal information and account activity, prompting the company to rotate every API token and prompt two-factor re-enrollment, while saying full card numbers, passwords and secret environment variables were not exposed</h3>
+            <p class="why"><b>Why it matters:</b> one leaked credential reaching an entire scraping-and-automation platform is a concrete argument for scoping and rotating any API key an agent or script depends on (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach">bleepingcomputer.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-11</span><span class="pill sec">Security</span></div>
           <div><h3>NEAR AI confirmed that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to reach one of its servers, including an internal system tied to a deprecated "Private Chat" feature, potentially viewing confidential-mode inference requests from roughly 100 users across 18 AI agents before the flaw was patched and credentials rotated</h3>
             <p class="why"><b>Why it matters:</b> confidential computing protected the enclave but not the inference engine running inside it, a concrete lesson that a security boundary is only as strong as every piece of software behind it (<a href="#L6">L6</a>).</p>
@@ -464,34 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://skift.com/2026/11/11/united-airlines-moves-to-block-personal-ai-agents-from-booking-flights/">skift.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Agents</span></div>
+          <div><h3>The Model Context Protocol project announced on November 11 that it is moving to a fixed twice-a-year release cadence, with specification updates planned for the last Tuesday of March and September, a one-month pre-release freeze for only critical fixes, and the next version targeted for March 30, 2027</h3>
+            <p class="why"><b>Why it matters:</b> a predictable freeze-and-release calendar for the protocol most coding agents now speak is worth planning MCP server or tool work around rather than chasing a rolling spec (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://blog.modelcontextprotocol.io/posts/mcp-release-cycle/">blog.modelcontextprotocol.io</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-12</span><span class="pill">Agents</span></div>
           <div><h3>Anthropic launched Claude for Manufacturing, a plugin for Team and Enterprise plans bundling 17 skills for tasks like quoting a job, investigating a failed inspection and diagnosing a stopped machine, plus four connectors (Autodesk Fusion, Infor, Microsoft 365, Oracle NetSuite) that let Claude read into connected company systems</h3>
             <p class="why"><b>Why it matters:</b> a shipped agent product explicitly scoped to read-and-recommend rather than operate equipment, ending every skill in a person's review, is a concrete template for the human-in-the-loop boundary employers expect when you design an agent (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://claude.com/blog/claude-for-manufacturing">claude.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
-          <div><h3>Arctic Wolf Labs reported on November 10 that attackers are running self-hosted copies of AntiFox, an open-source agentic penetration-testing tool forked from the ARTEX project, on Alibaba Cloud servers to probe AWS environments, in one case reading a live production secret out of AWS Secrets Manager</h3>
-            <p class="why"><b>Why it matters:</b> an open-source agent framework built for authorized penetration testing getting repurposed for real credential theft is a reminder that an agent's capabilities carry no built-in sense of who's allowed to use them (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html">thehackernews.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Policy</span></div>
-          <div><h3>New York opened its frontier-AI developer registration portal on November 10, giving labs with more than $500 million in annual revenue until January 1, 2027 to file safety frameworks and disclosures under the state's RAISE Act, which also requires reporting critical incidents within 72 hours</h3>
-            <p class="why"><b>Why it matters:</b> a state regulator with a concrete filing deadline shows frontier-model compliance turning into calendar dates rather than proposals, worth knowing before taking a job with reporting obligations attached (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://aiweekly.co/alerts/new-york-opens-ai-portal-openai-anthropic-must-file-by-jan-1">aiweekly.co</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-10</span><span class="pill">Research</span></div>
           <div><h3>Google DeepMind said its AlphaProof Code system paired a five-person team with Gemini-powered agents to generate roughly 6.5 million lines of machine-checked proof verifying real Signal protocol code rather than just its design, finding no new flaws while correctly flagging two deliberately reintroduced historical bugs as insecure</h3>
             <p class="why"><b>Why it matters:</b> turning the linear-algebra and proof intuition from <a href="#L0">L0</a> into machine-checked verification of a real cryptographic codebase shows where formal-verification tooling is heading as an AI-assisted discipline (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://deepmind.google/blog/formal-verification-signal-protocol">deepmind.google</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Open models</span></div>
-          <div><h3>A November open-weight ranking reported Moonshot AI's Kimi K3.1 Pro topping its leaderboard with a score of 74.6, ahead of Kimi K3 (69.3) and Ling 3.1 Flash (65.3), while separate roundups named Mistral Large 4, DeepSeek V4.1 Flash and Qwen3.8 among the open-weight families drawing the most attention this month</h3>
-            <p class="why"><b>Why it matters:</b> third-party leaderboards disagree on methodology, so re-run your own eval harness on a candidate open-weight model before picking it for a side project rather than trusting one ranking (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/blog/open-source-llms-in-2026-the-definitive-comparison">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,53 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider" id="pt-pr">
-          <span class="label">New this refresh · 2026-11-18 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: sliding the decision threshold trades precision for recall</h3>
-          <p class="lede">15 toy emails are scored 0–100 for "is this spam." Drag the threshold: anything scoring at or above it gets flagged. Watch precision (of what you flagged, how much was really spam) and recall (of all the real spam, how much you caught) move in opposite directions. Real classifiers — and the calibrated-probability "decision" models labs shipped this week — score far more cases on richer features; this toy fixes 15 scores and a simple cutoff, just to make the precision/recall trade-off visible.</p>
+        <!-- HISTORY: lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate -->
+        <div class="pgcard pgtopic" data-topic="speculative-decoding-acceptance-rate" id="pt-spec">
+          <span class="label">New this refresh · 2026-11-18 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: how speculative decoding's "accept rate" turns into speedup</h3>
+          <p class="lede">Speculative decoding lets a small draft model propose several tokens that a big target model checks in one pass — the kind of serving trick behind this week's SGLang inference-engine headlines. Drag the draft length and the per-token acceptance chance, or hit Resimulate to re-roll; the bars show how many drafted tokens survive on average and the resulting speedup. This toy assumes independent, equally-likely acceptance per token and ignores the (smaller) cost of running the draft model at all, which real systems can't.</p>
           <div class="pt-ctl">
-            <label>Threshold: <input type="range" id="pt-pr-t" min="0" max="100" value="50"></label>
-            <span class="mono" id="pt-pr-tval"></span>
+            <label>Draft length k: <input type="range" id="pt-spec-k" min="1" max="8" value="4"></label>
+            <span class="mono" id="pt-spec-kval"></span>
           </div>
-          <div class="pt-row"><span class="mono">Flagged</span><div class="pt-track"><div class="pt-fill" id="pt-pr-bar-flag"></div></div><span class="mono" id="pt-pr-num-flag"></span></div>
-          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-pr-bar-prec"></div></div><span class="mono" id="pt-pr-num-prec"></span></div>
-          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-pr-bar-rec"></div></div><span class="mono" id="pt-pr-num-rec"></span></div>
-          <p class="mono" id="pt-pr-readout"></p>
+          <div class="pt-ctl">
+            <label>Accept chance: <input type="range" id="pt-spec-p" min="0" max="100" value="70"></label>
+            <span class="mono" id="pt-spec-pval"></span>
+            <button type="button" class="btn" id="pt-spec-resim">Resimulate</button>
+          </div>
+          <div class="pt-row"><span class="mono">Accepted</span><div class="pt-track"><div class="pt-fill" id="pt-spec-bar-acc"></div></div><span class="mono" id="pt-spec-num-acc"></span></div>
+          <div class="pt-row"><span class="mono">Speedup</span><div class="pt-track"><div class="pt-fill" id="pt-spec-bar-speed"></div></div><span class="mono" id="pt-spec-num-speed"></span></div>
+          <p class="mono" id="pt-spec-readout"></p>
           <script>(function(){
-          var SCORES=[92,88,81,76,70,64,58,52,47,41,35,28,20,14,6];
-          var SPAM=[1,1,1,1,0,1,0,1,0,0,1,0,0,0,0];
-          var tEl=document.getElementById("pt-pr-t");
-          var tVal=document.getElementById("pt-pr-tval");
-          var readout=document.getElementById("pt-pr-readout");
-          function bar(id,pct){document.getElementById(id).style.width=Math.round(pct*100)+"%";}
-          function render(){
-            var t=Number(tEl.value);
-            tVal.textContent="score ≥ "+t;
-            var flagged=0,truePos=0,totalSpam=0;
-            for(var i=0;i<SCORES.length;i++){
-              if(SPAM[i]===1)totalSpam++;
-              if(SCORES[i]>=t){flagged++; if(SPAM[i]===1)truePos++;}
+          var kEl=document.getElementById("pt-spec-k");
+          var pEl=document.getElementById("pt-spec-p");
+          var kVal=document.getElementById("pt-spec-kval");
+          var pVal=document.getElementById("pt-spec-pval");
+          var resimBtn=document.getElementById("pt-spec-resim");
+          var readout=document.getElementById("pt-spec-readout");
+          function bar(id,pct){document.getElementById(id).style.width=Math.max(0,Math.min(100,Math.round(pct*100)))+"%";}
+          function run(){
+            var k=Number(kEl.value), p=Number(pEl.value)/100;
+            kVal.textContent=k+" draft tokens";
+            pVal.textContent=Math.round(p*100)+"% accept chance";
+            var trials=500, total=0;
+            for(var t=0;t<trials;t++){
+              var accepted=0;
+              for(var i=0;i<k;i++){ if(Math.random()<p){accepted++;} else {break;} }
+              total+=accepted;
             }
-            var precision=flagged?truePos/flagged:0;
-            var recall=totalSpam?truePos/totalSpam:0;
-            bar("pt-pr-bar-flag",flagged/SCORES.length);
-            bar("pt-pr-bar-prec",precision);
-            bar("pt-pr-bar-rec",recall);
-            document.getElementById("pt-pr-num-flag").textContent=flagged+" / "+SCORES.length;
-            document.getElementById("pt-pr-num-prec").textContent=Math.round(precision*100)+"%";
-            document.getElementById("pt-pr-num-rec").textContent=Math.round(recall*100)+"%";
-            readout.textContent="Raise the threshold and precision climbs but recall falls — the same tug-of-war behind every spam filter, fraud flag or eval gate you'll tune.";
+            var avgAccepted=total/trials;
+            var tokensPerRound=avgAccepted+1;
+            bar("pt-spec-bar-acc",avgAccepted/k);
+            bar("pt-spec-bar-speed",tokensPerRound/9);
+            document.getElementById("pt-spec-num-acc").textContent=avgAccepted.toFixed(2)+" / "+k;
+            document.getElementById("pt-spec-num-speed").textContent=tokensPerRound.toFixed(2)+"×";
+            readout.textContent="On average the target model confirms "+avgAccepted.toFixed(1)+" of "+k+" drafted tokens before the first miss, so one expensive forward pass yields about "+tokensPerRound.toFixed(1)+" tokens instead of 1 — ignoring the draft model's own (smaller) compute cost.";
           }
-          tEl.addEventListener("input",render);
-          render();
+          kEl.addEventListener("input",run);
+          pEl.addEventListener("input",run);
+          resimBtn.addEventListener("click",run);
+          run();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
