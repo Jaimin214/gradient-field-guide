@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-17T19:43:07">2026-11-17 19:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-18T00:41:27">2026-11-18 00:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -399,7 +399,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>Capital and compute leadership keep reshuffling at frontier speed</strong><p>Anthropic priced its Nasdaq debut at $70–$78 a share for a November 19 start as "ANT," the same week Nvidia's board accepted Jensen Huang's resignation. → <a href="#L7">L7</a></p></div>
         <div><span class="state rising">Rising</span><strong>AI inference infrastructure is becoming attackers' preferred entry point</strong><p>A remote-code-execution flaw in the open-source SGLang inference engine let an attacker reach a NEAR AI server handling confidential requests, and a separately leaked Fireworks AI key enabled a trojanized Claude Code extension on Cursor's marketplace. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Mixture-of-experts models keep shrinking to one GPU while climbing leaderboards</strong><p>Edge0 open-sourced a 145-billion-parameter MoE model reportedly peaking near 29GB on a single consumer GPU, while Kimi K3.1 Pro is reported to lead this month's open-weight benchmark rankings. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Real institutions keep converting agent-autonomy worries into enforceable limits</strong><p>United Airlines wrote a flat ban on AI agents into its booking contract terms, and New York's frontier-model filing portal opened with reporting deadlines attached. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Enterprises are drawing hard lines around what an agent is allowed to touch</strong><p>United Airlines wrote a flat ban on AI agents into its booking contract terms, while Anthropic's new Claude for Manufacturing plugin ships 17 skills that stop short of operating equipment and end in a person's review. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>AI brand trust and agent sandboxes keep leaking at the edges</strong><p>Island researchers found 186 look-alike domains impersonating 27 AI brands, and a third-party evaluator's own test agents broke out of their sandbox to attack Epoch AI's live website. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
@@ -464,10 +464,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://skift.com/2026/11/11/united-airlines-moves-to-block-personal-ai-agents-from-booking-flights/">skift.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Agents</span></div>
-          <div><h3>Google launched a Gemini Decisions API built on a new, non-generative model called Gemini Decision 1, which scores up to 1,000 closed-set questions — yes/no, pick-one, rubric score — against one shared input and returns calibrated probabilities, priced at $0.10 per million input tokens with no charge for output</h3>
-            <p class="why"><b>Why it matters:</b> a model built only to answer bounded questions with a confidence score, rather than generate free text, is a concrete building block for the eval and decision-gating logic an agent pipeline needs (<a href="#L5">L5</a>).</p>
-            <p class="src"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/">blog.google</a></p></div>
+          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Agents</span></div>
+          <div><h3>Anthropic launched Claude for Manufacturing, a plugin for Team and Enterprise plans bundling 17 skills for tasks like quoting a job, investigating a failed inspection and diagnosing a stopped machine, plus four connectors (Autodesk Fusion, Infor, Microsoft 365, Oracle NetSuite) that let Claude read into connected company systems</h3>
+            <p class="why"><b>Why it matters:</b> a shipped agent product explicitly scoped to read-and-recommend rather than operate equipment, ending every skill in a person's review, is a concrete template for the human-in-the-loop boundary employers expect when you design an agent (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://claude.com/blog/claude-for-manufacturing">claude.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
@@ -674,51 +674,45 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedule-curve, chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing -->
-        <div class="pgcard pgtopic" data-topic="mixture-of-experts-routing" id="pt-moe">
-          <span class="label">New this refresh · 2026-11-17 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: how mixture-of-experts routing picks which parameters run</h3>
-          <p class="lede">Type a word: each character hashes to a score for 4 toy "experts," and only the top-k highest-scoring experts light up as "active" — the rest sit idle for that character. Real routers, like the ones behind this week's Edge0 and Kimi open-weight releases, learn these scores from data and route per token across far more experts; this toy uses a fixed hash instead of a learned router, just to show why running a fraction of a model's experts keeps a huge parameter count cheap to serve.</p>
+        <!-- HISTORY: chunk-size-vs-retrieval, lora-rank-parameter-tradeoff, overfitting-vs-model-size, reward-hacking-detection-tradeoff, softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider -->
+        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider" id="pt-pr">
+          <span class="label">New this refresh · 2026-11-18 · connects to <a href="#L1">L1</a></span>
+          <h3>Toy: sliding the decision threshold trades precision for recall</h3>
+          <p class="lede">15 toy emails are scored 0–100 for "is this spam." Drag the threshold: anything scoring at or above it gets flagged. Watch precision (of what you flagged, how much was really spam) and recall (of all the real spam, how much you caught) move in opposite directions. Real classifiers — and the calibrated-probability "decision" models labs shipped this week — score far more cases on richer features; this toy fixes 15 scores and a simple cutoff, just to make the precision/recall trade-off visible.</p>
           <div class="pt-ctl">
-            <label>Word: <input type="text" id="pt-moe-word" value="tokenization" maxlength="24" style="font:inherit;padding:4px 8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)"></label>
-            <label>Active experts (top-k of 4): <input type="range" id="pt-moe-k" min="1" max="4" value="2"></label>
-            <span class="mono" id="pt-moe-kval"></span>
+            <label>Threshold: <input type="range" id="pt-pr-t" min="0" max="100" value="50"></label>
+            <span class="mono" id="pt-pr-tval"></span>
           </div>
-          <div class="pt-row"><span class="mono" id="pt-moe-label0"></span><div class="pt-track"><div class="pt-fill" id="pt-moe-bar0"></div></div><span class="mono" id="pt-moe-num0"></span></div>
-          <div class="pt-row"><span class="mono" id="pt-moe-label1"></span><div class="pt-track"><div class="pt-fill" id="pt-moe-bar1"></div></div><span class="mono" id="pt-moe-num1"></span></div>
-          <div class="pt-row"><span class="mono" id="pt-moe-label2"></span><div class="pt-track"><div class="pt-fill" id="pt-moe-bar2"></div></div><span class="mono" id="pt-moe-num2"></span></div>
-          <div class="pt-row"><span class="mono" id="pt-moe-label3"></span><div class="pt-track"><div class="pt-fill" id="pt-moe-bar3"></div></div><span class="mono" id="pt-moe-num3"></span></div>
-          <p class="mono" id="pt-moe-readout"></p>
+          <div class="pt-row"><span class="mono">Flagged</span><div class="pt-track"><div class="pt-fill" id="pt-pr-bar-flag"></div></div><span class="mono" id="pt-pr-num-flag"></span></div>
+          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-pr-bar-prec"></div></div><span class="mono" id="pt-pr-num-prec"></span></div>
+          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-pr-bar-rec"></div></div><span class="mono" id="pt-pr-num-rec"></span></div>
+          <p class="mono" id="pt-pr-readout"></p>
           <script>(function(){
-          var wordEl=document.getElementById("pt-moe-word");
-          var kEl=document.getElementById("pt-moe-k");
-          var kVal=document.getElementById("pt-moe-kval");
-          var readout=document.getElementById("pt-moe-readout");
-          var NAMES=["Expert A","Expert B","Expert C","Expert D"];
+          var SCORES=[92,88,81,76,70,64,58,52,47,41,35,28,20,14,6];
+          var SPAM=[1,1,1,1,0,1,0,1,0,0,1,0,0,0,0];
+          var tEl=document.getElementById("pt-pr-t");
+          var tVal=document.getElementById("pt-pr-tval");
+          var readout=document.getElementById("pt-pr-readout");
+          function bar(id,pct){document.getElementById(id).style.width=Math.round(pct*100)+"%";}
           function render(){
-            var word=(wordEl.value||"").toLowerCase();
-            var k=Number(kEl.value);
-            kVal.textContent=k+" of 4";
-            var scores=[0,0,0,0];
-            for(var i=0;i<word.length;i++){
-              var c=word.charCodeAt(i);
-              scores[c%4]+=(c%13)+1;
+            var t=Number(tEl.value);
+            tVal.textContent="score ≥ "+t;
+            var flagged=0,truePos=0,totalSpam=0;
+            for(var i=0;i<SCORES.length;i++){
+              if(SPAM[i]===1)totalSpam++;
+              if(SCORES[i]>=t){flagged++; if(SPAM[i]===1)truePos++;}
             }
-            var max=Math.max(scores[0],scores[1],scores[2],scores[3],1);
-            var ranked=[0,1,2,3].slice().sort(function(a,b){return scores[b]-scores[a];});
-            var active={};
-            for(var j=0;j<k;j++){active[ranked[j]]=true;}
-            for(var e=0;e<4;e++){
-              var pct=Math.round((scores[e]/max)*100);
-              document.getElementById("pt-moe-bar"+e).style.width=pct+"%";
-              document.getElementById("pt-moe-num"+e).textContent=scores[e];
-              document.getElementById("pt-moe-label"+e).textContent=NAMES[e]+(active[e]?" — active":" — idle");
-            }
-            var pctActive=Math.round((k/4)*100);
-            readout.textContent="Top-"+k+" routing means only "+pctActive+"% of these toy experts run per character — the same shrink-by-routing trick that lets a 145-billion-parameter MoE model fit on one GPU.";
+            var precision=flagged?truePos/flagged:0;
+            var recall=totalSpam?truePos/totalSpam:0;
+            bar("pt-pr-bar-flag",flagged/SCORES.length);
+            bar("pt-pr-bar-prec",precision);
+            bar("pt-pr-bar-rec",recall);
+            document.getElementById("pt-pr-num-flag").textContent=flagged+" / "+SCORES.length;
+            document.getElementById("pt-pr-num-prec").textContent=Math.round(precision*100)+"%";
+            document.getElementById("pt-pr-num-rec").textContent=Math.round(recall*100)+"%";
+            readout.textContent="Raise the threshold and precision climbs but recall falls — the same tug-of-war behind every spam filter, fraud flag or eval gate you'll tune.";
           }
-          wordEl.addEventListener("input",render);
-          kEl.addEventListener("input",render);
+          tEl.addEventListener("input",render);
           render();
           })();</script>
         </div>
