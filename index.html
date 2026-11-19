@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-19T19:39:04">2026-11-19 19:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-19T00:43:14">2026-11-19 00:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Capital and compute leadership keep reshuffling at frontier speed</strong><p>Anthropic began trading on Nasdaq as "ANT" on November 19 after pricing above range, the same week Nvidia settles into an interim-CEO transition after Jensen Huang's resignation. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>MCP's own server implementations are becoming a real attack surface</strong><p>A web host's breach through a flawed MCP server and a reference-server patch round covering six vulnerabilities both landed the same week as the FBI's warning on the ARTEX agentic hacking framework. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent identity and discovery are getting standardized</strong><p>The Linux Foundation's new Agent Name Service gives AI agents DNS-based verifiable identities, a sign the ecosystem is building trust infrastructure before it builds more guardrails. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agentic AI's own infrastructure is becoming a real attack surface</strong><p>An inference-engine flaw breached NEAR AI's servers, a leaked API key trojanized a VS Code extension, and the FBI named a specific AI-driven hacking framework, all within the same two weeks. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Frontier labs are splitting access into verified capability tiers</strong><p>Anthropic's Fable 5.2 ships to every API customer while its less-constrained twin, Mythos 5.2, requires passing a cybersecurity or life-sciences verification program first. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Local inference keeps maturing on everyday hardware</strong><p>llama.cpp's first stable v1.0 release keeps the local-model stack moving even as frontier labs ship trillion-parameter mixture-of-experts models few laptops could ever run. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>AI governance is splintering into standards bodies, capitols and export fights</strong><p>State governors are expected to fill the federal AI-rules gap as Washington presses Nvidia on whether advanced chips reached China. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>AI governance and content rules remain unsettled and provider-specific</strong><p>xAI reportedly reversed a default-on watermarking policy days after announcing it, while state governors and a cabinet official's questions to Nvidia show federal AI rules still lag behind. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -476,22 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html">cnbc.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Agents</span></div>
-          <div><h3>The Model Context Protocol project said it is moving to a six-month release cadence and shipped version 2.4.0, which patches six vulnerabilities found across three of its own reference servers</h3>
-            <p class="why"><b>Why it matters:</b> the protocol underpinning most agent-to-tool connections is still actively finding and fixing holes in its own reference code, worth checking before trusting a server you didn't write yourself (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.enterpriseaiworld.com/Articles/News/News/The-Agentic-AI-Foundation-Updates-Core-Features-of-the-Model-Context-Protocol-175887.aspx">enterpriseaiworld.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Policy</span></div>
+          <div><h3>xAI is reported to have reversed a plan to turn on invisible text watermarking by default across seven Grok API model variants days after describing it as default-on, with the feature tied to EU AI Act transparency obligations and only switchable per model by team admins</h3>
+            <p class="why"><b>Why it matters:</b> a provider walking back its own content-watermarking default shows how unsettled AI-output labeling rules still are, worth checking before assuming any model's output carries a built-in disclosure mark (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.webpronews.com/grok-api-text-watermarking-default/">webpronews.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Agents</span></div>
-          <div><h3>The Linux Foundation launched the Agent Name Service, a DNS-based open standard meant to give AI agents verifiable identities so they can discover and authenticate each other across organizations</h3>
-            <p class="why"><b>Why it matters:</b> identity and discovery are foundational pieces an agent-building project in <a href="#L6">L6</a> will eventually need, and a DNS-based approach means it reuses infrastructure most CS grads already understand.</p>
-            <p class="src"><a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents">linuxfoundation.org</a></p></div>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic released Claude Fable 5.2 to all API customers alongside a higher-capability twin, Claude Mythos 5.2, restricted to organizations vetted through its cybersecurity and life-sciences verification programs, with Fable 5.2 reported to lead a third-party intelligence benchmark on gains in science, knowledge and coding</h3>
+            <p class="why"><b>Why it matters:</b> shipping two access tiers of the same underlying model, gated by a verification program rather than price, is a concrete look at how labs are managing capability-versus-safety trade-offs as models get stronger (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/anthropic-releases-claude-fable-52-and-mythos-52-models-66044607">letsdatascience.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
-          <div><h3>German web host Mittwald disclosed that an attacker exploited a flaw in its own Model Context Protocol server to read session tokens from 56 customer projects over roughly eight days, with the timing between logged steps suggesting the intrusion itself was carried out by AI tooling</h3>
-            <p class="why"><b>Why it matters:</b> an MCP server meant to let customers connect AI assistants to their hosting account became the break-in point itself, a concrete argument for scoping down what any MCP integration can touch (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://therecord.media/cyberattack-germany-ai-mittwald">therecord.media</a></p></div>
+          <div><h3>NEAR AI disclosed that an attacker used a remote-code-execution flaw in the open-source SGLang inference engine to breach one of its inference servers on November 8, reportedly exposing around 100 user accounts and the histories of 18 legacy agents, including some confidential-mode requests processed that day</h3>
+            <p class="why"><b>Why it matters:</b> a flaw in a widely used open-source inference engine, not in NEAR AI's own code, becoming the entry point is a reminder that the serving stack underneath any hosted or local model in <a href="#L4">L4</a> is itself an attack surface.</p>
+            <p class="src"><a href="https://theblock.co/news/defi/2026-11-10-near-ai-security-breach-437002">theblock.co</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,45 +674,51 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size -->
-        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size" id="pt-of">
-          <span class="label">New this refresh · 2026-11-19 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: overfitting vs. model size</h3>
-          <p class="lede">A bigger model almost always fits its training data better, but validation error only improves up to a point before it bends back up — the model starts memorizing instead of generalizing. Drag "model capacity" and "training examples" below to see that classic U-shaped validation curve, and watch the sweet spot shift right as you add more data. This plots a hand-written formula, not a real training run — actual curves are noisier and the real crossover point depends on the model, data and task.</p>
+        <!-- HISTORY: kv-cache-memory-calculator, agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding -->
+        <div class="pgcard pgtopic" data-topic="beam-search-vs-greedy-decoding" id="pt-bs">
+          <span class="label">New this refresh · 2026-11-19 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: beam search vs. greedy decoding</h3>
+          <p class="lede">A local model like the ones in this week's llama.cpp news has to pick one word at a time. Greedy decoding (beam width 1) always takes the single most-likely next word; wider beams keep several partial sentences alive and only commit at the end, sometimes finding a higher total-probability sentence greedy decoding would have missed. Drag the beam width below to see which sentence this toy, fixed-probability word tree picks — real decoders juggle a much bigger vocabulary and often add sampling on top.</p>
           <div class="pt-ctl">
-            <label>Model capacity: <input type="range" id="pt-of-capacity" min="1" max="100" value="40"></label>
-            <span class="mono" id="pt-of-capacityval"></span>
+            <label>Beam width: <input type="range" id="pt-bs-width" min="1" max="3" value="1"></label>
+            <span class="mono" id="pt-bs-widthval"></span>
           </div>
-          <div class="pt-ctl">
-            <label>Training examples: <input type="range" id="pt-of-data" min="1" max="100" value="30"></label>
-            <span class="mono" id="pt-of-dataval"></span>
-          </div>
-          <div class="pt-row"><span class="mono">train error</span><div class="pt-track"><div class="pt-fill" id="pt-of-train-fill"></div></div><span class="mono" id="pt-of-train-val"></span></div>
-          <div class="pt-row"><span class="mono">val error</span><div class="pt-track"><div class="pt-fill" id="pt-of-val-fill" style="background:var(--signal)"></div></div><span class="mono" id="pt-of-val-val"></span></div>
-          <p class="mono" id="pt-of-readout"></p>
+          <div id="pt-bs-out" class="mono" style="white-space:pre-line"></div>
+          <p class="mono" id="pt-bs-readout"></p>
           <script>(function(){
-          var capEl=document.getElementById("pt-of-capacity"), dataEl=document.getElementById("pt-of-data");
-          var capVal=document.getElementById("pt-of-capacityval"), dataVal=document.getElementById("pt-of-dataval");
-          var trainFill=document.getElementById("pt-of-train-fill"), valFill=document.getElementById("pt-of-val-fill");
-          var trainVal=document.getElementById("pt-of-train-val"), valValEl=document.getElementById("pt-of-val-val");
-          var readout=document.getElementById("pt-of-readout");
+          var TREE={
+            start:[["the",0.6],["a",0.4]],
+            "the":[["cat",0.5],["dog",0.5]],
+            "a":[["cat",0.9],["dog",0.1]],
+            "the>cat":[["sat",0.3],["ran",0.7]],
+            "the>dog":[["sat",0.6],["ran",0.4]],
+            "a>cat":[["sat",0.2],["ran",0.8]],
+            "a>dog":[["sat",0.5],["ran",0.5]]
+          };
+          var widthEl=document.getElementById("pt-bs-width"), widthVal=document.getElementById("pt-bs-widthval");
+          var out=document.getElementById("pt-bs-out"), readout=document.getElementById("pt-bs-readout");
           function run(){
-            var cap=Number(capEl.value), data=Number(dataEl.value);
-            capVal.textContent=cap+"/100";
-            dataVal.textContent=data+"k examples";
-            var optimal=20+data*0.6;
-            var trainErr=Math.max(2,90*(1-cap/110));
-            var gap=Math.max(0,cap-optimal);
-            var valErr=Math.min(98,trainErr+(gap*gap)/40);
-            trainFill.style.width=trainErr+"%";
-            valFill.style.width=valErr+"%";
-            trainVal.textContent=Math.round(trainErr)+"%";
-            valValEl.textContent=Math.round(valErr)+"%";
-            var zone = cap<optimal-10 ? "underfitting: more capacity would help" : (cap>optimal+10 ? "overfitting: the model is memorizing, not generalizing" : "near the sweet spot for this much data");
-            readout.textContent="Capacity "+cap+", "+data+"k examples -> "+zone+" (toy formula, not a real training curve).";
+            var width=Number(widthEl.value);
+            widthVal.textContent=width+(width===1?" (greedy)":"");
+            var beams=[{path:["start"],score:0}];
+            for(var step=0;step<3;step++){
+              var candidates=[];
+              beams.forEach(function(b){
+                var key=b.path.length===1?"start":b.path.slice(1).join(">");
+                (TREE[key]||[]).forEach(function(o){
+                  candidates.push({path:b.path.concat([o[0]]),score:b.score+Math.log(o[1])});
+                });
+              });
+              candidates.sort(function(a,c){return c.score-a.score;});
+              beams=candidates.slice(0,width);
+            }
+            var lines=beams.map(function(b,i){
+              return (i===0?"-> ":"   ")+b.path.slice(1).join(" ")+"  ("+Math.round(Math.exp(b.score)*100)+"% of this toy tree's probability mass)";
+            });
+            out.textContent=lines.join("\n");
+            readout.textContent="Beam width "+width+" keeps "+width+" candidate sentence"+(width===1?"":"s")+" alive at each step; only the top one is marked -> (toy fixed-probability tree, not a real vocabulary).";
           }
-          capEl.addEventListener("input",run);
-          dataEl.addEventListener("input",run);
+          widthEl.addEventListener("input",run);
           run();
           })();</script>
         </div>
