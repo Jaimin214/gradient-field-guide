@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-19T05:41:50">2026-11-19 05:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-19T10:41:17">2026-11-19 10:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,9 +396,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
+        <div><span class="state rising">Rising</span><strong>Attacks on AI infrastructure keep escalating</strong><p>A leaked inference-provider key cascaded through a trojanized VS Code extension, a remote-code-execution bug let an attacker into NEAR AI's inference servers, and even the Model Context Protocol's own reference servers needed an emergency security patch. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Capital and compute leadership keep reshuffling at frontier speed</strong><p>Anthropic began trading on Nasdaq as "ANT" on November 19 after pricing above range, the same week Nvidia settled into an interim-CEO transition after Jensen Huang's resignation. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agentic infrastructure is becoming the industry's top attack surface</strong><p>A hosting provider's MCP server took two separate attack waves, a leaked inference-platform API key trojanized a VS Code extension, and the FBI named a specific AI-driven hacking framework, all within two weeks. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent identity and protocol governance is professionalizing</strong><p>The Linux Foundation welcomed a DNS-based Agent Name Service for verifiable agent identity, and the Model Context Protocol moved to a fixed six-month release cadence. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Open-weight models keep closing on frontier labs</strong><p>Moonshot released full weights for its 2.8-trillion-parameter Kimi K3.1 Pro days after llama.cpp, the C/C++ engine underneath much local inference, shipped its first stable 1.0 release. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Frontier labs keep splitting access into verified capability tiers</strong><p>Anthropic's Fable 5.2 ships to every API customer while its less-constrained twin, Mythos 5.2, requires passing a cybersecurity or life-sciences verification program first. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>AI governance keeps arriving state-by-state and agency-by-agency</strong><p>Newly elected governors look set to drive more state AI rules as federal rules lag, while a cabinet official is reported to have pressed Nvidia on chip-export compliance. → <a href="#L7">L7</a></p></div>
       </div>
@@ -470,28 +470,28 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.eesel.ai/blog/llama-cpp">eesel.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-12</span><span class="pill sec">Security</span></div>
-          <div><h3>German web host Mittwald reported a second wave of attacks on November 12 against the same flaw in its MCP server, this time taking its own company website offline, after an earlier breach through that server had already let an attacker read access tokens from 56 customer projects</h3>
-            <p class="why"><b>Why it matters:</b> a hosting provider's own AI-assistant integration becoming the entry point for two separate attack waves is a concrete case for scoping and rotating MCP server tokens the same way you would any other production credential (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://therecord.media/cyberattack-germany-ai-mittwald">therecord.media</a></p></div>
+          <div class="when"><span class="mono">2026-11-11</span><span class="pill sec">Security</span></div>
+          <div><h3>The Model Context Protocol project's official reference servers shipped v2.4.0 on November 11, fixing six vulnerabilities — one rated high severity — across its Filesystem, Git and Fetch servers, including a Git server flaw that could run external programs even during supposedly read-only operations</h3>
+            <p class="why"><b>Why it matters:</b> a code-execution bug in the reference servers many MCP tutorials copy from is a reminder to pin and patch versions for any MCP server wired into an agent, not just the model talking to it (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://modelcontextprotocol.info/blog/reference-servers-security-update-2026-11/">modelcontextprotocol.info</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Agents</span></div>
-          <div><h3>The Model Context Protocol project announced it is moving spec releases to a fixed six-month cadence, generally the last Tuesday of March and September, with the next version targeted for March 2027</h3>
-            <p class="why"><b>Why it matters:</b> a predictable release calendar for the protocol connecting agents to tools makes upgrade planning easier instead of reacting to ad hoc spec changes, worth knowing before building on MCP for <a href="#L6">L6</a>'s agent projects.</p>
-            <p class="src"><a href="https://blog.modelcontextprotocol.io/posts/mcp-release-cycle/">blog.modelcontextprotocol.io</a></p></div>
+          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Industry</span></div>
+          <div><h3>xAI reportedly reversed a days-old policy of watermarking all Grok API text output by default, switching back to an opt-in setting for developers less than a week after introducing the default-on watermark, which it had tied to EU AI Act compliance</h3>
+            <p class="why"><b>Why it matters:</b> a labeling policy that flips within days shows how unsettled AI-content-disclosure rules still are in practice, worth checking directly before relying on any vendor's watermark claim for your own compliance (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://teslanorth.com/2026/11/11/grok-api-watermarks-off-default-docs/">teslanorth.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Agents</span></div>
-          <div><h3>The Linux Foundation formally welcomed Agent Name Service, a DNS-based standard that gives individual AI agents verifiable, versioned identities, pairing with a separate directory project so agents can be both authenticated and discovered across organizations</h3>
-            <p class="why"><b>Why it matters:</b> as agents start calling other agents directly, a shared identity standard is worth knowing before trusting which "agent" actually sent a request (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents">linuxfoundation.org</a></p></div>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
+          <div><h3>NEAR AI disclosed that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to run code on one of its inference servers on November 8, reportedly reaching account data for roughly 100 users and 18 AI agents through a deprecated internal feature before the flaw was patched</h3>
+            <p class="why"><b>Why it matters:</b> the bug sat in the serving stack underneath the model rather than the model itself, a reminder that a hosted inference engine's own dependencies are as much an attack surface as the prompts flowing through it (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html">thehackernews.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Models</span></div>
-          <div><h3>Anthropic released Claude Fable 5.2 to all API customers alongside a higher-capability twin, Claude Mythos 5.2, restricted to organizations vetted through its cybersecurity and life-sciences verification programs, with Fable 5.2 reported to lead a third-party intelligence benchmark on gains in science, knowledge and coding</h3>
-            <p class="why"><b>Why it matters:</b> shipping two access tiers of the same underlying model, gated by a verification program rather than price, is a concrete look at how labs are managing capability-versus-safety trade-offs as models get stronger (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/anthropic-releases-claude-fable-52-and-mythos-52-models-66044607">letsdatascience.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
+          <div><h3>Moonshot AI released full weights for Kimi K3.1 Pro, a 2.8-trillion-parameter mixture-of-experts model with about 104 billion active parameters and roughly a million-token context window, under its own custom license rather than a standard open-source one</h3>
+            <p class="why"><b>Why it matters:</b> a model this large still needs serious multi-GPU infrastructure to serve, a concrete reminder that "open weights" doesn't mean "runs on your laptop" before planning any <a href="#L4">L4</a> local-model project around it.</p>
+            <p class="src"><a href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">technode.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,49 +674,46 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: agent-permission-blast-radius, share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature" id="pt-sm">
+        <!-- HISTORY: share-link-entropy, quantization-error-rounding, needle-in-haystack-long-context, top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator" id="pt-kv">
           <span class="label">New this refresh · 2026-11-19 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: softmax temperature</h3>
-          <p class="lede">A model scores every candidate next word, then softmax turns those scores into probabilities it samples from. Temperature rescales the scores before that happens: below 1 it sharpens the distribution toward the top-scoring word, above 1 it flattens the choices toward uniform. Drag the slider — the four words and scores below are fixed and arbitrary, a real model scores its whole vocabulary from its own learned weights every step.</p>
+          <h3>Toy: KV-cache memory calculator</h3>
+          <p class="lede">Every token a model generates gets its key/value vectors cached so later tokens can attend back to it without recomputing attention from scratch — that cache grows with context length and sits in GPU memory alongside the model's own weights. This toy fixes a 32-layer, 32-head, 128-dim-per-head model (roughly 7B-class) and lets you drag context length and switch precision; a real model's layer count, head count and tricks like grouped-query attention change the actual number a lot.</p>
           <div class="pt-ctl">
-            <label>Temperature: <input type="range" id="pt-sm-temp" min="0.1" max="2" step="0.1" value="1"></label>
-            <span class="mono" id="pt-sm-tempval"></span>
+            <label>Context length: <input type="range" id="pt-kv-ctx" min="0" max="8" step="1" value="4"></label>
+            <span class="mono" id="pt-kv-ctxval"></span>
           </div>
-          <div id="pt-sm-bars"></div>
-          <p class="mono" id="pt-sm-readout"></p>
+          <div class="pt-ctl">
+            <label><input type="radio" name="pt-kv-prec" value="2" checked> fp16 (2 B/value)</label>
+            <label><input type="radio" name="pt-kv-prec" value="1"> int8 (1 B/value)</label>
+            <label><input type="radio" name="pt-kv-prec" value="0.5"> int4 (0.5 B/value)</label>
+          </div>
+          <div class="pt-row"><span>KV-cache size</span><div class="pt-track"><div class="pt-fill" id="pt-kv-fill"></div></div><span class="mono" id="pt-kv-pct"></span></div>
+          <p class="mono" id="pt-kv-readout"></p>
           <script>(function(){
-          var WORDS=[["sunny",3],["rainy",2],["snowy",1],["windy",0.2]];
-          var tempEl=document.getElementById("pt-sm-temp"), tempVal=document.getElementById("pt-sm-tempval");
-          var bars=document.getElementById("pt-sm-bars"), readout=document.getElementById("pt-sm-readout");
-          var rows=WORDS.map(function(w){
-            var row=document.createElement("div"); row.className="pt-row";
-            var label=document.createElement("span"); label.textContent=w[0];
-            var track=document.createElement("div"); track.className="pt-track";
-            var fill=document.createElement("div"); fill.className="pt-fill";
-            track.appendChild(fill);
-            var pct=document.createElement("span"); pct.className="mono";
-            row.appendChild(label); row.appendChild(track); row.appendChild(pct);
-            bars.appendChild(row);
-            return {fill:fill, pct:pct};
-          });
-          function run(){
-            var t=Number(tempEl.value);
-            tempVal.textContent="T = "+t.toFixed(1);
-            var exps=WORDS.map(function(w){return Math.exp(w[1]/t);});
-            var sum=exps.reduce(function(a,b){return a+b;},0);
-            var probs=exps.map(function(e){return e/sum;});
-            probs.forEach(function(p,i){
-              rows[i].fill.style.width=(p*100)+"%";
-              rows[i].pct.textContent=Math.round(p*100)+"%";
-            });
-            readout.textContent = t<0.5
-              ? "Low temperature sharpens the distribution toward the single highest-scoring word (toy fixed scores, not a real vocabulary)."
-              : t>1.3
-              ? "High temperature flattens the distribution, making even low-scoring words nearly as likely as the top one (toy fixed scores, not a real vocabulary)."
-              : "Around T = 1.0 the scores pass through roughly unscaled; this toy only has 4 fixed scores, a real model chooses among its whole vocabulary.";
+          var LAYERS=32, HEADS=32, HEAD_DIM=128, GPU_GB=24;
+          var STEPS=[512,1024,2048,4096,8192,16384,32768,65536,131072];
+          var ctxEl=document.getElementById("pt-kv-ctx"), ctxVal=document.getElementById("pt-kv-ctxval");
+          var fill=document.getElementById("pt-kv-fill"), pct=document.getElementById("pt-kv-pct"), readout=document.getElementById("pt-kv-readout");
+          var radios=document.querySelectorAll('input[name="pt-kv-prec"]');
+          function bytesPerValue(){
+            for(var i=0;i<radios.length;i++){ if(radios[i].checked) return Number(radios[i].value); }
+            return 2;
           }
-          tempEl.addEventListener("input",run);
+          function run(){
+            var tokens=STEPS[Number(ctxEl.value)];
+            ctxVal.textContent=tokens.toLocaleString()+" tokens";
+            var bytes=2*LAYERS*HEADS*HEAD_DIM*tokens*bytesPerValue();
+            var gb=bytes/1e9;
+            var p=Math.min(100, gb/GPU_GB*100);
+            fill.style.width=p+"%";
+            pct.textContent=gb.toFixed(2)+" GB";
+            readout.textContent = gb>GPU_GB
+              ? "That alone exceeds a toy 24 GB reference GPU, before the model's own weights even load (fixed 32-layer/32-head/128-dim model, not a real benchmark)."
+              : "That's "+p.toFixed(0)+"% of a toy 24 GB reference GPU, on top of whatever the model's own weights need (fixed 32-layer/32-head/128-dim model, not a real benchmark).";
+          }
+          ctxEl.addEventListener("input",run);
+          for(var j=0;j<radios.length;j++){ radios[j].addEventListener("change",run); }
           run();
           })();</script>
         </div>
