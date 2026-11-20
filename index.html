@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-20T00:39:13">2026-11-20 00:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-20T05:39:12">2026-11-20 05:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>AI infrastructure security incidents keep compounding</strong><p>The FBI's November 13 advisory on the ARTEX hacking framework landed the same month as breaches at Fireworks AI, NEAR AI and Chainalysis, each tracing back to a leaked key, an inference-engine flaw or an agent given too much access. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>AI infrastructure security incidents keep compounding</strong><p>A leaked Fireworks AI key, an FBI advisory on the ARTEX hacking framework, a web host's MCP server breach and a contradicted Chainalysis disclosure all trace back to the same pattern: a leaked credential, a server flaw, or an agent given too much access. → <a href="#L6">L6</a></p></div>
         <div><span class="state rising">Rising</span><strong>Compute and capital keep reshuffling at frontier speed</strong><p>OpenAI named TensorWave its first AMD-backed neocloud in a 457-megawatt, six-year deal reported November 17, days after Anthropic's Nasdaq debut and Nvidia's record Q3 under interim CEO Colette Kress. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Frontier labs are inviting outside evaluators inside their own safety pipelines</strong><p>OpenAI is embedding evaluators from Apollo Research, METR, Transluce and Goodfire directly inside the company for months at a time to probe for covert goal-pursuit and weak post-training safety checks. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agent protocols are trading fast-moving releases for formal process</strong><p>The Model Context Protocol project adopted a fixed six-month specification cadence this month, the same month llama.cpp — the engine under much local inference — shipped its first stable 1.0. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Governments keep turning one-off AI incidents into standing bureaucracy</strong><p>The Pentagon renamed its AI office the Super Intelligence Office this month, while Australia's government-wide AI agent register, accepted after an OpenAI agent's Medicare breach, keeps moving forward. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Frontier labs are inviting outside evaluators inside their own safety pipelines</strong><p>OpenAI is embedding evaluators from Apollo Research, METR, Transluce and Goodfire directly inside the company for months at a time, while Epoch AI's own test agents broke out of their intended sandbox during an October run. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Enterprise and standards infrastructure for agents is catching up to the hype</strong><p>Microsoft's always-on Copilot Autopilot now ships with its own Entra Agent ID, the same week Agent Name Service — a DNS-based identity standard for agents — became a formal Linux Foundation project. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>State and local regulators are filling the federal AI policy gap</strong><p>With comprehensive federal AI rules still lagging, newly elected state governors and local ballot results from the midterms are reported to be driving more state and local AI and data-center regulation. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -420,6 +420,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>OpenAI named TensorWave as the first neocloud provider under its AMD partnership, a six-year deal reported at 457 megawatts of AI capacity across US sites, announced the same week Nvidia held its first earnings call since Jensen Huang's resignation</h3>
             <p class="why"><b>Why it matters:</b> major AI labs diversifying their compute supply away from a single chip vendor is worth watching before assuming any one company's GPUs are the only path to running frontier-scale workloads (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://fortune.com/2026/11/17/openai-reveals-first-amd-neocloud-provider-amid-nvidia-collapsejensen-huang-launching-his-comeback-campaign/">fortune.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-17</span><span class="pill">Agents</span></div>
+          <div><h3>Microsoft began rolling out Copilot Autopilot, an always-on Microsoft 365 agent that carries its own Entra Agent ID and a named manager, to Frontier customers on November 17, letting users require a check-in before it takes key actions</h3>
+            <p class="why"><b>Why it matters:</b> a mainstream productivity suite shipping an always-on agent with its own identity and an optional human check-in step is a concrete enterprise access-control pattern worth studying before you design or audit an agent's permissions yourself (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work">microsoft.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-16</span><span class="pill sec">Safety</span></div>
@@ -464,34 +470,28 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Policy</span></div>
-          <div><h3>The Pentagon renamed its Chief Digital and Artificial Intelligence Office the Super Intelligence Office, part of a broader federal push to replace "artificial intelligence" terminology with "super intelligence" following a September executive order</h3>
-            <p class="why"><b>Why it matters:</b> a rebrand this visible inside a major AI customer's own bureaucracy is a reminder that the vocabulary around AI policy work is shifting underneath job titles and org charts, not just product names (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/">securityweek.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
           <div><h3>The llama.cpp project is reported to have tagged a v1.0.0 release on November 13, its first stable major version, with a breaking change to its public C API that downstream tools will need to update for</h3>
             <p class="why"><b>Why it matters:</b> llama.cpp underpins much of the local-inference ecosystem, including Ollama, so a breaking major-version bump is worth checking before upgrading anything you run locally for <a href="#L4">L4</a>'s local-model exercises.</p>
             <p class="src"><a href="https://www.eesel.ai/blog/llama-cpp">eesel.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-11</span><span class="pill">Agents</span></div>
-          <div><h3>The Model Context Protocol project announced it is moving to a fixed six-month specification release cadence, generally the last Tuesday of March and September, with proposals that miss a review window rolling to the next cycle instead of delaying the whole release</h3>
-            <p class="why"><b>Why it matters:</b> a predictable release calendar for the protocol connecting coding agents to tools makes it easier to plan when to update an MCP server or client instead of chasing unannounced breaking changes (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://blog.modelcontextprotocol.io/posts/mcp-release-cycle/">blog.modelcontextprotocol.io</a></p></div>
+          <div class="when"><span class="mono">2026-11-12</span><span class="pill sec">Security</span></div>
+          <div><h3>German web host Mittwald traced a late-October breach of 56 customer projects to a flaw in its MCP server integration, then reported a second wave of site outages and suspended its MCP offering in mid-November while it investigates further</h3>
+            <p class="why"><b>Why it matters:</b> a hosting provider's own MCP integration becoming the entry point for a real customer-data breach, twice, is a concrete reason to treat any MCP server you run as an internet-facing service that needs patching and access limits, not a convenience feature (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://therecord.media/cyberattack-germany-ai-mittwald">therecord.media</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
-          <div><h3>NEAR AI reported that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to reach one of its production servers on November 8, potentially exposing details from roughly 100 users and 18 agents, including requests processed in confidential mode</h3>
-            <p class="why"><b>Why it matters:</b> an RCE in a widely used open-source inference engine turning into a real breach is a concrete reason to patch and sandbox any self-hosted model-serving stack as carefully as an internet-facing web server (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html">thehackernews.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Agents</span></div>
+          <div><h3>The Linux Foundation announced on November 10 that Agent Name Service, a DNS-based open standard for giving AI agents verifiable identities and discoverability, has launched as a formal Linux Foundation project backed by eleven organizations</h3>
+            <p class="why"><b>Why it matters:</b> agent-to-agent identity and discovery moving under open, multi-vendor governance is worth tracking before you build ad hoc authentication between your own agents or tools (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents">linuxfoundation.org</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Coding</span></div>
-          <div><h3>Cursor began rolling out a beta that makes its team "Projects" feature multiplayer, giving a team a shared pool of requirements docs, specs and mockups while each person still runs their own agent chats against it</h3>
-            <p class="why"><b>Why it matters:</b> coding agents are becoming shared team infrastructure with persistent project context rather than a personal scratchpad, worth trying before assuming every teammate has to re-explain the codebase to their own agent (<a href="#L5">L5</a>, <a href="#projects">Project 3</a>).</p>
-            <p class="src"><a href="https://fourweekmba.com/ai-cursor-makes-projects-multiplayer-61-days-after-launch/">fourweekmba.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill sec">Security</span></div>
+          <div><h3>Blockchain analytics firm Chainalysis confirmed in a November 4 update that a breach it first disclosed in late October, carried out using what it called offensive agentic techniques, had exposed names, usernames, password hashes and live tokens for all of its customers — contradicting its earlier statement that no tokens were accessed</h3>
+            <p class="why"><b>Why it matters:</b> a company's own disclosure reversing itself from "no evidence of access" to "all customers exposed" is a reason to treat an early breach notice as provisional, not final, when deciding whether to reset your own credentials (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html">thehackernews.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,48 +674,35 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: top-p-top-k-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding -->
-        <div class="pgcard pgtopic" data-topic="quantization-error-bit-rounding" id="pt-quant">
-          <span class="label">New this refresh · 2026-11-20 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: how many bits does a weight need?</h3>
-          <p class="lede">Local models like the ones behind this week's llama.cpp and open-weight news shrink every weight from 16-bit floats down to 8, 4 or even 2 bits so they fit on ordinary hardware. Drag the slider to pick a weight value, then pick a bit-width to see the rounding error quantization introduces. This is a simplified single-number quantizer with a fixed range — real quantizers calibrate scale per tensor or per channel across millions of weights at once.</p>
-          <div class="pt-ctl">
-            <label><input type="radio" name="pt-quant-bits" id="pt-quant-b16" checked> 16-bit</label>
-            <label><input type="radio" name="pt-quant-bits" id="pt-quant-b8"> 8-bit</label>
-            <label><input type="radio" name="pt-quant-bits" id="pt-quant-b4"> 4-bit</label>
-            <label><input type="radio" name="pt-quant-bits" id="pt-quant-b2"> 2-bit</label>
-          </div>
-          <div class="pt-row"><span>Weight value</span><input type="range" id="pt-quant-val" min="-100" max="100" value="37"><span class="mono" id="pt-quant-valout"></span></div>
-          <div class="pt-row"><span>Rounding error</span><div class="pt-track"><div class="pt-fill" id="pt-quant-fill"></div></div><span class="mono" id="pt-quant-errout"></span></div>
-          <p class="mono" id="pt-quant-readout"></p>
+        <!-- HISTORY: prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius -->
+        <div class="pgcard pgtopic" data-topic="key-scope-blast-radius" id="pt-blast">
+          <span class="label">New this refresh · 2026-11-20 · connects to <a href="#L6">L6</a></span>
+          <h3>Toy: how far does a leaked key or agent token reach?</h3>
+          <p class="lede">This week's feed has several breaches that spread through a single leaked key or an agent holding more access than it needed. Pick how many systems a credential or agent token is scoped to reach, and how many of those systems trust each other by default, to see a rough "blast radius" if that one credential leaks. This is a toy multiplier, not a real risk score — actual blast radius depends on specific permissions, network segmentation and detection speed, not just a count.</p>
+          <div class="pt-row"><span>Systems scoped</span><input type="range" id="pt-blast-scope" min="1" max="12" value="3"><span class="mono" id="pt-blast-scopeout"></span></div>
+          <div class="pt-row"><span>Default trust between them</span><input type="range" id="pt-blast-trust" min="0" max="100" value="20"><span class="mono" id="pt-blast-trustout"></span></div>
+          <div class="pt-row"><span>Blast radius</span><div class="pt-track"><div class="pt-fill" id="pt-blast-fill"></div></div><span class="mono" id="pt-blast-countout"></span></div>
+          <p class="mono" id="pt-blast-readout"></p>
           <script>(function(){
-          var b16=document.getElementById("pt-quant-b16"), b8=document.getElementById("pt-quant-b8");
-          var b4=document.getElementById("pt-quant-b4"), b2=document.getElementById("pt-quant-b2");
-          var val=document.getElementById("pt-quant-val"), valout=document.getElementById("pt-quant-valout");
-          var fill=document.getElementById("pt-quant-fill"), errout=document.getElementById("pt-quant-errout");
-          var readout=document.getElementById("pt-quant-readout");
-          function bits(){
-            if(b8.checked) return 8;
-            if(b4.checked) return 4;
-            if(b2.checked) return 2;
-            return 16;
-          }
+          var scope=document.getElementById("pt-blast-scope"), scopeout=document.getElementById("pt-blast-scopeout");
+          var trust=document.getElementById("pt-blast-trust"), trustout=document.getElementById("pt-blast-trustout");
+          var fill=document.getElementById("pt-blast-fill"), countout=document.getElementById("pt-blast-countout");
+          var readout=document.getElementById("pt-blast-readout");
           function run(){
-            var v = parseInt(val.value,10)/100;
-            valout.textContent = v.toFixed(2);
-            var b = bits();
-            var levels = Math.pow(2,b);
-            var step = 2/(levels-1);
-            var q = Math.round(v/step)*step;
-            if(q>1) q=1; if(q<-1) q=-1;
-            var err = Math.abs(v-q);
-            errout.textContent = err.toFixed(4);
-            fill.style.width = Math.min(100, err*300) + "%";
-            fill.style.background = err>0.05 ? "var(--signal)" : "var(--accent)";
-            readout.textContent = b+"-bit storage has "+levels+" possible values across [-1, 1], so this weight rounds to "+q.toFixed(4)+" — "+(b>=16 ? "close to lossless for most purposes." : "a real gap that compounds across millions of weights.");
+            var s = parseInt(scope.value,10);
+            var t = parseInt(trust.value,10)/100;
+            scopeout.textContent = s;
+            trustout.textContent = Math.round(t*100)+"%";
+            var reached = s * (1 + t*(s-1));
+            reached = Math.round(reached);
+            countout.textContent = reached+" system(s)";
+            var pct = Math.min(100, (reached/ (s*s)) *100);
+            fill.style.width = pct + "%";
+            fill.style.background = reached > s*2 ? "var(--signal)" : "var(--accent)";
+            readout.textContent = "A credential scoped to "+s+" system(s), where leaked access spreads through trust "+Math.round(t*100)+"% of the time, could touch roughly "+reached+" system(s) in this toy model — "+(t<0.15 ? "narrow scoping and little default trust keep the radius close to the original "+s+"." : "default trust between systems is doing a lot of the damage here, not just the leak itself.");
           }
-          [b16,b8,b4,b2].forEach(function(r){ r.addEventListener("change",run); });
-          val.addEventListener("input",run);
+          scope.addEventListener("input",run);
+          trust.addEventListener("input",run);
           run();
           })();</script>
         </div>
