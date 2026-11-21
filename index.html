@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-20T19:41:20">2026-11-20 19:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T00:43:16">2026-11-21 00:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier labs are shipping flagship model updates every few weeks</strong><p>OpenAI pulled GPT-6.1 Astra and shipped GPT-6.2 Astra and Sol seven weeks later on November 17, while Google's Gemini 4 Neon arrived barely seven weeks after Gemini 4 Argon — "the best model" is turning into a moving target. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>AI infrastructure security incidents keep compounding</strong><p>A remote-code-execution flaw in SGLang breached NEAR AI's confidential-computing servers, joining a leaked Fireworks AI key and an FBI advisory on the ARTEX hacking framework — the pattern is the same each time: a vulnerable component, a leaked credential, or an agent given too much access. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Compute, capital and macro risk keep reshuffling at frontier speed</strong><p>Nvidia halted licensed chip shipments to China on November 18 under interim CEO Colette Kress, days after Anthropic's Nasdaq debut, while the Fed's November 13 stability report found 87% of market contacts now naming AI a top risk to the financial system. → <a href="#L7">L7</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local models are chasing frontier scale on a single consumer GPU</strong><p>Edge0 open-sourced a 145-billion-parameter mixture-of-experts model it says runs on one consumer GPU under 29GB of memory — the benchmark claims are self-reported and the license isn't fully open, but it's a sign of how far local inference is being pushed. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>State and local regulators are filling the federal AI policy gap</strong><p>With comprehensive federal AI rules still lagging, newly elected state governors and local ballot results from the midterms are reported to be driving more state and local AI and data-center regulation. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs keep shipping overlapping flagship and mid-tier models</strong><p>OpenAI's GPT-6.2 Astra and Sol arrived November 17 just as Google's Gemini 4 Neon slotted in between Carbon and Hydrogen on November 18 — multiple tiers from the same lab are becoming normal, not just multiple labs competing for one crown. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Supply-chain and access-control security incidents keep compounding</strong><p>A leaked Fireworks AI key let attackers trojanize a VS Code extension cache reaching up to 5,000 Cursor users, while the FBI separately warned that the open-source ARTEX framework lets agents reach privileged access in under three hours — leaked credentials and over-permissioned agents are the common thread. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Scrutiny of AI infrastructure spending is turning into formal investigations</strong><p>The SEC reportedly opened a civil inquiry into whether Nvidia's disclosures misled investors, landing days after Jensen Huang's departure and alongside a Federal Reserve report where 87% of market contacts now call AI a top financial-stability risk. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Enterprise agents are getting their own identities and check-in controls</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, with an optional human check-in before key actions — a concrete pattern responding to the same access-control questions this month's agent security incidents raise. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local-inference tooling is hardening toward production stability</strong><p>llama.cpp's first 1.0.0 release adopts semantic versioning, so a major bump now means a breaking C API change — a small but telling sign that local-model tooling is maturing past "hobbyist nightly builds." → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -446,6 +446,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work">microsoft.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-17</span><span class="pill">Industry</span></div>
+          <div><h3>The Wall Street Journal reported on November 17 that the SEC opened a civil inquiry into whether Nvidia's investor disclosures were misleading, a probe that surfaced days after Jensen Huang's November 12 departure as CEO and amid separate questions about Nvidia's China chip sales</h3>
+            <p class="why"><b>Why it matters:</b> a securities regulator scrutinizing a frontier-chip vendor's own disclosures is a reminder that the compute boom carries corporate-governance risk beyond the technology itself (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://pymnts.com/legal/2026/sec-investigating-whether-nvidia-misled-investors">pymnts.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-16</span><span class="pill sec">Safety</span></div>
           <div><h3>OpenAI said on November 16 it will embed evaluators from four outside safety groups — Apollo Research, METR, Transluce and Goodfire — inside the company for months at a time, with Apollo placing six staff for four months to look for models that covertly pursue goals conflicting with their training</h3>
             <p class="why"><b>Why it matters:</b> a frontier lab giving outside evaluators standing internal access, not just an after-the-fact audited report, is a concrete model for what independent AI safety oversight can look like in practice (<a href="#L6">L6</a>).</p>
@@ -482,16 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Open models</span></div>
-          <div><h3>Edge0 open-sourced two on-device mixture-of-experts models, Edge0-145B and Edge0-120B, on November 12–13, claiming the 145-billion-parameter model fits in under 29GB of memory and runs at 80+ tokens/second on a single consumer GPU — though its weights ship under a custom community license rather than a fully open one, and the benchmark numbers are Edge0's own</h3>
-            <p class="why"><b>Why it matters:</b> a frontier-scale model claimed to fit on one consumer GPU would reshape what "local" means for the local-model exercises in <a href="#L4">L4</a>, if the self-reported numbers hold up to independent testing.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/edge0-open-sources-145b-on-device-model-for-laptops-e25b70af">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
-          <div><h3>NEAR AI disclosed that an attacker used a remote-code-execution flaw in the open-source SGLang inference engine to reach one of its servers on November 8, exposing confidential-mode chat logs and two customers' API keys, even though the server ran inside a confidential-computing (TEE) enclave</h3>
-            <p class="why"><b>Why it matters:</b> a vulnerable component running inside a trusted execution environment shows that confidential computing protects data from the host operator, not from bugs in the software stack above it — worth remembering before trusting any TEE claim at face value (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html">thehackernews.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
+          <div><h3>The llama.cpp inference engine shipped its first 1.0.0 release on November 13, adopting semantic versioning so a future major-version bump now signals a breaking change to its public C API, and removing roughly three dozen functions that had been marked deprecated along with some legacy GGML operators</h3>
+            <p class="why"><b>Why it matters:</b> a widely used local-inference engine committing to a stable, versioned API is worth checking before you build a long-lived <a href="#L4">L4</a> local-model project directly against its C API rather than a higher-level wrapper.</p>
+            <p class="src"><a href="https://letsdatascience.com/news/llamacpp-ships-v100-with-semantic-versioning-for-api-breaks-b200de7e">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,55 +674,50 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget-calculator, tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter" id="pt-als">
-          <span class="label">New this refresh · 2026-11-20 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: how many steps before an agent must stop?</h3>
-          <p class="lede">An autonomous agent loop keeps taking actions until it decides it's done — or until something stops it. Set a step budget and a per-step "done" chance below, then run a simulated loop; it never calls a real model, each step is just a coin flip in your browser. The point is simplified but real: without a hard step budget or a human check-in, a loop that never converges can keep running indefinitely — the kind of unattended agent behavior this month's FBI advisory on the ARTEX hacking framework and Microsoft's new Copilot agent check-in feature are both responding to.</p>
+        <!-- HISTORY: tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings -->
+        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings" id="pt-cs">
+          <span class="label">New this refresh · 2026-11-21 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: how "similar" are two embeddings?</h3>
+          <p class="lede">Retrieval systems (RAG) rank chunks by the cosine similarity of their embedding vectors, not by shared words. This toy uses two tiny hand-set 2D vectors instead of a real embedding with hundreds of dimensions — move the sliders and watch the similarity score update live.</p>
           <div class="pt-ctl">
-            <label>Step budget <input type="range" id="pt-als-budget" min="1" max="50" value="12"> <span id="pt-als-budget-val" class="mono">12</span></label>
-            <label>Done chance/step <input type="range" id="pt-als-chance" min="0" max="100" value="15"> <span id="pt-als-chance-val" class="mono">15%</span></label>
+            <label>Vector A · x <input type="range" id="pt-cs-ax" min="-10" max="10" value="6"> <span id="pt-cs-ax-val" class="mono">6</span></label>
+            <label>Vector A · y <input type="range" id="pt-cs-ay" min="-10" max="10" value="2"> <span id="pt-cs-ay-val" class="mono">2</span></label>
           </div>
           <div class="pt-ctl">
-            <button type="button" class="btn primary" id="pt-als-run">Run loop</button>
-            <button type="button" class="btn" id="pt-als-reset">Reset</button>
+            <label>Vector B · x <input type="range" id="pt-cs-bx" min="-10" max="10" value="4"> <span id="pt-cs-bx-val" class="mono">4</span></label>
+            <label>Vector B · y <input type="range" id="pt-cs-by" min="-10" max="10" value="5"> <span id="pt-cs-by-val" class="mono">5</span></label>
           </div>
-          <div class="pt-row"><span class="mono" id="pt-als-label">step 0</span><div class="pt-track"><div class="pt-fill" id="pt-als-fill"></div></div><span class="mono" id="pt-als-pct">0%</span></div>
-          <p class="mono" id="pt-als-readout">Set a budget and chance, then run the loop.</p>
+          <div class="pt-row"><span class="mono" id="pt-cs-label">cosine sim</span><div class="pt-track"><div class="pt-fill" id="pt-cs-fill"></div></div><span class="mono" id="pt-cs-pct">0.00</span></div>
+          <p class="mono" id="pt-cs-readout">Move the sliders to compare the two toy vectors.</p>
           <script>(function(){
-          var budget=document.getElementById("pt-als-budget"), budgetVal=document.getElementById("pt-als-budget-val");
-          var chance=document.getElementById("pt-als-chance"), chanceVal=document.getElementById("pt-als-chance-val");
-          var runBtn=document.getElementById("pt-als-run"), resetBtn=document.getElementById("pt-als-reset");
-          var label=document.getElementById("pt-als-label"), fill=document.getElementById("pt-als-fill");
-          var pct=document.getElementById("pt-als-pct"), readout=document.getElementById("pt-als-readout");
-          var timer=null;
-          function sync(){ budgetVal.textContent=budget.value; chanceVal.textContent=chance.value+"%"; }
-          function reset(){
-            if(timer){clearTimeout(timer);timer=null;}
-            label.textContent="step 0"; fill.style.width="0%"; pct.textContent="0%";
-            readout.textContent="Set a budget and chance, then run the loop.";
+          var ax=document.getElementById("pt-cs-ax"), ay=document.getElementById("pt-cs-ay");
+          var bx=document.getElementById("pt-cs-bx"), by=document.getElementById("pt-cs-by");
+          var axv=document.getElementById("pt-cs-ax-val"), ayv=document.getElementById("pt-cs-ay-val");
+          var bxv=document.getElementById("pt-cs-bx-val"), byv=document.getElementById("pt-cs-by-val");
+          var fill=document.getElementById("pt-cs-fill"), pct=document.getElementById("pt-cs-pct");
+          var readout=document.getElementById("pt-cs-readout");
+          function update(){
+            axv.textContent=ax.value; ayv.textContent=ay.value;
+            bxv.textContent=bx.value; byv.textContent=by.value;
+            var a=[parseFloat(ax.value),parseFloat(ay.value)];
+            var b=[parseFloat(bx.value),parseFloat(by.value)];
+            var dot=a[0]*b[0]+a[1]*b[1];
+            var magA=Math.sqrt(a[0]*a[0]+a[1]*a[1]);
+            var magB=Math.sqrt(b[0]*b[0]+b[1]*b[1]);
+            var sim=(magA>0&&magB>0)?dot/(magA*magB):0;
+            var w=Math.round((sim+1)/2*100);
+            fill.style.width=w+"%";
+            pct.textContent=sim.toFixed(2);
+            var msg;
+            if(magA===0||magB===0) msg="A zero-length vector has no direction — cosine similarity is undefined here.";
+            else if(sim>0.9) msg="Nearly identical direction — a retriever would treat these as a strong match.";
+            else if(sim>0.3) msg="Somewhat aligned — a middling match, below most retrieval thresholds.";
+            else if(sim>-0.3) msg="Roughly perpendicular — these point in unrelated directions.";
+            else msg="Pointing opposite ways — cosine similarity goes negative.";
+            readout.textContent=msg;
           }
-          function step(n){
-            var max=parseInt(budget.value,10);
-            var p=parseInt(chance.value,10)/100;
-            var w=Math.round(100*n/max);
-            label.textContent="step "+n; fill.style.width=w+"%"; pct.textContent=w+"%";
-            if(Math.random()<p){
-              readout.textContent="Agent reported \"done\" after "+n+" of "+max+" steps.";
-              return;
-            }
-            if(n>=max){
-              readout.textContent="Hit the step budget at "+max+" steps without the agent ever reporting done — this is the hard stop a real system needs.";
-              return;
-            }
-            readout.textContent="Step "+n+" of "+max+" — still running…";
-            timer=setTimeout(function(){ step(n+1); },220);
-          }
-          budget.addEventListener("input",sync);
-          chance.addEventListener("input",sync);
-          runBtn.addEventListener("click",function(){ reset(); step(1); });
-          resetBtn.addEventListener("click",reset);
-          sync();
+          [ax,ay,bx,by].forEach(function(el){ el.addEventListener("input",update); });
+          update();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
