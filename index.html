@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T00:43:16">2026-11-21 00:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T05:39:40">2026-11-21 05:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,12 +397,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs keep shipping overlapping flagship and mid-tier models</strong><p>OpenAI's GPT-6.2 Astra and Sol arrived November 17 just as Google's Gemini 4 Neon slotted in between Carbon and Hydrogen on November 18 — multiple tiers from the same lab are becoming normal, not just multiple labs competing for one crown. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Supply-chain and access-control security incidents keep compounding</strong><p>A leaked Fireworks AI key let attackers trojanize a VS Code extension cache reaching up to 5,000 Cursor users, while the FBI separately warned that the open-source ARTEX framework lets agents reach privileged access in under three hours — leaked credentials and over-permissioned agents are the common thread. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Security incident patterns keep tracing back to the same few root causes</strong><p>A November 19 Aikido review of 50 disclosed AI incidents found exposed secrets, over-privileged accounts and weak isolation behind most of them — the same pattern already visible in this month's Cursor key leak and ARTEX agent-escape stories. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Scrutiny of AI infrastructure spending is turning into formal investigations</strong><p>The SEC reportedly opened a civil inquiry into whether Nvidia's disclosures misled investors, landing days after Jensen Huang's departure and alongside a Federal Reserve report where 87% of market contacts now call AI a top financial-stability risk. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Enterprise agents are getting their own identities and check-in controls</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, with an optional human check-in before key actions — a concrete pattern responding to the same access-control questions this month's agent security incidents raise. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local-inference tooling is hardening toward production stability</strong><p>llama.cpp's first 1.0.0 release adopts semantic versioning, so a major bump now means a breaking C API change — a small but telling sign that local-model tooling is maturing past "hobbyist nightly builds." → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Open-weight models are narrowing the gap with closed frontier models</strong><p>Moonshot's Kimi K3.1 Pro shipped full open weights on November 4 and is reported (unverified independently) to approach Claude Opus 5.5 on coding benchmarks while needing noticeably less hardware to run. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-11-19</span><span class="pill sec">Security</span></div>
+          <div><h3>A November 19 Aikido review of 50 disclosed AI-related security incidents found exposed secrets, over-privileged accounts and weak isolation behind most of them, and noted that stolen credentials often turn quickly into costly unauthorized usage on AI platforms</h3>
+            <p class="why"><b>Why it matters:</b> an outside analysis landing on the exact same failure modes as this month's Cursor key leak and ARTEX sandbox-escape stories is a reason to audit your own agent's credential scope before shipping it, not after (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.aikido.dev/blog/ai-incidents-root-causes-patterns">aikido.dev</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-19</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic priced its Nasdaq IPO at $83 a share, above its earlier $70–$78 range, selling roughly 980 million shares in a deal worth about $81 billion, with trading under the ticker "ANT" beginning November 19 alongside a separate multibillion-dollar private placement</h3>
@@ -464,12 +470,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.faegredrinker.com/zh/insights/publications/2026/11/how-the-midterm-results-could-reshape-ai-and-data-center-regulations-and-more-developments">faegredrinker.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Industry</span></div>
-          <div><h3>The Federal Reserve's November 13 Financial Stability Report found that 87% of surveyed market contacts now name AI a top risk to the US financial system, up from about half six months earlier, and devoted a dedicated section to AI-related financing for the first time</h3>
-            <p class="why"><b>Why it matters:</b> regulators flagging AI as the leading financial-stability risk is worth weighing before concentrating savings or equity compensation heavily in AI-sector stock (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://stockanalysis.com/news/fed-financial-stability-report-ai-risk-november-2026/">stockanalysis.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
           <div><h3>Cursor confirmed that a leaked Fireworks AI API key let attackers plant a trojanized copy of Anthropic's Claude Code extension on its VS Code marketplace cache for about 11 hours in late October, reaching up to 5,000 users with builds reported to attempt installing persistent SSH backdoors; Fireworks AI is separately reported to have since widened that breach's disclosed scope to customer datasets and partial model weights, with Notion confirming the same vendor incident touched under 1% of its workspaces</h3>
             <p class="why"><b>Why it matters:</b> a single leaked inference-provider key cascading through a trojanized editor extension into a second company's user data is a concrete supply-chain failure mode worth designing against in any tool built on top of someone else's API key (<a href="#L6">L6</a>).</p>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
-          <div><h3>The llama.cpp inference engine shipped its first 1.0.0 release on November 13, adopting semantic versioning so a future major-version bump now signals a breaking change to its public C API, and removing roughly three dozen functions that had been marked deprecated along with some legacy GGML operators</h3>
-            <p class="why"><b>Why it matters:</b> a widely used local-inference engine committing to a stable, versioned API is worth checking before you build a long-lived <a href="#L4">L4</a> local-model project directly against its C API rather than a higher-level wrapper.</p>
-            <p class="src"><a href="https://letsdatascience.com/news/llamacpp-ships-v100-with-semantic-versioning-for-api-breaks-b200de7e">letsdatascience.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
+          <div><h3>Moonshot AI published full open weights for its 2.8-trillion-parameter Kimi K3.1 Pro on November 4, a dense multimodal model reported (unverified independently) to approach Claude Opus 5.5 on coding benchmarks while being markedly cheaper to run, after the API-only version launched about two weeks earlier</h3>
+            <p class="why"><b>Why it matters:</b> a lab publishing full weights for a model it claims rivals a closed frontier model on coding is worth testing yourself rather than taking the benchmark numbers at face value, before picking a model for an <a href="#L4">L4</a> local-model project (<a href="#projects">Project 1</a>).</p>
+            <p class="src"><a href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">technode.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,49 +674,39 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: tokenization-bpe-merges, typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings -->
-        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings" id="pt-cs">
-          <span class="label">New this refresh · 2026-11-21 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: how "similar" are two embeddings?</h3>
-          <p class="lede">Retrieval systems (RAG) rank chunks by the cosine similarity of their embedding vectors, not by shared words. This toy uses two tiny hand-set 2D vectors instead of a real embedding with hundreds of dimensions — move the sliders and watch the similarity score update live.</p>
+        <!-- HISTORY: typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
+        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator" id="pt-cw">
+          <span class="label">New this refresh · 2026-11-21 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: where does your context window go?</h3>
+          <p class="lede">This week's model releases (GPT-6.2, Gemini 4 Neon) each advertise a different context-window size. This toy divides one budget between a system prompt, retrieved chunks, chat history and a reserved reply allowance, so you can see what's left to actually work with. It uses a rough 4-characters-per-token estimate, not a real tokenizer, so true counts will differ.</p>
           <div class="pt-ctl">
-            <label>Vector A · x <input type="range" id="pt-cs-ax" min="-10" max="10" value="6"> <span id="pt-cs-ax-val" class="mono">6</span></label>
-            <label>Vector A · y <input type="range" id="pt-cs-ay" min="-10" max="10" value="2"> <span id="pt-cs-ay-val" class="mono">2</span></label>
+            <label>Context window (tokens) <input type="range" id="pt-cw-total" min="8000" max="1000000" step="1000" value="128000"> <span id="pt-cw-total-val" class="mono">128000</span></label>
           </div>
           <div class="pt-ctl">
-            <label>Vector B · x <input type="range" id="pt-cs-bx" min="-10" max="10" value="4"> <span id="pt-cs-bx-val" class="mono">4</span></label>
-            <label>Vector B · y <input type="range" id="pt-cs-by" min="-10" max="10" value="5"> <span id="pt-cs-by-val" class="mono">5</span></label>
+            <label>System prompt (tokens) <input type="range" id="pt-cw-sys" min="0" max="20000" step="100" value="2000"> <span id="pt-cw-sys-val" class="mono">2000</span></label>
+            <label>Retrieved chunks (tokens) <input type="range" id="pt-cw-rag" min="0" max="200000" step="500" value="12000"> <span id="pt-cw-rag-val" class="mono">12000</span></label>
+            <label>Chat history (tokens) <input type="range" id="pt-cw-hist" min="0" max="200000" step="500" value="8000"> <span id="pt-cw-hist-val" class="mono">8000</span></label>
+            <label>Reserved for reply (tokens) <input type="range" id="pt-cw-reply" min="0" max="50000" step="100" value="4000"> <span id="pt-cw-reply-val" class="mono">4000</span></label>
           </div>
-          <div class="pt-row"><span class="mono" id="pt-cs-label">cosine sim</span><div class="pt-track"><div class="pt-fill" id="pt-cs-fill"></div></div><span class="mono" id="pt-cs-pct">0.00</span></div>
-          <p class="mono" id="pt-cs-readout">Move the sliders to compare the two toy vectors.</p>
+          <div class="pt-row"><span class="mono" id="pt-cw-label">used</span><div class="pt-track"><div class="pt-fill" id="pt-cw-fill"></div></div><span class="mono" id="pt-cw-pct">0%</span></div>
+          <p class="mono" id="pt-cw-readout">Adjust the sliders to see how much headroom is left.</p>
           <script>(function(){
-          var ax=document.getElementById("pt-cs-ax"), ay=document.getElementById("pt-cs-ay");
-          var bx=document.getElementById("pt-cs-bx"), by=document.getElementById("pt-cs-by");
-          var axv=document.getElementById("pt-cs-ax-val"), ayv=document.getElementById("pt-cs-ay-val");
-          var bxv=document.getElementById("pt-cs-bx-val"), byv=document.getElementById("pt-cs-by-val");
-          var fill=document.getElementById("pt-cs-fill"), pct=document.getElementById("pt-cs-pct");
-          var readout=document.getElementById("pt-cs-readout");
+          var ids=["total","sys","rag","hist","reply"];
+          var els={}; ids.forEach(function(k){ els[k]=document.getElementById("pt-cw-"+k); els[k+"v"]=document.getElementById("pt-cw-"+k+"-val"); });
+          var fill=document.getElementById("pt-cw-fill"), pct=document.getElementById("pt-cw-pct");
+          var readout=document.getElementById("pt-cw-readout");
           function update(){
-            axv.textContent=ax.value; ayv.textContent=ay.value;
-            bxv.textContent=bx.value; byv.textContent=by.value;
-            var a=[parseFloat(ax.value),parseFloat(ay.value)];
-            var b=[parseFloat(bx.value),parseFloat(by.value)];
-            var dot=a[0]*b[0]+a[1]*b[1];
-            var magA=Math.sqrt(a[0]*a[0]+a[1]*a[1]);
-            var magB=Math.sqrt(b[0]*b[0]+b[1]*b[1]);
-            var sim=(magA>0&&magB>0)?dot/(magA*magB):0;
-            var w=Math.round((sim+1)/2*100);
-            fill.style.width=w+"%";
-            pct.textContent=sim.toFixed(2);
-            var msg;
-            if(magA===0||magB===0) msg="A zero-length vector has no direction — cosine similarity is undefined here.";
-            else if(sim>0.9) msg="Nearly identical direction — a retriever would treat these as a strong match.";
-            else if(sim>0.3) msg="Somewhat aligned — a middling match, below most retrieval thresholds.";
-            else if(sim>-0.3) msg="Roughly perpendicular — these point in unrelated directions.";
-            else msg="Pointing opposite ways — cosine similarity goes negative.";
-            readout.textContent=msg;
+            var total=parseFloat(els.total.value), sys=parseFloat(els.sys.value), rag=parseFloat(els.rag.value), hist=parseFloat(els.hist.value), reply=parseFloat(els.reply.value);
+            ids.forEach(function(k){ els[k+"v"].textContent=els[k].value; });
+            var used=sys+rag+hist+reply;
+            var ratio=Math.min(used/total,1.5);
+            fill.style.width=Math.round(Math.min(ratio,1)*100)+"%";
+            pct.textContent=Math.round(used/total*100)+"%";
+            var left=total-used;
+            if(used>total) readout.textContent="Over budget by "+Math.round(used-total).toLocaleString()+" tokens — something has to be cut, usually chat history or retrieved chunks.";
+            else readout.textContent=Math.round(left).toLocaleString()+" tokens of headroom left (~"+Math.round(left/4).toLocaleString()+" words at this toy's 4-char-per-token estimate).";
           }
-          [ax,ay,bx,by].forEach(function(el){ el.addEventListener("input",update); });
+          ids.forEach(function(k){ els[k].addEventListener("input",update); });
           update();
           })();</script>
         </div>
