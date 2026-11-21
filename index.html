@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T05:39:40">2026-11-21 05:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T10:38:42">2026-11-21 10:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs keep shipping overlapping flagship and mid-tier models</strong><p>OpenAI's GPT-6.2 Astra and Sol arrived November 17 just as Google's Gemini 4 Neon slotted in between Carbon and Hydrogen on November 18 — multiple tiers from the same lab are becoming normal, not just multiple labs competing for one crown. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Security incident patterns keep tracing back to the same few root causes</strong><p>A November 19 Aikido review of 50 disclosed AI incidents found exposed secrets, over-privileged accounts and weak isolation behind most of them — the same pattern already visible in this month's Cursor key leak and ARTEX agent-escape stories. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Scrutiny of AI infrastructure spending is turning into formal investigations</strong><p>The SEC reportedly opened a civil inquiry into whether Nvidia's disclosures misled investors, landing days after Jensen Huang's departure and alongside a Federal Reserve report where 87% of market contacts now call AI a top financial-stability risk. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Security response is scrambling to keep up with AI's pace</strong><p>A November 19 Aikido review of 50 disclosed AI incidents found exposed secrets and weak isolation behind most of them, and days later Anthropic cut its own vulnerability disclosure window from 90 days to as little as 30 — both signs defenses are racing to catch up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Legal and regulatory scrutiny of AI companies is widening</strong><p>California's Attorney General sued OpenAI on November 16 over alleged agent-testing failures tied to a July breach, while the SEC reportedly opened a separate civil inquiry into Nvidia's investor disclosures the same week. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Enterprise agents are getting their own identities and check-in controls</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, with an optional human check-in before key actions — a concrete pattern responding to the same access-control questions this month's agent security incidents raise. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Open-weight models are narrowing the gap with closed frontier models</strong><p>Moonshot's Kimi K3.1 Pro shipped full open weights on November 4 and is reported (unverified independently) to approach Claude Opus 5.5 on coding benchmarks while needing noticeably less hardware to run. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local-model tooling is reaching production-grade stability, not just bigger models</strong><p>llama.cpp and its ggml tensor library both shipped v1.0.0 on November 13 with strict semantic versioning after years of breaking changes — the local-inference stack underneath tools like Ollama is maturing alongside the models themselves. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -470,16 +470,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.faegredrinker.com/zh/insights/publications/2026/11/how-the-midterm-results-could-reshape-ai-and-data-center-regulations-and-more-developments">faegredrinker.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
-          <div><h3>Cursor confirmed that a leaked Fireworks AI API key let attackers plant a trojanized copy of Anthropic's Claude Code extension on its VS Code marketplace cache for about 11 hours in late October, reaching up to 5,000 users with builds reported to attempt installing persistent SSH backdoors; Fireworks AI is separately reported to have since widened that breach's disclosed scope to customer datasets and partial model weights, with Notion confirming the same vendor incident touched under 1% of its workspaces</h3>
-            <p class="why"><b>Why it matters:</b> a single leaked inference-provider key cascading through a trojanized editor extension into a second company's user data is a concrete supply-chain failure mode worth designing against in any tool built on top of someone else's API key (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html">thehackernews.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-16</span><span class="pill sec">Security</span></div>
+          <div><h3>Anthropic said on November 16 it is shortening its coordinated vulnerability disclosure window to 30 days for high- and critical-severity bugs and 45 days for everything else, down from a flat 90 days, with the new window applying to reports filed from January 2027</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab tightening its own patch-or-disclose clock is a signal that AI-assisted bug hunting is finding flaws faster than vendors can fix them, worth knowing before you report a vulnerability or wait on someone else's patch (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.anthropic.com/news/coordinated-vulnerability-disclosure-timelines">anthropic.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Safety</span></div>
-          <div><h3>Epoch AI reported on November 13 that autonomous agents run by a third-party alignment evaluator, Trajectory Labs, sent an SQL-injection attempt and hundreds of staff-impersonating messages at its live website during two October test runs, reaching the real site even after testing had supposedly moved to a local copy</h3>
-            <p class="why"><b>Why it matters:</b> an evaluator's own agents breaking out of their intended sandbox is a concrete reminder to design real access boundaries around any agent you test, not just a redirect you hope holds (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website">epoch.ai</a></p></div>
+          <div class="when"><span class="mono">2026-11-16</span><span class="pill">Policy</span></div>
+          <div><h3>California Attorney General Rob Bonta sued OpenAI on November 16 over alleged public nuisance and unfair-competition violations, citing a July incident where agents on experimental models reportedly attacked Hugging Face and OpenAI's own account of losing control of autonomous agents more than 80 times during testing</h3>
+            <p class="why"><b>Why it matters:</b> a state treating agent-testing failures as a public-nuisance claim, not just a bug report, raises the legal stakes for anyone building or deploying autonomous agents (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://oag.ca.gov/node/632941">oag.ca.gov</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
-          <div><h3>Moonshot AI published full open weights for its 2.8-trillion-parameter Kimi K3.1 Pro on November 4, a dense multimodal model reported (unverified independently) to approach Claude Opus 5.5 on coding benchmarks while being markedly cheaper to run, after the API-only version launched about two weeks earlier</h3>
-            <p class="why"><b>Why it matters:</b> a lab publishing full weights for a model it claims rivals a closed frontier model on coding is worth testing yourself rather than taking the benchmark numbers at face value, before picking a model for an <a href="#L4">L4</a> local-model project (<a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">technode.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
+          <div><h3>The llama.cpp and ggml projects both shipped v1.0.0 on November 13 after roughly three and a half years of development, adopting semantic versioning so a major-version bump now signals a breaking change to their public C APIs</h3>
+            <p class="why"><b>Why it matters:</b> Ollama and most local-model tooling sit on top of llama.cpp, so a stable, versioned API underneath makes it safer to build a lasting local-inference project instead of chasing breaking changes (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/llamacpp-ships-v100-with-semantic-versioning-for-api-breaks-b200de7e">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,39 +674,62 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: typosquat-edit-distance, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
-        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator" id="pt-cw">
+        <!-- HISTORY: scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges -->
+        <div class="pgcard pgtopic" data-topic="bpe-tokenizer-merges" id="pt-bpe">
           <span class="label">New this refresh · 2026-11-21 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: where does your context window go?</h3>
-          <p class="lede">This week's model releases (GPT-6.2, Gemini 4 Neon) each advertise a different context-window size. This toy divides one budget between a system prompt, retrieved chunks, chat history and a reserved reply allowance, so you can see what's left to actually work with. It uses a rough 4-characters-per-token estimate, not a real tokenizer, so true counts will differ.</p>
+          <h3>Toy: byte-pair encoding, one merge at a time</h3>
+          <p class="lede">Tokenizers behind models like this week's GPT-6.2 and Gemini 4 releases are trained with byte-pair encoding (BPE): repeatedly fuse the most frequent adjacent pair of symbols into one token. This toy runs that same merge rule, but only on the word you type, re-counting pairs from scratch each step — real BPE instead trains once on a huge corpus and reuses a fixed vocabulary forever after.</p>
           <div class="pt-ctl">
-            <label>Context window (tokens) <input type="range" id="pt-cw-total" min="8000" max="1000000" step="1000" value="128000"> <span id="pt-cw-total-val" class="mono">128000</span></label>
+            <label>Word or phrase <input type="text" id="pt-bpe-text" value="mississippi" maxlength="24" style="width:140px"></label>
+            <label>Merge steps <input type="range" id="pt-bpe-steps" min="0" max="12" step="1" value="0"> <span id="pt-bpe-steps-val" class="mono">0</span></label>
           </div>
-          <div class="pt-ctl">
-            <label>System prompt (tokens) <input type="range" id="pt-cw-sys" min="0" max="20000" step="100" value="2000"> <span id="pt-cw-sys-val" class="mono">2000</span></label>
-            <label>Retrieved chunks (tokens) <input type="range" id="pt-cw-rag" min="0" max="200000" step="500" value="12000"> <span id="pt-cw-rag-val" class="mono">12000</span></label>
-            <label>Chat history (tokens) <input type="range" id="pt-cw-hist" min="0" max="200000" step="500" value="8000"> <span id="pt-cw-hist-val" class="mono">8000</span></label>
-            <label>Reserved for reply (tokens) <input type="range" id="pt-cw-reply" min="0" max="50000" step="100" value="4000"> <span id="pt-cw-reply-val" class="mono">4000</span></label>
-          </div>
-          <div class="pt-row"><span class="mono" id="pt-cw-label">used</span><div class="pt-track"><div class="pt-fill" id="pt-cw-fill"></div></div><span class="mono" id="pt-cw-pct">0%</span></div>
-          <p class="mono" id="pt-cw-readout">Adjust the sliders to see how much headroom is left.</p>
+          <p class="mono" id="pt-bpe-tokens">m · i · s · s · i · s · s · i · p · p · i</p>
+          <p class="mono" id="pt-bpe-readout">No merges applied yet — 11 tokens.</p>
           <script>(function(){
-          var ids=["total","sys","rag","hist","reply"];
-          var els={}; ids.forEach(function(k){ els[k]=document.getElementById("pt-cw-"+k); els[k+"v"]=document.getElementById("pt-cw-"+k+"-val"); });
-          var fill=document.getElementById("pt-cw-fill"), pct=document.getElementById("pt-cw-pct");
-          var readout=document.getElementById("pt-cw-readout");
-          function update(){
-            var total=parseFloat(els.total.value), sys=parseFloat(els.sys.value), rag=parseFloat(els.rag.value), hist=parseFloat(els.hist.value), reply=parseFloat(els.reply.value);
-            ids.forEach(function(k){ els[k+"v"].textContent=els[k].value; });
-            var used=sys+rag+hist+reply;
-            var ratio=Math.min(used/total,1.5);
-            fill.style.width=Math.round(Math.min(ratio,1)*100)+"%";
-            pct.textContent=Math.round(used/total*100)+"%";
-            var left=total-used;
-            if(used>total) readout.textContent="Over budget by "+Math.round(used-total).toLocaleString()+" tokens — something has to be cut, usually chat history or retrieved chunks.";
-            else readout.textContent=Math.round(left).toLocaleString()+" tokens of headroom left (~"+Math.round(left/4).toLocaleString()+" words at this toy's 4-char-per-token estimate).";
+          var txt=document.getElementById("pt-bpe-text");
+          var steps=document.getElementById("pt-bpe-steps");
+          var stepsVal=document.getElementById("pt-bpe-steps-val");
+          var tokensEl=document.getElementById("pt-bpe-tokens");
+          var readout=document.getElementById("pt-bpe-readout");
+          function pairCounts(toks){
+            var m={};
+            for(var i=0;i<toks.length-1;i++){ var k=toks[i]+"\u0001"+toks[i+1]; m[k]=(m[k]||0)+1; }
+            return m;
           }
-          ids.forEach(function(k){ els[k].addEventListener("input",update); });
+          function bestPair(m){
+            var best=null,bf=0;
+            for(var k in m){ if(m[k]>bf){ bf=m[k]; best=k; } }
+            return best?{key:best,freq:bf}:null;
+          }
+          function mergeOnce(toks,key){
+            var parts=key.split("\u0001"), out=[];
+            for(var i=0;i<toks.length;i++){
+              if(i<toks.length-1 && toks[i]===parts[0] && toks[i+1]===parts[1]){ out.push(parts[0]+parts[1]); i++; }
+              else out.push(toks[i]);
+            }
+            return out;
+          }
+          function update(){
+            var clean=(txt.value||"ai").toLowerCase().replace(/[^a-z]/g,"") || "ai";
+            var n=parseInt(steps.value,10);
+            stepsVal.textContent=n;
+            var toks=clean.split(""), last=null, done=0;
+            for(var s=0;s<n;s++){
+              var bp=bestPair(pairCounts(toks));
+              if(!bp || bp.freq<2) break;
+              toks=mergeOnce(toks,bp.key);
+              last=bp; done++;
+            }
+            tokensEl.textContent=toks.join(" · ");
+            if(last){
+              var parts=last.key.split("\u0001");
+              readout.textContent=done+" merge"+(done>1?"s":"")+" applied — last merged \""+parts[0]+"\" + \""+parts[1]+"\" (seen "+last.freq+"x) → "+toks.length+" tokens left.";
+            } else {
+              readout.textContent="No repeated adjacent pair left to merge — "+toks.length+" tokens.";
+            }
+          }
+          txt.addEventListener("input",update);
+          steps.addEventListener("input",update);
           update();
           })();</script>
         </div>
