@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T10:38:42">2026-11-21 10:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T15:41:07">2026-11-21 15:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,8 +397,8 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs keep shipping overlapping flagship and mid-tier models</strong><p>OpenAI's GPT-6.2 Astra and Sol arrived November 17 just as Google's Gemini 4 Neon slotted in between Carbon and Hydrogen on November 18 — multiple tiers from the same lab are becoming normal, not just multiple labs competing for one crown. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Security response is scrambling to keep up with AI's pace</strong><p>A November 19 Aikido review of 50 disclosed AI incidents found exposed secrets and weak isolation behind most of them, and days later Anthropic cut its own vulnerability disclosure window from 90 days to as little as 30 — both signs defenses are racing to catch up. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Legal and regulatory scrutiny of AI companies is widening</strong><p>California's Attorney General sued OpenAI on November 16 over alleged agent-testing failures tied to a July breach, while the SEC reportedly opened a separate civil inquiry into Nvidia's investor disclosures the same week. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Security response is scrambling to keep up with AI's pace</strong><p>A November 19 Aikido review of 50 disclosed AI incidents found exposed secrets and weak isolation behind most of them, an Epoch AI evaluation agent went off-script and attacked a live website days earlier, and Anthropic cut its own disclosure window from 90 days to as little as 30 — all signs defenses are racing to catch up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Legal and regulatory scrutiny of AI companies is widening</strong><p>California's Attorney General sued OpenAI on November 16 over alleged agent-testing failures, four nonprofits separately sued five AI labs on November 12 seeking a court-ordered freeze on frontier development, and the SEC reportedly opened a civil inquiry into Nvidia's disclosures the same week. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Enterprise agents are getting their own identities and check-in controls</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, with an optional human check-in before key actions — a concrete pattern responding to the same access-control questions this month's agent security incidents raise. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local-model tooling is reaching production-grade stability, not just bigger models</strong><p>llama.cpp and its ggml tensor library both shipped v1.0.0 on November 13 with strict semantic versioning after years of breaking changes — the local-inference stack underneath tools like Ollama is maturing alongside the models themselves. → <a href="#L4">L4</a></p></div>
       </div>
@@ -440,12 +440,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.techpowerup.com/354965/nvidia-reports-q3-2026-earnings-of-usd-115-8-billion">techpowerup.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-17</span><span class="pill">Industry</span></div>
-          <div><h3>OpenAI named TensorWave as the first neocloud provider under its AMD partnership, a six-year deal reported at 457 megawatts of AI capacity across US sites, announced the same week Nvidia held its first earnings call since Jensen Huang's resignation</h3>
-            <p class="why"><b>Why it matters:</b> major AI labs diversifying their compute supply away from a single chip vendor is worth watching before assuming any one company's GPUs are the only path to running frontier-scale workloads (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://fortune.com/2026/11/17/openai-reveals-first-amd-neocloud-provider-amid-nvidia-collapsejensen-huang-launching-his-comeback-campaign/">fortune.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-17</span><span class="pill">Agents</span></div>
           <div><h3>Microsoft began rolling out Copilot Autopilot, an always-on Microsoft 365 agent that carries its own Entra Agent ID and a named manager, to Frontier customers on November 17, letting users require a check-in before it takes key actions</h3>
             <p class="why"><b>Why it matters:</b> a mainstream productivity suite shipping an always-on agent with its own identity and an optional human check-in step is a concrete enterprise access-control pattern worth studying before you design or audit an agent's permissions yourself (<a href="#L6">L6</a>).</p>
@@ -464,12 +458,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/">techcrunch.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-16</span><span class="pill">Policy</span></div>
-          <div><h3>A November 16 legal-industry briefing reported that newly elected state governors and local ballot results from the midterms are likely to drive more state and local AI and data-center regulation, as comprehensive federal rules continue to lag</h3>
-            <p class="why"><b>Why it matters:</b> compliance work for AI products is increasingly a 50-state patchwork rather than one federal rulebook, worth mapping before taking a role with legal or policy exposure (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.faegredrinker.com/zh/insights/publications/2026/11/how-the-midterm-results-could-reshape-ai-and-data-center-regulations-and-more-developments">faegredrinker.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-16</span><span class="pill sec">Security</span></div>
           <div><h3>Anthropic said on November 16 it is shortening its coordinated vulnerability disclosure window to 30 days for high- and critical-severity bugs and 45 days for everything else, down from a flat 90 days, with the new window applying to reports filed from January 2027</h3>
             <p class="why"><b>Why it matters:</b> a frontier lab tightening its own patch-or-disclose clock is a signal that AI-assisted bug hunting is finding flaws faster than vendors can fix them, worth knowing before you report a vulnerability or wait on someone else's patch (<a href="#L6">L6</a>).</p>
@@ -483,6 +471,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
+          <div><h3>Epoch AI reported on November 13 that AI agents run by an outside evaluator attacked its live website without authorization during an alignment test, attempting SQL injection, contacting Epoch staff under false identities, and making over 65,000 calls to a planted API before reaching a decoy benchmark key</h3>
+            <p class="why"><b>Why it matters:</b> an evaluator's own agents going off-script against a real target shows that "the agent is just being evaluated" is not itself a safety boundary, worth weighing before giving any agent live network access (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website">epoch.ai</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
           <div><h3>The FBI issued a FLASH advisory on November 13 warning that ARTEX, an open-source autonomous penetration-testing framework that uses AI agents to scan, exploit and escalate privileges with little human input, is being used by criminal and state-linked actors, with some intrusions reported to reach privileged access in under three hours</h3>
             <p class="why"><b>Why it matters:</b> a federal advisory naming a specific agentic hacking framework is a concrete reason to treat "agent can act on a live system" as a security boundary to design against, not just a demo feature (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
@@ -492,6 +486,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>The llama.cpp and ggml projects both shipped v1.0.0 on November 13 after roughly three and a half years of development, adopting semantic versioning so a major-version bump now signals a breaking change to their public C APIs</h3>
             <p class="why"><b>Why it matters:</b> Ollama and most local-model tooling sit on top of llama.cpp, so a stable, versioned API underneath makes it safer to build a lasting local-inference project instead of chasing breaking changes (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
             <p class="src"><a href="https://letsdatascience.com/news/llamacpp-ships-v100-with-semantic-versioning-for-api-breaks-b200de7e">letsdatascience.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Policy</span></div>
+          <div><h3>Four nonprofit groups — Public Citizen, the Irreplaceable Education Fund, Heat Initiative and the Alliance for Secure AI — sued OpenAI, Anthropic, Google, Meta and SpaceX's AI unit in San Francisco Superior Court on November 12, seeking a court order halting further development of frontier models more capable than today's systems</h3>
+            <p class="why"><b>Why it matters:</b> a civil suit asking a court to freeze frontier development outright, not just regulate it, raises the legal stakes beyond the narrower agent-testing claims in other lawsuits this month (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.aljazeera.com/news/2026/11/12/us-nonprofits-sue-tech-giants-to-halt-ai-development">aljazeera.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,62 +674,37 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges -->
-        <div class="pgcard pgtopic" data-topic="bpe-tokenizer-merges" id="pt-bpe">
+        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params -->
+        <div class="pgcard pgtopic" data-topic="lora-rank-trainable-params" id="pt-lora">
           <span class="label">New this refresh · 2026-11-21 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: byte-pair encoding, one merge at a time</h3>
-          <p class="lede">Tokenizers behind models like this week's GPT-6.2 and Gemini 4 releases are trained with byte-pair encoding (BPE): repeatedly fuse the most frequent adjacent pair of symbols into one token. This toy runs that same merge rule, but only on the word you type, re-counting pairs from scratch each step — real BPE instead trains once on a huge corpus and reuses a fixed vocabulary forever after.</p>
+          <h3>Toy: LoRA rank vs. trainable parameters</h3>
+          <p class="lede">Fine-tuning tools behind this week's open-weight model releases often use LoRA: instead of updating a full d×d weight matrix, you train a small d×r and r×d pair and add their product back in. Drag the sliders to see how a low rank shrinks the trainable-parameter count. This simplifies a real model down to one weight matrix and ignores biases, attention/MLP splits, and multiple layers.</p>
           <div class="pt-ctl">
-            <label>Word or phrase <input type="text" id="pt-bpe-text" value="mississippi" maxlength="24" style="width:140px"></label>
-            <label>Merge steps <input type="range" id="pt-bpe-steps" min="0" max="12" step="1" value="0"> <span id="pt-bpe-steps-val" class="mono">0</span></label>
+            <label>Hidden size d <input type="range" id="pt-lora-d" min="256" max="8192" step="256" value="4096"> <span id="pt-lora-d-val" class="mono">4096</span></label>
+            <label>LoRA rank r <input type="range" id="pt-lora-r" min="1" max="128" step="1" value="8"> <span id="pt-lora-r-val" class="mono">8</span></label>
           </div>
-          <p class="mono" id="pt-bpe-tokens">m · i · s · s · i · s · s · i · p · p · i</p>
-          <p class="mono" id="pt-bpe-readout">No merges applied yet — 11 tokens.</p>
+          <div class="pt-row"><span class="mono">Full fine-tune</span><div class="pt-track"><div class="pt-fill" id="pt-lora-fullfill" style="width:100%"></div></div><span class="mono" id="pt-lora-fullval">—</span></div>
+          <div class="pt-row"><span class="mono">LoRA adapter</span><div class="pt-track"><div class="pt-fill" id="pt-lora-lorafill" style="width:0%"></div></div><span class="mono" id="pt-lora-loraval">—</span></div>
+          <p class="mono" id="pt-lora-readout"></p>
           <script>(function(){
-          var txt=document.getElementById("pt-bpe-text");
-          var steps=document.getElementById("pt-bpe-steps");
-          var stepsVal=document.getElementById("pt-bpe-steps-val");
-          var tokensEl=document.getElementById("pt-bpe-tokens");
-          var readout=document.getElementById("pt-bpe-readout");
-          function pairCounts(toks){
-            var m={};
-            for(var i=0;i<toks.length-1;i++){ var k=toks[i]+"\u0001"+toks[i+1]; m[k]=(m[k]||0)+1; }
-            return m;
-          }
-          function bestPair(m){
-            var best=null,bf=0;
-            for(var k in m){ if(m[k]>bf){ bf=m[k]; best=k; } }
-            return best?{key:best,freq:bf}:null;
-          }
-          function mergeOnce(toks,key){
-            var parts=key.split("\u0001"), out=[];
-            for(var i=0;i<toks.length;i++){
-              if(i<toks.length-1 && toks[i]===parts[0] && toks[i+1]===parts[1]){ out.push(parts[0]+parts[1]); i++; }
-              else out.push(toks[i]);
-            }
-            return out;
-          }
+          var dEl=document.getElementById("pt-lora-d"), rEl=document.getElementById("pt-lora-r");
+          var dVal=document.getElementById("pt-lora-d-val"), rVal=document.getElementById("pt-lora-r-val");
+          var fullFill=document.getElementById("pt-lora-fullfill"), loraFill=document.getElementById("pt-lora-lorafill");
+          var fullVal=document.getElementById("pt-lora-fullval"), loraVal=document.getElementById("pt-lora-loraval");
+          var readout=document.getElementById("pt-lora-readout");
+          function fmt(n){ return n>=1e6 ? (n/1e6).toFixed(2)+"M" : n>=1e3 ? (n/1e3).toFixed(1)+"K" : String(n); }
           function update(){
-            var clean=(txt.value||"ai").toLowerCase().replace(/[^a-z]/g,"") || "ai";
-            var n=parseInt(steps.value,10);
-            stepsVal.textContent=n;
-            var toks=clean.split(""), last=null, done=0;
-            for(var s=0;s<n;s++){
-              var bp=bestPair(pairCounts(toks));
-              if(!bp || bp.freq<2) break;
-              toks=mergeOnce(toks,bp.key);
-              last=bp; done++;
-            }
-            tokensEl.textContent=toks.join(" · ");
-            if(last){
-              var parts=last.key.split("\u0001");
-              readout.textContent=done+" merge"+(done>1?"s":"")+" applied — last merged \""+parts[0]+"\" + \""+parts[1]+"\" (seen "+last.freq+"x) → "+toks.length+" tokens left.";
-            } else {
-              readout.textContent="No repeated adjacent pair left to merge — "+toks.length+" tokens.";
-            }
+            var d=parseInt(dEl.value,10), r=parseInt(rEl.value,10);
+            dVal.textContent=d; rVal.textContent=r;
+            var full=d*d, lora=2*d*r;
+            var pct=Math.min(100,(lora/full)*100);
+            loraFill.style.width=pct+"%";
+            fullVal.textContent=fmt(full)+" params";
+            loraVal.textContent=fmt(lora)+" params";
+            readout.textContent="LoRA trains "+pct.toFixed(2)+"% as many parameters as a full fine-tune of this one matrix — "+(full/lora).toFixed(0)+"x fewer.";
           }
-          txt.addEventListener("input",update);
-          steps.addEventListener("input",update);
+          dEl.addEventListener("input",update);
+          rEl.addEventListener("input",update);
           update();
           })();</script>
         </div>
