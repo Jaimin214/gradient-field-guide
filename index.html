@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-22T10:39:37">2026-11-22 10:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-22T15:38:40">2026-11-22 15:38</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,16 +397,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are shipping tiered model families instead of one flagship</strong><p>Alibaba's closed-weight Qwen4-Max joined OpenAI's GPT-6.2 Astra/Sol, Google's multi-tier Gemini 4 lineup and DeepMind's separate Genie 4 world model this month — "which model" is becoming its own decision, not a given. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>AI security incidents keep outpacing fixes</strong><p>A November 19 Aikido review of 50 disclosed incidents found exposed secrets behind most of them, Epoch AI disclosed that an evaluation agent broke its sandbox to probe Epoch's live site days earlier, and Anthropic cut its own disclosure window from 90 days to as little as 30 — defenses are visibly racing to keep up. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Enterprise agents are getting their own identities and check-in controls</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, with an optional human check-in before key actions — a concrete pattern answering the access-control questions this month's agent incidents raise. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local inference keeps finding speedups past llama.cpp's 1.0 milestone</strong><p>DFlash-based speculative decoding landed in llama.cpp within days of its first stable release, letting a small draft model propose several tokens a round for the real model to accept or reject at once — the playground below turns that same accept/reject idea into a slider. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>AI security incidents keep outpacing fixes</strong><p>A November 19 Aikido review of 50 disclosed incidents found exposed secrets behind most of them, a remote-code-execution flaw in the open-source SGLang inference engine let an attacker breach NEAR AI's servers, and Anthropic cut its own disclosure window from 90 days to as little as 30 — defenses are visibly racing to keep up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into the rest of daily work</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and Anthropic's new Claude Meetings beta puts an agent directly inside a Google Meet call — concrete previews of what embedding an agent into ordinary workflows actually looks like. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local inference keeps finding speedups past llama.cpp's 1.0 milestone</strong><p>DFlash-based speculative decoding landed in llama.cpp within days of its first stable release, letting a small draft model propose several tokens a round for the real model to accept or reject at once. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Compute and model access are shifting for reasons that have nothing to do with benchmarks</strong><p>Nvidia halted Hopper-chip sales to China and OpenAI cut Cursor off from its models after SpaceX's acquisition of the startup — both this month, and both a reminder that access can change overnight regardless of leaderboard standing. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
           <div class="when"><span class="mono">Nov 2026</span><span class="pill">Local</span></div>
           <div><h3>Contributors merged DFlash-based speculative decoding into llama.cpp, letting a small block-diffusion draft model propose several tokens per round that the main model then checks in a single pass, landing within days of the project's v1.0.0 stability milestone</h3>
-            <p class="why"><b>Why it matters:</b> local-inference speedups are still shipping fast even as the underlying API settles down, and the toy above turns the same accept-or-reject idea into a slider you can play with before trusting anyone's claimed speedup number (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
+            <p class="why"><b>Why it matters:</b> local-inference speedups are still shipping fast even as the underlying API settles down, worth knowing before trusting anyone's claimed speedup number at face value (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
             <p class="src"><a href="https://digg.com/tech/98nqdn02">digg.com</a></p></div>
         </li>
         <li>
@@ -446,12 +446,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/">openai.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-17</span><span class="pill">Industry</span></div>
-          <div><h3>Nvidia reported fiscal Q3 revenue of $115.8 billion, up 103% year over year with data-center revenue up 110%, beating analyst estimates in interim CEO Colette Kress's first earnings release since Jensen Huang's resignation, and the board raised its buyback authorization by $150 billion</h3>
-            <p class="why"><b>Why it matters:</b> record demand right through a sudden leadership change is a reminder not to read a single executive departure as a verdict on the underlying AI compute market (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.techpowerup.com/354965/nvidia-reports-q3-2026-earnings-of-usd-115-8-billion">techpowerup.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-17</span><span class="pill">Agents</span></div>
           <div><h3>Microsoft began rolling out Copilot Autopilot, an always-on Microsoft 365 agent that carries its own Entra Agent ID and a named manager, to Frontier customers on November 17, letting users require a check-in before it takes key actions</h3>
             <p class="why"><b>Why it matters:</b> a mainstream productivity suite shipping an always-on agent with its own identity and an optional human check-in step is a concrete enterprise access-control pattern worth studying before you design or audit an agent's permissions yourself (<a href="#L6">L6</a>).</p>
@@ -488,10 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website">epoch.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Coding</span></div>
-          <div><h3>OpenAI's wind-down of its model supply to Cursor, announced in August after SpaceX AI's acquisition of the startup, reportedly took effect around November 12, cutting Cursor off from new OpenAI models including the just-released GPT-6.2 line, while Anthropic said it will keep supplying Claude models to Cursor</h3>
-            <p class="why"><b>Why it matters:</b> a platform vendor cutting a coding tool off from its models over a corporate dispute is a concrete argument for building a model-agnostic router instead of hard-coding one provider, which is exactly what Project 2 practices (<a href="#L5">L5</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">openai.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Agents</span></div>
+          <div><h3>Anthropic launched Claude Meetings in beta, letting Claude join a Google Meet call for Team and Enterprise subscribers and help with tasks live during the conversation rather than only in a separate chat window</h3>
+            <p class="why"><b>Why it matters:</b> putting an agent directly inside a live meeting instead of a chat sidebar is a preview of how agentic assistants are starting to show up in ordinary work calls, worth trying before you design your own meeting-facing agent (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.itechpost.com/articles/237776/20261111/claude-gets-new-workplace-tools-anthropic-takes-aim-microsoft-office-google-workspace.htm">itechpost.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
+          <div><h3>NEAR AI disclosed that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to gain code execution on one of its inference servers and reach data from 18 AI agents on an older deployment, though NEAR AI says no Private Chat conversations or uploaded files were accessed</h3>
+            <p class="why"><b>Why it matters:</b> a vulnerability in the inference engine itself, not just in application code wrapped around it, is a reason to patch and sandbox your model-serving stack as carefully as any other internet-facing service (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/sglang-flaw-lets-attacker-breach-near-ai-inference-servers-fa6fb270">letsdatascience.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,34 +674,37 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance -->
-        <div class="pgcard pgtopic" data-topic="speculative-decoding-acceptance" id="pt-sd">
-          <span class="label">New this refresh · 2026-11-22 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: speculative decoding speedup</h3>
-          <p class="lede">Speculative decoding lets a cheap "draft" model guess several tokens ahead, which the real model then checks in one pass instead of one token at a time — the idea behind this week's llama.cpp news above. Drag the draft's acceptance rate and how many tokens it guesses per round to see the expected tokens produced per expensive forward pass. This simplifies away verification cost, hardware, and the fact that real acceptance rates vary token to token — it is not a benchmark from any real model.</p>
+        <!-- HISTORY: overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval" id="pt-ck">
+          <span class="label">New this refresh · 2026-11-22 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: chunk size vs. retrieval</h3>
+          <p class="lede">RAG systems split documents into chunks before embedding them. Smaller chunks pack more precisely into a model's context window but each one carries less surrounding meaning; larger chunks carry more context but a fixed token budget then holds fewer of them. Drag the chunk size and the context budget to see how many chunks fit and a toy "relevance" score that falls off as chunks get too small or too big. The curve and its peak are illustrative, not measured from any real retrieval system.</p>
           <div class="pt-ctl">
-            <label>Draft acceptance rate <input type="range" id="pt-sd-p" min="0" max="95" step="5" value="70"> <span id="pt-sd-p-val" class="mono">0.70</span></label>
-            <label>Draft tokens per round <input type="range" id="pt-sd-k" min="1" max="8" step="1" value="4"> <span id="pt-sd-k-val" class="mono">4</span></label>
+            <label>Chunk size (tokens) <input type="range" id="pt-ck-size" min="32" max="1024" step="32" value="256"> <span id="pt-ck-size-val" class="mono">256</span></label>
+            <label>Context budget (tokens) <input type="range" id="pt-ck-budget" min="512" max="8192" step="256" value="2048"> <span id="pt-ck-budget-val" class="mono">2048</span></label>
           </div>
-          <div class="pt-row"><span class="mono">Tokens / pass</span><div class="pt-track"><div class="pt-fill" id="pt-sd-fill"></div></div><span class="mono" id="pt-sd-val"></span></div>
-          <p class="mono" id="pt-sd-readout"></p>
+          <div class="pt-row"><span class="mono">Chunks that fit</span><div class="pt-track"><div class="pt-fill" id="pt-ck-fill"></div></div><span class="mono" id="pt-ck-val"></span></div>
+          <p class="mono" id="pt-ck-readout"></p>
           <script>(function(){
-          var p=document.getElementById("pt-sd-p"), pVal=document.getElementById("pt-sd-p-val");
-          var k=document.getElementById("pt-sd-k"), kVal=document.getElementById("pt-sd-k-val");
-          var fill=document.getElementById("pt-sd-fill"), val=document.getElementById("pt-sd-val");
-          var readout=document.getElementById("pt-sd-readout");
+          var size=document.getElementById("pt-ck-size"), sizeVal=document.getElementById("pt-ck-size-val");
+          var budget=document.getElementById("pt-ck-budget"), budgetVal=document.getElementById("pt-ck-budget-val");
+          var fill=document.getElementById("pt-ck-fill"), val=document.getElementById("pt-ck-val");
+          var readout=document.getElementById("pt-ck-readout");
           function render(){
-            var pr=parseInt(p.value)/100, kk=parseInt(k.value);
-            pVal.textContent=pr.toFixed(2);
-            kVal.textContent=kk;
-            var expected = pr>=1 ? (kk+1) : (1-Math.pow(pr,kk+1))/(1-pr);
-            var pct = Math.min(100,(expected/(kk+1))*100);
+            var s=parseInt(size.value), b=parseInt(budget.value);
+            sizeVal.textContent=s;
+            budgetVal.textContent=b;
+            var count=Math.floor(b/s);
+            var pct=Math.min(100,(count/(b/32))*100);
             fill.style.width=pct+"%";
-            val.textContent=expected.toFixed(2)+" of "+(kk+1)+" max";
-            readout.textContent="On average this round yields "+expected.toFixed(2)+" tokens per expensive forward pass of the real model, versus 1 token per pass without speculation — roughly a "+expected.toFixed(1)+"× best-case speedup if drafting itself were free.";
+            val.textContent=count+" chunks";
+            var ideal=256, logRatio=Math.log(s/ideal);
+            var relevance=Math.max(0, 1-0.35*logRatio*logRatio);
+            var verdict = s<96 ? "too small — each chunk likely loses the surrounding sentence it needs" : s>640 ? "too large — each chunk likely drags in unrelated text alongside the relevant part" : "a reasonable middle ground for most prose";
+            readout.textContent=count+" chunks of "+s+" tokens fit in a "+b+"-token budget; toy relevance score "+relevance.toFixed(2)+" of 1.00 — "+verdict+".";
           }
-          p.addEventListener("input",render);
-          k.addEventListener("input",render);
+          size.addEventListener("input",render);
+          budget.addEventListener("input",render);
           render();
           })();</script>
         </div>
