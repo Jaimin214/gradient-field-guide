@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-22T05:41:44">2026-11-22 05:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-22T10:39:37">2026-11-22 10:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,11 +398,17 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are shipping tiered model families instead of one flagship</strong><p>Alibaba's closed-weight Qwen4-Max joined OpenAI's GPT-6.2 Astra/Sol, Google's multi-tier Gemini 4 lineup and DeepMind's separate Genie 4 world model this month — "which model" is becoming its own decision, not a given. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>AI security incidents keep outpacing fixes</strong><p>A November 19 Aikido review of 50 disclosed incidents found exposed secrets behind most of them, Epoch AI disclosed that an evaluation agent broke its sandbox to probe Epoch's live site days earlier, and Anthropic cut its own disclosure window from 90 days to as little as 30 — defenses are visibly racing to keep up. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agent identity and discovery are getting open, vendor-neutral standards</strong><p>The Linux Foundation formally adopted the Agent Name Service on November 10, a DNS-based way for organizations to verify and discover AI agents, landing the same week Microsoft shipped its own Entra-based agent identities inside Copilot. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Enterprise agents are getting their own identities and check-in controls</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, with an optional human check-in before key actions — a concrete pattern answering the access-control questions this month's agent incidents raise. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Local-model tooling is reaching production-grade stability</strong><p>llama.cpp and its ggml tensor library both shipped v1.0.0 on November 13 with strict semantic versioning after years of breaking changes — the stack underneath tools like Ollama is maturing alongside the models themselves. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local inference keeps finding speedups past llama.cpp's 1.0 milestone</strong><p>DFlash-based speculative decoding landed in llama.cpp within days of its first stable release, letting a small draft model propose several tokens a round for the real model to accept or reject at once — the playground below turns that same accept/reject idea into a slider. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Compute and model access are shifting for reasons that have nothing to do with benchmarks</strong><p>Nvidia halted Hopper-chip sales to China and OpenAI cut Cursor off from its models after SpaceX's acquisition of the startup — both this month, and both a reminder that access can change overnight regardless of leaderboard standing. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">Nov 2026</span><span class="pill">Local</span></div>
+          <div><h3>Contributors merged DFlash-based speculative decoding into llama.cpp, letting a small block-diffusion draft model propose several tokens per round that the main model then checks in a single pass, landing within days of the project's v1.0.0 stability milestone</h3>
+            <p class="why"><b>Why it matters:</b> local-inference speedups are still shipping fast even as the underlying API settles down, and the toy above turns the same accept-or-reject idea into a slider you can play with before trusting anyone's claimed speedup number (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
+            <p class="src"><a href="https://digg.com/tech/98nqdn02">digg.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-19</span><span class="pill sec">Security</span></div>
           <div><h3>A November 19 Aikido review of 50 disclosed AI-related security incidents found exposed secrets, over-privileged accounts and weak isolation behind most of them, and noted that stolen credentials often turn quickly into costly unauthorized usage on AI platforms</h3>
@@ -482,16 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website">epoch.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
-          <div><h3>The llama.cpp and ggml projects both shipped v1.0.0 on November 13 after roughly three and a half years of development, adopting semantic versioning so a major-version bump now signals a breaking change to their public C APIs</h3>
-            <p class="why"><b>Why it matters:</b> Ollama and most local-model tooling sit on top of llama.cpp, so a stable, versioned API underneath makes it safer to build a lasting local-inference project instead of chasing breaking changes (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/llamacpp-ships-v100-with-semantic-versioning-for-api-breaks-b200de7e">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Agents</span></div>
-          <div><h3>The Linux Foundation formally welcomed the Agent Name Service as a project on November 10, an open standard that reuses existing DNS infrastructure so any organization can issue verifiable identities for its AI agents and let others discover them, with no proprietary namespace or central gatekeeper</h3>
-            <p class="why"><b>Why it matters:</b> a vendor-neutral, openly governed identity scheme is worth knowing before you build a multi-agent system that needs to trust which agent it's actually talking to (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents">linuxfoundation.org</a></p></div>
+          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Coding</span></div>
+          <div><h3>OpenAI's wind-down of its model supply to Cursor, announced in August after SpaceX AI's acquisition of the startup, reportedly took effect around November 12, cutting Cursor off from new OpenAI models including the just-released GPT-6.2 line, while Anthropic said it will keep supplying Claude models to Cursor</h3>
+            <p class="why"><b>Why it matters:</b> a platform vendor cutting a coding tool off from its models over a corporate dispute is a concrete argument for building a model-agnostic router instead of hard-coding one provider, which is exactly what Project 2 practices (<a href="#L5">L5</a>, <a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">openai.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,52 +674,34 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider" id="pt-prt">
-          <span class="label">New this refresh · 2026-11-22 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: precision vs. recall threshold</h3>
-          <p class="lede">A toy spam filter scores 12 emails from 0 to 1; 5 are actually spam (S) and 7 are not (N) — made-up numbers for illustration, not a real dataset. Drag the threshold to decide which scores get flagged as spam, and watch precision (how many flagged emails are truly spam) trade off against recall (how much of the real spam gets caught) as you move it.</p>
+        <!-- HISTORY: learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance -->
+        <div class="pgcard pgtopic" data-topic="speculative-decoding-acceptance" id="pt-sd">
+          <span class="label">New this refresh · 2026-11-22 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: speculative decoding speedup</h3>
+          <p class="lede">Speculative decoding lets a cheap "draft" model guess several tokens ahead, which the real model then checks in one pass instead of one token at a time — the idea behind this week's llama.cpp news above. Drag the draft's acceptance rate and how many tokens it guesses per round to see the expected tokens produced per expensive forward pass. This simplifies away verification cost, hardware, and the fact that real acceptance rates vary token to token — it is not a benchmark from any real model.</p>
           <div class="pt-ctl">
-            <label>Threshold <input type="range" id="pt-prt-th" min="0" max="100" step="1" value="50"> <span id="pt-prt-th-val" class="mono">0.50</span></label>
+            <label>Draft acceptance rate <input type="range" id="pt-sd-p" min="0" max="95" step="5" value="70"> <span id="pt-sd-p-val" class="mono">0.70</span></label>
+            <label>Draft tokens per round <input type="range" id="pt-sd-k" min="1" max="8" step="1" value="4"> <span id="pt-sd-k-val" class="mono">4</span></label>
           </div>
-          <div id="pt-prt-dots" class="mono" style="display:flex;flex-wrap:wrap;gap:6px"></div>
-          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-prt-pfill"></div></div><span class="mono" id="pt-prt-pval"></span></div>
-          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-prt-rfill"></div></div><span class="mono" id="pt-prt-rval"></span></div>
-          <p class="mono" id="pt-prt-readout"></p>
+          <div class="pt-row"><span class="mono">Tokens / pass</span><div class="pt-track"><div class="pt-fill" id="pt-sd-fill"></div></div><span class="mono" id="pt-sd-val"></span></div>
+          <p class="mono" id="pt-sd-readout"></p>
           <script>(function(){
-          var data=[{s:0.92,y:1},{s:0.85,y:1},{s:0.78,y:0},{s:0.71,y:1},{s:0.63,y:0},{s:0.58,y:1},{s:0.52,y:0},{s:0.47,y:1},{s:0.39,y:0},{s:0.31,y:0},{s:0.22,y:0},{s:0.11,y:0}];
-          var th=document.getElementById("pt-prt-th"), thVal=document.getElementById("pt-prt-th-val");
-          var dots=document.getElementById("pt-prt-dots");
-          var pfill=document.getElementById("pt-prt-pfill"), pval=document.getElementById("pt-prt-pval");
-          var rfill=document.getElementById("pt-prt-rfill"), rval=document.getElementById("pt-prt-rval");
-          var readout=document.getElementById("pt-prt-readout");
+          var p=document.getElementById("pt-sd-p"), pVal=document.getElementById("pt-sd-p-val");
+          var k=document.getElementById("pt-sd-k"), kVal=document.getElementById("pt-sd-k-val");
+          var fill=document.getElementById("pt-sd-fill"), val=document.getElementById("pt-sd-val");
+          var readout=document.getElementById("pt-sd-readout");
           function render(){
-            var t=parseInt(th.value)/100;
-            thVal.textContent=t.toFixed(2);
-            dots.textContent="";
-            var tp=0,fp=0,fn=0;
-            data.forEach(function(d){
-              var flagged=d.s>=t;
-              if(flagged&&d.y===1) tp++;
-              else if(flagged&&d.y===0) fp++;
-              else if(!flagged&&d.y===1) fn++;
-              var span=document.createElement("span");
-              span.textContent=(d.y===1?"S":"N")+d.s.toFixed(2);
-              span.style.padding="3px 6px";
-              span.style.borderRadius="4px";
-              span.style.background=flagged?"var(--accent-soft)":"var(--hm0)";
-              span.style.color=flagged?"var(--accent)":"var(--muted)";
-              dots.appendChild(span);
-            });
-            var precision=(tp+fp)>0?tp/(tp+fp):0;
-            var recall=(tp+fn)>0?tp/(tp+fn):0;
-            pfill.style.width=(precision*100)+"%";
-            rfill.style.width=(recall*100)+"%";
-            pval.textContent=precision.toFixed(2);
-            rval.textContent=recall.toFixed(2);
-            readout.textContent="Flagged "+(tp+fp)+" of 12 emails as spam; caught "+tp+" of the 5 real spam messages, "+fp+" flagged wrongly.";
+            var pr=parseInt(p.value)/100, kk=parseInt(k.value);
+            pVal.textContent=pr.toFixed(2);
+            kVal.textContent=kk;
+            var expected = pr>=1 ? (kk+1) : (1-Math.pow(pr,kk+1))/(1-pr);
+            var pct = Math.min(100,(expected/(kk+1))*100);
+            fill.style.width=pct+"%";
+            val.textContent=expected.toFixed(2)+" of "+(kk+1)+" max";
+            readout.textContent="On average this round yields "+expected.toFixed(2)+" tokens per expensive forward pass of the real model, versus 1 token per pass without speculation — roughly a "+expected.toFixed(1)+"× best-case speedup if drafting itself were free.";
           }
-          th.addEventListener("input",render);
+          p.addEventListener("input",render);
+          k.addEventListener("input",render);
           render();
           })();</script>
         </div>
