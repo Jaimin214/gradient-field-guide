@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T15:41:07">2026-11-21 15:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-21T19:42:32">2026-11-21 19:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier labs keep shipping overlapping flagship and mid-tier models</strong><p>OpenAI's GPT-6.2 Astra and Sol arrived November 17 just as Google's Gemini 4 Neon slotted in between Carbon and Hydrogen on November 18 — multiple tiers from the same lab are becoming normal, not just multiple labs competing for one crown. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs keep shipping overlapping flagship and mid-tier models</strong><p>OpenAI's GPT-6.2 Astra and Sol arrived November 17, Google's Gemini 4 Neon slotted in on November 18, and DeepMind's separate Genie 4 world model began reaching Ultra subscribers that same day — labs now run several product lines at once, not just one flagship. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Security response is scrambling to keep up with AI's pace</strong><p>A November 19 Aikido review of 50 disclosed AI incidents found exposed secrets and weak isolation behind most of them, an Epoch AI evaluation agent went off-script and attacked a live website days earlier, and Anthropic cut its own disclosure window from 90 days to as little as 30 — all signs defenses are racing to catch up. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Legal and regulatory scrutiny of AI companies is widening</strong><p>California's Attorney General sued OpenAI on November 16 over alleged agent-testing failures, four nonprofits separately sued five AI labs on November 12 seeking a court-ordered freeze on frontier development, and the SEC reportedly opened a civil inquiry into Nvidia's disclosures the same week. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Legal and regulatory scrutiny of AI companies is widening</strong><p>California's Attorney General sued OpenAI on November 16 over alleged agent-testing failures, and the SEC reportedly opened a separate civil inquiry into Nvidia's disclosures the same week — AI companies are facing legal exposure on multiple fronts at once. → <a href="#L7">L7</a></p></div>
         <div><span class="state steady">Steady</span><strong>Enterprise agents are getting their own identities and check-in controls</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, with an optional human check-in before key actions — a concrete pattern responding to the same access-control questions this month's agent security incidents raise. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local-model tooling is reaching production-grade stability, not just bigger models</strong><p>llama.cpp and its ggml tensor library both shipped v1.0.0 on November 13 with strict semantic versioning after years of breaking changes — the local-inference stack underneath tools like Ollama is maturing alongside the models themselves. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Local-model tooling is reaching production-grade stability, not just bigger models</strong><p>llama.cpp and its ggml tensor library both shipped v1.0.0 on November 13 with strict semantic versioning after years of breaking changes — the local-inference stack underneath tools like Ollama is maturing alongside the models themselves. → <a href="#L4">L4</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -426,6 +426,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google released Gemini 4 Neon on November 18, a mid-tier addition to its Gemini 4 family positioned between the frontier-grade Gemini 4 Carbon and the fast everyday Gemini 4 Hydrogen, rolling out immediately in the Gemini API, Google AI Studio, Gemini for business and Google Antigravity</h3>
             <p class="why"><b>Why it matters:</b> a frontier lab now shipping a tiered family of models rather than one flagship means picking "which model" for a project is becoming its own decision, worth revisiting before you lock in an API call in a <a href="#projects">project</a> (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">blog.google</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-18</span><span class="pill">Models</span></div>
+          <div><h3>Google DeepMind began rolling out Genie 4, a real-time interactive world model that generates playable environments with native ambient audio and spoken dialogue, to Google AI Ultra subscribers through Project Genie on November 18, after an October research-preview phase limited to trusted testers</h3>
+            <p class="why"><b>Why it matters:</b> a model that generates a steerable, narrated world rather than text is a different product lineage from chat-style LLMs, worth knowing before assuming every new AI release is just another chatbot (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/google-deepmind-releases-genie-4-to-ai-ultra-subscribers-in-2401b3c2">letsdatascience.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-17</span><span class="pill">Models</span></div>
@@ -476,22 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website">epoch.ai</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
-          <div><h3>The FBI issued a FLASH advisory on November 13 warning that ARTEX, an open-source autonomous penetration-testing framework that uses AI agents to scan, exploit and escalate privileges with little human input, is being used by criminal and state-linked actors, with some intrusions reported to reach privileged access in under three hours</h3>
-            <p class="why"><b>Why it matters:</b> a federal advisory naming a specific agentic hacking framework is a concrete reason to treat "agent can act on a live system" as a security boundary to design against, not just a demo feature (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
+          <div class="when"><span class="mono">Nov 2026</span><span class="pill">Research</span></div>
+          <div><h3>A November roundup of AI safety papers highlighted CyberBinGym, a new benchmark testing whether agents can turn disclosed binary patches into working exploits, alongside a separate study showing that a single fabricated news article can mislead retrieval-based LLM forecasting systems</h3>
+            <p class="why"><b>Why it matters:</b> both findings point to the same blind spot — an agent that pulls in outside patches or articles can be steered by whatever it retrieves, worth weighing before wiring a project's agent up to live web or patch feeds (<a href="#L5">L5</a>, <a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://buttondown.com/theguardrail/archive/the-weekly-ten-9-15-november-2026/">buttondown.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
           <div><h3>The llama.cpp and ggml projects both shipped v1.0.0 on November 13 after roughly three and a half years of development, adopting semantic versioning so a major-version bump now signals a breaking change to their public C APIs</h3>
             <p class="why"><b>Why it matters:</b> Ollama and most local-model tooling sit on top of llama.cpp, so a stable, versioned API underneath makes it safer to build a lasting local-inference project instead of chasing breaking changes (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
             <p class="src"><a href="https://letsdatascience.com/news/llamacpp-ships-v100-with-semantic-versioning-for-api-breaks-b200de7e">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Policy</span></div>
-          <div><h3>Four nonprofit groups — Public Citizen, the Irreplaceable Education Fund, Heat Initiative and the Alliance for Secure AI — sued OpenAI, Anthropic, Google, Meta and SpaceX's AI unit in San Francisco Superior Court on November 12, seeking a court order halting further development of frontier models more capable than today's systems</h3>
-            <p class="why"><b>Why it matters:</b> a civil suit asking a court to freeze frontier development outright, not just regulate it, raises the legal stakes beyond the narrower agent-testing claims in other lawsuits this month (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.aljazeera.com/news/2026/11/12/us-nonprofits-sue-tech-giants-to-halt-ai-development">aljazeera.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,37 +674,47 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params -->
-        <div class="pgcard pgtopic" data-topic="lora-rank-trainable-params" id="pt-lora">
-          <span class="label">New this refresh · 2026-11-21 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: LoRA rank vs. trainable parameters</h3>
-          <p class="lede">Fine-tuning tools behind this week's open-weight model releases often use LoRA: instead of updating a full d×d weight matrix, you train a small d×r and r×d pair and add their product back in. Drag the sliders to see how a low rank shrinks the trainable-parameter count. This simplifies a real model down to one weight matrix and ignores biases, attention/MLP splits, and multiple layers.</p>
+        <!-- HISTORY: precision-recall-threshold-slider, speculative-decoding-acceptance-rate, rag-chunk-size-vs-recall, learning-rate-schedule-warmup-decay, overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve -->
+        <div class="pgcard pgtopic" data-topic="scaling-law-curve" id="pt-scale">
+          <span class="label">New this refresh · 2026-11-21 · connects to <a href="#L7">L7</a></span>
+          <h3>Toy: the compute scaling-law curve</h3>
+          <p class="lede">Frontier labs keep shipping bigger models and world models like this week's Genie 4 because loss tends to fall as a power law of compute: big early gains, then smaller and smaller drops per doubling. Drag the slider to spend toy compute, or hit the button to double it, and watch the gains shrink. This uses made-up constants to show the shape of the curve, not a real model's measured numbers.</p>
           <div class="pt-ctl">
-            <label>Hidden size d <input type="range" id="pt-lora-d" min="256" max="8192" step="256" value="4096"> <span id="pt-lora-d-val" class="mono">4096</span></label>
-            <label>LoRA rank r <input type="range" id="pt-lora-r" min="1" max="128" step="1" value="8"> <span id="pt-lora-r-val" class="mono">8</span></label>
+            <label>Compute budget (log₁₀ units) <input type="range" id="pt-scale-x" min="0" max="6" step="0.1" value="1"> <span id="pt-scale-x-val" class="mono">10¹</span></label>
+            <button type="button" class="btn" id="pt-scale-double">Double compute →</button>
           </div>
-          <div class="pt-row"><span class="mono">Full fine-tune</span><div class="pt-track"><div class="pt-fill" id="pt-lora-fullfill" style="width:100%"></div></div><span class="mono" id="pt-lora-fullval">—</span></div>
-          <div class="pt-row"><span class="mono">LoRA adapter</span><div class="pt-track"><div class="pt-fill" id="pt-lora-lorafill" style="width:0%"></div></div><span class="mono" id="pt-lora-loraval">—</span></div>
-          <p class="mono" id="pt-lora-readout"></p>
+          <div class="pt-row"><span class="mono">Compute spent</span><div class="pt-track"><div class="pt-fill" id="pt-scale-cfill" style="width:0%"></div></div><span class="mono" id="pt-scale-cval">—</span></div>
+          <div class="pt-row"><span class="mono">Toy loss</span><div class="pt-track"><div class="pt-fill" id="pt-scale-lfill" style="width:0%"></div></div><span class="mono" id="pt-scale-lval">—</span></div>
+          <p class="mono" id="pt-scale-readout"></p>
           <script>(function(){
-          var dEl=document.getElementById("pt-lora-d"), rEl=document.getElementById("pt-lora-r");
-          var dVal=document.getElementById("pt-lora-d-val"), rVal=document.getElementById("pt-lora-r-val");
-          var fullFill=document.getElementById("pt-lora-fullfill"), loraFill=document.getElementById("pt-lora-lorafill");
-          var fullVal=document.getElementById("pt-lora-fullval"), loraVal=document.getElementById("pt-lora-loraval");
-          var readout=document.getElementById("pt-lora-readout");
-          function fmt(n){ return n>=1e6 ? (n/1e6).toFixed(2)+"M" : n>=1e3 ? (n/1e3).toFixed(1)+"K" : String(n); }
-          function update(){
-            var d=parseInt(dEl.value,10), r=parseInt(rEl.value,10);
-            dVal.textContent=d; rVal.textContent=r;
-            var full=d*d, lora=2*d*r;
-            var pct=Math.min(100,(lora/full)*100);
-            loraFill.style.width=pct+"%";
-            fullVal.textContent=fmt(full)+" params";
-            loraVal.textContent=fmt(lora)+" params";
-            readout.textContent="LoRA trains "+pct.toFixed(2)+"% as many parameters as a full fine-tune of this one matrix — "+(full/lora).toFixed(0)+"x fewer.";
+          var LMIN=1.5, K=8, ALPHA=0.3, MAXX=6;
+          var xEl=document.getElementById("pt-scale-x"), xVal=document.getElementById("pt-scale-x-val");
+          var cFill=document.getElementById("pt-scale-cfill"), lFill=document.getElementById("pt-scale-lfill");
+          var cVal=document.getElementById("pt-scale-cval"), lVal=document.getElementById("pt-scale-lval");
+          var readout=document.getElementById("pt-scale-readout");
+          var dblBtn=document.getElementById("pt-scale-double");
+          function loss(x){ return LMIN + K*Math.pow(10,-ALPHA*x); }
+          function update(prevLoss){
+            var x=parseFloat(xEl.value);
+            xVal.textContent="10^"+x.toFixed(1);
+            var l=loss(x);
+            cFill.style.width=(x/MAXX*100)+"%";
+            lFill.style.width=((l-LMIN)/K*100)+"%";
+            cVal.textContent="10^"+x.toFixed(1)+" units";
+            lVal.textContent=l.toFixed(3)+" (toy)";
+            if(typeof prevLoss==="number"){
+              readout.textContent="Doubling compute moved toy loss from "+prevLoss.toFixed(3)+" to "+l.toFixed(3)+" — a smaller drop than the last doubling gave.";
+            } else {
+              readout.textContent="Loss falls toward an irreducible floor (here, "+LMIN.toFixed(1)+") as compute grows — each doubling buys less than the one before.";
+            }
           }
-          dEl.addEventListener("input",update);
-          rEl.addEventListener("input",update);
+          xEl.addEventListener("input",function(){ update(); });
+          dblBtn.addEventListener("click",function(){
+            var prev=loss(parseFloat(xEl.value));
+            var nx=Math.min(MAXX, parseFloat(xEl.value)+Math.log10(2));
+            xEl.value=nx;
+            update(prev);
+          });
           update();
           })();</script>
         </div>
