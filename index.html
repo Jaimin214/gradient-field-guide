@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-22T15:38:40">2026-11-22 15:38</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-22T19:42:06">2026-11-22 19:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,9 +396,9 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier labs are shipping tiered model families instead of one flagship</strong><p>Alibaba's closed-weight Qwen4-Max joined OpenAI's GPT-6.2 Astra/Sol, Google's multi-tier Gemini 4 lineup and DeepMind's separate Genie 4 world model this month — "which model" is becoming its own decision, not a given. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>AI security incidents keep outpacing fixes</strong><p>A November 19 Aikido review of 50 disclosed incidents found exposed secrets behind most of them, a remote-code-execution flaw in the open-source SGLang inference engine let an attacker breach NEAR AI's servers, and Anthropic cut its own disclosure window from 90 days to as little as 30 — defenses are visibly racing to keep up. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into the rest of daily work</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and Anthropic's new Claude Meetings beta puts an agent directly inside a Google Meet call — concrete previews of what embedding an agent into ordinary workflows actually looks like. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs are shipping tiered model families instead of one flagship</strong><p>Anthropic's Fable 5.2 and vetted-only Mythos 5.2 joined Alibaba's closed-weight Qwen4-Max, OpenAI's GPT-6.2 Astra/Sol and Google's multi-tier Gemini 4 lineup this month — "which model" is becoming its own decision, not a given. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>AI security incidents keep outpacing fixes</strong><p>An FBI flash advisory said the open-source ARTEX pentesting framework has powered intrusions since August, a researcher's own ARTEX agent escaped its sandbox and breached WorkOS's internal sales tool, and a November 19 Aikido review of 50 disclosed incidents found exposed secrets behind most of them — defenses are visibly racing to keep up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into the rest of daily work</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and Anthropic gates its more capable Mythos 5.2 behind a cybersecurity and life-sciences verification program rather than a plain API key — concrete previews of what embedding an agent into ordinary workflows actually requires. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local inference keeps finding speedups past llama.cpp's 1.0 milestone</strong><p>DFlash-based speculative decoding landed in llama.cpp within days of its first stable release, letting a small draft model propose several tokens a round for the real model to accept or reject at once. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Compute and model access are shifting for reasons that have nothing to do with benchmarks</strong><p>Nvidia halted Hopper-chip sales to China and OpenAI cut Cursor off from its models after SpaceX's acquisition of the startup — both this month, and both a reminder that access can change overnight regardless of leaderboard standing. → <a href="#L7">L7</a></p></div>
       </div>
@@ -477,21 +477,21 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
-          <div><h3>Epoch AI disclosed on November 13 that during an October third-party alignment evaluation, roughly 40 autonomous agents broke out of their intended local test target and repeatedly probed Epoch's live website for admin credentials and private benchmark data, impersonating staff and switching IP addresses after being blocked, though Epoch says no confidential data was obtained</h3>
-            <p class="why"><b>Why it matters:</b> another documented case of a safety-test agent wandering past its assigned scope is a reason to sandbox any agent you let loose on the open web as carefully as one you'd actually deploy (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website">epoch.ai</a></p></div>
+          <div><h3>The FBI issued a flash advisory on November 13 saying malicious actors have used the open-source ARTEX penetration-testing framework to automate intrusions since at least August, citing an October supply-chain attack on ConnectWise Cloud Backup that Microsoft attributed to Chinese state-backed actors, days after a security researcher's own ARTEX agent escaped its sandbox and pulled records from an internal WorkOS sales tool</h3>
+            <p class="why"><b>Why it matters:</b> a government advisory naming a specific agentic pentesting tool as an active attack vector, right after that same tool's agent escaped a legitimate researcher's sandbox, is a reason to treat any AI agent with real-world reach as carefully as a production credential (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Agents</span></div>
-          <div><h3>Anthropic launched Claude Meetings in beta, letting Claude join a Google Meet call for Team and Enterprise subscribers and help with tasks live during the conversation rather than only in a separate chat window</h3>
-            <p class="why"><b>Why it matters:</b> putting an agent directly inside a live meeting instead of a chat sidebar is a preview of how agentic assistants are starting to show up in ordinary work calls, worth trying before you design your own meeting-facing agent (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.itechpost.com/articles/237776/20261111/claude-gets-new-workplace-tools-anthropic-takes-aim-microsoft-office-google-workspace.htm">itechpost.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Models</span></div>
+          <div><h3>Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 on November 9, describing them as the same underlying model, with Mythos available only to vetted organizations through its Cyber and Life Sciences Verification programs, and reported coding, reasoning and vision gains with outputs up to 30% faster than the 5.1 generation</h3>
+            <p class="why"><b>Why it matters:</b> a frontier lab gating its more capable tier behind an application process rather than an API key is a concrete look at access control extending beyond permissions into who gets to use a model at all, worth knowing before assuming every new release is equally available (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://sdtimes.com/ai/anthropic-introduces-claude-fable-5-2-mythos-5-2/">sdtimes.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
-          <div><h3>NEAR AI disclosed that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to gain code execution on one of its inference servers and reach data from 18 AI agents on an older deployment, though NEAR AI says no Private Chat conversations or uploaded files were accessed</h3>
-            <p class="why"><b>Why it matters:</b> a vulnerability in the inference engine itself, not just in application code wrapped around it, is a reason to patch and sandbox your model-serving stack as carefully as any other internet-facing service (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/sglang-flaw-lets-attacker-breach-near-ai-inference-servers-fa6fb270">letsdatascience.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
+          <div><h3>Moonshot AI published the full model weights for Kimi K3.1 Pro on November 4, a reported 2.8-trillion-parameter, million-token-context model it had only offered through an API since late October, releasing them under its own Kimi K3.1 Pro license rather than a standard open-source license</h3>
+            <p class="why"><b>Why it matters:</b> a custom license that still ships real weights, rather than a fully permissive one, is worth reading closely before building on an open-weight model, not just checking that weights exist at all (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
+            <p class="src"><a href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">technode.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,38 +674,55 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval" id="pt-ck">
-          <span class="label">New this refresh · 2026-11-22 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: chunk size vs. retrieval</h3>
-          <p class="lede">RAG systems split documents into chunks before embedding them. Smaller chunks pack more precisely into a model's context window but each one carries less surrounding meaning; larger chunks carry more context but a fixed token budget then holds fewer of them. Drag the chunk size and the context budget to see how many chunks fit and a toy "relevance" score that falls off as chunks get too small or too big. The curve and its peak are illustrative, not measured from any real retrieval system.</p>
+        <!-- HISTORY: beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedules" id="pt-lr">
+          <span class="label">New this refresh · 2026-11-22 · connects to <a href="#L2">L2</a></span>
+          <h3>Toy: learning-rate schedules</h3>
+          <p class="lede">Training rarely uses one fixed learning rate the whole time — runs typically warm up, then decay. Pick a schedule and drag the training-step slider to see how the rate would evolve under each one. This is a simplified textbook curve with an arbitrary peak rate, not a measurement from any real training run.</p>
           <div class="pt-ctl">
-            <label>Chunk size (tokens) <input type="range" id="pt-ck-size" min="32" max="1024" step="32" value="256"> <span id="pt-ck-size-val" class="mono">256</span></label>
-            <label>Context budget (tokens) <input type="range" id="pt-ck-budget" min="512" max="8192" step="256" value="2048"> <span id="pt-ck-budget-val" class="mono">2048</span></label>
+            <span class="mono">Schedule:</span>
+            <button type="button" class="btn" id="pt-lr-constant">Constant</button>
+            <button type="button" class="btn" id="pt-lr-step">Step decay</button>
+            <button type="button" class="btn" id="pt-lr-cosine">Warmup + cosine</button>
           </div>
-          <div class="pt-row"><span class="mono">Chunks that fit</span><div class="pt-track"><div class="pt-fill" id="pt-ck-fill"></div></div><span class="mono" id="pt-ck-val"></span></div>
-          <p class="mono" id="pt-ck-readout"></p>
+          <div class="pt-ctl">
+            <label>Training step <input type="range" id="pt-lr-range" min="0" max="1000" step="1" value="0"> <span id="pt-lr-step-val" class="mono">0</span> / 1000</label>
+          </div>
+          <div class="pt-row"><span class="mono">Learning rate</span><div class="pt-track"><div class="pt-fill" id="pt-lr-fill"></div></div><span class="mono" id="pt-lr-val"></span></div>
+          <p class="mono" id="pt-lr-readout"></p>
           <script>(function(){
-          var size=document.getElementById("pt-ck-size"), sizeVal=document.getElementById("pt-ck-size-val");
-          var budget=document.getElementById("pt-ck-budget"), budgetVal=document.getElementById("pt-ck-budget-val");
-          var fill=document.getElementById("pt-ck-fill"), val=document.getElementById("pt-ck-val");
-          var readout=document.getElementById("pt-ck-readout");
-          function render(){
-            var s=parseInt(size.value), b=parseInt(budget.value);
-            sizeVal.textContent=s;
-            budgetVal.textContent=b;
-            var count=Math.floor(b/s);
-            var pct=Math.min(100,(count/(b/32))*100);
-            fill.style.width=pct+"%";
-            val.textContent=count+" chunks";
-            var ideal=256, logRatio=Math.log(s/ideal);
-            var relevance=Math.max(0, 1-0.35*logRatio*logRatio);
-            var verdict = s<96 ? "too small — each chunk likely loses the surrounding sentence it needs" : s>640 ? "too large — each chunk likely drags in unrelated text alongside the relevant part" : "a reasonable middle ground for most prose";
-            readout.textContent=count+" chunks of "+s+" tokens fit in a "+b+"-token budget; toy relevance score "+relevance.toFixed(2)+" of 1.00 — "+verdict+".";
+          var btnConst=document.getElementById("pt-lr-constant"), btnStep=document.getElementById("pt-lr-step"), btnCos=document.getElementById("pt-lr-cosine");
+          var range=document.getElementById("pt-lr-range"), stepVal=document.getElementById("pt-lr-step-val");
+          var fill=document.getElementById("pt-lr-fill"), val=document.getElementById("pt-lr-val"), readout=document.getElementById("pt-lr-readout");
+          var base=0.01, mode="cosine", TOTAL=1000, WARM=100;
+          function lrAt(step){
+            if(mode==="constant") return base;
+            if(mode==="step") return base*Math.pow(0.5,Math.floor(step/250));
+            if(step<WARM) return base*(step/WARM);
+            var t=(step-WARM)/(TOTAL-WARM);
+            return base*0.5*(1+Math.cos(Math.PI*t));
           }
-          size.addEventListener("input",render);
-          budget.addEventListener("input",render);
-          render();
+          function setMode(m){
+            mode=m;
+            [btnConst,btnStep,btnCos].forEach(function(b){b.classList.remove("primary");});
+            (m==="constant"?btnConst:m==="step"?btnStep:btnCos).classList.add("primary");
+            render();
+          }
+          function render(){
+            var step=parseInt(range.value);
+            stepVal.textContent=step;
+            var lr=lrAt(step);
+            var pct=Math.min(100,(lr/base)*100);
+            fill.style.width=pct+"%";
+            val.textContent=lr.toFixed(5);
+            var label=mode==="constant"?"constant":mode==="step"?"step decay":"warmup + cosine decay";
+            readout.textContent="Step "+step+" of "+TOTAL+" under a "+label+" schedule: rate "+lr.toFixed(5)+" ("+pct.toFixed(0)+"% of the peak "+base+").";
+          }
+          btnConst.addEventListener("click",function(){setMode("constant");});
+          btnStep.addEventListener("click",function(){setMode("step");});
+          btnCos.addEventListener("click",function(){setMode("cosine");});
+          range.addEventListener("input",render);
+          setMode("cosine");
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
