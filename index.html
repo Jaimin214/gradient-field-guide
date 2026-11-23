@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-23T00:40:54">2026-11-23 00:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-23T05:41:33">2026-11-23 05:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -400,7 +400,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <div><span class="state rising">Rising</span><strong>AI vendor breaches keep cascading into the products built on top of them</strong><p>A breach at Fireworks AI leaked chat transcripts and credentials into Notion, a remote-code-execution flaw in the open-source SGLang engine exposed NEAR AI's own inference servers, and a November 19 Aikido review of 50 disclosed incidents found exposed secrets behind most of them — the weak link is as often the vendor or serving stack as the model itself. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into the rest of daily work</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and Anthropic gates its more capable Mythos 5.2 behind a cybersecurity and life-sciences verification program rather than a plain API key — concrete previews of what embedding an agent into ordinary workflows actually requires. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local inference keeps finding speedups past llama.cpp's 1.0 milestone</strong><p>DFlash-based speculative decoding landed in llama.cpp within days of its first stable release, letting a small draft model propose several tokens a round for the real model to accept or reject at once. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Compute and market access are shifting for reasons that have nothing to do with benchmarks</strong><p>Nvidia halted Hopper-chip sales to China and Anthropic's Nasdaq debut swung from a 34% opening pop to briefly trading below its IPO price by midday — both this month, and both reminders that access and valuation can move fast for reasons no leaderboard captures. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>State-level AI rules are turning from pledges into concrete standards</strong><p>California's governor published an 85-page framework on November 18 recommending mandatory safety testing, incident reporting and emergency shutdown authority for frontier developers, while Nvidia's halted Hopper sales to China and Anthropic's volatile Nasdaq debut showed how fast compute access and valuation can also move for reasons no leaderboard captures. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -438,6 +438,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Google DeepMind began rolling out Genie 4, a real-time interactive world model that generates playable environments with native ambient audio and spoken dialogue, to Google AI Ultra subscribers through Project Genie on November 18, after an October research-preview phase limited to trusted testers</h3>
             <p class="why"><b>Why it matters:</b> a model that generates a steerable, narrated world rather than text is a different product lineage from chat-style LLMs, worth knowing before assuming every new AI release is just another chatbot (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://letsdatascience.com/news/google-deepmind-releases-genie-4-to-ai-ultra-subscribers-in-2401b3c2">letsdatascience.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-18</span><span class="pill">Policy</span></div>
+          <div><h3>California Governor Gavin Newsom published an 85-page framework on November 18 recommending mandatory state AI safety standards, independent third-party testing throughout training and deployment, incident reporting and emergency shutdown authority for frontier model developers, building on 2025's SB 53 disclosure law and a September executive order</h3>
+            <p class="why"><b>Why it matters:</b> a state moving from voluntary disclosure toward mandatory outside testing and shutdown powers previews the kind of compliance obligations a frontier-model employer, or your own agent project, may eventually face (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight">gov.ca.gov</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-17</span><span class="pill">Models</span></div>
@@ -486,12 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Fireworks AI widened its October breach disclosure to cover customer datasets, secrets and partial model weights, and Notion confirmed the intrusion had exposed Notion AI chat transcripts from under 1% of its workspaces, saying it found some of its own API keys inside those chats and revoked them on November 11</h3>
             <p class="why"><b>Why it matters:</b> a vendor breach reaching into a downstream product's chat logs and leaking that product's own credentials is a reason to treat anything pasted into an AI assistant as potentially recoverable later, worth remembering before pasting a real key into any chat window (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts">bleepingcomputer.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
-          <div><h3>NEAR AI said an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to reach one of its inference servers and an internal system behind a deprecated Private Chat feature, exposing data tied to roughly 100 users and 18 AI agents before the flaw was patched and credentials rotated</h3>
-            <p class="why"><b>Why it matters:</b> a vulnerability in widely-used open-source serving software, not the model itself, being the entry point is a reason to patch and monitor your inference stack as carefully as any other production service (<a href="#L4">L4</a>, <a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://theblock.co/news/defi/2026-11-10-near-ai-security-breach-437002">theblock.co</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,38 +674,35 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size -->
-        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size" id="pt-of">
-          <span class="label">New this refresh · 2026-11-23 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: overfitting vs. model size</h3>
-          <p class="lede">Drag the capacity slider to see the classic bias–variance shape: training error keeps falling as a model gets bigger, but validation error forms a U — it falls, bottoms out, then climbs as the model starts memorizing noise instead of the pattern. The curves below follow an illustrative textbook formula with made-up numbers, not a measurement from any real model or dataset.</p>
+        <!-- HISTORY: kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost -->
+        <div class="pgcard pgtopic" data-topic="attention-quadratic-cost" id="pt-aqc">
+          <span class="label">New this refresh · 2026-11-23 · connects to <a href="#L3">L3</a></span>
+          <h3>Toy: why long context is expensive</h3>
+          <p class="lede">Self-attention scores every token against every other token, so the work grows with the <i>square</i> of sequence length, not linearly — relevant with vendors now advertising million-token context windows. Drag the slider to watch the pairwise-comparison count explode as context doubles. This toy ignores KV-cache reuse, sparse/linear-attention tricks and real hardware throughput, which all soften the curve in practice.</p>
           <div class="pt-ctl">
-            <label>Model capacity <input type="range" id="pt-of-range" min="1" max="100" step="1" value="1"> <span id="pt-of-cap-val" class="mono">1</span> / 100</label>
+            <label>Context length <input type="range" id="pt-aqc-range" min="0" max="7" step="1" value="2"> <span id="pt-aqc-len-val" class="mono"></span></label>
           </div>
-          <div class="pt-row"><span class="mono">Training error</span><div class="pt-track"><div class="pt-fill" id="pt-of-train-fill"></div></div><span class="mono" id="pt-of-train-val"></span></div>
-          <div class="pt-row"><span class="mono">Validation error</span><div class="pt-track"><div class="pt-fill" id="pt-of-val-fill"></div></div><span class="mono" id="pt-of-val-val"></span></div>
-          <p class="mono" id="pt-of-readout"></p>
+          <div class="pt-row"><span class="mono">Pairwise cost</span><div class="pt-track"><div class="pt-fill" id="pt-aqc-fill"></div></div><span class="mono" id="pt-aqc-pairs-val"></span></div>
+          <p class="mono" id="pt-aqc-readout"></p>
           <script>(function(){
-          var range=document.getElementById("pt-of-range"), capVal=document.getElementById("pt-of-cap-val");
-          var trainFill=document.getElementById("pt-of-train-fill"), trainVal=document.getElementById("pt-of-train-val");
-          var valFill=document.getElementById("pt-of-val-fill"), valVal=document.getElementById("pt-of-val-val");
-          var readout=document.getElementById("pt-of-readout");
-          function trainErr(c){ return 0.55*Math.exp(-c/15)+0.03; }
-          function gapAt(c){ return c<20 ? 0.02*(c/20) : 0.02+0.004*(c-20); }
-          function valErr(c){ return trainErr(c)+gapAt(c); }
+          var range=document.getElementById("pt-aqc-range"), lenVal=document.getElementById("pt-aqc-len-val");
+          var fill=document.getElementById("pt-aqc-fill"), pairsVal=document.getElementById("pt-aqc-pairs-val");
+          var readout=document.getElementById("pt-aqc-readout");
+          var levelsK=[1,2,4,8,16,32,64,128];
+          var maxPairs=Math.pow(levelsK[levelsK.length-1]*1000,2);
+          function fmt(n){
+            if(n>=1e9) return (n/1e9).toFixed(1)+"B";
+            if(n>=1e6) return (n/1e6).toFixed(1)+"M";
+            if(n>=1e3) return (n/1e3).toFixed(1)+"K";
+            return String(n);
+          }
           function render(){
-            var c=parseInt(range.value,10);
-            capVal.textContent=c;
-            var te=trainErr(c), ve=valErr(c);
-            trainFill.style.width=Math.min(100,te*100)+"%";
-            valFill.style.width=Math.min(100,ve*100)+"%";
-            trainVal.textContent=(te*100).toFixed(1)+"%";
-            valVal.textContent=(ve*100).toFixed(1)+"%";
-            var verdict;
-            if(c<18) verdict="underfitting — the model is too simple, so both errors are still high";
-            else if(ve>te+0.09) verdict="overfitting — validation error is climbing while training error keeps dropping";
-            else verdict="a good fit — training and validation error are both low and close together";
-            readout.textContent="Capacity "+c+"/100 — train error "+(te*100).toFixed(1)+"%, validation error "+(ve*100).toFixed(1)+"%: "+verdict+".";
+            var idx=parseInt(range.value,10), k=levelsK[idx], n=k*1000, pairs=n*n;
+            lenVal.textContent=k+"k tokens";
+            pairsVal.textContent=fmt(pairs)+" pairs";
+            fill.style.width=Math.min(100,(pairs/maxPairs)*100)+"%";
+            var next=levelsK[Math.min(idx+1,levelsK.length-1)];
+            readout.textContent="At "+k+"k tokens, attention compares roughly "+fmt(pairs)+" token pairs. Doubling to "+next+"k would roughly quadruple that, not double it.";
           }
           range.addEventListener("input",render);
           render();
