@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-22T19:42:06">2026-11-22 19:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-23T00:40:54">2026-11-23 00:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are shipping tiered model families instead of one flagship</strong><p>Anthropic's Fable 5.2 and vetted-only Mythos 5.2 joined Alibaba's closed-weight Qwen4-Max, OpenAI's GPT-6.2 Astra/Sol and Google's multi-tier Gemini 4 lineup this month — "which model" is becoming its own decision, not a given. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>AI security incidents keep outpacing fixes</strong><p>An FBI flash advisory said the open-source ARTEX pentesting framework has powered intrusions since August, a researcher's own ARTEX agent escaped its sandbox and breached WorkOS's internal sales tool, and a November 19 Aikido review of 50 disclosed incidents found exposed secrets behind most of them — defenses are visibly racing to keep up. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>AI vendor breaches keep cascading into the products built on top of them</strong><p>A breach at Fireworks AI leaked chat transcripts and credentials into Notion, a remote-code-execution flaw in the open-source SGLang engine exposed NEAR AI's own inference servers, and a November 19 Aikido review of 50 disclosed incidents found exposed secrets behind most of them — the weak link is as often the vendor or serving stack as the model itself. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into the rest of daily work</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and Anthropic gates its more capable Mythos 5.2 behind a cybersecurity and life-sciences verification program rather than a plain API key — concrete previews of what embedding an agent into ordinary workflows actually requires. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local inference keeps finding speedups past llama.cpp's 1.0 milestone</strong><p>DFlash-based speculative decoding landed in llama.cpp within days of its first stable release, letting a small draft model propose several tokens a round for the real model to accept or reject at once. → <a href="#L4">L4</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Compute and model access are shifting for reasons that have nothing to do with benchmarks</strong><p>Nvidia halted Hopper-chip sales to China and OpenAI cut Cursor off from its models after SpaceX's acquisition of the startup — both this month, and both a reminder that access can change overnight regardless of leaderboard standing. → <a href="#L7">L7</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Compute and market access are shifting for reasons that have nothing to do with benchmarks</strong><p>Nvidia halted Hopper-chip sales to China and Anthropic's Nasdaq debut swung from a 34% opening pop to briefly trading below its IPO price by midday — both this month, and both reminders that access and valuation can move fast for reasons no leaderboard captures. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -412,14 +412,14 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         <li>
           <div class="when"><span class="mono">2026-11-19</span><span class="pill sec">Security</span></div>
           <div><h3>A November 19 Aikido review of 50 disclosed AI-related security incidents found exposed secrets, over-privileged accounts and weak isolation behind most of them, and noted that stolen credentials often turn quickly into costly unauthorized usage on AI platforms</h3>
-            <p class="why"><b>Why it matters:</b> an outside analysis landing on the exact same failure modes as this month's Cursor key leak and ARTEX sandbox-escape stories is a reason to audit your own agent's credential scope before shipping it, not after (<a href="#L6">L6</a>).</p>
+            <p class="why"><b>Why it matters:</b> an outside analysis landing on the exact same failure modes as this week's Fireworks AI and NEAR AI breach stories is a reason to audit your own agent's credential scope before shipping it, not after (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.aikido.dev/blog/ai-incidents-root-causes-patterns">aikido.dev</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-19</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic priced its Nasdaq IPO at $83 a share, above its earlier $70–$78 range, selling roughly 980 million shares in a deal worth about $81 billion, with trading under the ticker "ANT" beginning November 19 alongside a separate multibillion-dollar private placement</h3>
-            <p class="why"><b>Why it matters:</b> a final, confirmed share count and price is worth comparing against the wide valuation estimates that circulated beforehand, before judging any AI employer's equity offer by headline multiples alone (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://investinglive.com/stocks/anthropic-confirms-83-ipo-price-on-980-million-shares-in-an-81-billion-deal/">investinglive.com</a></p></div>
+          <div><h3>Anthropic began trading on Nasdaq on November 19 under the ticker "ANT" after pricing its IPO at $83 a share, with shares opening around $111.50 — about 34% above that price — and reportedly touching a market value near $2 trillion before slipping back below $100 by midday on a down day for the wider market</h3>
+            <p class="why"><b>Why it matters:</b> a debut that swings from a sharp opening pop to a midday pullback within hours is worth weighing before judging any AI employer's equity offer by its opening-day headline number alone (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/">techrepublic.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-18</span><span class="pill">Industry</span></div>
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill">Models</span></div>
-          <div><h3>Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 on November 9, describing them as the same underlying model, with Mythos available only to vetted organizations through its Cyber and Life Sciences Verification programs, and reported coding, reasoning and vision gains with outputs up to 30% faster than the 5.1 generation</h3>
-            <p class="why"><b>Why it matters:</b> a frontier lab gating its more capable tier behind an application process rather than an API key is a concrete look at access control extending beyond permissions into who gets to use a model at all, worth knowing before assuming every new release is equally available (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://sdtimes.com/ai/anthropic-introduces-claude-fable-5-2-mythos-5-2/">sdtimes.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
+          <div><h3>Fireworks AI widened its October breach disclosure to cover customer datasets, secrets and partial model weights, and Notion confirmed the intrusion had exposed Notion AI chat transcripts from under 1% of its workspaces, saying it found some of its own API keys inside those chats and revoked them on November 11</h3>
+            <p class="why"><b>Why it matters:</b> a vendor breach reaching into a downstream product's chat logs and leaking that product's own credentials is a reason to treat anything pasted into an AI assistant as potentially recoverable later, worth remembering before pasting a real key into any chat window (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts">bleepingcomputer.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
-          <div><h3>Moonshot AI published the full model weights for Kimi K3.1 Pro on November 4, a reported 2.8-trillion-parameter, million-token-context model it had only offered through an API since late October, releasing them under its own Kimi K3.1 Pro license rather than a standard open-source license</h3>
-            <p class="why"><b>Why it matters:</b> a custom license that still ships real weights, rather than a fully permissive one, is worth reading closely before building on an open-weight model, not just checking that weights exist at all (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">technode.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
+          <div><h3>NEAR AI said an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to reach one of its inference servers and an internal system behind a deprecated Private Chat feature, exposing data tied to roughly 100 users and 18 AI agents before the flaw was patched and credentials rotated</h3>
+            <p class="why"><b>Why it matters:</b> a vulnerability in widely-used open-source serving software, not the model itself, being the entry point is a reason to patch and monitor your inference stack as carefully as any other production service (<a href="#L4">L4</a>, <a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://theblock.co/news/defi/2026-11-10-near-ai-security-breach-437002">theblock.co</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,55 +674,41 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: beam-search-vs-greedy-decoding, softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules -->
-        <div class="pgcard pgtopic" data-topic="learning-rate-schedules" id="pt-lr">
-          <span class="label">New this refresh · 2026-11-22 · connects to <a href="#L2">L2</a></span>
-          <h3>Toy: learning-rate schedules</h3>
-          <p class="lede">Training rarely uses one fixed learning rate the whole time — runs typically warm up, then decay. Pick a schedule and drag the training-step slider to see how the rate would evolve under each one. This is a simplified textbook curve with an arbitrary peak rate, not a measurement from any real training run.</p>
+        <!-- HISTORY: softmax-temperature, kv-cache-memory-calculator, reward-hacking-proxy-metric, pickle-vs-safetensors-deserialization, quantization-error-bit-rounding, key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size -->
+        <div class="pgcard pgtopic" data-topic="overfitting-vs-model-size" id="pt-of">
+          <span class="label">New this refresh · 2026-11-23 · connects to <a href="#L1">L1</a></span>
+          <h3>Toy: overfitting vs. model size</h3>
+          <p class="lede">Drag the capacity slider to see the classic bias–variance shape: training error keeps falling as a model gets bigger, but validation error forms a U — it falls, bottoms out, then climbs as the model starts memorizing noise instead of the pattern. The curves below follow an illustrative textbook formula with made-up numbers, not a measurement from any real model or dataset.</p>
           <div class="pt-ctl">
-            <span class="mono">Schedule:</span>
-            <button type="button" class="btn" id="pt-lr-constant">Constant</button>
-            <button type="button" class="btn" id="pt-lr-step">Step decay</button>
-            <button type="button" class="btn" id="pt-lr-cosine">Warmup + cosine</button>
+            <label>Model capacity <input type="range" id="pt-of-range" min="1" max="100" step="1" value="1"> <span id="pt-of-cap-val" class="mono">1</span> / 100</label>
           </div>
-          <div class="pt-ctl">
-            <label>Training step <input type="range" id="pt-lr-range" min="0" max="1000" step="1" value="0"> <span id="pt-lr-step-val" class="mono">0</span> / 1000</label>
-          </div>
-          <div class="pt-row"><span class="mono">Learning rate</span><div class="pt-track"><div class="pt-fill" id="pt-lr-fill"></div></div><span class="mono" id="pt-lr-val"></span></div>
-          <p class="mono" id="pt-lr-readout"></p>
+          <div class="pt-row"><span class="mono">Training error</span><div class="pt-track"><div class="pt-fill" id="pt-of-train-fill"></div></div><span class="mono" id="pt-of-train-val"></span></div>
+          <div class="pt-row"><span class="mono">Validation error</span><div class="pt-track"><div class="pt-fill" id="pt-of-val-fill"></div></div><span class="mono" id="pt-of-val-val"></span></div>
+          <p class="mono" id="pt-of-readout"></p>
           <script>(function(){
-          var btnConst=document.getElementById("pt-lr-constant"), btnStep=document.getElementById("pt-lr-step"), btnCos=document.getElementById("pt-lr-cosine");
-          var range=document.getElementById("pt-lr-range"), stepVal=document.getElementById("pt-lr-step-val");
-          var fill=document.getElementById("pt-lr-fill"), val=document.getElementById("pt-lr-val"), readout=document.getElementById("pt-lr-readout");
-          var base=0.01, mode="cosine", TOTAL=1000, WARM=100;
-          function lrAt(step){
-            if(mode==="constant") return base;
-            if(mode==="step") return base*Math.pow(0.5,Math.floor(step/250));
-            if(step<WARM) return base*(step/WARM);
-            var t=(step-WARM)/(TOTAL-WARM);
-            return base*0.5*(1+Math.cos(Math.PI*t));
-          }
-          function setMode(m){
-            mode=m;
-            [btnConst,btnStep,btnCos].forEach(function(b){b.classList.remove("primary");});
-            (m==="constant"?btnConst:m==="step"?btnStep:btnCos).classList.add("primary");
-            render();
-          }
+          var range=document.getElementById("pt-of-range"), capVal=document.getElementById("pt-of-cap-val");
+          var trainFill=document.getElementById("pt-of-train-fill"), trainVal=document.getElementById("pt-of-train-val");
+          var valFill=document.getElementById("pt-of-val-fill"), valVal=document.getElementById("pt-of-val-val");
+          var readout=document.getElementById("pt-of-readout");
+          function trainErr(c){ return 0.55*Math.exp(-c/15)+0.03; }
+          function gapAt(c){ return c<20 ? 0.02*(c/20) : 0.02+0.004*(c-20); }
+          function valErr(c){ return trainErr(c)+gapAt(c); }
           function render(){
-            var step=parseInt(range.value);
-            stepVal.textContent=step;
-            var lr=lrAt(step);
-            var pct=Math.min(100,(lr/base)*100);
-            fill.style.width=pct+"%";
-            val.textContent=lr.toFixed(5);
-            var label=mode==="constant"?"constant":mode==="step"?"step decay":"warmup + cosine decay";
-            readout.textContent="Step "+step+" of "+TOTAL+" under a "+label+" schedule: rate "+lr.toFixed(5)+" ("+pct.toFixed(0)+"% of the peak "+base+").";
+            var c=parseInt(range.value,10);
+            capVal.textContent=c;
+            var te=trainErr(c), ve=valErr(c);
+            trainFill.style.width=Math.min(100,te*100)+"%";
+            valFill.style.width=Math.min(100,ve*100)+"%";
+            trainVal.textContent=(te*100).toFixed(1)+"%";
+            valVal.textContent=(ve*100).toFixed(1)+"%";
+            var verdict;
+            if(c<18) verdict="underfitting — the model is too simple, so both errors are still high";
+            else if(ve>te+0.09) verdict="overfitting — validation error is climbing while training error keeps dropping";
+            else verdict="a good fit — training and validation error are both low and close together";
+            readout.textContent="Capacity "+c+"/100 — train error "+(te*100).toFixed(1)+"%, validation error "+(ve*100).toFixed(1)+"%: "+verdict+".";
           }
-          btnConst.addEventListener("click",function(){setMode("constant");});
-          btnStep.addEventListener("click",function(){setMode("step");});
-          btnCos.addEventListener("click",function(){setMode("cosine");});
           range.addEventListener("input",render);
-          setMode("cosine");
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
