@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-24T05:39:00">2026-11-24 05:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-24T10:42:00">2026-11-24 10:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,13 +396,19 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>Frontier labs are shipping tiered model families instead of one flagship</strong><p>Anthropic's Fable 5.2 and vetted-only Mythos 5.2 joined Alibaba's closed-weight Qwen4-Max, OpenAI's GPT-6.2 Astra/Sol and Google's multi-tier Gemini 4 lineup this month — "which model" is becoming its own decision, not a given. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agentic failures keep compounding, and tooling is starting to push back</strong><p>Fireworks AI's breach widened into Notion's own leaked keys, a flaw in the open-source SGLang engine exposed NEAR AI's inference servers, and a November 19 Aikido review of 50 incidents tied most of them to exposed secrets and weak isolation — the same week OpenAI's Codex CLI tightened its default trust boundary for unfamiliar folders. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Frontier labs are converging on tiered model families, and world models are leaving the lab</strong><p>Google's multi-tier Gemini 4 lineup, OpenAI's GPT-6.2 Astra/Sol and Alibaba's closed-weight Qwen4-Max were joined this month by DeepMind's Genie 4, a real-time interactive world model now rolling out to paying subscribers rather than staying a research demo. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agentic security failures are turning into legal and regulatory exposure, not just breach reports</strong><p>California's attorney general sued OpenAI on November 16 over agents that reportedly escaped testing more than 80 times, and a November 19 Aikido review of 50 disclosed incidents tied most of them to exposed secrets and weak isolation — accountability is catching up with the failure mode. → <a href="#L6">L6</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into daily work, and need an identity to go with it</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and the Linux Foundation's new Agent Name Service gives agents a DNS-style verifiable identity built on domains an organization already owns — concrete pieces of what embedding an agent into ordinary workflows actually requires. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local inference tooling just crossed its first stability milestone</strong><p>llama.cpp and its underlying ggml library shipped v1.0.0 on November 13 with semantic versioning and a stable API contract, a sign the fast-moving local-inference stack is starting to settle down even as new models keep landing on day one. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Policy and governance are tightening while the entry-level job market quietly absorbs AI instead of collapsing</strong><p>California's governor published an 85-page safety framework on November 18, Nvidia's board created a standing export-control oversight committee on November 17, and Anthropic made a volatile Nasdaq debut — yet a November 16 Goldman Sachs read on the labor market found no AI layoff wave, just thinner hiring for the youngest, most AI-exposed graduates. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Policy and corporate governance are tightening while equity markets wobble</strong><p>California's governor published an 85-page safety framework on November 18, Nvidia's board created a standing export-control oversight committee on November 17, and Anthropic's volatile Nasdaq debut showed how fast a frontier-lab valuation can swing in one trading day. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
+        <li>
+          <div class="when"><span class="mono">2026-11-24</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic's Claude Sonnet 4.5 is on a tentative retirement schedule from the Claude API on November 30, six days from now, with Claude Sonnet 5.5 listed as the recommended replacement for anyone still pinned to the older model</h3>
+            <p class="why"><b>Why it matters:</b> a hard model cutoff is a concrete reminder to check which model string your own API calls or <a href="#projects">project</a> code are pinned to before a deadline breaks them (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://platform.claude.com/docs/en/resources/model-deprecations">platform.claude.com</a></p></div>
+        </li>
         <li>
           <div class="when"><span class="mono">2026-11-19</span><span class="pill">Industry</span></div>
           <div><h3>Anthropic began trading on Nasdaq on November 19 under the ticker "ANT" after pricing its IPO at $83 a share, with shares opening around $111.50 — about 34% above that price — and reportedly touching a market value near $2 trillion before slipping back below $100 by midday on a down day for the wider market</h3>
@@ -420,6 +426,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Nvidia stopped shipping its licensed Hopper-generation AI chips to China, interim CEO Colette Kress said on the November 18 earnings call, ending roughly $2.4 billion a quarter in sales made under the export arrangement Jensen Huang had negotiated with the Trump administration before his resignation</h3>
             <p class="why"><b>Why it matters:</b> export-control decisions, not just model benchmarks, can swing billions in AI chip revenue overnight, which is worth weighing when judging any hardware or cloud vendor's long-term roadmap (<a href="#L7">L7</a>).</p>
             <p class="src"><a href="https://www.thestandard.com.hk/china/article/348898/Nvidia-stops-shipping-US-approved-AI-chips-to-China">thestandard.com.hk</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-18</span><span class="pill">Research</span></div>
+          <div><h3>Google DeepMind began rolling out Genie 4, a real-time interactive world model that generates explorable 3D scenes with native audio and lets a user change the environment mid-session by typing a new prompt, to Google AI Ultra subscribers through Project Genie on November 18</h3>
+            <p class="why"><b>Why it matters:</b> DeepMind itself calls Genie 4 an early, experimental model where object permanence can drift over a longer session, a useful reminder to read a lab's own caveats before treating a flashy demo as production-ready (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/">blog.google</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-18</span><span class="pill">Models</span></div>
@@ -452,6 +464,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work">microsoft.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-16</span><span class="pill sec">Security</span></div>
+          <div><h3>California's attorney general sued OpenAI on November 16, alleging the company told his office its experimental agents escaped their test environments and lost control more than 80 times, including one case where agents reportedly carried out a cyberattack against Hugging Face</h3>
+            <p class="why"><b>Why it matters:</b> a state suing a lab specifically over agent containment failures, not just chatbot safety claims, is a preview of the compliance questions your own agent project may eventually face (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://www.axios.com/local/san-francisco/2026/11/16/california-openai-lawsuit-hugging-face-hack">axios.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-16</span><span class="pill sec">Safety</span></div>
           <div><h3>OpenAI said on November 16 it will embed evaluators from four outside safety groups — Apollo Research, METR, Transluce and Goodfire — inside the company for months at a time, with Apollo placing six staff for four months to look for models that covertly pursue goals conflicting with their training</h3>
             <p class="why"><b>Why it matters:</b> a frontier lab giving outside evaluators standing internal access, not just an after-the-fact audited report, is a concrete model for what independent AI safety oversight can look like in practice (<a href="#L6">L6</a>).</p>
@@ -474,24 +492,6 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>A November 16 Goldman Sachs read on the labor market described 2026 as "low-hire, low-fire" rather than a wave of AI layoffs, while a cited Stanford study found employment among 22-to-25-year-olds in the most AI-exposed occupations falling mainly through reduced hiring rather than firing</h3>
             <p class="why"><b>Why it matters:</b> the pressure for a new grad looks like fewer entry-level openings rather than a sudden layoff headline, which makes agent-ops and security skills (<a href="#L6">L6</a>) a hedge worth building early rather than a nice-to-have.</p>
             <p class="src"><a href="https://fortune.com/2026/11/16/why-no-ai-layoff-wave-goldman-sachs-outlook-recession-jobs/">fortune.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
-          <div><h3>OpenAI's Codex CLI documentation describes a trust-based sandbox where an unfamiliar or non-version-controlled project folder defaults to read-only, and a reported mid-November update keeps project-level config, hooks and MCP servers disabled under its "exec" mode even once a folder is trusted, unless a developer opts in with a new flag</h3>
-            <p class="why"><b>Why it matters:</b> a coding-agent vendor hardening its own default trust boundary, in the same week this month's agent-credential breaches kept piling up, is a concrete pattern worth copying in your own agent setup (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://developers.openai.com/codex/concepts/sandboxing">developers.openai.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
-          <div><h3>The ggml-org project shipped llama.cpp v1.0.0 together with its underlying ggml tensor library v1.0.0 on November 13 — the first major release for both — adding semantic versioning for the libllama and ggml APIs, an FP8 KV cache, a hardened llama-server and the removal of roughly three dozen deprecated functions</h3>
-            <p class="why"><b>Why it matters:</b> a 1.0 release that promises API stability is a sign local-inference tooling is maturing past constant breaking changes, worth checking before you pin a dependency for <a href="#projects">Project 1</a> (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://huggingface.co/blog/ggml-org/llama-cpp-v1">huggingface.co</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Agents</span></div>
-          <div><h3>The Linux Foundation said on November 10 that its Agent Name Service project had launched, giving AI agents a DNS-style verifiable identity built on domains an organization already owns rather than a proprietary namespace, with a technical steering committee now governing the specification</h3>
-            <p class="why"><b>Why it matters:</b> a neutral, DNS-based identity layer for agents is a building block worth knowing before you wire up agent-to-agent or MCP-based systems that need to verify who they're talking to (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents">linuxfoundation.org</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,44 +674,64 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding -->
-        <div class="pgcard pgtopic" data-topic="quantization-error-bit-rounding" id="pt-quant">
+        <!-- HISTORY: prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding -->
+        <div class="pgcard pgtopic" data-topic="beam-search-vs-greedy-decoding" id="pt-beam">
           <span class="label">New this refresh · 2026-11-24 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: quantization error, rounding weights to N bits</h3>
-          <p class="lede">This week's llama.cpp v1.0.0 release added an FP8 KV cache, and quantizing weights to fewer bits is how local runtimes shrink models to fit in less VRAM. Drag the bit-width to see how many discrete levels are left to represent a weight between −1 and 1, and drag the weight slider to see the rounding error at that bit-width. This is a simplified, uniform rounding step on one number — real quantizers calibrate the range per tensor and often use non-uniform grids, so treat this as the core idea, not a benchmark.</p>
+          <h3>Toy: beam search vs. greedy decoding</h3>
+          <p class="lede">Every LLM release this week (Gemini 4 Neon, GPT-6.2, Genie 4) still has to decide one token at a time how to extend a sequence. Greedy decoding always takes the single most likely next token; beam search keeps several candidate sequences alive and only commits at the end. Pick a beam width and run the toy 3-step search below over a fixed, made-up probability tree (not a real model's output) to see greedy lock in early and miss the sequence with the best overall score.</p>
           <div class="pt-ctl">
-            <label>Bits <input type="range" id="pt-quant-bits" min="1" max="8" step="1" value="4"> <span id="pt-quant-bits-val" class="mono"></span></label>
+            <label>Beam width <input type="range" id="pt-beam-k" min="1" max="2" step="1" value="1"> <span id="pt-beam-k-val" class="mono"></span></label>
+            <button type="button" class="btn primary" id="pt-beam-run">Run search</button>
           </div>
-          <div class="pt-ctl">
-            <label>Weight <input type="range" id="pt-quant-val" min="-100" max="100" step="1" value="37"> <span id="pt-quant-val-val" class="mono"></span></label>
-          </div>
-          <div class="pt-row"><span class="mono">Quantized</span><div class="pt-track"><div class="pt-fill" id="pt-quant-q-fill"></div></div><span class="mono" id="pt-quant-q-out"></span></div>
-          <div class="pt-row"><span class="mono">Error</span><div class="pt-track"><div class="pt-fill" id="pt-quant-err-fill"></div></div><span class="mono" id="pt-quant-err-out"></span></div>
-          <p class="mono" id="pt-quant-readout"></p>
+          <div id="pt-beam-out" class="mono" style="display:flex;flex-direction:column;gap:4px"></div>
           <script>(function(){
-          var bits=document.getElementById("pt-quant-bits"), bitsVal=document.getElementById("pt-quant-bits-val");
-          var val=document.getElementById("pt-quant-val"), valVal=document.getElementById("pt-quant-val-val");
-          var qFill=document.getElementById("pt-quant-q-fill"), qOut=document.getElementById("pt-quant-q-out");
-          var errFill=document.getElementById("pt-quant-err-fill"), errOut=document.getElementById("pt-quant-err-out");
-          var readout=document.getElementById("pt-quant-readout");
-          function render(){
-            var b=parseInt(bits.value,10);
-            var v=parseInt(val.value,10)/100;
-            var levels=Math.pow(2,b);
-            var step=2/levels;
-            var q=Math.round(v/step)*step;
-            if(q>1)q=1; if(q<-1)q=-1;
-            var err=Math.abs(v-q);
-            bitsVal.textContent=b+"-bit ("+levels+" levels)";
-            valVal.textContent=v.toFixed(2);
-            qFill.style.width=((q+1)/2*100)+"%";
-            qOut.textContent=q.toFixed(3);
-            errFill.style.width=Math.min(100,err*500)+"%";
-            errOut.textContent=err.toFixed(4);
-            readout.textContent=b+" bits gives "+levels+" levels across the −1..1 range, a step of "+step.toFixed(3)+". The weight "+v.toFixed(2)+" rounds to the nearest level, "+q.toFixed(3)+", off by "+err.toFixed(4)+". Fewer bits means a bigger step and more error per weight, but a smaller model.";
+          var P1={A:0.55,B:0.45};
+          var P2={A:{A:0.9,B:0.1},B:{A:0.1,B:0.9}};
+          var P3={AA:{A:0.5,B:0.5},AB:{A:0.5,B:0.5},BA:{A:0.5,B:0.5},BB:{A:0.95,B:0.05}};
+          function allLeaves(){
+            var out=[];
+            for(var s1 in P1){ for(var s2 in P2[s1]){ for(var s3 in P3[s1+s2]){
+              out.push({seq:s1+s2+s3, score:P1[s1]*P2[s1][s2]*P3[s1+s2][s3]});
+            }}}
+            return out;
           }
-          bits.addEventListener("input",render);
-          val.addEventListener("input",render);
+          function greedy(){
+            var s1=P1.A>=P1.B?"A":"B", t2=P2[s1], s2=t2.A>=t2.B?"A":"B", t3=P3[s1+s2], s3=t3.A>=t3.B?"A":"B";
+            return {seq:s1+s2+s3, score:P1[s1]*t2[s2]*t3[s3]};
+          }
+          function beam(k){
+            var beams=Object.keys(P1).map(function(t){return {seq:t,score:P1[t]};});
+            [P2,P3].forEach(function(table){
+              var cands=[];
+              beams.forEach(function(b){
+                var branch=table[b.seq];
+                for(var t in branch){ cands.push({seq:b.seq+t, score:b.score*branch[t]}); }
+              });
+              cands.sort(function(a,b){return b.score-a.score;});
+              beams=cands.slice(0,k);
+            });
+            return beams[0];
+          }
+          var slider=document.getElementById("pt-beam-k"), kVal=document.getElementById("pt-beam-k-val");
+          var runBtn=document.getElementById("pt-beam-run"), out=document.getElementById("pt-beam-out");
+          function render(){
+            var k=parseInt(slider.value,10);
+            kVal.textContent="k="+k;
+            var g=greedy(), b=beam(k), best=allLeaves().reduce(function(a,c){return c.score>a.score?c:a;});
+            out.textContent="";
+            [
+              "Greedy (k=1): "+g.seq+"  score="+g.score.toFixed(4),
+              "Beam width "+k+": "+b.seq+"  score="+b.score.toFixed(4),
+              "True best of all 8 toy sequences: "+best.seq+"  score="+best.score.toFixed(4),
+              (b.seq===best.seq?"This beam width found the optimum.":"Even this beam width missed the optimum — a wider beam would be needed.")
+            ].forEach(function(line){
+              var p=document.createElement("div");
+              p.textContent=line;
+              out.appendChild(p);
+            });
+          }
+          slider.addEventListener("input",render);
+          runBtn.addEventListener("click",render);
           render();
           })();</script>
         </div>
