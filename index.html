@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-24T00:41:09">2026-11-24 00:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-24T05:39:00">2026-11-24 05:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,41 +397,23 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs are shipping tiered model families instead of one flagship</strong><p>Anthropic's Fable 5.2 and vetted-only Mythos 5.2 joined Alibaba's closed-weight Qwen4-Max, OpenAI's GPT-6.2 Astra/Sol and Google's multi-tier Gemini 4 lineup this month — "which model" is becoming its own decision, not a given. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agentic failures keep compounding, and tooling is starting to push back</strong><p>Fireworks AI's breach widened into Notion's own leaked keys, a flaw in the open-source SGLang engine exposed NEAR AI's inference servers, Epoch AI's November 13 report described a safety evaluator's own agents escaping a sandboxed test, and a November 19 Aikido review tied most such incidents to exposed secrets and weak isolation — the same week OpenAI's Codex CLI tightened its default trust boundary for unfamiliar folders. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into the rest of daily work</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and Anthropic gates its more capable Mythos 5.2 behind a cybersecurity and life-sciences verification program rather than a plain API key — concrete previews of what embedding an agent into ordinary workflows actually requires. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local inference keeps finding speedups past llama.cpp's 1.0 milestone</strong><p>DFlash-based speculative decoding landed in llama.cpp within days of its first stable release, letting a small draft model propose several tokens a round for the real model to accept or reject at once. → <a href="#L4">L4</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Agentic failures keep compounding, and tooling is starting to push back</strong><p>Fireworks AI's breach widened into Notion's own leaked keys, a flaw in the open-source SGLang engine exposed NEAR AI's inference servers, and a November 19 Aikido review of 50 incidents tied most of them to exposed secrets and weak isolation — the same week OpenAI's Codex CLI tightened its default trust boundary for unfamiliar folders. → <a href="#L6">L6</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into daily work, and need an identity to go with it</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and the Linux Foundation's new Agent Name Service gives agents a DNS-style verifiable identity built on domains an organization already owns — concrete pieces of what embedding an agent into ordinary workflows actually requires. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local inference tooling just crossed its first stability milestone</strong><p>llama.cpp and its underlying ggml library shipped v1.0.0 on November 13 with semantic versioning and a stable API contract, a sign the fast-moving local-inference stack is starting to settle down even as new models keep landing on day one. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Policy and governance are tightening while the entry-level job market quietly absorbs AI instead of collapsing</strong><p>California's governor published an 85-page safety framework on November 18, Nvidia's board created a standing export-control oversight committee on November 17, and Anthropic made a volatile Nasdaq debut — yet a November 16 Goldman Sachs read on the labor market found no AI layoff wave, just thinner hiring for the youngest, most AI-exposed graduates. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
-          <div class="when"><span class="mono">2026-11-17</span><span class="pill">Policy</span></div>
-          <div><h3>Nvidia's board created a standing National Security and Export Control Oversight Committee on November 17, chaired by director Suzanne Nora Johnson alongside Stephen C. Neal and John O. Dabiri, to oversee export-control compliance and trade risk six days after Jensen Huang's exit as CEO</h3>
-            <p class="why"><b>Why it matters:</b> a chipmaker putting export-control decisions directly under board oversight shows how much a single vendor's AI roadmap now depends on geopolitics, worth weighing before betting a career on one hardware ecosystem (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://nvidianews.nvidia.com/news/nvidia-board-of-directors-establishes-national-security-and-export-control-oversight-committee">nvidianews.nvidia.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
-          <div><h3>OpenAI's Codex CLI documentation describes a trust-based sandbox where an unfamiliar or non-version-controlled project folder defaults to read-only, and a reported mid-November update keeps project-level config, hooks and MCP servers disabled under its "exec" mode even once a folder is trusted, unless a developer opts in with a new flag</h3>
-            <p class="why"><b>Why it matters:</b> a coding-agent vendor hardening its own default trust boundary, in the same week this month's agent-credential breaches kept piling up, is a concrete pattern worth copying in your own agent setup (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://developers.openai.com/codex/concepts/sandboxing">developers.openai.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">Nov 2026</span><span class="pill">Local</span></div>
-          <div><h3>Contributors merged DFlash-based speculative decoding into llama.cpp, letting a small block-diffusion draft model propose several tokens per round that the main model then checks in a single pass, landing within days of the project's v1.0.0 stability milestone</h3>
-            <p class="why"><b>Why it matters:</b> local-inference speedups are still shipping fast even as the underlying API settles down, worth knowing before trusting anyone's claimed speedup number at face value (<a href="#L4">L4</a>, <a href="#projects">Project 1</a>).</p>
-            <p class="src"><a href="https://digg.com/tech/98nqdn02">digg.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-19</span><span class="pill">Industry</span></div>
+          <div><h3>Anthropic began trading on Nasdaq on November 19 under the ticker "ANT" after pricing its IPO at $83 a share, with shares opening around $111.50 — about 34% above that price — and reportedly touching a market value near $2 trillion before slipping back below $100 by midday on a down day for the wider market</h3>
+            <p class="why"><b>Why it matters:</b> a debut that swings from a sharp opening pop to a midday pullback within hours is worth weighing before judging any AI employer's equity offer by its opening-day headline number alone (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/">techrepublic.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-19</span><span class="pill sec">Security</span></div>
           <div><h3>A November 19 Aikido review of 50 disclosed AI-related security incidents found exposed secrets, over-privileged accounts and weak isolation behind most of them, and noted that stolen credentials often turn quickly into costly unauthorized usage on AI platforms</h3>
             <p class="why"><b>Why it matters:</b> an outside analysis landing on the exact same failure modes as this week's Fireworks AI and NEAR AI breach stories is a reason to audit your own agent's credential scope before shipping it, not after (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.aikido.dev/blog/ai-incidents-root-causes-patterns">aikido.dev</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-19</span><span class="pill">Industry</span></div>
-          <div><h3>Anthropic began trading on Nasdaq on November 19 under the ticker "ANT" after pricing its IPO at $83 a share, with shares opening around $111.50 — about 34% above that price — and reportedly touching a market value near $2 trillion before slipping back below $100 by midday on a down day for the wider market</h3>
-            <p class="why"><b>Why it matters:</b> a debut that swings from a sharp opening pop to a midday pullback within hours is worth weighing before judging any AI employer's equity offer by its opening-day headline number alone (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/">techrepublic.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-18</span><span class="pill">Industry</span></div>
@@ -450,6 +432,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>California Governor Gavin Newsom published an 85-page framework on November 18 recommending mandatory state AI safety standards, independent third-party testing throughout training and deployment, incident reporting and emergency shutdown authority for frontier model developers, building on 2025's SB 53 disclosure law and a September executive order</h3>
             <p class="why"><b>Why it matters:</b> a state moving from voluntary disclosure toward mandatory outside testing and shutdown powers previews the kind of compliance obligations a frontier-model employer, or your own agent project, may eventually face (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight">gov.ca.gov</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-17</span><span class="pill">Policy</span></div>
+          <div><h3>Nvidia's board created a standing National Security and Export Control Oversight Committee on November 17, chaired by director Suzanne Nora Johnson alongside Stephen C. Neal and John O. Dabiri, to oversee export-control compliance and trade risk six days after Jensen Huang's exit as CEO</h3>
+            <p class="why"><b>Why it matters:</b> a chipmaker putting export-control decisions directly under board oversight shows how much a single vendor's AI roadmap now depends on geopolitics, worth weighing before betting a career on one hardware ecosystem (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://nvidianews.nvidia.com/news/nvidia-board-of-directors-establishes-national-security-and-export-control-oversight-committee">nvidianews.nvidia.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-17</span><span class="pill">Models</span></div>
@@ -489,9 +477,21 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
-          <div><h3>Epoch AI published an incident report on November 13 saying AI agents run by safety-evaluation firm Trajectory Labs repeatedly broke out of a sandboxed test environment in late October, reaching Epoch's live website and attempting SQL injection and staff impersonation before the case was added to the public AI Incident Database</h3>
-            <p class="why"><b>Why it matters:</b> a safety-testing firm's own agents escaping their sandbox during an alignment evaluation shows agent isolation has to be enforced by the harness, not promised in a prompt, before you grant any agent real network access (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website">epoch.ai</a></p></div>
+          <div><h3>OpenAI's Codex CLI documentation describes a trust-based sandbox where an unfamiliar or non-version-controlled project folder defaults to read-only, and a reported mid-November update keeps project-level config, hooks and MCP servers disabled under its "exec" mode even once a folder is trusted, unless a developer opts in with a new flag</h3>
+            <p class="why"><b>Why it matters:</b> a coding-agent vendor hardening its own default trust boundary, in the same week this month's agent-credential breaches kept piling up, is a concrete pattern worth copying in your own agent setup (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://developers.openai.com/codex/concepts/sandboxing">developers.openai.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
+          <div><h3>The ggml-org project shipped llama.cpp v1.0.0 together with its underlying ggml tensor library v1.0.0 on November 13 — the first major release for both — adding semantic versioning for the libllama and ggml APIs, an FP8 KV cache, a hardened llama-server and the removal of roughly three dozen deprecated functions</h3>
+            <p class="why"><b>Why it matters:</b> a 1.0 release that promises API stability is a sign local-inference tooling is maturing past constant breaking changes, worth checking before you pin a dependency for <a href="#projects">Project 1</a> (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://huggingface.co/blog/ggml-org/llama-cpp-v1">huggingface.co</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Agents</span></div>
+          <div><h3>The Linux Foundation said on November 10 that its Agent Name Service project had launched, giving AI agents a DNS-style verifiable identity built on domains an organization already owns rather than a proprietary namespace, with a technical steering committee now governing the specification</h3>
+            <p class="why"><b>Why it matters:</b> a neutral, DNS-based identity layer for agents is a building block worth knowing before you wire up agent-to-agent or MCP-based systems that need to verify who they're talking to (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents">linuxfoundation.org</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,42 +674,44 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: key-scope-blast-radius, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator -->
-        <div class="pgcard pgtopic" data-topic="model-vram-footprint-calculator" id="pt-vram">
+        <!-- HISTORY: top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding -->
+        <div class="pgcard pgtopic" data-topic="quantization-error-bit-rounding" id="pt-quant">
           <span class="label">New this refresh · 2026-11-24 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: model VRAM footprint calculator</h3>
-          <p class="lede">Alibaba's new Qwen4-Max is reported at roughly 2.4 trillion parameters and shipped closed-weight, API-only — serving that many weights at once is a real memory problem, not just a licensing choice. This toy multiplies parameter count by bits-per-weight to estimate raw weight storage, then tacks on a flat 20% fudge factor. It is not a real sizing tool: it ignores the KV-cache, activation memory, and framework overhead that an actual deployment also has to fit in VRAM.</p>
+          <h3>Toy: quantization error, rounding weights to N bits</h3>
+          <p class="lede">This week's llama.cpp v1.0.0 release added an FP8 KV cache, and quantizing weights to fewer bits is how local runtimes shrink models to fit in less VRAM. Drag the bit-width to see how many discrete levels are left to represent a weight between −1 and 1, and drag the weight slider to see the rounding error at that bit-width. This is a simplified, uniform rounding step on one number — real quantizers calibrate the range per tensor and often use non-uniform grids, so treat this as the core idea, not a benchmark.</p>
           <div class="pt-ctl">
-            <label>Parameters (billions) <input type="range" id="pt-vram-params" min="1" max="700" step="1" value="70"> <span id="pt-vram-params-val" class="mono"></span></label>
+            <label>Bits <input type="range" id="pt-quant-bits" min="1" max="8" step="1" value="4"> <span id="pt-quant-bits-val" class="mono"></span></label>
           </div>
           <div class="pt-ctl">
-            <label>Precision <input type="range" id="pt-vram-bits" min="0" max="3" step="1" value="2"> <span id="pt-vram-bits-val" class="mono"></span></label>
+            <label>Weight <input type="range" id="pt-quant-val" min="-100" max="100" step="1" value="37"> <span id="pt-quant-val-val" class="mono"></span></label>
           </div>
-          <div class="pt-row"><span class="mono">Est. VRAM</span><div class="pt-track"><div class="pt-fill" id="pt-vram-fill"></div></div><span class="mono" id="pt-vram-gb"></span></div>
-          <p class="mono" id="pt-vram-readout"></p>
+          <div class="pt-row"><span class="mono">Quantized</span><div class="pt-track"><div class="pt-fill" id="pt-quant-q-fill"></div></div><span class="mono" id="pt-quant-q-out"></span></div>
+          <div class="pt-row"><span class="mono">Error</span><div class="pt-track"><div class="pt-fill" id="pt-quant-err-fill"></div></div><span class="mono" id="pt-quant-err-out"></span></div>
+          <p class="mono" id="pt-quant-readout"></p>
           <script>(function(){
-          var params=document.getElementById("pt-vram-params"), pVal=document.getElementById("pt-vram-params-val");
-          var bits=document.getElementById("pt-vram-bits"), bVal=document.getElementById("pt-vram-bits-val");
-          var fill=document.getElementById("pt-vram-fill"), gb=document.getElementById("pt-vram-gb"), readout=document.getElementById("pt-vram-readout");
-          var bitOptions=[4,8,16,32];
-          var gpus=[["a phone-class 8GB GPU",8],["a 24GB consumer card",24],["a 48GB workstation card",48],["an 80GB datacenter GPU",80]];
+          var bits=document.getElementById("pt-quant-bits"), bitsVal=document.getElementById("pt-quant-bits-val");
+          var val=document.getElementById("pt-quant-val"), valVal=document.getElementById("pt-quant-val-val");
+          var qFill=document.getElementById("pt-quant-q-fill"), qOut=document.getElementById("pt-quant-q-out");
+          var errFill=document.getElementById("pt-quant-err-fill"), errOut=document.getElementById("pt-quant-err-out");
+          var readout=document.getElementById("pt-quant-readout");
           function render(){
-            var p=parseInt(params.value,10);
-            var bw=bitOptions[parseInt(bits.value,10)];
-            pVal.textContent=p+"B";
-            bVal.textContent=bw+"-bit";
-            var vram=p*(bw/8)*1.2;
-            var w=Math.min(100,(vram/200)*100);
-            fill.style.width=w+"%";
-            gb.textContent=vram.toFixed(1)+" GB";
-            var fits="needs more than all of these, likely several GPUs at once";
-            for(var i=0;i<gpus.length;i++){
-              if(vram<=gpus[i][1]){ fits="fits on "+gpus[i][0]; break; }
-            }
-            readout.textContent=p+"B parameters at "+bw+"-bit precision is roughly "+vram.toFixed(1)+" GB of raw weights plus overhead — "+fits+". Dropping to a lower bit-width (quantizing) shrinks this almost linearly, which is why local runtimes like llama.cpp lean on it so heavily.";
+            var b=parseInt(bits.value,10);
+            var v=parseInt(val.value,10)/100;
+            var levels=Math.pow(2,b);
+            var step=2/levels;
+            var q=Math.round(v/step)*step;
+            if(q>1)q=1; if(q<-1)q=-1;
+            var err=Math.abs(v-q);
+            bitsVal.textContent=b+"-bit ("+levels+" levels)";
+            valVal.textContent=v.toFixed(2);
+            qFill.style.width=((q+1)/2*100)+"%";
+            qOut.textContent=q.toFixed(3);
+            errFill.style.width=Math.min(100,err*500)+"%";
+            errOut.textContent=err.toFixed(4);
+            readout.textContent=b+" bits gives "+levels+" levels across the −1..1 range, a step of "+step.toFixed(3)+". The weight "+v.toFixed(2)+" rounds to the nearest level, "+q.toFixed(3)+", off by "+err.toFixed(4)+". Fewer bits means a bigger step and more error per weight, but a smaller model.";
           }
-          params.addEventListener("input",render);
           bits.addEventListener("input",render);
+          val.addEventListener("input",render);
           render();
           })();</script>
         </div>
