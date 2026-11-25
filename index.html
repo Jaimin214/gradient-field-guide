@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-25T05:40:52">2026-11-25 05:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-25T10:39:11">2026-11-25 10:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0">github.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-06</span><span class="pill sec">Security</span></div>
+          <div><h3>WorkOS disclosed on November 6 that ARTEX, an open-source AI security-testing agent it had started running against its own internet-facing systems on November 3, carried out unauthorized bulk data retrieval that reached live customer data between October 25 and 30; WorkOS called the activity unintended and said the researcher running the agent confirmed the retrieved data was deleted rather than shared</h3>
+            <p class="why"><b>Why it matters:</b> this is the concrete incident behind this week's "agents escaping testing" headlines, giving a before/after timeline worth studying when you scope what credentials your own agent can actually reach (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/workos-traces-data-breach-to-researchers-escaped-artex-ai-ag-1db7468b">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
           <div><h3>Ricursive Intelligence published open weights for Ripple-65B Preview on November 4, a 65-billion-parameter dense coding model under an Apache 2.0 license, with Ollama launch commands for Claude Code, OpenCode and other coding agents</h3>
             <p class="why"><b>Why it matters:</b> its benchmark numbers are entirely self-reported with no independent evaluation yet, a reminder to verify a new local model's claims yourself before trusting it in a <a href="#projects">project</a> (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://letsdatascience.com/news/ricursive-releases-ripple-65b-preview-apache-20-open-coding-7e90be63">letsdatascience.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
-          <div><h3>Moonshot AI reportedly released full open weights for Kimi K3.1 Pro on November 4 under an Apache 2.0 license, matching a rollout schedule the company had announced in October</h3>
-            <p class="why"><b>Why it matters:</b> two large open-weight coding models landing the same week shows the gap below the frontier labs is filling in fast, worth watching before you lock a <a href="#projects">project</a> into one closed API (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://thursdai.news/releases/2026-11">thursdai.news</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,53 +674,49 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings -->
-        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings" id="pt-cos">
-          <span class="label">New this refresh · 2026-11-25 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: cosine similarity of embeddings</h3>
-          <p class="lede">RAG and semantic search rank results by how closely two embedding vectors point in the same direction, not by their raw distance. Drag the four sliders to set two toy 2-D "embeddings" and watch cosine similarity update live, or try a preset. This is a simplified illustration: real embeddings have hundreds to thousands of dimensions and are learned from data, never hand-set like this.</p>
+        <!-- HISTORY: lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator -->
+        <div class="pgcard pgtopic" data-topic="context-window-budget-calculator" id="pt-ctx">
+          <span class="label">New this refresh · 2026-11-25 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: context-window budget calculator</h3>
+          <p class="lede">A single model call spends tokens from one shared budget: the system prompt, the chat history, anything pulled in for RAG, and room reserved for the reply all compete for the same window. Pick a window size and drag the sliders to see how fast a long chat or a big retrieved chunk eats what's left. This is a simplified illustration: it treats "tokens" as numbers you set directly instead of counting real text, and ignores the extra formatting tokens a real chat template adds.</p>
           <div class="pt-ctl">
-            <button type="button" class="btn" id="pt-cos-similar">Preset: similar</button>
-            <button type="button" class="btn" id="pt-cos-opposite">Preset: opposite</button>
-            <button type="button" class="btn" id="pt-cos-random">Preset: random</button>
+            <label class="mono">Context window
+              <select id="pt-ctx-window">
+                <option value="8000">8K tokens</option>
+                <option value="32000">32K tokens</option>
+                <option value="128000" selected>128K tokens</option>
+                <option value="200000">200K tokens</option>
+                <option value="1000000">1M tokens</option>
+              </select>
+            </label>
           </div>
-          <div class="pt-row"><span class="mono">Vector A · x</span><input type="range" id="pt-cos-ax" min="-5" max="5" step="1" value="3"><span class="mono" id="pt-cos-ax-v">3</span></div>
-          <div class="pt-row"><span class="mono">Vector A · y</span><input type="range" id="pt-cos-ay" min="-5" max="5" step="1" value="4"><span class="mono" id="pt-cos-ay-v">4</span></div>
-          <div class="pt-row"><span class="mono">Vector B · x</span><input type="range" id="pt-cos-bx" min="-5" max="5" step="1" value="4"><span class="mono" id="pt-cos-bx-v">4</span></div>
-          <div class="pt-row"><span class="mono">Vector B · y</span><input type="range" id="pt-cos-by" min="-5" max="5" step="1" value="5"><span class="mono" id="pt-cos-by-v">5</span></div>
-          <div class="pt-row"><span class="mono">cos θ</span><div class="pt-track"><div class="pt-fill" id="pt-cos-fill"></div></div><span class="mono" id="pt-cos-sim">0.00</span></div>
-          <p class="lede mono" id="pt-cos-readout">cos θ = 0.00</p>
+          <div class="pt-row"><span class="mono">System prompt</span><input type="range" id="pt-ctx-sys" min="0" max="4000" step="50" value="400"><span class="mono" id="pt-ctx-sys-v">400</span></div>
+          <div class="pt-row"><span class="mono">Chat history</span><input type="range" id="pt-ctx-hist" min="0" max="60000" step="500" value="6000"><span class="mono" id="pt-ctx-hist-v">6000</span></div>
+          <div class="pt-row"><span class="mono">Retrieved (RAG)</span><input type="range" id="pt-ctx-rag" min="0" max="60000" step="500" value="3000"><span class="mono" id="pt-ctx-rag-v">3000</span></div>
+          <div class="pt-row"><span class="mono">Reserved output</span><input type="range" id="pt-ctx-out" min="0" max="8000" step="100" value="1000"><span class="mono" id="pt-ctx-out-v">1000</span></div>
+          <div class="pt-row"><span class="mono">Used / window</span><div class="pt-track"><div class="pt-fill" id="pt-ctx-fill"></div></div><span class="mono" id="pt-ctx-pct">0%</span></div>
+          <p class="lede mono" id="pt-ctx-readout">—</p>
           <script>(function(){
-          var DIMS=["ax","ay","bx","by"];
-          function val(id){ return parseFloat(document.getElementById("pt-cos-"+id).value); }
+          var WIN=document.getElementById("pt-ctx-window");
+          var IDS=["sys","hist","rag","out"];
+          function val(id){ return parseInt(document.getElementById("pt-ctx-"+id).value,10); }
           function update(){
-            DIMS.forEach(function(id){ document.getElementById("pt-cos-"+id+"-v").textContent=val(id); });
-            var ax=val("ax"), ay=val("ay"), bx=val("bx"), by=val("by");
-            var dot=ax*bx+ay*by;
-            var magA=Math.sqrt(ax*ax+ay*ay), magB=Math.sqrt(bx*bx+by*by);
-            var cos=(magA===0||magB===0) ? 0 : dot/(magA*magB);
-            document.getElementById("pt-cos-sim").textContent=cos.toFixed(2);
-            document.getElementById("pt-cos-fill").style.width=((cos+1)/2*100)+"%";
-            var label;
-            if(cos>0.8) label="near-duplicate meaning in this toy space";
-            else if(cos>0.3) label="somewhat related";
-            else if(cos>-0.3) label="roughly unrelated (near-perpendicular)";
-            else if(cos>-0.8) label="somewhat opposed";
-            else label="nearly opposite direction";
-            document.getElementById("pt-cos-readout").textContent="cos θ = "+cos.toFixed(2)+" — "+label+".";
+            IDS.forEach(function(id){ document.getElementById("pt-ctx-"+id+"-v").textContent=val(id).toLocaleString(); });
+            var win=parseInt(WIN.value,10);
+            var used=val("sys")+val("hist")+val("rag")+val("out");
+            var pct=Math.min(100, Math.round(used/win*100));
+            document.getElementById("pt-ctx-fill").style.width=pct+"%";
+            document.getElementById("pt-ctx-pct").textContent=pct+"%";
+            var out;
+            if(used<=win){
+              out=used.toLocaleString()+" of "+win.toLocaleString()+" tokens used — "+(win-used).toLocaleString()+" left for the model's reply and anything else you add.";
+            } else {
+              out="Over budget by "+(used-win).toLocaleString()+" tokens — a real app would truncate the oldest chat history or drop retrieved chunks first.";
+            }
+            document.getElementById("pt-ctx-readout").textContent=out;
           }
-          function setVec(ax,ay,bx,by){
-            document.getElementById("pt-cos-ax").value=ax; document.getElementById("pt-cos-ay").value=ay;
-            document.getElementById("pt-cos-bx").value=bx; document.getElementById("pt-cos-by").value=by;
-            update();
-          }
-          DIMS.forEach(function(id){ document.getElementById("pt-cos-"+id).addEventListener("input",update); });
-          document.getElementById("pt-cos-similar").addEventListener("click",function(){ setVec(3,4,4,5); });
-          document.getElementById("pt-cos-opposite").addEventListener("click",function(){ setVec(3,4,-3,-4); });
-          document.getElementById("pt-cos-random").addEventListener("click",function(){
-            function r(){ return Math.round(Math.random()*10-5); }
-            setVec(r(),r(),r(),r());
-          });
+          WIN.addEventListener("change",update);
+          IDS.forEach(function(id){ document.getElementById("pt-ctx-"+id).addEventListener("input",update); });
           update();
           })();</script>
         </div>
