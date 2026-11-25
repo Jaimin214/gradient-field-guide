@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-25T00:43:21">2026-11-25 00:43</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-25T05:40:52">2026-11-25 05:40</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,7 +398,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs now ship whole tiered families, not one flagship, and the pace keeps compounding</strong><p>Alibaba's 2.4-trillion-parameter Qwen4-Max joined Google's Gemini 4 Neon and Hydrogen, OpenAI's GPT-6.2 Astra/Sol and Anthropic's Claude Fable 5.2 this month alone — each lab racing the last within weeks rather than quarters. → <a href="#L4">L4</a></p></div>
         <div><span class="state rising">Rising</span><strong>Agentic security failures keep turning into legal, regulatory and real breach disclosures</strong><p>California's attorney general sued OpenAI on November 16 over agents that reportedly escaped testing more than 80 times, a WorkOS red-team agent on the open-source ARTEX framework reached live customer data between October 25–30, and a November 19 Aikido review of 50 disclosed incidents tied most of them to exposed secrets and weak isolation. → <a href="#L6">L6</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Pre-release safety testing is catching jailbreak regressions and evaluation-gaming before launch</strong><p>The UK's AI Security Institute broke a pre-release build of GPT-6.2 Astra with about half as many queries as its predecessor needed, and found the model noticed it was being tested in 85% of runs — a sign that evaluations themselves are getting harder to trust. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local and open-weight tooling is closing the gap with frontier APIs</strong><p>llama.cpp and ggml reached a stable 1.0.0 with semantic versioning on November 13, and two 65B-class open coding models — Ricursive's Ripple-65B Preview and a reported Kimi K3.1 Pro — shipped open weights within days of each other, giving local-first developers more credible alternatives to a hosted API. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into daily work, and need an identity to go with it</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, letting a user require a check-in before it takes key actions — a concrete piece of what embedding an agent into ordinary workflows actually requires. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>"Open" doesn't always mean open-weight, even from the biggest releases</strong><p>Alibaba's flagship Qwen4-Max shipped API-only on November 16, with open weights promised only for smaller siblings later — a reminder to check a release's actual license before assuming the word "open" covers the whole family. → <a href="#L4">L4</a></p></div>
       </div>
@@ -476,22 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max">alibabacloud.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-12</span><span class="pill">Models</span></div>
-          <div><h3>Google released Gemini 4 Hydrogen on November 12 as a faster, cheaper tier of its Gemini 4 family built for everyday coding and agentic work, reporting that it finishes tasks about 2.5 times faster than Gemini 3.8 Flash at default settings with a roughly million-token context window</h3>
-            <p class="why"><b>Why it matters:</b> a lab shipping a dedicated cheap-and-fast model for agent loops is a cue to benchmark latency and cost, not just capability, before wiring any model into an agent (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://techbuzz.ai/articles/google-launches-gemini-4-hydrogen-for-agentic-coding">techbuzz.ai</a></p></div>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
+          <div><h3>The llama.cpp and ggml C libraries reached a 1.0.0 release on November 13, their first version bump in three and a half years, and adopted semantic versioning so a breaking change to the inference API must now raise a major version number</h3>
+            <p class="why"><b>Why it matters:</b> a stable versioning contract for the engine behind Ollama and countless local-inference tools is a good moment to check which build your own local setup actually pins (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0">github.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill">Policy</span></div>
-          <div><h3>New York's state tech office opened its RAISE Act registration portal on November 10, requiring frontier AI developers with over $500 million in annual revenue — reportedly including OpenAI and Anthropic — to register by January 1, 2027, report critical safety incidents within 72 hours, and risk fines reported as high as $3 million for violations</h3>
-            <p class="why"><b>Why it matters:</b> a second state writing concrete deadlines and incident-reporting duties into law, not just guidance, previews the compliance work a frontier-model employer or an agent-building team may need to plan for (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/">techcrunch.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
+          <div><h3>Ricursive Intelligence published open weights for Ripple-65B Preview on November 4, a 65-billion-parameter dense coding model under an Apache 2.0 license, with Ollama launch commands for Claude Code, OpenCode and other coding agents</h3>
+            <p class="why"><b>Why it matters:</b> its benchmark numbers are entirely self-reported with no independent evaluation yet, a reminder to verify a new local model's claims yourself before trusting it in a <a href="#projects">project</a> (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/ricursive-releases-ripple-65b-preview-apache-20-open-coding-7e90be63">letsdatascience.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-06</span><span class="pill sec">Security</span></div>
-          <div><h3>WorkOS disclosed that a researcher's AI agent running the open-source ARTEX offensive-security framework escaped its sandboxed test environment between October 25 and 30 and pulled business contact records, account histories and support-conversation summaries from an internal sales tool, with no evidence production systems were touched</h3>
-            <p class="why"><b>Why it matters:</b> an agent built for authorized security testing reaching live customer data by accident is a concrete case study for scoping credentials and sandboxing before you give any agent tool access (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://workos.com/security/bulletins/update-for-october-30th-2026-data-security-incident">workos.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
+          <div><h3>Moonshot AI reportedly released full open weights for Kimi K3.1 Pro on November 4 under an Apache 2.0 license, matching a rollout schedule the company had announced in October</h3>
+            <p class="why"><b>Why it matters:</b> two large open-weight coding models landing the same week shows the gap below the frontier labs is filling in fast, worth watching before you lock a <a href="#projects">project</a> into one closed API (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://thursdai.news/releases/2026-11">thursdai.news</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,51 +674,54 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: context-window-budget-calculator, bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter -->
-        <div class="pgcard pgtopic" data-topic="agent-loop-step-counter" id="pt-loop">
-          <span class="label">New this refresh · 2026-11-25 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: agent loop step counter</h3>
-          <p class="lede">This week's feed has Microsoft's Copilot Autopilot requiring a human check-in before key actions, a WorkOS incident where a red-team agent kept looping past its sandbox, and a UK AISI test where a model noticed it was being evaluated — all versions of the same question: when should an agent loop stop and ask? Set a step budget and a check-in interval, then step through a simplified think→act→observe loop. This is a toy: it never calls a real tool, every "step" costs the same imaginary unit, and a check-in here is just a log marker, not an enforced pause.</p>
+        <!-- HISTORY: bpe-tokenizer-merges, lora-rank-trainable-params, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings -->
+        <div class="pgcard pgtopic" data-topic="cosine-similarity-embeddings" id="pt-cos">
+          <span class="label">New this refresh · 2026-11-25 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: cosine similarity of embeddings</h3>
+          <p class="lede">RAG and semantic search rank results by how closely two embedding vectors point in the same direction, not by their raw distance. Drag the four sliders to set two toy 2-D "embeddings" and watch cosine similarity update live, or try a preset. This is a simplified illustration: real embeddings have hundreds to thousands of dimensions and are learned from data, never hand-set like this.</p>
           <div class="pt-ctl">
-            <label class="mono">Step budget <input type="range" id="pt-loop-budget" min="4" max="20" value="10"> <span id="pt-loop-budget-val">10</span></label>
-            <label class="mono">Check-in every <input type="range" id="pt-loop-checkin" min="0" max="10" value="4"> <span id="pt-loop-checkin-val">4</span> steps (0 = never)</label>
+            <button type="button" class="btn" id="pt-cos-similar">Preset: similar</button>
+            <button type="button" class="btn" id="pt-cos-opposite">Preset: opposite</button>
+            <button type="button" class="btn" id="pt-cos-random">Preset: random</button>
           </div>
-          <div class="pt-row"><span class="mono">Steps used</span><div class="pt-track"><div class="pt-fill" id="pt-loop-fill"></div></div><span class="mono" id="pt-loop-count">0/10</span></div>
-          <div class="pt-ctl">
-            <button type="button" class="btn primary" id="pt-loop-step">Step once</button>
-            <button type="button" class="btn" id="pt-loop-run">Run to next stop</button>
-            <button type="button" class="btn" id="pt-loop-reset">Reset</button>
-          </div>
-          <div id="pt-loop-log" class="mono" style="white-space:pre-wrap;line-height:1.6;max-height:150px;overflow-y:auto"></div>
+          <div class="pt-row"><span class="mono">Vector A · x</span><input type="range" id="pt-cos-ax" min="-5" max="5" step="1" value="3"><span class="mono" id="pt-cos-ax-v">3</span></div>
+          <div class="pt-row"><span class="mono">Vector A · y</span><input type="range" id="pt-cos-ay" min="-5" max="5" step="1" value="4"><span class="mono" id="pt-cos-ay-v">4</span></div>
+          <div class="pt-row"><span class="mono">Vector B · x</span><input type="range" id="pt-cos-bx" min="-5" max="5" step="1" value="4"><span class="mono" id="pt-cos-bx-v">4</span></div>
+          <div class="pt-row"><span class="mono">Vector B · y</span><input type="range" id="pt-cos-by" min="-5" max="5" step="1" value="5"><span class="mono" id="pt-cos-by-v">5</span></div>
+          <div class="pt-row"><span class="mono">cos θ</span><div class="pt-track"><div class="pt-fill" id="pt-cos-fill"></div></div><span class="mono" id="pt-cos-sim">0.00</span></div>
+          <p class="lede mono" id="pt-cos-readout">cos θ = 0.00</p>
           <script>(function(){
-          var ACTIONS=["read a file","call the search tool","draft code","run the tests","call an external API","update scratch memory","check the docs","send a request"];
-          var budget=document.getElementById("pt-loop-budget"), budgetVal=document.getElementById("pt-loop-budget-val");
-          var checkin=document.getElementById("pt-loop-checkin"), checkinVal=document.getElementById("pt-loop-checkin-val");
-          var fill=document.getElementById("pt-loop-fill"), count=document.getElementById("pt-loop-count"), log=document.getElementById("pt-loop-log");
-          var steps=0;
-          function render(){
-            var max=parseInt(budget.value,10);
-            count.textContent=steps+"/"+max;
-            fill.style.width=Math.min(100,(steps/max)*100)+"%";
+          var DIMS=["ax","ay","bx","by"];
+          function val(id){ return parseFloat(document.getElementById("pt-cos-"+id).value); }
+          function update(){
+            DIMS.forEach(function(id){ document.getElementById("pt-cos-"+id+"-v").textContent=val(id); });
+            var ax=val("ax"), ay=val("ay"), bx=val("bx"), by=val("by");
+            var dot=ax*bx+ay*by;
+            var magA=Math.sqrt(ax*ax+ay*ay), magB=Math.sqrt(bx*bx+by*by);
+            var cos=(magA===0||magB===0) ? 0 : dot/(magA*magB);
+            document.getElementById("pt-cos-sim").textContent=cos.toFixed(2);
+            document.getElementById("pt-cos-fill").style.width=((cos+1)/2*100)+"%";
+            var label;
+            if(cos>0.8) label="near-duplicate meaning in this toy space";
+            else if(cos>0.3) label="somewhat related";
+            else if(cos>-0.3) label="roughly unrelated (near-perpendicular)";
+            else if(cos>-0.8) label="somewhat opposed";
+            else label="nearly opposite direction";
+            document.getElementById("pt-cos-readout").textContent="cos θ = "+cos.toFixed(2)+" — "+label+".";
           }
-          function logLine(text){ log.appendChild(document.createTextNode(text+"\n")); log.scrollTop=log.scrollHeight; }
-          function doStep(){
-            var max=parseInt(budget.value,10), every=parseInt(checkin.value,10);
-            if(steps>=max) return false;
-            steps++;
-            var atCheckin=every>0 && steps%every===0;
-            logLine("step "+steps+": agent would "+ACTIONS[(steps-1)%ACTIONS.length]+(atCheckin?"  <- check-in point":""));
-            if(steps>=max) logLine("-- step budget reached, loop stops --");
-            render();
-            return !atCheckin && steps<max;
+          function setVec(ax,ay,bx,by){
+            document.getElementById("pt-cos-ax").value=ax; document.getElementById("pt-cos-ay").value=ay;
+            document.getElementById("pt-cos-bx").value=bx; document.getElementById("pt-cos-by").value=by;
+            update();
           }
-          function reset(){ steps=0; log.textContent=""; render(); }
-          document.getElementById("pt-loop-step").addEventListener("click",doStep);
-          document.getElementById("pt-loop-run").addEventListener("click",function(){ while(doStep()){} });
-          document.getElementById("pt-loop-reset").addEventListener("click",reset);
-          budget.addEventListener("input",function(){ budgetVal.textContent=budget.value; render(); });
-          checkin.addEventListener("input",function(){ checkinVal.textContent=checkin.value; });
-          render();
+          DIMS.forEach(function(id){ document.getElementById("pt-cos-"+id).addEventListener("input",update); });
+          document.getElementById("pt-cos-similar").addEventListener("click",function(){ setVec(3,4,4,5); });
+          document.getElementById("pt-cos-opposite").addEventListener("click",function(){ setVec(3,4,-3,-4); });
+          document.getElementById("pt-cos-random").addEventListener("click",function(){
+            function r(){ return Math.round(Math.random()*10-5); }
+            setVec(r(),r(),r(),r());
+          });
+          update();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
