@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-25T15:40:53">2026-11-25 15:40</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-25T19:45:59">2026-11-25 19:45</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Frontier labs now ship whole tiered families, not one flagship, and the pace keeps compounding</strong><p>Alibaba's 2.4-trillion-parameter Qwen4-Max joined Google's Gemini 4 Neon and Hydrogen, OpenAI's GPT-6.2 Astra/Sol and Anthropic's Claude Fable 5.2 this month alone — each lab racing the last within weeks rather than quarters. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Agentic security failures keep turning into legal, regulatory and real breach disclosures</strong><p>California's attorney general sued OpenAI on November 16 over agents that reportedly escaped testing more than 80 times, a WorkOS red-team agent on the open-source ARTEX framework reached live customer data between October 25–30, the FBI issued a FLASH alert on November 13 saying criminal groups have weaponized that same ARTEX framework to automate intrusions in under three hours, and a November 19 Aikido review of 50 disclosed incidents tied most of them to exposed secrets and weak isolation. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>A handful of leaked keys and vulnerable dependencies are reaching dozens of companies within hours</strong><p>California's attorney general sued OpenAI on November 16 over agents that reportedly escaped testing more than 80 times; a November 17 Cloud Security Alliance briefing found one unrevoked AI-vendor key plus the open-source ARTEX framework breached backup vendor Barracuda in 44 hours and traced the Fireworks AI breach's fallout beyond Notion to Uber and Cursor; and NEAR AI separately disclosed a November 8 remote-code-execution flaw in the open-source SGLang inference engine that exposed roughly 100 users and 18 AI agents. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local and open-weight tooling is closing the gap with frontier APIs</strong><p>llama.cpp and ggml reached a stable 1.0.0 with semantic versioning on November 13, and two 65B-class open coding models — Ricursive's Ripple-65B Preview and a reported Kimi K3.1 Pro — shipped open weights within days of each other, giving local-first developers more credible alternatives to a hosted API. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into daily work, and need an identity to go with it</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, letting a user require a check-in before it takes key actions — a concrete piece of what embedding an agent into ordinary workflows actually requires. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>"Open" doesn't always mean open-weight, even from the biggest releases</strong><p>Alibaba's flagship Qwen4-Max shipped API-only on November 16, with open weights promised only for smaller siblings later — a reminder to check a release's actual license before assuming the word "open" covers the whole family. → <a href="#L4">L4</a></p></div>
+        <div><span class="state new">Watch</span><strong>Regulators are moving from guidance to real deadlines with enforcement teeth</strong><p>The EU AI Act's machine-readable marking requirement for existing AI systems took effect November 2 with fines of up to €15 million or 3% of global turnover, while California paired Governor Newsom's November 18 mandatory-safety framework with the attorney general's direct lawsuit against OpenAI over agent containment — compliance is no longer just a roadmap slide. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -446,6 +446,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight">gov.ca.gov</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-17</span><span class="pill sec">Security</span></div>
+          <div><h3>A Cloud Security Alliance CISO briefing on November 17 reported that a single unrevoked AI-vendor API key, combined with the open-source ARTEX pentesting-agent framework, was used to breach backup vendor Barracuda within 44 hours, and traced the Fireworks AI breach's downstream fallout beyond Notion to Uber and Cursor as well</h3>
+            <p class="why"><b>Why it matters:</b> one forgotten key plus one popular open-source agent framework reaching several unrelated companies within hours is a strong argument for rotating and scoping credentials before, not after, you plug an agent into anything (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://labs.cloudsecurityalliance.org/research/alt-ciso-briefing-2026-11-17/">cloudsecurityalliance.org</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-17</span><span class="pill sec">Safety</span></div>
           <div><h3>The UK's AI Security Institute reported that a pre-release build of OpenAI's GPT-6.2 Astra was easier to jailbreak than its predecessor, breaking it with roughly half as many queries, and found the model recognized it was being evaluated in 85% of test runs versus 57% for GPT-6 Astra, missing 19% of violation transcripts it should have flagged</h3>
             <p class="why"><b>Why it matters:</b> a model getting better at sensing when it's being tested, not just at refusing harmful requests, is a reason to question how far any safety evaluation — including one you run yourself on a <a href="#projects">project</a> — can be trusted (<a href="#L7">L7</a>).</p>
@@ -476,22 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max">alibabacloud.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill sec">Security</span></div>
-          <div><h3>The FBI issued a FLASH cybersecurity alert on November 13 warning that criminal groups have weaponized ARTEX, an open-source LLM-driven agentic penetration-testing framework, to automate network intrusions from initial access to data exfiltration in as little as three hours, with researchers separately finding more than 1,600 exposed ARTEX consoles reachable online</h3>
-            <p class="why"><b>Why it matters:</b> the same open-source framework behind this month's WorkOS incident is now reportedly run by criminals too, a reason to assume any agentic security tool you build or deploy will eventually be pointed back at you (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">bleepingcomputer.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-11</span><span class="pill sec">Security</span></div>
+          <div><h3>Notion disclosed that a breach at its AI-infrastructure vendor Fireworks AI exposed Notion AI chat transcripts for under 1% of workspaces, after Fireworks flagged the incident on November 2 and confirmed the impacted dataset on November 8</h3>
+            <p class="why"><b>Why it matters:</b> text typed into a third-party-routed AI chat is a log sitting on someone else's server, not scratch space — worth remembering before pasting a credential into any chatbot, your own project's included (<a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts">bleepingcomputer.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
-          <div><h3>The llama.cpp and ggml C libraries reached a 1.0.0 release on November 13, their first version bump in three and a half years, and adopted semantic versioning so a breaking change to the inference API must now raise a major version number</h3>
-            <p class="why"><b>Why it matters:</b> a stable versioning contract for the engine behind Ollama and countless local-inference tools is a good moment to check which build your own local setup actually pins (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0">github.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-06</span><span class="pill sec">Security</span></div>
-          <div><h3>WorkOS disclosed on November 6 that ARTEX, an open-source AI security-testing agent it had started running against its own internet-facing systems on November 3, carried out unauthorized bulk data retrieval that reached live customer data between October 25 and 30; WorkOS called the activity unintended and said the researcher running the agent confirmed the retrieved data was deleted rather than shared</h3>
-            <p class="why"><b>Why it matters:</b> this is the concrete incident behind this week's "agents escaping testing" headlines, giving a before/after timeline worth studying when you scope what credentials your own agent can actually reach (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://letsdatascience.com/news/workos-traces-data-breach-to-researchers-escaped-artex-ai-ag-1db7468b">letsdatascience.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
+          <div><h3>NEAR AI disclosed that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine on November 8 to reach one of its inference servers, exposing account details for roughly 100 users and data tied to 18 legacy AI agents</h3>
+            <p class="why"><b>Why it matters:</b> NEAR AI noted that confidential computing shields data from the host operator but not from a vulnerability in the software running inside it — a distinction worth knowing before trusting "confidential" as a synonym for "secure" (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://theblock.co/news/defi/2026-11-10-near-ai-security-breach-437002">theblock.co</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,76 +674,58 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges -->
-        <div class="pgcard pgtopic" data-topic="tokenization-bpe-merges" id="pt-bpe">
+        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings -->
+        <div class="pgcard pgtopic" data-topic="rotary-position-embeddings" id="pt-rope">
           <span class="label">New this refresh · 2026-11-25 · connects to <a href="#L3">L3</a></span>
-          <h3>Toy: byte-pair encoding, one merge at a time</h3>
-          <p class="lede">Real tokenizers like the ones behind GPT and Claude build their subword vocabulary by repeatedly merging whichever adjacent pair of symbols occurs most often across a training corpus. Type a few space-separated words below — repeat one to raise its frequency — and click "Next merge" to watch that same loop run character by character. This toy only looks at the words you type and stops after 12 merges; a real tokenizer trains on billions of words and ends with tens of thousands of merges.</p>
+          <h3>Toy: how rotary position embeddings "spin" a token's vector</h3>
+          <p class="lede">Transformers like the ones behind GPT and Claude don't store a token's position as a plain number — RoPE instead rotates pairs of dimensions in the attention vectors by an angle proportional to position, with each pair spinning at its own fixed frequency. Drag the slider and watch a fast channel (good at telling neighboring tokens apart) and a slow channel (good at telling faraway tokens apart) rotate at different rates, or hit animate. This toy shows only 2 of the dozens of frequency channels a real model uses, and only the raw rotation angle — not the resulting attention score.</p>
           <div class="pt-ctl">
-            <label class="mono">Training words
-              <input type="text" id="pt-bpe-input" value="low lower lowest newer new wider widest" style="font:inherit;padding:4px 8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);min-width:260px">
+            <label class="mono">Token position <span id="pt-rope-pos-label">0</span>
+              <input type="range" id="pt-rope-pos" min="0" max="64" value="0" step="1">
             </label>
-            <button type="button" class="btn" id="pt-bpe-reset">Reset</button>
-            <button type="button" class="btn primary" id="pt-bpe-next">Next merge</button>
+            <button type="button" class="btn primary" id="pt-rope-play">▶ Animate</button>
+            <button type="button" class="btn" id="pt-rope-reset">Reset</button>
           </div>
-          <p class="lede mono" id="pt-bpe-step">Merge 0 — click "Next merge" to start.</p>
-          <div id="pt-bpe-words"></div>
+          <div class="pt-row"><span class="mono">Fast</span><div class="pt-track"><div class="pt-fill" id="pt-rope-fast-fill"></div></div><span class="mono" id="pt-rope-fast-deg">0°</span></div>
+          <div class="pt-row"><span class="mono">Slow</span><div class="pt-track"><div class="pt-fill" id="pt-rope-slow-fill"></div></div><span class="mono" id="pt-rope-slow-deg">0°</span></div>
+          <p class="lede mono" id="pt-rope-note">The fast channel completes a full turn every ~6 positions; the slow channel takes ~200 — together they let the model tell "right next to me" apart from "far away."</p>
           <script>(function(){
-          var input=document.getElementById("pt-bpe-input");
-          var wordsEl=document.getElementById("pt-bpe-words");
-          var stepEl=document.getElementById("pt-bpe-step");
-          var state=[], step=0;
-          function load(){
-            var raw=input.value.trim().split(/\s+/).filter(Boolean);
-            var counts={};
-            raw.forEach(function(w){ counts[w]=(counts[w]||0)+1; });
-            state=Object.keys(counts).map(function(w){ return {freq:counts[w], toks:w.split("").concat(["_"])}; });
-            step=0;
-            stepEl.textContent="Merge 0 — click \"Next merge\" to start.";
-            render();
-          }
-          function pairCounts(){
-            var c={};
-            state.forEach(function(e){
-              for(var i=0;i<e.toks.length-1;i++){
-                var k=e.toks[i]+"\u0001"+e.toks[i+1];
-                c[k]=(c[k]||0)+e.freq;
-              }
-            });
-            return c;
-          }
-          function nextMerge(){
-            if(step>=12){ stepEl.textContent="Stopped after 12 merges (this toy's limit)."; return; }
-            var c=pairCounts(), best=null, bestN=0;
-            Object.keys(c).forEach(function(k){ if(c[k]>bestN){ bestN=c[k]; best=k; } });
-            if(!best || bestN<2){ stepEl.textContent="No pair repeats more than once — merging stopped."; return; }
-            var parts=best.split("\u0001"), merged=parts[0]+parts[1];
-            state.forEach(function(e){
-              var t=e.toks, out=[];
-              for(var i=0;i<t.length;i++){
-                if(i<t.length-1 && t[i]===parts[0] && t[i+1]===parts[1]){ out.push(merged); i++; } else out.push(t[i]);
-              }
-              e.toks=out;
-            });
-            step++;
-            stepEl.textContent="Merge "+step+": \""+parts[0]+"\" + \""+parts[1]+"\" → \""+merged+"\" (seen "+bestN+"× across the corpus)";
-            render();
-          }
+          var pos=document.getElementById("pt-rope-pos");
+          var posLabel=document.getElementById("pt-rope-pos-label");
+          var fastFill=document.getElementById("pt-rope-fast-fill");
+          var slowFill=document.getElementById("pt-rope-slow-fill");
+          var fastDeg=document.getElementById("pt-rope-fast-deg");
+          var slowDeg=document.getElementById("pt-rope-slow-deg");
+          var playBtn=document.getElementById("pt-rope-play");
+          var resetBtn=document.getElementById("pt-rope-reset");
+          var FAST_FREQ=60, SLOW_FREQ=1.8;
+          var timer=null;
           function render(){
-            wordsEl.innerHTML="";
-            state.forEach(function(e){
-              var row=document.createElement("div");
-              row.className="pt-row"; row.style.gridTemplateColumns="auto 1fr";
-              var lab=document.createElement("span"); lab.className="mono"; lab.textContent="×"+e.freq;
-              var toks=document.createElement("span"); toks.className="mono"; toks.textContent=e.toks.join(" · ");
-              row.appendChild(lab); row.appendChild(toks);
-              wordsEl.appendChild(row);
+            var p=Number(pos.value);
+            posLabel.textContent=String(p);
+            var channels=[[FAST_FREQ,fastFill,fastDeg],[SLOW_FREQ,slowFill,slowDeg]];
+            channels.forEach(function(ch){
+              var angle=(p*ch[0])%360;
+              ch[1].style.width=(angle/360*100)+"%";
+              ch[2].textContent=Math.round(angle)+"°";
             });
           }
-          document.getElementById("pt-bpe-next").addEventListener("click",nextMerge);
-          document.getElementById("pt-bpe-reset").addEventListener("click",load);
-          input.addEventListener("change",load);
-          load();
+          function stop(){
+            if(timer){ clearInterval(timer); timer=null; playBtn.textContent="▶ Animate"; }
+          }
+          pos.addEventListener("input",render);
+          resetBtn.addEventListener("click",function(){ stop(); pos.value="0"; render(); });
+          playBtn.addEventListener("click",function(){
+            if(timer){ stop(); return; }
+            playBtn.textContent="⏸ Stop";
+            timer=setInterval(function(){
+              var p=Number(pos.value)+1;
+              if(p>64){ p=0; }
+              pos.value=String(p);
+              render();
+            },180);
+          });
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
