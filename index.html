@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-25T19:45:59">2026-11-25 19:45</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-26T00:42:05">2026-11-26 00:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max">alibabacloud.com</a></p></div>
         </li>
         <li>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
+          <div><h3>llama.cpp and its ggml backend shipped a stable v1.0.0 on November 13, adopting semantic versioning for the public C API for the first time alongside FP8 KV-cache support and a hardened server, with the release itself deliberately breaking several already-deprecated functions and options</h3>
+            <p class="why"><b>Why it matters:</b> a local-inference project finally promising to flag breaking API changes with a version bump is a small but concrete reason to feel safer pinning a <a href="#projects">project</a> to it long-term (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://letsdatascience.com/news/llamacpp-ships-v100-with-semantic-versioning-for-api-breaks-b200de7e">letsdatascience.com</a></p></div>
+        </li>
+        <li>
           <div class="when"><span class="mono">2026-11-11</span><span class="pill sec">Security</span></div>
           <div><h3>Notion disclosed that a breach at its AI-infrastructure vendor Fireworks AI exposed Notion AI chat transcripts for under 1% of workspaces, after Fireworks flagged the incident on November 2 and confirmed the impacted dataset on November 8</h3>
             <p class="why"><b>Why it matters:</b> text typed into a third-party-routed AI chat is a log sitting on someone else's server, not scratch space — worth remembering before pasting a credential into any chatbot, your own project's included (<a href="#L5">L5</a>).</p>
             <p class="src"><a href="https://bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts">bleepingcomputer.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
-          <div><h3>NEAR AI disclosed that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine on November 8 to reach one of its inference servers, exposing account details for roughly 100 users and data tied to 18 legacy AI agents</h3>
-            <p class="why"><b>Why it matters:</b> NEAR AI noted that confidential computing shields data from the host operator but not from a vulnerability in the software running inside it — a distinction worth knowing before trusting "confidential" as a synonym for "secure" (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://theblock.co/news/defi/2026-11-10-near-ai-security-breach-437002">theblock.co</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,57 +674,38 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings -->
-        <div class="pgcard pgtopic" data-topic="rotary-position-embeddings" id="pt-rope">
-          <span class="label">New this refresh · 2026-11-25 · connects to <a href="#L3">L3</a></span>
-          <h3>Toy: how rotary position embeddings "spin" a token's vector</h3>
-          <p class="lede">Transformers like the ones behind GPT and Claude don't store a token's position as a plain number — RoPE instead rotates pairs of dimensions in the attention vectors by an angle proportional to position, with each pair spinning at its own fixed frequency. Drag the slider and watch a fast channel (good at telling neighboring tokens apart) and a slow channel (good at telling faraway tokens apart) rotate at different rates, or hit animate. This toy shows only 2 of the dozens of frequency channels a real model uses, and only the raw rotation angle — not the resulting attention score.</p>
+        <!-- HISTORY: precision-recall-threshold-slider, speculative-decoding-acceptance, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve -->
+        <div class="pgcard pgtopic" data-topic="scaling-law-curve" id="pt-scaling">
+          <span class="label">New this refresh · 2026-11-26 · connects to <a href="#L7">L7</a></span>
+          <h3>Toy: why 10× the compute doesn't buy 10× less loss</h3>
+          <p class="lede">Labs plot training loss against compute on a log-log chart, and the curve is famously a power law: each extra order of magnitude of compute buys a shrinking slice of improvement as loss creeps toward an "irreducible" floor. Drag the slider to scale a toy run's compute budget from 1× up to 100,000× and watch the gap close more slowly each time. The curve here is one illustrative power-law shape with made-up constants, not a real benchmark result — but it's the same diminishing-returns shape behind why this week's parade of ever-bigger model families (Gemini 4, GPT-6.2, Qwen4-Max) still ships in tiers rather than one model to rule them all.</p>
           <div class="pt-ctl">
-            <label class="mono">Token position <span id="pt-rope-pos-label">0</span>
-              <input type="range" id="pt-rope-pos" min="0" max="64" value="0" step="1">
+            <label class="mono">Compute budget <span id="pt-scaling-mult-label">1×</span>
+              <input type="range" id="pt-scaling-compute" min="0" max="50" value="0" step="1">
             </label>
-            <button type="button" class="btn primary" id="pt-rope-play">▶ Animate</button>
-            <button type="button" class="btn" id="pt-rope-reset">Reset</button>
+            <button type="button" class="btn" id="pt-scaling-reset">Reset</button>
           </div>
-          <div class="pt-row"><span class="mono">Fast</span><div class="pt-track"><div class="pt-fill" id="pt-rope-fast-fill"></div></div><span class="mono" id="pt-rope-fast-deg">0°</span></div>
-          <div class="pt-row"><span class="mono">Slow</span><div class="pt-track"><div class="pt-fill" id="pt-rope-slow-fill"></div></div><span class="mono" id="pt-rope-slow-deg">0°</span></div>
-          <p class="lede mono" id="pt-rope-note">The fast channel completes a full turn every ~6 positions; the slow channel takes ~200 — together they let the model tell "right next to me" apart from "far away."</p>
+          <div class="pt-row"><span class="mono">Loss</span><div class="pt-track"><div class="pt-fill" id="pt-scaling-loss-fill"></div></div><span class="mono" id="pt-scaling-loss-val">—</span></div>
+          <p class="lede mono" id="pt-scaling-note">Toy model: loss = floor + (start − floor) × compute^−0.3. Real scaling laws fit this shape from actual training runs across many model sizes — the exponent and floor differ by task and architecture.</p>
           <script>(function(){
-          var pos=document.getElementById("pt-rope-pos");
-          var posLabel=document.getElementById("pt-rope-pos-label");
-          var fastFill=document.getElementById("pt-rope-fast-fill");
-          var slowFill=document.getElementById("pt-rope-slow-fill");
-          var fastDeg=document.getElementById("pt-rope-fast-deg");
-          var slowDeg=document.getElementById("pt-rope-slow-deg");
-          var playBtn=document.getElementById("pt-rope-play");
-          var resetBtn=document.getElementById("pt-rope-reset");
-          var FAST_FREQ=60, SLOW_FREQ=1.8;
-          var timer=null;
+          var slider=document.getElementById("pt-scaling-compute");
+          var multLabel=document.getElementById("pt-scaling-mult-label");
+          var fill=document.getElementById("pt-scaling-loss-fill");
+          var lossVal=document.getElementById("pt-scaling-loss-val");
+          var resetBtn=document.getElementById("pt-scaling-reset");
+          var FLOOR=1.5, START=7, ALPHA=0.3;
           function render(){
-            var p=Number(pos.value);
-            posLabel.textContent=String(p);
-            var channels=[[FAST_FREQ,fastFill,fastDeg],[SLOW_FREQ,slowFill,slowDeg]];
-            channels.forEach(function(ch){
-              var angle=(p*ch[0])%360;
-              ch[1].style.width=(angle/360*100)+"%";
-              ch[2].textContent=Math.round(angle)+"°";
-            });
+            var v=Number(slider.value);
+            var mult=Math.pow(10, v/10);
+            var loss=FLOOR+(START-FLOOR)*Math.pow(mult,-ALPHA);
+            var pct=Math.max(0,Math.min(100,(1-(loss-FLOOR)/(START-FLOOR))*100));
+            var multText=mult>=1000?(Math.round(mult/1000))+",000":Math.round(mult);
+            multLabel.textContent=multText+"×";
+            fill.style.width=pct.toFixed(1)+"%";
+            lossVal.textContent="toy loss "+loss.toFixed(2)+" (floor "+FLOOR.toFixed(1)+")";
           }
-          function stop(){
-            if(timer){ clearInterval(timer); timer=null; playBtn.textContent="▶ Animate"; }
-          }
-          pos.addEventListener("input",render);
-          resetBtn.addEventListener("click",function(){ stop(); pos.value="0"; render(); });
-          playBtn.addEventListener("click",function(){
-            if(timer){ stop(); return; }
-            playBtn.textContent="⏸ Stop";
-            timer=setInterval(function(){
-              var p=Number(pos.value)+1;
-              if(p>64){ p=0; }
-              pos.value=String(p);
-              render();
-            },180);
-          });
+          slider.addEventListener("input",render);
+          resetBtn.addEventListener("click",function(){ slider.value="0"; render(); });
           render();
           })();</script>
         </div>
