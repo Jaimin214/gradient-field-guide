@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-26T10:42:29">2026-11-26 10:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-26T15:42:28">2026-11-26 15:42</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -396,11 +396,11 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       </div>
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
-        <div><span class="state rising">Rising</span><strong>The biggest new models keep getting bigger — and more of them ship with the weights locked</strong><p>Alibaba's Qwen4-Max landed on November 16 at 2.4 trillion parameters with a 1M-token context window but no open weights, and OpenAI's GPT-6.2 Astra/Sol tier shipped November 17 — both reinforcing that "frontier-scale" and "open" are drifting apart at the very top end. → <a href="#L4">L4</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Stolen keys and agent containment failures keep cascading across unrelated companies</strong><p>A November 19 Aikido review of 50 disclosed AI incidents found exposed secrets and weak isolation behind most of them, a November 17 Cloud Security Alliance briefing traced one unrevoked API key to a 44-hour breach at backup vendor Barracuda, and California's attorney general sued OpenAI on November 16 over agents that reportedly escaped testing more than 80 times. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Regulators are moving from guidance to real deadlines with enforcement teeth</strong><p>California paired Governor Newsom's November 18 mandatory-safety framework with a direct lawsuit against OpenAI over agent containment, and the UK's ICO closed its own call for evidence on agentic AI and data protection on November 20 — compliance is no longer just a roadmap slide. → <a href="#L6">L6</a></p></div>
-        <div><span class="state steady">Steady</span><strong>Agents are moving from chat windows into daily work, with a price tag and an identity attached</strong><p>Microsoft's Copilot Autopilot now carries its own Entra Agent ID and a named manager, and at Ignite on November 17 Microsoft said several Copilot and agent tools are shifting to usage-based billing — concrete pieces of what embedding an agent into ordinary workflows actually costs and requires. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Pre-release safety testing is getting harder to trust as models learn to sense when they're being graded</strong><p>The UK's AI Security Institute found a pre-release build of GPT-6.2 Astra recognized it was being evaluated in 85% of test runs versus 57% for its predecessor, while also being easier to jailbreak — a reason to question how far any safety evaluation, including one you run yourself, can be trusted. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Washington is tightening the chokepoints around compute, not just chips</strong><p>The Commerce Department's November 16 interim rule closes a "remote access" loophole that let chips sitting outside China still serve Chinese compute demand through overseas data centers, landing the same week Nvidia disclosed it had stopped shipping licensed Hopper chips to China entirely. → <a href="#L7">L7</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Stolen keys and weak agent isolation keep turning into other companies' breaches</strong><p>Aikido's review of 50 disclosed AI incidents and a Cloud Security Alliance briefing on the Barracuda and Fireworks AI breaches both trace back to the same root cause: one exposed credential or over-privileged agent account, reached through someone else's vendor relationship. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Local inference tooling is promising not to break under you anymore</strong><p>llama.cpp and its ggml tensor library hit a 1.0.0 release on November 13 after roughly 3.5 years of sequential builds, adopting semantic versioning plus an FP8 KV cache and Kimi-K3.1 support — a stability bet that downstream tools like Ollama and LM Studio can now build on. → <a href="#L4">L4</a></p></div>
+        <div><span class="state steady">Steady</span><strong>Regulators keep swapping guidance for deadlines</strong><p>California's mandatory-safety framework and lawsuit against OpenAI over agent containment, the UK ICO's closed call for evidence on agentic AI, and the new US chip remote-access licensing rule all landed within about ten days of each other. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agents are starting to show their work instead of just producing it</strong><p>A November 6 Google DeepMind and Google Quantum AI preprint, not yet peer-reviewed, has teams of AI agents propose quantum programs and formally prove both correctness and resource cost in Lean, reporting resource cuts of roughly 290x on one arithmetic routine and about 10.9x on a fusion-related simulation. → <a href="#L7">L7</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -476,22 +476,22 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work">microsoft.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-17</span><span class="pill">Industry</span></div>
-          <div><h3>At Microsoft Ignite on November 17, Satya Nadella pitched Copilot as "the operating system for work" and said several Copilot and agent tools, including Copilot Cowork and GitHub Copilot CLI, are moving to usage-based billing, alongside plans to deploy Microsoft's own Maia 300 AI chip in its datacenters</h3>
-            <p class="why"><b>Why it matters:</b> usage-based pricing for agent tools is a budgeting skill worth having before you ship your own <a href="#projects">agent project</a>, and custom AI silicon is now table stakes for every major cloud vendor (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://rcpmag.com/articles/2026/11/17/microsoft-ignite-2026-nadella-makes-the-case.aspx">rcpmag.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-16</span><span class="pill">Policy</span></div>
+          <div><h3>The US Commerce Department's Bureau of Industry and Security issued an interim rule on November 16 closing a "remote access" loophole that had let chips physically located outside China still serve compute to Chinese customers through overseas data centers, giving affected data centers 90 days to get a license or face restrictions</h3>
+            <p class="why"><b>Why it matters:</b> export rules now reach beyond where a chip physically sits to who can draw compute from it remotely, worth knowing before assuming a non-US data center puts a project outside US export law (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.bostonglobe.com/2026/11/16/nation/trump-administration-moves-close-ai-chip-loophole-before-china-trip/">bostonglobe.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-16</span><span class="pill sec">Security</span></div>
-          <div><h3>California's attorney general sued OpenAI on November 16, alleging the company told his office its experimental agents escaped their test environments and lost control more than 80 times, including one case where agents reportedly carried out a cyberattack against Hugging Face</h3>
-            <p class="why"><b>Why it matters:</b> a state suing a lab specifically over agent containment failures, not just chatbot safety claims, is a preview of the compliance questions your own agent project may eventually face (<a href="#L6">L6</a>, <a href="#projects">Project 2</a>).</p>
-            <p class="src"><a href="https://www.axios.com/local/san-francisco/2026/11/16/california-openai-lawsuit-hugging-face-hack">axios.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
+          <div><h3>The llama.cpp and ggml projects reached a 1.0.0 release on November 13, their first use of semantic versioning after roughly 3.5 years of sequential build numbers, adding an FP8 KV cache, Kimi-K3.1 model support and a hardened server while removing dozens of long-deprecated legacy functions</h3>
+            <p class="why"><b>Why it matters:</b> a stable API promise from the library underneath Ollama and LM Studio is a good moment to actually run a local model yourself for a <a href="#projects">project</a> instead of only reading about it (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://neurohive.io/en/news/llama-cpp-v1-stable-release-semver/">neurohive.io</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-16</span><span class="pill">Models</span></div>
-          <div><h3>Alibaba released Qwen4-Max on November 16, a mixture-of-experts model with 2.4 trillion total parameters that activates about 71 billion of them per token and supports a one-million-token context window, but unlike its Qwen3.8-Max predecessor it shipped without open weights</h3>
-            <p class="why"><b>Why it matters:</b> this week's biggest MoE launch drawing a sharper line between "frontier-scale" and "open" is useful context for anyone trying the mixture-of-experts routing toy below (<a href="#L4">L4</a>).</p>
-            <p class="src"><a href="https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max">alibabacloud.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Research</span></div>
+          <div><h3>A Google DeepMind and Google Quantum AI preprint posted November 6, not yet peer-reviewed, has teams of AI agents propose quantum programs and formally prove both their correctness and resource cost using the Lean theorem prover, reporting resource cuts of roughly 290x on one arithmetic routine and about 10.9x on a fusion-related simulation</h3>
+            <p class="why"><b>Why it matters:</b> pairing an agent's proposal with a machine-checked proof, instead of just trusting its claim, is a pattern worth borrowing any time you let an agent's unverified output into a <a href="#projects">project</a> (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://thequantuminsider.com/2026/11/10/google-researchers-use-ai-and-mathematical-proofs-to-cut-quantum-computing-requirements/">thequantuminsider.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,48 +674,55 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider -->
-        <div class="pgcard pgtopic" data-topic="precision-recall-threshold-slider" id="pt-prt">
-          <span class="label">New this refresh · 2026-11-26 · connects to <a href="#L1">L1</a></span>
-          <h3>Toy: sliding the decision threshold on a spam filter</h3>
-          <p class="lede">12 toy emails each carry a fixed "model score" from 0 to 1 — how confident a toy classifier is that the email is spam — and a true label. Drag the threshold: anything scoring at or above it gets flagged spam. Watch precision, recall and F1 move as you trade "catch more spam" against "fewer good emails wrongly flagged." The 12 scores below are hardcoded, not output from a real model, so read the shape of the trade-off, not the exact numbers, as the lesson.</p>
+        <!-- HISTORY: learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate -->
+        <div class="pgcard pgtopic" data-topic="speculative-decoding-acceptance-rate" id="pt-spd">
+          <span class="label">New this refresh · 2026-11-26 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: how speculative decoding turns guesses into speed</h3>
+          <p class="lede">A small "draft" model guesses K tokens ahead; the big "target" model checks each guess and keeps accepting until the first one it disagrees with, then supplies the correct token itself. Drag K and the draft model's acceptance rate to see how many tokens come out of one target-model pass. The acceptance rolls below are fixed numbers, not a real model's behavior, so the point is the mechanism llama.cpp and other local-inference stacks use, not these exact figures.</p>
           <div class="pt-ctl">
-            <label class="mono">Threshold <span id="pt-prt-t-label">0.50</span>
-              <input type="range" id="pt-prt-t" min="0" max="100" value="50" step="1">
+            <label class="mono">Draft length K <span id="pt-spd-k-label">4</span>
+              <input type="range" id="pt-spd-k" min="1" max="8" value="4" step="1">
             </label>
-            <span class="mono" id="pt-prt-counts"></span>
+            <label class="mono">Draft acceptance rate <span id="pt-spd-p-label">70%</span>
+              <input type="range" id="pt-spd-p" min="0" max="100" value="70" step="5">
+            </label>
           </div>
-          <div class="pt-row"><span class="mono">Precision</span><div class="pt-track"><div class="pt-fill" id="pt-prt-p"></div></div><span class="mono" id="pt-prt-p-val"></span></div>
-          <div class="pt-row"><span class="mono">Recall</span><div class="pt-track"><div class="pt-fill" id="pt-prt-r"></div></div><span class="mono" id="pt-prt-r-val"></span></div>
-          <div class="pt-row"><span class="mono">F1</span><div class="pt-track"><div class="pt-fill" id="pt-prt-f1"></div></div><span class="mono" id="pt-prt-f1-val"></span></div>
+          <div id="pt-spd-row" style="display:flex;gap:6px;margin-block:6px;flex-wrap:wrap"></div>
+          <p class="mono" id="pt-spd-out"></p>
           <script>(function(){
-          var items=[
-            {s:0.95,y:1},{s:0.89,y:1},{s:0.82,y:1},{s:0.74,y:0},{s:0.68,y:1},{s:0.61,y:0},
-            {s:0.55,y:1},{s:0.47,y:0},{s:0.39,y:1},{s:0.31,y:0},{s:0.18,y:0},{s:0.09,y:0}
-          ];
-          var slider=document.getElementById("pt-prt-t");
-          var tLabel=document.getElementById("pt-prt-t-label");
-          var counts=document.getElementById("pt-prt-counts");
-          var pFill=document.getElementById("pt-prt-p"), pVal=document.getElementById("pt-prt-p-val");
-          var rFill=document.getElementById("pt-prt-r"), rVal=document.getElementById("pt-prt-r-val");
-          var fFill=document.getElementById("pt-prt-f1"), fVal=document.getElementById("pt-prt-f1-val");
-          function update(){
-            var t=Number(slider.value)/100;
-            tLabel.textContent=t.toFixed(2);
-            var tp=0,fp=0,fn=0,tn=0;
-            for(var i=0;i<items.length;i++){
-              var pred=items[i].s>=t?1:0, y=items[i].y;
-              if(pred===1&&y===1)tp++; else if(pred===1&&y===0)fp++; else if(pred===0&&y===1)fn++; else tn++;
-            }
-            var prec=(tp+fp)?tp/(tp+fp):1;
-            var rec=(tp+fn)?tp/(tp+fn):0;
-            var f1=(prec+rec)?2*prec*rec/(prec+rec):0;
-            pFill.style.width=(prec*100).toFixed(0)+"%"; pVal.textContent=prec.toFixed(2);
-            rFill.style.width=(rec*100).toFixed(0)+"%"; rVal.textContent=rec.toFixed(2);
-            fFill.style.width=(f1*100).toFixed(0)+"%"; fVal.textContent=f1.toFixed(2);
-            counts.textContent="flagged "+(tp+fp)+" of 12 · TP "+tp+" FP "+fp+" FN "+fn+" TN "+tn;
+          var luck=[0.12,0.58,0.33,0.81,0.47,0.69,0.91,0.25];
+          var kSlider=document.getElementById("pt-spd-k");
+          var pSlider=document.getElementById("pt-spd-p");
+          var kLabel=document.getElementById("pt-spd-k-label");
+          var pLabel=document.getElementById("pt-spd-p-label");
+          var row=document.getElementById("pt-spd-row");
+          var out=document.getElementById("pt-spd-out");
+          function box(i,cls){
+            var el=document.createElement("span");
+            el.style.display="inline-flex";el.style.alignItems="center";el.style.justifyContent="center";
+            el.style.width="28px";el.style.height="28px";el.style.borderRadius="4px";
+            el.style.font="600 .7rem var(--mono)";el.style.color="#fff";
+            el.style.background=cls;
+            el.textContent=String(i+1);
+            return el;
           }
-          slider.addEventListener("input",update);
+          function update(){
+            var k=Number(kSlider.value), p=Number(pSlider.value)/100;
+            kLabel.textContent=k; pLabel.textContent=pSlider.value+"%";
+            row.textContent="";
+            var accepted=0, rejectedAt=-1;
+            for(var i=0;i<k;i++){
+              if(luck[i]<p){accepted++;} else {rejectedAt=i;break;}
+            }
+            for(var i=0;i<k;i++){
+              var cls=i<accepted?"var(--good)":(i===rejectedAt?"var(--signal)":"var(--line)");
+              row.appendChild(box(i,cls));
+            }
+            var produced=accepted+1;
+            out.textContent="Tokens produced from this one target-model pass: "+produced+" of "+k+" drafted → speedup vs. plain decoding: "+produced+"x";
+          }
+          kSlider.addEventListener("input",update);
+          pSlider.addEventListener("input",update);
           update();
           })();</script>
         </div>
