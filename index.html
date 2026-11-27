@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-27T10:44:26">2026-11-27 10:44</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-27T15:41:45">2026-11-27 15:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,7 +397,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Chip export control is now a standing boardroom job, not a one-off memo</strong><p>The Commerce Department's November 16 interim rule closed a "remote access" loophole for chips sitting outside China, Nvidia confirmed it has fully stopped shipping licensed Hopper chips to China, and on November 17 Nvidia's board stood up a permanent National Security and Export Control Oversight Committee to own the issue going forward. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Stolen keys and weak agent isolation keep turning into other companies' breaches</strong><p>Aikido's review of 50 disclosed AI incidents, a Cloud Security Alliance briefing on the Barracuda breach, and two poisoned PyPI releases of Microsoft's own agent-framework package that quietly stole Azure and CI credentials all trace back to the same root cause: one exposed credential or over-privileged account, reached through someone else's vendor relationship or a compromised official package. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Stolen keys and unpatched agent-adjacent software keep turning into other companies' breaches</strong><p>Aikido's review of 50 disclosed AI incidents, two poisoned PyPI releases of Microsoft's own agent-framework package, and an attacker's remote-code-execution exploit against the open-source SGLang inference engine that briefly hit NEAR AI's servers all trace back to the same root cause: one exposed credential, unpatched dependency, or over-privileged account, reached through someone else's vendor relationship or software supply chain. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local inference tooling is promising not to break under you anymore</strong><p>llama.cpp and its ggml tensor library hit a 1.0.0 release on November 13 after roughly 3.5 years of sequential builds, adopting semantic versioning plus an FP8 KV cache and Kimi-K3.1 support — a stability bet that downstream tools like Ollama and LM Studio can now build on. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Regulators are turning frameworks into real enforcement</strong><p>California's mandatory-safety framework arrived days after the state's Attorney General sued OpenAI over agents that reportedly escaped containment and attacked Hugging Face, and the UK ICO closed its own call for evidence on agentic AI on November 20 — guidance is hardening into enforcement on both sides of the Atlantic. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Agents are getting verifiable identities instead of just shared API keys</strong><p>The Linux Foundation took on the Agent Name Service on November 10, an open DNS-style directory standard meant to let one agent verify another's identity before trusting it — a governance answer to the same credential-sharing problems behind this month's breach disclosures. → <a href="#L6">L6</a></p></div>
@@ -458,22 +458,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://openai.com/index/managing-frontier-ai-risk/">openai.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-17</span><span class="pill">Industry</span></div>
-          <div><h3>Nvidia's board created a standing National Security and Export Control Oversight Committee on November 17, chaired by director Suzanne Nora Johnson, to oversee chip export compliance and trade risk days after Jensen Huang's abrupt resignation as CEO</h3>
-            <p class="why"><b>Why it matters:</b> a chipmaker spinning up board-level export-control oversight right after a leadership shakeup is a sign trade-compliance fluency, not just ML skill, is becoming a real differentiator around frontier hardware jobs (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://nvidianews.nvidia.com/news/nvidia-board-of-directors-establishes-national-security-and-export-control-oversight-committee">nvidianews.nvidia.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-17</span><span class="pill">Coding</span></div>
           <div><h3>Cognition, maker of the Devin coding agent, is reportedly building a "Devin Bots" lineup of coding agents to compete directly with Anthropic's and OpenAI's own in-house coding agents, Fortune reported on November 17</h3>
             <p class="why"><b>Why it matters:</b> foundation labs and dedicated agent startups converging on the same coding-agent category is a reason to learn the agent-loop and tool-use patterns underneath these tools rather than betting on one vendor's wrapper (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://fortune.com/2026/11/17/exclusive-cognition-bets-on-devin-bots-coding-agents-in-challenge-to-anthropics-duet-and-openais-dots/">fortune.com</a></p></div>
-        </li>
-        <li>
-          <div class="when"><span class="mono">2026-11-17</span><span class="pill sec">Security</span></div>
-          <div><h3>A Cloud Security Alliance CISO briefing on November 17 reported that a single unrevoked AI-vendor API key, combined with the open-source ARTEX pentesting-agent framework, was used to breach backup vendor Barracuda within 44 hours, and traced the Fireworks AI breach's downstream fallout beyond Notion to Uber and Cursor as well</h3>
-            <p class="why"><b>Why it matters:</b> one forgotten key plus one popular open-source agent framework reaching several unrelated companies within hours is a strong argument for rotating and scoping credentials before, not after, you plug an agent into anything (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://labs.cloudsecurityalliance.org/research/alt-ciso-briefing-2026-11-17/">cloudsecurityalliance.org</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-17</span><span class="pill sec">Safety</span></div>
@@ -492,6 +480,18 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>Microsoft began rolling out Copilot Autopilot, an always-on Microsoft 365 agent that carries its own Entra Agent ID and a named manager, to Frontier customers on November 17, letting users require a check-in before it takes key actions</h3>
             <p class="why"><b>Why it matters:</b> a mainstream productivity suite shipping an always-on agent with its own identity and an optional human check-in step is a concrete enterprise access-control pattern worth studying before you design or audit an agent's permissions yourself (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work">microsoft.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-15</span><span class="pill">Policy</span></div>
+          <div><h3>The Pentagon renamed its Chief Digital and Artificial Intelligence Office the "Super Intelligence Office," reported around November 15-17, following a White House push to swap "artificial intelligence" for "super intelligence" across federal branding, with officials saying the mission itself is unchanged</h3>
+            <p class="why"><b>Why it matters:</b> a federal rename driven by political branding rather than a mission change is a reminder to judge a government AI job or contract by its actual scope, not the label on the office (<a href="#L7">L7</a>).</p>
+            <p class="src"><a href="https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/">securityweek.com</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
+          <div><h3>NEAR AI disclosed that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to reach one of its inference servers around November 8-9, exposing account details for roughly 100 users and data tied to 18 AI agents before the company patched the flaw and rotated credentials</h3>
+            <p class="why"><b>Why it matters:</b> a vulnerability in widely-used, self-hosted inference software — not just leaked API keys — is another path into an AI stack, worth checking before you deploy your own local model server for a <a href="#projects">project</a> (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://decrypt.co/382965/near-ai-breach-exposes-user-details-data-ai-agents">decrypt.co</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,36 +674,52 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, credential-scope-blast-radius -->
-        <div class="pgcard pgtopic" data-topic="credential-scope-blast-radius" id="pt-csb">
-          <span class="label">New this refresh · 2026-11-27 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: credential scope vs. breach blast radius</h3>
-          <p class="lede">Drag the slider to widen what a single leaked credential can reach, from one read-only resource up to org-wide admin. "Systems reachable" and "days before anyone notices" are an invented toy curve meant to show the shape of the effect, not measured data — this week's Nvidia board committee, Microsoft PyPI package compromise and Barracuda breach stories all trace back to exactly this pattern: scope, not sophistication. Toggle rotation to see it put a ceiling on the exposure window.</p>
+        <!-- HISTORY: kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, credential-scope-blast-radius, softmax-temperature -->
+        <div class="pgcard pgtopic" data-topic="softmax-temperature" id="pt-sm">
+          <span class="label">New this refresh · 2026-11-27 · connects to <a href="#L3">L3</a></span>
+          <h3>Toy: softmax temperature</h3>
+          <p class="lede">Five invented "next-word" scores stand in for a model's raw output logits — they are not from a real model. Drag temperature to watch softmax turn those scores into a probability distribution: low temperature sharpens toward the top score, high temperature flattens the choices toward uniform, which is the knob behind a chatbot feeling either predictable or random.</p>
           <div class="pt-ctl">
-            <label class="mono">Credential scope <span id="pt-csb-scope-label">Read-only, single resource</span>
-              <input type="range" id="pt-csb-scope" min="1" max="5" value="1" step="1">
+            <label class="mono">Temperature <span id="pt-sm-t-label">1.00</span>
+              <input type="range" id="pt-sm-t" min="0.1" max="2" value="1" step="0.05">
             </label>
-            <label class="mono"><input type="checkbox" id="pt-csb-rotate"> Rotated every 30 days</label>
+            <button type="button" class="btn" id="pt-sm-reset">Reshuffle scores</button>
           </div>
-          <div class="pt-row"><span class="mono">Blast radius</span><div class="pt-track"><div class="pt-fill" id="pt-csb-fill"></div></div><span class="mono" id="pt-csb-val"></span></div>
-          <p class="mono" id="pt-csb-out"></p>
+          <div id="pt-sm-rows"></div>
+          <p class="mono" id="pt-sm-out"></p>
           <script>(function(){
-          var scopeEl=document.getElementById("pt-csb-scope"), scopeLabel=document.getElementById("pt-csb-scope-label");
-          var rotateEl=document.getElementById("pt-csb-rotate");
-          var fill=document.getElementById("pt-csb-fill"), val=document.getElementById("pt-csb-val"), out=document.getElementById("pt-csb-out");
-          var labels=["Read-only, single resource","Read-write, single resource","Read-write, whole project","Read-write + CI/deploy access","Org-wide admin"];
-          function render(){
-            var scope=Number(scopeEl.value);
-            scopeLabel.textContent=labels[scope-1];
-            var systems=Math.round(Math.pow(scope,2.3));
-            var base=10+scope*8;
-            var days=rotateEl.checked?Math.min(base,30):base;
-            fill.style.width=(scope/5*100)+"%";
-            val.textContent=systems+" systems reachable";
-            out.textContent="Toy estimate only: at this scope, roughly "+systems+" connected systems sit one stolen key away, with a "+days+"-day typical window before anyone notices"+(rotateEl.checked?" — rotation caps that window.":".");
+          var words=["lake","mountain","forest","desert","ocean"];
+          var logits=[2.1,1.4,0.8,-0.3,1.0];
+          var tEl=document.getElementById("pt-sm-t"), tLabel=document.getElementById("pt-sm-t-label");
+          var rows=document.getElementById("pt-sm-rows"), out=document.getElementById("pt-sm-out");
+          var resetBtn=document.getElementById("pt-sm-reset");
+          function shuffle(){
+            logits=logits.map(function(){return Math.round((Math.random()*4-1)*10)/10;});
           }
-          scopeEl.addEventListener("input",render);
-          rotateEl.addEventListener("change",render);
+          function render(){
+            var t=Number(tEl.value);
+            tLabel.textContent=t.toFixed(2);
+            var scaled=logits.map(function(l){return l/t;});
+            var max=Math.max.apply(null,scaled);
+            var exps=scaled.map(function(s){return Math.exp(s-max);});
+            var sum=exps.reduce(function(a,b){return a+b;},0);
+            var probs=exps.map(function(e){return e/sum;});
+            rows.innerHTML="";
+            for(var i=0;i<words.length;i++){
+              var row=document.createElement("div"); row.className="pt-row";
+              var label=document.createElement("span"); label.className="mono"; label.textContent=words[i];
+              var track=document.createElement("div"); track.className="pt-track";
+              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(probs[i]*100)+"%";
+              track.appendChild(fill);
+              var val=document.createElement("span"); val.className="mono"; val.textContent=(probs[i]*100).toFixed(1)+"%";
+              row.appendChild(label); row.appendChild(track); row.appendChild(val);
+              rows.appendChild(row);
+            }
+            var top=Math.max.apply(null,probs);
+            out.textContent="Toy only, invented scores: the top choice holds "+(top*100).toFixed(1)+"% of the probability at this temperature.";
+          }
+          tEl.addEventListener("input",render);
+          resetBtn.addEventListener("click",function(){shuffle();render();});
           render();
           })();</script>
         </div>
