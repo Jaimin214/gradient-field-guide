@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-26T15:42:28">2026-11-26 15:42</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-26T19:41:22">2026-11-26 19:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,7 +397,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Washington is tightening the chokepoints around compute, not just chips</strong><p>The Commerce Department's November 16 interim rule closes a "remote access" loophole that let chips sitting outside China still serve Chinese compute demand through overseas data centers, landing the same week Nvidia disclosed it had stopped shipping licensed Hopper chips to China entirely. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Stolen keys and weak agent isolation keep turning into other companies' breaches</strong><p>Aikido's review of 50 disclosed AI incidents and a Cloud Security Alliance briefing on the Barracuda and Fireworks AI breaches both trace back to the same root cause: one exposed credential or over-privileged agent account, reached through someone else's vendor relationship. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Stolen keys and weak agent isolation keep turning into other companies' breaches</strong><p>Aikido's review of 50 disclosed AI incidents, a Cloud Security Alliance briefing on the Barracuda and Fireworks AI breaches, and Fireworks AI's own November 9 disclosure of a second breach through a compromised cloud vendor all trace back to the same root cause: one exposed credential or over-privileged account, reached through someone else's vendor relationship. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local inference tooling is promising not to break under you anymore</strong><p>llama.cpp and its ggml tensor library hit a 1.0.0 release on November 13 after roughly 3.5 years of sequential builds, adopting semantic versioning plus an FP8 KV cache and Kimi-K3.1 support — a stability bet that downstream tools like Ollama and LM Studio can now build on. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Regulators keep swapping guidance for deadlines</strong><p>California's mandatory-safety framework and lawsuit against OpenAI over agent containment, the UK ICO's closed call for evidence on agentic AI, and the new US chip remote-access licensing rule all landed within about ten days of each other. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Agents are starting to show their work instead of just producing it</strong><p>A November 6 Google DeepMind and Google Quantum AI preprint, not yet peer-reviewed, has teams of AI agents propose quantum programs and formally prove both correctness and resource cost in Lean, reporting resource cuts of roughly 290x on one arithmetic routine and about 10.9x on a fusion-related simulation. → <a href="#L7">L7</a></p></div>
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://neurohive.io/en/news/llama-cpp-v1-stable-release-semver/">neurohive.io</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-06</span><span class="pill">Research</span></div>
-          <div><h3>A Google DeepMind and Google Quantum AI preprint posted November 6, not yet peer-reviewed, has teams of AI agents propose quantum programs and formally prove both their correctness and resource cost using the Lean theorem prover, reporting resource cuts of roughly 290x on one arithmetic routine and about 10.9x on a fusion-related simulation</h3>
-            <p class="why"><b>Why it matters:</b> pairing an agent's proposal with a machine-checked proof, instead of just trusting its claim, is a pattern worth borrowing any time you let an agent's unverified output into a <a href="#projects">project</a> (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://thequantuminsider.com/2026/11/10/google-researchers-use-ai-and-mathematical-proofs-to-cut-quantum-computing-requirements/">thequantuminsider.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
+          <div><h3>Fireworks AI disclosed a second breach on November 9, saying an intruder reached its research-and-development systems on October 24 through a compromise at a third-party cloud provider, exposing account and billing data plus, for a limited set of accounts, secrets, datasets and incomplete model weights</h3>
+            <p class="why"><b>Why it matters:</b> a funded model-hosting vendor needing two breach disclosures in about five weeks, both traced to someone else's infrastructure, is a reason to assume your model API provider sits inside another company's blast radius before trusting it with a <a href="#projects">project</a>'s secrets (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/">bleepingcomputer.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,55 +674,45 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: learning-rate-schedules, overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate -->
-        <div class="pgcard pgtopic" data-topic="speculative-decoding-acceptance-rate" id="pt-spd">
-          <span class="label">New this refresh · 2026-11-26 · connects to <a href="#L4">L4</a></span>
-          <h3>Toy: how speculative decoding turns guesses into speed</h3>
-          <p class="lede">A small "draft" model guesses K tokens ahead; the big "target" model checks each guess and keeps accepting until the first one it disagrees with, then supplies the correct token itself. Drag K and the draft model's acceptance rate to see how many tokens come out of one target-model pass. The acceptance rolls below are fixed numbers, not a real model's behavior, so the point is the mechanism llama.cpp and other local-inference stacks use, not these exact figures.</p>
+        <!-- HISTORY: overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval -->
+        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval" id="pt-csr">
+          <span class="label">New this refresh · 2026-11-26 · connects to <a href="#L5">L5</a></span>
+          <h3>Toy: chunk size vs. retrieval quality</h3>
+          <p class="lede">Split a toy 2,400-word document into fixed-size chunks the way a RAG pipeline would, then drag the chunk size. Watch two things move at once: how many chunks you get, and whether a fact fixed at word 1,150 lands safely inside one chunk or sits near a boundary where it could be cut in half. The "relevance score" is a smooth curve picked to illustrate the trade-off, not a number measured from any real embedding model — actual retrieval quality also depends on the embedding model, chunk overlap, and the query itself.</p>
           <div class="pt-ctl">
-            <label class="mono">Draft length K <span id="pt-spd-k-label">4</span>
-              <input type="range" id="pt-spd-k" min="1" max="8" value="4" step="1">
-            </label>
-            <label class="mono">Draft acceptance rate <span id="pt-spd-p-label">70%</span>
-              <input type="range" id="pt-spd-p" min="0" max="100" value="70" step="5">
+            <label class="mono">Chunk size (words) <span id="pt-csr-size-label">200</span>
+              <input type="range" id="pt-csr-size" min="50" max="800" value="200" step="10">
             </label>
           </div>
-          <div id="pt-spd-row" style="display:flex;gap:6px;margin-block:6px;flex-wrap:wrap"></div>
-          <p class="mono" id="pt-spd-out"></p>
+          <div id="pt-csr-map" style="display:flex;gap:3px;flex-wrap:wrap;margin-block:6px"></div>
+          <p class="mono" id="pt-csr-out"></p>
           <script>(function(){
-          var luck=[0.12,0.58,0.33,0.81,0.47,0.69,0.91,0.25];
-          var kSlider=document.getElementById("pt-spd-k");
-          var pSlider=document.getElementById("pt-spd-p");
-          var kLabel=document.getElementById("pt-spd-k-label");
-          var pLabel=document.getElementById("pt-spd-p-label");
-          var row=document.getElementById("pt-spd-row");
-          var out=document.getElementById("pt-spd-out");
-          function box(i,cls){
-            var el=document.createElement("span");
-            el.style.display="inline-flex";el.style.alignItems="center";el.style.justifyContent="center";
-            el.style.width="28px";el.style.height="28px";el.style.borderRadius="4px";
-            el.style.font="600 .7rem var(--mono)";el.style.color="#fff";
-            el.style.background=cls;
-            el.textContent=String(i+1);
-            return el;
-          }
+          var DOC_LEN=2400, FACT_POS=1150;
+          var sizeSlider=document.getElementById("pt-csr-size");
+          var sizeLabel=document.getElementById("pt-csr-size-label");
+          var map=document.getElementById("pt-csr-map");
+          var out=document.getElementById("pt-csr-out");
           function update(){
-            var k=Number(kSlider.value), p=Number(pSlider.value)/100;
-            kLabel.textContent=k; pLabel.textContent=pSlider.value+"%";
-            row.textContent="";
-            var accepted=0, rejectedAt=-1;
-            for(var i=0;i<k;i++){
-              if(luck[i]<p){accepted++;} else {rejectedAt=i;break;}
+            var size=Number(sizeSlider.value);
+            sizeLabel.textContent=size;
+            var numChunks=Math.ceil(DOC_LEN/size);
+            var factChunk=Math.floor(FACT_POS/size);
+            var posInChunk=FACT_POS-factChunk*size;
+            var edge=Math.min(posInChunk,size-posInChunk);
+            var splitRisk=edge<Math.max(15,size*0.08);
+            map.textContent="";
+            for(var i=0;i<numChunks;i++){
+              var box=document.createElement("span");
+              box.style.display="inline-block";
+              box.style.width="16px";box.style.height="16px";box.style.borderRadius="3px";
+              box.style.background=i===factChunk?(splitRisk?"var(--signal)":"var(--good)"):"var(--hm0)";
+              map.appendChild(box);
             }
-            for(var i=0;i<k;i++){
-              var cls=i<accepted?"var(--good)":(i===rejectedAt?"var(--signal)":"var(--line)");
-              row.appendChild(box(i,cls));
-            }
-            var produced=accepted+1;
-            out.textContent="Tokens produced from this one target-model pass: "+produced+" of "+k+" drafted → speedup vs. plain decoding: "+produced+"x";
+            var ideal=250, spread=160;
+            var score=Math.round(100*Math.exp(-Math.pow(size-ideal,2)/(2*spread*spread)));
+            out.textContent="≈"+numChunks+" chunks for a "+DOC_LEN+"-word doc. The fact sits in chunk #"+(factChunk+1)+(splitRisk?" — close to a boundary, so it could be cut across two chunks.":" — comfortably inside one chunk.")+" Illustrative relevance score for this chunk size: "+score+"/100 (a toy curve, not a measured retriever).";
           }
-          kSlider.addEventListener("input",update);
-          pSlider.addEventListener("input",update);
+          sizeSlider.addEventListener("input",update);
           update();
           })();</script>
         </div>
