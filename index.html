@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-26T19:41:22">2026-11-26 19:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-27T00:41:33">2026-11-27 00:41</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -397,10 +397,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
 <!-- TRENDS:START -->
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Washington is tightening the chokepoints around compute, not just chips</strong><p>The Commerce Department's November 16 interim rule closes a "remote access" loophole that let chips sitting outside China still serve Chinese compute demand through overseas data centers, landing the same week Nvidia disclosed it had stopped shipping licensed Hopper chips to China entirely. → <a href="#L7">L7</a></p></div>
-        <div><span class="state rising">Rising</span><strong>Stolen keys and weak agent isolation keep turning into other companies' breaches</strong><p>Aikido's review of 50 disclosed AI incidents, a Cloud Security Alliance briefing on the Barracuda and Fireworks AI breaches, and Fireworks AI's own November 9 disclosure of a second breach through a compromised cloud vendor all trace back to the same root cause: one exposed credential or over-privileged account, reached through someone else's vendor relationship. → <a href="#L6">L6</a></p></div>
+        <div><span class="state rising">Rising</span><strong>Stolen keys and weak agent isolation keep turning into other companies' breaches</strong><p>Aikido's review of 50 disclosed AI incidents, a Cloud Security Alliance briefing on the Barracuda breach, and two poisoned PyPI releases of Microsoft's own agent-framework package that quietly stole Azure and CI credentials all trace back to the same root cause: one exposed credential or over-privileged account, reached through someone else's vendor relationship or a compromised official package. → <a href="#L6">L6</a></p></div>
         <div><span class="state new">Watch</span><strong>Local inference tooling is promising not to break under you anymore</strong><p>llama.cpp and its ggml tensor library hit a 1.0.0 release on November 13 after roughly 3.5 years of sequential builds, adopting semantic versioning plus an FP8 KV cache and Kimi-K3.1 support — a stability bet that downstream tools like Ollama and LM Studio can now build on. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Regulators keep swapping guidance for deadlines</strong><p>California's mandatory-safety framework and lawsuit against OpenAI over agent containment, the UK ICO's closed call for evidence on agentic AI, and the new US chip remote-access licensing rule all landed within about ten days of each other. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Agents are starting to show their work instead of just producing it</strong><p>A November 6 Google DeepMind and Google Quantum AI preprint, not yet peer-reviewed, has teams of AI agents propose quantum programs and formally prove both correctness and resource cost in Lean, reporting resource cuts of roughly 290x on one arithmetic routine and about 10.9x on a fusion-related simulation. → <a href="#L7">L7</a></p></div>
+        <div><span class="state new">Watch</span><strong>Agents are getting verifiable identities instead of just shared API keys</strong><p>The Linux Foundation took on the Agent Name Service on November 10, an open DNS-style directory standard meant to let one agent verify another's identity before trusting it — a governance answer to the same credential-sharing problems behind this month's breach disclosures. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
         <li>
@@ -426,6 +426,12 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           <div><h3>A November 19 Aikido review of 50 disclosed AI-related security incidents found exposed secrets, over-privileged accounts and weak isolation behind most of them, and noted that stolen credentials often turn quickly into costly unauthorized usage on AI platforms</h3>
             <p class="why"><b>Why it matters:</b> an outside analysis landing on the exact same failure modes as this week's Railway and Barracuda breach stories is a reason to audit your own agent's credential scope before shipping it, not after (<a href="#L6">L6</a>).</p>
             <p class="src"><a href="https://www.aikido.dev/blog/ai-incidents-root-causes-patterns">aikido.dev</a></p></div>
+        </li>
+        <li>
+          <div class="when"><span class="mono">2026-11-18</span><span class="pill sec">Security</span></div>
+          <div><h3>Reported around November 17-18, two poisoned releases of Microsoft's own official "agent-framework" Python package silently installed a credential stealer that ran at Python startup and could reach Azure and CI secrets, even on machines that never imported the package</h3>
+            <p class="why"><b>Why it matters:</b> an official vendor package on PyPI getting compromised, not a random typo-squat, is a reason to pin exact dependency versions and rotate secrets after any dependency update in an <a href="#projects">agent project</a> (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/">bleepingcomputer.com</a></p></div>
         </li>
         <li>
           <div class="when"><span class="mono">2026-11-18</span><span class="pill">Industry</span></div>
@@ -476,22 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work">microsoft.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-16</span><span class="pill">Policy</span></div>
-          <div><h3>The US Commerce Department's Bureau of Industry and Security issued an interim rule on November 16 closing a "remote access" loophole that had let chips physically located outside China still serve compute to Chinese customers through overseas data centers, giving affected data centers 90 days to get a license or face restrictions</h3>
-            <p class="why"><b>Why it matters:</b> export rules now reach beyond where a chip physically sits to who can draw compute from it remotely, worth knowing before assuming a non-US data center puts a project outside US export law (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.bostonglobe.com/2026/11/16/nation/trump-administration-moves-close-ai-chip-loophole-before-china-trip/">bostonglobe.com</a></p></div>
-        </li>
-        <li>
           <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
           <div><h3>The llama.cpp and ggml projects reached a 1.0.0 release on November 13, their first use of semantic versioning after roughly 3.5 years of sequential build numbers, adding an FP8 KV cache, Kimi-K3.1 model support and a hardened server while removing dozens of long-deprecated legacy functions</h3>
             <p class="why"><b>Why it matters:</b> a stable API promise from the library underneath Ollama and LM Studio is a good moment to actually run a local model yourself for a <a href="#projects">project</a> instead of only reading about it (<a href="#L4">L4</a>).</p>
             <p class="src"><a href="https://neurohive.io/en/news/llama-cpp-v1-stable-release-semver/">neurohive.io</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
-          <div><h3>Fireworks AI disclosed a second breach on November 9, saying an intruder reached its research-and-development systems on October 24 through a compromise at a third-party cloud provider, exposing account and billing data plus, for a limited set of accounts, secrets, datasets and incomplete model weights</h3>
-            <p class="why"><b>Why it matters:</b> a funded model-hosting vendor needing two breach disclosures in about five weeks, both traced to someone else's infrastructure, is a reason to assume your model API provider sits inside another company's blast radius before trusting it with a <a href="#projects">project</a>'s secrets (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/">bleepingcomputer.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-04</span><span class="pill">Open models</span></div>
+          <div><h3>Moonshot AI published full open weights for Kimi K3.1 Pro, a 2.8-trillion-parameter model, on Hugging Face on November 4 under a Kimi-specific license, a few weeks after the model debuted through Moonshot's API with a 1-million-token context window</h3>
+            <p class="why"><b>Why it matters:</b> another trillion-parameter open-weight model landing on Hugging Face is worth checking against your own GPU or quantization budget before assuming you can actually run it for a <a href="#projects">project</a> (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/">technode.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,46 +674,61 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: overfitting-vs-model-size, attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval -->
-        <div class="pgcard pgtopic" data-topic="chunk-size-vs-retrieval" id="pt-csr">
-          <span class="label">New this refresh · 2026-11-26 · connects to <a href="#L5">L5</a></span>
-          <h3>Toy: chunk size vs. retrieval quality</h3>
-          <p class="lede">Split a toy 2,400-word document into fixed-size chunks the way a RAG pipeline would, then drag the chunk size. Watch two things move at once: how many chunks you get, and whether a fact fixed at word 1,150 lands safely inside one chunk or sits near a boundary where it could be cut in half. The "relevance score" is a smooth curve picked to illustrate the trade-off, not a number measured from any real embedding model — actual retrieval quality also depends on the embedding model, chunk overlap, and the query itself.</p>
+        <!-- HISTORY: attention-quadratic-cost, softmax-temperature, kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval, learning-rate-schedules -->
+        <div class="pgcard pgtopic" data-topic="learning-rate-schedules" id="pt-lrs">
+          <span class="label">New this refresh · 2026-11-27 · connects to <a href="#L2">L2</a></span>
+          <h3>Toy: learning-rate schedules</h3>
+          <p class="lede">Pick a peak learning rate and a warmup length, then compare step decay against cosine decay across a toy 40-epoch run. Drag the epoch scrubber to read off the exact rate at that point. This only models the schedule itself — a real training run also reacts to loss plateaus, gradient norms and optimizer state, none of which are simulated here.</p>
           <div class="pt-ctl">
-            <label class="mono">Chunk size (words) <span id="pt-csr-size-label">200</span>
-              <input type="range" id="pt-csr-size" min="50" max="800" value="200" step="10">
+            <label class="mono">Peak LR <span id="pt-lrs-peak-label">0.010</span>
+              <input type="range" id="pt-lrs-peak" min="1" max="100" value="10" step="1">
+            </label>
+            <label class="mono">Warmup epochs <span id="pt-lrs-warmup-label">3</span>
+              <input type="range" id="pt-lrs-warmup" min="0" max="10" value="3" step="1">
+            </label>
+            <button type="button" class="btn primary" id="pt-lrs-step">Step decay</button>
+            <button type="button" class="btn" id="pt-lrs-cosine">Cosine decay</button>
+          </div>
+          <div id="pt-lrs-bars" style="display:flex;align-items:flex-end;gap:2px;height:80px;border-bottom:1px solid var(--line)"></div>
+          <div class="pt-ctl">
+            <label class="mono">Scrub epoch <span id="pt-lrs-epoch-label">0</span>
+              <input type="range" id="pt-lrs-epoch" min="0" max="39" value="0" step="1">
             </label>
           </div>
-          <div id="pt-csr-map" style="display:flex;gap:3px;flex-wrap:wrap;margin-block:6px"></div>
-          <p class="mono" id="pt-csr-out"></p>
+          <p class="mono" id="pt-lrs-out"></p>
           <script>(function(){
-          var DOC_LEN=2400, FACT_POS=1150;
-          var sizeSlider=document.getElementById("pt-csr-size");
-          var sizeLabel=document.getElementById("pt-csr-size-label");
-          var map=document.getElementById("pt-csr-map");
-          var out=document.getElementById("pt-csr-out");
-          function update(){
-            var size=Number(sizeSlider.value);
-            sizeLabel.textContent=size;
-            var numChunks=Math.ceil(DOC_LEN/size);
-            var factChunk=Math.floor(FACT_POS/size);
-            var posInChunk=FACT_POS-factChunk*size;
-            var edge=Math.min(posInChunk,size-posInChunk);
-            var splitRisk=edge<Math.max(15,size*0.08);
-            map.textContent="";
-            for(var i=0;i<numChunks;i++){
-              var box=document.createElement("span");
-              box.style.display="inline-block";
-              box.style.width="16px";box.style.height="16px";box.style.borderRadius="3px";
-              box.style.background=i===factChunk?(splitRisk?"var(--signal)":"var(--good)"):"var(--hm0)";
-              map.appendChild(box);
-            }
-            var ideal=250, spread=160;
-            var score=Math.round(100*Math.exp(-Math.pow(size-ideal,2)/(2*spread*spread)));
-            out.textContent="≈"+numChunks+" chunks for a "+DOC_LEN+"-word doc. The fact sits in chunk #"+(factChunk+1)+(splitRisk?" — close to a boundary, so it could be cut across two chunks.":" — comfortably inside one chunk.")+" Illustrative relevance score for this chunk size: "+score+"/100 (a toy curve, not a measured retriever).";
+          var EPOCHS=40, mode="step";
+          var peakEl=document.getElementById("pt-lrs-peak"), peakLabel=document.getElementById("pt-lrs-peak-label");
+          var warmupEl=document.getElementById("pt-lrs-warmup"), warmupLabel=document.getElementById("pt-lrs-warmup-label");
+          var epochEl=document.getElementById("pt-lrs-epoch"), epochLabel=document.getElementById("pt-lrs-epoch-label");
+          var stepBtn=document.getElementById("pt-lrs-step"), cosineBtn=document.getElementById("pt-lrs-cosine");
+          var bars=document.getElementById("pt-lrs-bars"), out=document.getElementById("pt-lrs-out");
+          function lrAt(epoch,peak,warmup){
+            if(warmup>0&&epoch<warmup) return peak*(epoch+1)/warmup;
+            var t=epoch-warmup, total=Math.max(1,EPOCHS-warmup);
+            return mode==="cosine" ? peak*0.5*(1+Math.cos(Math.PI*t/total)) : peak*Math.pow(0.5,Math.floor(t/10));
           }
-          sizeSlider.addEventListener("input",update);
-          update();
+          function render(){
+            var peak=Number(peakEl.value)/1000; peakLabel.textContent=peak.toFixed(3);
+            var warmup=Number(warmupEl.value); warmupLabel.textContent=warmup;
+            var epoch=Number(epochEl.value); epochLabel.textContent=epoch;
+            bars.textContent="";
+            for(var i=0;i<EPOCHS;i++){
+              var lr=lrAt(i,peak,warmup);
+              var bar=document.createElement("div");
+              bar.style.flex="1"; bar.style.borderRadius="1px 1px 0 0";
+              bar.style.height=Math.max(2,Math.round((lr/peak)*76))+"px";
+              bar.style.background=i===epoch?"var(--signal)":"var(--accent)";
+              bars.appendChild(bar);
+            }
+            var cur=lrAt(epoch,peak,warmup);
+            var note=epoch<warmup?"still warming up toward the peak.":(mode==="cosine"?"on the cosine curve, easing smoothly toward zero.":"on step decay, halved every 10 epochs after warmup.");
+            out.textContent="Epoch "+epoch+": learning rate ≈ "+cur.toFixed(4)+" — "+note+" Toy curve only; a real optimizer also adapts to the loss itself.";
+          }
+          stepBtn.addEventListener("click",function(){mode="step";stepBtn.classList.add("primary");cosineBtn.classList.remove("primary");render();});
+          cosineBtn.addEventListener("click",function(){mode="cosine";cosineBtn.classList.add("primary");stepBtn.classList.remove("primary");render();});
+          [peakEl,warmupEl,epochEl].forEach(function(el){el.addEventListener("input",render);});
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
