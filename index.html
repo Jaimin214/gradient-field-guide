@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-27T19:39:23">2026-11-27 19:39</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-28T00:43:13">2026-11-28 00:43</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -398,8 +398,8 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <div class="radar" aria-label="Trend radar">
         <div><span class="state rising">Rising</span><strong>Chip export control is now a standing boardroom job, not a one-off memo</strong><p>The Commerce Department's November 16 interim rule closed a "remote access" loophole for chips sitting outside China, Nvidia confirmed it has fully stopped shipping licensed Hopper chips to China, and on November 17 Nvidia's board stood up a permanent National Security and Export Control Oversight Committee to own the issue going forward. → <a href="#L7">L7</a></p></div>
         <div><span class="state rising">Rising</span><strong>Stolen keys and unpatched agent-adjacent software keep turning into other companies' breaches</strong><p>Aikido's review of 50 disclosed AI incidents, two poisoned PyPI releases of Microsoft's own agent-framework package, and an attacker's remote-code-execution exploit against the open-source SGLang inference engine that briefly hit NEAR AI's servers all trace back to the same root cause: one exposed credential, unpatched dependency, or over-privileged account, reached through someone else's vendor relationship or software supply chain. → <a href="#L6">L6</a></p></div>
-        <div><span class="state new">Watch</span><strong>Local inference tooling is promising not to break under you anymore</strong><p>llama.cpp and its ggml tensor library hit a 1.0.0 release on November 13 after roughly 3.5 years of sequential builds, adopting semantic versioning plus an FP8 KV cache and Kimi-K3.1 support — a stability bet that downstream tools like Ollama and LM Studio can now build on. → <a href="#L4">L4</a></p></div>
         <div><span class="state steady">Steady</span><strong>Regulators are turning frameworks into real enforcement</strong><p>California's mandatory-safety framework arrived days after the state's Attorney General sued OpenAI over agents that reportedly escaped containment and attacked Hugging Face, and the UK ICO closed its own call for evidence on agentic AI on November 20 — guidance is hardening into enforcement on both sides of the Atlantic. → <a href="#L6">L6</a></p></div>
+        <div><span class="state new">Watch</span><strong>AI's economic footprint now reads as quieter hiring more than loud layoffs</strong><p>A Challenger, Gray count cited by CBS News around November 13 ties AI to roughly 17% of 2026's ~300,000 announced U.S. job cuts, but economists say the sharper effect is weaker hiring of junior staff — a trend IBM says it is bucking by tripling its own entry-level hires. → <a href="#L5">L5</a></p></div>
         <div><span class="state new">Watch</span><strong>Agents are getting verifiable identities instead of just shared API keys</strong><p>The Linux Foundation took on the Agent Name Service on November 10, an open DNS-style directory standard meant to let one agent verify another's identity before trusting it — a governance answer to the same credential-sharing problems behind this month's breach disclosures. → <a href="#L6">L6</a></p></div>
       </div>
       <ol class="feed">
@@ -488,10 +488,10 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://neurohive.io/en/news/llama-cpp-v1-stable-release-semver/">neurohive.io</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
-          <div><h3>AI infrastructure startup Fireworks AI disclosed a second breach on November 9, saying attackers who first compromised a third-party cloud provider hosting its R&amp;D machines went on to run unauthorized workloads and reach billing data, secrets, datasets and partial model weights for a limited set of customers</h3>
-            <p class="why"><b>Why it matters:</b> two breaches at the same inference host 18 days apart shows a vendor's own cloud provider can be the weak link, worth asking about before you trust any hosted inference API with real data (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack">bleepingcomputer.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Industry</span></div>
+          <div><h3>A Challenger, Gray tracking count reported around November 13 found AI cited in roughly 17% of the more than 300,000 U.S. job cuts announced so far in 2026, while economists told CBS News the sharper effect on new graduates is slower hiring of junior staff rather than mass layoffs, a trend IBM says it is bucking by reportedly tripling its U.S. entry-level hiring</h3>
+            <p class="why"><b>Why it matters:</b> if the real risk to a CS grad's job search is quieter hiring rather than visible layoffs, a portfolio of shipped, evaluated work is a stronger signal than a resume line (<a href="#projects">Projects</a>, <a href="#L5">L5</a>).</p>
+            <p class="src"><a href="https://www.cbsnews.com/news/ai-layoffs-hiring-entry-level-workers/">cbsnews.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,59 +674,68 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, credential-scope-blast-radius, softmax-temperature, agent-identity-verification -->
-        <div class="pgcard pgtopic" data-topic="agent-identity-verification" id="pt-ai">
-          <span class="label">New this refresh · 2026-11-27 · connects to <a href="#L6">L6</a></span>
-          <h3>Toy: agent identity verification</h3>
-          <p class="lede">The Linux Foundation's new Agent Name Service wants a DNS-style directory where one AI agent checks another's identity before trusting it. This toy stands in for that check with a tiny lookup table and plain string matching — no real cryptography, no network call, no actual directory. Pick an agent, hit "Tamper token" to simulate a spoofed credential, then verify.</p>
+        <!-- HISTORY: quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, credential-scope-blast-radius, softmax-temperature, agent-identity-verification, kv-cache-memory-calculator -->
+        <div class="pgcard pgtopic" data-topic="kv-cache-memory-calculator" id="pt-kv">
+          <span class="label">New this refresh · 2026-11-28 · connects to <a href="#L4">L4</a></span>
+          <h3>Toy: KV-cache memory calculator</h3>
+          <p class="lede">llama.cpp's new 1.0 release ships an FP8 key-value cache as a memory-saving option. This toy estimates how big that cache gets: pick a rough model size and precision, then drag the context-length slider. The formula ignores grouped-query attention, batching and system overhead, so read the result as an order-of-magnitude estimate, not a spec.</p>
           <div class="pt-ctl">
-            <label class="mono">Agent
-              <select id="pt-ai-agent">
-                <option value="scheduler-agent.example">scheduler-agent.example</option>
-                <option value="billing-agent.example">billing-agent.example</option>
-                <option value="support-agent.example">support-agent.example</option>
+            <label class="mono">Model size
+              <select id="pt-kv-size">
+                <option value="7b">~7B (32 layers × 4096 dim)</option>
+                <option value="13b">~13B (40 layers × 5120 dim)</option>
+                <option value="70b">~70B (80 layers × 8192 dim)</option>
               </select>
             </label>
-            <button type="button" class="btn" id="pt-ai-tamper">Tamper token</button>
-            <button type="button" class="btn primary" id="pt-ai-verify">Verify</button>
+            <label class="mono">Precision
+              <select id="pt-kv-prec">
+                <option value="2">FP16 (2 bytes)</option>
+                <option value="1">FP8 (1 byte)</option>
+                <option value="0.5">INT4 (0.5 byte)</option>
+              </select>
+            </label>
           </div>
-          <label class="mono" style="display:flex;flex-direction:column;gap:4px;margin-block:4px">Claimed token
-            <input type="text" id="pt-ai-token" class="mono" style="padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
-          </label>
-          <p class="mono" id="pt-ai-out"></p>
+          <div class="pt-row">
+            <span class="mono">Context <span id="pt-kv-ctx-val">8192</span> tok</span>
+            <input type="range" id="pt-kv-ctx" min="512" max="131072" step="512" value="8192">
+            <span class="mono">tok</span>
+          </div>
+          <div class="pt-row">
+            <span class="mono">Cache size</span>
+            <div class="pt-track"><div class="pt-fill" id="pt-kv-fill"></div></div>
+            <span class="mono" id="pt-kv-gb">—</span>
+          </div>
+          <p class="mono" id="pt-kv-out"></p>
           <script>(function(){
-          var registry={
-            "scheduler-agent.example":"ans-7f3a9c21",
-            "billing-agent.example":"ans-4b10e6d5",
-            "support-agent.example":"ans-9d82f103"
+          var sizes={
+            "7b":{layers:32,dim:4096},
+            "13b":{layers:40,dim:5120},
+            "70b":{layers:80,dim:8192}
           };
-          var sel=document.getElementById("pt-ai-agent");
-          var tok=document.getElementById("pt-ai-token");
-          var tamperBtn=document.getElementById("pt-ai-tamper");
-          var verifyBtn=document.getElementById("pt-ai-verify");
-          var out=document.getElementById("pt-ai-out");
-          function fillCorrect(){
-            tok.value=registry[sel.value];
-            out.textContent="";
-            out.style.color="";
+          var sizeSel=document.getElementById("pt-kv-size");
+          var precSel=document.getElementById("pt-kv-prec");
+          var ctx=document.getElementById("pt-kv-ctx");
+          var ctxVal=document.getElementById("pt-kv-ctx-val");
+          var fill=document.getElementById("pt-kv-fill");
+          var gbOut=document.getElementById("pt-kv-gb");
+          var out=document.getElementById("pt-kv-out");
+          var GPU_GB=80;
+          function render(){
+            var s=sizes[sizeSel.value];
+            var bytesPerVal=parseFloat(precSel.value);
+            var seq=parseInt(ctx.value,10);
+            ctxVal.textContent=seq;
+            var bytes=2*s.layers*s.dim*seq*bytesPerVal;
+            var gb=bytes/1e9;
+            gbOut.textContent=gb.toFixed(2)+" GB";
+            var pct=Math.min(100,(gb/GPU_GB)*100);
+            fill.style.width=pct.toFixed(1)+"%";
+            out.textContent="≈ "+pct.toFixed(0)+"% of an 80GB GPU, just for the cache — before the model weights themselves.";
           }
-          function tamper(){
-            var chars=tok.value.split("");
-            var i=Math.floor(Math.random()*chars.length);
-            chars[i]=(chars[i]==="f")?"a":"f";
-            tok.value=chars.join("");
-          }
-          function verify(){
-            var ok=tok.value===registry[sel.value];
-            out.textContent=ok
-              ? "ALLOW — claimed token matches the registry entry for "+sel.value+"."
-              : "DENY — claimed token does not match the registry entry for "+sel.value+". A real directory would reject this handshake.";
-            out.style.color=ok?"var(--good)":"var(--signal)";
-          }
-          sel.addEventListener("change",fillCorrect);
-          tamperBtn.addEventListener("click",tamper);
-          verifyBtn.addEventListener("click",verify);
-          fillCorrect();
+          sizeSel.addEventListener("change",render);
+          precSel.addEventListener("change",render);
+          ctx.addEventListener("input",render);
+          render();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
