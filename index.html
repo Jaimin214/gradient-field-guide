@@ -352,7 +352,7 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
       <h1>Gradient Field Guide</h1>
       <p class="thesis">Learning AI looks like a loss curve: confusion drops fast in the foundations, then flattens into the long tail where the frontier moves every week. Work down the curve, build the five projects, and read the feed.</p>
       <div class="meta">
-        <span>Trends updated <b><time id="last-updated" datetime="2026-11-27T15:41:45">2026-11-27 15:41</time></b> <span id="age"></span></span>
+        <span>Trends updated <b><time id="last-updated" datetime="2026-11-27T19:39:23">2026-11-27 19:39</time></b> <span id="age"></span></span>
         <span>Refresh cadence <b>every 5 h</b></span>
         <span id="progress-head">Your progress <b>0 / 8</b></span>
       </div>
@@ -482,16 +482,16 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
             <p class="src"><a href="https://microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work">microsoft.com</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-15</span><span class="pill">Policy</span></div>
-          <div><h3>The Pentagon renamed its Chief Digital and Artificial Intelligence Office the "Super Intelligence Office," reported around November 15-17, following a White House push to swap "artificial intelligence" for "super intelligence" across federal branding, with officials saying the mission itself is unchanged</h3>
-            <p class="why"><b>Why it matters:</b> a federal rename driven by political branding rather than a mission change is a reminder to judge a government AI job or contract by its actual scope, not the label on the office (<a href="#L7">L7</a>).</p>
-            <p class="src"><a href="https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/">securityweek.com</a></p></div>
+          <div class="when"><span class="mono">2026-11-13</span><span class="pill">Local</span></div>
+          <div><h3>llama.cpp and its ggml tensor library shipped a 1.0.0 release on November 13, about 3.5 years after the project began, adopting semantic versioning for the first time plus an FP8 key-value cache and support for the Kimi-K3.1 model</h3>
+            <p class="why"><b>Why it matters:</b> a stable API contract for the engine underneath Ollama and LM Studio means less code to rewrite on every upgrade when you build a <a href="#projects">local-inference project</a> (<a href="#L4">L4</a>).</p>
+            <p class="src"><a href="https://neurohive.io/en/news/llama-cpp-v1-stable-release-semver/">neurohive.io</a></p></div>
         </li>
         <li>
-          <div class="when"><span class="mono">2026-11-10</span><span class="pill sec">Security</span></div>
-          <div><h3>NEAR AI disclosed that an attacker exploited a remote-code-execution flaw in the open-source SGLang inference engine to reach one of its inference servers around November 8-9, exposing account details for roughly 100 users and data tied to 18 AI agents before the company patched the flaw and rotated credentials</h3>
-            <p class="why"><b>Why it matters:</b> a vulnerability in widely-used, self-hosted inference software — not just leaked API keys — is another path into an AI stack, worth checking before you deploy your own local model server for a <a href="#projects">project</a> (<a href="#L6">L6</a>).</p>
-            <p class="src"><a href="https://decrypt.co/382965/near-ai-breach-exposes-user-details-data-ai-agents">decrypt.co</a></p></div>
+          <div class="when"><span class="mono">2026-11-09</span><span class="pill sec">Security</span></div>
+          <div><h3>AI infrastructure startup Fireworks AI disclosed a second breach on November 9, saying attackers who first compromised a third-party cloud provider hosting its R&amp;D machines went on to run unauthorized workloads and reach billing data, secrets, datasets and partial model weights for a limited set of customers</h3>
+            <p class="why"><b>Why it matters:</b> two breaches at the same inference host 18 days apart shows a vendor's own cloud provider can be the weak link, worth asking about before you trust any hosted inference API with real data (<a href="#L6">L6</a>).</p>
+            <p class="src"><a href="https://bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack">bleepingcomputer.com</a></p></div>
         </li>
       </ol>
 <!-- TRENDS:END -->
@@ -674,53 +674,59 @@ footer{font:400 .8rem/1.6 var(--mono);color:var(--muted);border-top:1px solid va
           </div>
         </div>
         <!-- PLAYGROUND:START -->
-        <!-- HISTORY: kv-cache-memory-calculator, perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, credential-scope-blast-radius, softmax-temperature -->
-        <div class="pgcard pgtopic" data-topic="softmax-temperature" id="pt-sm">
-          <span class="label">New this refresh · 2026-11-27 · connects to <a href="#L3">L3</a></span>
-          <h3>Toy: softmax temperature</h3>
-          <p class="lede">Five invented "next-word" scores stand in for a model's raw output logits — they are not from a real model. Drag temperature to watch softmax turn those scores into a probability distribution: low temperature sharpens toward the top score, high temperature flattens the choices toward uniform, which is the knob behind a chatbot feeling either predictable or random.</p>
+        <!-- HISTORY: perplexity-calculator, model-vram-footprint-calculator, quantization-error-bit-rounding, beam-search-vs-greedy-decoding, top-k-top-p-sampling, prompt-injection-filter-toy, agent-loop-step-counter, cosine-similarity-embeddings, context-window-budget-calculator, tokenization-bpe-merges, rotary-position-embeddings, scaling-law-curve, mixture-of-experts-routing, precision-recall-threshold-slider, speculative-decoding-acceptance-rate, chunk-size-vs-retrieval, learning-rate-schedules, overfitting-vs-model-size, credential-scope-blast-radius, softmax-temperature, agent-identity-verification -->
+        <div class="pgcard pgtopic" data-topic="agent-identity-verification" id="pt-ai">
+          <span class="label">New this refresh · 2026-11-27 · connects to <a href="#L6">L6</a></span>
+          <h3>Toy: agent identity verification</h3>
+          <p class="lede">The Linux Foundation's new Agent Name Service wants a DNS-style directory where one AI agent checks another's identity before trusting it. This toy stands in for that check with a tiny lookup table and plain string matching — no real cryptography, no network call, no actual directory. Pick an agent, hit "Tamper token" to simulate a spoofed credential, then verify.</p>
           <div class="pt-ctl">
-            <label class="mono">Temperature <span id="pt-sm-t-label">1.00</span>
-              <input type="range" id="pt-sm-t" min="0.1" max="2" value="1" step="0.05">
+            <label class="mono">Agent
+              <select id="pt-ai-agent">
+                <option value="scheduler-agent.example">scheduler-agent.example</option>
+                <option value="billing-agent.example">billing-agent.example</option>
+                <option value="support-agent.example">support-agent.example</option>
+              </select>
             </label>
-            <button type="button" class="btn" id="pt-sm-reset">Reshuffle scores</button>
+            <button type="button" class="btn" id="pt-ai-tamper">Tamper token</button>
+            <button type="button" class="btn primary" id="pt-ai-verify">Verify</button>
           </div>
-          <div id="pt-sm-rows"></div>
-          <p class="mono" id="pt-sm-out"></p>
+          <label class="mono" style="display:flex;flex-direction:column;gap:4px;margin-block:4px">Claimed token
+            <input type="text" id="pt-ai-token" class="mono" style="padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)">
+          </label>
+          <p class="mono" id="pt-ai-out"></p>
           <script>(function(){
-          var words=["lake","mountain","forest","desert","ocean"];
-          var logits=[2.1,1.4,0.8,-0.3,1.0];
-          var tEl=document.getElementById("pt-sm-t"), tLabel=document.getElementById("pt-sm-t-label");
-          var rows=document.getElementById("pt-sm-rows"), out=document.getElementById("pt-sm-out");
-          var resetBtn=document.getElementById("pt-sm-reset");
-          function shuffle(){
-            logits=logits.map(function(){return Math.round((Math.random()*4-1)*10)/10;});
+          var registry={
+            "scheduler-agent.example":"ans-7f3a9c21",
+            "billing-agent.example":"ans-4b10e6d5",
+            "support-agent.example":"ans-9d82f103"
+          };
+          var sel=document.getElementById("pt-ai-agent");
+          var tok=document.getElementById("pt-ai-token");
+          var tamperBtn=document.getElementById("pt-ai-tamper");
+          var verifyBtn=document.getElementById("pt-ai-verify");
+          var out=document.getElementById("pt-ai-out");
+          function fillCorrect(){
+            tok.value=registry[sel.value];
+            out.textContent="";
+            out.style.color="";
           }
-          function render(){
-            var t=Number(tEl.value);
-            tLabel.textContent=t.toFixed(2);
-            var scaled=logits.map(function(l){return l/t;});
-            var max=Math.max.apply(null,scaled);
-            var exps=scaled.map(function(s){return Math.exp(s-max);});
-            var sum=exps.reduce(function(a,b){return a+b;},0);
-            var probs=exps.map(function(e){return e/sum;});
-            rows.innerHTML="";
-            for(var i=0;i<words.length;i++){
-              var row=document.createElement("div"); row.className="pt-row";
-              var label=document.createElement("span"); label.className="mono"; label.textContent=words[i];
-              var track=document.createElement("div"); track.className="pt-track";
-              var fill=document.createElement("div"); fill.className="pt-fill"; fill.style.width=(probs[i]*100)+"%";
-              track.appendChild(fill);
-              var val=document.createElement("span"); val.className="mono"; val.textContent=(probs[i]*100).toFixed(1)+"%";
-              row.appendChild(label); row.appendChild(track); row.appendChild(val);
-              rows.appendChild(row);
-            }
-            var top=Math.max.apply(null,probs);
-            out.textContent="Toy only, invented scores: the top choice holds "+(top*100).toFixed(1)+"% of the probability at this temperature.";
+          function tamper(){
+            var chars=tok.value.split("");
+            var i=Math.floor(Math.random()*chars.length);
+            chars[i]=(chars[i]==="f")?"a":"f";
+            tok.value=chars.join("");
           }
-          tEl.addEventListener("input",render);
-          resetBtn.addEventListener("click",function(){shuffle();render();});
-          render();
+          function verify(){
+            var ok=tok.value===registry[sel.value];
+            out.textContent=ok
+              ? "ALLOW — claimed token matches the registry entry for "+sel.value+"."
+              : "DENY — claimed token does not match the registry entry for "+sel.value+". A real directory would reject this handshake.";
+            out.style.color=ok?"var(--good)":"var(--signal)";
+          }
+          sel.addEventListener("change",fillCorrect);
+          tamperBtn.addEventListener("click",tamper);
+          verifyBtn.addEventListener("click",verify);
+          fillCorrect();
           })();</script>
         </div>
         <!-- PLAYGROUND:END -->
